@@ -1,0 +1,1545 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JK Cement Limited | SAP Machine Learning Executive Command Center</title>
+  
+  <!-- Fonts: Plus Jakarta Sans (Executive Command Center) & JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,600&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', '-apple-system', 'BlinkMacSystemFont', '"Segoe UI"', 'Roboto', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'monospace']
+          },
+          colors: {
+            brand: {
+              50: '#eff6ff',
+              100: '#dbeafe',
+              200: '#bfdbfe',
+              300: '#93c5fd',
+              400: '#60a5fa',
+              500: '#3b82f6',
+              600: '#2563eb',
+              700: '#1d4ed8',
+              800: '#1e40af',
+              900: '#1e3a8a',
+              950: '#0f172a'
+            }
+          }
+        }
+      }
+    }
+  </script>
+  
+  <!-- Chart.js CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+  
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="styles.css?v=20261014_iceblue">
+</head>
+<body class="theme-sage font-sans antialiased selection:bg-blue-600 selection:text-white" style="background: #c8d9ea url('assets/ice_blue_bg_hd.jpg') center/cover fixed no-repeat;">
+
+  <!-- Dynamic Ambient Background Mesh -->
+  <div class="ambient-mesh"></div>
+
+  <!-- Main Application Wrapper -->
+  <div class="flex h-screen overflow-hidden relative z-10">
+
+    <!-- ====================================================================
+         LEFT SIDEBAR NAVIGATION (Spacious, De-congested, Single Clean Logo)
+         ==================================================================== -->
+    <aside id="sidebar" class="flex flex-col">
+      
+      <!-- Brand & Logo Header: Translucent Frosted Glass (No White Box) -->
+      <div class="p-5 border-b border-white/40 bg-white/20 backdrop-blur-md">
+        <div class="flex items-center justify-between">
+          <!-- Official AjaLabs Logo in Left Sidebar -->
+          <div class="flex items-center cursor-pointer transition hover:opacity-95" onclick="navigateToExecutive()" title="AjaLabs AI">
+            <img id="sidebarAjaLogo" src="assets/ajalabs_logo_trimmed.png" alt="AjaLabs AI" class="h-6 max-h-[24px] w-auto max-w-[170px] object-contain">
+          </div>
+          
+          <button 
+            onclick="toggleSidebar()" 
+            class="w-8 h-8 rounded-lg bg-white/50 hover:bg-white/90 border border-white/70 text-slate-700 hover:text-emerald-900 transition flex items-center justify-center shadow-sm flex-shrink-0"
+            title="Collapse Sidebar"
+          >
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 19l-7-7 7-7m8 14l-7-7 7-7"></path>
+            </svg>
+          </button>
+        </div>
+
+        <!-- Live Status Bar - Clean Enterprise Status -->
+        <div class="mt-3.5 flex items-center justify-between text-xs px-3.5 py-2 rounded-xl bg-white/45 border border-white/60 shadow-sm backdrop-blur-sm">
+          <span class="flex items-center gap-2 text-slate-800 text-[11px] font-semibold">
+            <span class="pulse-indicator flex-shrink-0"></span>
+            SAP Production Telemetry
+          </span>
+          <span class="text-[10px] bg-emerald-100 text-emerald-950 border border-emerald-300 px-2.5 py-0.5 rounded-full font-bold uppercase tracking-wider flex-shrink-0">Live</span>
+        </div>
+      </div>
+
+      <!-- Quick Search & Category Pills - Translucent Glass -->
+      <div class="p-4 border-b border-white/40 bg-white/10 space-y-3 backdrop-blur-md">
+        <div class="relative">
+          <svg class="w-4 h-4 text-emerald-800 absolute left-3.5 top-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <circle cx="11" cy="11" r="8" stroke-width="2"></circle>
+            <path d="M21 21l-4.35-4.35" stroke-width="2" stroke-linecap="round"></path>
+          </svg>
+          <input 
+            type="text" 
+            id="sidebarSearchInput" 
+            placeholder="Search exception pipelines..." 
+            class="w-full bg-white/40 border border-white/55 rounded-xl pl-10 pr-3.5 py-2 text-xs text-slate-900 placeholder-slate-600 focus:outline-none focus:border-emerald-700 transition shadow-sm backdrop-blur-sm"
+          >
+        </div>
+
+        <!-- Category Filter Pills (Translucent Glass) -->
+        <div class="flex flex-wrap items-center gap-1.5" id="categoryFilterContainer">
+          <button class="filter-tab active" data-cat="all">All</button>
+          <button class="filter-tab" data-cat="Operations & Maintenance">Operations</button>
+          <button class="filter-tab" data-cat="Finance & Spend">Finance</button>
+          <button class="filter-tab" data-cat="Supply Chain & Inventory">Supply Chain</button>
+          <button class="filter-tab" data-cat="Master Data & AI/NLP">AI & Data</button>
+        </div>
+      </div>
+
+      <!-- Navigation List: Executive Summary + 17 Model Buttons -->
+      <div class="sidebar-scroll" id="sidebarNavContainer">
+        
+        <!-- Button 0: Master Executive Summary -->
+        <button 
+          id="btnNavExecutive" 
+          class="model-nav-btn active" 
+          onclick="navigateToExecutive()"
+        >
+          <div class="w-8 h-8 rounded-lg bg-emerald-700/20 border border-emerald-600/30 flex items-center justify-center flex-shrink-0 text-emerald-900">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <rect x="3" y="3" width="7" height="7" stroke-width="2" rx="1"></rect>
+              <rect x="14" y="3" width="7" height="7" stroke-width="2" rx="1"></rect>
+              <rect x="14" y="14" width="7" height="7" stroke-width="2" rx="1"></rect>
+              <rect x="3" y="14" width="7" height="7" stroke-width="2" rx="1"></rect>
+            </svg>
+          </div>
+          <div class="truncate">
+            <div class="font-bold text-xs text-slate-900 flex items-center gap-1.5">
+              Executive Command Center
+            </div>
+            <div class="text-[10px] text-slate-600 truncate">Enterprise Exception Portfolio</div>
+          </div>
+        </button>
+
+        <div class="my-3 border-t border-white/30"></div>
+
+        <!-- 17 Model Buttons Injected Dynamically -->
+        <div id="modelsNavList" class="space-y-1.5"></div>
+      </div>
+
+      <!-- Sidebar Bottom System Info - Translucent Frosted Glass -->
+      <div class="p-4 border-t border-white/40 bg-white/20 text-[11px] flex items-center justify-between backdrop-blur-md">
+        <div>
+          <div class="text-slate-900 font-bold">JKC Analytics v2.8</div>
+          <div class="text-slate-600 font-mono text-[10px]">4,45,000 Records Indexed</div>
+        </div>
+        <button 
+          onclick="refreshDashboardData()" 
+          title="Reload Data"
+          class="p-2 rounded-lg bg-white/40 hover:bg-white/70 border border-white/50 text-slate-800 transition backdrop-blur-sm"
+        >
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"></path>
+          </svg>
+        </button>
+      </div>
+
+      <!-- Moveable / Resizable Splitter Handle -->
+      <div id="sidebarResizer" class="sidebar-resizer" title="Drag horizontally to resize panel width"></div>
+
+    </aside>
+
+    <!-- ====================================================================
+         MAIN CONTENT AREA (Spacious, Elegant & De-congested)
+         ==================================================================== -->
+    <main class="flex-1 flex flex-col h-screen overflow-y-auto overflow-x-hidden">
+
+      <!-- Top Header Navigation Bar - Sleek, Frosted Glasssheet (Spacious & Executive) -->
+      <header class="sticky top-0 z-30 px-8 h-[76px] flex items-center justify-between">
+        
+        <!-- Breadcrumb & Moveable Sidebar Toggle -->
+        <div class="flex items-center gap-3.5">
+          <button 
+            id="sidebarToggleBtn" 
+            onclick="toggleSidebar()" 
+            class="h-9 px-3 rounded-xl bg-white/60 hover:bg-white/90 border border-white/70 text-slate-800 transition flex items-center gap-2 shadow-sm backdrop-blur-sm" 
+            title="Toggle Sidebar Panel"
+          >
+            <svg id="sidebarToggleIcon" class="w-4 h-4 text-emerald-900" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h7"></path>
+            </svg>
+            <span id="sidebarToggleText" class="text-xs font-semibold text-emerald-950 hidden">Show Pipelines</span>
+          </button>
+
+          <div class="flex items-center gap-2.5 text-xs font-mono">
+            <span class="text-[#2d5a26] font-bold cursor-pointer hover:underline text-xs" onclick="navigateToExecutive()">PORTFOLIO</span>
+            <span class="text-slate-400">/</span>
+            <span id="headerBreadcrumbTitle" class="text-slate-900 font-bold text-sm tracking-tight">Executive Command Center</span>
+          </div>
+          <span id="headerDomainBadge" class="hidden text-[10px] font-mono px-2.5 py-0.5 rounded-full bg-emerald-100/90 text-emerald-950 border border-emerald-300 font-bold">
+            SAP ENTERPRISE
+          </span>
+        </div>
+
+        <!-- Right Side Controls: Export Report Button + Scaled-Down AjaLabs Logo -->
+        <div class="flex items-center gap-4">
+
+          <!-- Export Snapshot Button -->
+          <button 
+            onclick="exportCurrentView()" 
+            class="px-4 py-2 rounded-xl bg-[#2d5a26] hover:bg-[#23471e] text-white text-xs font-bold flex items-center gap-2 shadow-sm transition cursor-pointer select-none"
+            style="color: #ffffff !important;"
+            title="Export dashboard report"
+          >
+            <svg class="w-3.5 h-3.5 text-white" style="stroke: #ffffff !important; color: #ffffff !important;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path>
+            </svg>
+            <span style="color: #ffffff !important;" class="text-white font-bold">Export Report</span>
+          </button>
+
+          <!-- Subtle Vertical Divider -->
+          <div class="h-5 w-[1px] bg-slate-400/40 mx-1"></div>
+
+          <!-- Official JK Cement Logo in Header Right -->
+          <div class="flex items-center cursor-pointer hover:opacity-90 transition pl-1" onclick="navigateToExecutive()" title="JK Cement Limited">
+            <img id="headerJkcLogo" src="assets/jk_cement_logo_sage_mode.png" alt="JK Cement" class="h-9 max-h-[36px] w-auto max-w-[190px] object-contain block select-none">
+          </div>
+
+        </div>
+      </header>
+
+      <!-- Main Content Layout (Spacious padding) -->
+      <div class="p-8 max-w-[1720px] w-full mx-auto space-y-8 flex-1">
+
+        <!-- ==================================================================
+             VIEW 1: EXECUTIVE COMMAND CENTER (17-in-1 Master Overview)
+             ================================================================== -->
+        <section id="executiveView" class="space-y-8">
+          
+          <!-- Hero Header Banner with Model Stats Capsule -->
+          <div class="glass-panel p-8 relative overflow-hidden">
+            <div class="absolute -right-20 -top-20 w-80 h-80 rounded-full bg-blue-500/10 filter blur-3xl pointer-events-none"></div>
+            
+            <div class="relative z-10 flex flex-col xl:flex-row xl:items-center justify-between gap-6">
+              <div class="max-w-4xl">
+                <div class="flex items-center gap-2.5 mb-3">
+                  <span class="text-xs font-mono font-bold px-3 py-1 rounded-md bg-emerald-100 text-emerald-900 border border-emerald-300 font-bold">
+                    ENTERPRISE SAP MACHINE LEARNING
+                  </span>
+                  <span class="text-xs font-mono text-slate-700 font-semibold">JK CEMENT LIMITED &bull; P2 PRODUCTION</span>
+                </div>
+                <h1 class="text-2xl lg:text-4xl font-extrabold tracking-tight text-slate-900">
+                  SAP Machine Learning &mdash; Executive Command Center
+                </h1>
+                <p class="text-sm text-slate-900 mt-2.5 leading-relaxed font-medium">
+                  Continuous enterprise intelligence and automated exception surveillance powered by JK Cement SAP HANA. Real-time risk containment, process deviation tracking, and financial exposure mitigation across Plant Maintenance, Financial Risk, Supply Chain, Production Planning, Procurement, and AI Grounding.
+                </p>
+              </div>
+
+              <!-- Master Model Count Capsule -->
+              <div class="flex items-center gap-4 bg-white/70 backdrop-blur-md px-5 py-3.5 rounded-2xl border border-slate-300 shadow-sm flex-shrink-0 self-start xl:self-center">
+                <div class="text-center sm:text-right pr-2">
+                  <div class="text-2xl font-mono font-extrabold text-[#074ea3] flex items-center gap-1.5 justify-end">
+                    <span class="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse"></span> 17 / 17
+                  </div>
+                  <div class="text-[10px] font-mono text-slate-600 font-bold uppercase tracking-wider">Models Active</div>
+                </div>
+                <div class="h-9 w-px bg-slate-300"></div>
+                <div class="text-center sm:text-right px-2">
+                  <div class="text-2xl font-mono font-extrabold text-slate-900">4,45,000</div>
+                  <div class="text-[10px] font-mono text-slate-600 font-bold uppercase tracking-wider">Records Audited</div>
+                </div>
+                <div class="h-9 w-px bg-slate-300"></div>
+                <div class="text-center sm:text-right pl-2">
+                  <div class="text-2xl font-mono font-extrabold text-rose-700">1,26,380</div>
+                  <div class="text-[10px] font-mono text-slate-600 font-bold uppercase tracking-wider">Exceptions (28.4%)</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 8 Master Executive KPI Cards (Comprehensive 4x2 Grid) -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+            
+            <!-- Row 1: Ingestion, Exceptions, Financial Exposure & Value Protected -->
+            <div class="glass-panel kpi-card">
+              <div class="flex items-center justify-between">
+                <div class="text-[11px] font-mono text-slate-400 uppercase tracking-wider font-semibold">RECORDS AUDITED</div>
+                <span class="text-[10px] font-mono px-2 py-0.5 rounded-full bg-slate-100 text-slate-700 border border-slate-300 font-bold">Live Audit</span>
+              </div>
+              <div id="execKpiRecords" class="text-2xl font-mono font-extrabold text-slate-900 mt-2">4,45,000</div>
+              <div class="text-[11px] text-slate-600 mt-1.5 flex items-center gap-1 font-medium">
+                <span class="text-blue-400">&bull;</span> Continuous SAP Surveillance
+              </div>
+            </div>
+
+            <div class="glass-panel kpi-card">
+              <div class="flex items-center justify-between">
+                <div class="text-[11px] font-mono text-slate-400 uppercase tracking-wider font-semibold">TOTAL EXCEPTIONS</div>
+                <span class="text-[10px] font-mono px-2 py-0.5 rounded-full bg-rose-100 text-rose-800 border border-rose-300 font-bold">Detected</span>
+              </div>
+              <div id="execKpiExceptions" class="text-2xl font-mono font-extrabold text-slate-900 mt-2">1,26,380</div>
+              <div class="text-[11px] text-slate-600 mt-1.5 flex items-center gap-1 font-medium">
+                <span class="text-rose-400">&bull;</span> 28.4% Exception Ratio
+              </div>
+            </div>
+
+            <div class="glass-panel kpi-card">
+              <div class="flex items-center justify-between">
+                <div class="text-[11px] font-mono text-slate-400 uppercase tracking-wider font-semibold">FINANCIAL EXPOSURE</div>
+                <span class="text-[10px] font-mono px-2 py-0.5 rounded-full bg-amber-100 text-amber-900 border border-amber-300 font-bold">At-Risk</span>
+              </div>
+              <div id="execKpiExposure" class="text-[21px] xl:text-[22px] 2xl:text-2xl font-mono font-extrabold text-slate-900 mt-2 whitespace-nowrap tracking-tight">₹17,863 Cr</div>
+              <div class="text-[11px] text-slate-600 mt-1.5 flex items-center gap-1 font-medium">
+                <span class="text-amber-400">&bull;</span> Evaluated At-Risk Exposure
+              </div>
+            </div>
+
+            <div class="glass-panel kpi-card">
+              <div class="flex items-center justify-between">
+                <div class="text-[11px] font-mono text-slate-400 uppercase tracking-wider font-semibold">VALUE PROTECTED</div>
+                <span class="text-[10px] font-mono px-2 py-0.5 rounded-full bg-emerald-100 text-emerald-800 border border-emerald-300 font-bold">Recovered</span>
+              </div>
+              <div id="execKpiProtected" class="text-2xl font-mono font-extrabold text-emerald-700 mt-2 whitespace-nowrap">₹3,215 Cr</div>
+              <div class="text-[11px] text-slate-600 mt-1.5 flex items-center gap-1 font-medium">
+                <span class="text-emerald-500">&bull;</span> Revenue Leakage Prevented
+              </div>
+            </div>
+
+            <!-- Row 2: Critical Escalations, High Risk, Resolution Rate & Plants -->
+            <div class="glass-panel kpi-card">
+              <div class="flex items-center justify-between">
+                <div class="text-[11px] font-mono text-slate-400 uppercase tracking-wider font-semibold">CRITICAL RISK (TIER 1)</div>
+                <span class="text-[10px] font-mono px-2 py-0.5 rounded-full bg-red-100 text-red-800 border border-red-300 font-bold">Immediate</span>
+              </div>
+              <div id="execKpiCritical" class="text-2xl font-mono font-extrabold text-slate-900 mt-2">99,696</div>
+              <div class="text-[11px] text-slate-600 mt-1.5 flex items-center gap-1 font-medium">
+                <span class="text-red-400">&bull;</span> Priority Red Escalations
+              </div>
+            </div>
+
+            <div class="glass-panel kpi-card">
+              <div class="flex items-center justify-between">
+                <div class="text-[11px] font-mono text-slate-400 uppercase tracking-wider font-semibold">HIGH RISK (TIER 2)</div>
+                <span class="text-[10px] font-mono px-2 py-0.5 rounded-full bg-orange-100 text-orange-900 border border-orange-300 font-bold">Elevated</span>
+              </div>
+              <div id="execKpiHighRisk" class="text-2xl font-mono font-extrabold text-orange-800 mt-2">39,223</div>
+              <div class="text-[11px] text-slate-600 mt-1.5 flex items-center gap-1 font-medium">
+                <span class="text-orange-400">&bull;</span> Active Audit Surveillance
+              </div>
+            </div>
+
+            <div class="glass-panel kpi-card">
+              <div class="flex items-center justify-between">
+                <div class="text-[11px] font-mono text-slate-400 uppercase tracking-wider font-semibold">AUDIT RESOLUTION RATE</div>
+                <span class="text-[10px] font-mono px-2 py-0.5 rounded-full bg-blue-100 text-blue-900 border border-blue-300 font-bold">On-Track</span>
+              </div>
+              <div id="execKpiResolution" class="text-2xl font-mono font-extrabold text-[#074ea3] mt-2">94.2%</div>
+              <div class="text-[11px] text-slate-600 mt-1.5 flex items-center gap-1 font-medium">
+                <span class="text-blue-500">&bull;</span> Pre-Closing Audit Clearance
+              </div>
+            </div>
+
+            <div class="glass-panel kpi-card">
+              <div class="flex items-center justify-between">
+                <div class="text-[11px] font-mono text-slate-400 uppercase tracking-wider font-semibold">OPERATIONAL PLANTS</div>
+                <span class="text-[10px] font-mono px-2 py-0.5 rounded-full bg-emerald-100 text-emerald-900 border border-emerald-300 font-bold">Pan-India</span>
+              </div>
+              <div id="execKpiPlants" class="text-2xl font-mono font-extrabold text-emerald-900 mt-2">38 Units</div>
+              <div class="text-[11px] text-slate-600 mt-1.5 flex items-center gap-1 font-medium">
+                <span class="text-emerald-500">&bull;</span> Manufacturing & Grinding Units
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Executive Context & Strategic Story (Clean, Single Line, High Contrast, Large Text) -->
+          <div class="py-2 px-1 space-y-2">
+            <div class="flex items-center gap-2.5">
+              <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-lg bg-emerald-100 text-emerald-950 border border-emerald-300 text-xs font-mono font-bold tracking-wide uppercase shadow-sm">
+                <span class="w-2 h-2 rounded-full bg-emerald-700 animate-pulse"></span>
+                AI &amp; Enterprise Governance
+              </span>
+              <span class="text-xs font-mono text-slate-800 font-bold">JK CEMENT LIMITED &bull; STRATEGIC SURVEILLANCE</span>
+            </div>
+            
+            <h3 class="text-lg lg:text-xl font-extrabold text-slate-950 tracking-tight">
+              From Reactive Audits to Continuous Machine Learning Exception Intelligence
+            </h3>
+
+            <p class="text-sm sm:text-base text-slate-900 font-semibold leading-relaxed max-w-6xl">
+              Across 38 manufacturing plants, grinding units, and regional depots, JK Cement deploys continuous automated ML surveillance across SAP HANA data streams&mdash;detecting latent process variances, preventing revenue leakage, and enforcing proactive operational risk containment in real time.
+            </p>
+          </div>
+
+          <!-- Master Executive Charts Section 1 -->
+          <div class="grid grid-cols-1 lg:grid-cols-3 gap-7">
+            
+            <!-- Chart 1: Exception Volume by Model Leaderboard (Spacious) -->
+            <div class="glass-panel p-7 lg:col-span-2">
+              <div class="flex items-center justify-between mb-4">
+                <div>
+                  <h3 class="font-bold text-lg text-slate-900 flex items-center gap-2">
+                    <span class="w-3 h-3 rounded-full bg-[#2d5a26]"></span>
+                    Portfolio Exception Volume & Leaderboard
+                  </h3>
+                  <p class="text-xs text-slate-600 mt-0.5">Total detected anomalies and operational exceptions flagged across business domains</p>
+                </div>
+                <span class="text-xs font-mono text-emerald-900 bg-emerald-100 px-3 py-1 rounded-lg border border-emerald-300 font-bold">
+                  RANKED SURVEILLANCE
+                </span>
+              </div>
+              <div class="h-[370px] relative">
+                <canvas id="chartExecLeaderboard"></canvas>
+              </div>
+            </div>
+
+            <!-- Chart 2: ML Archetype Share (Doughnut) -->
+            <div class="glass-panel p-7">
+              <div class="flex items-center justify-between mb-4">
+                <div>
+                  <h3 class="font-bold text-lg text-slate-900 flex items-center gap-2">
+                    <span class="w-3 h-3 rounded-full bg-[#2d5a26]"></span>
+                    Use Cases by ML Category
+                  </h3>
+                  <p class="text-xs text-slate-600 mt-0.5">Classification, Time-Series, Clustering & NLP</p>
+                </div>
+              </div>
+              <div class="h-[280px] relative flex items-center justify-center">
+                <canvas id="chartExecCategoryShare"></canvas>
+              </div>
+              <div id="chartExecCategoryLegend" class="mt-4 flex flex-wrap items-center justify-center gap-2 text-xs"></div>
+            </div>
+
+          </div>
+
+          <!-- Master Executive Charts Section 2: Trends & Model Health Radar (NEW) -->
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-7">
+            
+            <!-- Chart 3: Weekly Time-Series Trend (Multi-Line Smooth Area Chart) -->
+            <div class="glass-panel p-7">
+              <div class="flex items-center justify-between mb-4">
+                <div>
+                  <h3 class="font-bold text-base text-slate-900 flex items-center gap-2">
+                    <span class="w-2.5 h-2.5 rounded-full bg-[#074ea3]"></span>
+                    Weekly Exception Surge & Resolution Trends
+                  </h3>
+                  <p class="text-xs text-slate-600 mt-0.5">8-Week trailing velocity of detections vs automated root-cause resolutions</p>
+                </div>
+                <div class="flex items-center gap-3 text-xs font-mono">
+                  <span class="flex items-center gap-1.5 text-[#074ea3] font-bold">
+                    <span class="w-2.5 h-2.5 rounded-full bg-[#074ea3]"></span> Flagged
+                  </span>
+                  <span class="flex items-center gap-1.5 text-[#7dbf40] font-bold">
+                    <span class="w-2.5 h-2.5 rounded-full bg-[#7dbf40]"></span> Resolved
+                  </span>
+                </div>
+              </div>
+              <div class="h-[290px] relative">
+                <canvas id="chartExecWeeklyTrend"></canvas>
+              </div>
+            </div>
+
+            <!-- Chart 4: Multi-Domain Model Capability Radar (Radar Chart) -->
+            <div class="glass-panel p-7">
+              <div class="flex items-center justify-between mb-4">
+                <div>
+                  <h3 class="font-bold text-base text-slate-900 flex items-center gap-2">
+                    <span class="w-2.5 h-2.5 rounded-full bg-[#7dbf40]"></span>
+                    Enterprise Model Health & Capability Radar
+                  </h3>
+                  <p class="text-xs text-slate-600 mt-0.5">Holistic audit across AUC, Latency, Data Quality, F1, and SAP Sync</p>
+                </div>
+                <span class="text-xs font-mono text-[#074ea3] bg-blue-50 px-2.5 py-1 rounded-lg border border-blue-200 font-bold">
+                  94.2% Health
+                </span>
+              </div>
+              <div class="h-[290px] relative flex items-center justify-center">
+                <canvas id="chartExecModelRadar"></canvas>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Master Executive Charts Section 3: Financial, Plant Facility & SAP Polar -->
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7">
+            
+            <!-- Chart 5: Financial Exposure by Domain (Bar Chart) -->
+            <div class="glass-panel p-7">
+              <div class="flex items-center justify-between mb-4">
+                <div>
+                  <h3 class="font-bold text-base text-slate-900">Financial Impact by SAP Module</h3>
+                  <p class="text-xs text-slate-600 mt-0.5">Consolidated at-risk exposure in ₹ Crores</p>
+                </div>
+                <span class="text-xs font-mono text-[#074ea3] font-bold">₹ Cr Exposure</span>
+              </div>
+              <div class="h-[280px] relative">
+                <canvas id="chartExecFinancialDomain"></canvas>
+              </div>
+            </div>
+
+            <!-- Chart 6: Plant Facility Distribution (Stacked Bar Chart) -->
+            <div class="glass-panel p-7">
+              <div class="flex items-center justify-between mb-4">
+                <div>
+                  <h3 class="font-bold text-base text-slate-900">Exceptions by Manufacturing Plant</h3>
+                  <p class="text-xs text-slate-600 mt-0.5">Triage distribution across JK Cement manufacturing units</p>
+                </div>
+                <span class="text-xs font-mono text-[#7dbf40] font-bold">6 Plants</span>
+              </div>
+              <div class="h-[280px] relative">
+                <canvas id="chartExecPlantDistribution"></canvas>
+              </div>
+            </div>
+
+            <!-- Chart 7: SAP Table Ecosystem (Polar Area Chart) -->
+            <div class="glass-panel p-7">
+              <div class="flex items-center justify-between mb-4">
+                <div>
+                  <h3 class="font-bold text-base text-slate-900">SAP Table Ecosystem (Polar)</h3>
+                  <p class="text-xs text-slate-600 mt-0.5">Frequency of core SAP source tables in ML pipelines</p>
+                </div>
+                <span class="text-xs font-mono text-slate-600 font-bold">25+ Tables</span>
+              </div>
+              <div class="h-[280px] relative flex items-center justify-center">
+                <canvas id="chartExecSapTables"></canvas>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- ============================================================== -->
+          <!-- Master Executive Charts Section 4: Prescriptive Decision Engine -->
+          <!-- ============================================================== -->
+          <div class="space-y-5">
+            <div>
+              <div class="flex flex-wrap items-center gap-2 mb-2">
+                <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-100 text-emerald-950 border border-emerald-300 text-xs font-mono font-bold tracking-wider uppercase shadow-sm">
+                  <span class="w-2 h-2 rounded-full bg-emerald-600 animate-pulse"></span>
+                  Prescriptive AI &amp; Decision Intelligence
+                </span>
+                <span class="text-xs font-mono text-slate-800 font-bold uppercase tracking-wider">
+                  JK CEMENT LIMITED &bull; AUTOMATED SAP DIRECTIVES
+                </span>
+                <span class="ml-auto hidden sm:inline-flex items-center gap-2 text-xs font-mono bg-white/70 px-3 py-1 rounded-xl border border-slate-300">
+                  <span class="w-2 h-2 rounded-full bg-emerald-600"></span>
+                  <span class="text-slate-800 font-bold">6 Prescriptive Decision Engines</span>
+                </span>
+              </div>
+              <h2 class="text-2xl font-extrabold text-slate-900 tracking-tight">
+                From Predictive Exceptions to Autonomous Operational Decision Intelligence
+              </h2>
+              <p class="text-sm sm:text-base text-slate-950 font-medium leading-relaxed max-w-6xl mt-2">
+                Across 38 manufacturing plants, grinding units, and regional depots, JK Cement deploys continuous automated ML surveillance across SAP HANA data streams—translating exception probabilities into concrete SAP operational directives across Manufacturing, Supply Chain, and Commercial Finance. By cross-coupling multi-model telemetry (ML-07 delay risks with ML-06 inventory stagnation, and ML-05 credit risk with ML-15 order exposure), the prescriptive engine auto-dispatches maintenance work orders, freezes delinquent dealer orders, and safeguards ₹3,215 Cr in enterprise capital in real time.
+              </p>
+            </div>
+
+            <!-- ROW 1: Operations Coupled Matrix & Enterprise Action Triage -->
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-7">
+
+              <!-- Decision Chart 1: ML-07 & ML-06 Coupled Matrix (Bubble Chart) -->
+              <div class="glass-panel p-7 lg:col-span-2">
+                <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 mb-4">
+                  <div>
+                    <h3 class="font-bold text-base text-slate-900 flex items-center gap-2">
+                      <span class="w-2.5 h-2.5 rounded-full bg-[#074ea3]"></span>
+                      Coupled Supply Chain Decision Matrix (ML-07 Delay Risk &times; ML-06 Inventory Stagnation)
+                    </h3>
+                    <p class="text-xs text-slate-600 mt-0.5">Cross-correlation of production schedule delays with warehouse stock velocity to trigger integrated decisions</p>
+                  </div>
+                  <div class="flex items-center gap-3 text-[11px] font-mono">
+                    <span class="flex items-center gap-1 text-red-700 font-bold"><span class="w-2 h-2 rounded-full bg-red-600"></span> Expedite &amp; Scrap</span>
+                    <span class="flex items-center gap-1 text-amber-700 font-bold"><span class="w-2 h-2 rounded-full bg-amber-500"></span> Rebalance</span>
+                    <span class="flex items-center gap-1 text-blue-700 font-bold"><span class="w-2 h-2 rounded-full bg-blue-600"></span> Buffer Release</span>
+                    <span class="flex items-center gap-1 text-emerald-700 font-bold"><span class="w-2 h-2 rounded-full bg-emerald-600"></span> Maintain</span>
+                  </div>
+                </div>
+                <div class="relative w-full" style="height: 310px; min-height: 290px;">
+                  <canvas id="chartExecDecisionMatrix" style="display: block; width: 100%; height: 100%;"></canvas>
+                </div>
+              </div>
+
+              <!-- Decision Chart 2: Prescriptive Action Triage (Doughnut Chart) -->
+              <div class="glass-panel p-7">
+                <div class="flex items-center justify-between mb-4">
+                  <div>
+                    <h3 class="font-bold text-base text-slate-900 flex items-center gap-2">
+                      <span class="w-2.5 h-2.5 rounded-full bg-[#7dbf40]"></span>
+                      Enterprise Action Triage
+                    </h3>
+                    <p class="text-xs text-slate-600 mt-0.5">Distribution of prescriptive directives across 445k audited records</p>
+                  </div>
+                </div>
+                <div class="relative w-full" style="height: 240px; min-height: 220px;">
+                  <canvas id="chartExecActionTriage" style="display: block; width: 100%; height: 100%;"></canvas>
+                </div>
+                <div id="chartExecActionTriageLegend" class="mt-3 grid grid-cols-2 gap-2 text-[11px] font-mono"></div>
+              </div>
+
+            </div>
+
+            <!-- ROW 2: Commercial Hold & Release Matrix + Operational Urgency Polar -->
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-7">
+
+              <!-- Decision Chart 3: ML-05 Credit Risk x ML-15 Order Value Tiers (Stacked Horizontal Bar) -->
+              <div class="glass-panel p-7 lg:col-span-2">
+                <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 mb-4">
+                  <div>
+                    <h3 class="font-bold text-base text-slate-900 flex items-center gap-2">
+                      <span class="w-2.5 h-2.5 rounded-full bg-[#be123c]"></span>
+                      Commercial Credit Hold &amp; Release Policy Matrix (ML-05 Risk &times; ML-15 Order Value)
+                    </h3>
+                    <p class="text-xs text-slate-600 mt-0.5">Prescriptive order execution actions categorized by customer credit risk probability and order exposure tier</p>
+                  </div>
+                  <div class="flex items-center gap-2 text-xs font-mono">
+                    <span class="text-slate-600">Model Pair:</span>
+                    <span class="px-2 py-0.5 rounded bg-rose-100 text-[#be123c] font-bold border border-rose-200">ML-05 &bull; ML-15</span>
+                  </div>
+                </div>
+                <div class="relative w-full" style="height: 290px; min-height: 270px;">
+                  <canvas id="chartExecCommercialDecisions" style="display: block; width: 100%; height: 100%;"></canvas>
+                </div>
+              </div>
+
+              <!-- Decision Chart 4: Prescriptive Operational Urgency Polar Area Chart -->
+              <div class="glass-panel p-7">
+                <div class="flex items-center justify-between mb-4">
+                  <div>
+                    <h3 class="font-bold text-base text-slate-900 flex items-center gap-2">
+                      <span class="w-2.5 h-2.5 rounded-full bg-[#d97706]"></span>
+                      Prescriptive Decision Levers (Polar)
+                    </h3>
+                    <p class="text-xs text-slate-600 mt-0.5">Top operational action streams by direct intervention volume</p>
+                  </div>
+                </div>
+                <div class="relative w-full" style="height: 290px; min-height: 270px;">
+                  <canvas id="chartExecDecisionPolar" style="display: block; width: 100%; height: 100%;"></canvas>
+                </div>
+              </div>
+
+            </div>
+
+            <!-- ROW 3: Plant Allocation & Value Protected Trajectory -->
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-7">
+
+              <!-- Decision Chart 5: Plant Decision Breakdown (Grouped Bar Chart) -->
+              <div class="glass-panel p-7 lg:col-span-2">
+                <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 mb-4">
+                  <div>
+                    <h3 class="font-bold text-base text-slate-900 flex items-center gap-2">
+                      <span class="w-2.5 h-2.5 rounded-full bg-[#2d5a26]"></span>
+                      Plant-Level Prescriptive Decision Allocation (ML-07 Orders &amp; ML-04 Maintenance)
+                    </h3>
+                    <p class="text-xs text-slate-600 mt-0.5">Execution volume of Emergency Interventions, Schedule Overhauls, and Condition Inspections across JK Cement manufacturing units</p>
+                  </div>
+                  <div class="flex items-center gap-2 text-xs font-mono">
+                    <span class="text-slate-600">Source:</span>
+                    <span class="px-2 py-0.5 rounded bg-blue-100 text-[#074ea3] font-bold border border-blue-200">SAP AFKO / AFIH</span>
+                  </div>
+                </div>
+                <div class="relative w-full" style="height: 290px; min-height: 270px;">
+                  <canvas id="chartExecPlantDecisions" style="display: block; width: 100%; height: 100%;"></canvas>
+                </div>
+              </div>
+
+              <!-- Decision Chart 6: Financial Value Protected Trajectory (Area Line Chart) -->
+              <div class="glass-panel p-7">
+                <div class="flex items-center justify-between mb-4">
+                  <div>
+                    <h3 class="font-bold text-base text-slate-900 flex items-center gap-2">
+                      <span class="w-2.5 h-2.5 rounded-full bg-[#2d5a26]"></span>
+                      Value Protected Trajectory
+                    </h3>
+                    <p class="text-xs text-slate-600 mt-0.5">Cumulative financial exposure preserved through prescriptive interventions</p>
+                  </div>
+                  <span class="text-xs font-mono text-emerald-800 font-bold bg-emerald-100/90 px-2 py-0.5 rounded border border-emerald-300">₹3,215 Cr</span>
+                </div>
+                <div class="relative w-full" style="height: 290px; min-height: 270px;">
+                  <canvas id="chartExecValueTrajectory" style="display: block; width: 100%; height: 100%;"></canvas>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+
+          <!-- Portfolio 17-Model Grid Section -->
+          <div class="space-y-5">
+            <div class="flex items-center justify-between">
+              <div>
+                <h2 class="text-xl font-bold text-slate-900 flex items-center gap-2.5">
+                  <span class="w-3 h-3 rounded-full bg-[#2d5a26]"></span>
+                  Enterprise Exception Intelligence Catalog &mdash; Click to Drill In
+                </h2>
+                <p class="text-xs text-slate-600 mt-0.5">Explore detailed diagnostic curves, confusion matrices, and high-risk exception tables</p>
+              </div>
+              <div class="text-xs font-mono text-emerald-900 font-bold">ACTIVE SURVEILLANCE PIPELINES</div>
+            </div>
+
+            <!-- Grid container injected by JS -->
+            <div id="portfolioCardsGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 2xl:grid-cols-4 gap-6"></div>
+          </div>
+
+        </section>
+
+
+        <!-- ==================================================================
+             VIEW 2: INDIVIDUAL EXCEPTION MODEL VIEW (Complete Diagnostic Suite)
+             ================================================================== -->
+        <section id="modelDetailView" class="hidden space-y-8">
+          
+          <!-- Model Top Hero Banner -->
+          <div class="glass-panel p-8 relative overflow-hidden">
+            <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-5">
+              <div>
+                <div class="flex flex-wrap items-center gap-2.5 mb-2.5">
+                  <button 
+                    onclick="navigateToExecutive()" 
+                    class="text-xs font-mono px-3 py-1.5 rounded-lg bg-slate-100 text-slate-800 hover:bg-slate-200 border border-slate-300 transition flex items-center gap-1.5 font-bold shadow-sm"
+                  >
+                    &larr; Back to Executive Summary
+                  </button>
+                  <span id="modelDetailBadgeId" class="hidden"></span>
+                  <span id="modelDetailDomainBadge" class="text-xs font-mono px-2.5 py-1 rounded-md bg-emerald-100 text-emerald-900 border border-emerald-300 font-bold">
+                    Plant Maintenance (PM)
+                  </span>
+                </div>
+
+                <h1 id="modelDetailTitle" class="text-2xl lg:text-3xl font-extrabold text-slate-900">
+                  Predictive Maintenance
+                </h1>
+                
+                <p id="modelDetailDesc" class="text-sm text-slate-700 mt-2 max-w-4xl leading-relaxed font-normal">
+                  Predict equipment failures before breakdown occurs across plant orders and sensor logs.
+                </p>
+
+                <!-- SAP Tables List -->
+                <div class="mt-3.5 flex flex-wrap items-center gap-2 text-xs font-mono">
+                  <span class="text-slate-600 font-bold">Underlying SAP Tables:</span>
+                  <div id="modelDetailSapTables" class="flex flex-wrap gap-1.5"></div>
+                </div>
+              </div>
+
+              <!-- Action Buttons -->
+              <div class="flex flex-col sm:flex-row items-center gap-3">
+                <button 
+                  id="btnDownloadWatchlist"
+                  onclick="downloadModelCSV()" 
+                  class="w-full sm:w-auto px-5 py-2.5 rounded-xl bg-[#2d5a26] hover:bg-[#23471e] text-white text-xs font-bold flex items-center justify-center gap-2 shadow-md shadow-emerald-950/15 transition cursor-pointer select-none"
+                  style="color: #ffffff !important;"
+                >
+                  <svg class="w-4 h-4 text-white" style="stroke: #ffffff !important; color: #ffffff !important;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                  </svg>
+                  <span style="color: #ffffff !important;" class="text-white font-bold tracking-wide">Download Watchlist CSV</span>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- 8 Comprehensive KPI Cards for Selected Model -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+            
+            <!-- Card 1: Audited Records -->
+            <div class="glass-panel kpi-card">
+              <div class="flex items-center justify-between">
+                <span class="text-[11px] font-mono text-blue-900 uppercase font-bold tracking-wider">RECORDS AUDITED</span>
+                <span class="text-[10px] font-mono px-2 py-0.5 rounded-full bg-blue-100 text-blue-900 font-bold border border-blue-300">Live Audit</span>
+              </div>
+              <div id="mKpiRecords" class="text-2xl font-mono font-extrabold text-slate-900 mt-1">25,000</div>
+              <div class="text-[11px] text-slate-700 mt-1 font-semibold flex items-center gap-1.5">
+                <span class="w-1.5 h-1.5 rounded-full bg-blue-600"></span> Continuous SAP surveillance
+              </div>
+            </div>
+
+            <!-- Card 2: Detected Exceptions -->
+            <div class="glass-panel kpi-card">
+              <div class="flex items-center justify-between">
+                <span class="text-[11px] font-mono text-rose-900 uppercase font-bold tracking-wider">DETECTED EXCEPTIONS</span>
+                <span class="text-[10px] font-mono px-2 py-0.5 rounded-full bg-rose-100 text-rose-900 font-bold border border-rose-300">Detected</span>
+              </div>
+              <div id="mKpiExceptions" class="text-2xl font-mono font-extrabold text-rose-700 mt-1">9,959</div>
+              <div id="mKpiExcRate" class="text-[11px] text-slate-700 mt-1 font-semibold flex items-center gap-1.5">
+                <span class="w-1.5 h-1.5 rounded-full bg-rose-600"></span> 39.84% Exception Ratio
+              </div>
+            </div>
+
+            <!-- Card 3: Financial Exposure -->
+            <div class="glass-panel kpi-card">
+              <div class="flex items-center justify-between">
+                <span class="text-[11px] font-mono text-amber-900 uppercase font-bold tracking-wider">FINANCIAL EXPOSURE</span>
+                <span class="text-[10px] font-mono px-2 py-0.5 rounded-full bg-amber-100 text-amber-900 font-bold border border-amber-300">At-Risk</span>
+              </div>
+              <div id="mKpiExposure" class="text-2xl font-mono font-extrabold text-amber-800 mt-1">&#8377;98.19 Cr</div>
+              <div class="text-[11px] text-slate-700 mt-1 font-semibold flex items-center gap-1.5">
+                <span class="w-1.5 h-1.5 rounded-full bg-amber-600"></span> High-risk failure spare cost
+              </div>
+            </div>
+
+            <!-- Card 4: Value Protected -->
+            <div class="glass-panel kpi-card">
+              <div class="flex items-center justify-between">
+                <span class="text-[11px] font-mono text-emerald-900 uppercase font-bold tracking-wider">VALUE PROTECTED</span>
+                <span class="text-[10px] font-mono px-2 py-0.5 rounded-full bg-emerald-100 text-emerald-900 font-bold border border-emerald-300">Recovered</span>
+              </div>
+              <div id="mKpiProtected" class="text-2xl font-mono font-extrabold text-emerald-800 mt-1">&#8377;17.67 Cr</div>
+              <div class="text-[11px] text-slate-700 mt-1 font-semibold flex items-center gap-1.5">
+                <span class="w-1.5 h-1.5 rounded-full bg-emerald-600"></span> Breakdown prevention savings
+              </div>
+            </div>
+
+            <!-- Card 5: Critical Risk (Tier 1) -->
+            <div class="glass-panel kpi-card">
+              <div class="flex items-center justify-between">
+                <span class="text-[11px] font-mono text-red-900 uppercase font-bold tracking-wider">CRITICAL RISK (TIER 1)</span>
+                <span class="text-[10px] font-mono px-2 py-0.5 rounded-full bg-red-100 text-red-900 font-bold border border-red-300">Immediate</span>
+              </div>
+              <div id="mKpiCritical" class="text-2xl font-mono font-extrabold text-red-700 mt-1">1,423</div>
+              <div class="text-[11px] text-slate-700 mt-1 font-semibold flex items-center gap-1.5">
+                <span class="w-1.5 h-1.5 rounded-full bg-red-600"></span> Critical failure imminent
+              </div>
+            </div>
+
+            <!-- Card 6: High Risk (Tier 2) -->
+            <div class="glass-panel kpi-card">
+              <div class="flex items-center justify-between">
+                <span class="text-[11px] font-mono text-orange-900 uppercase font-bold tracking-wider">HIGH RISK (TIER 2)</span>
+                <span class="text-[10px] font-mono px-2 py-0.5 rounded-full bg-orange-100 text-orange-900 font-bold border border-orange-300">Elevated</span>
+              </div>
+              <div id="mKpiHigh" class="text-2xl font-mono font-extrabold text-orange-700 mt-1">3,475</div>
+              <div class="text-[11px] text-slate-700 mt-1 font-semibold flex items-center gap-1.5">
+                <span class="w-1.5 h-1.5 rounded-full bg-orange-600"></span> High breakdown risk
+              </div>
+            </div>
+
+            <!-- Card 7: Resolution Rate -->
+            <div class="glass-panel kpi-card">
+              <div class="flex items-center justify-between">
+                <span class="text-[11px] font-mono text-teal-900 uppercase font-bold tracking-wider">AUDIT RESOLUTION RATE</span>
+                <span class="text-[10px] font-mono px-2 py-0.5 rounded-full bg-teal-100 text-teal-900 font-bold border border-teal-300">On-Track</span>
+              </div>
+              <div id="mKpiResolution" class="text-2xl font-mono font-extrabold text-teal-800 mt-1">94.2%</div>
+              <div class="text-[11px] text-slate-700 mt-1 font-semibold flex items-center gap-1.5">
+                <span class="w-1.5 h-1.5 rounded-full bg-teal-600"></span> Pre-closing audit clearance
+              </div>
+            </div>
+
+            <!-- Card 8: Deployed Model -->
+            <div class="glass-panel kpi-card">
+              <div class="flex items-center justify-between">
+                <span class="text-[11px] font-mono text-blue-900 uppercase font-bold tracking-wider">DEPLOYED MODEL</span>
+                <span class="text-[10px] font-mono px-2 py-0.5 rounded-full bg-blue-100 text-blue-900 font-bold border border-blue-300">Active</span>
+              </div>
+              <div id="mKpiConfidence" class="text-2xl font-mono font-extrabold text-blue-800 mt-1">0.7004</div>
+              <div id="mKpiChampionName" class="text-[11px] text-slate-700 mt-1 font-semibold flex items-center gap-1.5 truncate">
+                <span class="w-1.5 h-1.5 rounded-full bg-blue-600"></span> Isolation Forest
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Model Specific Exception Story / Strategic Context (Tailored for All 17 Models) -->
+          <div class="py-2.5 px-1 space-y-2" id="modelExceptionStoryContainer">
+            <div class="flex items-center gap-2.5">
+              <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-lg bg-emerald-100 text-emerald-950 border border-emerald-300 text-xs font-mono font-bold tracking-wide uppercase shadow-sm">
+                <span class="w-2 h-2 rounded-full bg-emerald-700 animate-pulse"></span>
+                <span id="mStoryPillText">AI &amp; Exception Intelligence</span>
+              </span>
+              <span id="mStoryDomain" class="text-xs font-mono text-slate-800 font-bold">JK CEMENT LIMITED &bull; PLANT MAINTENANCE SURVEILLANCE</span>
+            </div>
+            
+            <h3 id="mStoryHeadline" class="text-lg lg:text-xl font-extrabold text-slate-950 tracking-tight">
+              Automated Early Detection of Heavy Plant Equipment Degradation &amp; Critical Unplanned Downtime
+            </h3>
+
+            <p id="mStorySentence" class="text-sm sm:text-base text-slate-900 font-semibold leading-relaxed max-w-6xl">
+              Across JK Cement plants including Mangrol, Nimbahera, and Panna, this pipeline continuously audits equipment telemetry across SAP AFIH, AFKO, and EQUI&mdash;detecting 8,475 maintenance anomalies and &#8377;55.69 Cr in critical failure risk to prevent unscheduled kiln stops before breakdown.
+            </p>
+          </div>
+
+          <!-- Navigation Tabs Inside Individual Model (Completely Eliminates Congestion!) -->
+          <div class="flex items-center gap-3 border-b border-blue-500/20 pb-3" id="modelTabNav">
+            <button class="model-tab-btn active" data-tab="tabDiagnostics" onclick="switchModelTab('tabDiagnostics', true)">
+              <svg class="w-4 h-4 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
+              </svg>
+              ML Diagnostics & Curves
+            </button>
+            <button class="model-tab-btn" data-tab="tabDrivers" onclick="switchModelTab('tabDrivers', true)">
+              <svg class="w-4 h-4 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+              </svg>
+              Operational Drivers & Explainability
+            </button>
+            <button class="model-tab-btn" data-tab="tabWatchlist" onclick="switchModelTab('tabWatchlist', true)">
+              <svg class="w-4 h-4 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 10h16M4 14h16M4 18h16"></path>
+              </svg>
+              High-Risk Exception Watchlist Table
+            </button>
+          </div>
+
+          <!-- TAB 1: ADVANCED ML DIAGNOSTICS & PERFORMANCE CURVES -->
+          <div id="tabDiagnosticsContent" class="space-y-7">
+            
+            <!-- Section Header: Confusion Matrix & Diagnostic Benchmark KPIs -->
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pt-1">
+              <div>
+                <h3 class="font-extrabold text-base sm:text-lg text-slate-950 flex items-center gap-2">
+                  <span class="w-2.5 h-2.5 rounded-full bg-blue-600"></span>
+                  Confusion Matrix &amp; Classification Performance KPIs
+                </h3>
+                <p class="text-xs text-slate-700 font-medium mt-0.5">Ground truth vs Predicted classification and benchmark metrics at optimal threshold</p>
+              </div>
+              <span class="text-xs font-mono text-[#074ea3] bg-blue-50/90 px-3 py-1 rounded-lg border border-blue-200 font-bold self-start sm:self-auto shadow-sm">
+                OPTIMAL THRESHOLD
+              </span>
+            </div>
+
+            <!-- Horizontal KPI Row 1: Confusion Matrix Classification Outcomes (4-across grid like main page) -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+              
+              <!-- Card 1: True Positives -->
+              <div class="glass-panel kpi-card">
+                <div class="flex items-center justify-between">
+                  <span class="text-[11px] font-mono text-emerald-900 uppercase font-bold tracking-wider">TRUE POSITIVES (TP)</span>
+                  <span class="text-[10px] font-mono px-2 py-0.5 rounded-full bg-emerald-100 text-emerald-900 border border-emerald-300 font-bold">Accurate Flag</span>
+                </div>
+                <div id="cmTP" class="text-2xl font-mono font-extrabold text-emerald-950 mt-1">18,139</div>
+                <div class="text-[11px] text-emerald-900 mt-1 font-semibold flex items-center gap-1.5">
+                  <span class="w-1.5 h-1.5 rounded-full bg-emerald-600"></span> Accurately Flagged Exceptions
+                </div>
+              </div>
+
+              <!-- Card 2: False Positives -->
+              <div class="glass-panel kpi-card">
+                <div class="flex items-center justify-between">
+                  <span class="text-[11px] font-mono text-amber-900 uppercase font-bold tracking-wider">FALSE POSITIVES (FP)</span>
+                  <span class="text-[10px] font-mono px-2 py-0.5 rounded-full bg-amber-100 text-amber-900 border border-amber-300 font-bold">False Alarm</span>
+                </div>
+                <div id="cmFP" class="text-2xl font-mono font-extrabold text-amber-950 mt-1">1,607</div>
+                <div class="text-[11px] text-amber-900 mt-1 font-semibold flex items-center gap-1.5">
+                  <span class="w-1.5 h-1.5 rounded-full bg-amber-600"></span> Safe Postings / Low Priority
+                </div>
+              </div>
+
+              <!-- Card 3: False Negatives -->
+              <div class="glass-panel kpi-card">
+                <div class="flex items-center justify-between">
+                  <span class="text-[11px] font-mono text-rose-900 uppercase font-bold tracking-wider">FALSE NEGATIVES (FN)</span>
+                  <span class="text-[10px] font-mono px-2 py-0.5 rounded-full bg-rose-100 text-rose-900 border border-rose-300 font-bold">Latent Risk</span>
+                </div>
+                <div id="cmFN" class="text-2xl font-mono font-extrabold text-rose-950 mt-1">3,916</div>
+                <div class="text-[11px] text-rose-900 mt-1 font-semibold flex items-center gap-1.5">
+                  <span class="w-1.5 h-1.5 rounded-full bg-rose-600"></span> Missed Exceptions / Latent Risk
+                </div>
+              </div>
+
+              <!-- Card 4: True Negatives -->
+              <div class="glass-panel kpi-card">
+                <div class="flex items-center justify-between">
+                  <span class="text-[11px] font-mono text-blue-900 uppercase font-bold tracking-wider">TRUE NEGATIVES (TN)</span>
+                  <span class="text-[10px] font-mono px-2 py-0.5 rounded-full bg-blue-100 text-blue-900 border border-blue-300 font-bold">Confirmed Normal</span>
+                </div>
+                <div id="cmTN" class="text-2xl font-mono font-extrabold text-blue-950 mt-1">47,302</div>
+                <div class="text-[11px] text-blue-900 mt-1 font-semibold flex items-center gap-1.5">
+                  <span class="w-1.5 h-1.5 rounded-full bg-blue-600"></span> Confirmed Normal Postings
+                </div>
+              </div>
+
+            </div>
+
+            <!-- Horizontal KPI Row 2: Diagnostic Benchmark Rates (4-across grid like main page) -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+
+              <!-- Card 5: Precision -->
+              <div class="glass-panel kpi-card">
+                <div class="flex items-center justify-between">
+                  <span class="text-[11px] font-mono text-slate-800 uppercase font-bold tracking-wider">MODEL PRECISION</span>
+                  <span class="text-[10px] font-mono px-2 py-0.5 rounded-full bg-blue-100 text-blue-900 border border-blue-300 font-bold">Purity</span>
+                </div>
+                <div id="cmPrecisionText" class="text-2xl font-mono font-extrabold text-[#074ea3] mt-1">91.8%</div>
+                <div class="text-[11px] text-slate-700 mt-1 font-semibold flex items-center gap-1.5">
+                  <span class="w-1.5 h-1.5 rounded-full bg-blue-600"></span> True Positive / Total Flagged
+                </div>
+              </div>
+
+              <!-- Card 6: Recall -->
+              <div class="glass-panel kpi-card">
+                <div class="flex items-center justify-between">
+                  <span class="text-[11px] font-mono text-slate-800 uppercase font-bold tracking-wider">RECALL / SENSITIVITY</span>
+                  <span class="text-[10px] font-mono px-2 py-0.5 rounded-full bg-indigo-100 text-indigo-900 border border-indigo-300 font-bold">Coverage</span>
+                </div>
+                <div id="cmRecallText" class="text-2xl font-mono font-extrabold text-indigo-800 mt-1">82.2%</div>
+                <div class="text-[11px] text-slate-700 mt-1 font-semibold flex items-center gap-1.5">
+                  <span class="w-1.5 h-1.5 rounded-full bg-indigo-600"></span> True Positive / Actual Anomalies
+                </div>
+              </div>
+
+              <!-- Card 7: F1-Score -->
+              <div class="glass-panel kpi-card">
+                <div class="flex items-center justify-between">
+                  <span class="text-[11px] font-mono text-slate-800 uppercase font-bold tracking-wider">HARMONIC F1-SCORE</span>
+                  <span class="text-[10px] font-mono px-2 py-0.5 rounded-full bg-teal-100 text-teal-900 border border-teal-300 font-bold">Harmonic</span>
+                </div>
+                <div id="cmF1Text" class="text-2xl font-mono font-extrabold text-teal-800 mt-1">0.867</div>
+                <div class="text-[11px] text-slate-700 mt-1 font-semibold flex items-center gap-1.5">
+                  <span class="w-1.5 h-1.5 rounded-full bg-teal-600"></span> Optimal Tradeoff Balance
+                </div>
+              </div>
+
+              <!-- Card 8: Accuracy -->
+              <div class="glass-panel kpi-card">
+                <div class="flex items-center justify-between">
+                  <span class="text-[11px] font-mono text-slate-800 uppercase font-bold tracking-wider">OVERALL ACCURACY</span>
+                  <span class="text-[10px] font-mono px-2 py-0.5 rounded-full bg-emerald-100 text-emerald-900 border border-emerald-300 font-bold">Concordance</span>
+                </div>
+                <div id="cmAccuracyText" class="text-2xl font-mono font-extrabold text-emerald-800 mt-1">92.1%</div>
+                <div class="text-[11px] text-slate-700 mt-1 font-semibold flex items-center gap-1.5">
+                  <span class="w-1.5 h-1.5 rounded-full bg-emerald-600"></span> Global Decision Concordance
+                </div>
+              </div>
+
+            </div>
+
+            <!-- Row 1: Prediction Outcome Ring Donut & Per-Class Precision/Recall/F1 -->
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-7">
+              
+              <!-- Prediction Outcome Ring Donut -->
+              <div class="glass-panel p-7">
+                <div class="flex items-center justify-between mb-4">
+                  <div>
+                    <h3 class="font-bold text-base text-slate-900 flex items-center gap-2">
+                      <span class="w-2.5 h-2.5 rounded-full bg-blue-600"></span>
+                      Prediction Outcome Distribution
+                    </h3>
+                    <p class="text-xs text-slate-600">Proportion of True Exceptions vs False Alarms vs Clean Items</p>
+                  </div>
+                </div>
+                <div class="h-[280px] relative flex items-center justify-center">
+                  <canvas id="chartModelOutcomeDonut"></canvas>
+                </div>
+                <div id="chartModelOutcomeLegend" class="mt-3 flex flex-wrap items-center justify-center gap-3 text-xs"></div>
+              </div>
+
+              <!-- Per-Class Precision / Recall / F1 Bar Chart -->
+              <div class="glass-panel p-7">
+                <div class="flex items-center justify-between mb-4">
+                  <div>
+                    <h3 class="font-bold text-base text-slate-900 flex items-center gap-2">
+                      <span class="w-2.5 h-2.5 rounded-full bg-blue-600"></span>
+                      Per-Class Precision / Recall / F1
+                    </h3>
+                    <p class="text-xs text-slate-600">Comparative performance across Normal vs Exception classes</p>
+                  </div>
+                  <span class="text-xs font-mono text-[#074ea3] font-bold bg-blue-50 px-2 py-0.5 rounded border border-blue-200">Class Metrics</span>
+                </div>
+                <div class="h-[280px] relative">
+                  <canvas id="chartModelPerClass"></canvas>
+                </div>
+              </div>
+
+            </div>
+
+            <!-- Row 2: Precision/Recall/F1 vs Threshold & Predicted Probability Distribution -->
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-7">
+              
+              <!-- Precision / Recall / F1 vs Decision Threshold Curve -->
+              <div class="glass-panel p-7">
+                <div class="flex items-center justify-between mb-4">
+                  <div>
+                    <h3 class="font-bold text-base text-slate-900 flex items-center gap-2">
+                      <span class="w-2.5 h-2.5 rounded-full bg-blue-600"></span>
+                      Precision / Recall / F1 vs Threshold
+                    </h3>
+                    <p class="text-xs text-slate-600">Tuning decision boundary trade-offs from 0.10 to 0.90</p>
+                  </div>
+                  <span class="text-xs font-mono text-[#074ea3] font-bold bg-blue-50 px-2 py-0.5 rounded border border-blue-200">Decision Tuning</span>
+                </div>
+                <div class="h-[280px] relative">
+                  <canvas id="chartModelThreshold"></canvas>
+                </div>
+              </div>
+
+              <!-- Predicted Probability Distribution Histogram -->
+              <div class="glass-panel p-7">
+                <div class="flex items-center justify-between mb-4">
+                  <div>
+                    <h3 class="font-bold text-base text-slate-900 flex items-center gap-2">
+                      <span class="w-2.5 h-2.5 rounded-full bg-blue-600"></span>
+                      Predicted Probability Distribution
+                    </h3>
+                    <p class="text-xs text-slate-600">Histogram of scoring probabilities P(Exception) across deciles</p>
+                  </div>
+                  <span class="text-xs font-mono text-[#074ea3] font-bold bg-blue-50 px-2 py-0.5 rounded border border-blue-200">P(Exception)</span>
+                </div>
+                <div class="h-[280px] relative">
+                  <canvas id="chartModelProbHist"></canvas>
+                </div>
+              </div>
+
+            </div>
+
+            <!-- Row 3: Probability Distribution by Actual Class & Calibration Reliability -->
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-7">
+              
+              <!-- Probability Distribution by Actual Class -->
+              <div class="glass-panel p-7">
+                <div class="flex items-center justify-between mb-4">
+                  <div>
+                    <h3 class="font-bold text-base text-slate-900 flex items-center gap-2">
+                      <span class="w-2.5 h-2.5 rounded-full bg-blue-600"></span>
+                      Probability Distribution by Actual Class
+                    </h3>
+                    <p class="text-xs text-slate-600">Bimodal separation: Clean transactions vs Actual Exceptions</p>
+                  </div>
+                  <span class="text-xs font-mono text-[#074ea3] font-bold bg-blue-50 px-2 py-0.5 rounded border border-blue-200">Bimodal Separation</span>
+                </div>
+                <div class="h-[280px] relative">
+                  <canvas id="chartModelBimodalHist"></canvas>
+                </div>
+              </div>
+
+              <!-- Calibration Curve -->
+              <div class="glass-panel p-7">
+                <div class="flex items-center justify-between mb-4">
+                  <div>
+                    <h3 class="font-bold text-base text-slate-900 flex items-center gap-2">
+                      <span class="w-2.5 h-2.5 rounded-full bg-blue-600"></span>
+                      Calibration &mdash; Predicted vs Actual Rate
+                    </h3>
+                    <p class="text-xs text-slate-600">Reliability curve evaluating model probability calibration by decile</p>
+                  </div>
+                  <span class="text-xs font-mono text-[#074ea3] font-bold bg-blue-50 px-2 py-0.5 rounded border border-blue-200">Reliability</span>
+                </div>
+                <div class="h-[280px] relative">
+                  <canvas id="chartModelCalibration"></canvas>
+                </div>
+              </div>
+
+            </div>
+
+            <!-- Row 4: Cumulative Gains Lift & Optimal Decision Threshold Policy -->
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-7">
+              
+              <!-- Cumulative Gains Lift Curve -->
+              <div class="glass-panel p-7">
+                <div class="flex items-center justify-between mb-4">
+                  <div>
+                    <h3 class="font-bold text-base text-slate-900 flex items-center gap-2">
+                      <span class="w-2.5 h-2.5 rounded-full bg-blue-600"></span>
+                      Cumulative Gains &mdash; Exceptions Captured
+                    </h3>
+                    <p class="text-xs text-slate-600">Lift curve demonstrating exception capture rate in top-scored deciles</p>
+                  </div>
+                  <span class="text-xs font-mono text-[#074ea3] font-bold bg-blue-50 px-2 py-0.5 rounded border border-blue-200">Cumulative Lift</span>
+                </div>
+                <div class="h-[280px] relative">
+                  <canvas id="chartModelCumulativeGains"></canvas>
+                </div>
+              </div>
+
+              <!-- Decision Threshold & Lift Intelligence Card -->
+              <div class="glass-panel p-7 flex flex-col justify-between">
+                <div>
+                  <div class="flex items-center justify-between mb-4">
+                    <div>
+                      <h3 class="font-bold text-base text-slate-900 flex items-center gap-2">
+                        <span class="w-2.5 h-2.5 rounded-full bg-blue-600"></span>
+                        Optimal Decision Threshold Policy
+                      </h3>
+                      <p class="text-xs text-slate-600">Enterprise risk boundary & automated SAP trigger recommendations</p>
+                    </div>
+                    <span class="text-xs font-mono text-[#074ea3] font-bold bg-blue-50 px-2.5 py-0.5 rounded border border-blue-200">Policy Rules</span>
+                  </div>
+                  <div class="space-y-3 text-xs text-slate-700 font-medium">
+                    <div class="flex items-start gap-2.5 p-3 rounded-xl bg-emerald-50/70 border border-emerald-200">
+                      <span class="w-2 h-2 rounded-full bg-emerald-600 mt-1 flex-shrink-0"></span>
+                      <div>
+                        <strong class="text-emerald-950 font-bold block">Top 20% Scored Transactions Contain 80%+ Anomalies:</strong>
+                        <span>Cumulative gains curve confirms high audit lift in early deciles, minimizing operational review overhead.</span>
+                      </div>
+                    </div>
+                    <div class="flex items-start gap-2.5 p-3 rounded-xl bg-blue-50/70 border border-blue-200">
+                      <span class="w-2 h-2 rounded-full bg-blue-600 mt-1 flex-shrink-0"></span>
+                      <div>
+                        <strong class="text-blue-950 font-bold block">Optimal F1 Boundary at Selected Threshold:</strong>
+                        <span>Maintains high precision (>90%) while retaining high recall sensitivity to prevent critical financial leakages.</span>
+                      </div>
+                    </div>
+                    <div class="flex items-start gap-2.5 p-3 rounded-xl bg-slate-50/70 border border-slate-200">
+                      <span class="w-2 h-2 rounded-full bg-slate-600 mt-1 flex-shrink-0"></span>
+                      <div>
+                        <strong class="text-slate-900 font-bold block">Continuous SAP HANA Feedback Loop:</strong>
+                        <span>Audit resolutions and auditor feedback stream back into retraining iterations for active drift containment.</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="mt-4 pt-3 border-t border-slate-300/60 flex items-center justify-between text-xs font-mono text-slate-600">
+                  <span>SAP Production Engine: <strong class="text-slate-900">SAP HANA ML V2.4</strong></span>
+                  <span class="text-emerald-700 font-bold">Status: Active Stream</span>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+
+          <!-- TAB 2: OPERATIONAL DRIVERS & EXPLAINABILITY -->
+          <div id="tabDriversContent" class="hidden space-y-7">
+            
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-7">
+              
+              <!-- Feature Importance -->
+              <div class="glass-panel p-7">
+                <div class="flex items-center justify-between mb-4">
+                  <div>
+                    <h3 class="font-bold text-base text-slate-900 flex items-center gap-2">
+                      <span class="w-2.5 h-2.5 rounded-full bg-[#074ea3]"></span>
+                      Feature Importance & Explainability
+                    </h3>
+                    <p class="text-xs text-slate-600 mt-0.5">Top mathematical drivers influencing exception classification</p>
+                  </div>
+                  <span class="text-xs font-mono text-[#074ea3] font-bold">From ML Pipeline</span>
+                </div>
+                <div class="h-[320px] relative">
+                  <canvas id="chartModelFeatures"></canvas>
+                </div>
+              </div>
+
+              <!-- Operational Spread -->
+              <div class="glass-panel p-7">
+                <div class="flex items-center justify-between mb-4">
+                  <div>
+                    <h3 id="modelBreakdownChartTitle" class="font-bold text-base text-slate-900 flex items-center gap-2">
+                      <span class="w-2.5 h-2.5 rounded-full bg-[#074ea3]"></span>
+                      Operational Spread by Plant / Entity
+                    </h3>
+                    <p class="text-xs text-slate-600 mt-0.5">Distribution of evaluated transactions across operations</p>
+                  </div>
+                  <span class="text-xs font-mono text-[#074ea3] font-bold">Operational Spread</span>
+                </div>
+                <div class="h-[320px] relative">
+                  <canvas id="chartModelBreakdown"></canvas>
+                </div>
+              </div>
+
+              <!-- Risk Severity Tiers -->
+              <div class="glass-panel p-7">
+                <div class="flex items-center justify-between mb-4">
+                  <div>
+                    <h3 class="font-bold text-base text-slate-900 flex items-center gap-2">
+                      <span class="w-2.5 h-2.5 rounded-full bg-[#074ea3]"></span>
+                      Risk Severity Tiers
+                    </h3>
+                    <p class="text-xs text-slate-600 mt-0.5">Critical, High, Medium and Low classification</p>
+                  </div>
+                </div>
+                <div class="h-[280px] relative flex items-center justify-center">
+                  <canvas id="chartModelRiskDonut"></canvas>
+                </div>
+              </div>
+
+              <!-- Benchmark Ranking -->
+              <div class="glass-panel p-7">
+                <div class="flex items-center justify-between mb-4">
+                  <div>
+                    <h3 class="font-bold text-base text-slate-900 flex items-center gap-2">
+                      <span class="w-2.5 h-2.5 rounded-full bg-[#074ea3]"></span>
+                      Algorithm Ranking & Evaluation
+                    </h3>
+                    <p class="text-xs text-slate-600 mt-0.5">Production model vs benchmark algorithms evaluated</p>
+                  </div>
+                  <span class="text-xs font-mono text-[#074ea3] font-bold">ML Benchmark</span>
+                </div>
+                <div class="overflow-x-auto max-h-[280px] overflow-y-auto rounded-xl border border-white/60 bg-white/40">
+                  <table class="w-full text-xs font-mono text-left">
+                    <thead class="text-slate-900 bg-white/90 border-b border-slate-300/70 sticky top-0 shadow-sm">
+                      <tr>
+                        <th class="p-2.5 font-bold text-slate-900">Rank</th>
+                        <th class="p-2.5 font-bold text-slate-900">Model</th>
+                        <th class="p-2.5 font-bold text-slate-900">Accuracy</th>
+                        <th class="p-2.5 font-bold text-slate-900">F1-Score</th>
+                        <th class="p-2.5 font-bold text-slate-900">ROC-AUC</th>
+                      </tr>
+                    </thead>
+                    <tbody id="modelBenchTableBody" class="divide-y divide-slate-200/60 text-slate-900"></tbody>
+                  </table>
+                </div>
+              </div>
+
+            </div>
+
+            <!-- Row 3: Exception Velocity Timeline & Plant-Wise Financial Exposure -->
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-7">
+              
+              <!-- Exception Trend Timeline (12-Month Telemetry) -->
+              <div class="glass-panel p-7">
+                <div class="flex items-center justify-between mb-4">
+                  <div>
+                    <h3 class="font-bold text-base text-slate-900 flex items-center gap-2">
+                      <span class="w-2.5 h-2.5 rounded-full bg-[#2d5a26]"></span>
+                      Monthly Exception Velocity & Remediation Trend
+                    </h3>
+                    <p class="text-xs text-slate-600 mt-0.5">12-month rolling surveillance of flagged anomalies vs audit closures</p>
+                  </div>
+                  <span class="text-xs font-mono text-emerald-900 bg-emerald-100 px-2.5 py-1 rounded-lg border border-emerald-300 font-bold">12-MO TREND</span>
+                </div>
+                <div class="h-[300px] relative">
+                  <canvas id="chartModelTimeline"></canvas>
+                </div>
+              </div>
+
+              <!-- Plant-Wise Financial Exposure / Loss Severity -->
+              <div class="glass-panel p-7">
+                <div class="flex items-center justify-between mb-4">
+                  <div>
+                    <h3 class="font-bold text-base text-slate-900 flex items-center gap-2">
+                      <span class="w-2.5 h-2.5 rounded-full bg-[#074ea3]"></span>
+                      Manufacturing Plant Exception & Loss Severity
+                    </h3>
+                    <p class="text-xs text-slate-600 mt-0.5">Monitored risk containment and exception spread across JK Cement facilities</p>
+                  </div>
+                  <span class="text-xs font-mono text-[#074ea3] bg-blue-50 px-2.5 py-1 rounded-lg border border-blue-200 font-bold">PLANT SPREAD</span>
+                </div>
+                <div class="h-[300px] relative">
+                  <canvas id="chartModelPlantExposure"></canvas>
+                </div>
+              </div>
+
+            </div>
+
+            <!-- Row 4: Remediation Workflow Status Donut & Operational Radar Capability -->
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-7">
+              
+              <!-- Exception Resolution & Remediation Workflow -->
+              <div class="glass-panel p-7">
+                <div class="flex items-center justify-between mb-4">
+                  <div>
+                    <h3 class="font-bold text-base text-slate-900 flex items-center gap-2">
+                      <span class="w-2.5 h-2.5 rounded-full bg-emerald-600"></span>
+                      Exception Remediation & Workflow Status
+                    </h3>
+                    <p class="text-xs text-slate-600 mt-0.5">Audit clearance cycle: Resolved, Under Review, Escalated, or Auto-Corrected</p>
+                  </div>
+                  <span class="text-xs font-mono text-emerald-900 bg-emerald-100 px-2.5 py-1 rounded-lg border border-emerald-300 font-bold">WORKFLOW</span>
+                </div>
+                <div class="h-[280px] relative flex items-center justify-center">
+                  <canvas id="chartModelResolutionDonut"></canvas>
+                </div>
+              </div>
+
+              <!-- Multi-Dimensional Operational Capability Radar -->
+              <div class="glass-panel p-7">
+                <div class="flex items-center justify-between mb-4">
+                  <div>
+                    <h3 class="font-bold text-base text-slate-900 flex items-center gap-2">
+                      <span class="w-2.5 h-2.5 rounded-full bg-indigo-600"></span>
+                      Operational Intelligence & Pipeline Reliability
+                    </h3>
+                    <p class="text-xs text-slate-600 mt-0.5">Precision, Coverage, Data Completeness, Latency, and Domain Stability</p>
+                  </div>
+                  <span class="text-xs font-mono text-indigo-900 bg-indigo-50 px-2.5 py-1 rounded-lg border border-indigo-200 font-bold">5-AXIS RADAR</span>
+                </div>
+                <div class="h-[280px] relative flex items-center justify-center">
+                  <canvas id="chartModelRadar"></canvas>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+
+          <!-- TAB 3: HIGH-RISK EXCEPTION WATCHLIST TABLE -->
+
+          <div id="tabWatchlistContent" class="hidden space-y-5">
+            
+            <div class="glass-panel p-7 space-y-5">
+              
+              <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+                <div>
+                  <h3 class="font-bold text-base text-slate-900 flex items-center gap-2">
+                    <span class="w-2.5 h-2.5 rounded-full bg-red-600 animate-pulse"></span>
+                    High-Risk Exception Watchlist Records
+                  </h3>
+                  <p class="text-xs text-slate-600 mt-0.5">Interactive live inspector for anomalous transactions. Click any row to view full SAP document details.</p>
+                </div>
+
+                <!-- Table Controls -->
+                <div class="flex items-center gap-3">
+                  <div class="relative">
+                    <input 
+                      type="text" 
+                      id="tableSearchInput" 
+                      placeholder="Search records..." 
+                      class="bg-white/90 border border-slate-300 rounded-xl px-3.5 py-2 text-xs text-slate-900 placeholder-slate-500 shadow-sm focus:outline-none focus:border-blue-600 transition"
+                    >
+                  </div>
+
+                  <!-- Severity Filter -->
+                  <select 
+                    id="tableSeverityFilter" 
+                    class="bg-white/90 border border-slate-300 rounded-xl px-3.5 py-2 text-xs text-slate-900 focus:outline-none font-semibold shadow-sm"
+                  >
+                    <option value="all">All Severities</option>
+                    <option value="Critical">Critical Only</option>
+                    <option value="High">High & Critical</option>
+                  </select>
+                </div>
+              </div>
+
+              <!-- Table Responsive Container (Spacious padding) -->
+              <div class="overflow-x-auto rounded-xl border border-slate-300/70 shadow-sm">
+                <table class="custom-table" id="exceptionDataTable">
+                  <thead id="exceptionTableHead"></thead>
+                  <tbody id="exceptionTableBody"></tbody>
+                </table>
+              </div>
+
+              <!-- Pagination / Counter -->
+              <div class="flex items-center justify-between text-xs text-slate-700 pt-2 font-medium">
+                <div id="tableRecordCountText">Showing 1-15 of 50 watchlist records</div>
+                <div class="flex items-center gap-2">
+                  <button id="tablePrevBtn" class="px-3 py-1.5 rounded-lg bg-white/90 border border-slate-300 text-slate-800 font-semibold hover:bg-slate-100 shadow-sm transition">Prev</button>
+                  <span id="tablePageText" class="px-2.5 font-mono text-slate-900 font-bold">Page 1 / 4</span>
+                  <button id="tableNextBtn" class="px-3 py-1.5 rounded-lg bg-white/90 border border-slate-300 text-slate-800 font-semibold hover:bg-slate-100 shadow-sm transition">Next</button>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+
+        </section>
+
+      </div>
+    </main>
+
+  </div>
+
+
+  <!-- ====================================================================
+       MODAL 1: EXCEPTION DETAIL INSPECTOR (Full SAP Record Breakdown)
+       ==================================================================== -->
+  <div id="recordDetailModal" class="modal-overlay" onclick="closeRecordModal(event)">
+    <div class="modal-content p-8 space-y-6" onclick="event.stopPropagation()">
+      <div class="flex items-center justify-between border-b border-blue-500/20 pb-4">
+        <div class="flex items-center gap-3.5">
+          <div class="w-11 h-11 rounded-xl bg-red-100 border border-red-300 flex items-center justify-center text-red-700">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path>
+            </svg>
+          </div>
+          <div>
+            <h2 id="modalRecordTitle" class="text-xl font-bold text-slate-900">SAP Exception Detail</h2>
+            <div id="modalRecordSub" class="text-xs font-mono text-[#074ea3] font-bold">Document Inspection</div>
+          </div>
+        </div>
+        <button onclick="closeRecordModal()" class="text-slate-500 hover:text-slate-900 p-1.5 rounded-lg bg-slate-100 hover:bg-slate-200 border border-slate-300 transition">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+          </svg>
+        </button>
+      </div>
+
+      <!-- Key Anomaly Alert Box -->
+      <div id="modalAlertBox" class="p-4 rounded-xl bg-red-50 border border-red-200 flex items-start gap-3">
+        <div class="text-red-800 font-bold text-xs uppercase tracking-wide">Risk Flag:</div>
+        <div id="modalAlertText" class="text-xs text-red-900 font-medium">Abnormal variance detected exceeding statistical baseline confidence.</div>
+      </div>
+
+      <!-- Field Grid -->
+      <div id="modalFieldsGrid" class="grid grid-cols-1 md:grid-cols-2 gap-3.5 text-xs"></div>
+
+      <!-- Recommendations / Mitigation Action -->
+      <div class="p-4 rounded-xl bg-blue-50/70 border border-blue-200 space-y-2">
+        <div class="text-xs font-bold text-[#074ea3] font-mono uppercase tracking-wide flex items-center gap-1.5">
+          <svg class="w-4 h-4 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+          </svg>
+          Recommended Action & Remediation Workflow:
+        </div>
+        <div id="modalActionText" class="text-xs text-slate-800 leading-relaxed font-medium">
+          Verify physical asset / audit invoice against PO and initiate containment protocol with Plant Supervisor.
+        </div>
+      </div>
+
+      <div class="flex justify-end pt-2">
+        <button onclick="closeRecordModal()" class="px-5 py-2.5 rounded-xl bg-blue-600 text-white font-bold text-xs hover:bg-blue-700 shadow transition">
+          Close Inspector
+        </button>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ====================================================================
+       MODAL 2: LOGO CUSTOMIZER / UPLOADER
+       ==================================================================== -->
+  <div id="logoModal" class="modal-overlay" onclick="closeLogoModal(event)">
+    <div class="modal-content p-8 space-y-6" onclick="event.stopPropagation()">
+      <div class="flex items-center justify-between border-b border-slate-200 pb-4">
+        <div>
+          <h2 class="text-xl font-bold text-slate-900 flex items-center gap-2">
+            <svg class="w-5 h-5 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+            </svg>
+            JK Cement Logo Management
+          </h2>
+          <p class="text-xs text-slate-600 mt-1">Official JK Cement transparent logo is displayed. You can also upload custom versions or reset anytime.</p>
+        </div>
+        <button onclick="closeLogoModal()" class="text-slate-500 hover:text-slate-900 p-1.5 rounded-lg bg-slate-100 hover:bg-slate-200 border border-slate-300 transition">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+          </svg>
+        </button>
+      </div>
+
+      <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200 space-y-4">
+        <div class="font-bold text-sm text-slate-900">Current Dashboard Logo (Left Sidebar)</div>
+        <div class="h-20 rounded-xl p-3 flex items-center justify-center bg-white border border-slate-200 shadow-sm">
+          <img id="modalPreviewLogo" src="assets/jk_cement_logo_dark_mode.png" alt="JK Cement Logo" class="max-h-12 object-contain">
+        </div>
+        <div class="text-xs text-slate-600 font-medium">Upload replacement PNG, SVG, or JPG image:</div>
+        <input type="file" id="jkcLogoFileInput" accept="image/*" class="text-xs text-slate-700 file:mr-3 file:py-2 file:px-4 file:rounded-xl file:border-0 file:text-xs file:font-semibold file:bg-blue-600 file:text-white hover:file:bg-blue-700 cursor-pointer">
+        <div>
+          <button onclick="resetJkcLogo()" class="text-xs text-rose-600 hover:underline font-semibold">
+            Reset to default transparent logo
+          </button>
+        </div>
+      </div>
+
+      <div class="flex justify-end pt-2">
+        <button onclick="closeLogoModal()" class="px-6 py-2.5 rounded-xl bg-blue-600 text-white font-bold text-xs hover:bg-blue-700 shadow transition">
+          Done
+        </button>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Load Embedded Pre-computed Dashboard Data -->
+  <script src="dashboard_data.js?v=20261014_decisions_v2"></script>
+
+  <!-- Application Logic -->
+  <script src="app.js?v=20261014_plusjakartasans"></script>
+</body>
+</html>

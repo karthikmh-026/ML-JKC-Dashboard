@@ -1,0 +1,488 @@
+{
+  "ML_13_Cost_Center_Spend_Forecasting_Enriched_Output.xlsx": {
+    "sheets": [
+      "ML_13_Enriched_Output(Predict)",
+      "Feature_Importance",
+      "Columns Ignored"
+    ],
+    "features": {
+      "sheet": "Feature_Importance",
+      "shape": [
+        6,
+        3
+      ],
+      "cols": [
+        "ML_13 | Feature_Importance",
+        "Unnamed: 1",
+        "Unnamed: 2"
+      ]
+    },
+    "models": null
+  },
+  "ML_14_PR_to_PO_Cycle_Time_Prediction_Enriched_Output.xlsx": {
+    "sheets": [
+      "ML_14_Enriched_Output(Predict)",
+      "Feature_Importance",
+      "Columns Ignored"
+    ],
+    "features": {
+      "sheet": "Feature_Importance",
+      "shape": [
+        6,
+        3
+      ],
+      "cols": [
+        "ML_14 | Feature_Importance",
+        "Unnamed: 1",
+        "Unnamed: 2"
+      ]
+    },
+    "models": null
+  },
+  "ML_15_Order_Value_Prediction_Enriched_Output.xlsx": {
+    "sheets": [
+      "ML_15_Enriched_Output(Predict)",
+      "Feature_Importance",
+      "Columns Ignored",
+      "Summary KPI Dashboard",
+      "Model Ranking & Evaluation"
+    ],
+    "features": {
+      "sheet": "Feature_Importance",
+      "shape": [
+        6,
+        3
+      ],
+      "cols": [
+        "ML_15 | Feature_Importance",
+        "Unnamed: 1",
+        "Unnamed: 2"
+      ]
+    },
+    "models": {
+      "sheet": "Model Ranking & Evaluation",
+      "shape": [
+        5,
+        10
+      ],
+      "cols": [
+        "Rank",
+        "Model",
+        "model_key",
+        "Accuracy",
+        "Precision",
+        "Recall",
+        "F1-Score",
+        "ROC-AUC",
+        "PR-AUC",
+        "Specificity"
+      ]
+    }
+  },
+  "ML_19_Price_Variance_Detection_Enriched_Output_Clean.xlsx": {
+    "sheets": [
+      "ML_19_Enriched_Output(Predict)",
+      "Feature_Importance",
+      "Columns Ignored"
+    ],
+    "features": {
+      "sheet": "Feature_Importance",
+      "shape": [
+        6,
+        3
+      ],
+      "cols": [
+        "ML_19 | Feature_Importance",
+        "Unnamed: 1",
+        "Unnamed: 2"
+      ]
+    },
+    "models": null
+  },
+  "ML_20_Duplicate_Invoice_Detection_Enriched_Output.xlsx": {
+    "sheets": [
+      "ML_20_Output",
+      "Feature_Importance",
+      "Columns Ignored"
+    ],
+    "features": {
+      "sheet": "Feature_Importance",
+      "shape": [
+        6,
+        3
+      ],
+      "cols": [
+        "ML_20 | Feature_Importance",
+        "Unnamed: 1",
+        "Unnamed: 2"
+      ]
+    },
+    "models": null
+  },
+  "ML_21_Material_Master_Data_Quality_Scoring_Enriched_Output.xlsx": {
+    "sheets": [
+      "ML_21_Enriched_Output(Predict)",
+      "Feature_Importance",
+      "Columns Ignored"
+    ],
+    "features": {
+      "sheet": "Feature_Importance",
+      "shape": [
+        6,
+        3
+      ],
+      "cols": [
+        "ML_21 | Feature_Importance",
+        "Unnamed: 1",
+        "Unnamed: 2"
+      ]
+    },
+    "models": null
+  },
+  "ML_22_Customer_RFM_Segmentation_Enriched_Output.xlsx": {
+    "sheets": [
+      "ML_22_Enriched_Output(Predict)",
+      "Feature_Importance",
+      "Columns Ignored"
+    ],
+    "features": {
+      "sheet": "Feature_Importance",
+      "shape": [
+        6,
+        3
+      ],
+      "cols": [
+        "ML_22 | Feature_Importance",
+        "Unnamed: 1",
+        "Unnamed: 2"
+      ]
+    },
+    "models": null
+  },
+  "ML_23_Vendor_Risk_Segmentation_Enriched_Output.xlsx": {
+    "sheets": [
+      "ML_23_Enriched_Output(Predict)",
+      "Feature_Importance",
+      "Columns Ignored"
+    ],
+    "features": {
+      "sheet": "Feature_Importance",
+      "shape": [
+        6,
+        3
+      ],
+      "cols": [
+        "ML_23 | Feature_Importance",
+        "Unnamed: 1",
+        "Unnamed: 2"
+      ]
+    },
+    "models": null
+  },
+  "ML_24_Material_Auto_Classification_Enriched_Output_Clean.xlsx": {
+    "sheets": [
+      "ML_24_Enriched_Output(Predict)",
+      "Feature_Importance",
+      "Columns Ignored"
+    ],
+    "features": {
+      "sheet": "Feature_Importance",
+      "shape": [
+        6,
+        3
+      ],
+      "cols": [
+        "ML_24 | Feature_Importance",
+        "Unnamed: 1",
+        "Unnamed: 2"
+      ]
+    },
+    "models": null
+  },
+  "ML_25_Account_Auto_Coding_Enriched_Output.xlsx": {
+    "sheets": [
+      "ML_25_Enriched_Output(Predict)",
+      "Feature_Importance",
+      "Columns Ignored"
+    ],
+    "features": {
+      "sheet": "Feature_Importance",
+      "shape": [
+        6,
+        3
+      ],
+      "cols": [
+        "ML_25 | Feature_Importance",
+        "Unnamed: 1",
+        "Unnamed: 2"
+      ]
+    },
+    "models": null
+  },
+  "ML_26_Breakdown_Root_Cause_Analysis_Enriched_Output.xlsx": {
+    "sheets": [
+      "ML_26_Enriched_Output(Predict)",
+      "Feature_Importance",
+      "Columns Ignored"
+    ],
+    "features": {
+      "sheet": "Feature_Importance",
+      "shape": [
+        6,
+        3
+      ],
+      "cols": [
+        "ML_26 | Feature_Importance",
+        "Unnamed: 1",
+        "Unnamed: 2"
+      ]
+    },
+    "models": null
+  },
+  "ML_27_RAG_over_SAP_Data_Enriched_Output.xlsx": {
+    "sheets": [
+      "ML_27_Enriched_Output(Predict)",
+      "Feature_Importance",
+      "Columns Ignored"
+    ],
+    "features": {
+      "sheet": "Feature_Importance",
+      "shape": [
+        6,
+        3
+      ],
+      "cols": [
+        "ML_27 | Feature_Importance",
+        "Unnamed: 1",
+        "Unnamed: 2"
+      ]
+    },
+    "models": null
+  },
+  "ML_4_Predictive_Maintenance_Enriched_Output.xlsx": {
+    "sheets": [
+      "Executive_Summary",
+      "Enriched_Predictions",
+      "Failure_Watchlist",
+      "Model_Comparison",
+      "Feature_Importance"
+    ],
+    "features": {
+      "sheet": "Feature_Importance",
+      "shape": [
+        6,
+        4
+      ],
+      "cols": [
+        "Feature",
+        "Importance",
+        "Absolute_Correlation",
+        "Rank"
+      ]
+    },
+    "models": {
+      "sheet": "Model_Comparison",
+      "shape": [
+        5,
+        14
+      ],
+      "cols": [
+        "Rank",
+        "Model_Key",
+        "Model",
+        "Accuracy",
+        "Precision",
+        "Recall",
+        "F1-Score",
+        "ROC-AUC",
+        "PR-AUC",
+        "Specificity",
+        "True Positives",
+        "False Positives",
+        "False Negatives",
+        "True Negatives"
+      ]
+    }
+  },
+  "ML_5_Credit_Risk_Scoring_Enriched_Output_Clean.xlsx": {
+    "sheets": [
+      "Executive_Summary",
+      "ML_05_Enriched_Output(Predict)",
+      "Default_Watchlist",
+      "Feature_Importance",
+      "Model_Comparison",
+      "Columns Ignored"
+    ],
+    "features": {
+      "sheet": "Feature_Importance",
+      "shape": [
+        6,
+        3
+      ],
+      "cols": [
+        "ML_05 | Feature_Importance",
+        "Unnamed: 1",
+        "Unnamed: 2"
+      ]
+    },
+    "models": {
+      "sheet": "Model_Comparison",
+      "shape": [
+        6,
+        14
+      ],
+      "cols": [
+        "USE CASE 5: 5 UNSUPERVISED ML MODELS RANKING & EVALUATION TABLE",
+        "Unnamed: 1",
+        "Unnamed: 2",
+        "Unnamed: 3",
+        "Unnamed: 4",
+        "Unnamed: 5",
+        "Unnamed: 6",
+        "Unnamed: 7",
+        "Unnamed: 8",
+        "Unnamed: 9",
+        "Unnamed: 10",
+        "Unnamed: 11",
+        "Unnamed: 12",
+        "Unnamed: 13"
+      ]
+    }
+  },
+  "ML_6_Slow_Moving_Inventory_Prediction_Enriched_Output.xlsx": {
+    "sheets": [
+      "Enriched_Inventory_Predictions",
+      "Model_Performance_Ranking",
+      "Feature_Importance_And_Metadata"
+    ],
+    "features": {
+      "sheet": "Feature_Importance_And_Metadata",
+      "shape": [
+        6,
+        5
+      ],
+      "cols": [
+        "Surrogate Tree Feature Importance (Explainability)",
+        "Unnamed: 1",
+        "Unnamed: 2",
+        "Unnamed: 3",
+        "Unnamed: 4"
+      ]
+    },
+    "models": {
+      "sheet": "Model_Performance_Ranking",
+      "shape": [
+        5,
+        14
+      ],
+      "cols": [
+        "Rank",
+        "Model",
+        "Accuracy",
+        "Precision",
+        "Recall",
+        "F1-Score",
+        "ROC-AUC",
+        "PR-AUC",
+        "Silhouette",
+        "Specificity",
+        "True Positives",
+        "False Positives",
+        "False Negatives",
+        "True Negatives"
+      ]
+    }
+  },
+  "ML_7_Production_Order_Delay_Prediction_Enriched_Output.xlsx": {
+    "sheets": [
+      "Enriched Production Orders",
+      "Delayed Orders Watchlist",
+      "Feature Importance",
+      "Model Comparison & Ranking",
+      "Ignored Columns & Rationale"
+    ],
+    "features": {
+      "sheet": "Feature Importance",
+      "shape": [
+        6,
+        6
+      ],
+      "cols": [
+        "Rank",
+        "Feature",
+        "Importance",
+        "Relative_Weight_Pct",
+        "Cumulative_Pct",
+        "Feature_Description"
+      ]
+    },
+    "models": {
+      "sheet": "Model Comparison & Ranking",
+      "shape": [
+        5,
+        14
+      ],
+      "cols": [
+        "Rank",
+        "Model",
+        "Accuracy",
+        "Precision",
+        "Recall",
+        "F1-Score",
+        "ROC-AUC",
+        "PR-AUC",
+        "Silhouette",
+        "Specificity",
+        "True Positives",
+        "False Positives",
+        "False Negatives",
+        "True Negatives"
+      ]
+    }
+  },
+  "ML_8_Quality_Inspection_Failure_Prediction_Enriched_Output.xlsx": {
+    "sheets": [
+      "Executive Summary",
+      "Scored Inspection Lots",
+      "High-Risk Watchlist",
+      "Model Ranking & Metrics",
+      "Feature Importance"
+    ],
+    "features": {
+      "sheet": "Feature Importance",
+      "shape": [
+        6,
+        5
+      ],
+      "cols": [
+        "Rank",
+        "Feature",
+        "Importance",
+        "Relative_Weight_Pct",
+        "Domain Impact on Inspection Failure Risk"
+      ]
+    },
+    "models": {
+      "sheet": "Model Ranking & Metrics",
+      "shape": [
+        5,
+        13
+      ],
+      "cols": [
+        "Rank",
+        "Model",
+        "Accuracy",
+        "Precision",
+        "Recall",
+        "F1-Score",
+        "ROC-AUC",
+        "PR-AUC",
+        "Specificity",
+        "True Positives",
+        "False Positives",
+        "False Negatives",
+        "True Negatives"
+      ]
+    }
+  }
+}
