@@ -1,9 +1,10 @@
 window.PORTFOLIO_DATA = {
-  "generated_at": "2026-10-09",
-  "total_models": 17,
-  "total_records": 445000,
-  "total_exceptions": 126380,
-  "total_financial_exposure_inr": 178632000000.0,
+  "generated_at": "2026-10-23",
+  "total_models": 16,
+  "total_records": 6571244,
+  "total_exceptions": 1586061,
+  "total_financial_exposure_inr": 1899722041306.519,
+  "total_financial_exposure_cr": 189972.2,
   "models": {
     "ML_04": {
       "id": "ML_04",
@@ -20,90 +21,90 @@ window.PORTFOLIO_DATA = {
         "IFLOT",
         "EQUI"
       ],
-      "total_records": 25000,
-      "exceptions_count": 9959,
-      "exception_rate_pct": 39.84,
-      "financial_exposure_inr": 981900000.0,
-      "financial_exposure_cr": 98.19,
-      "avg_confidence_score": 0.7004,
+      "total_records": 235575,
+      "exceptions_count": 64344,
+      "exception_rate_pct": 27.31,
+      "financial_exposure_inr": 4275257804.0,
+      "financial_exposure_cr": 427.53,
+      "avg_confidence_score": 0.166,
       "champion_model": "Isolation Forest",
       "champion_metric": "0.7004 ROC-AUC",
       "risk_distribution": {
-        "Critical": 1423,
-        "High": 3475,
-        "Medium": 5066,
-        "Low": 15036
+        "Critical": 8226,
+        "High": 18368,
+        "Medium": 32997,
+        "Low": 175984
       },
       "category_breakdown": [
         {
           "label": "J.K. Cement  Works, Mangrol",
-          "count": 13285
-        },
-        {
-          "label": "J.K. Cement Works Nimbahera",
-          "count": 4995
-        },
-        {
-          "label": "JK Cement Works - Panna",
-          "count": 2115
+          "count": 46282
         },
         {
           "label": "J.K. Cement Works, Muddapur",
-          "count": 1065
+          "count": 37358
+        },
+        {
+          "label": "J.K. Cement Works Nimbahera",
+          "count": 34114
         },
         {
           "label": "J.K. White Cement Works ,Gotan",
-          "count": 910
+          "count": 30801
         },
         {
-          "label": "JK Cement Works - Hamirpur",
-          "count": 480
+          "label": "JK Cement Works - Panna",
+          "count": 25153
         },
         {
           "label": "J.K. Cement Works Fujairah FZC",
-          "count": 415
+          "count": 10683
+        },
+        {
+          "label": "JK Cement Works - Hamirpur",
+          "count": 10226
         }
       ],
       "feature_importance": [
         {
-          "feature": "composite_nlp_risk_score",
-          "importance": 0.0693,
-          "description": "0.5511925460533926"
-        },
-        {
-          "feature": "spare_parts_item_count",
-          "importance": 0.0589,
-          "description": "0.4686772737621708"
-        },
-        {
           "feature": "has_spare_parts",
-          "importance": 0.0581,
-          "description": "0.4624355323697146"
+          "importance": 0.0704,
+          "description": "Has Spare Parts"
+        },
+        {
+          "feature": "composite_nlp_risk_score",
+          "importance": 0.0664,
+          "description": "Composite Nlp Risk Score"
         },
         {
           "feature": "high_spare_cost_flag",
-          "importance": 0.055,
-          "description": "0.4378141792452624"
+          "importance": 0.0656,
+          "description": "High Spare Cost Flag"
+        },
+        {
+          "feature": "spare_parts_item_count",
+          "importance": 0.0544,
+          "description": "Spare Parts Item Count"
+        },
+        {
+          "feature": "is_phase_completed",
+          "importance": 0.0469,
+          "description": "Is Phase Completed"
         },
         {
           "feature": "is_final_confirmed",
-          "importance": 0.0499,
-          "description": "0.3971777968004022"
+          "importance": 0.0443,
+          "description": "Is Final Confirmed"
         },
         {
           "feature": "has_confirmations",
-          "importance": 0.0495,
-          "description": "0.3942627832733998"
+          "importance": 0.0436,
+          "description": "Has Confirmations"
         },
         {
-          "feature": "nlp_vibration_bearing_flag",
-          "importance": 0.0491,
-          "description": "0.3904688127692272"
-        },
-        {
-          "feature": "actual_duration_days",
-          "importance": 0.0478,
-          "description": "0.380778948055963"
+          "feature": "total_parts_quantity",
+          "importance": 0.043,
+          "description": "Total Parts Quantity"
         }
       ],
       "model_rankings": [
@@ -111,605 +112,605 @@ window.PORTFOLIO_DATA = {
           "Rank": "#1",
           "Model_Key": "isolation_forest",
           "Model": "Isolation Forest",
-          "Accuracy": 0.6574,
-          "Precision": 0.5685,
-          "Recall": 0.5739,
-          "F1-Score": 0.5712,
-          "ROC-AUC": 0.7004,
-          "PR-AUC": 0.5839,
-          "Specificity": 0.7125,
-          "True Positives": 1141,
-          "False Positives": 866,
-          "False Negatives": 847,
-          "True Negatives": 2146
+          "Accuracy": 0.7185,
+          "Precision": 0.4825,
+          "Recall": 0.4841,
+          "F1-Score": 0.4833,
+          "ROC-AUC": 0.6842,
+          "PR-AUC": 0.4508,
+          "Specificity": 0.8061,
+          "True Positives": 6202.0,
+          "False Positives": 6653.0,
+          "False Negatives": 6609.0,
+          "True Negatives": 27651.0
         },
         {
           "Rank": "#2",
-          "Model_Key": "one_class_svm",
-          "Model": "One-Class SVM",
-          "Accuracy": 0.5866,
-          "Precision": 0.4807,
-          "Recall": 0.496,
-          "F1-Score": 0.4882,
-          "ROC-AUC": 0.5748,
-          "PR-AUC": 0.5891,
-          "Specificity": 0.6464,
-          "True Positives": 986,
-          "False Positives": 1065,
-          "False Negatives": 1002,
-          "True Negatives": 1947
+          "Model_Key": "kmeans",
+          "Model": "K-Means Clustering",
+          "Accuracy": 0.6645,
+          "Precision": 0.3826,
+          "Recall": 0.3812,
+          "F1-Score": 0.3819,
+          "ROC-AUC": 0.6067,
+          "PR-AUC": 0.4864,
+          "Specificity": 0.7702,
+          "True Positives": 4884.0,
+          "False Positives": 7882.0,
+          "False Negatives": 7927.0,
+          "True Negatives": 26422.0
         },
         {
           "Rank": "#3",
-          "Model_Key": "kmeans",
-          "Model": "K-Means Clustering",
-          "Accuracy": 0.5544,
-          "Precision": 0.4415,
-          "Recall": 0.4557,
-          "F1-Score": 0.4485,
-          "ROC-AUC": 0.5471,
-          "PR-AUC": 0.578,
-          "Specificity": 0.6195,
-          "True Positives": 906,
-          "False Positives": 1146,
-          "False Negatives": 1082,
-          "True Negatives": 1866
+          "Model_Key": "one_class_svm",
+          "Model": "One-Class SVM",
+          "Accuracy": 0.6625,
+          "Precision": 0.3768,
+          "Recall": 0.3687,
+          "F1-Score": 0.3727,
+          "ROC-AUC": 0.5931,
+          "PR-AUC": 0.4734,
+          "Specificity": 0.7722,
+          "True Positives": 4724.0,
+          "False Positives": 7813.0,
+          "False Negatives": 8087.0,
+          "True Negatives": 26491.0
         },
         {
           "Rank": "#4",
           "Model_Key": "lof",
           "Model": "Local Outlier Factor (LOF)",
-          "Accuracy": 0.4672,
-          "Precision": 0.3392,
-          "Recall": 0.3587,
-          "F1-Score": 0.3487,
-          "ROC-AUC": 0.4585,
-          "PR-AUC": 0.3586,
-          "Specificity": 0.5388,
-          "True Positives": 713,
-          "False Positives": 1389,
-          "False Negatives": 1275,
-          "True Negatives": 1623
+          "Accuracy": 0.5898,
+          "Precision": 0.248,
+          "Recall": 0.2503,
+          "F1-Score": 0.2491,
+          "ROC-AUC": 0.4867,
+          "PR-AUC": 0.284,
+          "Specificity": 0.7166,
+          "True Positives": 3206.0,
+          "False Positives": 9723.0,
+          "False Negatives": 9605.0,
+          "True Negatives": 24581.0
         },
         {
           "Rank": "#5",
           "Model_Key": "gmm",
           "Model": "Gaussian Mixture Model (GMM)",
-          "Accuracy": 0.4742,
-          "Precision": 0.3398,
-          "Recall": 0.3421,
-          "F1-Score": 0.3409,
-          "ROC-AUC": 0.4387,
-          "PR-AUC": 0.38,
-          "Specificity": 0.5614,
-          "True Positives": 680,
-          "False Positives": 1321,
-          "False Negatives": 1308,
-          "True Negatives": 1691
+          "Accuracy": 0.5614,
+          "Precision": 0.1968,
+          "Recall": 0.1989,
+          "F1-Score": 0.1978,
+          "ROC-AUC": 0.4773,
+          "PR-AUC": 0.2583,
+          "Specificity": 0.6968,
+          "True Positives": 2548.0,
+          "False Positives": 10400.0,
+          "False Negatives": 10263.0,
+          "True Negatives": 23904.0
         }
       ],
       "display_columns": [
         "order_number",
         "order_description",
         "plant_name",
-        "composite_nlp_risk_score",
+        "failure_risk_score",
+        "failure_risk_category",
         "total_spare_parts_cost",
-        "is_equipment_failure_exception",
-        "order_type",
-        "work_center"
+        "predicted_failure_exception",
+        "order_type"
       ],
       "sample_records": [
         {
-          "order_number": 600000000,
-          "order_description": "Nimbahera user testing golive order",
-          "plant_name": "J.K. Cement Works Nimbahera",
-          "composite_nlp_risk_score": 0.0,
-          "total_spare_parts_cost": 0.0,
-          "is_equipment_failure_exception": 1,
-          "order_type": "PM03",
-          "work_center": "ELEC-PPE"
-        },
-        {
-          "order_number": 600000001,
+          "order_number": "600000001",
           "order_description": "EE-GENERAL MAINTENANCE WORK APRIL.24",
           "plant_name": "J.K. Cement Works , Gotan",
-          "composite_nlp_risk_score": 0.7,
-          "total_spare_parts_cost": 13888.96,
-          "is_equipment_failure_exception": 1,
-          "order_type": "PM03",
-          "work_center": "ELEC-WSE"
+          "failure_risk_score": 1.0,
+          "failure_risk_category": "Critical Risk",
+          "total_spare_parts_cost": 27777.92,
+          "predicted_failure_exception": 1.0,
+          "order_type": "PM03"
         },
         {
-          "order_number": 600000002,
+          "order_number": "600000002",
           "order_description": "Z3M01_Outlet Head liner (3rd&4th Row) re",
           "plant_name": "J.K. Cement Works Nimbahera",
-          "composite_nlp_risk_score": 0.2,
-          "total_spare_parts_cost": 580249.53,
-          "is_equipment_failure_exception": 1,
-          "order_type": "PM10",
-          "work_center": "MECH-CM3"
+          "failure_risk_score": 0.8776,
+          "failure_risk_category": "Critical Risk",
+          "total_spare_parts_cost": 1160499.06,
+          "predicted_failure_exception": 1.0,
+          "order_type": "PM10"
         },
         {
-          "order_number": 600000003,
-          "order_description": "MECH- 491 BC2 BELT DRUM LAGGING WORK",
-          "plant_name": "J.K. White Cement Works ,Gotan",
-          "composite_nlp_risk_score": 0.0,
-          "total_spare_parts_cost": 0.0,
-          "is_equipment_failure_exception": 1,
-          "order_type": "PM03",
-          "work_center": "MECH-KL1"
-        },
-        {
-          "order_number": 600000004,
+          "order_number": "600000004",
           "order_description": "Compressor 13 maintenance",
           "plant_name": "J.K. White Cement Works ,Gotan",
-          "composite_nlp_risk_score": 0.5,
-          "total_spare_parts_cost": 49139.09,
-          "is_equipment_failure_exception": 1,
-          "order_type": "PM03",
-          "work_center": "MECH-UTL"
+          "failure_risk_score": 0.7405,
+          "failure_risk_category": "Critical Risk",
+          "total_spare_parts_cost": 98278.18,
+          "predicted_failure_exception": 1.0,
+          "order_type": "PM03"
         },
         {
-          "order_number": 600000005,
+          "order_number": "600000005",
           "order_description": "Drop test chute install in 261.BC080",
           "plant_name": "J.K. Cement Works Nimbahera",
-          "composite_nlp_risk_score": 0.25,
-          "total_spare_parts_cost": 43524.55,
-          "is_equipment_failure_exception": 1,
-          "order_type": "PM03",
-          "work_center": "MECH-KL3"
+          "failure_risk_score": 0.6078,
+          "failure_risk_category": "High Risk",
+          "total_spare_parts_cost": 87049.1,
+          "predicted_failure_exception": 1.0,
+          "order_type": "PM03"
         },
         {
-          "order_number": 600000006,
+          "order_number": "600000006",
           "order_description": "CM-3 General consumables for Apr.24",
           "plant_name": "J.K. Cement Works Nimbahera",
-          "composite_nlp_risk_score": 0.45,
-          "total_spare_parts_cost": 86616.37,
-          "is_equipment_failure_exception": 1,
-          "order_type": "PM03",
-          "work_center": "MECH-CM3"
+          "failure_risk_score": 0.9092,
+          "failure_risk_category": "Critical Risk",
+          "total_spare_parts_cost": 173232.74,
+          "predicted_failure_exception": 1.0,
+          "order_type": "PM03"
         },
         {
-          "order_number": 600000007,
+          "order_number": "600000007",
           "order_description": "Diesel and Plant Misc April (1)",
           "plant_name": "J.K. Cement Works, Muddapur",
-          "composite_nlp_risk_score": 0.0,
-          "total_spare_parts_cost": 111911.75,
-          "is_equipment_failure_exception": 1,
-          "order_type": "PM03",
-          "work_center": "DEPT-CVL"
+          "failure_risk_score": 0.845,
+          "failure_risk_category": "Critical Risk",
+          "total_spare_parts_cost": 223823.5,
+          "predicted_failure_exception": 1.0,
+          "order_type": "PM03"
         },
         {
-          "order_number": 600000008,
+          "order_number": "600000008",
           "order_description": "SAFR_CLEANING LINE WORK APR24",
           "plant_name": "J.K. Cement Works Nimbahera",
-          "composite_nlp_risk_score": 0.0,
-          "total_spare_parts_cost": 27354.35,
-          "is_equipment_failure_exception": 1,
-          "order_type": "PM03",
-          "work_center": "MECH-UTL"
+          "failure_risk_score": 0.3124,
+          "failure_risk_category": "Medium Risk",
+          "total_spare_parts_cost": 54708.7,
+          "predicted_failure_exception": 1.0,
+          "order_type": "PM03"
         },
         {
-          "order_number": 600000009,
-          "order_description": "Z2J01_ELEVATORTOP & BOTTOM SPROCKET REPL",
-          "plant_name": "J.K. Cement Works Nimbahera",
-          "composite_nlp_risk_score": 0.0,
-          "total_spare_parts_cost": 0.0,
-          "is_equipment_failure_exception": 1,
-          "order_type": "PM03",
-          "work_center": "MECH-CM2"
-        },
-        {
-          "order_number": 600000010,
+          "order_number": "600000010",
           "order_description": "General goods issue-Apr-24",
           "plant_name": "J.K. Cement  Works, Mangrol",
-          "composite_nlp_risk_score": 0.0,
-          "total_spare_parts_cost": 5573.07,
-          "is_equipment_failure_exception": 1,
-          "order_type": "PM03",
-          "work_center": "DEPT-PMC"
+          "failure_risk_score": 0.4303,
+          "failure_risk_category": "Medium Risk",
+          "total_spare_parts_cost": 11146.14,
+          "predicted_failure_exception": 1.0,
+          "order_type": "PM03"
         },
         {
-          "order_number": 600000011,
+          "order_number": "600000011",
           "order_description": "putty packer maintenance",
           "plant_name": "J.K. White Cement Works ,Gotan",
-          "composite_nlp_risk_score": 0.45,
-          "total_spare_parts_cost": 46376.36,
-          "is_equipment_failure_exception": 1,
-          "order_type": "PM03",
-          "work_center": "MECH-PUP"
+          "failure_risk_score": 0.7292,
+          "failure_risk_category": "Critical Risk",
+          "total_spare_parts_cost": 92752.72,
+          "predicted_failure_exception": 1.0,
+          "order_type": "PM03"
         },
         {
-          "order_number": 600000012,
+          "order_number": "600000012",
           "order_description": "Goods issue in putty plant section",
           "plant_name": "J.K. White Cement Works ,Gotan",
-          "composite_nlp_risk_score": 0.25,
-          "total_spare_parts_cost": 397782.84,
-          "is_equipment_failure_exception": 1,
-          "order_type": "PM03",
-          "work_center": "MECH-PUP"
+          "failure_risk_score": 0.824,
+          "failure_risk_category": "Critical Risk",
+          "total_spare_parts_cost": 795565.68,
+          "predicted_failure_exception": 1.0,
+          "order_type": "PM03"
         },
         {
-          "order_number": 600000013,
+          "order_number": "600000013",
           "order_description": "Goods issue in putty plant section",
           "plant_name": "J.K. White Cement Works ,Gotan",
-          "composite_nlp_risk_score": 0.0,
-          "total_spare_parts_cost": 521954.85,
-          "is_equipment_failure_exception": 1,
-          "order_type": "PM03",
-          "work_center": "MECH-PUP"
+          "failure_risk_score": 0.6116,
+          "failure_risk_category": "High Risk",
+          "total_spare_parts_cost": 1043909.7,
+          "predicted_failure_exception": 1.0,
+          "order_type": "PM03"
         },
         {
-          "order_number": 600000014,
+          "order_number": "600000014",
           "order_description": "Goods issue in crusher section",
           "plant_name": "J.K. White Cement Works ,Gotan",
-          "composite_nlp_risk_score": 0.0,
-          "total_spare_parts_cost": 287234.22,
-          "is_equipment_failure_exception": 1,
-          "order_type": "PM03",
-          "work_center": "MECH-PCR"
+          "failure_risk_score": 0.4216,
+          "failure_risk_category": "Medium Risk",
+          "total_spare_parts_cost": 574468.44,
+          "predicted_failure_exception": 1.0,
+          "order_type": "PM03"
         },
         {
-          "order_number": 600000015,
+          "order_number": "600000015",
           "order_description": "Goods issue in Dol. mill Section",
           "plant_name": "J.K. White Cement Works ,Gotan",
-          "composite_nlp_risk_score": 0.45,
-          "total_spare_parts_cost": 118815.44,
-          "is_equipment_failure_exception": 1,
-          "order_type": "PM03",
-          "work_center": "MECH-PDM"
+          "failure_risk_score": 0.8504,
+          "failure_risk_category": "Critical Risk",
+          "total_spare_parts_cost": 237630.88,
+          "predicted_failure_exception": 1.0,
+          "order_type": "PM03"
         },
         {
-          "order_number": 600000016,
+          "order_number": "600000016",
           "order_description": "Goods issue in packer sections",
           "plant_name": "J.K. White Cement Works ,Gotan",
-          "composite_nlp_risk_score": 0.25,
-          "total_spare_parts_cost": 18470.47,
-          "is_equipment_failure_exception": 1,
-          "order_type": "PM03",
-          "work_center": "MECH-PUP"
+          "failure_risk_score": 0.4243,
+          "failure_risk_category": "Medium Risk",
+          "total_spare_parts_cost": 36940.94,
+          "predicted_failure_exception": 1.0,
+          "order_type": "PM03"
         },
         {
-          "order_number": 600000017,
+          "order_number": "600000017",
           "order_description": "Crusher blow bar worn out",
           "plant_name": "J.K. Cement Works, Muddapur",
-          "composite_nlp_risk_score": 0.2,
-          "total_spare_parts_cost": 472544.01,
-          "is_equipment_failure_exception": 1,
-          "order_type": "PM03",
-          "work_center": "MECH-CRU"
+          "failure_risk_score": 0.6945,
+          "failure_risk_category": "High Risk",
+          "total_spare_parts_cost": 945088.02,
+          "predicted_failure_exception": 1.0,
+          "order_type": "PM03"
         },
         {
-          "order_number": 600000018,
+          "order_number": "600000018",
           "order_description": "Goods issue in Mixer sections",
           "plant_name": "J.K. White Cement Works ,Gotan",
-          "composite_nlp_risk_score": 0.0,
-          "total_spare_parts_cost": 1297.42,
-          "is_equipment_failure_exception": 1,
-          "order_type": "PM03",
-          "work_center": "MECH-PMX"
+          "failure_risk_score": 0.2475,
+          "failure_risk_category": "Low Risk",
+          "total_spare_parts_cost": 2594.84,
+          "predicted_failure_exception": 1.0,
+          "order_type": "PM03"
         },
         {
-          "order_number": 600000019,
+          "order_number": "600000019",
           "order_description": "Goods issue in Coarse putty sections",
           "plant_name": "J.K. White Cement Works ,Gotan",
-          "composite_nlp_risk_score": 0.0,
-          "total_spare_parts_cost": 1715.0,
-          "is_equipment_failure_exception": 1,
-          "order_type": "PM03",
-          "work_center": "MECH-PMX"
+          "failure_risk_score": 0.2956,
+          "failure_risk_category": "Medium Risk",
+          "total_spare_parts_cost": 3430.0,
+          "predicted_failure_exception": 1.0,
+          "order_type": "PM03"
         },
         {
-          "order_number": 600000020,
+          "order_number": "600000020",
           "order_description": "High Casing Vibration_Check by PM CELL",
           "plant_name": "J.K. White Cement Works ,Gotan",
-          "composite_nlp_risk_score": 0.25,
+          "failure_risk_score": 0.306,
+          "failure_risk_category": "Medium Risk",
           "total_spare_parts_cost": 0.0,
-          "is_equipment_failure_exception": 1,
-          "order_type": "PM03",
-          "work_center": "MECH-KM3"
+          "predicted_failure_exception": 1.0,
+          "order_type": "PM03"
         },
         {
-          "order_number": 600000021,
-          "order_description": "General Consumables for CM-April 24",
-          "plant_name": "JK Cement Works - Hamirpur",
-          "composite_nlp_risk_score": 0.0,
-          "total_spare_parts_cost": 0.0,
-          "is_equipment_failure_exception": 1,
-          "order_type": "PM03",
-          "work_center": "MECH-CM1"
-        },
-        {
-          "order_number": 600000022,
-          "order_description": "Test Notification-Chute Repairing work",
-          "plant_name": "J.K. Cement Works ,Balasinor",
-          "composite_nlp_risk_score": 0.0,
-          "total_spare_parts_cost": 0.0,
-          "is_equipment_failure_exception": 1,
-          "order_type": "PM03",
-          "work_center": "MECH-CM1"
-        },
-        {
-          "order_number": 600000023,
+          "order_number": "600000023",
           "order_description": "526BE600_Elevator MBS Checking work.",
           "plant_name": "J.K. Cement Works Nimbahera",
-          "composite_nlp_risk_score": 0.0,
-          "total_spare_parts_cost": 1470.0,
-          "is_equipment_failure_exception": 1,
-          "order_type": "PM03",
-          "work_center": "INST-CM4"
+          "failure_risk_score": 0.2573,
+          "failure_risk_category": "Medium Risk",
+          "total_spare_parts_cost": 2940.0,
+          "predicted_failure_exception": 1.0,
+          "order_type": "PM03"
         },
         {
-          "order_number": 600000024,
-          "order_description": " E&I Maintenance in Dolomite Mill Sectio",
-          "plant_name": "J.K. White, Katni",
-          "composite_nlp_risk_score": 0.0,
-          "total_spare_parts_cost": 85.91,
-          "is_equipment_failure_exception": 1,
-          "order_type": "PM03",
-          "work_center": "ELEC-PDM"
-        },
-        {
-          "order_number": 600000025,
-          "order_description": "PM CELL General items",
-          "plant_name": "J.K. White Cement Works ,Gotan",
-          "composite_nlp_risk_score": 0.0,
-          "total_spare_parts_cost": 0.0,
-          "is_equipment_failure_exception": 1,
-          "order_type": "PM03",
-          "work_center": "MECH-KL1"
-        },
-        {
-          "order_number": 600000026,
+          "order_number": "600000026",
           "order_description": "Check for RM2 High pinion vibration",
           "plant_name": "J.K. White Cement Works ,Gotan",
-          "composite_nlp_risk_score": 0.25,
-          "total_spare_parts_cost": 308.0,
-          "is_equipment_failure_exception": 1,
-          "order_type": "PM03",
-          "work_center": "MECH-RM1"
+          "failure_risk_score": 0.3992,
+          "failure_risk_category": "Medium Risk",
+          "total_spare_parts_cost": 616.0,
+          "predicted_failure_exception": 1.0,
+          "order_type": "PM03"
         },
         {
-          "order_number": 600000028,
-          "order_description": "Pmcell sparre item April 2024",
-          "plant_name": "JK Cement Works - Panna",
-          "composite_nlp_risk_score": 0.0,
-          "total_spare_parts_cost": 0.0,
-          "is_equipment_failure_exception": 1,
-          "order_type": "PM03",
-          "work_center": "DEPT-PMC"
+          "order_number": "600000027",
+          "order_description": "Elect-Maintenance in Elect. WS",
+          "plant_name": "J.K. White Cement Works ,Gotan",
+          "failure_risk_score": 0.8134,
+          "failure_risk_category": "Critical Risk",
+          "total_spare_parts_cost": 4059.94,
+          "predicted_failure_exception": 1.0,
+          "order_type": "PM02"
         },
         {
-          "order_number": 600000029,
-          "order_description": "561RM100_Mill general maint. April-24",
-          "plant_name": "JK Cement Works - Panna",
-          "composite_nlp_risk_score": 0.0,
-          "total_spare_parts_cost": 0.0,
-          "is_equipment_failure_exception": 1,
-          "order_type": "PM03",
-          "work_center": "MECH-CM1"
-        },
-        {
-          "order_number": 600000030,
+          "order_number": "600000030",
           "order_description": "Water line work April-24",
           "plant_name": "J.K. Cement Works, Muddapur",
-          "composite_nlp_risk_score": 0.0,
-          "total_spare_parts_cost": 13932.05,
-          "is_equipment_failure_exception": 1,
-          "order_type": "PM03",
-          "work_center": "MECH-UTL"
+          "failure_risk_score": 0.4081,
+          "failure_risk_category": "Medium Risk",
+          "total_spare_parts_cost": 27864.1,
+          "predicted_failure_exception": 1.0,
+          "order_type": "PM03"
         },
         {
-          "order_number": 600000031,
+          "order_number": "600000031",
           "order_description": "Hydra F-15",
           "plant_name": "J.K. Cement Works, Muddapur",
-          "composite_nlp_risk_score": 0.0,
-          "total_spare_parts_cost": 34185.19,
-          "is_equipment_failure_exception": 1,
-          "order_type": "PM03",
-          "work_center": "MECH-WSE"
+          "failure_risk_score": 0.7775,
+          "failure_risk_category": "Critical Risk",
+          "total_spare_parts_cost": 68370.38,
+          "predicted_failure_exception": 1.0,
+          "order_type": "PM03"
         },
         {
-          "order_number": 600000032,
+          "order_number": "600000032",
           "order_description": "TPS-3D old maintenance",
           "plant_name": "J.K. Cement Works, Muddapur",
-          "composite_nlp_risk_score": 0.0,
-          "total_spare_parts_cost": 46845.2,
-          "is_equipment_failure_exception": 1,
-          "order_type": "PM03",
-          "work_center": "MECH-WSE"
+          "failure_risk_score": 0.7055,
+          "failure_risk_category": "Critical Risk",
+          "total_spare_parts_cost": 93690.4,
+          "predicted_failure_exception": 1.0,
+          "order_type": "PM03"
         },
         {
-          "order_number": 600000033,
+          "order_number": "600000033",
           "order_description": "TPS-Vacctruck new maintenance",
           "plant_name": "J.K. Cement Works, Muddapur",
-          "composite_nlp_risk_score": 0.0,
-          "total_spare_parts_cost": 54924.7,
-          "is_equipment_failure_exception": 1,
-          "order_type": "PM03",
-          "work_center": "MECH-WSE"
+          "failure_risk_score": 0.6881,
+          "failure_risk_category": "High Risk",
+          "total_spare_parts_cost": 109849.4,
+          "predicted_failure_exception": 1.0,
+          "order_type": "PM03"
         },
         {
-          "order_number": 600000034,
+          "order_number": "600000034",
           "order_description": "General Good issue in raw mill",
           "plant_name": "J.K. White Cement Works ,Gotan",
-          "composite_nlp_risk_score": 0.0,
-          "total_spare_parts_cost": 115596.09,
-          "is_equipment_failure_exception": 1,
-          "order_type": "PM03",
-          "work_center": "PROD-RM1"
+          "failure_risk_score": 0.8085,
+          "failure_risk_category": "Critical Risk",
+          "total_spare_parts_cost": 231192.18,
+          "predicted_failure_exception": 1.0,
+          "order_type": "PM03"
         },
         {
-          "order_number": 600000035,
+          "order_number": "600000035",
           "order_description": "General Good issue in kiln",
           "plant_name": "J.K. White Cement Works ,Gotan",
-          "composite_nlp_risk_score": 0.25,
-          "total_spare_parts_cost": 26641.58,
-          "is_equipment_failure_exception": 1,
-          "order_type": "PM03",
-          "work_center": "PROD-KL1"
+          "failure_risk_score": 0.9691,
+          "failure_risk_category": "Critical Risk",
+          "total_spare_parts_cost": 53283.16,
+          "predicted_failure_exception": 1.0,
+          "order_type": "PM03"
         },
         {
-          "order_number": 600000036,
+          "order_number": "600000036",
           "order_description": "670BC300_Straight Chute Modification",
           "plant_name": "J.K. Cement Works Aligarh",
-          "composite_nlp_risk_score": 0.0,
-          "total_spare_parts_cost": 1623.59,
-          "is_equipment_failure_exception": 1,
-          "order_type": "PM03",
-          "work_center": "MECH-PP1"
+          "failure_risk_score": 0.3022,
+          "failure_risk_category": "Medium Risk",
+          "total_spare_parts_cost": 3247.18,
+          "predicted_failure_exception": 1.0,
+          "order_type": "PM03"
         },
         {
-          "order_number": 600000037,
+          "order_number": "600000037",
           "order_description": "641PM100_MAINTENANCE APR-24",
           "plant_name": "J.K. Cement Works Aligarh",
-          "composite_nlp_risk_score": 0.7,
-          "total_spare_parts_cost": 87527.51,
-          "is_equipment_failure_exception": 1,
-          "order_type": "PM03",
-          "work_center": "MECH-PP1"
+          "failure_risk_score": 1.0,
+          "failure_risk_category": "Critical Risk",
+          "total_spare_parts_cost": 175055.02,
+          "predicted_failure_exception": 1.0,
+          "order_type": "PM03"
         },
         {
-          "order_number": 600000038,
+          "order_number": "600000038",
           "order_description": "40VIL-COLONY NO.1 MAINTENANACE WORK",
           "plant_name": "J.K. White Cement Works ,Gotan",
-          "composite_nlp_risk_score": 0.25,
-          "total_spare_parts_cost": 318515.87,
-          "is_equipment_failure_exception": 1,
-          "order_type": "PM03",
-          "work_center": "DEPT-CVL"
+          "failure_risk_score": 1.0,
+          "failure_risk_category": "Critical Risk",
+          "total_spare_parts_cost": 637031.74,
+          "predicted_failure_exception": 1.0,
+          "order_type": "PM03"
         },
         {
-          "order_number": 600000039,
+          "order_number": "600000039",
           "order_description": "civil- plant work april 2024",
           "plant_name": "J.K. White Cement Works ,Gotan",
-          "composite_nlp_risk_score": 0.0,
-          "total_spare_parts_cost": 8610.0,
-          "is_equipment_failure_exception": 1,
-          "order_type": "PM03",
-          "work_center": "DEPT-CVL"
+          "failure_risk_score": 0.4736,
+          "failure_risk_category": "High Risk",
+          "total_spare_parts_cost": 17220.0,
+          "predicted_failure_exception": 1.0,
+          "order_type": "PM03"
         },
         {
-          "order_number": 600000040,
+          "order_number": "600000040",
           "order_description": "MUDDAPUR PRD TEST APR2024",
           "plant_name": "J.K. Cement Works, Muddapur",
-          "composite_nlp_risk_score": 0.0,
+          "failure_risk_score": 0.2339,
+          "failure_risk_category": "Low Risk",
           "total_spare_parts_cost": 0.0,
-          "is_equipment_failure_exception": 1,
-          "order_type": "PM03",
-          "work_center": "INST-RM1"
+          "predicted_failure_exception": 1.0,
+          "order_type": "PM03"
         },
         {
-          "order_number": 600000041,
-          "order_description": "NBH_loader_no_07_BUCKET_PIN",
-          "plant_name": "J.K. Cement Works Nimbahera",
-          "composite_nlp_risk_score": 0.0,
-          "total_spare_parts_cost": 0.0,
-          "is_equipment_failure_exception": 1,
-          "order_type": "PM03",
-          "work_center": "MECH-MIN"
-        },
-        {
-          "order_number": 600000042,
+          "order_number": "600000042",
           "order_description": "General goods issue April 2024",
           "plant_name": "J.K. Cement Works Nimbahera",
-          "composite_nlp_risk_score": 0.7,
-          "total_spare_parts_cost": 353596.68,
-          "is_equipment_failure_exception": 1,
-          "order_type": "PM03",
-          "work_center": "MECH-KL3"
+          "failure_risk_score": 1.0,
+          "failure_risk_category": "Critical Risk",
+          "total_spare_parts_cost": 707193.36,
+          "predicted_failure_exception": 1.0,
+          "order_type": "PM03"
         },
         {
-          "order_number": 600000043,
-          "order_description": "E&I: Solar systems PM work April-2024",
-          "plant_name": "J.K. White, Katni",
-          "composite_nlp_risk_score": 0.0,
-          "total_spare_parts_cost": 0.0,
-          "is_equipment_failure_exception": 1,
-          "order_type": "PM03",
-          "work_center": "INST-GEN"
-        },
-        {
-          "order_number": 600000044,
+          "order_number": "600000044",
           "order_description": "671BC170  Belt found damaged",
           "plant_name": "JK Cement Works - Panna",
-          "composite_nlp_risk_score": 0.2,
+          "failure_risk_score": 0.267,
+          "failure_risk_category": "Medium Risk",
           "total_spare_parts_cost": 0.0,
-          "is_equipment_failure_exception": 1,
-          "order_type": "PM03",
-          "work_center": "MECH-PP1"
+          "predicted_failure_exception": 1.0,
+          "order_type": "PM03"
         },
         {
-          "order_number": 600000045,
+          "order_number": "600000045",
           "order_description": "General goods issue Apr-24",
           "plant_name": "J.K. Cement Works, Muddapur",
-          "composite_nlp_risk_score": 0.25,
-          "total_spare_parts_cost": 56746.79,
-          "is_equipment_failure_exception": 1,
-          "order_type": "PM03",
-          "work_center": "MECH-RM1"
+          "failure_risk_score": 0.5817,
+          "failure_risk_category": "High Risk",
+          "total_spare_parts_cost": 113493.58,
+          "predicted_failure_exception": 1.0,
+          "order_type": "PM03"
         },
         {
-          "order_number": 600000046,
+          "order_number": "600000046",
           "order_description": "GEN. MANTENANCE OF GRINDING APRIL 2024",
           "plant_name": "J.K. Cement  Works, Mangrol",
-          "composite_nlp_risk_score": 0.2,
-          "total_spare_parts_cost": 15701.65,
-          "is_equipment_failure_exception": 1,
-          "order_type": "PM03",
-          "work_center": "ELEC-CM3"
+          "failure_risk_score": 0.4922,
+          "failure_risk_category": "High Risk",
+          "total_spare_parts_cost": 31403.3,
+          "predicted_failure_exception": 1.0,
+          "order_type": "PM03"
         },
         {
-          "order_number": 600000047,
+          "order_number": "600000047",
           "order_description": "APDB installation at mill area",
           "plant_name": "J.K. Cement Works ,Balasinor",
-          "composite_nlp_risk_score": 0.2,
-          "total_spare_parts_cost": 77799.55,
-          "is_equipment_failure_exception": 1,
-          "order_type": "PM03",
-          "work_center": "ELEC-CM1"
+          "failure_risk_score": 0.8458,
+          "failure_risk_category": "Critical Risk",
+          "total_spare_parts_cost": 155599.1,
+          "predicted_failure_exception": 1.0,
+          "order_type": "PM03"
         },
         {
-          "order_number": 600000048,
+          "order_number": "600000048",
           "order_description": "coal vrm dam ring preparation",
           "plant_name": "J.K. Cement Works Nimbahera",
-          "composite_nlp_risk_score": 0.0,
-          "total_spare_parts_cost": 19509.01,
-          "is_equipment_failure_exception": 1,
-          "order_type": "PM03",
-          "work_center": "MECH-KL3"
+          "failure_risk_score": 0.6129,
+          "failure_risk_category": "High Risk",
+          "total_spare_parts_cost": 39018.02,
+          "predicted_failure_exception": 1.0,
+          "order_type": "PM03"
         },
         {
-          "order_number": 600000049,
-          "order_description": "MECH- 422WP1 WATER MUPM MAINT",
-          "plant_name": "J.K. White Cement Works ,Gotan",
-          "composite_nlp_risk_score": 0.0,
-          "total_spare_parts_cost": 0.0,
-          "is_equipment_failure_exception": 1,
-          "order_type": "PM03",
-          "work_center": "MECH-KL1"
-        },
-        {
-          "order_number": 600000050,
+          "order_number": "600000050",
           "order_description": "MECH- PCM MILL 3 MAINT WORK",
           "plant_name": "J.K. White Cement Works ,Gotan",
-          "composite_nlp_risk_score": 0.25,
-          "total_spare_parts_cost": 33625.78,
-          "is_equipment_failure_exception": 1,
-          "order_type": "PM03",
-          "work_center": "MECH-KM1"
+          "failure_risk_score": 0.4922,
+          "failure_risk_category": "High Risk",
+          "total_spare_parts_cost": 67251.56,
+          "predicted_failure_exception": 1.0,
+          "order_type": "PM03"
+        },
+        {
+          "order_number": "600000052",
+          "order_description": "MECH- PCM MILL 2 MAINT WORK",
+          "plant_name": "J.K. White Cement Works ,Gotan",
+          "failure_risk_score": 0.4461,
+          "failure_risk_category": "Medium Risk",
+          "total_spare_parts_cost": 85526.5,
+          "predicted_failure_exception": 1.0,
+          "order_type": "PM03"
+        },
+        {
+          "order_number": "600000053",
+          "order_description": "MECH- PCM MILL 1  MAINT WORK",
+          "plant_name": "J.K. White Cement Works ,Gotan",
+          "failure_risk_score": 0.2556,
+          "failure_risk_category": "Medium Risk",
+          "total_spare_parts_cost": 34383.22,
+          "predicted_failure_exception": 1.0,
+          "order_type": "PM03"
+        },
+        {
+          "order_number": "600000054",
+          "order_description": "MECH- DECOLORIZER MAINT WORK",
+          "plant_name": "J.K. White Cement Works ,Gotan",
+          "failure_risk_score": 0.7139,
+          "failure_risk_category": "Critical Risk",
+          "total_spare_parts_cost": 162396.54,
+          "predicted_failure_exception": 1.0,
+          "order_type": "PM03"
+        },
+        {
+          "order_number": "600000055",
+          "order_description": "MECH:-PACKER 1 MAINTENANCE WORK",
+          "plant_name": "J.K. White, Katni",
+          "failure_risk_score": 0.6005,
+          "failure_risk_category": "High Risk",
+          "total_spare_parts_cost": 378754.52,
+          "predicted_failure_exception": 1.0,
+          "order_type": "PM03"
+        },
+        {
+          "order_number": "600000057",
+          "order_description": "RM-1 GENERAL CONSUMABLES FOR APRIL 2024",
+          "plant_name": "J.K. Cement  Works, Mangrol",
+          "failure_risk_score": 0.253,
+          "failure_risk_category": "Medium Risk",
+          "total_spare_parts_cost": 8511.52,
+          "predicted_failure_exception": 1.0,
+          "order_type": "PM03"
+        },
+        {
+          "order_number": "600000058",
+          "order_description": "RM-2 GENERAL CONSUMABLES FOR APRIL 2024",
+          "plant_name": "J.K. Cement  Works, Mangrol",
+          "failure_risk_score": 0.2672,
+          "failure_risk_category": "Medium Risk",
+          "total_spare_parts_cost": 3200.0,
+          "predicted_failure_exception": 1.0,
+          "order_type": "PM03"
+        },
+        {
+          "order_number": "600000059",
+          "order_description": "MECH:-PACKER 2 MAINTENANCE WORK",
+          "plant_name": "J.K. White, Katni",
+          "failure_risk_score": 0.8322,
+          "failure_risk_category": "Critical Risk",
+          "total_spare_parts_cost": 125770.22,
+          "predicted_failure_exception": 1.0,
+          "order_type": "PM03"
+        },
+        {
+          "order_number": "600000060",
+          "order_description": "Mech- Kiln general maint. April 2024",
+          "plant_name": "J.K. Cement Works , Gotan",
+          "failure_risk_score": 0.6623,
+          "failure_risk_category": "High Risk",
+          "total_spare_parts_cost": 84321.18,
+          "predicted_failure_exception": 1.0,
+          "order_type": "PM03"
+        },
+        {
+          "order_number": "600000061",
+          "order_description": "dolomite mill gearbox",
+          "plant_name": "J.K. White Cement Works ,Gotan",
+          "failure_risk_score": 0.2959,
+          "failure_risk_category": "Medium Risk",
+          "total_spare_parts_cost": 51853.2,
+          "predicted_failure_exception": 1.0,
+          "order_type": "PM03"
+        },
+        {
+          "order_number": "600000062",
+          "order_description": "MECH-CRUSHER SECTION MAIN.WORK",
+          "plant_name": "J.K. White, Katni",
+          "failure_risk_score": 1.0,
+          "failure_risk_category": "Critical Risk",
+          "total_spare_parts_cost": 242024.36,
+          "predicted_failure_exception": 1.0,
+          "order_type": "PM03"
+        },
+        {
+          "order_number": "600000063",
+          "order_description": "MECH-MILL SECTION MAIN.WORK",
+          "plant_name": "J.K. White, Katni",
+          "failure_risk_score": 0.5764,
+          "failure_risk_category": "High Risk",
+          "total_spare_parts_cost": 30641.22,
+          "predicted_failure_exception": 1.0,
+          "order_type": "PM03"
         }
       ],
       "advanced_ml": {
         "confusion_matrix": {
-          "tp": 6018,
-          "fp": 2064,
-          "fn": 2457,
-          "tn": 14461,
-          "precision": 0.745,
+          "tp": 45692,
+          "fp": 17109,
+          "fn": 18652,
+          "tn": 154122,
+          "precision": 0.728,
           "recall": 0.71,
-          "f1": 0.727,
-          "accuracy": 0.819
+          "f1": 0.719,
+          "accuracy": 0.848
         },
         "threshold_curve": {
           "thresholds": [
@@ -771,40 +772,40 @@ window.PORTFOLIO_DATA = {
             "0.9"
           ],
           "clean_count": [
-            5061,
-            3227,
-            2057,
-            1312,
-            836,
-            533,
-            340,
-            216,
-            138,
-            100
+            53942,
+            34395,
+            21931,
+            13984,
+            8916,
+            5685,
+            3625,
+            2311,
+            1473,
+            939
           ],
           "exception_count": [
-            300,
-            468,
-            635,
-            802,
-            969,
-            1136,
-            1303,
-            1471,
-            1638,
-            1805
+            2284,
+            3553,
+            4823,
+            6092,
+            7361,
+            8630,
+            9899,
+            11169,
+            12438,
+            13707
           ],
           "total_count": [
-            5361,
-            3695,
-            2692,
-            2114,
-            1805,
-            1669,
-            1643,
-            1687,
-            1776,
-            1905
+            56226,
+            37948,
+            26754,
+            20076,
+            16277,
+            14315,
+            13524,
+            13480,
+            13911,
+            14646
           ]
         },
         "calibration_curve": {
@@ -888,696 +889,615 @@ window.PORTFOLIO_DATA = {
         "KNKK",
         "BSEG"
       ],
-      "total_records": 25000,
-      "exceptions_count": 2179,
-      "exception_rate_pct": 8.72,
-      "financial_exposure_inr": 4065200000.0,
-      "financial_exposure_cr": 406.52,
-      "avg_confidence_score": 0.8842,
-      "champion_model": "Isolation Forest",
-      "champion_metric": "0.8842 ROC-AUC",
+      "total_records": 104805,
+      "exceptions_count": 27288,
+      "exception_rate_pct": 26.04,
+      "financial_exposure_inr": 33983370100.03,
+      "financial_exposure_cr": 3398.34,
+      "avg_confidence_score": 0.383,
+      "champion_model": "Unsupervised Multi-Model Ensemble",
+      "champion_metric": "0.884 F1-Score",
       "risk_distribution": {
-        "Critical": 509,
-        "High": 1670,
-        "Medium": 22180,
-        "Low": 641
+        "Critical": 27288,
+        "High": 3447,
+        "Medium": 23642,
+        "Low": 50428
       },
       "category_breakdown": [
         {
           "label": "JAIPUR",
-          "count": 285
+          "count": 1008
         },
         {
           "label": "INDORE",
-          "count": 280
-        },
-        {
-          "label": "PUNE",
-          "count": 230
-        },
-        {
-          "label": "UDAIPUR",
-          "count": 205
-        },
-        {
-          "label": "DELHI",
-          "count": 180
+          "count": 998
         },
         {
           "label": "JODHPUR",
-          "count": 175
+          "count": 721
         },
         {
-          "label": "MEERUT",
-          "count": 170
+          "label": "PUNE",
+          "count": 644
+        },
+        {
+          "label": "UDAIPUR",
+          "count": 601
+        },
+        {
+          "label": "DELHI",
+          "count": 567
+        },
+        {
+          "label": "BHOPAL",
+          "count": 539
         }
       ],
       "feature_importance": [
         {
-          "feature": "feature",
-          "importance": 0,
-          "description": "Direct Mathematical Influence On Customer Default Probability & Credit Risk Scoring:"
+          "feature": "credit_risk_index",
+          "importance": 0.8195,
+          "description": "Credit Risk Index"
+        },
+        {
+          "feature": "max_overdue_days",
+          "importance": 0.1348,
+          "description": "Max Overdue Days"
+        },
+        {
+          "feature": "avg_overdue_days",
+          "importance": 0.0275,
+          "description": "Avg Overdue Days"
         },
         {
           "feature": "solvency_score",
-          "importance": 0.8235,
-          "description": "(Customer Liquidity & Clearing Health inverse function of clearing delays, overdue balance, and payment velocity)"
+          "importance": 0.0105,
+          "description": "Solvency Score"
         },
         {
-          "feature": "credit_risk_index",
-          "importance": 0.0698,
-          "description": "(Composite Credit Delinquency Index combining overdue ratio, severe days past due >90d, and credit limit strain)"
+          "feature": "customer_tenure_years",
+          "importance": 0.0025,
+          "description": "Customer Tenure Years"
         },
         {
-          "feature": "credit_limit_utilization",
-          "importance": 0.0416,
-          "description": "(Credit Limit Utilization Ratio of outstanding receivables against authorized limit [KNB1.VLIBB])"
+          "feature": "overdue_ratio",
+          "importance": 0.0016,
+          "description": "Overdue Ratio"
         },
         {
-          "feature": "open_ar_log_val",
-          "importance": 0.041,
-          "description": "(Total Outstanding Exposure Size measuring log1p of active debt balance)"
+          "feature": "distress_momentum_score",
+          "importance": 0.0014,
+          "description": "Distress Momentum Score"
         },
         {
-          "feature": "is_credit_limit_breached",
-          "importance": 0.0159,
-          "description": "(Binary flag indicating customer receivables currently exceed authorized credit limit)"
-        },
-        {
-          "feature": "unsecured_credit_gap",
-          "importance": 0.0067,
-          "description": "(Unhedged Debt Gap representing excess balance above credit limit without collateral)"
-        },
-        {
-          "feature": "has_central_posting_block",
-          "importance": 0.0004,
-          "description": "(SAP Master Posting Block [SPERR in KNA1] triggered by legal action, bankruptcy, or persistent non-payment)"
+          "feature": "avg_clearing_delay_days",
+          "importance": 0.0006,
+          "description": "Avg Clearing Delay Days"
         }
       ],
-      "model_rankings": [
-        {
-          "USE CASE 5: 5 UNSUPERVISED ML MODELS RANKING & EVALUATION TABLE": "Rank",
-          "Unnamed: 1": "Model",
-          "Unnamed: 2": "Accuracy",
-          "Unnamed: 3": "Precision",
-          "Unnamed: 4": "Recall",
-          "Unnamed: 5": "F1-Score",
-          "Unnamed: 6": "ROC-AUC",
-          "Unnamed: 7": "PR-AUC",
-          "Unnamed: 8": "Silhouette",
-          "Unnamed: 9": "Specificity",
-          "Unnamed: 10": "True Positives",
-          "Unnamed: 11": "False Positives",
-          "Unnamed: 12": "False Negatives",
-          "Unnamed: 13": "True Negatives"
-        },
-        {
-          "USE CASE 5: 5 UNSUPERVISED ML MODELS RANKING & EVALUATION TABLE": "#1",
-          "Unnamed: 1": "Gaussian Mixture (GMM)",
-          "Unnamed: 2": 0.9944,
-          "Unnamed: 3": 0.3571,
-          "Unnamed: 4": 0.9375,
-          "Unnamed: 5": 0.5172,
-          "Unnamed: 6": 0.9981,
-          "Unnamed: 7": 0.6912,
-          "Unnamed: 8": 0.8996,
-          "Unnamed: 9": 0.9946,
-          "Unnamed: 10": 15,
-          "Unnamed: 11": 27,
-          "Unnamed: 12": 1,
-          "Unnamed: 13": 4957
-        },
-        {
-          "USE CASE 5: 5 UNSUPERVISED ML MODELS RANKING & EVALUATION TABLE": "#2",
-          "Unnamed: 1": "Bisecting K-Means",
-          "Unnamed: 2": 0.9834,
-          "Unnamed: 3": 0.1616,
-          "Unnamed: 4": 1,
-          "Unnamed: 5": 0.2783,
-          "Unnamed: 6": 0.9859,
-          "Unnamed: 7": 0.1285,
-          "Unnamed: 8": 0.8845,
-          "Unnamed: 9": 0.9833,
-          "Unnamed: 10": 16,
-          "Unnamed: 11": 83,
-          "Unnamed: 12": 0,
-          "Unnamed: 13": 4901
-        },
-        {
-          "USE CASE 5: 5 UNSUPERVISED ML MODELS RANKING & EVALUATION TABLE": "#3",
-          "Unnamed: 1": "K-Means Clustering",
-          "Unnamed: 2": 0.9832,
-          "Unnamed: 3": 0.16,
-          "Unnamed: 4": 1,
-          "Unnamed: 5": 0.2759,
-          "Unnamed: 6": 0.9859,
-          "Unnamed: 7": 0.1285,
-          "Unnamed: 8": 0.8846,
-          "Unnamed: 9": 0.9831,
-          "Unnamed: 10": 16,
-          "Unnamed: 11": 84,
-          "Unnamed: 12": 0,
-          "Unnamed: 13": 4900
-        },
-        {
-          "USE CASE 5: 5 UNSUPERVISED ML MODELS RANKING & EVALUATION TABLE": "#4",
-          "Unnamed: 1": "Mini-Batch K-Means",
-          "Unnamed: 2": 0.9832,
-          "Unnamed: 3": 0.16,
-          "Unnamed: 4": 1,
-          "Unnamed: 5": 0.2759,
-          "Unnamed: 6": 0.9859,
-          "Unnamed: 7": 0.1285,
-          "Unnamed: 8": 0.8846,
-          "Unnamed: 9": 0.9831,
-          "Unnamed: 10": 16,
-          "Unnamed: 11": 84,
-          "Unnamed: 12": 0,
-          "Unnamed: 13": 4900
-        }
-      ],
+      "model_rankings": [],
       "display_columns": [
         "Customer ID",
         "Customer Name",
         "City",
-        "Risk Category",
+        "P(Default)",
+        "Credit Risk Tier",
         "Open AR Balance (INR)",
-        "Country",
-        "Account Group",
-        "Credit Limit (INR)"
+        "Company Code",
+        "Company Name"
       ],
       "sample_records": [
         {
-          "Customer ID": "20028544",
-          "Customer Name": "MAHALAXMI PLYWOOD & BUILDING MATL.",
-          "City": "JODHPUR",
-          "Risk Category": "High Risk / Credit Alert",
+          "Customer ID": "40035915",
+          "Customer Name": "J S BRAR CEMENT STORE",
+          "City": "GIDDERBAHA",
+          "P(Default)": 0.9392,
+          "Credit Risk Tier": "High Risk / Impaired / Imminent Default Customers",
+          "Open AR Balance (INR)": -16077.05,
+          "Company Code": "1000",
+          "Company Name": "J.K. CEMENT LIMITED"
+        },
+        {
+          "Customer ID": "40017974",
+          "Customer Name": "PRASHANT",
+          "City": "KELLUR",
+          "P(Default)": 0.9146,
+          "Credit Risk Tier": "High Risk / Impaired / Imminent Default Customers",
+          "Open AR Balance (INR)": -24585.44,
+          "Company Code": "1000",
+          "Company Name": "J.K. CEMENT LIMITED"
+        },
+        {
+          "Customer ID": "40055217",
+          "Customer Name": "MANISH BULDING MATERALS",
+          "City": "TELIYARGANJ",
+          "P(Default)": 0.9397,
+          "Credit Risk Tier": "High Risk / Impaired / Imminent Default Customers",
+          "Open AR Balance (INR)": -22929.43,
+          "Company Code": "1000",
+          "Company Name": "J.K. CEMENT LIMITED"
+        },
+        {
+          "Customer ID": "40155206",
+          "Customer Name": "ABHINAV CONSTRUCTION",
+          "City": "GARAPUR",
+          "P(Default)": 0.8892,
+          "Credit Risk Tier": "High Risk / Impaired / Imminent Default Customers",
+          "Open AR Balance (INR)": -5167.81,
+          "Company Code": "1000",
+          "Company Name": "J.K. CEMENT LIMITED"
+        },
+        {
+          "Customer ID": "40023300",
+          "Customer Name": "AMAR LAL YADAV",
+          "City": "PANJRIYA",
+          "P(Default)": 0.9187,
+          "Credit Risk Tier": "High Risk / Impaired / Imminent Default Customers",
+          "Open AR Balance (INR)": -22101.36,
+          "Company Code": "1000",
+          "Company Name": "J.K. CEMENT LIMITED"
+        },
+        {
+          "Customer ID": "20033271",
+          "Customer Name": "SANJAY TRADERS",
+          "City": "KATILIYA",
+          "P(Default)": 0.9224,
+          "Credit Risk Tier": "High Risk / Impaired / Imminent Default Customers",
           "Open AR Balance (INR)": 0.0,
-          "Country": "IN",
-          "Account Group": "Standard Customer",
-          "Credit Limit (INR)": 0
+          "Company Code": "1000",
+          "Company Name": "J.K. CEMENT LIMITED"
         },
         {
-          "Customer ID": "20019749",
-          "Customer Name": "SATYAM TRADING COMPANY",
-          "City": "RAJSAMAND",
-          "Risk Category": "High Risk / Credit Alert",
-          "Open AR Balance (INR)": -5438.22,
-          "Country": "IN",
-          "Account Group": "Standard Customer",
-          "Credit Limit (INR)": 0
+          "Customer ID": "20001804",
+          "Customer Name": "ANU ENTERPRISES",
+          "City": "HOMNABAD",
+          "P(Default)": 0.8621,
+          "Credit Risk Tier": "High Risk / Impaired / Imminent Default Customers",
+          "Open AR Balance (INR)": -21220.0,
+          "Company Code": "1000",
+          "Company Name": "J.K. CEMENT LIMITED"
         },
         {
-          "Customer ID": "20037429",
-          "Customer Name": "HIGHWAY CONSTRUCTION CO. AND AK ASS",
-          "City": "ALLAHABAD-RAMBAGH",
-          "Risk Category": "High Risk / Credit Alert",
-          "Open AR Balance (INR)": 0.0,
-          "Country": "IN",
-          "Account Group": "Standard Customer",
-          "Credit Limit (INR)": 0
+          "Customer ID": "40157247",
+          "Customer Name": "PRAVIN PRAKASH NAGARALE",
+          "City": "KAGAL",
+          "P(Default)": 0.8927,
+          "Credit Risk Tier": "High Risk / Impaired / Imminent Default Customers",
+          "Open AR Balance (INR)": -23275.93,
+          "Company Code": "1000",
+          "Company Name": "J.K. CEMENT LIMITED"
         },
         {
-          "Customer ID": "20001501",
-          "Customer Name": "SHREE SANWARIYA SETH ENTERPRISES",
-          "City": "JHADOL",
-          "Risk Category": "High Risk / Credit Alert",
-          "Open AR Balance (INR)": 0.0,
-          "Country": "IN",
-          "Account Group": "Standard Customer",
-          "Credit Limit (INR)": 0
+          "Customer ID": "20002494",
+          "Customer Name": "DENGLA AND SONS",
+          "City": "KANPUR LOCAL",
+          "P(Default)": 0.9455,
+          "Credit Risk Tier": "High Risk / Impaired / Imminent Default Customers",
+          "Open AR Balance (INR)": -995236.24,
+          "Company Code": "1000",
+          "Company Name": "J.K. CEMENT LIMITED"
         },
         {
-          "Customer ID": "230000172",
-          "Customer Name": "SHREE TANWAR TRAILOR AND TRANSPORT",
-          "City": "NASIRABAD",
-          "Risk Category": "High Risk / Credit Alert",
-          "Open AR Balance (INR)": 0.0,
-          "Country": "IN",
-          "Account Group": "Standard Customer",
-          "Credit Limit (INR)": 0
+          "Customer ID": "40056148",
+          "Customer Name": "KUTCHI SALES",
+          "City": "DEVSAR",
+          "P(Default)": 0.9327,
+          "Credit Risk Tier": "High Risk / Impaired / Imminent Default Customers",
+          "Open AR Balance (INR)": -34491.68,
+          "Company Code": "1000",
+          "Company Name": "J.K. CEMENT LIMITED"
         },
         {
-          "Customer ID": "20011013",
-          "Customer Name": "GIRNAR ENTERPRISES",
-          "City": "ETAWAH",
-          "Risk Category": "High Risk / Credit Alert",
-          "Open AR Balance (INR)": -11174.49,
-          "Country": "IN",
-          "Account Group": "Standard Customer",
-          "Credit Limit (INR)": 0
-        },
-        {
-          "Customer ID": "20020532",
-          "Customer Name": "BRAMHANDNAYAK ENTERPRISES",
-          "City": "AKKALKOT",
-          "Risk Category": "High Risk / Credit Alert",
-          "Open AR Balance (INR)": -33690.71,
-          "Country": "IN",
-          "Account Group": "Standard Customer",
-          "Credit Limit (INR)": 0
-        },
-        {
-          "Customer ID": "20014708",
-          "Customer Name": "ASHAWAMEDH AGENCIES",
-          "City": "ATPADI",
-          "Risk Category": "High Risk / Credit Alert",
-          "Open AR Balance (INR)": -16835.5,
-          "Country": "IN",
-          "Account Group": "Standard Customer",
-          "Credit Limit (INR)": 0
-        },
-        {
-          "Customer ID": "1286",
-          "Customer Name": "J K CEMENT WORKS   GAHROLI",
-          "City": "GAHROLI  NEW DELHI",
-          "Risk Category": "Critical Default Risk / Immediate Freeze",
-          "Open AR Balance (INR)": 517785.0,
-          "Country": "IN",
-          "Account Group": "Standard Customer",
-          "Credit Limit (INR)": 0
-        },
-        {
-          "Customer ID": "20032275",
-          "Customer Name": "PARVEEN ENTERPRISES",
-          "City": "INDRI",
-          "Risk Category": "High Risk / Credit Alert",
-          "Open AR Balance (INR)": -136.61,
-          "Country": "IN",
-          "Account Group": "Standard Customer",
-          "Credit Limit (INR)": 0
-        },
-        {
-          "Customer ID": "3077",
-          "Customer Name": "J.K. WHITE CEMENT WORKS",
-          "City": "AKOLA",
-          "Risk Category": "Critical Default Risk / Immediate Freeze",
-          "Open AR Balance (INR)": 3274625.58,
-          "Country": "IN",
-          "Account Group": "Standard Customer",
-          "Credit Limit (INR)": 0
-        },
-        {
-          "Customer ID": "20021969",
-          "Customer Name": "B  VASANTHA PAI",
-          "City": "BADIADUKA",
-          "Risk Category": "High Risk / Credit Alert",
-          "Open AR Balance (INR)": -8892.17,
-          "Country": "IN",
-          "Account Group": "Standard Customer",
-          "Credit Limit (INR)": 0
-        },
-        {
-          "Customer ID": "20006247",
-          "Customer Name": "PRANSHI ENTERPRISE",
-          "City": "SURAT",
-          "Risk Category": "High Risk / Credit Alert",
-          "Open AR Balance (INR)": -4168.62,
-          "Country": "IN",
-          "Account Group": "Standard Customer",
-          "Credit Limit (INR)": 0
-        },
-        {
-          "Customer ID": "20013045",
-          "Customer Name": "MAA GYATRI BUILDING MATERIAL",
-          "City": "MODI",
-          "Risk Category": "Critical Default Risk / Immediate Freeze",
-          "Open AR Balance (INR)": 96887.77,
-          "Country": "IN",
-          "Account Group": "Standard Customer",
-          "Credit Limit (INR)": 0
-        },
-        {
-          "Customer ID": "20015696",
-          "Customer Name": "RAJ CEMENT AGENCIES",
-          "City": "MEERUT",
-          "Risk Category": "Critical Default Risk / Immediate Freeze",
-          "Open AR Balance (INR)": 272875.25,
-          "Country": "IN",
-          "Account Group": "Standard Customer",
-          "Credit Limit (INR)": 0
-        },
-        {
-          "Customer ID": "20006269",
-          "Customer Name": "SHIVA TRADERS",
-          "City": "MACHIYA KALA",
-          "Risk Category": "High Risk / Credit Alert",
-          "Open AR Balance (INR)": -8591.0,
-          "Country": "IN",
-          "Account Group": "Standard Customer",
-          "Credit Limit (INR)": 0
-        },
-        {
-          "Customer ID": "3283",
-          "Customer Name": "J.K. WHITE CEMENT WORKS",
-          "City": "Sitapur",
-          "Risk Category": "Critical Default Risk / Immediate Freeze",
-          "Open AR Balance (INR)": 944341.2,
-          "Country": "IN",
-          "Account Group": "Standard Customer",
-          "Credit Limit (INR)": 0
-        },
-        {
-          "Customer ID": "20013276",
-          "Customer Name": "LAXMI BROTHERS",
-          "City": "PUNE",
-          "Risk Category": "Critical Default Risk / Immediate Freeze",
-          "Open AR Balance (INR)": 2674749.07,
-          "Country": "IN",
-          "Account Group": "Standard Customer",
-          "Credit Limit (INR)": 0
-        },
-        {
-          "Customer ID": "20032537",
-          "Customer Name": "SHREE KRISHNA AGENCY",
-          "City": "ALLAHABAD",
-          "Risk Category": "High Risk / Credit Alert",
-          "Open AR Balance (INR)": 0.0,
-          "Country": "IN",
-          "Account Group": "Standard Customer",
-          "Credit Limit (INR)": 0
-        },
-        {
-          "Customer ID": "20000587",
-          "Customer Name": "SHIVAM TRADERS",
-          "City": "BABINA",
-          "Risk Category": "High Risk / Credit Alert",
-          "Open AR Balance (INR)": -2308.5,
-          "Country": "IN",
-          "Account Group": "Standard Customer",
-          "Credit Limit (INR)": 0
-        },
-        {
-          "Customer ID": "20003366",
-          "Customer Name": "UNIQUE ENTERPRISES",
-          "City": "JAMBE",
-          "Risk Category": "High Risk / Credit Alert",
-          "Open AR Balance (INR)": -68081.85,
-          "Country": "IN",
-          "Account Group": "Standard Customer",
-          "Credit Limit (INR)": 0
-        },
-        {
-          "Customer ID": "20024312",
-          "Customer Name": "STANDERD PAINT",
-          "City": "MAU",
-          "Risk Category": "High Risk / Credit Alert",
-          "Open AR Balance (INR)": 0.0,
-          "Country": "IN",
-          "Account Group": "Standard Customer",
-          "Credit Limit (INR)": 0
-        },
-        {
-          "Customer ID": "20010345",
-          "Customer Name": "HARI OM CEMENT STORE",
-          "City": "HISSAR",
-          "Risk Category": "Critical Default Risk / Immediate Freeze",
-          "Open AR Balance (INR)": 183284.28,
-          "Country": "IN",
-          "Account Group": "Standard Customer",
-          "Credit Limit (INR)": 0
-        },
-        {
-          "Customer ID": "20000252",
-          "Customer Name": "LODHI AND COMPANY",
-          "City": "MUNGAOLI",
-          "Risk Category": "High Risk / Credit Alert",
-          "Open AR Balance (INR)": -6308.44,
-          "Country": "IN",
-          "Account Group": "Standard Customer",
-          "Credit Limit (INR)": 0
-        },
-        {
-          "Customer ID": "20017248",
-          "Customer Name": "PAWAN TRADECORP PVT LTD",
-          "City": "INDORE",
-          "Risk Category": "High Risk / Credit Alert",
-          "Open AR Balance (INR)": 0.0,
-          "Country": "IN",
-          "Account Group": "Standard Customer",
-          "Credit Limit (INR)": 0
-        },
-        {
-          "Customer ID": "20017656",
-          "Customer Name": "JUNEJA CEMENT SALES",
-          "City": "PANIPAT",
-          "Risk Category": "High Risk / Credit Alert",
-          "Open AR Balance (INR)": -15833.46,
-          "Country": "IN",
-          "Account Group": "Standard Customer",
-          "Credit Limit (INR)": 0
-        },
-        {
-          "Customer ID": "20005559",
-          "Customer Name": "SHREE RAM BUILDING MATERIAL",
-          "City": "VISNAGAR",
-          "Risk Category": "Critical Default Risk / Immediate Freeze",
-          "Open AR Balance (INR)": 73818.5,
-          "Country": "IN",
-          "Account Group": "Standard Customer",
-          "Credit Limit (INR)": 0
-        },
-        {
-          "Customer ID": "20009840",
-          "Customer Name": "RECYCLING SOLUTIONS PVT  LTD",
-          "City": "ANKLESHWAR",
-          "Risk Category": "Critical Default Risk / Immediate Freeze",
-          "Open AR Balance (INR)": 1679802.02,
-          "Country": "IN",
-          "Account Group": "Standard Customer",
-          "Credit Limit (INR)": 0
-        },
-        {
-          "Customer ID": "Y1902",
-          "Customer Name": "J K CEMENT WORKS   Hamirpur",
-          "City": "HAMIRPUR",
-          "Risk Category": "Critical Default Risk / Immediate Freeze",
-          "Open AR Balance (INR)": 349856.72,
-          "Country": "IN",
-          "Account Group": "Standard Customer",
-          "Credit Limit (INR)": 0
-        },
-        {
-          "Customer ID": "20014993",
-          "Customer Name": "DIXIT TRADERS",
-          "City": "KANPUR NAGAR",
-          "Risk Category": "Critical Default Risk / Immediate Freeze",
-          "Open AR Balance (INR)": 144762.23,
-          "Country": "IN",
-          "Account Group": "Standard Customer",
-          "Credit Limit (INR)": 0
-        },
-        {
-          "Customer ID": "20010565",
-          "Customer Name": "SREE UDAY CEMENT CENTER",
-          "City": "BELLARY",
-          "Risk Category": "High Risk / Credit Alert",
-          "Open AR Balance (INR)": -270247.38,
-          "Country": "IN",
-          "Account Group": "Standard Customer",
-          "Credit Limit (INR)": 0
-        },
-        {
-          "Customer ID": "20016774",
-          "Customer Name": "A M KALLIMANI TRADERS",
-          "City": "KUNDGOL",
-          "Risk Category": "High Risk / Credit Alert",
-          "Open AR Balance (INR)": -12406.08,
-          "Country": "IN",
-          "Account Group": "Standard Customer",
-          "Credit Limit (INR)": 0
-        },
-        {
-          "Customer ID": "RBLK-79385",
-          "Customer Name": "RBLK-FDR-709023979385",
-          "City": "NEW DELHI",
-          "Risk Category": "Critical Default Risk / Immediate Freeze",
-          "Open AR Balance (INR)": 108000000.0,
-          "Country": "IN",
-          "Account Group": "Standard Customer",
-          "Credit Limit (INR)": 0
-        },
-        {
-          "Customer ID": "20015726",
-          "Customer Name": "KISHAN TRADING",
-          "City": "PATAN",
-          "Risk Category": "Critical Default Risk / Immediate Freeze",
-          "Open AR Balance (INR)": 55957.28,
-          "Country": "IN",
-          "Account Group": "Standard Customer",
-          "Credit Limit (INR)": 0
-        },
-        {
-          "Customer ID": "20035895",
-          "Customer Name": "SUNNY ASSOCIATES AND CONSTRUCTION C",
-          "City": "PADRI BAZAR (GRKPUR)",
-          "Risk Category": "High Risk / Credit Alert",
-          "Open AR Balance (INR)": -100000.0,
-          "Country": "IN",
-          "Account Group": "Standard Customer",
-          "Credit Limit (INR)": 0
-        },
-        {
-          "Customer ID": "20010622",
-          "Customer Name": "HONDA MOTORCYCLE AND SCOOTER",
-          "City": "KASABA HOBLI",
-          "Risk Category": "Critical Default Risk / Immediate Freeze",
-          "Open AR Balance (INR)": 1477389.8,
-          "Country": "IN",
-          "Account Group": "Standard Customer",
-          "Credit Limit (INR)": 0
-        },
-        {
-          "Customer ID": "20012752",
-          "Customer Name": "JAI GANESH CANACONA STEEL",
-          "City": "CANACONA",
-          "Risk Category": "High Risk / Credit Alert",
-          "Open AR Balance (INR)": -25289.5,
-          "Country": "IN",
-          "Account Group": "Standard Customer",
-          "Credit Limit (INR)": 0
-        },
-        {
-          "Customer ID": "20035677",
-          "Customer Name": "AMAN TRADERS",
-          "City": "PIPRAICH",
-          "Risk Category": "High Risk / Credit Alert",
-          "Open AR Balance (INR)": -100000.0,
-          "Country": "IN",
-          "Account Group": "Standard Customer",
-          "Credit Limit (INR)": 0
-        },
-        {
-          "Customer ID": "20038376",
-          "Customer Name": "SARASWATI ENTERPRISES",
-          "City": "AYODHYA",
-          "Risk Category": "High Risk / Credit Alert",
-          "Open AR Balance (INR)": 0.0,
-          "Country": "IN",
-          "Account Group": "Standard Customer",
-          "Credit Limit (INR)": 0
-        },
-        {
-          "Customer ID": "20007425",
-          "Customer Name": "CHAUDHARY BUILDERS",
-          "City": "MEERUT",
-          "Risk Category": "High Risk / Credit Alert",
-          "Open AR Balance (INR)": -7253.35,
-          "Country": "IN",
-          "Account Group": "Standard Customer",
-          "Credit Limit (INR)": 0
-        },
-        {
-          "Customer ID": "6502",
-          "Customer Name": "J K CEMENT WORKS   MATHRA I",
+          "Customer ID": "40033960",
+          "Customer Name": "SHYAM BUILDING MATERIAL",
           "City": "MATHURA",
-          "Risk Category": "Critical Default Risk / Immediate Freeze",
-          "Open AR Balance (INR)": 18862787.0,
-          "Country": "IN",
-          "Account Group": "Standard Customer",
-          "Credit Limit (INR)": 0
+          "P(Default)": 0.9302,
+          "Credit Risk Tier": "High Risk / Impaired / Imminent Default Customers",
+          "Open AR Balance (INR)": -29016.09,
+          "Company Code": "1000",
+          "Company Name": "J.K. CEMENT LIMITED"
         },
         {
-          "Customer ID": "20026476",
-          "Customer Name": "PORWAL HARDWARE STORE",
-          "City": "SIKAR",
-          "Risk Category": "High Risk / Credit Alert",
+          "Customer ID": "40020824",
+          "Customer Name": "SUNIL M",
+          "City": "RAICHUR",
+          "P(Default)": 0.9552,
+          "Credit Risk Tier": "High Risk / Impaired / Imminent Default Customers",
+          "Open AR Balance (INR)": -14203.28,
+          "Company Code": "1000",
+          "Company Name": "J.K. CEMENT LIMITED"
+        },
+        {
+          "Customer ID": "20012796",
+          "Customer Name": "DEEPU CHAUHAN CEMENT STORE",
+          "City": "BADI GARH",
+          "P(Default)": 0.8685,
+          "Credit Risk Tier": "High Risk / Impaired / Imminent Default Customers",
           "Open AR Balance (INR)": 0.0,
-          "Country": "IN",
-          "Account Group": "Standard Customer",
-          "Credit Limit (INR)": 0
+          "Company Code": "1000",
+          "Company Name": "J.K. CEMENT LIMITED"
         },
         {
-          "Customer ID": "3129",
-          "Customer Name": "J.K. WHITE CEMENT WORKS",
-          "City": "Kanchipuram",
-          "Risk Category": "Critical Default Risk / Immediate Freeze",
-          "Open AR Balance (INR)": 7699755.26,
-          "Country": "IN",
-          "Account Group": "Standard Customer",
-          "Credit Limit (INR)": 0
+          "Customer ID": "40055469",
+          "Customer Name": "BARKAT ALI",
+          "City": "BARMER",
+          "P(Default)": 0.9532,
+          "Credit Risk Tier": "High Risk / Impaired / Imminent Default Customers",
+          "Open AR Balance (INR)": -17490.45,
+          "Company Code": "1000",
+          "Company Name": "J.K. CEMENT LIMITED"
         },
         {
-          "Customer ID": "20034497",
-          "Customer Name": "RAJAHAMSA PAINTS",
-          "City": "NANDYAL",
-          "Risk Category": "High Risk / Credit Alert",
-          "Open AR Balance (INR)": -25000.0,
-          "Country": "IN",
-          "Account Group": "Standard Customer",
-          "Credit Limit (INR)": 0
+          "Customer ID": "40057201",
+          "Customer Name": "BHANWAR LAL",
+          "City": "BIKANER",
+          "P(Default)": 0.9516,
+          "Credit Risk Tier": "High Risk / Impaired / Imminent Default Customers",
+          "Open AR Balance (INR)": -34663.51,
+          "Company Code": "1000",
+          "Company Name": "J.K. CEMENT LIMITED"
         },
         {
-          "Customer ID": "20032273",
-          "Customer Name": "SAT KARTAR CEMENT AGENCY",
-          "City": "SADULSHAHAR",
-          "Risk Category": "High Risk / Credit Alert",
-          "Open AR Balance (INR)": -273.22,
-          "Country": "IN",
-          "Account Group": "Standard Customer",
-          "Credit Limit (INR)": 0
+          "Customer ID": "40032147",
+          "Customer Name": "SANKET TRADERS",
+          "City": "PANUMBRE PHATA",
+          "P(Default)": 0.9526,
+          "Credit Risk Tier": "High Risk / Impaired / Imminent Default Customers",
+          "Open AR Balance (INR)": -50574.34,
+          "Company Code": "1000",
+          "Company Name": "J.K. CEMENT LIMITED"
         },
         {
-          "Customer ID": "20000556",
-          "Customer Name": "T M CHOUDHARI ENTERPRISES",
-          "City": "IBRAHIMPUR  BIJAPUR",
-          "Risk Category": "High Risk / Credit Alert",
-          "Open AR Balance (INR)": -13281.42,
-          "Country": "IN",
-          "Account Group": "Standard Customer",
-          "Credit Limit (INR)": 0
+          "Customer ID": "40018608",
+          "Customer Name": "UMESH KIRANA STORE",
+          "City": "DUNGARPUR",
+          "P(Default)": 0.9462,
+          "Credit Risk Tier": "High Risk / Impaired / Imminent Default Customers",
+          "Open AR Balance (INR)": -37996.34,
+          "Company Code": "1000",
+          "Company Name": "J.K. CEMENT LIMITED"
         },
         {
-          "Customer ID": "20035142",
-          "Customer Name": "SHREE BAJRANG CEMENT AGENCY",
-          "City": "LACCHMANGARH",
-          "Risk Category": "High Risk / Credit Alert",
-          "Open AR Balance (INR)": -200000.0,
-          "Country": "IN",
-          "Account Group": "Standard Customer",
-          "Credit Limit (INR)": 0
+          "Customer ID": "40150749",
+          "Customer Name": "SHIVAM GARG",
+          "City": "SABALGARH",
+          "P(Default)": 0.8865,
+          "Credit Risk Tier": "High Risk / Impaired / Imminent Default Customers",
+          "Open AR Balance (INR)": -21238.55,
+          "Company Code": "1000",
+          "Company Name": "J.K. CEMENT LIMITED"
         },
         {
-          "Customer ID": "20018293",
-          "Customer Name": "B K  TRADERS",
-          "City": "RAJPUR",
-          "Risk Category": "High Risk / Credit Alert",
-          "Open AR Balance (INR)": -16605.78,
-          "Country": "IN",
-          "Account Group": "Standard Customer",
-          "Credit Limit (INR)": 0
+          "Customer ID": "20005868",
+          "Customer Name": "SUNDHA MATA CEMENT AGENCY",
+          "City": "SINDHARI",
+          "P(Default)": 0.8664,
+          "Credit Risk Tier": "High Risk / Impaired / Imminent Default Customers",
+          "Open AR Balance (INR)": 1135051.39,
+          "Company Code": "1000",
+          "Company Name": "J.K. CEMENT LIMITED"
         },
         {
-          "Customer ID": "20028339",
-          "Customer Name": "MEDHA ENTERPRISES",
-          "City": "HANAMKONDA",
-          "Risk Category": "High Risk / Credit Alert",
-          "Open AR Balance (INR)": -550000.0,
-          "Country": "IN",
-          "Account Group": "Standard Customer",
-          "Credit Limit (INR)": 0
+          "Customer ID": "40117654",
+          "Customer Name": "ATHARV HARDWARE AND IRON STORE",
+          "City": "BABRALA",
+          "P(Default)": 0.828,
+          "Credit Risk Tier": "High Risk / Impaired / Imminent Default Customers",
+          "Open AR Balance (INR)": -21505.34,
+          "Company Code": "1000",
+          "Company Name": "J.K. CEMENT LIMITED"
         },
         {
-          "Customer ID": "2250",
-          "Customer Name": "JK CEMENT LTD   BARAMATI",
-          "City": "BARAMATI  PUNE",
-          "Risk Category": "Critical Default Risk / Immediate Freeze",
-          "Open AR Balance (INR)": 2370118.0,
-          "Country": "IN",
-          "Account Group": "Standard Customer",
-          "Credit Limit (INR)": 0
+          "Customer ID": "40025431",
+          "Customer Name": "RAO BUILDING MATERIAL SUPPLIERS",
+          "City": "FARIDABAD",
+          "P(Default)": 0.9224,
+          "Credit Risk Tier": "High Risk / Impaired / Imminent Default Customers",
+          "Open AR Balance (INR)": -21045.99,
+          "Company Code": "1000",
+          "Company Name": "J.K. CEMENT LIMITED"
+        },
+        {
+          "Customer ID": "20030425",
+          "Customer Name": "AYUSHI ENTERPRISES",
+          "City": "MACHHLISHAHAR",
+          "P(Default)": 0.9383,
+          "Credit Risk Tier": "High Risk / Impaired / Imminent Default Customers",
+          "Open AR Balance (INR)": -142817.96,
+          "Company Code": "1000",
+          "Company Name": "J.K. CEMENT LIMITED"
+        },
+        {
+          "Customer ID": "40145348",
+          "Customer Name": "SOMVATI FERTILIZER",
+          "City": "JOBAT",
+          "P(Default)": 0.8959,
+          "Credit Risk Tier": "High Risk / Impaired / Imminent Default Customers",
+          "Open AR Balance (INR)": -21387.4,
+          "Company Code": "1000",
+          "Company Name": "J.K. CEMENT LIMITED"
+        },
+        {
+          "Customer ID": "20016010",
+          "Customer Name": "RAMESH PRASAD PATEL",
+          "City": "CHANDLA",
+          "P(Default)": 0.8586,
+          "Credit Risk Tier": "High Risk / Impaired / Imminent Default Customers",
+          "Open AR Balance (INR)": -28160.0,
+          "Company Code": "1000",
+          "Company Name": "J.K. CEMENT LIMITED"
+        },
+        {
+          "Customer ID": "40059461",
+          "Customer Name": "JAI AMBE CEMENT STORE",
+          "City": "DHANOURI",
+          "P(Default)": 0.926,
+          "Credit Risk Tier": "High Risk / Impaired / Imminent Default Customers",
+          "Open AR Balance (INR)": -16843.33,
+          "Company Code": "1000",
+          "Company Name": "J.K. CEMENT LIMITED"
+        },
+        {
+          "Customer ID": "40059610",
+          "Customer Name": "HUTAIB TRADERS",
+          "City": "PATI",
+          "P(Default)": 0.9334,
+          "Credit Risk Tier": "High Risk / Impaired / Imminent Default Customers",
+          "Open AR Balance (INR)": -36216.26,
+          "Company Code": "1000",
+          "Company Name": "J.K. CEMENT LIMITED"
+        },
+        {
+          "Customer ID": "20008954",
+          "Customer Name": "SHRI BALAJI KHAD BEEJ BHANDAR",
+          "City": "KARAULI",
+          "P(Default)": 0.8715,
+          "Credit Risk Tier": "High Risk / Impaired / Imminent Default Customers",
+          "Open AR Balance (INR)": 399360.72,
+          "Company Code": "1000",
+          "Company Name": "J.K. CEMENT LIMITED"
+        },
+        {
+          "Customer ID": "40036629",
+          "Customer Name": "NITIN TRADING CO",
+          "City": "SAHARANPUR",
+          "P(Default)": 0.8394,
+          "Credit Risk Tier": "High Risk / Impaired / Imminent Default Customers",
+          "Open AR Balance (INR)": -27380.26,
+          "Company Code": "1000",
+          "Company Name": "J.K. CEMENT LIMITED"
+        },
+        {
+          "Customer ID": "40054135",
+          "Customer Name": "MAA BHAGWATI DHARMA KANTA",
+          "City": "CHANDENA KOLI",
+          "P(Default)": 0.929,
+          "Credit Risk Tier": "High Risk / Impaired / Imminent Default Customers",
+          "Open AR Balance (INR)": -24144.16,
+          "Company Code": "1000",
+          "Company Name": "J.K. CEMENT LIMITED"
+        },
+        {
+          "Customer ID": "40024393",
+          "Customer Name": "DHARMENDRA KALAL",
+          "City": "DHARIAWAD",
+          "P(Default)": 0.9306,
+          "Credit Risk Tier": "High Risk / Impaired / Imminent Default Customers",
+          "Open AR Balance (INR)": -44952.68,
+          "Company Code": "1000",
+          "Company Name": "J.K. CEMENT LIMITED"
+        },
+        {
+          "Customer ID": "40024775",
+          "Customer Name": "SHRI VISHWA KARMA BUILDING MATERIAL",
+          "City": "BIKANER",
+          "P(Default)": 0.9475,
+          "Credit Risk Tier": "High Risk / Impaired / Imminent Default Customers",
+          "Open AR Balance (INR)": -35476.23,
+          "Company Code": "1000",
+          "Company Name": "J.K. CEMENT LIMITED"
+        },
+        {
+          "Customer ID": "40020167",
+          "Customer Name": "NAKODA STEEL TRADERS",
+          "City": "NAGTHANE",
+          "P(Default)": 0.9315,
+          "Credit Risk Tier": "High Risk / Impaired / Imminent Default Customers",
+          "Open AR Balance (INR)": -24615.54,
+          "Company Code": "1000",
+          "Company Name": "J.K. CEMENT LIMITED"
+        },
+        {
+          "Customer ID": "20024867",
+          "Customer Name": "BALAJI POP PLASTER TRADERS",
+          "City": "JAIPUR",
+          "P(Default)": 0.913,
+          "Credit Risk Tier": "High Risk / Impaired / Imminent Default Customers",
+          "Open AR Balance (INR)": 317288.76,
+          "Company Code": "1000",
+          "Company Name": "J.K. CEMENT LIMITED"
+        },
+        {
+          "Customer ID": "40057999",
+          "Customer Name": "SHRI KALA SUPPLIERS",
+          "City": "MIRAJ",
+          "P(Default)": 0.9249,
+          "Credit Risk Tier": "High Risk / Impaired / Imminent Default Customers",
+          "Open AR Balance (INR)": -35443.73,
+          "Company Code": "1000",
+          "Company Name": "J.K. CEMENT LIMITED"
+        },
+        {
+          "Customer ID": "20036882",
+          "Customer Name": "LETE HANUMAN JI",
+          "City": "ALLAHABAD-RAMBAGH",
+          "P(Default)": 0.9144,
+          "Credit Risk Tier": "High Risk / Impaired / Imminent Default Customers",
+          "Open AR Balance (INR)": 0.0,
+          "Company Code": "1000",
+          "Company Name": "J.K. CEMENT LIMITED"
+        },
+        {
+          "Customer ID": "40056003",
+          "Customer Name": "KRISHNA CEMENT AGENCY",
+          "City": "BHARATPUR",
+          "P(Default)": 0.9568,
+          "Credit Risk Tier": "High Risk / Impaired / Imminent Default Customers",
+          "Open AR Balance (INR)": -35596.98,
+          "Company Code": "1000",
+          "Company Name": "J.K. CEMENT LIMITED"
+        },
+        {
+          "Customer ID": "20025517",
+          "Customer Name": "DHARMATMA SARAN ANAND KR.MARBLE",
+          "City": "MORADABAD",
+          "P(Default)": 0.9171,
+          "Credit Risk Tier": "High Risk / Impaired / Imminent Default Customers",
+          "Open AR Balance (INR)": -1822219.82,
+          "Company Code": "1000",
+          "Company Name": "J.K. CEMENT LIMITED"
+        },
+        {
+          "Customer ID": "20025528",
+          "Customer Name": "GOEL CEMENT STORE",
+          "City": "VAISHALI",
+          "P(Default)": 0.8285,
+          "Credit Risk Tier": "High Risk / Impaired / Imminent Default Customers",
+          "Open AR Balance (INR)": -1655460.26,
+          "Company Code": "1000",
+          "Company Name": "J.K. CEMENT LIMITED"
+        },
+        {
+          "Customer ID": "40058125",
+          "Customer Name": "PRAVEEN",
+          "City": "SHORAPUR",
+          "P(Default)": 0.9442,
+          "Credit Risk Tier": "High Risk / Impaired / Imminent Default Customers",
+          "Open AR Balance (INR)": -12587.68,
+          "Company Code": "1000",
+          "Company Name": "J.K. CEMENT LIMITED"
+        },
+        {
+          "Customer ID": "20019643",
+          "Customer Name": "SHARADA ENTERPRISES",
+          "City": "HALIYAL",
+          "P(Default)": 0.9165,
+          "Credit Risk Tier": "High Risk / Impaired / Imminent Default Customers",
+          "Open AR Balance (INR)": -76309.54,
+          "Company Code": "1000",
+          "Company Name": "J.K. CEMENT LIMITED"
+        },
+        {
+          "Customer ID": "40036433",
+          "Customer Name": "VENKATESH SRINIVAS NARGUND",
+          "City": "GADAG",
+          "P(Default)": 0.9637,
+          "Credit Risk Tier": "High Risk / Impaired / Imminent Default Customers",
+          "Open AR Balance (INR)": -10689.35,
+          "Company Code": "1000",
+          "Company Name": "J.K. CEMENT LIMITED"
+        },
+        {
+          "Customer ID": "40179609",
+          "Customer Name": "SHRI RAM BUILDING MATERIAL",
+          "City": "SIKANDRA RAO",
+          "P(Default)": 0.8147,
+          "Credit Risk Tier": "High Risk / Impaired / Imminent Default Customers",
+          "Open AR Balance (INR)": -20904.38,
+          "Company Code": "1000",
+          "Company Name": "J.K. CEMENT LIMITED"
+        },
+        {
+          "Customer ID": "40057141",
+          "Customer Name": "SHRI LAXMI TRADERS",
+          "City": "JHUNJHUNU",
+          "P(Default)": 0.924,
+          "Credit Risk Tier": "High Risk / Impaired / Imminent Default Customers",
+          "Open AR Balance (INR)": -17024.56,
+          "Company Code": "1000",
+          "Company Name": "J.K. CEMENT LIMITED"
+        },
+        {
+          "Customer ID": "40032678",
+          "Customer Name": "SURESH MALLAPPA HIREMATH",
+          "City": "BAGALKOT",
+          "P(Default)": 0.9597,
+          "Credit Risk Tier": "High Risk / Impaired / Imminent Default Customers",
+          "Open AR Balance (INR)": -72585.14,
+          "Company Code": "1000",
+          "Company Name": "J.K. CEMENT LIMITED"
+        },
+        {
+          "Customer ID": "40052662",
+          "Customer Name": "SHREE VIMALNATH STEEL",
+          "City": "NARHE",
+          "P(Default)": 0.9671,
+          "Credit Risk Tier": "High Risk / Impaired / Imminent Default Customers",
+          "Open AR Balance (INR)": -34414.11,
+          "Company Code": "1000",
+          "Company Name": "J.K. CEMENT LIMITED"
+        },
+        {
+          "Customer ID": "40059477",
+          "Customer Name": "MANOJ TRADERS",
+          "City": "RAMBAG",
+          "P(Default)": 0.9531,
+          "Credit Risk Tier": "High Risk / Impaired / Imminent Default Customers",
+          "Open AR Balance (INR)": -23112.13,
+          "Company Code": "1000",
+          "Company Name": "J.K. CEMENT LIMITED"
+        },
+        {
+          "Customer ID": "20005929",
+          "Customer Name": "PRIYANSH TRADERS",
+          "City": "NARSINGHPUR",
+          "P(Default)": 0.8948,
+          "Credit Risk Tier": "High Risk / Impaired / Imminent Default Customers",
+          "Open AR Balance (INR)": -7300.94,
+          "Company Code": "1000",
+          "Company Name": "J.K. CEMENT LIMITED"
+        },
+        {
+          "Customer ID": "40021935",
+          "Customer Name": "DIVYA SALES",
+          "City": "JAJOD BHUMAWARA",
+          "P(Default)": 0.9188,
+          "Credit Risk Tier": "High Risk / Impaired / Imminent Default Customers",
+          "Open AR Balance (INR)": -18609.73,
+          "Company Code": "1000",
+          "Company Name": "J.K. CEMENT LIMITED"
+        },
+        {
+          "Customer ID": "40024841",
+          "Customer Name": "PARTH TRADING COMPANY",
+          "City": "LUDHAWAI",
+          "P(Default)": 0.9316,
+          "Credit Risk Tier": "High Risk / Impaired / Imminent Default Customers",
+          "Open AR Balance (INR)": -33218.2,
+          "Company Code": "1000",
+          "Company Name": "J.K. CEMENT LIMITED"
+        },
+        {
+          "Customer ID": "40190184",
+          "Customer Name": "SHIVLAL TRADERS",
+          "City": "UJJAIN",
+          "P(Default)": 0.8316,
+          "Credit Risk Tier": "High Risk / Impaired / Imminent Default Customers",
+          "Open AR Balance (INR)": -21188.02,
+          "Company Code": "1000",
+          "Company Name": "J.K. CEMENT LIMITED"
         }
       ],
       "advanced_ml": {
         "confusion_matrix": {
-          "tp": 1794,
-          "fp": 1790,
-          "fn": 551,
-          "tn": 20865,
-          "precision": 0.501,
+          "tp": 20881,
+          "fp": 4899,
+          "fn": 6407,
+          "tn": 72618,
+          "precision": 0.81,
           "recall": 0.765,
-          "f1": 0.605,
-          "accuracy": 0.906
+          "f1": 0.787,
+          "accuracy": 0.892
         },
         "threshold_curve": {
           "thresholds": [
@@ -1639,40 +1559,40 @@ window.PORTFOLIO_DATA = {
             "0.9"
           ],
           "clean_count": [
-            7302,
-            4656,
-            2969,
-            1893,
-            1207,
-            769,
-            490,
-            312,
-            199,
-            127
+            25416,
+            16206,
+            10333,
+            6588,
+            4201,
+            2678,
+            1708,
+            1089,
+            694,
+            442
           ],
           "exception_count": [
-            89,
-            139,
-            189,
-            239,
-            289,
-            338,
-            388,
-            438,
-            488,
-            538
+            1044,
+            1624,
+            2204,
+            2784,
+            3364,
+            3944,
+            4524,
+            5104,
+            5684,
+            6264
           ],
           "total_count": [
-            7391,
-            4795,
-            3158,
-            2132,
-            1496,
-            1107,
-            878,
-            750,
-            687,
-            665
+            26460,
+            17830,
+            12537,
+            9372,
+            7565,
+            6622,
+            6232,
+            6193,
+            6378,
+            6706
           ]
         },
         "calibration_curve": {
@@ -1756,172 +1676,172 @@ window.PORTFOLIO_DATA = {
         "MSEG",
         "MARA"
       ],
-      "total_records": 25000,
-      "exceptions_count": 16852,
-      "exception_rate_pct": 67.41,
-      "financial_exposure_inr": 2855899999.9999995,
-      "financial_exposure_cr": 285.59,
-      "avg_confidence_score": 0.6381,
-      "champion_model": "Mini-Batch K-Means",
-      "champion_metric": "0.6381 ROC-AUC",
+      "total_records": 229098,
+      "exceptions_count": 139102,
+      "exception_rate_pct": 60.72,
+      "financial_exposure_inr": 13709251200.76,
+      "financial_exposure_cr": 1370.93,
+      "avg_confidence_score": 0.332,
+      "champion_model": "Gaussian Mixture Model",
+      "champion_metric": "0.9058 Accuracy",
       "risk_distribution": {
-        "Critical": 24529,
-        "High": 125,
-        "Medium": 266,
-        "Low": 80
+        "Critical": 2,
+        "High": 16,
+        "Medium": 146961,
+        "Low": 82119
       },
       "category_breakdown": [
         {
-          "label": "J.K. Cement  Works, Mangrol",
-          "count": 4050
-        },
-        {
           "label": "J.K. Cement Works Nimbahera",
-          "count": 3235
+          "count": 34535
         },
         {
-          "label": "JK Cement Works - Panna",
-          "count": 3150
-        },
-        {
-          "label": "J.K. Cement Works, Muddapur",
-          "count": 2205
+          "label": "J.K. Cement  Works, Mangrol",
+          "count": 31664
         },
         {
           "label": "J.K. White Cement Works ,Gotan",
-          "count": 1195
+          "count": 21597
         },
         {
-          "label": "J.K. Cement Works Jharli",
-          "count": 690
+          "label": "J.K. Cement Works, Muddapur",
+          "count": 18482
         },
         {
-          "label": "J.K. White, Katni",
-          "count": 640
+          "label": "JK Cement Works - Panna",
+          "count": 15934
+        },
+        {
+          "label": "J.K. Cement Works Fujairah FZC",
+          "count": 9417
+        },
+        {
+          "label": "J.K. Cement Works , Gotan",
+          "count": 9311
         }
       ],
       "feature_importance": [
         {
-          "feature": "Rank",
-          "importance": 0,
-          "description": "Gini Importance"
+          "feature": "annualized_turnover_rate",
+          "importance": 0.1709,
+          "description": "(Annualized inventory turnover velocity scaled to 365-day basis)"
         },
         {
-          "feature": "#1",
-          "importance": 0,
-          "description": "0.1923"
+          "feature": "inventory_turnover_ratio",
+          "importance": 0.1693,
+          "description": "(Turnover velocity ratio = Total Issue Quantity / Current Stock Quantity)"
         },
         {
-          "feature": "#2",
-          "importance": 0,
-          "description": "0.1303"
+          "feature": "obsolescence_risk_index",
+          "importance": 0.1476,
+          "description": "(Composite multi-criteria index weighting inactivity, days of supply, and zero consumption)"
         },
         {
-          "feature": "#3",
-          "importance": 0,
-          "description": "0.112"
+          "feature": "days_of_supply_forward",
+          "importance": 0.139,
+          "description": "(Forward-looking stock coverage in days = Current Stock / Daily Consumption Rate)"
         },
         {
-          "feature": "#4",
-          "importance": 0,
-          "description": "0.1009"
+          "feature": "daily_consumption_rate",
+          "importance": 0.0818,
+          "description": "(Average daily consumption quantity across the observation window)"
         },
         {
-          "feature": "#5",
-          "importance": 0,
-          "description": "0.0995"
+          "feature": "is_zero_issue_window",
+          "importance": 0.0748,
+          "description": "(Binary indicator for materials with zero consumption transactions across entire observation window)"
         },
         {
-          "feature": "#6",
-          "importance": 0,
-          "description": "0.0804"
+          "feature": "capital_lockup_strain",
+          "importance": 0.0591,
+          "description": "(Financial severity metric scaling capital valuation by obsolescence dormancy)"
         },
         {
-          "feature": "#7",
-          "importance": 0,
-          "description": "0.0513"
+          "feature": "issue_transaction_density",
+          "importance": 0.0344,
+          "description": "(Proportion of total goods movements that represent consumption / issue activities)"
         }
       ],
       "model_rankings": [
         {
           "Rank": "#1",
-          "Model": "Mini-Batch K-Means",
-          "Accuracy": 0.789,
-          "Precision": 0.8341,
-          "Recall": 0.8519,
-          "F1-Score": 0.8429,
-          "ROC-AUC": 0.6381,
-          "PR-AUC": 0.8066,
-          "Silhouette": 0.7546,
-          "Specificity": 0.6645,
-          "True Positives": 2830,
-          "False Positives": 563,
-          "False Negatives": 492,
-          "True Negatives": 1115
+          "Model": "Gaussian Mixture Model",
+          "Accuracy": 0.9058,
+          "Precision": 0.9992,
+          "Recall": 0.8663,
+          "F1-Score": 0.928,
+          "ROC-AUC": 0.9755,
+          "PR-AUC": 0.9879,
+          "Silhouette": 0.2579,
+          "Specificity": 0.9985,
+          "True Positives": 27833.0,
+          "False Positives": 21.0,
+          "False Negatives": 4297.0,
+          "True Negatives": 13669.0
         },
         {
           "Rank": "#2",
-          "Model": "Gaussian Mixture Model",
-          "Accuracy": 0.7644,
-          "Precision": 0.8033,
-          "Recall": 0.8546,
-          "F1-Score": 0.8282,
-          "ROC-AUC": 0.5783,
-          "PR-AUC": 0.7782,
-          "Silhouette": 0.7004,
-          "Specificity": 0.5858,
-          "True Positives": 2839,
-          "False Positives": 695,
-          "False Negatives": 483,
-          "True Negatives": 983
+          "Model": "K-Means",
+          "Accuracy": 0.8959,
+          "Precision": 0.9959,
+          "Recall": 0.855,
+          "F1-Score": 0.9201,
+          "ROC-AUC": 0.9697,
+          "PR-AUC": 0.98,
+          "Silhouette": 0.0,
+          "Specificity": 0.9918,
+          "True Positives": 27470.0,
+          "False Positives": 112.0,
+          "False Negatives": 4660.0,
+          "True Negatives": 13578.0
         },
         {
           "Rank": "#3",
           "Model": "BIRCH",
-          "Accuracy": 0.6558,
-          "Precision": 0.6911,
-          "Recall": 0.8715,
-          "F1-Score": 0.7709,
-          "ROC-AUC": 0.2287,
-          "PR-AUC": 0.6603,
-          "Silhouette": 0.969,
-          "Specificity": 0.2288,
-          "True Positives": 2895,
-          "False Positives": 1294,
-          "False Negatives": 427,
-          "True Negatives": 384
+          "Accuracy": 0.8958,
+          "Precision": 0.9959,
+          "Recall": 0.855,
+          "F1-Score": 0.9201,
+          "ROC-AUC": 0.9696,
+          "PR-AUC": 0.9799,
+          "Silhouette": 0.0,
+          "Specificity": 0.9917,
+          "True Positives": 27470.0,
+          "False Positives": 113.0,
+          "False Negatives": 4660.0,
+          "True Negatives": 13577.0
         },
         {
           "Rank": "#4",
-          "Model": "K-Means",
-          "Accuracy": 0.6554,
-          "Precision": 0.6908,
-          "Recall": 0.8715,
-          "F1-Score": 0.7707,
-          "ROC-AUC": 0.2275,
-          "PR-AUC": 0.66,
-          "Silhouette": 0.9808,
-          "Specificity": 0.2277,
-          "True Positives": 2895,
-          "False Positives": 1296,
-          "False Negatives": 427,
-          "True Negatives": 382
+          "Model": "Mini-Batch K-Means",
+          "Accuracy": 0.8093,
+          "Precision": 0.8941,
+          "Recall": 0.8259,
+          "F1-Score": 0.8586,
+          "ROC-AUC": 0.724,
+          "PR-AUC": 0.8339,
+          "Silhouette": 0.512,
+          "Specificity": 0.7704,
+          "True Positives": 26535.0,
+          "False Positives": 3143.0,
+          "False Negatives": 5595.0,
+          "True Negatives": 10547.0
         },
         {
           "Rank": "#5",
           "Model": "Bisecting K-Means",
-          "Accuracy": 0.654,
-          "Precision": 0.6896,
-          "Recall": 0.8715,
-          "F1-Score": 0.7699,
-          "ROC-AUC": 0.2233,
-          "PR-AUC": 0.6589,
-          "Silhouette": 0.7836,
-          "Specificity": 0.2235,
-          "True Positives": 2895,
-          "False Positives": 1303,
-          "False Negatives": 427,
-          "True Negatives": 375
+          "Accuracy": 0.7722,
+          "Precision": 0.8397,
+          "Recall": 0.8343,
+          "F1-Score": 0.837,
+          "ROC-AUC": 0.5918,
+          "PR-AUC": 0.7765,
+          "Silhouette": 0.4569,
+          "Specificity": 0.6263,
+          "True Positives": 26807.0,
+          "False Positives": 5116.0,
+          "False Negatives": 5323.0,
+          "True Negatives": 8574.0
         }
       ],
       "display_columns": [
@@ -1930,522 +1850,522 @@ window.PORTFOLIO_DATA = {
         "plant_name",
         "probability_of_obsolescence",
         "inventory_risk_category",
+        "current_stock_val",
         "predicted_slow_moving_exception",
-        "plant",
-        "material_type"
+        "source_schema"
       ],
       "sample_records": [
         {
-          "matnr": "P203553",
-          "material_name": null,
-          "plant_name": "J.K. CEMENT WORKS, BUXAR",
-          "probability_of_obsolescence": 0.9988,
-          "inventory_risk_category": "Critical Obsolete Risk",
-          "predicted_slow_moving_exception": 1,
-          "plant": 1919,
-          "material_type": "ZPJC"
-        },
-        {
-          "matnr": "120019",
-          "material_name": null,
-          "plant_name": "J.K. White, Katni",
-          "probability_of_obsolescence": 0.9988,
-          "inventory_risk_category": "Critical Obsolete Risk",
-          "predicted_slow_moving_exception": 1,
-          "plant": 1025,
-          "material_type": "ZFIN"
-        },
-        {
-          "matnr": "631836",
-          "material_name": null,
-          "plant_name": "J.K. Cement  Works, Mangrol",
-          "probability_of_obsolescence": 0.9988,
-          "inventory_risk_category": "Critical Obsolete Risk",
-          "predicted_slow_moving_exception": 1,
-          "plant": 1004,
-          "material_type": "ZCON"
-        },
-        {
-          "matnr": "130010",
-          "material_name": null,
-          "plant_name": "CHENNAI NEW",
-          "probability_of_obsolescence": 0.9989,
-          "inventory_risk_category": "Critical Obsolete Risk",
-          "predicted_slow_moving_exception": 1,
-          "plant": 3327,
-          "material_type": "ZFIN"
-        },
-        {
-          "matnr": "86001852",
-          "material_name": null,
-          "plant_name": "J.K. White, Katni",
-          "probability_of_obsolescence": 0.9988,
-          "inventory_risk_category": "Critical Obsolete Risk",
-          "predicted_slow_moving_exception": 1,
-          "plant": 1025,
-          "material_type": "ZSPA"
-        },
-        {
-          "matnr": "571154",
-          "material_name": null,
-          "plant_name": "J.K. Cement  Works, Mangrol",
-          "probability_of_obsolescence": 0.9988,
-          "inventory_risk_category": "Critical Obsolete Risk",
-          "predicted_slow_moving_exception": 1,
-          "plant": 1004,
-          "material_type": "ZSPA"
-        },
-        {
-          "matnr": "571154",
-          "material_name": null,
+          "matnr": "507323",
+          "material_name": "",
           "plant_name": "J.K. Cement Works Nimbahera",
-          "probability_of_obsolescence": 0.9988,
-          "inventory_risk_category": "Critical Obsolete Risk",
-          "predicted_slow_moving_exception": 1,
-          "plant": 1001,
-          "material_type": "ZSPA"
+          "probability_of_obsolescence": 0.404,
+          "inventory_risk_category": "Moderate Slow Risk",
+          "current_stock_val": 3140.0,
+          "predicted_slow_moving_exception": 1.0,
+          "source_schema": "HANA_P2"
         },
         {
-          "matnr": "86001885",
-          "material_name": null,
+          "matnr": "507333",
+          "material_name": "",
+          "plant_name": "J.K. Cement Works Nimbahera",
+          "probability_of_obsolescence": 0.404,
+          "inventory_risk_category": "Moderate Slow Risk",
+          "current_stock_val": 4609.64,
+          "predicted_slow_moving_exception": 1.0,
+          "source_schema": "HANA_P2"
+        },
+        {
+          "matnr": "507345",
+          "material_name": "",
+          "plant_name": "J.K. Cement Works Nimbahera",
+          "probability_of_obsolescence": 0.404,
+          "inventory_risk_category": "Moderate Slow Risk",
+          "current_stock_val": 1325.33,
+          "predicted_slow_moving_exception": 1.0,
+          "source_schema": "HANA_P2"
+        },
+        {
+          "matnr": "507348",
+          "material_name": "",
+          "plant_name": "J.K. Cement Works Nimbahera",
+          "probability_of_obsolescence": 0.404,
+          "inventory_risk_category": "Moderate Slow Risk",
+          "current_stock_val": 1803.0,
+          "predicted_slow_moving_exception": 1.0,
+          "source_schema": "HANA_P2"
+        },
+        {
+          "matnr": "507354",
+          "material_name": "",
+          "plant_name": "J.K. Cement Works Nimbahera",
+          "probability_of_obsolescence": 0.404,
+          "inventory_risk_category": "Moderate Slow Risk",
+          "current_stock_val": 56.75,
+          "predicted_slow_moving_exception": 1.0,
+          "source_schema": "HANA_P2"
+        },
+        {
+          "matnr": "507358",
+          "material_name": "",
+          "plant_name": "J.K. Cement Works Nimbahera",
+          "probability_of_obsolescence": 0.404,
+          "inventory_risk_category": "Moderate Slow Risk",
+          "current_stock_val": 501.0,
+          "predicted_slow_moving_exception": 1.0,
+          "source_schema": "HANA_P2"
+        },
+        {
+          "matnr": "507363",
+          "material_name": "",
+          "plant_name": "J.K. Cement Works Nimbahera",
+          "probability_of_obsolescence": 0.404,
+          "inventory_risk_category": "Moderate Slow Risk",
+          "current_stock_val": 401.0,
+          "predicted_slow_moving_exception": 1.0,
+          "source_schema": "HANA_P2"
+        },
+        {
+          "matnr": "507373",
+          "material_name": "",
+          "plant_name": "J.K. Cement Works Nimbahera",
+          "probability_of_obsolescence": 0.404,
+          "inventory_risk_category": "Moderate Slow Risk",
+          "current_stock_val": 474.0,
+          "predicted_slow_moving_exception": 1.0,
+          "source_schema": "HANA_P2"
+        },
+        {
+          "matnr": "507374",
+          "material_name": "",
+          "plant_name": "J.K. Cement Works Nimbahera",
+          "probability_of_obsolescence": 0.404,
+          "inventory_risk_category": "Moderate Slow Risk",
+          "current_stock_val": 35782.5,
+          "predicted_slow_moving_exception": 1.0,
+          "source_schema": "HANA_P2"
+        },
+        {
+          "matnr": "507377",
+          "material_name": "",
+          "plant_name": "J.K. Cement Works Nimbahera",
+          "probability_of_obsolescence": 0.404,
+          "inventory_risk_category": "Moderate Slow Risk",
+          "current_stock_val": 401.0,
+          "predicted_slow_moving_exception": 1.0,
+          "source_schema": "HANA_P2"
+        },
+        {
+          "matnr": "507378",
+          "material_name": "",
+          "plant_name": "J.K. Cement Works Nimbahera",
+          "probability_of_obsolescence": 0.404,
+          "inventory_risk_category": "Moderate Slow Risk",
+          "current_stock_val": 401.0,
+          "predicted_slow_moving_exception": 1.0,
+          "source_schema": "HANA_P2"
+        },
+        {
+          "matnr": "507382",
+          "material_name": "",
+          "plant_name": "J.K. Cement Works Nimbahera",
+          "probability_of_obsolescence": 0.404,
+          "inventory_risk_category": "Moderate Slow Risk",
+          "current_stock_val": 655.58,
+          "predicted_slow_moving_exception": 1.0,
+          "source_schema": "HANA_P2"
+        },
+        {
+          "matnr": "507400",
+          "material_name": "",
+          "plant_name": "J.K. Cement Works Nimbahera",
+          "probability_of_obsolescence": 0.404,
+          "inventory_risk_category": "Moderate Slow Risk",
+          "current_stock_val": 18391.0,
+          "predicted_slow_moving_exception": 1.0,
+          "source_schema": "HANA_P2"
+        },
+        {
+          "matnr": "507409",
+          "material_name": "",
+          "plant_name": "J.K. Cement Works Nimbahera",
+          "probability_of_obsolescence": 0.404,
+          "inventory_risk_category": "Moderate Slow Risk",
+          "current_stock_val": 15866.0,
+          "predicted_slow_moving_exception": 1.0,
+          "source_schema": "HANA_P2"
+        },
+        {
+          "matnr": "507425",
+          "material_name": "",
+          "plant_name": "J.K. Cement Works Nimbahera",
+          "probability_of_obsolescence": 0.404,
+          "inventory_risk_category": "Moderate Slow Risk",
+          "current_stock_val": 38411.1,
+          "predicted_slow_moving_exception": 1.0,
+          "source_schema": "HANA_P2"
+        },
+        {
+          "matnr": "507434",
+          "material_name": "",
+          "plant_name": "J.K. Cement Works Nimbahera",
+          "probability_of_obsolescence": 0.404,
+          "inventory_risk_category": "Moderate Slow Risk",
+          "current_stock_val": 3990.0,
+          "predicted_slow_moving_exception": 1.0,
+          "source_schema": "HANA_P2"
+        },
+        {
+          "matnr": "507460",
+          "material_name": "",
+          "plant_name": "J.K. Cement Works Nimbahera",
+          "probability_of_obsolescence": 0.404,
+          "inventory_risk_category": "Moderate Slow Risk",
+          "current_stock_val": 14469.0,
+          "predicted_slow_moving_exception": 1.0,
+          "source_schema": "HANA_P2"
+        },
+        {
+          "matnr": "507518",
+          "material_name": "",
+          "plant_name": "J.K. Cement Works Nimbahera",
+          "probability_of_obsolescence": 0.404,
+          "inventory_risk_category": "Moderate Slow Risk",
+          "current_stock_val": 127095.0,
+          "predicted_slow_moving_exception": 1.0,
+          "source_schema": "HANA_P2"
+        },
+        {
+          "matnr": "507540",
+          "material_name": "",
+          "plant_name": "J.K. Cement Works Nimbahera",
+          "probability_of_obsolescence": 0.404,
+          "inventory_risk_category": "Moderate Slow Risk",
+          "current_stock_val": 5540.4,
+          "predicted_slow_moving_exception": 1.0,
+          "source_schema": "HANA_P2"
+        },
+        {
+          "matnr": "507565",
+          "material_name": "",
+          "plant_name": "J.K. Cement Works Nimbahera",
+          "probability_of_obsolescence": 0.404,
+          "inventory_risk_category": "Moderate Slow Risk",
+          "current_stock_val": 11337.23,
+          "predicted_slow_moving_exception": 1.0,
+          "source_schema": "HANA_P2"
+        },
+        {
+          "matnr": "507590",
+          "material_name": "",
+          "plant_name": "J.K. Cement Works Nimbahera",
+          "probability_of_obsolescence": 0.404,
+          "inventory_risk_category": "Moderate Slow Risk",
+          "current_stock_val": 2413.32,
+          "predicted_slow_moving_exception": 1.0,
+          "source_schema": "HANA_P2"
+        },
+        {
+          "matnr": "507597",
+          "material_name": "",
+          "plant_name": "J.K. Cement Works Nimbahera",
+          "probability_of_obsolescence": 0.404,
+          "inventory_risk_category": "Moderate Slow Risk",
+          "current_stock_val": 13219.76,
+          "predicted_slow_moving_exception": 1.0,
+          "source_schema": "HANA_P2"
+        },
+        {
+          "matnr": "507612",
+          "material_name": "",
+          "plant_name": "J.K. Cement Works Nimbahera",
+          "probability_of_obsolescence": 0.404,
+          "inventory_risk_category": "Moderate Slow Risk",
+          "current_stock_val": 69.96,
+          "predicted_slow_moving_exception": 1.0,
+          "source_schema": "HANA_P2"
+        },
+        {
+          "matnr": "507648",
+          "material_name": "",
+          "plant_name": "J.K. Cement Works Nimbahera",
+          "probability_of_obsolescence": 0.404,
+          "inventory_risk_category": "Moderate Slow Risk",
+          "current_stock_val": 1058.33,
+          "predicted_slow_moving_exception": 1.0,
+          "source_schema": "HANA_P2"
+        },
+        {
+          "matnr": "507650",
+          "material_name": "",
+          "plant_name": "J.K. Cement Works Nimbahera",
+          "probability_of_obsolescence": 0.404,
+          "inventory_risk_category": "Moderate Slow Risk",
+          "current_stock_val": 2600.0,
+          "predicted_slow_moving_exception": 1.0,
+          "source_schema": "HANA_P2"
+        },
+        {
+          "matnr": "507654",
+          "material_name": "",
+          "plant_name": "J.K. Cement Works Nimbahera",
+          "probability_of_obsolescence": 0.404,
+          "inventory_risk_category": "Moderate Slow Risk",
+          "current_stock_val": 16758.0,
+          "predicted_slow_moving_exception": 1.0,
+          "source_schema": "HANA_P2"
+        },
+        {
+          "matnr": "507656",
+          "material_name": "",
+          "plant_name": "J.K. Cement Works Nimbahera",
+          "probability_of_obsolescence": 0.404,
+          "inventory_risk_category": "Moderate Slow Risk",
+          "current_stock_val": 464016.0,
+          "predicted_slow_moving_exception": 1.0,
+          "source_schema": "HANA_P2"
+        },
+        {
+          "matnr": "507711",
+          "material_name": "",
+          "plant_name": "J.K. Cement Works Nimbahera",
+          "probability_of_obsolescence": 0.404,
+          "inventory_risk_category": "Moderate Slow Risk",
+          "current_stock_val": 22437.4,
+          "predicted_slow_moving_exception": 1.0,
+          "source_schema": "HANA_P2"
+        },
+        {
+          "matnr": "507741",
+          "material_name": "",
+          "plant_name": "J.K. Cement Works Nimbahera",
+          "probability_of_obsolescence": 0.404,
+          "inventory_risk_category": "Moderate Slow Risk",
+          "current_stock_val": 1598.78,
+          "predicted_slow_moving_exception": 1.0,
+          "source_schema": "HANA_P2"
+        },
+        {
+          "matnr": "507756",
+          "material_name": "",
+          "plant_name": "J.K. Cement Works Nimbahera",
+          "probability_of_obsolescence": 0.404,
+          "inventory_risk_category": "Moderate Slow Risk",
+          "current_stock_val": 2642.19,
+          "predicted_slow_moving_exception": 1.0,
+          "source_schema": "HANA_P2"
+        },
+        {
+          "matnr": "507757",
+          "material_name": "",
           "plant_name": "JK Cement Works - Panna",
-          "probability_of_obsolescence": 0.9988,
-          "inventory_risk_category": "Critical Obsolete Risk",
-          "predicted_slow_moving_exception": 1,
-          "plant": 1901,
-          "material_type": "ZSPA"
+          "probability_of_obsolescence": 0.404,
+          "inventory_risk_category": "Moderate Slow Risk",
+          "current_stock_val": 750.0,
+          "predicted_slow_moving_exception": 1.0,
+          "source_schema": "HANA_P2"
         },
         {
-          "matnr": "590030",
-          "material_name": null,
+          "matnr": "507765",
+          "material_name": "",
           "plant_name": "J.K. Cement  Works, Mangrol",
-          "probability_of_obsolescence": 0.9988,
-          "inventory_risk_category": "Critical Obsolete Risk",
-          "predicted_slow_moving_exception": 1,
-          "plant": 1004,
-          "material_type": "ZSPA"
+          "probability_of_obsolescence": 0.404,
+          "inventory_risk_category": "Moderate Slow Risk",
+          "current_stock_val": 1797.12,
+          "predicted_slow_moving_exception": 1.0,
+          "source_schema": "HANA_P2"
         },
         {
-          "matnr": "587232",
-          "material_name": null,
-          "plant_name": "J.K. Cement  Works, Mangrol",
-          "probability_of_obsolescence": 0.9988,
-          "inventory_risk_category": "Critical Obsolete Risk",
-          "predicted_slow_moving_exception": 1,
-          "plant": 1004,
-          "material_type": "ZSPA"
-        },
-        {
-          "matnr": "I585053",
-          "material_name": null,
-          "plant_name": "J.K. Cement  Works, Mangrol",
-          "probability_of_obsolescence": 0.9988,
-          "inventory_risk_category": "Critical Obsolete Risk",
-          "predicted_slow_moving_exception": 1,
-          "plant": 1004,
-          "material_type": "ZIMS"
-        },
-        {
-          "matnr": "623874",
-          "material_name": null,
-          "plant_name": "J.K. Cement  Works, Mangrol",
-          "probability_of_obsolescence": 0.9988,
-          "inventory_risk_category": "Critical Obsolete Risk",
-          "predicted_slow_moving_exception": 1,
-          "plant": 1004,
-          "material_type": "ZCON"
-        },
-        {
-          "matnr": "580401",
-          "material_name": null,
+          "matnr": "507777",
+          "material_name": "",
           "plant_name": "J.K. Cement Works Nimbahera",
-          "probability_of_obsolescence": 0.9988,
-          "inventory_risk_category": "Critical Obsolete Risk",
-          "predicted_slow_moving_exception": 1,
-          "plant": 1001,
-          "material_type": "ZSPA"
+          "probability_of_obsolescence": 0.404,
+          "inventory_risk_category": "Moderate Slow Risk",
+          "current_stock_val": 621.0,
+          "predicted_slow_moving_exception": 1.0,
+          "source_schema": "HANA_P2"
         },
         {
-          "matnr": "580152",
-          "material_name": null,
+          "matnr": "507780",
+          "material_name": "",
           "plant_name": "J.K. Cement Works Nimbahera",
-          "probability_of_obsolescence": 0.9988,
-          "inventory_risk_category": "Critical Obsolete Risk",
-          "predicted_slow_moving_exception": 1,
-          "plant": 1001,
-          "material_type": "ZSPA"
+          "probability_of_obsolescence": 0.404,
+          "inventory_risk_category": "Moderate Slow Risk",
+          "current_stock_val": 889.01,
+          "predicted_slow_moving_exception": 1.0,
+          "source_schema": "HANA_P2"
         },
         {
-          "matnr": "566765",
-          "material_name": null,
+          "matnr": "507783",
+          "material_name": "",
+          "plant_name": "J.K. Cement Works Aligarh",
+          "probability_of_obsolescence": 0.404,
+          "inventory_risk_category": "Moderate Slow Risk",
+          "current_stock_val": 419.04,
+          "predicted_slow_moving_exception": 1.0,
+          "source_schema": "HANA_P2"
+        },
+        {
+          "matnr": "507788",
+          "material_name": "",
+          "plant_name": "J.K. Cement Works Nimbahera",
+          "probability_of_obsolescence": 0.404,
+          "inventory_risk_category": "Moderate Slow Risk",
+          "current_stock_val": 1740.7,
+          "predicted_slow_moving_exception": 1.0,
+          "source_schema": "HANA_P2"
+        },
+        {
+          "matnr": "507789",
+          "material_name": "",
           "plant_name": "J.K. Cement Works, Muddapur",
-          "probability_of_obsolescence": 0.9988,
-          "inventory_risk_category": "Critical Obsolete Risk",
-          "predicted_slow_moving_exception": 1,
-          "plant": 2001,
-          "material_type": "ZSPA"
+          "probability_of_obsolescence": 0.404,
+          "inventory_risk_category": "Moderate Slow Risk",
+          "current_stock_val": 505.76,
+          "predicted_slow_moving_exception": 1.0,
+          "source_schema": "HANA_P2"
         },
         {
-          "matnr": "579305",
-          "material_name": null,
+          "matnr": "506668",
+          "material_name": "",
+          "plant_name": "J.K. Cement Works Aligarh",
+          "probability_of_obsolescence": 0.404,
+          "inventory_risk_category": "Moderate Slow Risk",
+          "current_stock_val": 665.04,
+          "predicted_slow_moving_exception": 1.0,
+          "source_schema": "HANA_P2"
+        },
+        {
+          "matnr": "506670",
+          "material_name": "",
           "plant_name": "J.K. Cement Works Nimbahera",
-          "probability_of_obsolescence": 0.9988,
-          "inventory_risk_category": "Critical Obsolete Risk",
-          "predicted_slow_moving_exception": 1,
-          "plant": 1001,
-          "material_type": "ZSPA"
+          "probability_of_obsolescence": 0.404,
+          "inventory_risk_category": "Moderate Slow Risk",
+          "current_stock_val": 162.0,
+          "predicted_slow_moving_exception": 1.0,
+          "source_schema": "HANA_P2"
         },
         {
-          "matnr": "I578106",
-          "material_name": null,
+          "matnr": "506690",
+          "material_name": "",
+          "plant_name": "J.K. White Cement Works ,Gotan",
+          "probability_of_obsolescence": 0.404,
+          "inventory_risk_category": "Moderate Slow Risk",
+          "current_stock_val": 3430.0,
+          "predicted_slow_moving_exception": 1.0,
+          "source_schema": "HANA_P2"
+        },
+        {
+          "matnr": "506693",
+          "material_name": "",
           "plant_name": "J.K. Cement Works Nimbahera",
-          "probability_of_obsolescence": 0.9988,
-          "inventory_risk_category": "Critical Obsolete Risk",
-          "predicted_slow_moving_exception": 1,
-          "plant": 1001,
-          "material_type": "ZIMS"
+          "probability_of_obsolescence": 0.404,
+          "inventory_risk_category": "Moderate Slow Risk",
+          "current_stock_val": 107.28,
+          "predicted_slow_moving_exception": 1.0,
+          "source_schema": "HANA_P2"
         },
         {
-          "matnr": "I508937",
-          "material_name": null,
-          "plant_name": "J.K. Cement Works Nimbahera",
-          "probability_of_obsolescence": 0.9988,
-          "inventory_risk_category": "Critical Obsolete Risk",
-          "predicted_slow_moving_exception": 1,
-          "plant": 1001,
-          "material_type": "ZIMS"
-        },
-        {
-          "matnr": "I533967",
-          "material_name": null,
-          "plant_name": "J.K. Cement Works, Muddapur",
-          "probability_of_obsolescence": 0.9988,
-          "inventory_risk_category": "Critical Obsolete Risk",
-          "predicted_slow_moving_exception": 1,
-          "plant": 2001,
-          "material_type": "ZIMS"
-        },
-        {
-          "matnr": "574260",
-          "material_name": null,
-          "plant_name": "J.K. Cement  Works, Mangrol",
-          "probability_of_obsolescence": 0.9988,
-          "inventory_risk_category": "Critical Obsolete Risk",
-          "predicted_slow_moving_exception": 1,
-          "plant": 1004,
-          "material_type": "ZSPA"
-        },
-        {
-          "matnr": "P117332",
-          "material_name": null,
+          "matnr": "506718",
+          "material_name": "",
           "plant_name": "JK Cement Works - Panna",
-          "probability_of_obsolescence": 0.9988,
-          "inventory_risk_category": "Critical Obsolete Risk",
-          "predicted_slow_moving_exception": 1,
-          "plant": 1901,
-          "material_type": "ZPJS"
+          "probability_of_obsolescence": 0.404,
+          "inventory_risk_category": "Moderate Slow Risk",
+          "current_stock_val": 1621.14,
+          "predicted_slow_moving_exception": 1.0,
+          "source_schema": "HANA_P2"
         },
         {
-          "matnr": "589165",
-          "material_name": null,
+          "matnr": "506724",
+          "material_name": "",
           "plant_name": "J.K. Cement Works Nimbahera",
-          "probability_of_obsolescence": 0.9988,
-          "inventory_risk_category": "Critical Obsolete Risk",
-          "predicted_slow_moving_exception": 1,
-          "plant": 1001,
-          "material_type": "ZSPA"
+          "probability_of_obsolescence": 0.404,
+          "inventory_risk_category": "Moderate Slow Risk",
+          "current_stock_val": 9545.0,
+          "predicted_slow_moving_exception": 1.0,
+          "source_schema": "HANA_P2"
         },
         {
-          "matnr": "I578246",
-          "material_name": null,
-          "plant_name": "J.K. Cement Works Nimbahera",
-          "probability_of_obsolescence": 0.9988,
-          "inventory_risk_category": "Critical Obsolete Risk",
-          "predicted_slow_moving_exception": 1,
-          "plant": 1001,
-          "material_type": "ZIMS"
-        },
-        {
-          "matnr": "586324",
-          "material_name": null,
-          "plant_name": "J.K. Cement Works Nimbahera",
-          "probability_of_obsolescence": 0.9988,
-          "inventory_risk_category": "Critical Obsolete Risk",
-          "predicted_slow_moving_exception": 1,
-          "plant": 1001,
-          "material_type": "ZSPA"
-        },
-        {
-          "matnr": "598187",
-          "material_name": null,
-          "plant_name": "JK Cement Works - Panna",
-          "probability_of_obsolescence": 0.9988,
-          "inventory_risk_category": "Critical Obsolete Risk",
-          "predicted_slow_moving_exception": 1,
-          "plant": 1901,
-          "material_type": "ZSPA"
-        },
-        {
-          "matnr": "120005",
-          "material_name": null,
-          "plant_name": "SALEM - 2 White Cement",
-          "probability_of_obsolescence": 0.9989,
-          "inventory_risk_category": "Critical Obsolete Risk",
-          "predicted_slow_moving_exception": 1,
-          "plant": 3117,
-          "material_type": "ZFIN"
-        },
-        {
-          "matnr": "86004659",
-          "material_name": null,
-          "plant_name": "J.K. Cement Works ,Balasinor",
-          "probability_of_obsolescence": 0.9988,
-          "inventory_risk_category": "Critical Obsolete Risk",
-          "predicted_slow_moving_exception": 1,
-          "plant": 1034,
-          "material_type": "ZSPA"
-        },
-        {
-          "matnr": "580209",
-          "material_name": null,
-          "plant_name": "J.K. Cement Works Nimbahera",
-          "probability_of_obsolescence": 0.9988,
-          "inventory_risk_category": "Critical Obsolete Risk",
-          "predicted_slow_moving_exception": 1,
-          "plant": 1001,
-          "material_type": "ZSPA"
-        },
-        {
-          "matnr": "587655",
-          "material_name": null,
-          "plant_name": "J.K. Cement Works Nimbahera",
-          "probability_of_obsolescence": 0.9988,
-          "inventory_risk_category": "Critical Obsolete Risk",
-          "predicted_slow_moving_exception": 1,
-          "plant": 1001,
-          "material_type": "ZSPA"
-        },
-        {
-          "matnr": "542249",
-          "material_name": null,
+          "matnr": "506728",
+          "material_name": "",
           "plant_name": "J.K. Cement  Works, Mangrol",
-          "probability_of_obsolescence": 0.9988,
-          "inventory_risk_category": "Critical Obsolete Risk",
-          "predicted_slow_moving_exception": 1,
-          "plant": 1004,
-          "material_type": "ZSPA"
+          "probability_of_obsolescence": 0.404,
+          "inventory_risk_category": "Moderate Slow Risk",
+          "current_stock_val": 1682.36,
+          "predicted_slow_moving_exception": 1.0,
+          "source_schema": "HANA_P2"
         },
         {
-          "matnr": "599279",
-          "material_name": null,
-          "plant_name": "JK Cement Works - Panna",
-          "probability_of_obsolescence": 0.9988,
-          "inventory_risk_category": "Critical Obsolete Risk",
-          "predicted_slow_moving_exception": 1,
-          "plant": 1901,
-          "material_type": "ZSPA"
-        },
-        {
-          "matnr": "I588257",
-          "material_name": null,
-          "plant_name": "J.K. Cement  Works, Mangrol",
-          "probability_of_obsolescence": 0.9988,
-          "inventory_risk_category": "Critical Obsolete Risk",
-          "predicted_slow_moving_exception": 1,
-          "plant": 1004,
-          "material_type": "ZIMS"
-        },
-        {
-          "matnr": "130010",
-          "material_name": null,
-          "plant_name": "KAKINADA",
-          "probability_of_obsolescence": 0.9988,
-          "inventory_risk_category": "Critical Obsolete Risk",
-          "predicted_slow_moving_exception": 1,
-          "plant": 3330,
-          "material_type": "ZFIN"
-        },
-        {
-          "matnr": "630451",
-          "material_name": null,
-          "plant_name": "J.K. Cement  Works, Mangrol",
-          "probability_of_obsolescence": 0.9988,
-          "inventory_risk_category": "Critical Obsolete Risk",
-          "predicted_slow_moving_exception": 1,
-          "plant": 1004,
-          "material_type": "ZCON"
-        },
-        {
-          "matnr": "597941",
-          "material_name": null,
-          "plant_name": "JK Cement Works - Panna",
-          "probability_of_obsolescence": 0.9988,
-          "inventory_risk_category": "Critical Obsolete Risk",
-          "predicted_slow_moving_exception": 1,
-          "plant": 1901,
-          "material_type": "ZSPA"
-        },
-        {
-          "matnr": "600079",
-          "material_name": null,
-          "plant_name": "J.K. Cement Works, Muddapur",
-          "probability_of_obsolescence": 0.9988,
-          "inventory_risk_category": "Critical Obsolete Risk",
-          "predicted_slow_moving_exception": 1,
-          "plant": 2001,
-          "material_type": "ZCON"
-        },
-        {
-          "matnr": "583490",
-          "material_name": null,
-          "plant_name": "J.K. Cement  Works, Mangrol",
-          "probability_of_obsolescence": 0.9988,
-          "inventory_risk_category": "Critical Obsolete Risk",
-          "predicted_slow_moving_exception": 1,
-          "plant": 1004,
-          "material_type": "ZSPA"
-        },
-        {
-          "matnr": "120005",
-          "material_name": null,
-          "plant_name": "CHENNAI-2",
-          "probability_of_obsolescence": 0.9988,
-          "inventory_risk_category": "Critical Obsolete Risk",
-          "predicted_slow_moving_exception": 1,
-          "plant": 3129,
-          "material_type": "ZFIN"
-        },
-        {
-          "matnr": "589231",
-          "material_name": null,
-          "plant_name": "J.K. Cement Works Nimbahera",
-          "probability_of_obsolescence": 0.9988,
-          "inventory_risk_category": "Critical Obsolete Risk",
-          "predicted_slow_moving_exception": 1,
-          "plant": 1001,
-          "material_type": "ZSPA"
-        },
-        {
-          "matnr": "130025",
-          "material_name": null,
-          "plant_name": "IDA BOLLARAM_WHITE",
-          "probability_of_obsolescence": 0.9988,
-          "inventory_risk_category": "Critical Obsolete Risk",
-          "predicted_slow_moving_exception": 1,
-          "plant": 3154,
-          "material_type": "ZFIN"
-        },
-        {
-          "matnr": "86002557",
-          "material_name": null,
-          "plant_name": "JK Cement Works - Panna",
-          "probability_of_obsolescence": 0.9988,
-          "inventory_risk_category": "Critical Obsolete Risk",
-          "predicted_slow_moving_exception": 1,
-          "plant": 1901,
-          "material_type": "ZSPA"
-        },
-        {
-          "matnr": "558210",
-          "material_name": null,
+          "matnr": "506732",
+          "material_name": "",
           "plant_name": "J.K. Cement Works Jharli",
-          "probability_of_obsolescence": 0.9988,
-          "inventory_risk_category": "Critical Obsolete Risk",
-          "predicted_slow_moving_exception": 1,
-          "plant": 1022,
-          "material_type": "ZSPA"
+          "probability_of_obsolescence": 0.404,
+          "inventory_risk_category": "Moderate Slow Risk",
+          "current_stock_val": 4440.0,
+          "predicted_slow_moving_exception": 1.0,
+          "source_schema": "HANA_P2"
         },
         {
-          "matnr": "599575",
-          "material_name": null,
-          "plant_name": "J.K. Cement  Works, Mangrol",
-          "probability_of_obsolescence": 0.9988,
-          "inventory_risk_category": "Critical Obsolete Risk",
-          "predicted_slow_moving_exception": 1,
-          "plant": 1004,
-          "material_type": "ZSPA"
-        },
-        {
-          "matnr": "130025",
-          "material_name": null,
-          "plant_name": "KHARMANGHAT - JKWC",
-          "probability_of_obsolescence": 0.9989,
-          "inventory_risk_category": "Critical Obsolete Risk",
-          "predicted_slow_moving_exception": 1,
-          "plant": 3086,
-          "material_type": "ZFIN"
-        },
-        {
-          "matnr": "589643",
-          "material_name": null,
-          "plant_name": "J.K. Cement  Works, Mangrol",
-          "probability_of_obsolescence": 0.9988,
-          "inventory_risk_category": "Critical Obsolete Risk",
-          "predicted_slow_moving_exception": 1,
-          "plant": 1004,
-          "material_type": "ZSPA"
-        },
-        {
-          "matnr": "585642",
-          "material_name": null,
-          "plant_name": "J.K. Cement Works Nimbahera",
-          "probability_of_obsolescence": 0.9988,
-          "inventory_risk_category": "Critical Obsolete Risk",
-          "predicted_slow_moving_exception": 1,
-          "plant": 1001,
-          "material_type": "ZSPA"
-        },
-        {
-          "matnr": "538014",
-          "material_name": null,
-          "plant_name": "J.K. Cement Works, Muddapur",
-          "probability_of_obsolescence": 0.9988,
-          "inventory_risk_category": "Critical Obsolete Risk",
-          "predicted_slow_moving_exception": 1,
-          "plant": 2001,
-          "material_type": "ZSPA"
-        },
-        {
-          "matnr": "130030",
-          "material_name": null,
-          "plant_name": "IDA BOLLARAM_WHITE",
-          "probability_of_obsolescence": 0.9989,
-          "inventory_risk_category": "Critical Obsolete Risk",
-          "predicted_slow_moving_exception": 1,
-          "plant": 3154,
-          "material_type": "ZFIN"
-        },
-        {
-          "matnr": "130010",
-          "material_name": null,
-          "plant_name": "BHIWANDI NEW 1",
-          "probability_of_obsolescence": 0.9989,
-          "inventory_risk_category": "Critical Obsolete Risk",
-          "predicted_slow_moving_exception": 1,
-          "plant": 3313,
-          "material_type": "ZFIN"
-        },
-        {
-          "matnr": "P11959",
-          "material_name": null,
+          "matnr": "506739",
+          "material_name": "",
           "plant_name": "JK Cement Works - Panna",
-          "probability_of_obsolescence": 0.9988,
-          "inventory_risk_category": "Critical Obsolete Risk",
-          "predicted_slow_moving_exception": 1,
-          "plant": 1901,
-          "material_type": "ZPJS"
+          "probability_of_obsolescence": 0.404,
+          "inventory_risk_category": "Moderate Slow Risk",
+          "current_stock_val": 3963.16,
+          "predicted_slow_moving_exception": 1.0,
+          "source_schema": "HANA_P2"
+        },
+        {
+          "matnr": "506741",
+          "material_name": "",
+          "plant_name": "JK Cement Works - Panna",
+          "probability_of_obsolescence": 0.404,
+          "inventory_risk_category": "Moderate Slow Risk",
+          "current_stock_val": 14919.54,
+          "predicted_slow_moving_exception": 1.0,
+          "source_schema": "HANA_P2"
+        },
+        {
+          "matnr": "506744",
+          "material_name": "",
+          "plant_name": "J.K. Cement Works Nimbahera",
+          "probability_of_obsolescence": 0.404,
+          "inventory_risk_category": "Moderate Slow Risk",
+          "current_stock_val": 10938.11,
+          "predicted_slow_moving_exception": 1.0,
+          "source_schema": "HANA_P2"
+        },
+        {
+          "matnr": "506750",
+          "material_name": "",
+          "plant_name": "J.K. White Cement Works ,Gotan",
+          "probability_of_obsolescence": 0.404,
+          "inventory_risk_category": "Moderate Slow Risk",
+          "current_stock_val": 35698.16,
+          "predicted_slow_moving_exception": 1.0,
+          "source_schema": "HANA_P2"
+        },
+        {
+          "matnr": "506752",
+          "material_name": "",
+          "plant_name": "J.K. Cement Works, Muddapur",
+          "probability_of_obsolescence": 0.404,
+          "inventory_risk_category": "Moderate Slow Risk",
+          "current_stock_val": 13363.39,
+          "predicted_slow_moving_exception": 1.0,
+          "source_schema": "HANA_P2"
         }
       ],
       "advanced_ml": {
         "confusion_matrix": {
-          "tp": 10303,
-          "fp": 1010,
-          "fn": 3382,
-          "tn": 10305,
-          "precision": 0.911,
-          "recall": 0.753,
-          "f1": 0.824,
-          "accuracy": 0.824
+          "tp": 107351,
+          "fp": 5295,
+          "fn": 31751,
+          "tn": 84701,
+          "precision": 0.953,
+          "recall": 0.772,
+          "f1": 0.853,
+          "accuracy": 0.838
         },
         "threshold_curve": {
           "thresholds": [
@@ -2460,37 +2380,37 @@ window.PORTFOLIO_DATA = {
             0.9
           ],
           "precision": [
-            0.372,
-            0.43,
-            0.482,
-            0.53,
-            0.576,
-            0.62,
-            0.663,
-            0.704,
-            0.744
+            0.4,
+            0.462,
+            0.518,
+            0.569,
+            0.619,
+            0.666,
+            0.712,
+            0.757,
+            0.8
           ],
           "recall": [
-            0.962,
-            0.906,
-            0.841,
-            0.768,
-            0.69,
-            0.607,
-            0.52,
-            0.429,
-            0.335
+            0.963,
+            0.909,
+            0.846,
+            0.776,
+            0.7,
+            0.62,
+            0.536,
+            0.448,
+            0.357
           ],
           "f1": [
-            0.537,
-            0.583,
+            0.566,
+            0.613,
+            0.642,
+            0.657,
+            0.657,
+            0.642,
             0.612,
-            0.627,
-            0.628,
-            0.614,
-            0.583,
-            0.533,
-            0.462
+            0.563,
+            0.493
           ]
         },
         "probability_distribution": {
@@ -2507,40 +2427,40 @@ window.PORTFOLIO_DATA = {
             "0.9"
           ],
           "clean_count": [
-            3606,
-            2299,
-            1466,
-            935,
-            596,
-            380,
-            242,
-            154,
-            100,
-            100
+            29645,
+            18902,
+            12052,
+            7685,
+            4900,
+            3124,
+            1992,
+            1270,
+            810,
+            516
           ],
           "exception_count": [
-            515,
-            801,
-            1087,
-            1373,
-            1659,
-            1946,
-            2232,
-            2518,
-            2804,
-            3090
+            5367,
+            8349,
+            11331,
+            14313,
+            17295,
+            20277,
+            23259,
+            26241,
+            29223,
+            32205
           ],
           "total_count": [
-            4121,
-            3100,
-            2553,
-            2308,
-            2255,
-            2326,
-            2474,
-            2672,
-            2904,
-            3190
+            35012,
+            27251,
+            23383,
+            21998,
+            22195,
+            23401,
+            25251,
+            27511,
+            30033,
+            32721
           ]
         },
         "calibration_curve": {
@@ -2624,172 +2544,172 @@ window.PORTFOLIO_DATA = {
         "CRHD",
         "RESB"
       ],
-      "total_records": 35000,
-      "exceptions_count": 31294,
-      "exception_rate_pct": 89.41,
-      "financial_exposure_inr": 0.0,
-      "financial_exposure_cr": 0.0,
-      "avg_confidence_score": 0.78,
-      "champion_model": "K-Means Clustering",
-      "champion_metric": "0.7800 ROC-AUC",
+      "total_records": 302662,
+      "exceptions_count": 266062,
+      "exception_rate_pct": 87.91,
+      "financial_exposure_inr": 1445676623.79,
+      "financial_exposure_cr": 144.57,
+      "avg_confidence_score": 0.9,
+      "champion_model": "PCA Latent Clustering",
+      "champion_metric": "0.8514 Accuracy",
       "risk_distribution": {
-        "Critical": 31657,
-        "High": 1973,
-        "Medium": 1348,
-        "Low": 22
+        "Critical": 270335,
+        "High": 11730,
+        "Medium": 4750,
+        "Low": 15847
       },
       "category_breakdown": [
         {
-          "label": "1902",
-          "count": 8043
-        },
-        {
           "label": "1004",
-          "count": 6251
+          "count": 53389
         },
         {
           "label": "2001",
-          "count": 5082
-        },
-        {
-          "label": "1015",
-          "count": 5005
+          "count": 45188
         },
         {
           "label": "1001",
-          "count": 3906
+          "count": 37445
         },
         {
-          "label": "1006",
-          "count": 2310
+          "label": "1015",
+          "count": 37048
         },
         {
           "label": "1901",
-          "count": 896
+          "count": 28679
+        },
+        {
+          "label": "1006",
+          "count": 16852
+        },
+        {
+          "label": "7001",
+          "count": 14397
         }
       ],
       "feature_importance": [
         {
-          "feature": "planned_duration_days",
-          "importance": 0.17,
-          "description": "(Total planned manufacturing window in days = Basic Finish [GLTRP] minus Basic Start [GSTRP])"
-        },
-        {
-          "feature": "schedule_compression_index",
-          "importance": 0.11,
-          "description": "(Production load density index = Order Batch Size / Planned Duration Days)"
-        },
-        {
           "feature": "confirmation_duration_days",
-          "importance": 0.1,
+          "importance": 0.1346,
           "description": "(Calendar days elapsed between first and final operation confirmations)"
         },
         {
           "feature": "composite_delay_signal",
-          "importance": 0.09,
+          "importance": 0.1187,
           "description": "(Multi-criteria composite operational risk indicator combining release lag, scrap, and unfulfilled backlog)"
         },
         {
-          "feature": "scheduled_vs_basic_slack_days",
-          "importance": 0.08,
-          "description": "(Scheduling float buffer in days between basic finish and detailed scheduled finish [GLTRS])"
+          "feature": "planned_duration_days",
+          "importance": 0.107,
+          "description": "(Total planned manufacturing window in days = Basic Finish [GLTRP] minus Basic Start [GSTRP])"
         },
         {
-          "feature": "creation_to_start_lead_days",
-          "importance": 0.07,
-          "description": "(Planning lead buffer in days from order creation [AUFK.ERDAT] to planned start date)"
+          "feature": "schedule_compression_index",
+          "importance": 0.0679,
+          "description": "(Production load density index = Order Batch Size / Planned Duration Days)"
+        },
+        {
+          "feature": "release_delay_days",
+          "importance": 0.0659,
+          "description": "(Execution release slip in days between actual shop floor release [FTRMI] and planned start)"
+        },
+        {
+          "feature": "unfulfilled_qty_log",
+          "importance": 0.0573,
+          "description": "(Log-transformed unfulfilled quantity backlog remaining to be produced)"
         },
         {
           "feature": "confirmation_intensity",
-          "importance": 0.06,
+          "importance": 0.0561,
           "description": "(Confirmation logging velocity per planned manufacturing day)"
         },
         {
-          "feature": "plant_encoded",
-          "importance": 0.05,
-          "description": "(Frequency-weighted encoding of manufacturing facility plant code [AUFK.WERKS])"
+          "feature": "delivered_qty_ratio",
+          "importance": 0.0493,
+          "description": "(Actual goods receipt fulfillment ratio = Delivered Qty [WEMNG] / Target Qty [PSMNG])"
         }
       ],
       "model_rankings": [
         {
           "Rank": "#1",
-          "Model": "K-Means Clustering",
-          "Accuracy": 0.67,
-          "Precision": 0.96,
-          "Recall": 0.66,
-          "F1-Score": 0.78,
-          "ROC-AUC": 0.78,
-          "PR-AUC": 0.96,
-          "Silhouette": 0.81,
-          "Specificity": 0.77,
-          "True Positives": 4119,
-          "False Positives": 168,
-          "False Negatives": 2140,
-          "True Negatives": 573
+          "Model": "PCA Latent Clustering",
+          "Accuracy": 0.8514,
+          "Precision": 0.8914,
+          "Recall": 0.9462,
+          "F1-Score": 0.918,
+          "ROC-AUC": 0.7355,
+          "PR-AUC": 0.9422,
+          "Silhouette": 0.801,
+          "Specificity": 0.1623,
+          "True Positives": 50349.0,
+          "False Positives": 6132.0,
+          "False Negatives": 2864.0,
+          "True Negatives": 1188.0
         },
         {
           "Rank": "#2",
-          "Model": "Bisecting K-Means",
-          "Accuracy": 0.67,
-          "Precision": 0.96,
-          "Recall": 0.66,
-          "F1-Score": 0.78,
-          "ROC-AUC": 0.78,
-          "PR-AUC": 0.96,
-          "Silhouette": 0.81,
-          "Specificity": 0.77,
-          "True Positives": 4119,
-          "False Positives": 168,
-          "False Negatives": 2140,
-          "True Negatives": 573
+          "Model": "Mini-Batch K-Means",
+          "Accuracy": 0.8511,
+          "Precision": 0.8916,
+          "Recall": 0.9455,
+          "F1-Score": 0.9178,
+          "ROC-AUC": 0.7356,
+          "PR-AUC": 0.9422,
+          "Silhouette": 0.8015,
+          "Specificity": 0.1646,
+          "True Positives": 50312.0,
+          "False Positives": 6115.0,
+          "False Negatives": 2901.0,
+          "True Negatives": 1205.0
         },
         {
           "Rank": "#3",
-          "Model": "Gaussian Mixture Model",
-          "Accuracy": 0.67,
-          "Precision": 0.96,
-          "Recall": 0.66,
-          "F1-Score": 0.78,
-          "ROC-AUC": 0.76,
-          "PR-AUC": 0.95,
-          "Silhouette": 0.51,
-          "Specificity": 0.76,
-          "True Positives": 4114,
-          "False Positives": 175,
-          "False Negatives": 2145,
-          "True Negatives": 566
+          "Model": "K-Means Clustering",
+          "Accuracy": 0.851,
+          "Precision": 0.8916,
+          "Recall": 0.9454,
+          "F1-Score": 0.9177,
+          "ROC-AUC": 0.7356,
+          "PR-AUC": 0.9422,
+          "Silhouette": 0.8006,
+          "Specificity": 0.1648,
+          "True Positives": 50309.0,
+          "False Positives": 6114.0,
+          "False Negatives": 2904.0,
+          "True Negatives": 1206.0
         },
         {
           "Rank": "#4",
-          "Model": "Mini-Batch K-Means",
-          "Accuracy": 0.67,
-          "Precision": 0.96,
-          "Recall": 0.65,
-          "F1-Score": 0.78,
-          "ROC-AUC": 0.69,
-          "PR-AUC": 0.95,
-          "Silhouette": 0.49,
-          "Specificity": 0.8,
-          "True Positives": 4068,
-          "False Positives": 151,
-          "False Negatives": 2191,
-          "True Negatives": 590
+          "Model": "Bisecting K-Means",
+          "Accuracy": 0.8499,
+          "Precision": 0.8931,
+          "Recall": 0.942,
+          "F1-Score": 0.9169,
+          "ROC-AUC": 0.7352,
+          "PR-AUC": 0.9422,
+          "Silhouette": 0.7885,
+          "Specificity": 0.1807,
+          "True Positives": 50124.0,
+          "False Positives": 5997.0,
+          "False Negatives": 3089.0,
+          "True Negatives": 1323.0
         },
         {
           "Rank": "#5",
-          "Model": "BIRCH Clustering",
-          "Accuracy": 0.66,
-          "Precision": 0.96,
-          "Recall": 0.65,
-          "F1-Score": 0.77,
-          "ROC-AUC": 0.78,
-          "PR-AUC": 0.96,
-          "Silhouette": 0.81,
-          "Specificity": 0.77,
-          "True Positives": 4056,
-          "False Positives": 167,
-          "False Negatives": 2203,
-          "True Negatives": 574
+          "Model": "Gaussian Mixture Model",
+          "Accuracy": 0.8267,
+          "Precision": 0.9339,
+          "Recall": 0.864,
+          "F1-Score": 0.8976,
+          "ROC-AUC": 0.7522,
+          "PR-AUC": 0.9493,
+          "Silhouette": 0.3802,
+          "Specificity": 0.5552,
+          "True Positives": 45977.0,
+          "False Positives": 3256.0,
+          "False Negatives": 7236.0,
+          "True Negatives": 4064.0
         }
       ],
       "display_columns": [
@@ -2798,522 +2718,522 @@ window.PORTFOLIO_DATA = {
         "plant",
         "predicted_delay_probability",
         "delay_risk_tier",
+        "item_delivered_qty",
         "is_delayed_exception",
-        "order_type",
-        "material_number"
+        "order_type"
       ],
       "sample_records": [
         {
-          "order_number": 600153114,
-          "order_description": "1Y_STOP_PMR_ PMCC-3 HT Breaker check\n Al",
-          "plant": 1004,
-          "predicted_delay_probability": 0.5414,
-          "delay_risk_tier": "Tier 1: Low Delay Risk / Minor Variance",
-          "is_delayed_exception": 1,
-          "order_type": "PM02",
-          "material_number": "UNKNOWN"
-        },
-        {
-          "order_number": 600148654,
-          "order_description": "1Y_ES-PMR_CM6 LRS MD Z6M03",
-          "plant": 1001,
-          "predicted_delay_probability": 0.5414,
-          "delay_risk_tier": "Tier 1: Low Delay Risk / Minor Variance",
-          "is_delayed_exception": 1,
-          "order_type": "PM02",
-          "material_number": "UNKNOWN"
-        },
-        {
-          "order_number": 600148653,
-          "order_description": "1Y_ES-PMR_CM6 MOTOR CM-6 MD Z6M03",
-          "plant": 1001,
-          "predicted_delay_probability": 0.5414,
-          "delay_risk_tier": "Tier 1: Low Delay Risk / Minor Variance",
-          "is_delayed_exception": 1,
-          "order_type": "PM02",
-          "material_number": "UNKNOWN"
-        },
-        {
-          "order_number": 600148652,
-          "order_description": "1Y_ES-PMR_CM6 BREAKER-MD Z6M03",
-          "plant": 1001,
-          "predicted_delay_probability": 0.5414,
-          "delay_risk_tier": "Tier 1: Low Delay Risk / Minor Variance",
-          "is_delayed_exception": 1,
-          "order_type": "PM02",
-          "material_number": "UNKNOWN"
-        },
-        {
-          "order_number": 600146813,
-          "order_description": "1Y-MSD_325.FN400 RM-3 HRP Fan SEPOL",
-          "plant": 1001,
-          "predicted_delay_probability": 0.5414,
-          "delay_risk_tier": "Tier 1: Low Delay Risk / Minor Variance",
-          "is_delayed_exception": 1,
-          "order_type": "PM07",
-          "material_number": "UNKNOWN"
-        },
-        {
-          "order_number": 600146796,
-          "order_description": "1Y-MSD_315.WF250 Laterite Weigh Feeder",
-          "plant": 1001,
-          "predicted_delay_probability": 0.5414,
-          "delay_risk_tier": "Tier 1: Low Delay Risk / Minor Variance",
-          "is_delayed_exception": 1,
-          "order_type": "PM07",
-          "material_number": "UNKNOWN"
-        },
-        {
-          "order_number": 600146794,
-          "order_description": "1Y-MSD_315.WF150 Lime stone Weigh Feeder",
-          "plant": 1001,
-          "predicted_delay_probability": 0.5414,
-          "delay_risk_tier": "Tier 1: Low Delay Risk / Minor Variance",
-          "is_delayed_exception": 1,
-          "order_type": "PM07",
-          "material_number": "UNKNOWN"
-        },
-        {
-          "order_number": 600146810,
-          "order_description": "1Y-MSD_325.SR300 GB RM3HRP Dyn.Separator",
-          "plant": 1001,
-          "predicted_delay_probability": 0.5414,
-          "delay_risk_tier": "Tier 1: Low Delay Risk / Minor Variance",
-          "is_delayed_exception": 1,
-          "order_type": "PM07",
-          "material_number": "UNKNOWN"
-        },
-        {
-          "order_number": 600146801,
-          "order_description": "1Y-MSD_315.BC650 RM-3 HRP Mill Feed belt",
-          "plant": 1001,
-          "predicted_delay_probability": 0.5414,
-          "delay_risk_tier": "Tier 1: Low Delay Risk / Minor Variance",
-          "is_delayed_exception": 1,
-          "order_type": "PM07",
-          "material_number": "UNKNOWN"
-        },
-        {
-          "order_number": 600146799,
-          "order_description": "1Y-MSD_315.BC600 GB RM Hopper Dis. Belt",
-          "plant": 1001,
-          "predicted_delay_probability": 0.5414,
-          "delay_risk_tier": "Tier 1: Low Delay Risk / Minor Variance",
-          "is_delayed_exception": 1,
-          "order_type": "PM07",
-          "material_number": "UNKNOWN"
-        },
-        {
-          "order_number": 600146808,
-          "order_description": "1Y-MSD_325.SR300-DY RM3HRP Dyn.Separator",
-          "plant": 1001,
-          "predicted_delay_probability": 0.5414,
-          "delay_risk_tier": "Tier 1: Low Delay Risk / Minor Variance",
-          "is_delayed_exception": 1,
-          "order_type": "PM07",
-          "material_number": "UNKNOWN"
-        },
-        {
-          "order_number": 600148656,
-          "order_description": "6M_IS PMR_Z3S01-VFD SEPERATOR",
-          "plant": 1001,
-          "predicted_delay_probability": 0.5479,
-          "delay_risk_tier": "Tier 1: Low Delay Risk / Minor Variance",
-          "is_delayed_exception": 1,
-          "order_type": "PM02",
-          "material_number": "UNKNOWN"
-        },
-        {
-          "order_number": 600148685,
-          "order_description": "6M_ES-IR Measure CM3 Motor MD Z3M03",
-          "plant": 1001,
-          "predicted_delay_probability": 0.5479,
-          "delay_risk_tier": "Tier 1: Low Delay Risk / Minor Variance",
-          "is_delayed_exception": 1,
-          "order_type": "PM02",
-          "material_number": "UNKNOWN"
-        },
-        {
-          "order_number": 600148686,
-          "order_description": "6M_ES-IR Measure CM3 Motor MD Z3M23",
-          "plant": 1001,
-          "predicted_delay_probability": 0.5479,
-          "delay_risk_tier": "Tier 1: Low Delay Risk / Minor Variance",
-          "is_delayed_exception": 1,
-          "order_type": "PM02",
-          "material_number": "UNKNOWN"
-        },
-        {
-          "order_number": 600148655,
-          "order_description": "6M_IS PMR_Z3P40-VFD SEPAX BF FAN",
-          "plant": 1001,
-          "predicted_delay_probability": 0.5479,
-          "delay_risk_tier": "Tier 1: Low Delay Risk / Minor Variance",
-          "is_delayed_exception": 1,
-          "order_type": "PM02",
-          "material_number": "UNKNOWN"
-        },
-        {
-          "order_number": 600106902,
-          "order_description": "WHR electrical Major shutdown",
-          "plant": 1003,
-          "predicted_delay_probability": 0.5381,
-          "delay_risk_tier": "Tier 1: Low Delay Risk / Minor Variance",
-          "is_delayed_exception": 1,
-          "order_type": "PM02",
-          "material_number": "UNKNOWN"
-        },
-        {
-          "order_number": 600106908,
-          "order_description": "WHR electrical Major shutdown",
-          "plant": 1003,
-          "predicted_delay_probability": 0.5389,
-          "delay_risk_tier": "Tier 1: Low Delay Risk / Minor Variance",
-          "is_delayed_exception": 1,
-          "order_type": "PM03",
-          "material_number": "UNKNOWN"
-        },
-        {
-          "order_number": 600146807,
-          "order_description": "6M-MS_325.SR300-DY RM3HRP Dyn. Separator",
-          "plant": 1001,
-          "predicted_delay_probability": 0.5637,
-          "delay_risk_tier": "Tier 1: Low Delay Risk / Minor Variance",
-          "is_delayed_exception": 1,
-          "order_type": "PM07",
-          "material_number": "UNKNOWN"
-        },
-        {
-          "order_number": 600146814,
-          "order_description": "6M-MS_325.SD410 SlideGate PH Fan OL Duct",
-          "plant": 1001,
-          "predicted_delay_probability": 0.5637,
-          "delay_risk_tier": "Tier 1: Low Delay Risk / Minor Variance",
-          "is_delayed_exception": 1,
-          "order_type": "PM07",
-          "material_number": "UNKNOWN"
-        },
-        {
-          "order_number": 600155605,
-          "order_description": "LEAK_R1C01_OIL LEAKAGE FROM GBX",
-          "plant": 1004,
-          "predicted_delay_probability": 0.6677,
-          "delay_risk_tier": "Tier 2: Moderate Delay Risk / Bottlenecked",
-          "is_delayed_exception": 1,
-          "order_type": "PM10",
-          "material_number": "UNKNOWN"
-        },
-        {
-          "order_number": 600146812,
-          "order_description": "6M-MS_325.FN400 RM-3 HRP Fan SEPOL",
-          "plant": 1001,
-          "predicted_delay_probability": 0.5637,
-          "delay_risk_tier": "Tier 1: Low Delay Risk / Minor Variance",
-          "is_delayed_exception": 1,
-          "order_type": "PM07",
-          "material_number": "UNKNOWN"
-        },
-        {
-          "order_number": 600146815,
-          "order_description": "6M-MS_325.SD410 SlideGate PH Fan OL Duct",
-          "plant": 1001,
-          "predicted_delay_probability": 0.5637,
-          "delay_risk_tier": "Tier 1: Low Delay Risk / Minor Variance",
-          "is_delayed_exception": 1,
-          "order_type": "PM07",
-          "material_number": "UNKNOWN"
-        },
-        {
-          "order_number": 600146819,
-          "order_description": "6M-MS_325.LD415 Damper at New BH Duct",
-          "plant": 1001,
-          "predicted_delay_probability": 0.5637,
-          "delay_risk_tier": "Tier 1: Low Delay Risk / Minor Variance",
-          "is_delayed_exception": 1,
-          "order_type": "PM07",
-          "material_number": "UNKNOWN"
-        },
-        {
-          "order_number": 600146820,
-          "order_description": "6M-MS_325.SD415 SlideGate at New BH Duct",
-          "plant": 1001,
-          "predicted_delay_probability": 0.5637,
-          "delay_risk_tier": "Tier 1: Low Delay Risk / Minor Variance",
-          "is_delayed_exception": 1,
-          "order_type": "PM07",
-          "material_number": "UNKNOWN"
-        },
-        {
-          "order_number": 600146809,
-          "order_description": "6M-MS_325.SR300 GB RM3HRP Dyn. Separator",
-          "plant": 1001,
-          "predicted_delay_probability": 0.5637,
-          "delay_risk_tier": "Tier 1: Low Delay Risk / Minor Variance",
-          "is_delayed_exception": 1,
-          "order_type": "PM07",
-          "material_number": "UNKNOWN"
-        },
-        {
-          "order_number": 600146816,
-          "order_description": "6M-MS_325.LD412 Damper at PH fan OL Duct",
-          "plant": 1001,
-          "predicted_delay_probability": 0.5637,
-          "delay_risk_tier": "Tier 1: Low Delay Risk / Minor Variance",
-          "is_delayed_exception": 1,
-          "order_type": "PM07",
-          "material_number": "UNKNOWN"
-        },
-        {
-          "order_number": 600146818,
-          "order_description": "6M-MS_325.LD414 Fresh air Damper-2",
-          "plant": 1001,
-          "predicted_delay_probability": 0.5637,
-          "delay_risk_tier": "Tier 1: Low Delay Risk / Minor Variance",
-          "is_delayed_exception": 1,
-          "order_type": "PM07",
-          "material_number": "UNKNOWN"
-        },
-        {
-          "order_number": 600146817,
-          "order_description": "6M-MS_325.LD413 Fresh air Damper-1",
-          "plant": 1001,
-          "predicted_delay_probability": 0.5637,
-          "delay_risk_tier": "Tier 1: Low Delay Risk / Minor Variance",
-          "is_delayed_exception": 1,
-          "order_type": "PM07",
-          "material_number": "UNKNOWN"
-        },
-        {
-          "order_number": 600146829,
-          "order_description": "6M-MS_343.BE010 RM-3 HRP Silo Feed BE",
-          "plant": 1001,
-          "predicted_delay_probability": 0.5637,
-          "delay_risk_tier": "Tier 1: Low Delay Risk / Minor Variance",
-          "is_delayed_exception": 1,
-          "order_type": "PM07",
-          "material_number": "UNKNOWN"
-        },
-        {
-          "order_number": 600146830,
-          "order_description": "6M-MS_343.BE010 GB RM3HRP Silo Feed BE",
-          "plant": 1001,
-          "predicted_delay_probability": 0.5637,
-          "delay_risk_tier": "Tier 1: Low Delay Risk / Minor Variance",
-          "is_delayed_exception": 1,
-          "order_type": "PM07",
-          "material_number": "UNKNOWN"
-        },
-        {
-          "order_number": 600158592,
-          "order_description": "LEAK_R1J06_GBX INPUT SEAL LEAKAGE",
-          "plant": 1004,
-          "predicted_delay_probability": 0.9784,
+          "order_number": "10024667",
+          "order_description": "Bulk Cement, OPC,53 Grade - Grey",
+          "plant": "1931",
+          "predicted_delay_probability": 0.8639,
           "delay_risk_tier": "Tier 3: Critical Delay Exception / Past Due",
-          "is_delayed_exception": 1,
-          "order_type": "PM10",
-          "material_number": "UNKNOWN"
+          "item_delivered_qty": 2555.11,
+          "is_delayed_exception": 1.0,
+          "order_type": "BCM1"
         },
         {
-          "order_number": 600149049,
-          "order_description": "1Y_CIVIL-CM Silo-5 Inspection PMR",
-          "plant": 1001,
-          "predicted_delay_probability": 0.7061,
-          "delay_risk_tier": "Tier 2: Moderate Delay Risk / Bottlenecked",
-          "is_delayed_exception": 1,
-          "order_type": "PM02",
-          "material_number": "UNKNOWN"
-        },
-        {
-          "order_number": 600149051,
-          "order_description": "1Y_CIVIL-Fly ash silo Inspection PMR",
-          "plant": 1001,
-          "predicted_delay_probability": 0.7061,
-          "delay_risk_tier": "Tier 2: Moderate Delay Risk / Bottlenecked",
-          "is_delayed_exception": 1,
-          "order_type": "PM02",
-          "material_number": "UNKNOWN"
-        },
-        {
-          "order_number": 600149039,
-          "order_description": "1Y_CIVIL-RM Silo-1 Inspection PMR",
-          "plant": 1001,
-          "predicted_delay_probability": 0.7061,
-          "delay_risk_tier": "Tier 2: Moderate Delay Risk / Bottlenecked",
-          "is_delayed_exception": 1,
-          "order_type": "PM02",
-          "material_number": "UNKNOWN"
-        },
-        {
-          "order_number": 600149043,
-          "order_description": "1Y_CIVIL-CF Silo Inspection PMR",
-          "plant": 1001,
-          "predicted_delay_probability": 0.7061,
-          "delay_risk_tier": "Tier 2: Moderate Delay Risk / Bottlenecked",
-          "is_delayed_exception": 1,
-          "order_type": "PM02",
-          "material_number": "UNKNOWN"
-        },
-        {
-          "order_number": 600117941,
-          "order_description": "LEAK_W1W01_OIL LEAK FROM SUP. ROLLER",
-          "plant": 1004,
-          "predicted_delay_probability": 0.5414,
-          "delay_risk_tier": "Tier 1: Low Delay Risk / Minor Variance",
-          "is_delayed_exception": 1,
-          "order_type": "PM10",
-          "material_number": "UNKNOWN"
-        },
-        {
-          "order_number": 600149040,
-          "order_description": "1Y_CIVIL-RM Silo-2 Inspection PMR",
-          "plant": 1001,
-          "predicted_delay_probability": 0.7061,
-          "delay_risk_tier": "Tier 2: Moderate Delay Risk / Bottlenecked",
-          "is_delayed_exception": 1,
-          "order_type": "PM02",
-          "material_number": "UNKNOWN"
-        },
-        {
-          "order_number": 600149050,
-          "order_description": "1Y_CIVIL-CM Silo-6 Inspection PMR",
-          "plant": 1001,
-          "predicted_delay_probability": 0.7061,
-          "delay_risk_tier": "Tier 2: Moderate Delay Risk / Bottlenecked",
-          "is_delayed_exception": 1,
-          "order_type": "PM02",
-          "material_number": "UNKNOWN"
-        },
-        {
-          "order_number": 600149045,
-          "order_description": "1Y_CIVIL-CM Silo-1 Inspection PMR",
-          "plant": 1001,
-          "predicted_delay_probability": 0.7061,
-          "delay_risk_tier": "Tier 2: Moderate Delay Risk / Bottlenecked",
-          "is_delayed_exception": 1,
-          "order_type": "PM02",
-          "material_number": "UNKNOWN"
-        },
-        {
-          "order_number": 600149044,
-          "order_description": "1Y_CIVIL-Clinker tank Inspection PMR",
-          "plant": 1001,
-          "predicted_delay_probability": 0.7061,
-          "delay_risk_tier": "Tier 2: Moderate Delay Risk / Bottlenecked",
-          "is_delayed_exception": 1,
-          "order_type": "PM02",
-          "material_number": "UNKNOWN"
-        },
-        {
-          "order_number": 600149042,
-          "order_description": "1Y_CIVIL-RM Silo-4 Inspection PMR",
-          "plant": 1001,
-          "predicted_delay_probability": 0.7061,
-          "delay_risk_tier": "Tier 2: Moderate Delay Risk / Bottlenecked",
-          "is_delayed_exception": 1,
-          "order_type": "PM02",
-          "material_number": "UNKNOWN"
-        },
-        {
-          "order_number": 600149048,
-          "order_description": "1Y_CIVIL-CM Silo-4 Inspection PMR",
-          "plant": 1001,
-          "predicted_delay_probability": 0.7061,
-          "delay_risk_tier": "Tier 2: Moderate Delay Risk / Bottlenecked",
-          "is_delayed_exception": 1,
-          "order_type": "PM02",
-          "material_number": "UNKNOWN"
-        },
-        {
-          "order_number": 600149047,
-          "order_description": "1Y_CIVIL-CM Silo-3 Inspection PMR",
-          "plant": 1001,
-          "predicted_delay_probability": 0.7061,
-          "delay_risk_tier": "Tier 2: Moderate Delay Risk / Bottlenecked",
-          "is_delayed_exception": 1,
-          "order_type": "PM02",
-          "material_number": "UNKNOWN"
-        },
-        {
-          "order_number": 600149041,
-          "order_description": "1Y_CIVIL-RM Silo-3 Inspection PMR",
-          "plant": 1001,
-          "predicted_delay_probability": 0.7061,
-          "delay_risk_tier": "Tier 2: Moderate Delay Risk / Bottlenecked",
-          "is_delayed_exception": 1,
-          "order_type": "PM02",
-          "material_number": "UNKNOWN"
-        },
-        {
-          "order_number": 600149046,
-          "order_description": "1Y_CIVIL-CM Silo-2 Inspection PMR",
-          "plant": 1001,
-          "predicted_delay_probability": 0.7061,
-          "delay_risk_tier": "Tier 2: Moderate Delay Risk / Bottlenecked",
-          "is_delayed_exception": 1,
-          "order_type": "PM02",
-          "material_number": "UNKNOWN"
-        },
-        {
-          "order_number": 600127225,
-          "order_description": "VIB_R2M03 gearbox input brg defect",
-          "plant": 1004,
-          "predicted_delay_probability": 0.5433,
-          "delay_risk_tier": "Tier 1: Low Delay Risk / Minor Variance",
-          "is_delayed_exception": 1,
-          "order_type": "PM10",
-          "material_number": "UNKNOWN"
-        },
-        {
-          "order_number": 600156926,
-          "order_description": "L11BF040 DP taping point need change",
-          "plant": 1901,
-          "predicted_delay_probability": 0.9807,
+          "order_number": "10024778",
+          "order_description": "CEMENT GROUTS - 1 KG SUPER WHITE",
+          "plant": "1006",
+          "predicted_delay_probability": 0.8779,
           "delay_risk_tier": "Tier 3: Critical Delay Exception / Past Due",
-          "is_delayed_exception": 1,
-          "order_type": "PM03",
-          "material_number": "UNKNOWN"
+          "item_delivered_qty": 42000.0,
+          "is_delayed_exception": 1.0,
+          "order_type": "PCM1"
         },
         {
-          "order_number": 600102124,
-          "order_description": "1Y_MSD_KL1 PREHEATER EXHAUST FAN J1J01",
-          "plant": 1004,
-          "predicted_delay_probability": 0.5414,
-          "delay_risk_tier": "Tier 1: Low Delay Risk / Minor Variance",
-          "is_delayed_exception": 1,
-          "order_type": "PM02",
-          "material_number": "UNKNOWN"
+          "order_number": "4000002815",
+          "order_description": "WHITE CEMENT - 40 KG(PAPER ) - 52.5",
+          "plant": "7001",
+          "predicted_delay_probability": 0.9488,
+          "delay_risk_tier": "Tier 3: Critical Delay Exception / Past Due",
+          "item_delivered_qty": 60.0,
+          "is_delayed_exception": 1.0,
+          "order_type": "PCMF"
         },
         {
-          "order_number": 600102127,
-          "order_description": "1Y_MSD_KL1 DUST TRANSPORT ELEVATOR J1P17",
-          "plant": 1004,
-          "predicted_delay_probability": 0.5414,
-          "delay_risk_tier": "Tier 1: Low Delay Risk / Minor Variance",
-          "is_delayed_exception": 1,
-          "order_type": "PM02",
-          "material_number": "UNKNOWN"
+          "order_number": "4000002812",
+          "order_description": "WHITE CEMENT -SHRINK WRAP 50KGS PP - 52.",
+          "plant": "7001",
+          "predicted_delay_probability": 0.9388,
+          "delay_risk_tier": "Tier 3: Critical Delay Exception / Past Due",
+          "item_delivered_qty": 583.4,
+          "is_delayed_exception": 1.0,
+          "order_type": "PCMF"
         },
         {
-          "order_number": 600102126,
-          "order_description": "1Y_MSD_KL1 BAG HOUSE FAN J1P09",
-          "plant": 1004,
-          "predicted_delay_probability": 0.5414,
-          "delay_risk_tier": "Tier 1: Low Delay Risk / Minor Variance",
-          "is_delayed_exception": 1,
-          "order_type": "PM02",
-          "material_number": "UNKNOWN"
+          "order_number": "10025213",
+          "order_description": "PACKED CEMENT OPC 53 STRONG SET 50KG NFR",
+          "plant": "1901",
+          "predicted_delay_probability": 0.892,
+          "delay_risk_tier": "Tier 3: Critical Delay Exception / Past Due",
+          "item_delivered_qty": 42.5,
+          "is_delayed_exception": 1.0,
+          "order_type": "PCM1"
+        },
+        {
+          "order_number": "10024639",
+          "order_description": "BULK CEMENT PREMIUM PPC",
+          "plant": "1906",
+          "predicted_delay_probability": 0.9109,
+          "delay_risk_tier": "Tier 3: Critical Delay Exception / Past Due",
+          "item_delivered_qty": 11432.0,
+          "is_delayed_exception": 1.0,
+          "order_type": "BCM1"
+        },
+        {
+          "order_number": "5000005542",
+          "order_description": "FIREX INT FIRE RETAR PAINT WHITE 20 LTR",
+          "plant": "M101",
+          "predicted_delay_probability": 0.9398,
+          "delay_risk_tier": "Tier 3: Critical Delay Exception / Past Due",
+          "item_delivered_qty": 0.0,
+          "is_delayed_exception": 1.0,
+          "order_type": "FG01"
+        },
+        {
+          "order_number": "10025184",
+          "order_description": "PACKED CEMENT LPP PPC BLACK 50 KG",
+          "plant": "1033",
+          "predicted_delay_probability": 0.892,
+          "delay_risk_tier": "Tier 3: Critical Delay Exception / Past Due",
+          "item_delivered_qty": 756.0,
+          "is_delayed_exception": 1.0,
+          "order_type": "PCM1"
+        },
+        {
+          "order_number": "10025189",
+          "order_description": "PACKED CEMENT PPC,50KG",
+          "plant": "1907",
+          "predicted_delay_probability": 0.8921,
+          "delay_risk_tier": "Tier 3: Critical Delay Exception / Past Due",
+          "item_delivered_qty": 5200.5,
+          "is_delayed_exception": 1.0,
+          "order_type": "PCM1"
+        },
+        {
+          "order_number": "10025183",
+          "order_description": "PACKED CEMENT PPC,50KG NFR",
+          "plant": "1033",
+          "predicted_delay_probability": 0.8922,
+          "delay_risk_tier": "Tier 3: Critical Delay Exception / Past Due",
+          "item_delivered_qty": 8439.2,
+          "is_delayed_exception": 1.0,
+          "order_type": "PCM1"
+        },
+        {
+          "order_number": "10025196",
+          "order_description": "PACKED CEMENT PPC,50KG NFR (RPP)",
+          "plant": "1919",
+          "predicted_delay_probability": 0.8921,
+          "delay_risk_tier": "Tier 3: Critical Delay Exception / Past Due",
+          "item_delivered_qty": 4299.15,
+          "is_delayed_exception": 1.0,
+          "order_type": "PCM1"
+        },
+        {
+          "order_number": "10025192",
+          "order_description": "PACKED CEMENT OPC 43 FAST SET 50KG NFR",
+          "plant": "1907",
+          "predicted_delay_probability": 0.892,
+          "delay_risk_tier": "Tier 3: Critical Delay Exception / Past Due",
+          "item_delivered_qty": 1558.1,
+          "is_delayed_exception": 1.0,
+          "order_type": "PCM1"
+        },
+        {
+          "order_number": "600242283",
+          "order_description": "S/D61 - 451-DG3 INSPECTION & REPAIRING",
+          "plant": "7001",
+          "predicted_delay_probability": 0.9805,
+          "delay_risk_tier": "Tier 3: Critical Delay Exception / Past Due",
+          "item_delivered_qty": 0.0,
+          "is_delayed_exception": 1.0,
+          "order_type": "PM02"
+        },
+        {
+          "order_number": "10025197",
+          "order_description": "PACKED CEMENT SUPER PROTECT 50 KG",
+          "plant": "1919",
+          "predicted_delay_probability": 0.8925,
+          "delay_risk_tier": "Tier 3: Critical Delay Exception / Past Due",
+          "item_delivered_qty": 24255.6,
+          "is_delayed_exception": 1.0,
+          "order_type": "PCM1"
+        },
+        {
+          "order_number": "10025180",
+          "order_description": "PACKED CEMENT OPC 53 FAST SET 50KG NFR",
+          "plant": "1004",
+          "predicted_delay_probability": 0.892,
+          "delay_risk_tier": "Tier 3: Critical Delay Exception / Past Due",
+          "item_delivered_qty": 592.5,
+          "is_delayed_exception": 1.0,
+          "order_type": "PCM1"
+        },
+        {
+          "order_number": "10025193",
+          "order_description": "PACKED CEMENT OPC,43G,50KG NFR",
+          "plant": "1919",
+          "predicted_delay_probability": 0.8921,
+          "delay_risk_tier": "Tier 3: Critical Delay Exception / Past Due",
+          "item_delivered_qty": 6473.65,
+          "is_delayed_exception": 1.0,
+          "order_type": "PCM1"
+        },
+        {
+          "order_number": "10025194",
+          "order_description": "PACKED CEMENT PREMIUM PPC - PP AD Star",
+          "plant": "1919",
+          "predicted_delay_probability": 0.8921,
+          "delay_risk_tier": "Tier 3: Critical Delay Exception / Past Due",
+          "item_delivered_qty": 5556.0,
+          "is_delayed_exception": 1.0,
+          "order_type": "PCM1"
+        },
+        {
+          "order_number": "10025198",
+          "order_description": "PACKED CEMENT PSC 50KG",
+          "plant": "2001",
+          "predicted_delay_probability": 0.8888,
+          "delay_risk_tier": "Tier 3: Critical Delay Exception / Past Due",
+          "item_delivered_qty": 3482.0,
+          "is_delayed_exception": 1.0,
+          "order_type": "PCM1"
+        },
+        {
+          "order_number": "600241312",
+          "order_description": "512BC600_Discharge chute material leakag",
+          "plant": "2001",
+          "predicted_delay_probability": 0.9842,
+          "delay_risk_tier": "Tier 3: Critical Delay Exception / Past Due",
+          "item_delivered_qty": 0.0,
+          "is_delayed_exception": 1.0,
+          "order_type": "PM10"
+        },
+        {
+          "order_number": "600242238",
+          "order_description": "S/D61 - 451-DB2 INSPECTION",
+          "plant": "7001",
+          "predicted_delay_probability": 0.9805,
+          "delay_risk_tier": "Tier 3: Critical Delay Exception / Past Due",
+          "item_delivered_qty": 0.0,
+          "is_delayed_exception": 1.0,
+          "order_type": "PM02"
+        },
+        {
+          "order_number": "600242279",
+          "order_description": "S/D61 - 451-DG1 INSPECTION & REPAIRING",
+          "plant": "7001",
+          "predicted_delay_probability": 0.9805,
+          "delay_risk_tier": "Tier 3: Critical Delay Exception / Past Due",
+          "item_delivered_qty": 0.0,
+          "is_delayed_exception": 1.0,
+          "order_type": "PM02"
+        },
+        {
+          "order_number": "10025190",
+          "order_description": "PACKED CEMENT OPC,43G,50KG NFR",
+          "plant": "1907",
+          "predicted_delay_probability": 0.8922,
+          "delay_risk_tier": "Tier 3: Critical Delay Exception / Past Due",
+          "item_delivered_qty": 8869.65,
+          "is_delayed_exception": 1.0,
+          "order_type": "PCM1"
+        },
+        {
+          "order_number": "10025179",
+          "order_description": "PACKED CEMENT OPC,53G,50KG NFR",
+          "plant": "1004",
+          "predicted_delay_probability": 0.8922,
+          "delay_risk_tier": "Tier 3: Critical Delay Exception / Past Due",
+          "item_delivered_qty": 8181.0,
+          "is_delayed_exception": 1.0,
+          "order_type": "PCM1"
+        },
+        {
+          "order_number": "10025188",
+          "order_description": "PACKED CEMENT PPC,50KG NFR (RPP)",
+          "plant": "1906",
+          "predicted_delay_probability": 0.8922,
+          "delay_risk_tier": "Tier 3: Critical Delay Exception / Past Due",
+          "item_delivered_qty": 10163.75,
+          "is_delayed_exception": 1.0,
+          "order_type": "PCM1"
+        },
+        {
+          "order_number": "10025181",
+          "order_description": "PACKED CEMENT OPC 43 STRONG SET 50KG NFR",
+          "plant": "1004",
+          "predicted_delay_probability": 0.892,
+          "delay_risk_tier": "Tier 3: Critical Delay Exception / Past Due",
+          "item_delivered_qty": 2666.55,
+          "is_delayed_exception": 1.0,
+          "order_type": "PCM1"
+        },
+        {
+          "order_number": "10025182",
+          "order_description": "PACKED CEMENT OPC 43 FAST SET 50KG NFR",
+          "plant": "1004",
+          "predicted_delay_probability": 0.892,
+          "delay_risk_tier": "Tier 3: Critical Delay Exception / Past Due",
+          "item_delivered_qty": 1698.1,
+          "is_delayed_exception": 1.0,
+          "order_type": "PCM1"
+        },
+        {
+          "order_number": "10025191",
+          "order_description": "PACKED CEMENT OPC 53 FAST SET 50KG NFR",
+          "plant": "1907",
+          "predicted_delay_probability": 0.892,
+          "delay_risk_tier": "Tier 3: Critical Delay Exception / Past Due",
+          "item_delivered_qty": 1408.0,
+          "is_delayed_exception": 1.0,
+          "order_type": "PCM1"
+        },
+        {
+          "order_number": "10025195",
+          "order_description": "PACKED CEMENT PPC AD STAR 50 KG",
+          "plant": "1919",
+          "predicted_delay_probability": 0.893,
+          "delay_risk_tier": "Tier 3: Critical Delay Exception / Past Due",
+          "item_delivered_qty": 40500.4,
+          "is_delayed_exception": 1.0,
+          "order_type": "PCM1"
+        },
+        {
+          "order_number": "10025186",
+          "order_description": "PACKED CEMENT OPC,53G,50KG NFR",
+          "plant": "1902",
+          "predicted_delay_probability": 0.892,
+          "delay_risk_tier": "Tier 3: Critical Delay Exception / Past Due",
+          "item_delivered_qty": 486.0,
+          "is_delayed_exception": 1.0,
+          "order_type": "PCM1"
+        },
+        {
+          "order_number": "10025187",
+          "order_description": "PACKED CEMENT OPC 53 FAST SET 50KG",
+          "plant": "1902",
+          "predicted_delay_probability": 0.892,
+          "delay_risk_tier": "Tier 3: Critical Delay Exception / Past Due",
+          "item_delivered_qty": 739.0,
+          "is_delayed_exception": 1.0,
+          "order_type": "PCM1"
+        },
+        {
+          "order_number": "10025185",
+          "order_description": "PACKED CEMENT OPC,53G,50KG NFR",
+          "plant": "1901",
+          "predicted_delay_probability": 0.892,
+          "delay_risk_tier": "Tier 3: Critical Delay Exception / Past Due",
+          "item_delivered_qty": 572.5,
+          "is_delayed_exception": 1.0,
+          "order_type": "PCM1"
+        },
+        {
+          "order_number": "10025200",
+          "order_description": "D. M. Water",
+          "plant": "1901",
+          "predicted_delay_probability": 0.9184,
+          "delay_risk_tier": "Tier 3: Critical Delay Exception / Past Due",
+          "item_delivered_qty": 932.0,
+          "is_delayed_exception": 1.0,
+          "order_type": "PWR1"
+        },
+        {
+          "order_number": "6000005232",
+          "order_description": "BOM JK ICON TRU SHYN V2 WHITE",
+          "plant": "M101",
+          "predicted_delay_probability": 0.925,
+          "delay_risk_tier": "Tier 3: Critical Delay Exception / Past Due",
+          "item_delivered_qty": 7545.2,
+          "is_delayed_exception": 1.0,
+          "order_type": "SFG1"
+        },
+        {
+          "order_number": "600241311",
+          "order_description": "512BF510_Dust emission observed",
+          "plant": "2001",
+          "predicted_delay_probability": 0.9842,
+          "delay_risk_tier": "Tier 3: Critical Delay Exception / Past Due",
+          "item_delivered_qty": 0.0,
+          "is_delayed_exception": 1.0,
+          "order_type": "PM10"
+        },
+        {
+          "order_number": "10025021",
+          "order_description": "PACKED CEMENT PPC,50KG NFR",
+          "plant": "1022",
+          "predicted_delay_probability": 0.892,
+          "delay_risk_tier": "Tier 3: Critical Delay Exception / Past Due",
+          "item_delivered_qty": 90.0,
+          "is_delayed_exception": 1.0,
+          "order_type": "AUTO"
+        },
+        {
+          "order_number": "10024977",
+          "order_description": "PACKED CEMENT PREMIUM PPC - PP AD Star",
+          "plant": "1001",
+          "predicted_delay_probability": 0.893,
+          "delay_risk_tier": "Tier 3: Critical Delay Exception / Past Due",
+          "item_delivered_qty": 41308.75,
+          "is_delayed_exception": 1.0,
+          "order_type": "AUTO"
+        },
+        {
+          "order_number": "10025022",
+          "order_description": "PACKED CEMENT PREMIUM PPC - PP AD Star",
+          "plant": "1022",
+          "predicted_delay_probability": 0.8926,
+          "delay_risk_tier": "Tier 3: Critical Delay Exception / Past Due",
+          "item_delivered_qty": 26427.0,
+          "is_delayed_exception": 1.0,
+          "order_type": "AUTO"
+        },
+        {
+          "order_number": "10025041",
+          "order_description": "PACKED CEMENT PPC AD STAR 50 KG",
+          "plant": "1901",
+          "predicted_delay_probability": 0.8939,
+          "delay_risk_tier": "Tier 3: Critical Delay Exception / Past Due",
+          "item_delivered_qty": 66997.0,
+          "is_delayed_exception": 1.0,
+          "order_type": "AUTO"
+        },
+        {
+          "order_number": "10025067",
+          "order_description": "PACKED CEMENT PPC AD STAR 50 KG",
+          "plant": "1907",
+          "predicted_delay_probability": 0.8931,
+          "delay_risk_tier": "Tier 3: Critical Delay Exception / Past Due",
+          "item_delivered_qty": 43424.5,
+          "is_delayed_exception": 1.0,
+          "order_type": "AUTO"
+        },
+        {
+          "order_number": "10025090",
+          "order_description": "PACKED CEMENT OPC,43G,50KG NFR",
+          "plant": "2001",
+          "predicted_delay_probability": 0.8892,
+          "delay_risk_tier": "Tier 3: Critical Delay Exception / Past Due",
+          "item_delivered_qty": 35600.85,
+          "is_delayed_exception": 1.0,
+          "order_type": "AUTO"
+        },
+        {
+          "order_number": "10025007",
+          "order_description": "PACKED CEMENT OPC,53G,50KG",
+          "plant": "1004",
+          "predicted_delay_probability": 0.8923,
+          "delay_risk_tier": "Tier 3: Critical Delay Exception / Past Due",
+          "item_delivered_qty": 12515.0,
+          "is_delayed_exception": 1.0,
+          "order_type": "AUTO"
+        },
+        {
+          "order_number": "10024990",
+          "order_description": "M20 STD",
+          "plant": "2053",
+          "predicted_delay_probability": 0.9704,
+          "delay_risk_tier": "Tier 3: Critical Delay Exception / Past Due",
+          "item_delivered_qty": 50.0,
+          "is_delayed_exception": 1.0,
+          "order_type": "PCM1"
+        },
+        {
+          "order_number": "10025020",
+          "order_description": "PACKED CEMENT PPC,50KG",
+          "plant": "1022",
+          "predicted_delay_probability": 0.8946,
+          "delay_risk_tier": "Tier 3: Critical Delay Exception / Past Due",
+          "item_delivered_qty": 84133.0,
+          "is_delayed_exception": 1.0,
+          "order_type": "AUTO"
+        },
+        {
+          "order_number": "10025056",
+          "order_description": "PACKED CEMENT PPC,50KG",
+          "plant": "1906",
+          "predicted_delay_probability": 0.893,
+          "delay_risk_tier": "Tier 3: Critical Delay Exception / Past Due",
+          "item_delivered_qty": 39611.5,
+          "is_delayed_exception": 1.0,
+          "order_type": "AUTO"
+        },
+        {
+          "order_number": "10024909",
+          "order_description": "TILEMAXX 222",
+          "plant": "1025",
+          "predicted_delay_probability": 0.9464,
+          "delay_risk_tier": "Tier 3: Critical Delay Exception / Past Due",
+          "item_delivered_qty": 77.0,
+          "is_delayed_exception": 1.0,
+          "order_type": "PTA1"
+        },
+        {
+          "order_number": "10025054",
+          "order_description": "PACKED CEMENT SUPER PROTECT 50 KG",
+          "plant": "1902",
+          "predicted_delay_probability": 0.8922,
+          "delay_risk_tier": "Tier 3: Critical Delay Exception / Past Due",
+          "item_delivered_qty": 10076.5,
+          "is_delayed_exception": 1.0,
+          "order_type": "AUTO"
+        },
+        {
+          "order_number": "10025045",
+          "order_description": "PACKED CEMENT SUPER PROTECT 50 KG",
+          "plant": "1901",
+          "predicted_delay_probability": 0.8922,
+          "delay_risk_tier": "Tier 3: Critical Delay Exception / Past Due",
+          "item_delivered_qty": 7971.0,
+          "is_delayed_exception": 1.0,
+          "order_type": "AUTO"
+        },
+        {
+          "order_number": "10025002",
+          "order_description": "PACKED CEMENT SUPER PROTECT 50 KG",
+          "plant": "1001",
+          "predicted_delay_probability": 0.8924,
+          "delay_risk_tier": "Tier 3: Critical Delay Exception / Past Due",
+          "item_delivered_qty": 19244.5,
+          "is_delayed_exception": 1.0,
+          "order_type": "AUTO"
+        },
+        {
+          "order_number": "10025014",
+          "order_description": "PACKED CEMENT OPC 53 STRONG SET 50KG NFR",
+          "plant": "1004",
+          "predicted_delay_probability": 0.8921,
+          "delay_risk_tier": "Tier 3: Critical Delay Exception / Past Due",
+          "item_delivered_qty": 4462.8,
+          "is_delayed_exception": 1.0,
+          "order_type": "AUTO"
+        },
+        {
+          "order_number": "600238879",
+          "order_description": "L-3 Kiln general Goods July 26",
+          "plant": "1004",
+          "predicted_delay_probability": 0.9842,
+          "delay_risk_tier": "Tier 3: Critical Delay Exception / Past Due",
+          "item_delivered_qty": 0.0,
+          "is_delayed_exception": 1.0,
+          "order_type": "PM03"
         }
       ],
       "advanced_ml": {
         "confusion_matrix": {
-          "tp": 22838,
-          "fp": 408,
-          "fn": 8277,
-          "tn": 3477,
-          "precision": 0.982,
-          "recall": 0.734,
-          "f1": 0.84,
-          "accuracy": 0.752
+          "tp": 200989,
+          "fp": 2552,
+          "fn": 65073,
+          "tn": 34048,
+          "precision": 0.987,
+          "recall": 0.755,
+          "f1": 0.856,
+          "accuracy": 0.777
         },
         "threshold_curve": {
           "thresholds": [
@@ -3328,37 +3248,37 @@ window.PORTFOLIO_DATA = {
             0.9
           ],
           "precision": [
-            0.345,
-            0.398,
-            0.446,
-            0.49,
-            0.533,
-            0.574,
-            0.613,
-            0.651,
-            0.689
+            0.376,
+            0.434,
+            0.486,
+            0.535,
+            0.582,
+            0.626,
+            0.669,
+            0.711,
+            0.752
           ],
           "recall": [
-            0.961,
-            0.903,
-            0.835,
-            0.761,
-            0.68,
-            0.594,
-            0.504,
-            0.41,
-            0.313
+            0.962,
+            0.906,
+            0.841,
+            0.769,
+            0.692,
+            0.609,
+            0.522,
+            0.432,
+            0.338
           ],
           "f1": [
-            0.507,
-            0.552,
-            0.581,
-            0.596,
-            0.597,
-            0.584,
-            0.553,
-            0.504,
-            0.43
+            0.541,
+            0.587,
+            0.616,
+            0.631,
+            0.632,
+            0.617,
+            0.587,
+            0.537,
+            0.466
           ]
         },
         "probability_distribution": {
@@ -3375,40 +3295,40 @@ window.PORTFOLIO_DATA = {
             "0.9"
           ],
           "clean_count": [
-            1216,
-            775,
-            494,
-            315,
-            201,
-            128,
-            100,
-            100,
-            100,
-            100
+            11916,
+            7598,
+            4845,
+            3089,
+            1969,
+            1256,
+            800,
+            510,
+            325,
+            207
           ],
           "exception_count": [
-            1141,
-            1776,
-            2410,
-            3045,
-            3679,
-            4313,
-            4948,
-            5582,
-            6217,
-            6851
+            10049,
+            15632,
+            21215,
+            26798,
+            32381,
+            37964,
+            43547,
+            49130,
+            54713,
+            60296
           ],
           "total_count": [
-            2357,
-            2551,
-            2904,
-            3360,
-            3880,
-            4441,
-            5048,
-            5682,
-            6317,
-            6951
+            21965,
+            23230,
+            26060,
+            29887,
+            34350,
+            39220,
+            44347,
+            49640,
+            55038,
+            60503
           ]
         },
         "calibration_curve": {
@@ -3492,169 +3412,93 @@ window.PORTFOLIO_DATA = {
         "MARA",
         "LFA1"
       ],
-      "total_records": 35000,
-      "exceptions_count": 1775,
-      "exception_rate_pct": 5.07,
-      "financial_exposure_inr": 100314200000.0,
-      "financial_exposure_cr": 10031.42,
-      "avg_confidence_score": 0.9849,
-      "champion_model": "Isolation Forest",
-      "champion_metric": "0.9849 ROC-AUC",
+      "total_records": 664432,
+      "exceptions_count": 33307,
+      "exception_rate_pct": 5.01,
+      "financial_exposure_inr": 1189246490001.02,
+      "financial_exposure_cr": 118924.65,
+      "avg_confidence_score": 0.094,
+      "champion_model": "Gradient Boosted Trees / Ensemble",
+      "champion_metric": "0.8830 ROC-AUC",
       "risk_distribution": {
-        "Critical": 303,
-        "High": 1476,
-        "Medium": 3069,
-        "Low": 30152
+        "Critical": 12654,
+        "High": 20659,
+        "Medium": 29147,
+        "Low": 601972
       },
       "category_breakdown": [
         {
-          "label": "1901",
-          "count": 4886
+          "label": "2001",
+          "count": 108566
         },
         {
           "label": "1015",
-          "count": 4396
-        },
-        {
-          "label": "1004",
-          "count": 4123
+          "count": 82213
         },
         {
           "label": "1001",
-          "count": 3171
+          "count": 75275
         },
         {
-          "label": "1006",
-          "count": 3094
+          "label": "1004",
+          "count": 73170
+        },
+        {
+          "label": "1901",
+          "count": 60036
         },
         {
           "label": "1022",
-          "count": 2891
+          "count": 51570
         },
         {
-          "label": "2001",
-          "count": 2667
+          "label": "1033",
+          "count": 33613
         }
       ],
       "feature_importance": [
         {
           "feature": "inspection_lead_days",
-          "importance": 0.1847,
+          "importance": 0.5122,
           "description": "(Total elapsed days between inspection lot creation and planned finish)"
         },
         {
-          "feature": "destroyed_sample_ratio",
-          "importance": 0.1107,
-          "description": "(Proportion of sample quantity destroyed during testing)"
-        },
-        {
-          "feature": "sample_to_lot_ratio",
-          "importance": 0.0992,
-          "description": "(Sampling inspection intensity: sample quantity divided by total lot size)"
-        },
-        {
-          "feature": "log_sample_quantity",
-          "importance": 0.0905,
-          "description": "(Log-stabilized planned sample size QALS-LMENGEZUB)"
-        },
-        {
           "feature": "scheduled_duration_days",
-          "importance": 0.0866,
+          "importance": 0.2265,
           "description": "(Duration of planned inspection window: scheduled finish minus scheduled start)"
         },
         {
-          "feature": "log_vendor_frequency",
-          "importance": 0.0583,
-          "description": "(Log of historical inspection lot deliveries received from this vendor)"
+          "feature": "log_lot_financial_value",
+          "importance": 0.0407,
+          "description": "(Log-scaled financial value exposed in lot: Lot Quantity * Valuation Unit Price)"
         },
         {
           "feature": "log_unit_price",
-          "importance": 0.0555,
+          "importance": 0.0231,
           "description": "(Log-stabilized unit valuation price from SAP Material Valuation MBEW)"
         },
         {
+          "feature": "log_lot_quantity",
+          "importance": 0.0209,
+          "description": "(Log-stabilized total inspection lot quantity QALS-LOSMENGE)"
+        },
+        {
           "feature": "insp_type_code",
-          "importance": 0.0479,
+          "importance": 0.0205,
           "description": "(Numeric code representing inspection type: 01 Goods Receipt, 03 In-Process, 08 Transfer)"
+        },
+        {
+          "feature": "log_material_frequency",
+          "importance": 0.0179,
+          "description": "(Log of total historical inspection lots processed for this material number)"
+        },
+        {
+          "feature": "origin_code",
+          "importance": 0.0146,
+          "description": "(Inspection lot origin code QALS-HERKUNFT)"
         }
       ],
-      "model_rankings": [
-        {
-          "Rank": "#1",
-          "Model": "Isolation Forest",
-          "Accuracy": 0.9526,
-          "Precision": 0.117,
-          "Recall": 1.0,
-          "F1-Score": 0.2095,
-          "ROC-AUC": 0.9849,
-          "PR-AUC": 0.22,
-          "Specificity": 0.9523,
-          "True Positives": 44,
-          "False Positives": 332,
-          "False Negatives": 0,
-          "True Negatives": 6624
-        },
-        {
-          "Rank": "#2",
-          "Model": "One-Class SVM",
-          "Accuracy": 0.9519,
-          "Precision": 0.103,
-          "Recall": 0.8636,
-          "F1-Score": 0.184,
-          "ROC-AUC": 0.9407,
-          "PR-AUC": 0.2576,
-          "Specificity": 0.9524,
-          "True Positives": 38,
-          "False Positives": 331,
-          "False Negatives": 6,
-          "True Negatives": 6625
-        },
-        {
-          "Rank": "#3",
-          "Model": "DBSCAN",
-          "Accuracy": 0.941,
-          "Precision": 0.0422,
-          "Recall": 0.3864,
-          "F1-Score": 0.0761,
-          "ROC-AUC": 0.6905,
-          "PR-AUC": 0.2302,
-          "Specificity": 0.9445,
-          "True Positives": 17,
-          "False Positives": 386,
-          "False Negatives": 27,
-          "True Negatives": 6570
-        },
-        {
-          "Rank": "#4",
-          "Model": "Autoencoder",
-          "Accuracy": 0.9427,
-          "Precision": 0.0411,
-          "Recall": 0.3636,
-          "F1-Score": 0.0739,
-          "ROC-AUC": 0.8869,
-          "PR-AUC": 0.1387,
-          "Specificity": 0.9464,
-          "True Positives": 16,
-          "False Positives": 373,
-          "False Negatives": 28,
-          "True Negatives": 6583
-        },
-        {
-          "Rank": "#5",
-          "Model": "Local Outlier Factor",
-          "Accuracy": 0.9459,
-          "Precision": 0.0386,
-          "Recall": 0.3182,
-          "F1-Score": 0.0688,
-          "ROC-AUC": 0.7032,
-          "PR-AUC": 0.0225,
-          "Specificity": 0.9498,
-          "True Positives": 14,
-          "False Positives": 349,
-          "False Negatives": 30,
-          "True Negatives": 6607
-        }
-      ],
+      "model_rankings": [],
       "display_columns": [
         "Inspection Lot ID",
         "Material Description",
@@ -3667,516 +3511,516 @@ window.PORTFOLIO_DATA = {
       ],
       "sample_records": [
         {
-          "Inspection Lot ID": 10000308284,
-          "Material Description": "HDPE BAG-SUPER GRADE-NFR",
-          "Plant": 1001,
-          "P(Failure)": 0.8472,
+          "Inspection Lot ID": "30000010877",
+          "Material Description": "BOM JK WIPEAZY P1",
+          "Plant": "M101",
+          "P(Failure)": 0.7687,
           "Risk Tier": "Critical Failure Risk",
-          "Lot Value (INR)": 510400.0,
-          "Predicted Failure (1=Fail)": 1,
-          "Insp Type": "01"
-        },
-        {
-          "Inspection Lot ID": 10000308270,
-          "Material Description": "PP BAG- PPC GRADE",
-          "Plant": 1001,
-          "P(Failure)": 0.8294,
-          "Risk Tier": "Critical Failure Risk",
-          "Lot Value (INR)": 488500.0,
-          "Predicted Failure (1=Fail)": 1,
-          "Insp Type": "01"
-        },
-        {
-          "Inspection Lot ID": 10000308286,
-          "Material Description": "PP BAG PREMIUM PPC 50 KG",
-          "Plant": 1001,
-          "P(Failure)": 0.8322,
-          "Risk Tier": "Critical Failure Risk",
-          "Lot Value (INR)": 604500.0,
-          "Predicted Failure (1=Fail)": 1,
-          "Insp Type": "01"
-        },
-        {
-          "Inspection Lot ID": 10000307792,
-          "Material Description": "WHITE CLAY",
-          "Plant": 1015,
-          "P(Failure)": 0.5864,
-          "Risk Tier": "High Risk",
-          "Lot Value (INR)": 24649.9734,
-          "Predicted Failure (1=Fail)": 1,
-          "Insp Type": "01"
-        },
-        {
-          "Inspection Lot ID": 30000003901,
-          "Material Description": "PACKED CEMENT PREMIUM PPC - PP AD Star",
-          "Plant": 1901,
-          "P(Failure)": 0.7913,
-          "Risk Tier": "Critical Failure Risk",
-          "Lot Value (INR)": 221839000.0,
-          "Predicted Failure (1=Fail)": 1,
+          "Lot Value (INR)": 843832.0,
+          "Predicted Failure (1=Fail)": 1.0,
           "Insp Type": "03"
         },
         {
-          "Inspection Lot ID": 30000003900,
-          "Material Description": "PACKED CEMENT PPC,50KG",
-          "Plant": 1901,
-          "P(Failure)": 0.7492,
+          "Inspection Lot ID": "890000047789",
+          "Material Description": "PACKED CEMENT OPC,53G,50KG",
+          "Plant": "1907",
+          "P(Failure)": 0.568,
           "Risk Tier": "High Risk",
-          "Lot Value (INR)": 20754400.0,
-          "Predicted Failure (1=Fail)": 1,
-          "Insp Type": "03"
-        },
-        {
-          "Inspection Lot ID": 30000003901,
-          "Material Description": "PACKED CEMENT PREMIUM PPC - PP AD Star",
-          "Plant": 1901,
-          "P(Failure)": 0.7893,
-          "Risk Tier": "Critical Failure Risk",
-          "Lot Value (INR)": 274918000.0,
-          "Predicted Failure (1=Fail)": 1,
-          "Insp Type": "03"
-        },
-        {
-          "Inspection Lot ID": 30000003900,
-          "Material Description": "PACKED CEMENT PPC,50KG",
-          "Plant": 1901,
-          "P(Failure)": 0.7492,
-          "Risk Tier": "High Risk",
-          "Lot Value (INR)": 20754400.0,
-          "Predicted Failure (1=Fail)": 1,
-          "Insp Type": "03"
-        },
-        {
-          "Inspection Lot ID": 10000308031,
-          "Material Description": "DRY FLY ASH",
-          "Plant": 1901,
-          "P(Failure)": 0.606,
-          "Risk Tier": "High Risk",
-          "Lot Value (INR)": 525441.7672,
-          "Predicted Failure (1=Fail)": 1,
-          "Insp Type": "01"
-        },
-        {
-          "Inspection Lot ID": 10000308055,
-          "Material Description": "QUARTZ SAND",
-          "Plant": 1034,
-          "P(Failure)": 0.6801,
-          "Risk Tier": "High Risk",
-          "Lot Value (INR)": 53027.52,
-          "Predicted Failure (1=Fail)": 1,
-          "Insp Type": "01"
-        },
-        {
-          "Inspection Lot ID": 10000308254,
-          "Material Description": "DRY FLY ASH",
-          "Plant": 1901,
-          "P(Failure)": 0.5979,
-          "Risk Tier": "High Risk",
-          "Lot Value (INR)": 343953.26,
-          "Predicted Failure (1=Fail)": 1,
-          "Insp Type": "01"
-        },
-        {
-          "Inspection Lot ID": 890000021994,
-          "Material Description": "Clinker",
-          "Plant": 1004,
-          "P(Failure)": 0.7563,
-          "Risk Tier": "Critical Failure Risk",
-          "Lot Value (INR)": 2259.38,
-          "Predicted Failure (1=Fail)": 1,
+          "Lot Value (INR)": 392234.0,
+          "Predicted Failure (1=Fail)": 1.0,
           "Insp Type": "ZJCO89"
         },
         {
-          "Inspection Lot ID": 890000021938,
-          "Material Description": "Bulk Cement, PPC - Grey",
-          "Plant": 1906,
-          "P(Failure)": 0.5375,
+          "Inspection Lot ID": "890000047788",
+          "Material Description": "PACKED CEMENT OPC,53G,50KG",
+          "Plant": "1907",
+          "P(Failure)": 0.568,
           "Risk Tier": "High Risk",
-          "Lot Value (INR)": 2706.58,
-          "Predicted Failure (1=Fail)": 1,
+          "Lot Value (INR)": 392234.0,
+          "Predicted Failure (1=Fail)": 1.0,
           "Insp Type": "ZJCO89"
         },
         {
-          "Inspection Lot ID": 890000021998,
-          "Material Description": "Bulk Cement OPC,53 Strong Set Grey",
-          "Plant": 1004,
-          "P(Failure)": 0.5791,
-          "Risk Tier": "High Risk",
-          "Lot Value (INR)": 2463.68,
-          "Predicted Failure (1=Fail)": 1,
-          "Insp Type": "ZJCO89"
-        },
-        {
-          "Inspection Lot ID": 890000021978,
-          "Material Description": "Clinker",
-          "Plant": 1001,
-          "P(Failure)": 0.742,
-          "Risk Tier": "High Risk",
-          "Lot Value (INR)": 307850.0,
-          "Predicted Failure (1=Fail)": 1,
-          "Insp Type": "ZJCO89"
-        },
-        {
-          "Inspection Lot ID": 890000021979,
-          "Material Description": "Clinker",
-          "Plant": 1001,
-          "P(Failure)": 0.742,
-          "Risk Tier": "High Risk",
-          "Lot Value (INR)": 307850.0,
-          "Predicted Failure (1=Fail)": 1,
-          "Insp Type": "ZJCO89"
-        },
-        {
-          "Inspection Lot ID": 890000021970,
-          "Material Description": "Bulk Cement, PPC - Grey",
-          "Plant": 2001,
-          "P(Failure)": 0.7204,
-          "Risk Tier": "High Risk",
-          "Lot Value (INR)": 1850.53,
-          "Predicted Failure (1=Fail)": 1,
-          "Insp Type": "ZJCO89"
-        },
-        {
-          "Inspection Lot ID": 890000021980,
-          "Material Description": "Clinker",
-          "Plant": 1001,
-          "P(Failure)": 0.742,
-          "Risk Tier": "High Risk",
-          "Lot Value (INR)": 307850.0,
-          "Predicted Failure (1=Fail)": 1,
-          "Insp Type": "ZJCO89"
-        },
-        {
-          "Inspection Lot ID": 890000021988,
-          "Material Description": "Bulk Cement, PPC - Grey",
-          "Plant": 1034,
-          "P(Failure)": 0.6042,
-          "Risk Tier": "High Risk",
-          "Lot Value (INR)": 3013.75,
-          "Predicted Failure (1=Fail)": 1,
-          "Insp Type": "ZJCO89"
-        },
-        {
-          "Inspection Lot ID": 890000021941,
-          "Material Description": "Clinker",
-          "Plant": 1906,
-          "P(Failure)": 0.5389,
-          "Risk Tier": "High Risk",
-          "Lot Value (INR)": 2686.04,
-          "Predicted Failure (1=Fail)": 1,
-          "Insp Type": "ZJCO89"
-        },
-        {
-          "Inspection Lot ID": 890000021976,
-          "Material Description": "Bulk Cement, PPC - Grey",
-          "Plant": 1001,
-          "P(Failure)": 0.5556,
-          "Risk Tier": "High Risk",
-          "Lot Value (INR)": 246127.0,
-          "Predicted Failure (1=Fail)": 1,
-          "Insp Type": "ZJCO89"
-        },
-        {
-          "Inspection Lot ID": 890000021960,
-          "Material Description": "Bulk Cement, PPC - Grey",
-          "Plant": 1033,
-          "P(Failure)": 0.5505,
-          "Risk Tier": "High Risk",
-          "Lot Value (INR)": 2711.92,
-          "Predicted Failure (1=Fail)": 1,
-          "Insp Type": "ZJCO89"
-        },
-        {
-          "Inspection Lot ID": 890000021943,
-          "Material Description": "Bulk Cement, PPC - Grey",
-          "Plant": 1906,
-          "P(Failure)": 0.5375,
-          "Risk Tier": "High Risk",
-          "Lot Value (INR)": 2706.58,
-          "Predicted Failure (1=Fail)": 1,
-          "Insp Type": "ZJCO89"
-        },
-        {
-          "Inspection Lot ID": 890000021936,
-          "Material Description": "BULK CEMENT PREMIUM PPC",
-          "Plant": 1906,
-          "P(Failure)": 0.5617,
-          "Risk Tier": "High Risk",
-          "Lot Value (INR)": 2810.15,
-          "Predicted Failure (1=Fail)": 1,
-          "Insp Type": "ZJCO89"
-        },
-        {
-          "Inspection Lot ID": 890000021990,
-          "Material Description": "PACKED CEMENT SUPER PROTECT 50 KG",
-          "Plant": 1902,
-          "P(Failure)": 0.5075,
-          "Risk Tier": "High Risk",
-          "Lot Value (INR)": 3205.46,
-          "Predicted Failure (1=Fail)": 1,
-          "Insp Type": "ZJCO89"
-        },
-        {
-          "Inspection Lot ID": 890000021959,
-          "Material Description": "Clinker",
-          "Plant": 1033,
-          "P(Failure)": 0.7613,
-          "Risk Tier": "Critical Failure Risk",
-          "Lot Value (INR)": 3294.32,
-          "Predicted Failure (1=Fail)": 1,
-          "Insp Type": "ZJCO89"
-        },
-        {
-          "Inspection Lot ID": 890000021944,
-          "Material Description": "BULK CEMENT PREMIUM PPC",
-          "Plant": 1906,
-          "P(Failure)": 0.5617,
-          "Risk Tier": "High Risk",
-          "Lot Value (INR)": 2810.15,
-          "Predicted Failure (1=Fail)": 1,
-          "Insp Type": "ZJCO89"
-        },
-        {
-          "Inspection Lot ID": 890000021964,
-          "Material Description": "Bulk Cement, PPC - Grey",
-          "Plant": 1022,
-          "P(Failure)": 0.5259,
-          "Risk Tier": "High Risk",
-          "Lot Value (INR)": 2576.24,
-          "Predicted Failure (1=Fail)": 1,
-          "Insp Type": "ZJCO89"
-        },
-        {
-          "Inspection Lot ID": 890000021997,
-          "Material Description": "Bulk Cement, OPC,53 Grade - Grey",
-          "Plant": 1004,
-          "P(Failure)": 0.5467,
-          "Risk Tier": "High Risk",
-          "Lot Value (INR)": 2427.58,
-          "Predicted Failure (1=Fail)": 1,
-          "Insp Type": "ZJCO89"
-        },
-        {
-          "Inspection Lot ID": 890000021986,
-          "Material Description": "Clinker",
-          "Plant": 1034,
-          "P(Failure)": 0.6057,
-          "Risk Tier": "High Risk",
-          "Lot Value (INR)": 2838.77,
-          "Predicted Failure (1=Fail)": 1,
-          "Insp Type": "ZJCO89"
-        },
-        {
-          "Inspection Lot ID": 890000021971,
-          "Material Description": "BULK CEMENT PREMIUM PPC",
-          "Plant": 2001,
-          "P(Failure)": 0.5353,
-          "Risk Tier": "High Risk",
-          "Lot Value (INR)": 1934.69,
-          "Predicted Failure (1=Fail)": 1,
-          "Insp Type": "ZJCO89"
-        },
-        {
-          "Inspection Lot ID": 890000021975,
+          "Inspection Lot ID": "890000047687",
           "Material Description": "Bulk Cement, OPC,43 Grade - Grey",
-          "Plant": 1001,
-          "P(Failure)": 0.5801,
+          "Plant": "1001",
+          "P(Failure)": 0.5206,
           "Risk Tier": "High Risk",
           "Lot Value (INR)": 313842.0,
-          "Predicted Failure (1=Fail)": 1,
+          "Predicted Failure (1=Fail)": 1.0,
           "Insp Type": "ZJCO89"
         },
         {
-          "Inspection Lot ID": 890000021996,
-          "Material Description": "Bulk Cement, OPC,43 Grade - Grey",
-          "Plant": 1004,
-          "P(Failure)": 0.5375,
-          "Risk Tier": "High Risk",
-          "Lot Value (INR)": 2349.82,
-          "Predicted Failure (1=Fail)": 1,
-          "Insp Type": "ZJCO89"
-        },
-        {
-          "Inspection Lot ID": 890000021995,
-          "Material Description": "Bulk Cement, OPC,43 Grade - Grey",
-          "Plant": 1004,
-          "P(Failure)": 0.5375,
-          "Risk Tier": "High Risk",
-          "Lot Value (INR)": 2349.82,
-          "Predicted Failure (1=Fail)": 1,
-          "Insp Type": "ZJCO89"
-        },
-        {
-          "Inspection Lot ID": 890000021992,
-          "Material Description": "Clinker",
-          "Plant": 1004,
-          "P(Failure)": 0.7563,
-          "Risk Tier": "Critical Failure Risk",
-          "Lot Value (INR)": 2259.38,
-          "Predicted Failure (1=Fail)": 1,
-          "Insp Type": "ZJCO89"
-        },
-        {
-          "Inspection Lot ID": 890000021969,
-          "Material Description": "Bulk Cement, PPC - Grey",
-          "Plant": 2001,
-          "P(Failure)": 0.5297,
-          "Risk Tier": "High Risk",
-          "Lot Value (INR)": 1850.53,
-          "Predicted Failure (1=Fail)": 1,
-          "Insp Type": "ZJCO89"
-        },
-        {
-          "Inspection Lot ID": 890000021863,
-          "Material Description": "Clinker",
-          "Plant": 1901,
-          "P(Failure)": 0.7015,
-          "Risk Tier": "High Risk",
-          "Lot Value (INR)": 2063.06,
-          "Predicted Failure (1=Fail)": 1,
-          "Insp Type": "ZJCO89"
-        },
-        {
-          "Inspection Lot ID": 890000021977,
-          "Material Description": "BULK CEMENT SUPER PROTECT GREY",
-          "Plant": 1001,
-          "P(Failure)": 0.6522,
-          "Risk Tier": "High Risk",
-          "Lot Value (INR)": 280209.0,
-          "Predicted Failure (1=Fail)": 1,
-          "Insp Type": "ZJCO89"
-        },
-        {
-          "Inspection Lot ID": 890000021999,
-          "Material Description": "Bulk Cement OPC,53 FAST SET GREY",
-          "Plant": 1004,
-          "P(Failure)": 0.5819,
-          "Risk Tier": "High Risk",
-          "Lot Value (INR)": 2463.68,
-          "Predicted Failure (1=Fail)": 1,
-          "Insp Type": "ZJCO89"
-        },
-        {
-          "Inspection Lot ID": 890000021961,
+          "Inspection Lot ID": "890000047749",
           "Material Description": "BULK CEMENT PREMIUM PPC",
-          "Plant": 1033,
-          "P(Failure)": 0.5744,
-          "Risk Tier": "High Risk",
-          "Lot Value (INR)": 3009.19,
-          "Predicted Failure (1=Fail)": 1,
-          "Insp Type": "ZJCO89"
-        },
-        {
-          "Inspection Lot ID": 890000021864,
-          "Material Description": "Bulk Cement, PPC - Grey",
-          "Plant": 1901,
-          "P(Failure)": 0.71,
-          "Risk Tier": "High Risk",
-          "Lot Value (INR)": 1811.31,
-          "Predicted Failure (1=Fail)": 1,
-          "Insp Type": "ZJCO89"
-        },
-        {
-          "Inspection Lot ID": 890000021984,
-          "Material Description": "PACKED CEMENT SUPER PROTECT 50 KG",
-          "Plant": 1001,
-          "P(Failure)": 0.5413,
-          "Risk Tier": "High Risk",
-          "Lot Value (INR)": 322188.0,
-          "Predicted Failure (1=Fail)": 1,
-          "Insp Type": "ZJCO89"
-        },
-        {
-          "Inspection Lot ID": 890000021984,
-          "Material Description": "PACKED CEMENT SUPER PROTECT 50 KG",
-          "Plant": 1001,
-          "P(Failure)": 0.5399,
-          "Risk Tier": "High Risk",
-          "Lot Value (INR)": 323306.0,
-          "Predicted Failure (1=Fail)": 1,
-          "Insp Type": "ZJCO89"
-        },
-        {
-          "Inspection Lot ID": 890000021993,
-          "Material Description": "Clinker",
-          "Plant": 1004,
-          "P(Failure)": 0.7563,
-          "Risk Tier": "Critical Failure Risk",
-          "Lot Value (INR)": 2259.38,
-          "Predicted Failure (1=Fail)": 1,
-          "Insp Type": "ZJCO89"
-        },
-        {
-          "Inspection Lot ID": 890000021968,
-          "Material Description": "Bulk Cement, OPC,43 Grade - Grey",
-          "Plant": 2001,
-          "P(Failure)": 0.526,
-          "Risk Tier": "High Risk",
-          "Lot Value (INR)": 2180.63,
-          "Predicted Failure (1=Fail)": 1,
-          "Insp Type": "ZJCO89"
-        },
-        {
-          "Inspection Lot ID": 890000021965,
-          "Material Description": "BULK CEMENT PREMIUM PPC",
-          "Plant": 1022,
-          "P(Failure)": 0.6149,
+          "Plant": "1022",
+          "P(Failure)": 0.6429,
           "Risk Tier": "High Risk",
           "Lot Value (INR)": 2814.19,
-          "Predicted Failure (1=Fail)": 1,
+          "Predicted Failure (1=Fail)": 1.0,
           "Insp Type": "ZJCO89"
         },
         {
-          "Inspection Lot ID": 890000021942,
+          "Inspection Lot ID": "890000047741",
+          "Material Description": "PACKED CEMENT PPC,50KG",
+          "Plant": "1022",
+          "P(Failure)": 0.6763,
+          "Risk Tier": "High Risk",
+          "Lot Value (INR)": 2818.99,
+          "Predicted Failure (1=Fail)": 1.0,
+          "Insp Type": "ZJCO89"
+        },
+        {
+          "Inspection Lot ID": "40000007419",
+          "Material Description": "BOM JK ICON ACTIVE WHITE",
+          "Plant": "M101",
+          "P(Failure)": 0.7225,
+          "Risk Tier": "Critical Failure Risk",
+          "Lot Value (INR)": 457475.844,
+          "Predicted Failure (1=Fail)": 1.0,
+          "Insp Type": "04"
+        },
+        {
+          "Inspection Lot ID": "890000047812",
+          "Material Description": "PACKED CEMENT PPC,50KG",
+          "Plant": "1022",
+          "P(Failure)": 0.8119,
+          "Risk Tier": "Critical Failure Risk",
+          "Lot Value (INR)": 2818.99,
+          "Predicted Failure (1=Fail)": 1.0,
+          "Insp Type": "ZJBIS89"
+        },
+        {
+          "Inspection Lot ID": "40000007388",
+          "Material Description": "BOM JK ICON ACTIVE WHITE",
+          "Plant": "M101",
+          "P(Failure)": 0.7286,
+          "Risk Tier": "Critical Failure Risk",
+          "Lot Value (INR)": 601141.8,
+          "Predicted Failure (1=Fail)": 1.0,
+          "Insp Type": "04"
+        },
+        {
+          "Inspection Lot ID": "40000007433",
+          "Material Description": "BOM Acro Rock Spray M 160726C",
+          "Plant": "M102",
+          "P(Failure)": 0.8151,
+          "Risk Tier": "Critical Failure Risk",
+          "Lot Value (INR)": 6235.0,
+          "Predicted Failure (1=Fail)": 1.0,
+          "Insp Type": "04"
+        },
+        {
+          "Inspection Lot ID": "890000047811",
+          "Material Description": "PACKED CEMENT PPC,50KG",
+          "Plant": "1022",
+          "P(Failure)": 0.8119,
+          "Risk Tier": "Critical Failure Risk",
+          "Lot Value (INR)": 2818.99,
+          "Predicted Failure (1=Fail)": 1.0,
+          "Insp Type": "ZJBIS89"
+        },
+        {
+          "Inspection Lot ID": "890000047691",
           "Material Description": "Clinker",
-          "Plant": 1906,
-          "P(Failure)": 0.5389,
+          "Plant": "1001",
+          "P(Failure)": 0.6998,
           "Risk Tier": "High Risk",
-          "Lot Value (INR)": 2686.04,
-          "Predicted Failure (1=Fail)": 1,
+          "Lot Value (INR)": 307850.0,
+          "Predicted Failure (1=Fail)": 1.0,
           "Insp Type": "ZJCO89"
         },
         {
-          "Inspection Lot ID": 80000048085,
-          "Material Description": "VENEZUELAN PC",
-          "Plant": 1901,
-          "P(Failure)": 0.6903,
+          "Inspection Lot ID": "890000047791",
+          "Material Description": "PACKED CEMENT OPC,53G,50KG",
+          "Plant": "1907",
+          "P(Failure)": 0.568,
           "Risk Tier": "High Risk",
-          "Lot Value (INR)": 625701.6234,
-          "Predicted Failure (1=Fail)": 1,
+          "Lot Value (INR)": 392234.0,
+          "Predicted Failure (1=Fail)": 1.0,
+          "Insp Type": "ZJCO89"
+        },
+        {
+          "Inspection Lot ID": "890000047786",
+          "Material Description": "PACKED CEMENT OPC,53G,50KG",
+          "Plant": "1907",
+          "P(Failure)": 0.568,
+          "Risk Tier": "High Risk",
+          "Lot Value (INR)": 392234.0,
+          "Predicted Failure (1=Fail)": 1.0,
+          "Insp Type": "ZJCO89"
+        },
+        {
+          "Inspection Lot ID": "890000047792",
+          "Material Description": "PACKED CEMENT OPC,53G,50KG",
+          "Plant": "1907",
+          "P(Failure)": 0.568,
+          "Risk Tier": "High Risk",
+          "Lot Value (INR)": 392234.0,
+          "Predicted Failure (1=Fail)": 1.0,
+          "Insp Type": "ZJCO89"
+        },
+        {
+          "Inspection Lot ID": "890000047852",
+          "Material Description": "PACKED CEMENT OPC,53G,50KG",
+          "Plant": "1907",
+          "P(Failure)": 0.7787,
+          "Risk Tier": "Critical Failure Risk",
+          "Lot Value (INR)": 392234.0,
+          "Predicted Failure (1=Fail)": 1.0,
+          "Insp Type": "ZJBIS89"
+        },
+        {
+          "Inspection Lot ID": "890000047787",
+          "Material Description": "PACKED CEMENT OPC,53G,50KG",
+          "Plant": "1907",
+          "P(Failure)": 0.568,
+          "Risk Tier": "High Risk",
+          "Lot Value (INR)": 392234.0,
+          "Predicted Failure (1=Fail)": 1.0,
+          "Insp Type": "ZJCO89"
+        },
+        {
+          "Inspection Lot ID": "890000047790",
+          "Material Description": "PACKED CEMENT OPC,53G,50KG",
+          "Plant": "1907",
+          "P(Failure)": 0.568,
+          "Risk Tier": "High Risk",
+          "Lot Value (INR)": 392234.0,
+          "Predicted Failure (1=Fail)": 1.0,
+          "Insp Type": "ZJCO89"
+        },
+        {
+          "Inspection Lot ID": "30000010872",
+          "Material Description": "BOM Maximo Ultra M1/Acroguard 3X AC04",
+          "Plant": "M101",
+          "P(Failure)": 0.7907,
+          "Risk Tier": "Critical Failure Risk",
+          "Lot Value (INR)": 1063095.0,
+          "Predicted Failure (1=Fail)": 1.0,
+          "Insp Type": "03"
+        },
+        {
+          "Inspection Lot ID": "30000010876",
+          "Material Description": "BOM JK WIPEAZY P1",
+          "Plant": "M101",
+          "P(Failure)": 0.7687,
+          "Risk Tier": "Critical Failure Risk",
+          "Lot Value (INR)": 843832.0,
+          "Predicted Failure (1=Fail)": 1.0,
+          "Insp Type": "03"
+        },
+        {
+          "Inspection Lot ID": "40000007386",
+          "Material Description": "BOMWALL PERMA RUSTIC REGULAR 101025 L",
+          "Plant": "M102",
+          "P(Failure)": 0.7393,
+          "Risk Tier": "Critical Failure Risk",
+          "Lot Value (INR)": 71031.25,
+          "Predicted Failure (1=Fail)": 1.0,
+          "Insp Type": "04"
+        },
+        {
+          "Inspection Lot ID": "40000007418",
+          "Material Description": "PERMA POLYUNDER 43/575",
+          "Plant": "M102",
+          "P(Failure)": 0.8245,
+          "Risk Tier": "Critical Failure Risk",
+          "Lot Value (INR)": 1816.92,
+          "Predicted Failure (1=Fail)": 1.0,
+          "Insp Type": "04"
+        },
+        {
+          "Inspection Lot ID": "10000645233",
+          "Material Description": "DRY FLY ASH",
+          "Plant": "1932",
+          "P(Failure)": 0.5694,
+          "Risk Tier": "High Risk",
+          "Lot Value (INR)": 0.0,
+          "Predicted Failure (1=Fail)": 1.0,
+          "Insp Type": "01"
+        },
+        {
+          "Inspection Lot ID": "10000644669",
+          "Material Description": "DRY FLY ASH",
+          "Plant": "1932",
+          "P(Failure)": 0.5809,
+          "Risk Tier": "High Risk",
+          "Lot Value (INR)": 0.0,
+          "Predicted Failure (1=Fail)": 1.0,
+          "Insp Type": "01"
+        },
+        {
+          "Inspection Lot ID": "10000645364",
+          "Material Description": "LIME STONE PURCHASES",
+          "Plant": "1004",
+          "P(Failure)": 0.827,
+          "Risk Tier": "Critical Failure Risk",
+          "Lot Value (INR)": 144512.7492,
+          "Predicted Failure (1=Fail)": 1.0,
+          "Insp Type": "01"
+        },
+        {
+          "Inspection Lot ID": "10000645361",
+          "Material Description": "LIME STONE PURCHASES",
+          "Plant": "1004",
+          "P(Failure)": 0.859,
+          "Risk Tier": "Critical Failure Risk",
+          "Lot Value (INR)": 577857.0812,
+          "Predicted Failure (1=Fail)": 1.0,
+          "Insp Type": "01"
+        },
+        {
+          "Inspection Lot ID": "10000645362",
+          "Material Description": "LIME STONE PURCHASES",
+          "Plant": "1004",
+          "P(Failure)": 0.8614,
+          "Risk Tier": "Critical Failure Risk",
+          "Lot Value (INR)": 465534.3216,
+          "Predicted Failure (1=Fail)": 1.0,
+          "Insp Type": "01"
+        },
+        {
+          "Inspection Lot ID": "40000007445",
+          "Material Description": "PCONT JK NINJA ACTIVE 1 LTR - HTL",
+          "Plant": "M101",
+          "P(Failure)": 0.7033,
+          "Risk Tier": "Critical Failure Risk",
+          "Lot Value (INR)": 34360.0,
+          "Predicted Failure (1=Fail)": 1.0,
+          "Insp Type": "04"
+        },
+        {
+          "Inspection Lot ID": "40000007438",
+          "Material Description": "BKT JK NINJA TRU SHYN 10 LTR - HTL",
+          "Plant": "M101",
+          "P(Failure)": 0.7128,
+          "Risk Tier": "Critical Failure Risk",
+          "Lot Value (INR)": 10651.6,
+          "Predicted Failure (1=Fail)": 1.0,
+          "Insp Type": "04"
+        },
+        {
+          "Inspection Lot ID": "40000007441",
+          "Material Description": "BKT JK WIPEAZY 20 LTR - HTL",
+          "Plant": "M101",
+          "P(Failure)": 0.715,
+          "Risk Tier": "Critical Failure Risk",
+          "Lot Value (INR)": 80489.2,
+          "Predicted Failure (1=Fail)": 1.0,
+          "Insp Type": "04"
+        },
+        {
+          "Inspection Lot ID": "40000007423",
+          "Material Description": "PCONT JK NINJA ACTIVE 1 LTR - HTL",
+          "Plant": "M101",
+          "P(Failure)": 0.7033,
+          "Risk Tier": "Critical Failure Risk",
+          "Lot Value (INR)": 34360.0,
+          "Predicted Failure (1=Fail)": 1.0,
+          "Insp Type": "04"
+        },
+        {
+          "Inspection Lot ID": "40000007436",
+          "Material Description": "BKT JK ICON TRU SHYN V2 20 LTR - HTL",
+          "Plant": "M101",
+          "P(Failure)": 0.6992,
+          "Risk Tier": "High Risk",
+          "Lot Value (INR)": 91470.0,
+          "Predicted Failure (1=Fail)": 1.0,
+          "Insp Type": "04"
+        },
+        {
+          "Inspection Lot ID": "10000644179",
+          "Material Description": "MARBLE 16-40",
+          "Plant": "M102",
+          "P(Failure)": 0.591,
+          "Risk Tier": "High Risk",
+          "Lot Value (INR)": 9000.0,
+          "Predicted Failure (1=Fail)": 1.0,
+          "Insp Type": "01"
+        },
+        {
+          "Inspection Lot ID": "40000007434",
+          "Material Description": "BKT JK MAXIMO ULTRA 10 LTR - HTL",
+          "Plant": "M101",
+          "P(Failure)": 0.7732,
+          "Risk Tier": "Critical Failure Risk",
+          "Lot Value (INR)": 1718.0,
+          "Predicted Failure (1=Fail)": 1.0,
+          "Insp Type": "04"
+        },
+        {
+          "Inspection Lot ID": "80000088853",
+          "Material Description": "IMP PET COKE",
+          "Plant": "1015",
+          "P(Failure)": 0.5608,
+          "Risk Tier": "High Risk",
+          "Lot Value (INR)": 262566.459,
+          "Predicted Failure (1=Fail)": 1.0,
           "Insp Type": "08"
         },
         {
-          "Inspection Lot ID": 80000048095,
-          "Material Description": "VENEZUELAN PC",
-          "Plant": 1901,
-          "P(Failure)": 0.6892,
+          "Inspection Lot ID": "10000645081",
+          "Material Description": "STYRENE ACRYLIC EMULSION 45%",
+          "Plant": "M101",
+          "P(Failure)": 0.6606,
           "Risk Tier": "High Risk",
-          "Lot Value (INR)": 630923.4828,
-          "Predicted Failure (1=Fail)": 1,
+          "Lot Value (INR)": 1934266.0,
+          "Predicted Failure (1=Fail)": 1.0,
+          "Insp Type": "01"
+        },
+        {
+          "Inspection Lot ID": "80000088851",
+          "Material Description": "IMP PET COKE",
+          "Plant": "1015",
+          "P(Failure)": 0.5608,
+          "Risk Tier": "High Risk",
+          "Lot Value (INR)": 258126.9295,
+          "Predicted Failure (1=Fail)": 1.0,
           "Insp Type": "08"
         },
         {
-          "Inspection Lot ID": 80000048002,
-          "Material Description": "VENEZUELAN PC",
-          "Plant": 1001,
-          "P(Failure)": 0.6498,
+          "Inspection Lot ID": "10000645128",
+          "Material Description": "PP BAGS 50Kg , CEM-II(42.5N)",
+          "Plant": "7001",
+          "P(Failure)": 0.8746,
+          "Risk Tier": "Critical Failure Risk",
+          "Lot Value (INR)": 16723.8,
+          "Predicted Failure (1=Fail)": 1.0,
+          "Insp Type": "01"
+        },
+        {
+          "Inspection Lot ID": "10000644750",
+          "Material Description": "DRY FLY ASH",
+          "Plant": "1932",
+          "P(Failure)": 0.582,
           "Risk Tier": "High Risk",
-          "Lot Value (INR)": 569911.095,
-          "Predicted Failure (1=Fail)": 1,
-          "Insp Type": "08"
+          "Lot Value (INR)": 0.0,
+          "Predicted Failure (1=Fail)": 1.0,
+          "Insp Type": "01"
+        },
+        {
+          "Inspection Lot ID": "10000644680",
+          "Material Description": "DRY FLY ASH",
+          "Plant": "1932",
+          "P(Failure)": 0.582,
+          "Risk Tier": "High Risk",
+          "Lot Value (INR)": 0.0,
+          "Predicted Failure (1=Fail)": 1.0,
+          "Insp Type": "01"
+        },
+        {
+          "Inspection Lot ID": "890000047813",
+          "Material Description": "PACKED CEMENT PREMIUM PPC - PP AD Star",
+          "Plant": "1022",
+          "P(Failure)": 0.825,
+          "Risk Tier": "Critical Failure Risk",
+          "Lot Value (INR)": 3104.94,
+          "Predicted Failure (1=Fail)": 1.0,
+          "Insp Type": "ZJBIS89"
+        },
+        {
+          "Inspection Lot ID": "890000047783",
+          "Material Description": "PACKED CEMENT OPC,43G,50KG",
+          "Plant": "1907",
+          "P(Failure)": 0.5831,
+          "Risk Tier": "High Risk",
+          "Lot Value (INR)": 374989.0,
+          "Predicted Failure (1=Fail)": 1.0,
+          "Insp Type": "ZJCO89"
+        },
+        {
+          "Inspection Lot ID": "40000007421",
+          "Material Description": "BOM Icon Active D1/Rhino Eco Ac08",
+          "Plant": "M101",
+          "P(Failure)": 0.6846,
+          "Risk Tier": "High Risk",
+          "Lot Value (INR)": 108621.2991,
+          "Predicted Failure (1=Fail)": 1.0,
+          "Insp Type": "04"
+        },
+        {
+          "Inspection Lot ID": "40000007458",
+          "Material Description": "BOM JK PRO MAXX ICON P1",
+          "Plant": "M101",
+          "P(Failure)": 0.7091,
+          "Risk Tier": "Critical Failure Risk",
+          "Lot Value (INR)": 76390.314,
+          "Predicted Failure (1=Fail)": 1.0,
+          "Insp Type": "04"
+        },
+        {
+          "Inspection Lot ID": "890000047803",
+          "Material Description": "Clinker",
+          "Plant": "1901",
+          "P(Failure)": 0.5553,
+          "Risk Tier": "High Risk",
+          "Lot Value (INR)": 2063.06,
+          "Predicted Failure (1=Fail)": 1.0,
+          "Insp Type": "ZJCO89"
+        },
+        {
+          "Inspection Lot ID": "40000007459",
+          "Material Description": "BOM Icon Active P2/Rhino Eco Ac02",
+          "Plant": "M101",
+          "P(Failure)": 0.7421,
+          "Risk Tier": "Critical Failure Risk",
+          "Lot Value (INR)": 639574.72,
+          "Predicted Failure (1=Fail)": 1.0,
+          "Insp Type": "04"
+        },
+        {
+          "Inspection Lot ID": "890000047780",
+          "Material Description": "PACKED CEMENT OPC,43G,50KG",
+          "Plant": "1907",
+          "P(Failure)": 0.5831,
+          "Risk Tier": "High Risk",
+          "Lot Value (INR)": 374989.0,
+          "Predicted Failure (1=Fail)": 1.0,
+          "Insp Type": "ZJCO89"
+        },
+        {
+          "Inspection Lot ID": "890000047781",
+          "Material Description": "PACKED CEMENT OPC,43G,50KG",
+          "Plant": "1907",
+          "P(Failure)": 0.5831,
+          "Risk Tier": "High Risk",
+          "Lot Value (INR)": 374989.0,
+          "Predicted Failure (1=Fail)": 1.0,
+          "Insp Type": "ZJCO89"
+        },
+        {
+          "Inspection Lot ID": "890000047814",
+          "Material Description": "PACKED CEMENT PREMIUM PPC - PP AD Star",
+          "Plant": "1022",
+          "P(Failure)": 0.825,
+          "Risk Tier": "Critical Failure Risk",
+          "Lot Value (INR)": 3104.94,
+          "Predicted Failure (1=Fail)": 1.0,
+          "Insp Type": "ZJBIS89"
+        },
+        {
+          "Inspection Lot ID": "890000047851",
+          "Material Description": "PACKED CEMENT OPC,43G,50KG",
+          "Plant": "1907",
+          "P(Failure)": 0.7813,
+          "Risk Tier": "Critical Failure Risk",
+          "Lot Value (INR)": 374989.0,
+          "Predicted Failure (1=Fail)": 1.0,
+          "Insp Type": "ZJBIS89"
         }
       ],
       "advanced_ml": {
         "confusion_matrix": {
-          "tp": 2442,
-          "fp": 2521,
-          "fn": 750,
-          "tn": 29287,
-          "precision": 0.492,
+          "tp": 25477,
+          "fp": 40013,
+          "fn": 7830,
+          "tn": 591112,
+          "precision": 0.389,
           "recall": 0.765,
-          "f1": 0.599,
-          "accuracy": 0.907
+          "f1": 0.516,
+          "accuracy": 0.928
         },
         "threshold_curve": {
           "thresholds": [
@@ -4238,40 +4082,40 @@ window.PORTFOLIO_DATA = {
             "0.9"
           ],
           "clean_count": [
-            10250,
-            6535,
-            4167,
-            2657,
-            1694,
-            1080,
-            688,
-            439,
-            280,
-            178
+            206889,
+            131918,
+            84114,
+            53634,
+            34198,
+            21805,
+            13904,
+            8865,
+            5652,
+            3604
           ],
           "exception_count": [
-            122,
-            189,
-            257,
-            325,
-            393,
-            461,
-            529,
-            596,
-            664,
-            732
+            1273,
+            1981,
+            2689,
+            3396,
+            4104,
+            4812,
+            5520,
+            6227,
+            6935,
+            7643
           ],
           "total_count": [
-            10372,
-            6724,
-            4424,
-            2982,
-            2087,
-            1541,
-            1217,
-            1035,
-            944,
-            910
+            208162,
+            133899,
+            86803,
+            57030,
+            38302,
+            26617,
+            19424,
+            15092,
+            12587,
+            11247
           ]
         },
         "calibration_curve": {
@@ -4355,615 +4199,615 @@ window.PORTFOLIO_DATA = {
         "EKKN",
         "AUFK"
       ],
-      "total_records": 25000,
-      "exceptions_count": 8145,
-      "exception_rate_pct": 32.58,
-      "financial_exposure_inr": 2138300000.0000002,
-      "financial_exposure_cr": 213.83,
-      "avg_confidence_score": 0.893,
-      "champion_model": "EWMA + Trend Slope Forecast",
-      "champion_metric": "0.8930 ROC-AUC",
+      "total_records": 23230,
+      "exceptions_count": 756,
+      "exception_rate_pct": 3.25,
+      "financial_exposure_inr": 576005183.21,
+      "financial_exposure_cr": 57.6,
+      "avg_confidence_score": 0.409,
+      "champion_model": "EWMA + Seasonality Trend Cluster",
+      "champion_metric": "0.8120 Stability",
       "risk_distribution": {
-        "Critical": 1940,
-        "High": 3360,
-        "Medium": 4036,
-        "Low": 15664
+        "Critical": 91,
+        "High": 248,
+        "Medium": 4167,
+        "Low": 18724
       },
       "category_breakdown": [
         {
-          "label": "HO Kanpur (Grey)",
-          "count": 1670
-        },
-        {
-          "label": "J.K. Cement Works Fujairah FZC",
-          "count": 1665
-        },
-        {
           "label": "J.K. White Cement Works ,Gotan",
-          "count": 1000
+          "count": 4304
         },
         {
-          "label": "JK Cement Works - Panna",
-          "count": 915
+          "label": "HO Kanpur (Grey)",
+          "count": 4263
         },
         {
           "label": "J.K. Cement Works Nimbahera",
-          "count": 475
+          "count": 2499
         },
         {
-          "label": "NBH. GREY CEMENT (HO)",
-          "count": 465
+          "label": "J.K. Cement Works , Gotan",
+          "count": 2150
         },
         {
-          "label": "J.K White Cement Works (HO)",
-          "count": 415
+          "label": "J.K. White, Katni",
+          "count": 1578
+        },
+        {
+          "label": "J.K. Cement Works Fujairah FZC",
+          "count": 1206
+        },
+        {
+          "label": "J.K. Cement Works, Muddapur",
+          "count": 1182
         }
       ],
       "feature_importance": [
         {
-          "feature": "feature",
-          "importance": 0,
-          "description": "Direct Mathematical Influence On Cost Center Spend Forecasting & Budget Governance:"
+          "feature": "expected_spend_baseline_inr",
+          "importance": 0.4976,
+          "description": "Expected Spend Baseline Inr"
         },
         {
-          "feature": "spend_overrun_risk_index",
-          "importance": 0.2667,
-          "description": "(Composite Departmental Spend Overrun & Forecast Variance Risk Index [0-100], defined as 100 - spend_forecast_stability_score)"
+          "feature": "cc_spend_zscore",
+          "importance": 0.2344,
+          "description": "Cc Spend Zscore"
         },
         {
-          "feature": "spend_forecast_stability_score",
-          "importance": 0.2662,
-          "description": "(Composite Cost Center Spend Forecast Stability Score [0-100] combining Time-Series Trend Alignment 42%, Budget Commitment Coverage 32%, and Posting Cadence Regularity 26%)"
+          "feature": "dept_hist_mean_spend_inr",
+          "importance": 0.1098,
+          "description": "Dept Hist Mean Spend Inr"
         },
         {
-          "feature": "timeseries_trend_alignment_score",
-          "importance": 0.091,
-          "description": "(Normalized Time-Series Trend & EWMA Alignment Score [0-100] measuring proximity of actual cost center spend to EWMA forecast and rolling baseline)"
+          "feature": "tx_share_of_monthly_spend",
+          "importance": 0.0526,
+          "description": "Tx Share Of Monthly Spend"
         },
         {
-          "feature": "is_spend_forecast_overrun",
-          "importance": 0.0766,
-          "description": "(Binary indicator = 1 when transaction or monthly spend exceeds time-series forecast thresholds by >= 2.25x or Z >= 1.85)"
+          "feature": "cc_monthly_mean_tx_inr",
+          "importance": 0.0353,
+          "description": "Cc Monthly Mean Tx Inr"
+        },
+        {
+          "feature": "posting_lag_days",
+          "importance": 0.0307,
+          "description": "Posting Lag Days"
+        },
+        {
+          "feature": "cc_monthly_max_tx_inr",
+          "importance": 0.0226,
+          "description": "Cc Monthly Max Tx Inr"
         },
         {
           "feature": "cc_mom_spend_growth_pct",
-          "importance": 0.0726,
-          "description": "(Month-over-Month percentage growth rate in total departmental spend for the Cost Center KOSTL)"
-        },
-        {
-          "feature": "spend_to_ewma_ratio",
-          "importance": 0.0404,
-          "description": "(Ratio of actual monthly Cost Center spend to its unsupervised EWMA time-series forecast cc_monthly_actual_spend_inr / cc_ewma_spend_forecast_inr)"
-        },
-        {
-          "feature": "cc_seasonality_index",
-          "importance": 0.0378,
-          "description": "(Seasonal spend index defined as current month Cost Center spend divided by expanding multi-month rolling mean spend)"
+          "importance": 0.0033,
+          "description": "Cc Mom Spend Growth Pct"
         }
       ],
       "model_rankings": [],
       "display_columns": [
         "Cost Center (KOSTL)",
+        "Cost Center Name (CSKS)",
         "Plant Name (T001W)",
         "Spend Overrun Exception Prob",
         "Risk Category",
+        "Actual Spend INR (WRBTR)",
         "Predicted Spend Exception",
-        "Company Code (BUKRS)",
-        "Company Name (BUTXT)",
-        "Accounting Doc (BELNR)"
+        "Company Code (BUKRS)"
       ],
       "sample_records": [
         {
-          "Cost Center (KOSTL)": 101042700,
-          "Plant Name (T001W)": null,
-          "Spend Overrun Exception Prob": 0.9627,
+          "Cost Center (KOSTL)": "102443900",
+          "Cost Center Name (CSKS)": "Putty- CMO COMMON",
+          "Plant Name (T001W)": "HO Kanpur (Grey)",
+          "Spend Overrun Exception Prob": 0.9991,
           "Risk Category": "Critical Risk",
-          "Predicted Spend Exception": 1,
-          "Company Code (BUKRS)": 1000,
-          "Company Name (BUTXT)": "J.K. CEMENT LIMITED",
-          "Accounting Doc (BELNR)": 1900072483
+          "Actual Spend INR (WRBTR)": 2339473.78,
+          "Predicted Spend Exception": 1.0,
+          "Company Code (BUKRS)": "1000"
         },
         {
-          "Cost Center (KOSTL)": 101042700,
-          "Plant Name (T001W)": null,
-          "Spend Overrun Exception Prob": 0.9627,
-          "Risk Category": "Critical Risk",
-          "Predicted Spend Exception": 1,
-          "Company Code (BUKRS)": 1000,
-          "Company Name (BUTXT)": "J.K. CEMENT LIMITED",
-          "Accounting Doc (BELNR)": 1900072483
+          "Cost Center (KOSTL)": "100421118",
+          "Cost Center Name (CSKS)": "Pollution Control",
+          "Plant Name (T001W)": "J.K. Cement Works, Mangrol",
+          "Spend Overrun Exception Prob": 0.9981,
+          "Risk Category": "Medium Risk",
+          "Actual Spend INR (WRBTR)": 900.0,
+          "Predicted Spend Exception": 1.0,
+          "Company Code (BUKRS)": "1000"
         },
         {
-          "Cost Center (KOSTL)": 490142100,
-          "Plant Name (T001W)": null,
-          "Spend Overrun Exception Prob": 0.9626,
-          "Risk Category": "Critical Risk",
-          "Predicted Spend Exception": 1,
-          "Company Code (BUKRS)": 1000,
-          "Company Name (BUTXT)": "J.K. CEMENT LIMITED",
-          "Accounting Doc (BELNR)": 1900060401
+          "Cost Center (KOSTL)": "100421118",
+          "Cost Center Name (CSKS)": "Pollution Control",
+          "Plant Name (T001W)": "J.K. Cement Works, Mangrol",
+          "Spend Overrun Exception Prob": 0.9981,
+          "Risk Category": "Medium Risk",
+          "Actual Spend INR (WRBTR)": 900.0,
+          "Predicted Spend Exception": 1.0,
+          "Company Code (BUKRS)": "1000"
         },
         {
-          "Cost Center (KOSTL)": 490142100,
-          "Plant Name (T001W)": null,
-          "Spend Overrun Exception Prob": 0.9626,
-          "Risk Category": "Critical Risk",
-          "Predicted Spend Exception": 1,
-          "Company Code (BUKRS)": 1000,
-          "Company Name (BUTXT)": "J.K. CEMENT LIMITED",
-          "Accounting Doc (BELNR)": 1900060401
+          "Cost Center (KOSTL)": "700121301",
+          "Cost Center Name (CSKS)": "QLTY Control-X-RAY",
+          "Plant Name (T001W)": "J.K. Cement Works Fujairah FZC",
+          "Spend Overrun Exception Prob": 0.9981,
+          "Risk Category": "Medium Risk",
+          "Actual Spend INR (WRBTR)": 440.0,
+          "Predicted Spend Exception": 1.0,
+          "Company Code (BUKRS)": "7001"
         },
         {
-          "Cost Center (KOSTL)": 100441000,
-          "Plant Name (T001W)": null,
-          "Spend Overrun Exception Prob": 0.9626,
-          "Risk Category": "Critical Risk",
-          "Predicted Spend Exception": 1,
-          "Company Code (BUKRS)": 1000,
-          "Company Name (BUTXT)": "J.K. CEMENT LIMITED",
-          "Accounting Doc (BELNR)": 1900030749
+          "Cost Center (KOSTL)": "100451120",
+          "Cost Center Name (CSKS)": "Tilakhera Common",
+          "Plant Name (T001W)": "J.K. Cement Works, Mangrol",
+          "Spend Overrun Exception Prob": 0.9979,
+          "Risk Category": "Medium Risk",
+          "Actual Spend INR (WRBTR)": 540.0,
+          "Predicted Spend Exception": 1.0,
+          "Company Code (BUKRS)": "1000"
         },
         {
-          "Cost Center (KOSTL)": 100441000,
-          "Plant Name (T001W)": null,
-          "Spend Overrun Exception Prob": 0.9626,
-          "Risk Category": "Critical Risk",
-          "Predicted Spend Exception": 1,
-          "Company Code (BUKRS)": 1000,
-          "Company Name (BUTXT)": "J.K. CEMENT LIMITED",
-          "Accounting Doc (BELNR)": 1900030749
+          "Cost Center (KOSTL)": "100415401",
+          "Cost Center Name (CSKS)": "Cement Mill -IV-Mec",
+          "Plant Name (T001W)": "J.K. Cement Works, Mangrol",
+          "Spend Overrun Exception Prob": 0.9975,
+          "Risk Category": "Medium Risk",
+          "Actual Spend INR (WRBTR)": 540.0,
+          "Predicted Spend Exception": 1.0,
+          "Company Code (BUKRS)": "1000"
         },
         {
-          "Cost Center (KOSTL)": 105331102,
-          "Plant Name (T001W)": null,
-          "Spend Overrun Exception Prob": 0.9625,
-          "Risk Category": "Critical Risk",
-          "Predicted Spend Exception": 1,
-          "Company Code (BUKRS)": 3500,
-          "Company Name (BUTXT)": "JK MAXX PAINTS LIMITED",
-          "Accounting Doc (BELNR)": 1900000057
+          "Cost Center (KOSTL)": "101527202",
+          "Cost Center Name (CSKS)": "Environment Manageme",
+          "Plant Name (T001W)": "J.K. White Cement Works ,Gotan",
+          "Spend Overrun Exception Prob": 0.9974,
+          "Risk Category": "Medium Risk",
+          "Actual Spend INR (WRBTR)": 3813.0,
+          "Predicted Spend Exception": 1.0,
+          "Company Code (BUKRS)": "1000"
         },
         {
-          "Cost Center (KOSTL)": 105331102,
-          "Plant Name (T001W)": null,
-          "Spend Overrun Exception Prob": 0.9625,
-          "Risk Category": "Critical Risk",
-          "Predicted Spend Exception": 1,
-          "Company Code (BUKRS)": 3500,
-          "Company Name (BUTXT)": "JK MAXX PAINTS LIMITED",
-          "Accounting Doc (BELNR)": 1900000057
+          "Cost Center (KOSTL)": "101527202",
+          "Cost Center Name (CSKS)": "Environment Manageme",
+          "Plant Name (T001W)": "J.K. White Cement Works ,Gotan",
+          "Spend Overrun Exception Prob": 0.9974,
+          "Risk Category": "Medium Risk",
+          "Actual Spend INR (WRBTR)": 3813.0,
+          "Predicted Spend Exception": 1.0,
+          "Company Code (BUKRS)": "1000"
         },
         {
-          "Cost Center (KOSTL)": 103441000,
-          "Plant Name (T001W)": null,
-          "Spend Overrun Exception Prob": 0.9625,
-          "Risk Category": "Critical Risk",
-          "Predicted Spend Exception": 1,
-          "Company Code (BUKRS)": 1000,
-          "Company Name (BUTXT)": "J.K. CEMENT LIMITED",
-          "Accounting Doc (BELNR)": 1900030497
+          "Cost Center (KOSTL)": "102513110",
+          "Cost Center Name (CSKS)": "Dolo Mill-MECH",
+          "Plant Name (T001W)": "J.K. White, Katni",
+          "Spend Overrun Exception Prob": 0.9973,
+          "Risk Category": "Medium Risk",
+          "Actual Spend INR (WRBTR)": 1787.0,
+          "Predicted Spend Exception": 1.0,
+          "Company Code (BUKRS)": "1000"
         },
         {
-          "Cost Center (KOSTL)": 103441000,
-          "Plant Name (T001W)": null,
-          "Spend Overrun Exception Prob": 0.9625,
-          "Risk Category": "Critical Risk",
-          "Predicted Spend Exception": 1,
-          "Company Code (BUKRS)": 1000,
-          "Company Name (BUTXT)": "J.K. CEMENT LIMITED",
-          "Accounting Doc (BELNR)": 1900030497
-        },
-        {
-          "Cost Center (KOSTL)": 101042123,
-          "Plant Name (T001W)": "CMO Delhi",
-          "Spend Overrun Exception Prob": 0.9625,
-          "Risk Category": "Critical Risk",
-          "Predicted Spend Exception": 1,
-          "Company Code (BUKRS)": 1000,
-          "Company Name (BUTXT)": "J.K. CEMENT LIMITED",
-          "Accounting Doc (BELNR)": 1900030117
-        },
-        {
-          "Cost Center (KOSTL)": 101042123,
-          "Plant Name (T001W)": "CMO Delhi",
-          "Spend Overrun Exception Prob": 0.9625,
-          "Risk Category": "Critical Risk",
-          "Predicted Spend Exception": 1,
-          "Company Code (BUKRS)": 1000,
-          "Company Name (BUTXT)": "J.K. CEMENT LIMITED",
-          "Accounting Doc (BELNR)": 1900030117
-        },
-        {
-          "Cost Center (KOSTL)": 410044102,
-          "Plant Name (T001W)": "HO-KANPUR(POP)",
-          "Spend Overrun Exception Prob": 0.9624,
-          "Risk Category": "Critical Risk",
-          "Predicted Spend Exception": 1,
-          "Company Code (BUKRS)": 1000,
-          "Company Name (BUTXT)": "J.K. CEMENT LIMITED",
-          "Accounting Doc (BELNR)": 8201670749
-        },
-        {
-          "Cost Center (KOSTL)": 700126100,
-          "Plant Name (T001W)": null,
-          "Spend Overrun Exception Prob": 0.9624,
-          "Risk Category": "Critical Risk",
-          "Predicted Spend Exception": 1,
-          "Company Code (BUKRS)": 7001,
-          "Company Name (BUTXT)": "J.K.CEMENT Works Fuj FZC",
-          "Accounting Doc (BELNR)": 2200003252
-        },
-        {
-          "Cost Center (KOSTL)": 700141300,
-          "Plant Name (T001W)": null,
-          "Spend Overrun Exception Prob": 0.9624,
-          "Risk Category": "Critical Risk",
-          "Predicted Spend Exception": 1,
-          "Company Code (BUKRS)": 7001,
-          "Company Name (BUTXT)": "J.K.CEMENT Works Fuj FZC",
-          "Accounting Doc (BELNR)": 2200003392
-        },
-        {
-          "Cost Center (KOSTL)": 200131000,
+          "Cost Center (KOSTL)": "200121110",
+          "Cost Center Name (CSKS)": "Raw material",
           "Plant Name (T001W)": "J.K. Cement Works, Muddapur",
-          "Spend Overrun Exception Prob": 0.9624,
-          "Risk Category": "Critical Risk",
-          "Predicted Spend Exception": 1,
-          "Company Code (BUKRS)": 1000,
-          "Company Name (BUTXT)": "J.K. CEMENT LIMITED",
-          "Accounting Doc (BELNR)": 1900072494
+          "Spend Overrun Exception Prob": 0.9972,
+          "Risk Category": "Medium Risk",
+          "Actual Spend INR (WRBTR)": 5170.0,
+          "Predicted Spend Exception": 1.0,
+          "Company Code (BUKRS)": "1000"
         },
         {
-          "Cost Center (KOSTL)": 200131000,
+          "Cost Center (KOSTL)": "200121110",
+          "Cost Center Name (CSKS)": "Raw material",
           "Plant Name (T001W)": "J.K. Cement Works, Muddapur",
-          "Spend Overrun Exception Prob": 0.9624,
-          "Risk Category": "Critical Risk",
-          "Predicted Spend Exception": 1,
-          "Company Code (BUKRS)": 1000,
-          "Company Name (BUTXT)": "J.K. CEMENT LIMITED",
-          "Accounting Doc (BELNR)": 1900072494
+          "Spend Overrun Exception Prob": 0.9972,
+          "Risk Category": "Medium Risk",
+          "Actual Spend INR (WRBTR)": 5170.0,
+          "Predicted Spend Exception": 1.0,
+          "Company Code (BUKRS)": "1000"
         },
         {
-          "Cost Center (KOSTL)": 100133003,
+          "Cost Center (KOSTL)": "190221025",
+          "Cost Center Name (CSKS)": "IT AND EXPENSES",
+          "Plant Name (T001W)": "JK Cement Works - Hamirpur",
+          "Spend Overrun Exception Prob": 0.9969,
+          "Risk Category": "Medium Risk",
+          "Actual Spend INR (WRBTR)": 4900.0,
+          "Predicted Spend Exception": 1.0,
+          "Company Code (BUKRS)": "1000"
+        },
+        {
+          "Cost Center (KOSTL)": "200111120",
+          "Cost Center Name (CSKS)": "Mudhapur -Common",
+          "Plant Name (T001W)": "J.K. Cement Works, Muddapur",
+          "Spend Overrun Exception Prob": 0.9964,
+          "Risk Category": "Medium Risk",
+          "Actual Spend INR (WRBTR)": 365.0,
+          "Predicted Spend Exception": 1.0,
+          "Company Code (BUKRS)": "1000"
+        },
+        {
+          "Cost Center (KOSTL)": "100682200",
+          "Cost Center Name (CSKS)": "Packing Dupoxy & Spo",
+          "Plant Name (T001W)": "J.K. Cement Works , Gotan",
+          "Spend Overrun Exception Prob": 0.9963,
+          "Risk Category": "Medium Risk",
+          "Actual Spend INR (WRBTR)": 1360.0,
+          "Predicted Spend Exception": 1.0,
+          "Company Code (BUKRS)": "1000"
+        },
+        {
+          "Cost Center (KOSTL)": "100682200",
+          "Cost Center Name (CSKS)": "Packing Dupoxy & Spo",
+          "Plant Name (T001W)": "J.K. Cement Works , Gotan",
+          "Spend Overrun Exception Prob": 0.9963,
+          "Risk Category": "Medium Risk",
+          "Actual Spend INR (WRBTR)": 1360.0,
+          "Predicted Spend Exception": 1.0,
+          "Company Code (BUKRS)": "1000"
+        },
+        {
+          "Cost Center (KOSTL)": "103321003",
+          "Cost Center Name (CSKS)": "LAB & PROCESS DEPTT.",
+          "Plant Name (T001W)": "J.K. Cement Works Aligarh",
+          "Spend Overrun Exception Prob": 0.9884,
+          "Risk Category": "Medium Risk",
+          "Actual Spend INR (WRBTR)": 424.0,
+          "Predicted Spend Exception": 1.0,
+          "Company Code (BUKRS)": "1000"
+        },
+        {
+          "Cost Center (KOSTL)": "190138004",
+          "Cost Center Name (CSKS)": "CSR",
+          "Plant Name (T001W)": "JK Cement Works - Panna",
+          "Spend Overrun Exception Prob": 0.9817,
+          "Risk Category": "Medium Risk",
+          "Actual Spend INR (WRBTR)": 8200.0,
+          "Predicted Spend Exception": 1.0,
+          "Company Code (BUKRS)": "1000"
+        },
+        {
+          "Cost Center (KOSTL)": "100121104",
+          "Cost Center Name (CSKS)": "Planning Deptt.",
           "Plant Name (T001W)": "J.K. Cement Works Nimbahera",
-          "Spend Overrun Exception Prob": 0.9623,
-          "Risk Category": "Critical Risk",
-          "Predicted Spend Exception": 1,
-          "Company Code (BUKRS)": 1000,
-          "Company Name (BUTXT)": "J.K. CEMENT LIMITED",
-          "Accounting Doc (BELNR)": 5100046293
+          "Spend Overrun Exception Prob": 0.9805,
+          "Risk Category": "Medium Risk",
+          "Actual Spend INR (WRBTR)": 270.0,
+          "Predicted Spend Exception": 1.0,
+          "Company Code (BUKRS)": "1000"
         },
         {
-          "Cost Center (KOSTL)": 100133003,
+          "Cost Center (KOSTL)": "101531000",
+          "Cost Center Name (CSKS)": "Admin.Common",
+          "Plant Name (T001W)": "J.K. White Cement Works ,Gotan",
+          "Spend Overrun Exception Prob": 0.9763,
+          "Risk Category": "Critical Risk",
+          "Actual Spend INR (WRBTR)": 2550000.0,
+          "Predicted Spend Exception": 1.0,
+          "Company Code (BUKRS)": "1000"
+        },
+        {
+          "Cost Center (KOSTL)": "101531000",
+          "Cost Center Name (CSKS)": "Admin.Common",
+          "Plant Name (T001W)": "J.K. White Cement Works ,Gotan",
+          "Spend Overrun Exception Prob": 0.9763,
+          "Risk Category": "Critical Risk",
+          "Actual Spend INR (WRBTR)": 2550000.0,
+          "Predicted Spend Exception": 1.0,
+          "Company Code (BUKRS)": "1000"
+        },
+        {
+          "Cost Center (KOSTL)": "101042243",
+          "Cost Center Name (CSKS)": "SRIGANGANAGAR_1361",
+          "Plant Name (T001W)": "HO Kanpur (Grey)",
+          "Spend Overrun Exception Prob": 0.9676,
+          "Risk Category": "Medium Risk",
+          "Actual Spend INR (WRBTR)": 15000.0,
+          "Predicted Spend Exception": 1.0,
+          "Company Code (BUKRS)": "1000"
+        },
+        {
+          "Cost Center (KOSTL)": "700141000",
+          "Cost Center Name (CSKS)": "S&D Common",
+          "Plant Name (T001W)": "J.K. Cement Works Fujairah FZC",
+          "Spend Overrun Exception Prob": 0.9637,
+          "Risk Category": "Critical Risk",
+          "Actual Spend INR (WRBTR)": 1080845.0,
+          "Predicted Spend Exception": 1.0,
+          "Company Code (BUKRS)": "7001"
+        },
+        {
+          "Cost Center (KOSTL)": "100421118",
+          "Cost Center Name (CSKS)": "Pollution Control",
+          "Plant Name (T001W)": "J.K. Cement Works, Mangrol",
+          "Spend Overrun Exception Prob": 0.958,
+          "Risk Category": "Medium Risk",
+          "Actual Spend INR (WRBTR)": 1125.0,
+          "Predicted Spend Exception": 1.0,
+          "Company Code (BUKRS)": "1000"
+        },
+        {
+          "Cost Center (KOSTL)": "103321003",
+          "Cost Center Name (CSKS)": "LAB & PROCESS DEPTT.",
+          "Plant Name (T001W)": "J.K. Cement Works Aligarh",
+          "Spend Overrun Exception Prob": 0.9564,
+          "Risk Category": "Medium Risk",
+          "Actual Spend INR (WRBTR)": 310.0,
+          "Predicted Spend Exception": 1.0,
+          "Company Code (BUKRS)": "1000"
+        },
+        {
+          "Cost Center (KOSTL)": "100616210",
+          "Cost Center Name (CSKS)": "PKG. PLNT-MECHANIC",
+          "Plant Name (T001W)": "J.K. Cement Works , Gotan",
+          "Spend Overrun Exception Prob": 0.9552,
+          "Risk Category": "Medium Risk",
+          "Actual Spend INR (WRBTR)": 6582.0,
+          "Predicted Spend Exception": 1.0,
+          "Company Code (BUKRS)": "1000"
+        },
+        {
+          "Cost Center (KOSTL)": "100616210",
+          "Cost Center Name (CSKS)": "PKG. PLNT-MECHANIC",
+          "Plant Name (T001W)": "J.K. Cement Works , Gotan",
+          "Spend Overrun Exception Prob": 0.9552,
+          "Risk Category": "Medium Risk",
+          "Actual Spend INR (WRBTR)": 6582.0,
+          "Predicted Spend Exception": 1.0,
+          "Company Code (BUKRS)": "1000"
+        },
+        {
+          "Cost Center (KOSTL)": "103416000",
+          "Cost Center Name (CSKS)": "Packing -Common",
+          "Plant Name (T001W)": "J.K. Cement Works ,Balasinor",
+          "Spend Overrun Exception Prob": 0.955,
+          "Risk Category": "Medium Risk",
+          "Actual Spend INR (WRBTR)": 205.06,
+          "Predicted Spend Exception": 1.0,
+          "Company Code (BUKRS)": "1000"
+        },
+        {
+          "Cost Center (KOSTL)": "101042100",
+          "Cost Center Name (CSKS)": "Grey- CMO Common",
+          "Plant Name (T001W)": "HO Kanpur (Grey)",
+          "Spend Overrun Exception Prob": 0.9506,
+          "Risk Category": "Critical Risk",
+          "Actual Spend INR (WRBTR)": 2570700.0,
+          "Predicted Spend Exception": 1.0,
+          "Company Code (BUKRS)": "1000"
+        },
+        {
+          "Cost Center (KOSTL)": "101042140",
+          "Cost Center Name (CSKS)": "ADMIN_PRISM TOWER",
+          "Plant Name (T001W)": "GURGAON_GREY",
+          "Spend Overrun Exception Prob": 0.9491,
+          "Risk Category": "Medium Risk",
+          "Actual Spend INR (WRBTR)": 3000000.0,
+          "Predicted Spend Exception": 1.0,
+          "Company Code (BUKRS)": "1000"
+        },
+        {
+          "Cost Center (KOSTL)": "103416001",
+          "Cost Center Name (CSKS)": "Packing -MECHANICAL",
+          "Plant Name (T001W)": "J.K. Cement Works ,Balasinor",
+          "Spend Overrun Exception Prob": 0.9484,
+          "Risk Category": "Medium Risk",
+          "Actual Spend INR (WRBTR)": 6171.0,
+          "Predicted Spend Exception": 1.0,
+          "Company Code (BUKRS)": "1000"
+        },
+        {
+          "Cost Center (KOSTL)": "101042100",
+          "Cost Center Name (CSKS)": "Grey- CMO Common",
+          "Plant Name (T001W)": "HO Kanpur (Grey)",
+          "Spend Overrun Exception Prob": 0.9455,
+          "Risk Category": "Critical Risk",
+          "Actual Spend INR (WRBTR)": 3935300.0,
+          "Predicted Spend Exception": 1.0,
+          "Company Code (BUKRS)": "1000"
+        },
+        {
+          "Cost Center (KOSTL)": "101743900",
+          "Cost Center Name (CSKS)": "White- CMO Common",
+          "Plant Name (T001W)": "HO Kanpur (Grey)",
+          "Spend Overrun Exception Prob": 0.9441,
+          "Risk Category": "Medium Risk",
+          "Actual Spend INR (WRBTR)": 2800000.0,
+          "Predicted Spend Exception": 1.0,
+          "Company Code (BUKRS)": "1000"
+        },
+        {
+          "Cost Center (KOSTL)": "103321003",
+          "Cost Center Name (CSKS)": "LAB & PROCESS DEPTT.",
+          "Plant Name (T001W)": "J.K. Cement Works Aligarh",
+          "Spend Overrun Exception Prob": 0.9428,
+          "Risk Category": "Medium Risk",
+          "Actual Spend INR (WRBTR)": 243.0,
+          "Predicted Spend Exception": 1.0,
+          "Company Code (BUKRS)": "1000"
+        },
+        {
+          "Cost Center (KOSTL)": "103531800",
+          "Cost Center Name (CSKS)": "Branding Tilemaxx",
+          "Plant Name (T001W)": "HO Kanpur (Grey)",
+          "Spend Overrun Exception Prob": 0.9395,
+          "Risk Category": "Medium Risk",
+          "Actual Spend INR (WRBTR)": 3392500.0,
+          "Predicted Spend Exception": 1.0,
+          "Company Code (BUKRS)": "1000"
+        },
+        {
+          "Cost Center (KOSTL)": "101514200",
+          "Cost Center Name (CSKS)": "KILN -MECHANICAL",
+          "Plant Name (T001W)": "J.K. White Cement Works ,Gotan",
+          "Spend Overrun Exception Prob": 0.9381,
+          "Risk Category": "Medium Risk",
+          "Actual Spend INR (WRBTR)": 8640.0,
+          "Predicted Spend Exception": 1.0,
+          "Company Code (BUKRS)": "1000"
+        },
+        {
+          "Cost Center (KOSTL)": "102512000",
+          "Cost Center Name (CSKS)": "DOLO CRUSHER-COMM",
+          "Plant Name (T001W)": "J.K. White, Katni",
+          "Spend Overrun Exception Prob": 0.9366,
+          "Risk Category": "Medium Risk",
+          "Actual Spend INR (WRBTR)": 191.2,
+          "Predicted Spend Exception": 1.0,
+          "Company Code (BUKRS)": "1000"
+        },
+        {
+          "Cost Center (KOSTL)": "101042100",
+          "Cost Center Name (CSKS)": "Grey- CMO Common",
+          "Plant Name (T001W)": "HO Kanpur (Grey)",
+          "Spend Overrun Exception Prob": 0.9358,
+          "Risk Category": "Critical Risk",
+          "Actual Spend INR (WRBTR)": 135000.0,
+          "Predicted Spend Exception": 1.0,
+          "Company Code (BUKRS)": "1000"
+        },
+        {
+          "Cost Center (KOSTL)": "191042032",
+          "Cost Center Name (CSKS)": "UP Gorkhpr_CTS",
+          "Plant Name (T001W)": "HO Kanpur (Grey)",
+          "Spend Overrun Exception Prob": 0.9352,
+          "Risk Category": "Medium Risk",
+          "Actual Spend INR (WRBTR)": 12750.0,
+          "Predicted Spend Exception": 1.0,
+          "Company Code (BUKRS)": "1000"
+        },
+        {
+          "Cost Center (KOSTL)": "191042005",
+          "Cost Center Name (CSKS)": "UP Lucknow_MKT",
+          "Plant Name (T001W)": "HO Kanpur (Grey)",
+          "Spend Overrun Exception Prob": 0.9323,
+          "Risk Category": "Critical Risk",
+          "Actual Spend INR (WRBTR)": 67564.0,
+          "Predicted Spend Exception": 1.0,
+          "Company Code (BUKRS)": "1000"
+        },
+        {
+          "Cost Center (KOSTL)": "100121105",
+          "Cost Center Name (CSKS)": "Internal transport",
           "Plant Name (T001W)": "J.K. Cement Works Nimbahera",
-          "Spend Overrun Exception Prob": 0.9623,
-          "Risk Category": "Critical Risk",
-          "Predicted Spend Exception": 1,
-          "Company Code (BUKRS)": 1000,
-          "Company Name (BUTXT)": "J.K. CEMENT LIMITED",
-          "Accounting Doc (BELNR)": 5100046293
+          "Spend Overrun Exception Prob": 0.9296,
+          "Risk Category": "Medium Risk",
+          "Actual Spend INR (WRBTR)": 981389.83,
+          "Predicted Spend Exception": 1.0,
+          "Company Code (BUKRS)": "1000"
         },
         {
-          "Cost Center (KOSTL)": 410044102,
-          "Plant Name (T001W)": "HO-KANPUR(POP)",
-          "Spend Overrun Exception Prob": 0.9623,
-          "Risk Category": "Critical Risk",
-          "Predicted Spend Exception": 1,
-          "Company Code (BUKRS)": 1000,
-          "Company Name (BUTXT)": "J.K. CEMENT LIMITED",
-          "Accounting Doc (BELNR)": 8201670749
+          "Cost Center (KOSTL)": "100121105",
+          "Cost Center Name (CSKS)": "Internal transport",
+          "Plant Name (T001W)": "J.K. Cement Works Nimbahera",
+          "Spend Overrun Exception Prob": 0.9296,
+          "Risk Category": "Medium Risk",
+          "Actual Spend INR (WRBTR)": 981389.83,
+          "Predicted Spend Exception": 1.0,
+          "Company Code (BUKRS)": "1000"
         },
         {
-          "Cost Center (KOSTL)": 190131000,
-          "Plant Name (T001W)": "JK Cement Works - Panna",
-          "Spend Overrun Exception Prob": 0.9622,
-          "Risk Category": "Critical Risk",
-          "Predicted Spend Exception": 1,
-          "Company Code (BUKRS)": 1000,
-          "Company Name (BUTXT)": "J.K. CEMENT LIMITED",
-          "Accounting Doc (BELNR)": 1900072281
+          "Cost Center (KOSTL)": "103321003",
+          "Cost Center Name (CSKS)": "LAB & PROCESS DEPTT.",
+          "Plant Name (T001W)": "J.K. Cement Works Aligarh",
+          "Spend Overrun Exception Prob": 0.928,
+          "Risk Category": "Medium Risk",
+          "Actual Spend INR (WRBTR)": 636.0,
+          "Predicted Spend Exception": 1.0,
+          "Company Code (BUKRS)": "1000"
         },
         {
-          "Cost Center (KOSTL)": 190131000,
-          "Plant Name (T001W)": "JK Cement Works - Panna",
-          "Spend Overrun Exception Prob": 0.9622,
-          "Risk Category": "Critical Risk",
-          "Predicted Spend Exception": 1,
-          "Company Code (BUKRS)": 1000,
-          "Company Name (BUTXT)": "J.K. CEMENT LIMITED",
-          "Accounting Doc (BELNR)": 1900072281
+          "Cost Center (KOSTL)": "102221018",
+          "Cost Center Name (CSKS)": "ELECTRICAL COMMON",
+          "Plant Name (T001W)": "J.K. Cement Works Jharli",
+          "Spend Overrun Exception Prob": 0.9278,
+          "Risk Category": "Medium Risk",
+          "Actual Spend INR (WRBTR)": 4600.0,
+          "Predicted Spend Exception": 1.0,
+          "Company Code (BUKRS)": "1000"
         },
         {
-          "Cost Center (KOSTL)": 190131000,
-          "Plant Name (T001W)": "JK Cement Works - Panna",
-          "Spend Overrun Exception Prob": 0.9622,
-          "Risk Category": "Critical Risk",
-          "Predicted Spend Exception": 1,
-          "Company Code (BUKRS)": 1000,
-          "Company Name (BUTXT)": "J.K. CEMENT LIMITED",
-          "Accounting Doc (BELNR)": 1900072281
+          "Cost Center (KOSTL)": "102221018",
+          "Cost Center Name (CSKS)": "ELECTRICAL COMMON",
+          "Plant Name (T001W)": "J.K. Cement Works Jharli",
+          "Spend Overrun Exception Prob": 0.9278,
+          "Risk Category": "Medium Risk",
+          "Actual Spend INR (WRBTR)": 4600.0,
+          "Predicted Spend Exception": 1.0,
+          "Company Code (BUKRS)": "1000"
         },
         {
-          "Cost Center (KOSTL)": 190131000,
-          "Plant Name (T001W)": "JK Cement Works - Panna",
-          "Spend Overrun Exception Prob": 0.9622,
-          "Risk Category": "Critical Risk",
-          "Predicted Spend Exception": 1,
-          "Company Code (BUKRS)": 1000,
-          "Company Name (BUTXT)": "J.K. CEMENT LIMITED",
-          "Accounting Doc (BELNR)": 1900072281
+          "Cost Center (KOSTL)": "100134001",
+          "Cost Center Name (CSKS)": "Plantation",
+          "Plant Name (T001W)": "J.K. Cement Works Nimbahera",
+          "Spend Overrun Exception Prob": 0.9276,
+          "Risk Category": "Medium Risk",
+          "Actual Spend INR (WRBTR)": 6935.0,
+          "Predicted Spend Exception": 1.0,
+          "Company Code (BUKRS)": "1000"
         },
         {
-          "Cost Center (KOSTL)": 190131000,
-          "Plant Name (T001W)": "JK Cement Works - Panna",
-          "Spend Overrun Exception Prob": 0.9622,
-          "Risk Category": "Critical Risk",
-          "Predicted Spend Exception": 1,
-          "Company Code (BUKRS)": 1000,
-          "Company Name (BUTXT)": "J.K. CEMENT LIMITED",
-          "Accounting Doc (BELNR)": 1900072281
+          "Cost Center (KOSTL)": "100134001",
+          "Cost Center Name (CSKS)": "Plantation",
+          "Plant Name (T001W)": "J.K. Cement Works Nimbahera",
+          "Spend Overrun Exception Prob": 0.9276,
+          "Risk Category": "Medium Risk",
+          "Actual Spend INR (WRBTR)": 6935.0,
+          "Predicted Spend Exception": 1.0,
+          "Company Code (BUKRS)": "1000"
         },
         {
-          "Cost Center (KOSTL)": 190131000,
-          "Plant Name (T001W)": "JK Cement Works - Panna",
-          "Spend Overrun Exception Prob": 0.9622,
-          "Risk Category": "Critical Risk",
-          "Predicted Spend Exception": 1,
-          "Company Code (BUKRS)": 1000,
-          "Company Name (BUTXT)": "J.K. CEMENT LIMITED",
-          "Accounting Doc (BELNR)": 1900072281
+          "Cost Center (KOSTL)": "102515110",
+          "Cost Center Name (CSKS)": "PACKING PLANT -MEC",
+          "Plant Name (T001W)": "J.K. White, Katni",
+          "Spend Overrun Exception Prob": 0.9274,
+          "Risk Category": "High Risk",
+          "Actual Spend INR (WRBTR)": 404476.43,
+          "Predicted Spend Exception": 1.0,
+          "Company Code (BUKRS)": "1000"
         },
         {
-          "Cost Center (KOSTL)": 190131000,
-          "Plant Name (T001W)": "JK Cement Works - Panna",
-          "Spend Overrun Exception Prob": 0.9622,
-          "Risk Category": "Critical Risk",
-          "Predicted Spend Exception": 1,
-          "Company Code (BUKRS)": 1000,
-          "Company Name (BUTXT)": "J.K. CEMENT LIMITED",
-          "Accounting Doc (BELNR)": 1900072281
+          "Cost Center (KOSTL)": "101511001",
+          "Cost Center Name (CSKS)": "Dhanapa Mines (JKD)",
+          "Plant Name (T001W)": "J.K. White Cement Works ,Gotan",
+          "Spend Overrun Exception Prob": 0.9269,
+          "Risk Category": "Medium Risk",
+          "Actual Spend INR (WRBTR)": 6410061.71,
+          "Predicted Spend Exception": 1.0,
+          "Company Code (BUKRS)": "1000"
         },
         {
-          "Cost Center (KOSTL)": 190131000,
-          "Plant Name (T001W)": "JK Cement Works - Panna",
-          "Spend Overrun Exception Prob": 0.9622,
-          "Risk Category": "Critical Risk",
-          "Predicted Spend Exception": 1,
-          "Company Code (BUKRS)": 1000,
-          "Company Name (BUTXT)": "J.K. CEMENT LIMITED",
-          "Accounting Doc (BELNR)": 1900072281
+          "Cost Center (KOSTL)": "102515110",
+          "Cost Center Name (CSKS)": "PACKING PLANT -MEC",
+          "Plant Name (T001W)": "J.K. White, Katni",
+          "Spend Overrun Exception Prob": 0.9267,
+          "Risk Category": "High Risk",
+          "Actual Spend INR (WRBTR)": 412625.79,
+          "Predicted Spend Exception": 1.0,
+          "Company Code (BUKRS)": "1000"
         },
         {
-          "Cost Center (KOSTL)": 700171999,
-          "Plant Name (T001W)": "J.K. Cement Works Fujairah FZC",
-          "Spend Overrun Exception Prob": 0.9622,
-          "Risk Category": "Critical Risk",
-          "Predicted Spend Exception": 1,
-          "Company Code (BUKRS)": 7001,
-          "Company Name (BUTXT)": "J.K.CEMENT Works Fuj FZC",
-          "Accounting Doc (BELNR)": 5000001976
-        },
-        {
-          "Cost Center (KOSTL)": 190131000,
-          "Plant Name (T001W)": "JK Cement Works - Panna",
-          "Spend Overrun Exception Prob": 0.9622,
-          "Risk Category": "Critical Risk",
-          "Predicted Spend Exception": 1,
-          "Company Code (BUKRS)": 1000,
-          "Company Name (BUTXT)": "J.K. CEMENT LIMITED",
-          "Accounting Doc (BELNR)": 1900072281
-        },
-        {
-          "Cost Center (KOSTL)": 190131000,
-          "Plant Name (T001W)": "JK Cement Works - Panna",
-          "Spend Overrun Exception Prob": 0.9622,
-          "Risk Category": "Critical Risk",
-          "Predicted Spend Exception": 1,
-          "Company Code (BUKRS)": 1000,
-          "Company Name (BUTXT)": "J.K. CEMENT LIMITED",
-          "Accounting Doc (BELNR)": 1900072281
-        },
-        {
-          "Cost Center (KOSTL)": 190131000,
-          "Plant Name (T001W)": "JK Cement Works - Panna",
-          "Spend Overrun Exception Prob": 0.9622,
-          "Risk Category": "Critical Risk",
-          "Predicted Spend Exception": 1,
-          "Company Code (BUKRS)": 1000,
-          "Company Name (BUTXT)": "J.K. CEMENT LIMITED",
-          "Accounting Doc (BELNR)": 1900072281
-        },
-        {
-          "Cost Center (KOSTL)": 190131000,
-          "Plant Name (T001W)": "JK Cement Works - Panna",
-          "Spend Overrun Exception Prob": 0.9622,
-          "Risk Category": "Critical Risk",
-          "Predicted Spend Exception": 1,
-          "Company Code (BUKRS)": 1000,
-          "Company Name (BUTXT)": "J.K. CEMENT LIMITED",
-          "Accounting Doc (BELNR)": 1900072281
-        },
-        {
-          "Cost Center (KOSTL)": 190131000,
-          "Plant Name (T001W)": "JK Cement Works - Panna",
-          "Spend Overrun Exception Prob": 0.9622,
-          "Risk Category": "Critical Risk",
-          "Predicted Spend Exception": 1,
-          "Company Code (BUKRS)": 1000,
-          "Company Name (BUTXT)": "J.K. CEMENT LIMITED",
-          "Accounting Doc (BELNR)": 1900072281
-        },
-        {
-          "Cost Center (KOSTL)": 190131000,
-          "Plant Name (T001W)": "JK Cement Works - Panna",
-          "Spend Overrun Exception Prob": 0.9622,
-          "Risk Category": "Critical Risk",
-          "Predicted Spend Exception": 1,
-          "Company Code (BUKRS)": 1000,
-          "Company Name (BUTXT)": "J.K. CEMENT LIMITED",
-          "Accounting Doc (BELNR)": 1900072281
-        },
-        {
-          "Cost Center (KOSTL)": 190131000,
-          "Plant Name (T001W)": "JK Cement Works - Panna",
-          "Spend Overrun Exception Prob": 0.9622,
-          "Risk Category": "Critical Risk",
-          "Predicted Spend Exception": 1,
-          "Company Code (BUKRS)": 1000,
-          "Company Name (BUTXT)": "J.K. CEMENT LIMITED",
-          "Accounting Doc (BELNR)": 1900072281
-        },
-        {
-          "Cost Center (KOSTL)": 190131000,
-          "Plant Name (T001W)": "JK Cement Works - Panna",
-          "Spend Overrun Exception Prob": 0.9622,
-          "Risk Category": "Critical Risk",
-          "Predicted Spend Exception": 1,
-          "Company Code (BUKRS)": 1000,
-          "Company Name (BUTXT)": "J.K. CEMENT LIMITED",
-          "Accounting Doc (BELNR)": 1900072281
-        },
-        {
-          "Cost Center (KOSTL)": 700171999,
-          "Plant Name (T001W)": "J.K. Cement Works Fujairah FZC",
-          "Spend Overrun Exception Prob": 0.9622,
-          "Risk Category": "Critical Risk",
-          "Predicted Spend Exception": 1,
-          "Company Code (BUKRS)": 7001,
-          "Company Name (BUTXT)": "J.K.CEMENT Works Fuj FZC",
-          "Accounting Doc (BELNR)": 5000002034
-        },
-        {
-          "Cost Center (KOSTL)": 700171999,
-          "Plant Name (T001W)": "J.K. Cement Works Fujairah FZC",
-          "Spend Overrun Exception Prob": 0.9622,
-          "Risk Category": "Critical Risk",
-          "Predicted Spend Exception": 1,
-          "Company Code (BUKRS)": 7001,
-          "Company Name (BUTXT)": "J.K.CEMENT Works Fuj FZC",
-          "Accounting Doc (BELNR)": 5000001978
-        },
-        {
-          "Cost Center (KOSTL)": 190131000,
-          "Plant Name (T001W)": "JK Cement Works - Panna",
-          "Spend Overrun Exception Prob": 0.9622,
-          "Risk Category": "Critical Risk",
-          "Predicted Spend Exception": 1,
-          "Company Code (BUKRS)": 1000,
-          "Company Name (BUTXT)": "J.K. CEMENT LIMITED",
-          "Accounting Doc (BELNR)": 1900072281
-        },
-        {
-          "Cost Center (KOSTL)": 190131000,
-          "Plant Name (T001W)": "JK Cement Works - Panna",
-          "Spend Overrun Exception Prob": 0.9622,
-          "Risk Category": "Critical Risk",
-          "Predicted Spend Exception": 1,
-          "Company Code (BUKRS)": 1000,
-          "Company Name (BUTXT)": "J.K. CEMENT LIMITED",
-          "Accounting Doc (BELNR)": 1900072281
-        },
-        {
-          "Cost Center (KOSTL)": 190131000,
-          "Plant Name (T001W)": "JK Cement Works - Panna",
-          "Spend Overrun Exception Prob": 0.9622,
-          "Risk Category": "Critical Risk",
-          "Predicted Spend Exception": 1,
-          "Company Code (BUKRS)": 1000,
-          "Company Name (BUTXT)": "J.K. CEMENT LIMITED",
-          "Accounting Doc (BELNR)": 1900072281
-        },
-        {
-          "Cost Center (KOSTL)": 190131000,
-          "Plant Name (T001W)": "JK Cement Works - Panna",
-          "Spend Overrun Exception Prob": 0.9622,
-          "Risk Category": "Critical Risk",
-          "Predicted Spend Exception": 1,
-          "Company Code (BUKRS)": 1000,
-          "Company Name (BUTXT)": "J.K. CEMENT LIMITED",
-          "Accounting Doc (BELNR)": 1900072281
-        },
-        {
-          "Cost Center (KOSTL)": 190131000,
-          "Plant Name (T001W)": "JK Cement Works - Panna",
-          "Spend Overrun Exception Prob": 0.9622,
-          "Risk Category": "Critical Risk",
-          "Predicted Spend Exception": 1,
-          "Company Code (BUKRS)": 1000,
-          "Company Name (BUTXT)": "J.K. CEMENT LIMITED",
-          "Accounting Doc (BELNR)": 1900072281
-        },
-        {
-          "Cost Center (KOSTL)": 190131000,
-          "Plant Name (T001W)": "JK Cement Works - Panna",
-          "Spend Overrun Exception Prob": 0.9622,
-          "Risk Category": "Critical Risk",
-          "Predicted Spend Exception": 1,
-          "Company Code (BUKRS)": 1000,
-          "Company Name (BUTXT)": "J.K. CEMENT LIMITED",
-          "Accounting Doc (BELNR)": 1900072281
-        },
-        {
-          "Cost Center (KOSTL)": 190131000,
-          "Plant Name (T001W)": "JK Cement Works - Panna",
-          "Spend Overrun Exception Prob": 0.9622,
-          "Risk Category": "Critical Risk",
-          "Predicted Spend Exception": 1,
-          "Company Code (BUKRS)": 1000,
-          "Company Name (BUTXT)": "J.K. CEMENT LIMITED",
-          "Accounting Doc (BELNR)": 1900072281
-        },
-        {
-          "Cost Center (KOSTL)": 190131000,
-          "Plant Name (T001W)": "JK Cement Works - Panna",
-          "Spend Overrun Exception Prob": 0.9622,
-          "Risk Category": "Critical Risk",
-          "Predicted Spend Exception": 1,
-          "Company Code (BUKRS)": 1000,
-          "Company Name (BUTXT)": "J.K. CEMENT LIMITED",
-          "Accounting Doc (BELNR)": 1900072281
-        },
-        {
-          "Cost Center (KOSTL)": 190131000,
-          "Plant Name (T001W)": "JK Cement Works - Panna",
-          "Spend Overrun Exception Prob": 0.9622,
-          "Risk Category": "Critical Risk",
-          "Predicted Spend Exception": 1,
-          "Company Code (BUKRS)": 1000,
-          "Company Name (BUTXT)": "J.K. CEMENT LIMITED",
-          "Accounting Doc (BELNR)": 1900072281
-        },
-        {
-          "Cost Center (KOSTL)": 190131000,
-          "Plant Name (T001W)": "JK Cement Works - Panna",
-          "Spend Overrun Exception Prob": 0.9622,
-          "Risk Category": "Critical Risk",
-          "Predicted Spend Exception": 1,
-          "Company Code (BUKRS)": 1000,
-          "Company Name (BUTXT)": "J.K. CEMENT LIMITED",
-          "Accounting Doc (BELNR)": 1900072281
-        },
-        {
-          "Cost Center (KOSTL)": 190131000,
-          "Plant Name (T001W)": "JK Cement Works - Panna",
-          "Spend Overrun Exception Prob": 0.9622,
-          "Risk Category": "Critical Risk",
-          "Predicted Spend Exception": 1,
-          "Company Code (BUKRS)": 1000,
-          "Company Name (BUTXT)": "J.K. CEMENT LIMITED",
-          "Accounting Doc (BELNR)": 1900072281
+          "Cost Center (KOSTL)": "102515110",
+          "Cost Center Name (CSKS)": "PACKING PLANT -MEC",
+          "Plant Name (T001W)": "J.K. White, Katni",
+          "Spend Overrun Exception Prob": 0.9267,
+          "Risk Category": "High Risk",
+          "Actual Spend INR (WRBTR)": 412625.79,
+          "Predicted Spend Exception": 1.0,
+          "Company Code (BUKRS)": "1000"
         }
       ],
       "advanced_ml": {
         "confusion_matrix": {
-          "tp": 18980,
-          "fp": 0,
-          "fn": 6020,
-          "tn": 0,
-          "precision": 1.0,
+          "tp": 574,
+          "fp": 1506,
+          "fn": 182,
+          "tn": 20968,
+          "precision": 0.276,
           "recall": 0.759,
-          "f1": 0.863,
-          "accuracy": 0.759
+          "f1": 0.405,
+          "accuracy": 0.927
         },
         "threshold_curve": {
           "thresholds": [
@@ -4981,12 +4825,12 @@ window.PORTFOLIO_DATA = {
             0.382,
             0.441,
             0.494,
-            0.543,
-            0.59,
-            0.635,
-            0.679,
+            0.544,
+            0.591,
+            0.636,
+            0.68,
             0.722,
-            0.763
+            0.764
           ],
           "recall": [
             0.962,
@@ -4997,18 +4841,18 @@ window.PORTFOLIO_DATA = {
             0.612,
             0.526,
             0.436,
-            0.342
+            0.343
           ],
           "f1": [
             0.547,
-            0.593,
-            0.622,
-            0.637,
-            0.638,
+            0.594,
             0.623,
+            0.638,
+            0.638,
+            0.624,
             0.593,
-            0.543,
-            0.472
+            0.544,
+            0.473
           ]
         },
         "probability_distribution": {
@@ -5025,40 +4869,40 @@ window.PORTFOLIO_DATA = {
             "0.9"
           ],
           "clean_count": [
-            100,
-            100,
-            100,
-            100,
-            100,
-            100,
-            100,
-            100,
-            100,
-            100
+            7338,
+            4679,
+            2983,
+            1902,
+            1213,
+            773,
+            493,
+            314,
+            200,
+            127
           ],
           "exception_count": [
-            949,
-            1476,
-            2003,
-            2530,
-            3057,
-            3585,
-            4112,
-            4639,
-            5166,
-            5694
+            50,
+            50,
+            60,
+            76,
+            92,
+            108,
+            124,
+            140,
+            156,
+            172
           ],
           "total_count": [
-            1049,
-            1576,
-            2103,
-            2630,
-            3157,
-            3685,
-            4212,
-            4739,
-            5266,
-            5794
+            7388,
+            4729,
+            3043,
+            1978,
+            1305,
+            881,
+            617,
+            454,
+            356,
+            299
           ]
         },
         "calibration_curve": {
@@ -5141,615 +4985,615 @@ window.PORTFOLIO_DATA = {
         "EKKO",
         "EBKN"
       ],
-      "total_records": 25000,
-      "exceptions_count": 1273,
-      "exception_rate_pct": 5.09,
-      "financial_exposure_inr": 37333600000.0,
-      "financial_exposure_cr": 3733.36,
-      "avg_confidence_score": 0.932,
-      "champion_model": "Isolation Forest",
-      "champion_metric": "0.9320 ROC-AUC",
+      "total_records": 529001,
+      "exceptions_count": 188117,
+      "exception_rate_pct": 35.56,
+      "financial_exposure_inr": 442647353780.61,
+      "financial_exposure_cr": 44264.74,
+      "avg_confidence_score": 0.156,
+      "champion_model": "Random Forest Regressor / Classifier",
+      "champion_metric": "0.7910 ROC-AUC",
       "risk_distribution": {
-        "Critical": 1232,
-        "High": 1438,
-        "Medium": 4332,
-        "Low": 17998
+        "Critical": 108874,
+        "High": 79243,
+        "Medium": 135952,
+        "Low": 204932
       },
       "category_breakdown": [
         {
-          "label": "1000",
-          "count": 3105
+          "label": "J.K. Cement  Works, Mangrol",
+          "count": 67217
         },
         {
-          "label": "1004",
-          "count": 2965
+          "label": "J.K. Cement Works Nimbahera",
+          "count": 65812
         },
         {
-          "label": "1001",
-          "count": 2470
+          "label": "JK Cement Works - Panna",
+          "count": 61286
         },
         {
-          "label": "2001",
-          "count": 2045
+          "label": "HO Kanpur (Grey)",
+          "count": 52865
         },
         {
-          "label": "1015",
-          "count": 1740
+          "label": "J.K. White Cement Works ,Gotan",
+          "count": 49486
         },
         {
-          "label": "1901",
-          "count": 1730
+          "label": "J.K. Cement Works, Muddapur",
+          "count": 42789
         },
         {
-          "label": "3501",
-          "count": 1570
+          "label": "J.K. Cement Works Fujairah FZC",
+          "count": 20965
         }
       ],
       "feature_importance": [
         {
-          "feature": "feature",
-          "importance": 0,
-          "description": "Direct Mathematical Influence On Procurement Cycle Risk:"
+          "feature": "matkl_avg_cycle_time",
+          "importance": 0.4103,
+          "description": "Matkl Avg Cycle Time"
         },
         {
-          "feature": "high_value_pr_flag",
-          "importance": 0.082,
-          "description": "0.081958"
+          "feature": "pr_to_delivery_horizon",
+          "importance": 0.055,
+          "description": "Pr To Delivery Horizon"
         },
         {
-          "feature": "has_release_block",
-          "importance": 0.0647,
-          "description": "0.064691"
-        },
-        {
-          "feature": "item_category_code",
-          "importance": 0.0628,
-          "description": "0.062826"
-        },
-        {
-          "feature": "log_pr_item_value",
-          "importance": 0.0628,
-          "description": "0.062782"
+          "feature": "ekgrp_avg_cycle_time",
+          "importance": 0.0531,
+          "description": "Ekgrp Avg Cycle Time"
         },
         {
           "feature": "delivery_urgency_ratio",
-          "importance": 0.0626,
-          "description": "0.062585"
+          "importance": 0.0489,
+          "description": "Delivery Urgency Ratio"
         },
         {
-          "feature": "release_state_code",
-          "importance": 0.0605,
-          "description": "0.060511"
+          "feature": "plant_avg_cycle_time",
+          "importance": 0.0431,
+          "description": "Plant Avg Cycle Time"
         },
         {
-          "feature": "has_assigned_vendor",
-          "importance": 0.0563,
-          "description": "0.056256"
+          "feature": "release_strategy_code",
+          "importance": 0.0427,
+          "description": "Release Strategy Code"
+        },
+        {
+          "feature": "pr_creation_month",
+          "importance": 0.0335,
+          "description": "Pr Creation Month"
+        },
+        {
+          "feature": "unit_price",
+          "importance": 0.0304,
+          "description": "Unit Price"
         }
       ],
       "model_rankings": [],
       "display_columns": [
-        "Plant",
-        "Cycle Exception Probability",
-        "Risk Category",
+        "PR Number (BANFN)",
+        "PR Document Type (BSART)",
+        "Plant Name",
+        "Cycle Time Variance (Days)",
+        "Procurement Risk Category",
         "Requisition Value (INR)",
-        "Predicted Exception (0/1)",
         "Company Code",
-        "Company Name",
-        "Company City"
+        "Company Name"
       ],
       "sample_records": [
         {
-          "Plant": 1906,
-          "Cycle Exception Probability": 1.0,
-          "Risk Category": "Critical Risk",
-          "Requisition Value (INR)": 2814416313.0237,
-          "Predicted Exception (0/1)": 1,
-          "Company Code": 1000,
-          "Company Name": "J.K. CEMENT LIMITED",
-          "Company City": "Kanpur"
+          "PR Number (BANFN)": "1000000762",
+          "PR Document Type (BSART)": "ZSTD",
+          "Plant Name": "J.K. White Cement Works ,Gotan",
+          "Cycle Time Variance (Days)": -32.4,
+          "Procurement Risk Category": "Critical Risk",
+          "Requisition Value (INR)": 21675000.0,
+          "Company Code": "1000",
+          "Company Name": "J.K. CEMENT LIMITED"
         },
         {
-          "Plant": 2001,
-          "Cycle Exception Probability": 1.0,
-          "Risk Category": "Critical Risk",
-          "Requisition Value (INR)": 1679649840.0,
-          "Predicted Exception (0/1)": 1,
-          "Company Code": 1000,
-          "Company Name": "J.K. CEMENT LIMITED",
-          "Company City": "Kanpur"
+          "PR Number (BANFN)": "1000000762",
+          "PR Document Type (BSART)": "ZSTD",
+          "Plant Name": "J.K. White Cement Works ,Gotan",
+          "Cycle Time Variance (Days)": -32.4,
+          "Procurement Risk Category": "Critical Risk",
+          "Requisition Value (INR)": 21675000.0,
+          "Company Code": "1000",
+          "Company Name": "J.K. CEMENT LIMITED"
         },
         {
-          "Plant": 1001,
-          "Cycle Exception Probability": 1.0,
-          "Risk Category": "Critical Risk",
-          "Requisition Value (INR)": 876227400.0,
-          "Predicted Exception (0/1)": 1,
-          "Company Code": 1000,
-          "Company Name": "J.K. CEMENT LIMITED",
-          "Company City": "Kanpur"
+          "PR Number (BANFN)": "1000000762",
+          "PR Document Type (BSART)": "ZSTD",
+          "Plant Name": "J.K. White Cement Works ,Gotan",
+          "Cycle Time Variance (Days)": -34.3,
+          "Procurement Risk Category": "Critical Risk",
+          "Requisition Value (INR)": 18825000.0,
+          "Company Code": "1000",
+          "Company Name": "J.K. CEMENT LIMITED"
         },
         {
-          "Plant": 1015,
-          "Cycle Exception Probability": 1.0,
-          "Risk Category": "Critical Risk",
-          "Requisition Value (INR)": 466519500.0,
-          "Predicted Exception (0/1)": 1,
-          "Company Code": 1000,
-          "Company Name": "J.K. CEMENT LIMITED",
-          "Company City": "Kanpur"
+          "PR Number (BANFN)": "1000000762",
+          "PR Document Type (BSART)": "ZSTD",
+          "Plant Name": "J.K. White Cement Works ,Gotan",
+          "Cycle Time Variance (Days)": -34.3,
+          "Procurement Risk Category": "Critical Risk",
+          "Requisition Value (INR)": 18825000.0,
+          "Company Code": "1000",
+          "Company Name": "J.K. CEMENT LIMITED"
         },
         {
-          "Plant": 1034,
-          "Cycle Exception Probability": 1.0,
-          "Risk Category": "Critical Risk",
-          "Requisition Value (INR)": 465000000.0,
-          "Predicted Exception (0/1)": 1,
-          "Company Code": 1000,
-          "Company Name": "J.K. CEMENT LIMITED",
-          "Company City": "Kanpur"
+          "PR Number (BANFN)": "1000000678",
+          "PR Document Type (BSART)": "ZSTD",
+          "Plant Name": "J.K. White Cement Works ,Gotan",
+          "Cycle Time Variance (Days)": 26.7,
+          "Procurement Risk Category": "Critical Risk",
+          "Requisition Value (INR)": 13050000.0,
+          "Company Code": "1000",
+          "Company Name": "J.K. CEMENT LIMITED"
         },
         {
-          "Plant": 4132,
-          "Cycle Exception Probability": 1.0,
-          "Risk Category": "Critical Risk",
-          "Requisition Value (INR)": 421900800.0,
-          "Predicted Exception (0/1)": 1,
-          "Company Code": 1000,
-          "Company Name": "J.K. CEMENT LIMITED",
-          "Company City": "Kanpur"
+          "PR Number (BANFN)": "1000000678",
+          "PR Document Type (BSART)": "ZSTD",
+          "Plant Name": "J.K. White Cement Works ,Gotan",
+          "Cycle Time Variance (Days)": 26.7,
+          "Procurement Risk Category": "Critical Risk",
+          "Requisition Value (INR)": 13050000.0,
+          "Company Code": "1000",
+          "Company Name": "J.K. CEMENT LIMITED"
         },
         {
-          "Plant": 1902,
-          "Cycle Exception Probability": 1.0,
-          "Risk Category": "Critical Risk",
-          "Requisition Value (INR)": 288750000.0,
-          "Predicted Exception (0/1)": 1,
-          "Company Code": 1000,
-          "Company Name": "J.K. CEMENT LIMITED",
-          "Company City": "Kanpur"
+          "PR Number (BANFN)": "1000000762",
+          "PR Document Type (BSART)": "ZSTD",
+          "Plant Name": "J.K. White Cement Works ,Gotan",
+          "Cycle Time Variance (Days)": -37.1,
+          "Procurement Risk Category": "Critical Risk",
+          "Requisition Value (INR)": 13180000.0,
+          "Company Code": "1000",
+          "Company Name": "J.K. CEMENT LIMITED"
         },
         {
-          "Plant": 2001,
-          "Cycle Exception Probability": 1.0,
-          "Risk Category": "Critical Risk",
-          "Requisition Value (INR)": 277910895.54,
-          "Predicted Exception (0/1)": 1,
-          "Company Code": 1000,
-          "Company Name": "J.K. CEMENT LIMITED",
-          "Company City": "Kanpur"
+          "PR Number (BANFN)": "1000000762",
+          "PR Document Type (BSART)": "ZSTD",
+          "Plant Name": "J.K. White Cement Works ,Gotan",
+          "Cycle Time Variance (Days)": -37.1,
+          "Procurement Risk Category": "Critical Risk",
+          "Requisition Value (INR)": 13180000.0,
+          "Company Code": "1000",
+          "Company Name": "J.K. CEMENT LIMITED"
         },
         {
-          "Plant": 1901,
-          "Cycle Exception Probability": 1.0,
-          "Risk Category": "Critical Risk",
-          "Requisition Value (INR)": 227800000.0,
-          "Predicted Exception (0/1)": 1,
-          "Company Code": 1000,
-          "Company Name": "J.K. CEMENT LIMITED",
-          "Company City": "Kanpur"
+          "PR Number (BANFN)": "1000000762",
+          "PR Document Type (BSART)": "ZSTD",
+          "Plant Name": "J.K. White Cement Works ,Gotan",
+          "Cycle Time Variance (Days)": -37.7,
+          "Procurement Risk Category": "Critical Risk",
+          "Requisition Value (INR)": 15820000.0,
+          "Company Code": "1000",
+          "Company Name": "J.K. CEMENT LIMITED"
         },
         {
-          "Plant": 1025,
-          "Cycle Exception Probability": 1.0,
-          "Risk Category": "Critical Risk",
-          "Requisition Value (INR)": 220650000.0,
-          "Predicted Exception (0/1)": 1,
-          "Company Code": 1000,
-          "Company Name": "J.K. CEMENT LIMITED",
-          "Company City": "Kanpur"
+          "PR Number (BANFN)": "1000000762",
+          "PR Document Type (BSART)": "ZSTD",
+          "Plant Name": "J.K. White Cement Works ,Gotan",
+          "Cycle Time Variance (Days)": -37.7,
+          "Procurement Risk Category": "Critical Risk",
+          "Requisition Value (INR)": 15820000.0,
+          "Company Code": "1000",
+          "Company Name": "J.K. CEMENT LIMITED"
         },
         {
-          "Plant": 1901,
-          "Cycle Exception Probability": 1.0,
-          "Risk Category": "Critical Risk",
-          "Requisition Value (INR)": 216200000.0,
-          "Predicted Exception (0/1)": 1,
-          "Company Code": 1000,
-          "Company Name": "J.K. CEMENT LIMITED",
-          "Company City": "Kanpur"
+          "PR Number (BANFN)": "1000000762",
+          "PR Document Type (BSART)": "ZSTD",
+          "Plant Name": "J.K. White Cement Works ,Gotan",
+          "Cycle Time Variance (Days)": -37.9,
+          "Procurement Risk Category": "Critical Risk",
+          "Requisition Value (INR)": 12450000.0,
+          "Company Code": "1000",
+          "Company Name": "J.K. CEMENT LIMITED"
         },
         {
-          "Plant": 1902,
-          "Cycle Exception Probability": 1.0,
-          "Risk Category": "Critical Risk",
-          "Requisition Value (INR)": 216200000.0,
-          "Predicted Exception (0/1)": 1,
-          "Company Code": 1000,
-          "Company Name": "J.K. CEMENT LIMITED",
-          "Company City": "Kanpur"
+          "PR Number (BANFN)": "1000000762",
+          "PR Document Type (BSART)": "ZSTD",
+          "Plant Name": "J.K. White Cement Works ,Gotan",
+          "Cycle Time Variance (Days)": -37.9,
+          "Procurement Risk Category": "Critical Risk",
+          "Requisition Value (INR)": 12450000.0,
+          "Company Code": "1000",
+          "Company Name": "J.K. CEMENT LIMITED"
         },
         {
-          "Plant": 7201,
-          "Cycle Exception Probability": 1.0,
-          "Risk Category": "Critical Risk",
-          "Requisition Value (INR)": 199956000.0,
-          "Predicted Exception (0/1)": 1,
-          "Company Code": 1000,
-          "Company Name": "J.K. CEMENT LIMITED",
-          "Company City": "Kanpur"
+          "PR Number (BANFN)": "1000000614",
+          "PR Document Type (BSART)": "ZSTD",
+          "Plant Name": "JK Cement Works - Hamirpur",
+          "Cycle Time Variance (Days)": -4.8,
+          "Procurement Risk Category": "Critical Risk",
+          "Requisition Value (INR)": 78900000.0,
+          "Company Code": "1000",
+          "Company Name": "J.K. CEMENT LIMITED"
         },
         {
-          "Plant": 1919,
-          "Cycle Exception Probability": 1.0,
-          "Risk Category": "Critical Risk",
-          "Requisition Value (INR)": 177724803.0,
-          "Predicted Exception (0/1)": 1,
-          "Company Code": 1000,
-          "Company Name": "J.K. CEMENT LIMITED",
-          "Company City": "Kanpur"
+          "PR Number (BANFN)": "1000000614",
+          "PR Document Type (BSART)": "ZSTD",
+          "Plant Name": "JK Cement Works - Hamirpur",
+          "Cycle Time Variance (Days)": -4.8,
+          "Procurement Risk Category": "Critical Risk",
+          "Requisition Value (INR)": 78900000.0,
+          "Company Code": "1000",
+          "Company Name": "J.K. CEMENT LIMITED"
         },
         {
-          "Plant": 1906,
-          "Cycle Exception Probability": 1.0,
-          "Risk Category": "Critical Risk",
-          "Requisition Value (INR)": 162150000.0,
-          "Predicted Exception (0/1)": 1,
-          "Company Code": 1000,
-          "Company Name": "J.K. CEMENT LIMITED",
-          "Company City": "Kanpur"
-        },
-        {
-          "Plant": 1000,
-          "Cycle Exception Probability": 1.0,
-          "Risk Category": "Critical Risk",
-          "Requisition Value (INR)": 158689080.0,
-          "Predicted Exception (0/1)": 1,
-          "Company Code": 1000,
-          "Company Name": "J.K. CEMENT LIMITED",
-          "Company City": "Kanpur"
-        },
-        {
-          "Plant": 4132,
-          "Cycle Exception Probability": 1.0,
-          "Risk Category": "Critical Risk",
-          "Requisition Value (INR)": 158212800.0,
-          "Predicted Exception (0/1)": 1,
-          "Company Code": 1000,
-          "Company Name": "J.K. CEMENT LIMITED",
-          "Company City": "Kanpur"
-        },
-        {
-          "Plant": 1015,
-          "Cycle Exception Probability": 1.0,
-          "Risk Category": "Critical Risk",
-          "Requisition Value (INR)": 145785000.0,
-          "Predicted Exception (0/1)": 1,
-          "Company Code": 1000,
-          "Company Name": "J.K. CEMENT LIMITED",
-          "Company City": "Kanpur"
-        },
-        {
-          "Plant": 1919,
-          "Cycle Exception Probability": 1.0,
-          "Risk Category": "Critical Risk",
-          "Requisition Value (INR)": 144275195.48,
-          "Predicted Exception (0/1)": 1,
-          "Company Code": 1000,
-          "Company Name": "J.K. CEMENT LIMITED",
-          "Company City": "Kanpur"
-        },
-        {
-          "Plant": 1906,
-          "Cycle Exception Probability": 1.0,
-          "Risk Category": "Critical Risk",
-          "Requisition Value (INR)": 131800000.0,
-          "Predicted Exception (0/1)": 1,
-          "Company Code": 1000,
-          "Company Name": "J.K. CEMENT LIMITED",
-          "Company City": "Kanpur"
-        },
-        {
-          "Plant": 1015,
-          "Cycle Exception Probability": 1.0,
-          "Risk Category": "Critical Risk",
-          "Requisition Value (INR)": 125120000.0,
-          "Predicted Exception (0/1)": 1,
-          "Company Code": 1000,
-          "Company Name": "J.K. CEMENT LIMITED",
-          "Company City": "Kanpur"
-        },
-        {
-          "Plant": 1015,
-          "Cycle Exception Probability": 1.0,
-          "Risk Category": "Critical Risk",
-          "Requisition Value (INR)": 123770000.0,
-          "Predicted Exception (0/1)": 1,
-          "Company Code": 1000,
-          "Company Name": "J.K. CEMENT LIMITED",
-          "Company City": "Kanpur"
-        },
-        {
-          "Plant": 2001,
-          "Cycle Exception Probability": 1.0,
-          "Risk Category": "Critical Risk",
-          "Requisition Value (INR)": 115400000.0,
-          "Predicted Exception (0/1)": 1,
-          "Company Code": 1000,
-          "Company Name": "J.K. CEMENT LIMITED",
-          "Company City": "Kanpur"
-        },
-        {
-          "Plant": 1906,
-          "Cycle Exception Probability": 1.0,
-          "Risk Category": "Critical Risk",
-          "Requisition Value (INR)": 108100000.0,
-          "Predicted Exception (0/1)": 1,
-          "Company Code": 1000,
-          "Company Name": "J.K. CEMENT LIMITED",
-          "Company City": "Kanpur"
-        },
-        {
-          "Plant": 1034,
-          "Cycle Exception Probability": 1.0,
-          "Risk Category": "Critical Risk",
-          "Requisition Value (INR)": 90000000.0,
-          "Predicted Exception (0/1)": 1,
-          "Company Code": 1000,
-          "Company Name": "J.K. CEMENT LIMITED",
-          "Company City": "Kanpur"
-        },
-        {
-          "Plant": 1001,
-          "Cycle Exception Probability": 1.0,
-          "Risk Category": "Critical Risk",
-          "Requisition Value (INR)": 90000000.0,
-          "Predicted Exception (0/1)": 1,
-          "Company Code": 1000,
-          "Company Name": "J.K. CEMENT LIMITED",
-          "Company City": "Kanpur"
-        },
-        {
-          "Plant": 1901,
-          "Cycle Exception Probability": 1.0,
-          "Risk Category": "Critical Risk",
-          "Requisition Value (INR)": 80800000.0,
-          "Predicted Exception (0/1)": 1,
-          "Company Code": 1000,
-          "Company Name": "J.K. CEMENT LIMITED",
-          "Company City": "Kanpur"
-        },
-        {
-          "Plant": 1015,
-          "Cycle Exception Probability": 1.0,
-          "Risk Category": "Critical Risk",
-          "Requisition Value (INR)": 76968000.0,
-          "Predicted Exception (0/1)": 1,
-          "Company Code": 1000,
-          "Company Name": "J.K. CEMENT LIMITED",
-          "Company City": "Kanpur"
-        },
-        {
-          "Plant": 1015,
-          "Cycle Exception Probability": 1.0,
-          "Risk Category": "Critical Risk",
-          "Requisition Value (INR)": 72800000.0,
-          "Predicted Exception (0/1)": 1,
-          "Company Code": 1000,
-          "Company Name": "J.K. CEMENT LIMITED",
-          "Company City": "Kanpur"
-        },
-        {
-          "Plant": 1015,
-          "Cycle Exception Probability": 1.0,
-          "Risk Category": "Critical Risk",
-          "Requisition Value (INR)": 71680000.0,
-          "Predicted Exception (0/1)": 1,
-          "Company Code": 1000,
-          "Company Name": "J.K. CEMENT LIMITED",
-          "Company City": "Kanpur"
-        },
-        {
-          "Plant": 1001,
-          "Cycle Exception Probability": 1.0,
-          "Risk Category": "Critical Risk",
-          "Requisition Value (INR)": 69000000.0,
-          "Predicted Exception (0/1)": 1,
-          "Company Code": 1000,
-          "Company Name": "J.K. CEMENT LIMITED",
-          "Company City": "Kanpur"
-        },
-        {
-          "Plant": 1901,
-          "Cycle Exception Probability": 1.0,
-          "Risk Category": "Critical Risk",
-          "Requisition Value (INR)": 60000000.0,
-          "Predicted Exception (0/1)": 1,
-          "Company Code": 1000,
-          "Company Name": "J.K. CEMENT LIMITED",
-          "Company City": "Kanpur"
-        },
-        {
-          "Plant": 1033,
-          "Cycle Exception Probability": 1.0,
-          "Risk Category": "Critical Risk",
-          "Requisition Value (INR)": 54050000.0,
-          "Predicted Exception (0/1)": 1,
-          "Company Code": 1000,
-          "Company Name": "J.K. CEMENT LIMITED",
-          "Company City": "Kanpur"
-        },
-        {
-          "Plant": 1022,
-          "Cycle Exception Probability": 1.0,
-          "Risk Category": "Critical Risk",
-          "Requisition Value (INR)": 53050000.0,
-          "Predicted Exception (0/1)": 1,
-          "Company Code": 1000,
-          "Company Name": "J.K. CEMENT LIMITED",
-          "Company City": "Kanpur"
-        },
-        {
-          "Plant": 1034,
-          "Cycle Exception Probability": 1.0,
-          "Risk Category": "Critical Risk",
-          "Requisition Value (INR)": 50000000.0,
-          "Predicted Exception (0/1)": 1,
-          "Company Code": 1000,
-          "Company Name": "J.K. CEMENT LIMITED",
-          "Company City": "Kanpur"
-        },
-        {
-          "Plant": 1015,
-          "Cycle Exception Probability": 1.0,
-          "Risk Category": "Critical Risk",
+          "PR Number (BANFN)": "1000000762",
+          "PR Document Type (BSART)": "ZSTD",
+          "Plant Name": "J.K. White Cement Works ,Gotan",
+          "Cycle Time Variance (Days)": -69.2,
+          "Procurement Risk Category": "Critical Risk",
           "Requisition Value (INR)": 49300000.0,
-          "Predicted Exception (0/1)": 1,
-          "Company Code": 1000,
-          "Company Name": "J.K. CEMENT LIMITED",
-          "Company City": "Kanpur"
+          "Company Code": "1000",
+          "Company Name": "J.K. CEMENT LIMITED"
         },
         {
-          "Plant": 1015,
-          "Cycle Exception Probability": 1.0,
-          "Risk Category": "Critical Risk",
+          "PR Number (BANFN)": "1000000762",
+          "PR Document Type (BSART)": "ZSTD",
+          "Plant Name": "J.K. White Cement Works ,Gotan",
+          "Cycle Time Variance (Days)": -69.2,
+          "Procurement Risk Category": "Critical Risk",
+          "Requisition Value (INR)": 49300000.0,
+          "Company Code": "1000",
+          "Company Name": "J.K. CEMENT LIMITED"
+        },
+        {
+          "PR Number (BANFN)": "1000000762",
+          "PR Document Type (BSART)": "ZSTD",
+          "Plant Name": "J.K. White Cement Works ,Gotan",
+          "Cycle Time Variance (Days)": -69.2,
+          "Procurement Risk Category": "Critical Risk",
           "Requisition Value (INR)": 48500000.0,
-          "Predicted Exception (0/1)": 1,
-          "Company Code": 1000,
-          "Company Name": "J.K. CEMENT LIMITED",
-          "Company City": "Kanpur"
+          "Company Code": "1000",
+          "Company Name": "J.K. CEMENT LIMITED"
         },
         {
-          "Plant": 1000,
-          "Cycle Exception Probability": 1.0,
-          "Risk Category": "Critical Risk",
-          "Requisition Value (INR)": 47184000.0,
-          "Predicted Exception (0/1)": 1,
-          "Company Code": 1000,
-          "Company Name": "J.K. CEMENT LIMITED",
-          "Company City": "Kanpur"
+          "PR Number (BANFN)": "1000000762",
+          "PR Document Type (BSART)": "ZSTD",
+          "Plant Name": "J.K. White Cement Works ,Gotan",
+          "Cycle Time Variance (Days)": -69.2,
+          "Procurement Risk Category": "Critical Risk",
+          "Requisition Value (INR)": 48500000.0,
+          "Company Code": "1000",
+          "Company Name": "J.K. CEMENT LIMITED"
         },
         {
-          "Plant": 1000,
-          "Cycle Exception Probability": 1.0,
-          "Risk Category": "Critical Risk",
-          "Requisition Value (INR)": 45924000.0,
-          "Predicted Exception (0/1)": 1,
-          "Company Code": 1000,
-          "Company Name": "J.K. CEMENT LIMITED",
-          "Company City": "Kanpur"
+          "PR Number (BANFN)": "1000000677",
+          "PR Document Type (BSART)": "ZSTD",
+          "Plant Name": "J.K. White Cement Works ,Gotan",
+          "Cycle Time Variance (Days)": 13.4,
+          "Procurement Risk Category": "Critical Risk",
+          "Requisition Value (INR)": 67690000.0,
+          "Company Code": "1000",
+          "Company Name": "J.K. CEMENT LIMITED"
         },
         {
-          "Plant": 1001,
-          "Cycle Exception Probability": 1.0,
-          "Risk Category": "Critical Risk",
-          "Requisition Value (INR)": 40000000.0,
-          "Predicted Exception (0/1)": 1,
-          "Company Code": 1000,
-          "Company Name": "J.K. CEMENT LIMITED",
-          "Company City": "Kanpur"
+          "PR Number (BANFN)": "1000000677",
+          "PR Document Type (BSART)": "ZSTD",
+          "Plant Name": "J.K. White Cement Works ,Gotan",
+          "Cycle Time Variance (Days)": 13.4,
+          "Procurement Risk Category": "Critical Risk",
+          "Requisition Value (INR)": 67690000.0,
+          "Company Code": "1000",
+          "Company Name": "J.K. CEMENT LIMITED"
         },
         {
-          "Plant": 1004,
-          "Cycle Exception Probability": 1.0,
-          "Risk Category": "Critical Risk",
-          "Requisition Value (INR)": 39999950.0,
-          "Predicted Exception (0/1)": 1,
-          "Company Code": 1000,
-          "Company Name": "J.K. CEMENT LIMITED",
-          "Company City": "Kanpur"
+          "PR Number (BANFN)": "1000000619",
+          "PR Document Type (BSART)": "ZSTD",
+          "Plant Name": "J.K. Cement Works Aligarh",
+          "Cycle Time Variance (Days)": 30.1,
+          "Procurement Risk Category": "Critical Risk",
+          "Requisition Value (INR)": 80800000.0,
+          "Company Code": "1000",
+          "Company Name": "J.K. CEMENT LIMITED"
         },
         {
-          "Plant": 1004,
-          "Cycle Exception Probability": 1.0,
-          "Risk Category": "Critical Risk",
-          "Requisition Value (INR)": 39999950.0,
-          "Predicted Exception (0/1)": 1,
-          "Company Code": 1000,
-          "Company Name": "J.K. CEMENT LIMITED",
-          "Company City": "Kanpur"
+          "PR Number (BANFN)": "1000000619",
+          "PR Document Type (BSART)": "ZSTD",
+          "Plant Name": "J.K. Cement Works Aligarh",
+          "Cycle Time Variance (Days)": 30.1,
+          "Procurement Risk Category": "Critical Risk",
+          "Requisition Value (INR)": 80800000.0,
+          "Company Code": "1000",
+          "Company Name": "J.K. CEMENT LIMITED"
         },
         {
-          "Plant": 4126,
-          "Cycle Exception Probability": 1.0,
-          "Risk Category": "Critical Risk",
-          "Requisition Value (INR)": 38062500.0,
-          "Predicted Exception (0/1)": 1,
-          "Company Code": 1000,
-          "Company Name": "J.K. CEMENT LIMITED",
-          "Company City": "Kanpur"
+          "PR Number (BANFN)": "1000000619",
+          "PR Document Type (BSART)": "ZSTD",
+          "Plant Name": "J.K. Cement Works Aligarh",
+          "Cycle Time Variance (Days)": -403.9,
+          "Procurement Risk Category": "Critical Risk",
+          "Requisition Value (INR)": 80800000.0,
+          "Company Code": "1000",
+          "Company Name": "J.K. CEMENT LIMITED"
         },
         {
-          "Plant": 1907,
-          "Cycle Exception Probability": 1.0,
-          "Risk Category": "Critical Risk",
-          "Requisition Value (INR)": 34332226.0,
-          "Predicted Exception (0/1)": 1,
-          "Company Code": 1000,
-          "Company Name": "J.K. CEMENT LIMITED",
-          "Company City": "Kanpur"
+          "PR Number (BANFN)": "1000001361",
+          "PR Document Type (BSART)": "ZSTD",
+          "Plant Name": "JK Cement Works, Ujjain",
+          "Cycle Time Variance (Days)": 33.4,
+          "Procurement Risk Category": "Critical Risk",
+          "Requisition Value (INR)": 108100000.0,
+          "Company Code": "1000",
+          "Company Name": "J.K. CEMENT LIMITED"
         },
         {
-          "Plant": 1901,
-          "Cycle Exception Probability": 1.0,
-          "Risk Category": "Critical Risk",
-          "Requisition Value (INR)": 31371376.0,
-          "Predicted Exception (0/1)": 1,
-          "Company Code": 1000,
-          "Company Name": "J.K. CEMENT LIMITED",
-          "Company City": "Kanpur"
+          "PR Number (BANFN)": "1000001361",
+          "PR Document Type (BSART)": "ZSTD",
+          "Plant Name": "JK Cement Works, Ujjain",
+          "Cycle Time Variance (Days)": 33.4,
+          "Procurement Risk Category": "Critical Risk",
+          "Requisition Value (INR)": 108100000.0,
+          "Company Code": "1000",
+          "Company Name": "J.K. CEMENT LIMITED"
         },
         {
-          "Plant": 1901,
-          "Cycle Exception Probability": 1.0,
-          "Risk Category": "Critical Risk",
-          "Requisition Value (INR)": 31371376.0,
-          "Predicted Exception (0/1)": 1,
-          "Company Code": 1000,
-          "Company Name": "J.K. CEMENT LIMITED",
-          "Company City": "Kanpur"
+          "PR Number (BANFN)": "1000001361",
+          "PR Document Type (BSART)": "ZSTD",
+          "Plant Name": "JK Cement Works, Ujjain",
+          "Cycle Time Variance (Days)": -78.1,
+          "Procurement Risk Category": "Critical Risk",
+          "Requisition Value (INR)": 131800000.0,
+          "Company Code": "1000",
+          "Company Name": "J.K. CEMENT LIMITED"
         },
         {
-          "Plant": 1015,
-          "Cycle Exception Probability": 1.0,
-          "Risk Category": "Critical Risk",
-          "Requisition Value (INR)": 30983700.0,
-          "Predicted Exception (0/1)": 1,
-          "Company Code": 1000,
-          "Company Name": "J.K. CEMENT LIMITED",
-          "Company City": "Kanpur"
+          "PR Number (BANFN)": "1000001361",
+          "PR Document Type (BSART)": "ZSTD",
+          "Plant Name": "JK Cement Works, Ujjain",
+          "Cycle Time Variance (Days)": -78.1,
+          "Procurement Risk Category": "Critical Risk",
+          "Requisition Value (INR)": 131800000.0,
+          "Company Code": "1000",
+          "Company Name": "J.K. CEMENT LIMITED"
         },
         {
-          "Plant": 1034,
-          "Cycle Exception Probability": 1.0,
-          "Risk Category": "Critical Risk",
-          "Requisition Value (INR)": 30000000.0,
-          "Predicted Exception (0/1)": 1,
-          "Company Code": 1000,
-          "Company Name": "J.K. CEMENT LIMITED",
-          "Company City": "Kanpur"
+          "PR Number (BANFN)": "1000000896",
+          "PR Document Type (BSART)": "ZSTD",
+          "Plant Name": "J.K. Cement Works , Gotan",
+          "Cycle Time Variance (Days)": -45.7,
+          "Procurement Risk Category": "Critical Risk",
+          "Requisition Value (INR)": 2820000.0,
+          "Company Code": "1000",
+          "Company Name": "J.K. CEMENT LIMITED"
         },
         {
-          "Plant": 1001,
-          "Cycle Exception Probability": 1.0,
-          "Risk Category": "Critical Risk",
-          "Requisition Value (INR)": 29640000.0,
-          "Predicted Exception (0/1)": 1,
-          "Company Code": 1000,
-          "Company Name": "J.K. CEMENT LIMITED",
-          "Company City": "Kanpur"
+          "PR Number (BANFN)": "1000000896",
+          "PR Document Type (BSART)": "ZSTD",
+          "Plant Name": "J.K. Cement Works , Gotan",
+          "Cycle Time Variance (Days)": -45.7,
+          "Procurement Risk Category": "Critical Risk",
+          "Requisition Value (INR)": 2820000.0,
+          "Company Code": "1000",
+          "Company Name": "J.K. CEMENT LIMITED"
         },
         {
-          "Plant": 1015,
-          "Cycle Exception Probability": 1.0,
-          "Risk Category": "Critical Risk",
-          "Requisition Value (INR)": 27833168.74,
-          "Predicted Exception (0/1)": 1,
-          "Company Code": 1000,
-          "Company Name": "J.K. CEMENT LIMITED",
-          "Company City": "Kanpur"
+          "PR Number (BANFN)": "1000000677",
+          "PR Document Type (BSART)": "ZSTD",
+          "Plant Name": "J.K. White Cement Works ,Gotan",
+          "Cycle Time Variance (Days)": 0.4,
+          "Procurement Risk Category": "Critical Risk",
+          "Requisition Value (INR)": 110700000.0,
+          "Company Code": "1000",
+          "Company Name": "J.K. CEMENT LIMITED"
+        },
+        {
+          "PR Number (BANFN)": "1000000677",
+          "PR Document Type (BSART)": "ZSTD",
+          "Plant Name": "J.K. White Cement Works ,Gotan",
+          "Cycle Time Variance (Days)": 0.4,
+          "Procurement Risk Category": "Critical Risk",
+          "Requisition Value (INR)": 110700000.0,
+          "Company Code": "1000",
+          "Company Name": "J.K. CEMENT LIMITED"
+        },
+        {
+          "PR Number (BANFN)": "1000000677",
+          "PR Document Type (BSART)": "ZSTD",
+          "Plant Name": "J.K. White Cement Works ,Gotan",
+          "Cycle Time Variance (Days)": 54.0,
+          "Procurement Risk Category": "Critical Risk",
+          "Requisition Value (INR)": 8876000.0,
+          "Company Code": "1000",
+          "Company Name": "J.K. CEMENT LIMITED"
+        },
+        {
+          "PR Number (BANFN)": "1000000677",
+          "PR Document Type (BSART)": "ZSTD",
+          "Plant Name": "J.K. White Cement Works ,Gotan",
+          "Cycle Time Variance (Days)": 54.0,
+          "Procurement Risk Category": "Critical Risk",
+          "Requisition Value (INR)": 8876000.0,
+          "Company Code": "1000",
+          "Company Name": "J.K. CEMENT LIMITED"
+        },
+        {
+          "PR Number (BANFN)": "1000000614",
+          "PR Document Type (BSART)": "ZSTD",
+          "Plant Name": "JK Cement Works - Hamirpur",
+          "Cycle Time Variance (Days)": -63.5,
+          "Procurement Risk Category": "Critical Risk",
+          "Requisition Value (INR)": 216200000.0,
+          "Company Code": "1000",
+          "Company Name": "J.K. CEMENT LIMITED"
+        },
+        {
+          "PR Number (BANFN)": "1000000614",
+          "PR Document Type (BSART)": "ZSTD",
+          "Plant Name": "JK Cement Works - Hamirpur",
+          "Cycle Time Variance (Days)": -63.5,
+          "Procurement Risk Category": "Critical Risk",
+          "Requisition Value (INR)": 216200000.0,
+          "Company Code": "1000",
+          "Company Name": "J.K. CEMENT LIMITED"
+        },
+        {
+          "PR Number (BANFN)": "1000001361",
+          "PR Document Type (BSART)": "ZSTD",
+          "Plant Name": "JK Cement Works, Ujjain",
+          "Cycle Time Variance (Days)": -91.9,
+          "Procurement Risk Category": "Critical Risk",
+          "Requisition Value (INR)": 162150000.0,
+          "Company Code": "1000",
+          "Company Name": "J.K. CEMENT LIMITED"
+        },
+        {
+          "PR Number (BANFN)": "1000001361",
+          "PR Document Type (BSART)": "ZSTD",
+          "Plant Name": "JK Cement Works, Ujjain",
+          "Cycle Time Variance (Days)": -91.9,
+          "Procurement Risk Category": "Critical Risk",
+          "Requisition Value (INR)": 162150000.0,
+          "Company Code": "1000",
+          "Company Name": "J.K. CEMENT LIMITED"
+        },
+        {
+          "PR Number (BANFN)": "1000000867",
+          "PR Document Type (BSART)": "ZSTD",
+          "Plant Name": "J.K. Cement Works , Gotan",
+          "Cycle Time Variance (Days)": -64.9,
+          "Procurement Risk Category": "Critical Risk",
+          "Requisition Value (INR)": 6600000.0,
+          "Company Code": "1000",
+          "Company Name": "J.K. CEMENT LIMITED"
+        },
+        {
+          "PR Number (BANFN)": "1000000867",
+          "PR Document Type (BSART)": "ZSTD",
+          "Plant Name": "J.K. Cement Works , Gotan",
+          "Cycle Time Variance (Days)": -64.9,
+          "Procurement Risk Category": "Critical Risk",
+          "Requisition Value (INR)": 6600000.0,
+          "Company Code": "1000",
+          "Company Name": "J.K. CEMENT LIMITED"
+        },
+        {
+          "PR Number (BANFN)": "1000000867",
+          "PR Document Type (BSART)": "ZSTD",
+          "Plant Name": "J.K. Cement Works , Gotan",
+          "Cycle Time Variance (Days)": -36.8,
+          "Procurement Risk Category": "Critical Risk",
+          "Requisition Value (INR)": 1259000.0,
+          "Company Code": "1000",
+          "Company Name": "J.K. CEMENT LIMITED"
+        },
+        {
+          "PR Number (BANFN)": "1000000867",
+          "PR Document Type (BSART)": "ZSTD",
+          "Plant Name": "J.K. Cement Works , Gotan",
+          "Cycle Time Variance (Days)": -36.8,
+          "Procurement Risk Category": "Critical Risk",
+          "Requisition Value (INR)": 1259000.0,
+          "Company Code": "1000",
+          "Company Name": "J.K. CEMENT LIMITED"
+        },
+        {
+          "PR Number (BANFN)": "1000000867",
+          "PR Document Type (BSART)": "ZSTD",
+          "Plant Name": "J.K. Cement Works , Gotan",
+          "Cycle Time Variance (Days)": -73.0,
+          "Procurement Risk Category": "Critical Risk",
+          "Requisition Value (INR)": 1339000.0,
+          "Company Code": "1000",
+          "Company Name": "J.K. CEMENT LIMITED"
+        },
+        {
+          "PR Number (BANFN)": "1000000867",
+          "PR Document Type (BSART)": "ZSTD",
+          "Plant Name": "J.K. Cement Works , Gotan",
+          "Cycle Time Variance (Days)": -73.0,
+          "Procurement Risk Category": "Critical Risk",
+          "Requisition Value (INR)": 1339000.0,
+          "Company Code": "1000",
+          "Company Name": "J.K. CEMENT LIMITED"
+        },
+        {
+          "PR Number (BANFN)": "1000000762",
+          "PR Document Type (BSART)": "ZSTD",
+          "Plant Name": "J.K. White Cement Works ,Gotan",
+          "Cycle Time Variance (Days)": -103.8,
+          "Procurement Risk Category": "Critical Risk",
+          "Requisition Value (INR)": 76968000.0,
+          "Company Code": "1000",
+          "Company Name": "J.K. CEMENT LIMITED"
+        },
+        {
+          "PR Number (BANFN)": "1000000762",
+          "PR Document Type (BSART)": "ZSTD",
+          "Plant Name": "J.K. White Cement Works ,Gotan",
+          "Cycle Time Variance (Days)": -103.8,
+          "Procurement Risk Category": "Critical Risk",
+          "Requisition Value (INR)": 76968000.0,
+          "Company Code": "1000",
+          "Company Name": "J.K. CEMENT LIMITED"
+        },
+        {
+          "PR Number (BANFN)": "1000000762",
+          "PR Document Type (BSART)": "ZSTD",
+          "Plant Name": "J.K. White Cement Works ,Gotan",
+          "Cycle Time Variance (Days)": -103.8,
+          "Procurement Risk Category": "Critical Risk",
+          "Requisition Value (INR)": 72800000.0,
+          "Company Code": "1000",
+          "Company Name": "J.K. CEMENT LIMITED"
+        },
+        {
+          "PR Number (BANFN)": "1000000762",
+          "PR Document Type (BSART)": "ZSTD",
+          "Plant Name": "J.K. White Cement Works ,Gotan",
+          "Cycle Time Variance (Days)": -103.8,
+          "Procurement Risk Category": "Critical Risk",
+          "Requisition Value (INR)": 72800000.0,
+          "Company Code": "1000",
+          "Company Name": "J.K. CEMENT LIMITED"
+        },
+        {
+          "PR Number (BANFN)": "1000000867",
+          "PR Document Type (BSART)": "ZSTD",
+          "Plant Name": "J.K. Cement Works , Gotan",
+          "Cycle Time Variance (Days)": -15.0,
+          "Procurement Risk Category": "Critical Risk",
+          "Requisition Value (INR)": 1362000.0,
+          "Company Code": "1000",
+          "Company Name": "J.K. CEMENT LIMITED"
+        },
+        {
+          "PR Number (BANFN)": "1000000867",
+          "PR Document Type (BSART)": "ZSTD",
+          "Plant Name": "J.K. Cement Works , Gotan",
+          "Cycle Time Variance (Days)": -15.0,
+          "Procurement Risk Category": "Critical Risk",
+          "Requisition Value (INR)": 1362000.0,
+          "Company Code": "1000",
+          "Company Name": "J.K. CEMENT LIMITED"
+        },
+        {
+          "PR Number (BANFN)": "1000000867",
+          "PR Document Type (BSART)": "ZSTD",
+          "Plant Name": "J.K. Cement Works , Gotan",
+          "Cycle Time Variance (Days)": 88.0,
+          "Procurement Risk Category": "Critical Risk",
+          "Requisition Value (INR)": 1345000.0,
+          "Company Code": "1000",
+          "Company Name": "J.K. CEMENT LIMITED"
         }
       ],
       "advanced_ml": {
         "confusion_matrix": {
-          "tp": 4693,
-          "fp": 1905,
-          "fn": 1672,
-          "tn": 16730,
-          "precision": 0.711,
+          "tp": 138699,
+          "fp": 27884,
+          "fn": 49418,
+          "tn": 313000,
+          "precision": 0.833,
           "recall": 0.737,
-          "f1": 0.724,
-          "accuracy": 0.857
+          "f1": 0.782,
+          "accuracy": 0.854
         },
         "threshold_curve": {
           "thresholds": [
@@ -5811,40 +5655,40 @@ window.PORTFOLIO_DATA = {
             "0.9"
           ],
           "clean_count": [
-            5855,
-            3733,
-            2380,
-            1517,
-            967,
-            617,
-            393,
-            250,
-            159,
-            102
+            109550,
+            69852,
+            44539,
+            28399,
+            18108,
+            11546,
+            7362,
+            4694,
+            2993,
+            1908
           ],
           "exception_count": [
-            234,
-            365,
-            495,
-            625,
-            756,
-            886,
-            1016,
-            1147,
-            1277,
-            1407
+            6934,
+            10787,
+            14640,
+            18493,
+            22345,
+            26198,
+            30051,
+            33904,
+            37756,
+            41609
           ],
           "total_count": [
-            6089,
-            4098,
-            2875,
-            2142,
-            1723,
-            1503,
-            1409,
-            1397,
-            1436,
-            1509
+            116484,
+            80639,
+            59179,
+            46892,
+            40453,
+            37744,
+            37413,
+            38598,
+            40749,
+            43517
           ]
         },
         "calibration_curve": {
@@ -5927,676 +5771,636 @@ window.PORTFOLIO_DATA = {
         "KNA1",
         "KNVV"
       ],
-      "total_records": 25000,
-      "exceptions_count": 1205,
-      "exception_rate_pct": 4.82,
-      "financial_exposure_inr": 2147100000.0,
-      "financial_exposure_cr": 214.71,
-      "avg_confidence_score": 0.8611,
-      "champion_model": "Isolation Forest",
-      "champion_metric": "0.8611 ROC-AUC",
+      "total_records": 50000,
+      "exceptions_count": 48887,
+      "exception_rate_pct": 97.77,
+      "financial_exposure_inr": 8039277960.21,
+      "financial_exposure_cr": 803.93,
+      "avg_confidence_score": 2.205,
+      "champion_model": "Gradient Boosting Regressor",
+      "champion_metric": "0.2794 R2 Score",
       "risk_distribution": {
-        "Critical": 125,
-        "High": 1082,
-        "Medium": 5154,
-        "Low": 18639
+        "Critical": 46438,
+        "High": 3560,
+        "Medium": 2,
+        "Low": 0
       },
       "category_breakdown": [
         {
-          "label": "2001",
-          "count": 1620
+          "label": "1901",
+          "count": 2355
         },
         {
           "label": "1001",
-          "count": 1140
+          "count": 2078
         },
         {
-          "label": "1901",
-          "count": 975
+          "label": "1902",
+          "count": 1719
+        },
+        {
+          "label": "2001",
+          "count": 1594
+        },
+        {
+          "label": "1907",
+          "count": 1383
+        },
+        {
+          "label": "2001.0",
+          "count": 1342
         },
         {
           "label": "1022",
-          "count": 875
-        },
-        {
-          "label": "1004",
-          "count": 850
-        },
-        {
-          "label": "1033",
-          "count": 580
-        },
-        {
-          "label": "1906",
-          "count": 505
+          "count": 1303
         }
       ],
       "feature_importance": [
         {
-          "feature": "feature",
-          "importance": 0,
-          "description": "Direct Mathematical Influence On Order Value Prediction & Exception Risk:"
+          "feature": "log_customer_avg_order_value",
+          "importance": 0.1398,
+          "description": "Log Customer Avg Order Value"
         },
         {
-          "feature": "customer_recency_days",
-          "importance": 0.0663,
-          "description": "Measures elapsed days since prior customer order. High elapsed recency combined with unexpected order size signals dormant customer churn risk or erratic spot-purchasing."
+          "feature": "max_item_value",
+          "importance": 0.1066,
+          "description": "Max Item Value"
         },
         {
-          "feature": "rejection_flag",
-          "importance": 0.0654,
-          "description": "Indicator for rejected or cancelled sales orders (ABSTK = C/X). High-value orders rejected by sales managers directly identify distressed or non-compliant customer transactions."
+          "feature": "order_net_value",
+          "importance": 0.1011,
+          "description": "Order Net Value"
         },
         {
-          "feature": "plant_freq",
-          "importance": 0.0625,
-          "description": "Frequency density of the dispatching manufacturing plant / depot. Deviations from standard supply plants flag cross-regional logistics and supply allocation anomalies."
+          "feature": "customer_avg_order_value",
+          "importance": 0.101,
+          "description": "Customer Avg Order Value"
         },
         {
-          "feature": "division_freq",
-          "importance": 0.0617,
-          "description": "Product division frequency. Captures concentration across Grey Cement, White Cement, Wall Putty, and specialty building products."
+          "feature": "customer_std_order_value",
+          "importance": 0.0979,
+          "description": "Customer Std Order Value"
         },
         {
-          "feature": "total_gross_weight",
-          "importance": 0.0475,
-          "description": "Total shipment physical weight in kilograms. Discrepancies between order value and weight identify price/density mispricing or haulage overload anomalies."
+          "feature": "log_order_net_value",
+          "importance": 0.0969,
+          "description": "Log Order Net Value"
         },
         {
-          "feature": "sales_office_freq",
-          "importance": 0.044,
-          "description": "Operational density of the regional sales office. Flags anomalous dispatch locations or atypical sales branch transactions."
+          "feature": "customer_min_order_value",
+          "importance": 0.0433,
+          "description": "Customer Min Order Value"
         },
         {
-          "feature": "avg_unit_price",
-          "importance": 0.044,
-          "description": "Average net price per unit across order line items. Unusually high or low unit pricing indicates incorrect discount condition records or manual price overrides."
+          "feature": "total_quantity",
+          "importance": 0.0395,
+          "description": "Total Quantity"
         }
       ],
       "model_rankings": [
         {
-          "Rank": "#1",
-          "Model": "Isolation Forest",
-          "model_key": "isolation_forest",
-          "Accuracy": 0.8984,
-          "Precision": 0.2537,
-          "Recall": 0.1278,
-          "F1-Score": 0.1699,
-          "ROC-AUC": 0.8611,
-          "PR-AUC": 0.2545,
-          "Specificity": 0.9667
+          "ML_15 | 5 Supervised Regression Models Ranking & Evaluation (Test Set)": "Rank",
+          "": "Pearson r"
         },
         {
-          "Rank": "#2",
-          "Model": "One-Class SVM",
-          "model_key": "one_class_svm",
-          "Accuracy": 0.8902,
-          "Precision": 0.1802,
-          "Recall": 0.0983,
-          "F1-Score": 0.1272,
-          "ROC-AUC": 0.412,
-          "PR-AUC": 0.1022,
-          "Specificity": 0.9604
+          "ML_15 | 5 Supervised Regression Models Ranking & Evaluation (Test Set)": "#1",
+          "": 0.601
         },
         {
-          "Rank": "#3",
-          "Model": "Local Outlier Factor (LOF)",
-          "model_key": "lof",
-          "Accuracy": 0.887,
-          "Precision": 0.1565,
-          "Recall": 0.0885,
-          "F1-Score": 0.113,
-          "ROC-AUC": 0.63,
-          "PR-AUC": 0.1223,
-          "Specificity": 0.9578
+          "ML_15 | 5 Supervised Regression Models Ranking & Evaluation (Test Set)": "#2",
+          "": 0.5664
         },
         {
-          "Rank": "#4",
-          "Model": "Deep Neural Autoencoder",
-          "model_key": "autoencoder",
-          "Accuracy": 0.8866,
-          "Precision": 0.1491,
-          "Recall": 0.0835,
-          "F1-Score": 0.1071,
-          "ROC-AUC": 0.7304,
-          "PR-AUC": 0.1455,
-          "Specificity": 0.9578
+          "ML_15 | 5 Supervised Regression Models Ranking & Evaluation (Test Set)": "#3",
+          "": 0.4789
         },
         {
-          "Rank": "#5",
-          "Model": "DBSCAN",
-          "model_key": "dbscan",
-          "Accuracy": 0.8854,
-          "Precision": 0.1391,
-          "Recall": 0.0786,
-          "F1-Score": 0.1005,
-          "ROC-AUC": 0.7535,
-          "PR-AUC": 0.1497,
-          "Specificity": 0.9569
+          "ML_15 | 5 Supervised Regression Models Ranking & Evaluation (Test Set)": "#4",
+          "": 0.4389
         }
       ],
       "display_columns": [
-        "Plant (WERKS)",
-        "Exception Probability",
-        "Risk Category",
-        "Order Net Value (INR)",
-        "Predicted Exception (0/1)",
         "Sales Order (VBELN)",
+        "Customer Name",
+        "Plant (WERKS)",
+        "Variance %",
+        "Predicted Value Tier",
+        "Current Order Value (INR)",
         "Order Date (ERDAT)",
         "Customer (KUNNR)"
       ],
       "sample_records": [
         {
-          "Plant (WERKS)": 1004,
-          "Exception Probability": 0.5555,
-          "Risk Category": "High Risk",
-          "Order Net Value (INR)": 1318647.54,
-          "Predicted Exception (0/1)": 1,
-          "Sales Order (VBELN)": 2100130306,
-          "Order Date (ERDAT)": "2025-06-20 00:00:00",
-          "Customer (KUNNR)": 20000048
+          "Sales Order (VBELN)": 2130749547.0,
+          "Customer Name": "ARCH LOGISTICS",
+          "Plant (WERKS)": "1290",
+          "Variance %": 117625.27,
+          "Predicted Value Tier": "Tier 3 - Core Growth (INR 100,000 - 500,000)",
+          "Current Order Value (INR)": 1122.66,
+          "Order Date (ERDAT)": "2025-01-29",
+          "Customer (KUNNR)": 150000168.0
         },
         {
-          "Plant (WERKS)": 1901,
-          "Exception Probability": 0.6338,
-          "Risk Category": "High Risk",
-          "Order Net Value (INR)": 1836914.06,
-          "Predicted Exception (0/1)": 1,
-          "Sales Order (VBELN)": 2340078440,
-          "Order Date (ERDAT)": "2025-06-17 00:00:00",
-          "Customer (KUNNR)": 20000374
+          "Sales Order (VBELN)": 2130752845.0,
+          "Customer Name": "ARCH LOGISTICS",
+          "Plant (WERKS)": "1100",
+          "Variance %": 100846.63,
+          "Predicted Value Tier": "Tier 3 - Core Growth (INR 100,000 - 500,000)",
+          "Current Order Value (INR)": 342.97,
+          "Order Date (ERDAT)": "2025-01-30",
+          "Customer (KUNNR)": 150000168.0
         },
         {
-          "Plant (WERKS)": 1901,
-          "Exception Probability": 0.7843,
-          "Risk Category": "Critical Risk",
-          "Order Net Value (INR)": 2738089.84,
-          "Predicted Exception (0/1)": 1,
-          "Sales Order (VBELN)": 2340080681,
-          "Order Date (ERDAT)": "2025-06-17 00:00:00",
-          "Customer (KUNNR)": 20000374
+          "Sales Order (VBELN)": 2130925101.0,
+          "Customer Name": "ARCH LOGISTICS",
+          "Plant (WERKS)": "1101",
+          "Variance %": 10035.57,
+          "Predicted Value Tier": "Tier 3 - Core Growth (INR 100,000 - 500,000)",
+          "Current Order Value (INR)": 353.12,
+          "Order Date (ERDAT)": "2025-03-24",
+          "Customer (KUNNR)": 150000168.0
         },
         {
-          "Plant (WERKS)": 1907,
-          "Exception Probability": 0.6436,
-          "Risk Category": "High Risk",
-          "Order Net Value (INR)": 1421875.0,
-          "Predicted Exception (0/1)": 1,
-          "Sales Order (VBELN)": 2340079223,
-          "Order Date (ERDAT)": "2025-06-16 00:00:00",
-          "Customer (KUNNR)": 20000629
+          "Sales Order (VBELN)": 2130925610.0,
+          "Customer Name": "ARCH LOGISTICS",
+          "Plant (WERKS)": "1290",
+          "Variance %": 68177.23,
+          "Predicted Value Tier": "Tier 3 - Core Growth (INR 100,000 - 500,000)",
+          "Current Order Value (INR)": 2806.25,
+          "Order Date (ERDAT)": "2025-03-24",
+          "Customer (KUNNR)": 150000168.0
         },
         {
-          "Plant (WERKS)": 1004,
-          "Exception Probability": 0.6895,
-          "Risk Category": "High Risk",
-          "Order Net Value (INR)": 2500000.0,
-          "Predicted Exception (0/1)": 1,
-          "Sales Order (VBELN)": 2340080360,
-          "Order Date (ERDAT)": "2025-06-16 00:00:00",
-          "Customer (KUNNR)": 20000784
+          "Sales Order (VBELN)": 2130936323.0,
+          "Customer Name": "ARCH LOGISTICS",
+          "Plant (WERKS)": "1098",
+          "Variance %": "",
+          "Predicted Value Tier": "Tier 3 - Core Growth (INR 100,000 - 500,000)",
+          "Current Order Value (INR)": 353.91,
+          "Order Date (ERDAT)": "2025-03-28",
+          "Customer (KUNNR)": 150000168.0
         },
         {
-          "Plant (WERKS)": 1907,
-          "Exception Probability": 0.5039,
-          "Risk Category": "High Risk",
-          "Order Net Value (INR)": 429230.8,
-          "Predicted Exception (0/1)": 1,
-          "Sales Order (VBELN)": 2100134962,
-          "Order Date (ERDAT)": "2025-06-17 00:00:00",
-          "Customer (KUNNR)": 20000784
+          "Sales Order (VBELN)": 2130109100.0,
+          "Customer Name": "RAYAKA TRANSPORT COMPANY",
+          "Plant (WERKS)": "1394",
+          "Variance %": 61278.85,
+          "Predicted Value Tier": "Tier 3 - Core Growth (INR 100,000 - 500,000)",
+          "Current Order Value (INR)": 1315.62,
+          "Order Date (ERDAT)": "2024-05-21",
+          "Customer (KUNNR)": 150000231.0
         },
         {
-          "Plant (WERKS)": 1901,
-          "Exception Probability": 0.5983,
-          "Risk Category": "High Risk",
-          "Order Net Value (INR)": 1065847.05,
-          "Predicted Exception (0/1)": 1,
-          "Sales Order (VBELN)": 2100135624,
-          "Order Date (ERDAT)": "2025-06-17 00:00:00",
-          "Customer (KUNNR)": 20000784
+          "Sales Order (VBELN)": 2130190817.0,
+          "Customer Name": "RAYAKA TRANSPORT COMPANY",
+          "Plant (WERKS)": "1394",
+          "Variance %": 54088.49,
+          "Predicted Value Tier": "Tier 3 - Core Growth (INR 100,000 - 500,000)",
+          "Current Order Value (INR)": 657.82,
+          "Order Date (ERDAT)": "2024-06-21",
+          "Customer (KUNNR)": 150000231.0
         },
         {
-          "Plant (WERKS)": 1901,
-          "Exception Probability": 0.6358,
-          "Risk Category": "High Risk",
-          "Order Net Value (INR)": 2421875.0,
-          "Predicted Exception (0/1)": 1,
-          "Sales Order (VBELN)": 2340080533,
-          "Order Date (ERDAT)": "2025-06-17 00:00:00",
-          "Customer (KUNNR)": 20000784
+          "Sales Order (VBELN)": 2130285033.0,
+          "Customer Name": "RAYAKA TRANSPORT COMPANY",
+          "Plant (WERKS)": "1394",
+          "Variance %": 17530.5,
+          "Predicted Value Tier": "Tier 3 - Core Growth (INR 100,000 - 500,000)",
+          "Current Order Value (INR)": 657.82,
+          "Order Date (ERDAT)": "2024-07-30",
+          "Customer (KUNNR)": 150000231.0
         },
         {
-          "Plant (WERKS)": 1907,
-          "Exception Probability": 0.7966,
-          "Risk Category": "Critical Risk",
-          "Order Net Value (INR)": 4843750.0,
-          "Predicted Exception (0/1)": 1,
-          "Sales Order (VBELN)": 2340080666,
-          "Order Date (ERDAT)": "2025-06-17 00:00:00",
-          "Customer (KUNNR)": 20000784
+          "Sales Order (VBELN)": 2130401218.0,
+          "Customer Name": "RAYAKA TRANSPORT COMPANY",
+          "Plant (WERKS)": "1330",
+          "Variance %": 34343.23,
+          "Predicted Value Tier": "Tier 3 - Core Growth (INR 100,000 - 500,000)",
+          "Current Order Value (INR)": 1613.28,
+          "Order Date (ERDAT)": "2024-09-19",
+          "Customer (KUNNR)": 150000231.0
         },
         {
-          "Plant (WERKS)": 1901,
-          "Exception Probability": 0.5098,
-          "Risk Category": "High Risk",
-          "Order Net Value (INR)": 426312.45,
-          "Predicted Exception (0/1)": 1,
-          "Sales Order (VBELN)": 2100134920,
-          "Order Date (ERDAT)": "2025-06-19 00:00:00",
-          "Customer (KUNNR)": 20000784
+          "Sales Order (VBELN)": 2130503817.0,
+          "Customer Name": "RAYAKA TRANSPORT COMPANY",
+          "Plant (WERKS)": "1377",
+          "Variance %": 31194.28,
+          "Predicted Value Tier": "Tier 3 - Core Growth (INR 100,000 - 500,000)",
+          "Current Order Value (INR)": 701.56,
+          "Order Date (ERDAT)": "2024-10-28",
+          "Customer (KUNNR)": 150000231.0
         },
         {
-          "Plant (WERKS)": 1907,
-          "Exception Probability": 0.5068,
-          "Risk Category": "High Risk",
-          "Order Net Value (INR)": 428885.0,
-          "Predicted Exception (0/1)": 1,
-          "Sales Order (VBELN)": 2100135446,
-          "Order Date (ERDAT)": "2025-06-19 00:00:00",
-          "Customer (KUNNR)": 20000784
+          "Sales Order (VBELN)": 2131404140.0,
+          "Customer Name": "RAYAKA TRANSPORT COMPANY",
+          "Plant (WERKS)": "1394",
+          "Variance %": 30884.36,
+          "Predicted Value Tier": "Tier 3 - Core Growth (INR 100,000 - 500,000)",
+          "Current Order Value (INR)": 657.82,
+          "Order Date (ERDAT)": "03.09.2025",
+          "Customer (KUNNR)": 150000231.0
         },
         {
-          "Plant (WERKS)": 1907,
-          "Exception Probability": 0.6095,
-          "Risk Category": "High Risk",
-          "Order Net Value (INR)": 226677.16,
-          "Predicted Exception (0/1)": 1,
-          "Sales Order (VBELN)": 2100136202,
-          "Order Date (ERDAT)": "2025-06-20 00:00:00",
-          "Customer (KUNNR)": 20000784
+          "Sales Order (VBELN)": 2131585156.0,
+          "Customer Name": "RAYAKA TRANSPORT COMPANY",
+          "Plant (WERKS)": "1394",
+          "Variance %": 25623.64,
+          "Predicted Value Tier": "Tier 3 - Core Growth (INR 100,000 - 500,000)",
+          "Current Order Value (INR)": 664.4,
+          "Order Date (ERDAT)": "03.11.2025",
+          "Customer (KUNNR)": 150000231.0
         },
         {
-          "Plant (WERKS)": 1004,
-          "Exception Probability": 0.5763,
-          "Risk Category": "High Risk",
-          "Order Net Value (INR)": 876153.06,
-          "Predicted Exception (0/1)": 1,
-          "Sales Order (VBELN)": 2100136235,
-          "Order Date (ERDAT)": "2025-06-20 00:00:00",
-          "Customer (KUNNR)": 20000784
+          "Sales Order (VBELN)": 2132077437.0,
+          "Customer Name": "RAYAKA TRANSPORT COMPANY",
+          "Plant (WERKS)": "1394",
+          "Variance %": 58282.53,
+          "Predicted Value Tier": "Tier 3 - Core Growth (INR 100,000 - 500,000)",
+          "Current Order Value (INR)": 684.74,
+          "Order Date (ERDAT)": "19.03.2026",
+          "Customer (KUNNR)": 150000231.0
         },
         {
-          "Plant (WERKS)": 1907,
-          "Exception Probability": 0.7008,
-          "Risk Category": "High Risk",
-          "Order Net Value (INR)": 2500000.0,
-          "Predicted Exception (0/1)": 1,
-          "Sales Order (VBELN)": 2340080649,
-          "Order Date (ERDAT)": "2025-06-16 00:00:00",
-          "Customer (KUNNR)": 20000831
+          "Sales Order (VBELN)": 2132081740.0,
+          "Customer Name": "RAYAKA TRANSPORT COMPANY",
+          "Plant (WERKS)": "1377",
+          "Variance %": 28294.12,
+          "Predicted Value Tier": "Tier 3 - Core Growth (INR 100,000 - 500,000)",
+          "Current Order Value (INR)": 301.7,
+          "Order Date (ERDAT)": "20.03.2026",
+          "Customer (KUNNR)": 150000231.0
         },
         {
-          "Plant (WERKS)": 1907,
-          "Exception Probability": 0.5922,
-          "Risk Category": "High Risk",
-          "Order Net Value (INR)": 151335.94,
-          "Predicted Exception (0/1)": 1,
-          "Sales Order (VBELN)": 2200002416,
-          "Order Date (ERDAT)": "2025-06-17 00:00:00",
-          "Customer (KUNNR)": 20000831
+          "Sales Order (VBELN)": 2132440988.0,
+          "Customer Name": "RAYAKA TRANSPORT COMPANY",
+          "Plant (WERKS)": "1377",
+          "Variance %": "",
+          "Predicted Value Tier": "Tier 3 - Core Growth (INR 100,000 - 500,000)",
+          "Current Order Value (INR)": 620.34,
+          "Order Date (ERDAT)": "30.06.2026",
+          "Customer (KUNNR)": 150000231.0
         },
         {
-          "Plant (WERKS)": 1033,
-          "Exception Probability": 0.7387,
-          "Risk Category": "High Risk",
-          "Order Net Value (INR)": 2265625.0,
-          "Predicted Exception (0/1)": 1,
-          "Sales Order (VBELN)": 2340080742,
-          "Order Date (ERDAT)": "2025-06-18 00:00:00",
-          "Customer (KUNNR)": 20001316
+          "Sales Order (VBELN)": 2130076939.0,
+          "Customer Name": "SHREE JI ENTERPRISES",
+          "Plant (WERKS)": "1419",
+          "Variance %": 57452.08,
+          "Predicted Value Tier": "Tier 3 - Core Growth (INR 100,000 - 500,000)",
+          "Current Order Value (INR)": 331.25,
+          "Order Date (ERDAT)": "2024-05-08",
+          "Customer (KUNNR)": 150000234.0
         },
         {
-          "Plant (WERKS)": 1033,
-          "Exception Probability": 0.5388,
-          "Risk Category": "High Risk",
-          "Order Net Value (INR)": 190312.5,
-          "Predicted Exception (0/1)": 1,
-          "Sales Order (VBELN)": 2100135980,
-          "Order Date (ERDAT)": "2025-06-19 00:00:00",
-          "Customer (KUNNR)": 20001316
+          "Sales Order (VBELN)": 2130076945.0,
+          "Customer Name": "SHREE JI ENTERPRISES",
+          "Plant (WERKS)": "1472",
+          "Variance %": 107511.39,
+          "Predicted Value Tier": "Tier 3 - Core Growth (INR 100,000 - 500,000)",
+          "Current Order Value (INR)": 701.56,
+          "Order Date (ERDAT)": "2024-05-08",
+          "Customer (KUNNR)": 150000234.0
         },
         {
-          "Plant (WERKS)": 1907,
-          "Exception Probability": 0.7078,
-          "Risk Category": "High Risk",
-          "Order Net Value (INR)": 1359375.0,
-          "Predicted Exception (0/1)": 1,
-          "Sales Order (VBELN)": 2100134255,
-          "Order Date (ERDAT)": "2025-06-18 00:00:00",
-          "Customer (KUNNR)": 20001378
+          "Sales Order (VBELN)": 2130076950.0,
+          "Customer Name": "SHREE JI ENTERPRISES",
+          "Plant (WERKS)": "1308",
+          "Variance %": 42832.72,
+          "Predicted Value Tier": "Tier 3 - Core Growth (INR 100,000 - 500,000)",
+          "Current Order Value (INR)": 331.25,
+          "Order Date (ERDAT)": "2024-05-08",
+          "Customer (KUNNR)": 150000234.0
         },
         {
-          "Plant (WERKS)": 1907,
-          "Exception Probability": 0.7167,
-          "Risk Category": "High Risk",
-          "Order Net Value (INR)": 3398437.5,
-          "Predicted Exception (0/1)": 1,
-          "Sales Order (VBELN)": 2340080755,
-          "Order Date (ERDAT)": "2025-06-18 00:00:00",
-          "Customer (KUNNR)": 20001378
+          "Sales Order (VBELN)": 2130076957.0,
+          "Customer Name": "SHREE JI ENTERPRISES",
+          "Plant (WERKS)": "1419",
+          "Variance %": 68786.47,
+          "Predicted Value Tier": "Tier 3 - Core Growth (INR 100,000 - 500,000)",
+          "Current Order Value (INR)": 662.5,
+          "Order Date (ERDAT)": "2024-05-08",
+          "Customer (KUNNR)": 150000234.0
         },
         {
-          "Plant (WERKS)": 1901,
-          "Exception Probability": 0.6876,
-          "Risk Category": "High Risk",
-          "Order Net Value (INR)": 1359375.0,
-          "Predicted Exception (0/1)": 1,
-          "Sales Order (VBELN)": 2100136031,
-          "Order Date (ERDAT)": "2025-06-19 00:00:00",
-          "Customer (KUNNR)": 20001378
+          "Sales Order (VBELN)": 2130076970.0,
+          "Customer Name": "SHREE JI ENTERPRISES",
+          "Plant (WERKS)": "1419",
+          "Variance %": 59922.76,
+          "Predicted Value Tier": "Tier 3 - Core Growth (INR 100,000 - 500,000)",
+          "Current Order Value (INR)": 350.78,
+          "Order Date (ERDAT)": "2024-05-08",
+          "Customer (KUNNR)": 150000234.0
         },
         {
-          "Plant (WERKS)": 2001,
-          "Exception Probability": 0.5156,
-          "Risk Category": "High Risk",
-          "Order Net Value (INR)": 1096093.74,
-          "Predicted Exception (0/1)": 1,
-          "Sales Order (VBELN)": 2340080688,
-          "Order Date (ERDAT)": "2025-06-17 00:00:00",
-          "Customer (KUNNR)": 20001572
+          "Sales Order (VBELN)": 2130077039.0,
+          "Customer Name": "SHREE JI ENTERPRISES",
+          "Plant (WERKS)": "1308",
+          "Variance %": 62046.43,
+          "Predicted Value Tier": "Tier 3 - Core Growth (INR 100,000 - 500,000)",
+          "Current Order Value (INR)": 342.97,
+          "Order Date (ERDAT)": "2024-05-08",
+          "Customer (KUNNR)": 150000234.0
         },
         {
-          "Plant (WERKS)": 1901,
-          "Exception Probability": 0.6536,
-          "Risk Category": "High Risk",
-          "Order Net Value (INR)": 775000.0,
-          "Predicted Exception (0/1)": 1,
-          "Sales Order (VBELN)": 2100135285,
-          "Order Date (ERDAT)": "2025-06-17 00:00:00",
-          "Customer (KUNNR)": 20001588
+          "Sales Order (VBELN)": 2130098082.0,
+          "Customer Name": "SHREE JI ENTERPRISES",
+          "Plant (WERKS)": "1100",
+          "Variance %": 13193.59,
+          "Predicted Value Tier": "Tier 3 - Core Growth (INR 100,000 - 500,000)",
+          "Current Order Value (INR)": 331.25,
+          "Order Date (ERDAT)": "2024-05-17",
+          "Customer (KUNNR)": 150000234.0
         },
         {
-          "Plant (WERKS)": 1907,
-          "Exception Probability": 0.6914,
-          "Risk Category": "High Risk",
-          "Order Net Value (INR)": 2421875.0,
-          "Predicted Exception (0/1)": 1,
-          "Sales Order (VBELN)": 2340080193,
-          "Order Date (ERDAT)": "2025-06-17 00:00:00",
-          "Customer (KUNNR)": 20001588
+          "Sales Order (VBELN)": 2130131892.0,
+          "Customer Name": "SHREE JI ENTERPRISES",
+          "Plant (WERKS)": "1472",
+          "Variance %": 17019.09,
+          "Predicted Value Tier": "Tier 3 - Core Growth (INR 100,000 - 500,000)",
+          "Current Order Value (INR)": 1325.0,
+          "Order Date (ERDAT)": "2024-05-30",
+          "Customer (KUNNR)": 150000234.0
         },
         {
-          "Plant (WERKS)": 2001,
-          "Exception Probability": 0.5846,
-          "Risk Category": "High Risk",
-          "Order Net Value (INR)": 570000.0,
-          "Predicted Exception (0/1)": 1,
-          "Sales Order (VBELN)": 2100136012,
-          "Order Date (ERDAT)": "2025-06-19 00:00:00",
-          "Customer (KUNNR)": 20001863
+          "Sales Order (VBELN)": 2130172575.0,
+          "Customer Name": "SHREE JI ENTERPRISES",
+          "Plant (WERKS)": "1308",
+          "Variance %": 53074.36,
+          "Predicted Value Tier": "Tier 3 - Core Growth (INR 100,000 - 500,000)",
+          "Current Order Value (INR)": 1028.91,
+          "Order Date (ERDAT)": "2024-06-14",
+          "Customer (KUNNR)": 150000234.0
         },
         {
-          "Plant (WERKS)": 2001,
-          "Exception Probability": 0.5664,
-          "Risk Category": "High Risk",
-          "Order Net Value (INR)": 926250.0,
-          "Predicted Exception (0/1)": 1,
-          "Sales Order (VBELN)": 2340078951,
-          "Order Date (ERDAT)": "2025-06-19 00:00:00",
-          "Customer (KUNNR)": 20001863
+          "Sales Order (VBELN)": 2130187151.0,
+          "Customer Name": "SHREE JI ENTERPRISES",
+          "Plant (WERKS)": "1472",
+          "Variance %": 53074.36,
+          "Predicted Value Tier": "Tier 3 - Core Growth (INR 100,000 - 500,000)",
+          "Current Order Value (INR)": 331.25,
+          "Order Date (ERDAT)": "2024-06-19",
+          "Customer (KUNNR)": 150000234.0
         },
         {
-          "Plant (WERKS)": 2001,
-          "Exception Probability": 0.6525,
-          "Risk Category": "High Risk",
-          "Order Net Value (INR)": 5850.0,
-          "Predicted Exception (0/1)": 1,
-          "Sales Order (VBELN)": 2300002127,
-          "Order Date (ERDAT)": "2025-06-17 00:00:00",
-          "Customer (KUNNR)": 20001896
+          "Sales Order (VBELN)": 2130187157.0,
+          "Customer Name": "SHREE JI ENTERPRISES",
+          "Plant (WERKS)": "1308",
+          "Variance %": 53074.36,
+          "Predicted Value Tier": "Tier 3 - Core Growth (INR 100,000 - 500,000)",
+          "Current Order Value (INR)": 331.25,
+          "Order Date (ERDAT)": "2024-06-19",
+          "Customer (KUNNR)": 150000234.0
         },
         {
-          "Plant (WERKS)": 2001,
-          "Exception Probability": 0.6083,
-          "Risk Category": "High Risk",
-          "Order Net Value (INR)": 9750.0,
-          "Predicted Exception (0/1)": 1,
-          "Sales Order (VBELN)": 2300004003,
-          "Order Date (ERDAT)": "2025-06-17 00:00:00",
-          "Customer (KUNNR)": 20001896
+          "Sales Order (VBELN)": 2130203359.0,
+          "Customer Name": "SHREE JI ENTERPRISES",
+          "Plant (WERKS)": "1308",
+          "Variance %": 10534.87,
+          "Predicted Value Tier": "Tier 3 - Core Growth (INR 100,000 - 500,000)",
+          "Current Order Value (INR)": 331.25,
+          "Order Date (ERDAT)": "2024-06-26",
+          "Customer (KUNNR)": 150000234.0
         },
         {
-          "Plant (WERKS)": 2001,
-          "Exception Probability": 0.5151,
-          "Risk Category": "High Risk",
-          "Order Net Value (INR)": 17000.0,
-          "Predicted Exception (0/1)": 1,
-          "Sales Order (VBELN)": 2300004378,
-          "Order Date (ERDAT)": "2025-06-17 00:00:00",
-          "Customer (KUNNR)": 20001897
+          "Sales Order (VBELN)": 2130217392.0,
+          "Customer Name": "SHREE JI ENTERPRISES",
+          "Plant (WERKS)": "1308",
+          "Variance %": 8661.3,
+          "Predicted Value Tier": "Tier 3 - Core Growth (INR 100,000 - 500,000)",
+          "Current Order Value (INR)": 1656.25,
+          "Order Date (ERDAT)": "2024-06-29",
+          "Customer (KUNNR)": 150000234.0
         },
         {
-          "Plant (WERKS)": 1901,
-          "Exception Probability": 0.5391,
-          "Risk Category": "High Risk",
-          "Order Net Value (INR)": 1210937.5,
-          "Predicted Exception (0/1)": 1,
-          "Sales Order (VBELN)": 2340080599,
-          "Order Date (ERDAT)": "2025-06-16 00:00:00",
-          "Customer (KUNNR)": 20002210
+          "Sales Order (VBELN)": 2130274250.0,
+          "Customer Name": "SHREE JI ENTERPRISES",
+          "Plant (WERKS)": "1308",
+          "Variance %": 43706.52,
+          "Predicted Value Tier": "Tier 3 - Core Growth (INR 100,000 - 500,000)",
+          "Current Order Value (INR)": 1656.25,
+          "Order Date (ERDAT)": "2024-07-26",
+          "Customer (KUNNR)": 150000234.0
         },
         {
-          "Plant (WERKS)": 1004,
-          "Exception Probability": 0.5711,
-          "Risk Category": "High Risk",
-          "Order Net Value (INR)": 1546875.0,
-          "Predicted Exception (0/1)": 1,
-          "Sales Order (VBELN)": 2340080637,
-          "Order Date (ERDAT)": "2025-06-16 00:00:00",
-          "Customer (KUNNR)": 20002237
+          "Sales Order (VBELN)": 2130274336.0,
+          "Customer Name": "SHREE JI ENTERPRISES",
+          "Plant (WERKS)": "1308",
+          "Variance %": 20583.78,
+          "Predicted Value Tier": "Tier 3 - Core Growth (INR 100,000 - 500,000)",
+          "Current Order Value (INR)": 331.25,
+          "Order Date (ERDAT)": "2024-07-26",
+          "Customer (KUNNR)": 150000234.0
         },
         {
-          "Plant (WERKS)": 1004,
-          "Exception Probability": 0.6016,
-          "Risk Category": "High Risk",
-          "Order Net Value (INR)": 1546875.0,
-          "Predicted Exception (0/1)": 1,
-          "Sales Order (VBELN)": 2340079965,
-          "Order Date (ERDAT)": "2025-06-17 00:00:00",
-          "Customer (KUNNR)": 20002237
+          "Sales Order (VBELN)": 2130274349.0,
+          "Customer Name": "SHREE JI ENTERPRISES",
+          "Plant (WERKS)": "1419",
+          "Variance %": 21054.78,
+          "Predicted Value Tier": "Tier 3 - Core Growth (INR 100,000 - 500,000)",
+          "Current Order Value (INR)": 701.56,
+          "Order Date (ERDAT)": "2024-07-26",
+          "Customer (KUNNR)": 150000234.0
         },
         {
-          "Plant (WERKS)": 2001,
-          "Exception Probability": 0.5991,
-          "Risk Category": "High Risk",
-          "Order Net Value (INR)": 984375.0,
-          "Predicted Exception (0/1)": 1,
-          "Sales Order (VBELN)": 2100136308,
-          "Order Date (ERDAT)": "2025-06-20 00:00:00",
-          "Customer (KUNNR)": 20002319
+          "Sales Order (VBELN)": 2130274562.0,
+          "Customer Name": "SHREE JI ENTERPRISES",
+          "Plant (WERKS)": "1308",
+          "Variance %": 9108.13,
+          "Predicted Value Tier": "Tier 3 - Core Growth (INR 100,000 - 500,000)",
+          "Current Order Value (INR)": 685.94,
+          "Order Date (ERDAT)": "2024-07-26",
+          "Customer (KUNNR)": 150000234.0
         },
         {
-          "Plant (WERKS)": 1901,
-          "Exception Probability": 0.5971,
-          "Risk Category": "High Risk",
-          "Order Net Value (INR)": 1476562.5,
-          "Predicted Exception (0/1)": 1,
-          "Sales Order (VBELN)": 2340079621,
-          "Order Date (ERDAT)": "2025-06-17 00:00:00",
-          "Customer (KUNNR)": 20002442
+          "Sales Order (VBELN)": 2130293822.0,
+          "Customer Name": "SHREE JI ENTERPRISES",
+          "Plant (WERKS)": "1419",
+          "Variance %": 12177.5,
+          "Predicted Value Tier": "Tier 3 - Core Growth (INR 100,000 - 500,000)",
+          "Current Order Value (INR)": 1325.0,
+          "Order Date (ERDAT)": "2024-07-31",
+          "Customer (KUNNR)": 150000234.0
         },
         {
-          "Plant (WERKS)": 1034,
-          "Exception Probability": 0.5565,
-          "Risk Category": "High Risk",
-          "Order Net Value (INR)": 1230468.74,
-          "Predicted Exception (0/1)": 1,
-          "Sales Order (VBELN)": 2340080995,
-          "Order Date (ERDAT)": "2025-06-20 00:00:00",
-          "Customer (KUNNR)": 20003045
+          "Sales Order (VBELN)": 2130293847.0,
+          "Customer Name": "SHREE JI ENTERPRISES",
+          "Plant (WERKS)": "1308",
+          "Variance %": 18316.26,
+          "Predicted Value Tier": "Tier 3 - Core Growth (INR 100,000 - 500,000)",
+          "Current Order Value (INR)": 993.75,
+          "Order Date (ERDAT)": "2024-07-31",
+          "Customer (KUNNR)": 150000234.0
         },
         {
-          "Plant (WERKS)": 1901,
-          "Exception Probability": 0.5204,
-          "Risk Category": "High Risk",
-          "Order Net Value (INR)": 576843.75,
-          "Predicted Exception (0/1)": 1,
-          "Sales Order (VBELN)": 2100135726,
-          "Order Date (ERDAT)": "2025-06-17 00:00:00",
-          "Customer (KUNNR)": 20003048
+          "Sales Order (VBELN)": 2130293941.0,
+          "Customer Name": "SHREE JI ENTERPRISES",
+          "Plant (WERKS)": "1308",
+          "Variance %": 18316.26,
+          "Predicted Value Tier": "Tier 3 - Core Growth (INR 100,000 - 500,000)",
+          "Current Order Value (INR)": 662.5,
+          "Order Date (ERDAT)": "2024-07-31",
+          "Customer (KUNNR)": 150000234.0
         },
         {
-          "Plant (WERKS)": 1901,
-          "Exception Probability": 0.5775,
-          "Risk Category": "High Risk",
-          "Order Net Value (INR)": 1373437.5,
-          "Predicted Exception (0/1)": 1,
-          "Sales Order (VBELN)": 2340078830,
-          "Order Date (ERDAT)": "2025-06-17 00:00:00",
-          "Customer (KUNNR)": 20003048
+          "Sales Order (VBELN)": 2130293959.0,
+          "Customer Name": "SHREE JI ENTERPRISES",
+          "Plant (WERKS)": "1419",
+          "Variance %": 36732.51,
+          "Predicted Value Tier": "Tier 3 - Core Growth (INR 100,000 - 500,000)",
+          "Current Order Value (INR)": 662.5,
+          "Order Date (ERDAT)": "2024-07-31",
+          "Customer (KUNNR)": 150000234.0
         },
         {
-          "Plant (WERKS)": 1902,
-          "Exception Probability": 0.6429,
-          "Risk Category": "High Risk",
-          "Order Net Value (INR)": 1035156.24,
-          "Predicted Exception (0/1)": 1,
-          "Sales Order (VBELN)": 2340080140,
-          "Order Date (ERDAT)": "2025-06-17 00:00:00",
-          "Customer (KUNNR)": 20003064
+          "Sales Order (VBELN)": 2130300038.0,
+          "Customer Name": "SHREE JI ENTERPRISES",
+          "Plant (WERKS)": "1621",
+          "Variance %": 9108.13,
+          "Predicted Value Tier": "Tier 3 - Core Growth (INR 100,000 - 500,000)",
+          "Current Order Value (INR)": 331.25,
+          "Order Date (ERDAT)": "2024-08-06",
+          "Customer (KUNNR)": 150000234.0
         },
         {
-          "Plant (WERKS)": 1901,
-          "Exception Probability": 0.5196,
-          "Risk Category": "High Risk",
-          "Order Net Value (INR)": 937500.0,
-          "Predicted Exception (0/1)": 1,
-          "Sales Order (VBELN)": 2340077994,
-          "Order Date (ERDAT)": "2025-06-18 00:00:00",
-          "Customer (KUNNR)": 20003253
+          "Sales Order (VBELN)": 2130300338.0,
+          "Customer Name": "SHREE JI ENTERPRISES",
+          "Plant (WERKS)": "1621",
+          "Variance %": 2530.89,
+          "Predicted Value Tier": "Tier 3 - Core Growth (INR 100,000 - 500,000)",
+          "Current Order Value (INR)": 1325.0,
+          "Order Date (ERDAT)": "2024-08-06",
+          "Customer (KUNNR)": 150000234.0
         },
         {
-          "Plant (WERKS)": 1901,
-          "Exception Probability": 0.6612,
-          "Risk Category": "High Risk",
-          "Order Net Value (INR)": 816701.36,
-          "Predicted Exception (0/1)": 1,
-          "Sales Order (VBELN)": 2100136086,
-          "Order Date (ERDAT)": "2025-06-19 00:00:00",
-          "Customer (KUNNR)": 20003351
+          "Sales Order (VBELN)": 2130306745.0,
+          "Customer Name": "SHREE JI ENTERPRISES",
+          "Plant (WERKS)": "1621",
+          "Variance %": 35473.87,
+          "Predicted Value Tier": "Tier 3 - Core Growth (INR 100,000 - 500,000)",
+          "Current Order Value (INR)": 4637.5,
+          "Order Date (ERDAT)": "2024-08-09",
+          "Customer (KUNNR)": 150000234.0
         },
         {
-          "Plant (WERKS)": 1901,
-          "Exception Probability": 0.7916,
-          "Risk Category": "Critical Risk",
-          "Order Net Value (INR)": 3984375.0,
-          "Predicted Exception (0/1)": 1,
-          "Sales Order (VBELN)": 2340080928,
-          "Order Date (ERDAT)": "2025-06-20 00:00:00",
-          "Customer (KUNNR)": 20003351
+          "Sales Order (VBELN)": 2130306771.0,
+          "Customer Name": "SHREE JI ENTERPRISES",
+          "Plant (WERKS)": "1308",
+          "Variance %": 36732.51,
+          "Predicted Value Tier": "Tier 3 - Core Growth (INR 100,000 - 500,000)",
+          "Current Order Value (INR)": 342.97,
+          "Order Date (ERDAT)": "2024-08-09",
+          "Customer (KUNNR)": 150000234.0
         },
         {
-          "Plant (WERKS)": 2001,
-          "Exception Probability": 0.6391,
-          "Risk Category": "High Risk",
-          "Order Net Value (INR)": 4687500.0,
-          "Predicted Exception (0/1)": 1,
-          "Sales Order (VBELN)": 2340080627,
-          "Order Date (ERDAT)": "2025-06-16 00:00:00",
-          "Customer (KUNNR)": 20003539
+          "Sales Order (VBELN)": 2130315293.0,
+          "Customer Name": "SHREE JI ENTERPRISES",
+          "Plant (WERKS)": "1621",
+          "Variance %": 6038.75,
+          "Predicted Value Tier": "Tier 3 - Core Growth (INR 100,000 - 500,000)",
+          "Current Order Value (INR)": 331.25,
+          "Order Date (ERDAT)": "2024-08-13",
+          "Customer (KUNNR)": 150000234.0
         },
         {
-          "Plant (WERKS)": 1004,
-          "Exception Probability": 0.5162,
-          "Risk Category": "High Risk",
-          "Order Net Value (INR)": 1476562.5,
-          "Predicted Exception (0/1)": 1,
-          "Sales Order (VBELN)": 2340080744,
-          "Order Date (ERDAT)": "2025-06-18 00:00:00",
-          "Customer (KUNNR)": 20003543
+          "Sales Order (VBELN)": 2130315310.0,
+          "Customer Name": "SHREE JI ENTERPRISES",
+          "Plant (WERKS)": "1621",
+          "Variance %": 36732.51,
+          "Predicted Value Tier": "Tier 3 - Core Growth (INR 100,000 - 500,000)",
+          "Current Order Value (INR)": 1987.5,
+          "Order Date (ERDAT)": "2024-08-13",
+          "Customer (KUNNR)": 150000234.0
         },
         {
-          "Plant (WERKS)": 2001,
-          "Exception Probability": 0.5788,
-          "Risk Category": "High Risk",
-          "Order Net Value (INR)": 468750.0,
-          "Predicted Exception (0/1)": 1,
-          "Sales Order (VBELN)": 2100136335,
-          "Order Date (ERDAT)": "2025-06-20 00:00:00",
-          "Customer (KUNNR)": 20003792
+          "Sales Order (VBELN)": 2130326307.0,
+          "Customer Name": "SHREE JI ENTERPRISES",
+          "Plant (WERKS)": "1308",
+          "Variance %": 35473.87,
+          "Predicted Value Tier": "Tier 3 - Core Growth (INR 100,000 - 500,000)",
+          "Current Order Value (INR)": 331.25,
+          "Order Date (ERDAT)": "2024-08-17",
+          "Customer (KUNNR)": 150000234.0
         },
         {
-          "Plant (WERKS)": 2001,
-          "Exception Probability": 0.5895,
-          "Risk Category": "High Risk",
-          "Order Net Value (INR)": 1171875.0,
-          "Predicted Exception (0/1)": 1,
-          "Sales Order (VBELN)": 2340080071,
-          "Order Date (ERDAT)": "2025-06-20 00:00:00",
-          "Customer (KUNNR)": 20003792
+          "Sales Order (VBELN)": 2130353240.0,
+          "Customer Name": "SHREE JI ENTERPRISES",
+          "Plant (WERKS)": "1308",
+          "Variance %": 12177.5,
+          "Predicted Value Tier": "Tier 3 - Core Growth (INR 100,000 - 500,000)",
+          "Current Order Value (INR)": 342.97,
+          "Order Date (ERDAT)": "2024-08-29",
+          "Customer (KUNNR)": 150000234.0
         },
         {
-          "Plant (WERKS)": 1004,
-          "Exception Probability": 0.6944,
-          "Risk Category": "High Risk",
-          "Order Net Value (INR)": 428314.38,
-          "Predicted Exception (0/1)": 1,
-          "Sales Order (VBELN)": 2100135289,
-          "Order Date (ERDAT)": "2025-06-18 00:00:00",
-          "Customer (KUNNR)": 20003858
+          "Sales Order (VBELN)": 2130353261.0,
+          "Customer Name": "SHREE JI ENTERPRISES",
+          "Plant (WERKS)": "1308",
+          "Variance %": 3627.2,
+          "Predicted Value Tier": "Tier 3 - Core Growth (INR 100,000 - 500,000)",
+          "Current Order Value (INR)": 993.75,
+          "Order Date (ERDAT)": "2024-08-29",
+          "Customer (KUNNR)": 150000234.0
         },
         {
-          "Plant (WERKS)": 1004,
-          "Exception Probability": 0.6656,
-          "Risk Category": "High Risk",
-          "Order Net Value (INR)": 2343750.0,
-          "Predicted Exception (0/1)": 1,
-          "Sales Order (VBELN)": 2340080534,
-          "Order Date (ERDAT)": "2025-06-18 00:00:00",
-          "Customer (KUNNR)": 20003858
+          "Sales Order (VBELN)": 2130387494.0,
+          "Customer Name": "SHREE JI ENTERPRISES",
+          "Plant (WERKS)": "1621",
+          "Variance %": 17686.93,
+          "Predicted Value Tier": "Tier 3 - Core Growth (INR 100,000 - 500,000)",
+          "Current Order Value (INR)": 3273.44,
+          "Order Date (ERDAT)": "2024-09-13",
+          "Customer (KUNNR)": 150000234.0
         },
         {
-          "Plant (WERKS)": 8196,
-          "Exception Probability": 0.8444,
-          "Risk Category": "Critical Risk",
-          "Order Net Value (INR)": 7031250.0,
-          "Predicted Exception (0/1)": 1,
-          "Sales Order (VBELN)": 2350011503,
-          "Order Date (ERDAT)": "2025-06-18 00:00:00",
-          "Customer (KUNNR)": 20003858
+          "Sales Order (VBELN)": 2130387511.0,
+          "Customer Name": "SHREE JI ENTERPRISES",
+          "Plant (WERKS)": "1419",
+          "Variance %": 37172.47,
+          "Predicted Value Tier": "Tier 3 - Core Growth (INR 100,000 - 500,000)",
+          "Current Order Value (INR)": 685.94,
+          "Order Date (ERDAT)": "2024-09-13",
+          "Customer (KUNNR)": 150000234.0
         },
         {
-          "Plant (WERKS)": 8196,
-          "Exception Probability": 0.6591,
-          "Risk Category": "High Risk",
-          "Order Net Value (INR)": 215109.5,
-          "Predicted Exception (0/1)": 1,
-          "Sales Order (VBELN)": 2150027340,
-          "Order Date (ERDAT)": "2025-06-20 00:00:00",
-          "Customer (KUNNR)": 20003858
+          "Sales Order (VBELN)": 2130387683.0,
+          "Customer Name": "SHREE JI ENTERPRISES",
+          "Plant (WERKS)": "1308",
+          "Variance %": 35473.87,
+          "Predicted Value Tier": "Tier 3 - Core Growth (INR 100,000 - 500,000)",
+          "Current Order Value (INR)": 327.34,
+          "Order Date (ERDAT)": "2024-09-13",
+          "Customer (KUNNR)": 150000234.0
         },
         {
-          "Plant (WERKS)": 1001,
-          "Exception Probability": 0.6811,
-          "Risk Category": "High Risk",
-          "Order Net Value (INR)": 1735282.5,
-          "Predicted Exception (0/1)": 1,
-          "Sales Order (VBELN)": 2100132505,
-          "Order Date (ERDAT)": "2025-06-17 00:00:00",
-          "Customer (KUNNR)": 20004122
+          "Sales Order (VBELN)": 2130435339.0,
+          "Customer Name": "SHREE JI ENTERPRISES",
+          "Plant (WERKS)": "1308",
+          "Variance %": 17686.93,
+          "Predicted Value Tier": "Tier 3 - Core Growth (INR 100,000 - 500,000)",
+          "Current Order Value (INR)": 342.97,
+          "Order Date (ERDAT)": "2024-09-30",
+          "Customer (KUNNR)": 150000234.0
         },
         {
-          "Plant (WERKS)": 1001,
-          "Exception Probability": 0.7238,
-          "Risk Category": "High Risk",
-          "Order Net Value (INR)": 3130312.5,
-          "Predicted Exception (0/1)": 1,
-          "Sales Order (VBELN)": 2340078760,
-          "Order Date (ERDAT)": "2025-06-17 00:00:00",
-          "Customer (KUNNR)": 20004122
+          "Sales Order (VBELN)": 2130435377.0,
+          "Customer Name": "SHREE JI ENTERPRISES",
+          "Plant (WERKS)": "1419",
+          "Variance %": 35473.87,
+          "Predicted Value Tier": "Tier 3 - Core Growth (INR 100,000 - 500,000)",
+          "Current Order Value (INR)": 685.94,
+          "Order Date (ERDAT)": "2024-09-30",
+          "Customer (KUNNR)": 150000234.0
         }
       ],
       "advanced_ml": {
         "confusion_matrix": {
-          "tp": 524,
-          "fp": 2042,
-          "fn": 166,
-          "tn": 22268,
-          "precision": 0.204,
-          "recall": 0.759,
-          "f1": 0.322,
-          "accuracy": 0.912
+          "tp": 36910,
+          "fp": 78,
+          "fn": 11977,
+          "tn": 1035,
+          "precision": 0.998,
+          "recall": 0.755,
+          "f1": 0.86,
+          "accuracy": 0.759
         },
         "threshold_curve": {
           "thresholds": [
@@ -6611,37 +6415,37 @@ window.PORTFOLIO_DATA = {
             0.9
           ],
           "precision": [
-            0.382,
-            0.441,
-            0.494,
-            0.543,
-            0.59,
-            0.635,
-            0.679,
-            0.722,
-            0.763
+            0.376,
+            0.434,
+            0.486,
+            0.534,
+            0.581,
+            0.625,
+            0.668,
+            0.71,
+            0.751
           ],
           "recall": [
             0.962,
-            0.907,
-            0.842,
-            0.771,
-            0.694,
-            0.612,
-            0.526,
-            0.436,
-            0.342
+            0.906,
+            0.841,
+            0.769,
+            0.691,
+            0.609,
+            0.522,
+            0.431,
+            0.337
           ],
           "f1": [
-            0.547,
-            0.593,
-            0.622,
-            0.637,
-            0.638,
-            0.623,
-            0.593,
-            0.543,
-            0.472
+            0.54,
+            0.586,
+            0.616,
+            0.631,
+            0.631,
+            0.617,
+            0.586,
+            0.537,
+            0.465
           ]
         },
         "probability_distribution": {
@@ -6658,40 +6462,40 @@ window.PORTFOLIO_DATA = {
             "0.9"
           ],
           "clean_count": [
-            7793,
-            4969,
-            3168,
-            2020,
-            1288,
-            821,
-            523,
-            333,
-            212,
-            135
+            362,
+            230,
+            147,
+            100,
+            100,
+            100,
+            100,
+            100,
+            100,
+            100
           ],
           "exception_count": [
-            50,
-            50,
-            55,
-            69,
-            84,
-            98,
-            113,
-            128,
-            142,
-            157
+            1845,
+            2870,
+            3896,
+            4921,
+            5946,
+            6971,
+            7997,
+            9022,
+            10047,
+            11073
           ],
           "total_count": [
-            7843,
-            5019,
-            3223,
-            2089,
-            1372,
-            919,
-            636,
-            461,
-            354,
-            292
+            2207,
+            3100,
+            4043,
+            5021,
+            6046,
+            7071,
+            8097,
+            9122,
+            10147,
+            11173
           ]
         },
         "calibration_curve": {
@@ -6775,615 +6579,615 @@ window.PORTFOLIO_DATA = {
         "KONP",
         "MBEW"
       ],
-      "total_records": 25000,
-      "exceptions_count": 1263,
-      "exception_rate_pct": 5.05,
-      "financial_exposure_inr": 17368000000.0,
-      "financial_exposure_cr": 1736.8,
-      "avg_confidence_score": 0.941,
-      "champion_model": "Isolation Forest",
-      "champion_metric": "0.9410 ROC-AUC",
+      "total_records": 174683,
+      "exceptions_count": 8726,
+      "exception_rate_pct": 5.0,
+      "financial_exposure_inr": 939419191.69,
+      "financial_exposure_cr": 93.94,
+      "avg_confidence_score": 0.146,
+      "champion_model": "Isolation Forest & LOF Outlier Detection",
+      "champion_metric": "0.8650 F1-Score",
       "risk_distribution": {
-        "Critical": 454,
-        "High": 386,
-        "Medium": 423,
-        "Low": 23737
+        "Critical": 4095,
+        "High": 1674,
+        "Medium": 2957,
+        "Low": 165957
       },
       "category_breakdown": [
         {
-          "label": "1004",
-          "count": 2970
+          "label": "JK Cement Works - Panna",
+          "count": 18408
         },
         {
-          "label": "7001",
-          "count": 2375
+          "label": "J.K. Cement Works Nimbahera",
+          "count": 17265
         },
         {
-          "label": "1001",
-          "count": 2325
+          "label": "J.K. Cement  Works, Mangrol",
+          "count": 16575
         },
         {
-          "label": "2001",
-          "count": 1995
+          "label": "J.K. Cement Works, Muddapur",
+          "count": 11651
         },
         {
-          "label": "1901",
-          "count": 1820
+          "label": "J.K. White Cement Works ,Gotan",
+          "count": 10995
         },
         {
-          "label": "1015",
-          "count": 1515
+          "label": "HO Kanpur (Grey)",
+          "count": 8652
         },
         {
-          "label": "1000",
-          "count": 1400
+          "label": "GHAZIABAD PAINT NEW HUB",
+          "count": 7261
         }
       ],
       "feature_importance": [
         {
-          "feature": "feature",
-          "importance": 0,
-          "description": "Direct Mathematical Influence On Price Fairness:"
-        },
-        {
           "feature": "price_variance_pct",
-          "importance": 0.2172,
-          "description": "(% Deviation from benchmark reference baseline)"
+          "importance": 0.245,
+          "description": "Price Variance Pct"
         },
         {
           "feature": "price_ratio",
-          "importance": 0.1919,
-          "description": "(Direct multiplier: PO Price / Reference Price)"
-        },
-        {
-          "feature": "contract_variance_pct",
-          "importance": 0.1872,
-          "description": "(% Deviation from pre-negotiated vendor contract rate)"
+          "importance": 0.1945,
+          "description": "Price Ratio"
         },
         {
           "feature": "log_price_ratio",
-          "importance": 0.1439,
-          "description": "(Stabilized Logarithmic Price Ratio)"
+          "importance": 0.1632,
+          "description": "Log Price Ratio"
+        },
+        {
+          "feature": "contract_variance_pct",
+          "importance": 0.1527,
+          "description": "Contract Variance Pct"
+        },
+        {
+          "feature": "group_price_zscore",
+          "importance": 0.0643,
+          "description": "Group Price Zscore"
         },
         {
           "feature": "price_variance_abs",
-          "importance": 0.0703,
-          "description": "(PO Price - Reference Price absolute currency gap)"
+          "importance": 0.0615,
+          "description": "Price Variance Abs"
         },
         {
           "feature": "contract_price_diff",
-          "importance": 0.0422,
-          "description": "(Unit price gap between PO and SAP Info Record contract)"
+          "importance": 0.0283,
+          "description": "Contract Price Diff"
         },
         {
           "feature": "has_contract_leakage",
-          "importance": 0.0386,
-          "description": "(1 if contract exists but buyer paid above contract rate)"
+          "importance": 0.0261,
+          "description": "Has Contract Leakage"
         }
       ],
       "model_rankings": [],
       "display_columns": [
-        "Plant",
+        "Vendor",
+        "Vendor Name",
+        "Plant Name",
         "Price Variance Probability",
         "Risk Category",
         "Price Variance (Amount)",
         "Predicted Price Variance",
-        "Company Code",
-        "Company Name",
-        "Company City"
+        "Company Code"
       ],
       "sample_records": [
         {
-          "Plant": 1000,
-          "Price Variance Probability": 0.9978,
+          "Vendor": "330000231",
+          "Vendor Name": "KALYAN JEWELLERS INDIA LIMITED",
+          "Plant Name": "HO Kanpur (Grey)",
+          "Price Variance Probability": 0.9968,
+          "Risk Category": "Critical Risk",
+          "Price Variance (Amount)": 117084366.25,
+          "Predicted Price Variance": "1",
+          "Company Code": "1000"
+        },
+        {
+          "Vendor": "330000472",
+          "Vendor Name": "CPAS TECHNOLOGIES PRIVATE LIMITED",
+          "Plant Name": "HO Kanpur (Grey)",
+          "Price Variance Probability": 0.9968,
+          "Risk Category": "Critical Risk",
+          "Price Variance (Amount)": 14570673.75,
+          "Predicted Price Variance": "1",
+          "Company Code": "1000"
+        },
+        {
+          "Vendor": "330000231",
+          "Vendor Name": "KALYAN JEWELLERS INDIA LIMITED",
+          "Plant Name": "HO Kanpur (Grey)",
+          "Price Variance Probability": 0.9966,
           "Risk Category": "Critical Risk",
           "Price Variance (Amount)": 24758963.65,
-          "Predicted Price Variance": 1,
-          "Company Code": 1000,
-          "Company Name": "J.K. CEMENT LIMITED",
-          "Company City": "Kanpur"
+          "Predicted Price Variance": "1",
+          "Company Code": "1000"
         },
         {
-          "Plant": 1015,
-          "Price Variance Probability": 0.9957,
+          "Vendor": "330000231",
+          "Vendor Name": "KALYAN JEWELLERS INDIA LIMITED",
+          "Plant Name": "HO Kanpur (Grey)",
+          "Price Variance Probability": 0.9965,
+          "Risk Category": "Critical Risk",
+          "Price Variance (Amount)": 22932895.5,
+          "Predicted Price Variance": "1",
+          "Company Code": "1000"
+        },
+        {
+          "Vendor": "160000221",
+          "Vendor Name": "AUMUND ENGINEERING  PVT. LTD.",
+          "Plant Name": "JK Cement Works - Panna",
+          "Price Variance Probability": 0.9964,
+          "Risk Category": "Critical Risk",
+          "Price Variance (Amount)": 22139500.0,
+          "Predicted Price Variance": "1",
+          "Company Code": "1000"
+        },
+        {
+          "Vendor": "160000396",
+          "Vendor Name": "BEUMER Maschinenfabrik GmbH & Co",
+          "Plant Name": "JK Cement Works - Panna",
+          "Price Variance Probability": 0.9963,
+          "Risk Category": "Critical Risk",
+          "Price Variance (Amount)": 20271805.5,
+          "Predicted Price Variance": "1",
+          "Company Code": "1000"
+        },
+        {
+          "Vendor": "210000006",
+          "Vendor Name": "MALABAR GOLD AND DIAMONDS LIMITED",
+          "Plant Name": "HO Kanpur (Grey)",
+          "Price Variance Probability": 0.9961,
+          "Risk Category": "Critical Risk",
+          "Price Variance (Amount)": 3828886.2,
+          "Predicted Price Variance": "1",
+          "Company Code": "1000"
+        },
+        {
+          "Vendor": "420000002",
+          "Vendor Name": "BEUMER INDIA PVT. LTD.",
+          "Plant Name": "JK Cement Works - Panna",
+          "Price Variance Probability": 0.9961,
+          "Risk Category": "Critical Risk",
+          "Price Variance (Amount)": 13053750.0,
+          "Predicted Price Variance": "1",
+          "Company Code": "1000"
+        },
+        {
+          "Vendor": "260000138",
+          "Vendor Name": "CCD (SINGAPORE) PTE. LTD",
+          "Plant Name": "J.K. White Cement Works ,Gotan",
+          "Price Variance Probability": 0.996,
           "Risk Category": "Critical Risk",
           "Price Variance (Amount)": 112467.22,
-          "Predicted Price Variance": 1,
-          "Company Code": 1000,
-          "Company Name": "J.K. CEMENT LIMITED",
-          "Company City": "Kanpur"
+          "Predicted Price Variance": "1",
+          "Company Code": "1000"
         },
         {
-          "Plant": 1000,
-          "Price Variance Probability": 0.9944,
+          "Vendor": "160004404",
+          "Vendor Name": "FLSMIDTH CEMENT INDIA LLP",
+          "Plant Name": "J.K. CEMENT WORKS, BUXAR",
+          "Price Variance Probability": 0.9955,
           "Risk Category": "Critical Risk",
-          "Price Variance (Amount)": 30107.28,
-          "Predicted Price Variance": 1,
-          "Company Code": 1000,
-          "Company Name": "J.K. CEMENT LIMITED",
-          "Company City": "Kanpur"
+          "Price Variance (Amount)": 1457999.99,
+          "Predicted Price Variance": "1",
+          "Company Code": "1000"
         },
         {
-          "Plant": 1000,
+          "Vendor": "260000132",
+          "Vendor Name": "Loesche GmbH",
+          "Plant Name": "J.K. CEMENT WORKS, BUXAR",
+          "Price Variance Probability": 0.9953,
+          "Risk Category": "Critical Risk",
+          "Price Variance (Amount)": 13249400.0,
+          "Predicted Price Variance": "1",
+          "Company Code": "1000"
+        },
+        {
+          "Vendor": "420008937",
+          "Vendor Name": "THERMAX BABCOCK & WILCOX",
+          "Plant Name": "JK Cement Works - Panna",
+          "Price Variance Probability": 0.9949,
+          "Risk Category": "Critical Risk",
+          "Price Variance (Amount)": 2259000.0,
+          "Predicted Price Variance": "1",
+          "Company Code": "1000"
+        },
+        {
+          "Vendor": "210000006",
+          "Vendor Name": "MALABAR GOLD AND DIAMONDS LIMITED",
+          "Plant Name": "HO Kanpur (Grey)",
+          "Price Variance Probability": 0.9948,
+          "Risk Category": "Critical Risk",
+          "Price Variance (Amount)": 764326.2,
+          "Predicted Price Variance": "1",
+          "Company Code": "1000"
+        },
+        {
+          "Vendor": "300000499",
+          "Vendor Name": "VISWAKIRTI PROJECTS PRIVATE",
+          "Plant Name": "JK Cement Works - Panna",
+          "Price Variance Probability": 0.9947,
+          "Risk Category": "Critical Risk",
+          "Price Variance (Amount)": 6460000.0,
+          "Predicted Price Variance": "1",
+          "Company Code": "1000"
+        },
+        {
+          "Vendor": "160000221",
+          "Vendor Name": "AUMUND ENGINEERING  PVT. LTD.",
+          "Plant Name": "JK Cement Works - Panna",
+          "Price Variance Probability": 0.9946,
+          "Risk Category": "Critical Risk",
+          "Price Variance (Amount)": 6750000.0,
+          "Predicted Price Variance": "1",
+          "Company Code": "1000"
+        },
+        {
+          "Vendor": "160000473",
+          "Vendor Name": "SHREE GIRIRAJ EXIM PRIVATE LIMITED",
+          "Plant Name": "J.K. Cement  Works, Mangrol",
+          "Price Variance Probability": 0.9945,
+          "Risk Category": "Critical Risk",
+          "Price Variance (Amount)": 60136.6,
+          "Predicted Price Variance": "1",
+          "Company Code": "1000"
+        },
+        {
+          "Vendor": "330000472",
+          "Vendor Name": "CPAS TECHNOLOGIES PRIVATE LIMITED",
+          "Plant Name": "HO Kanpur (Grey)",
+          "Price Variance Probability": 0.9943,
+          "Risk Category": "Critical Risk",
+          "Price Variance (Amount)": 1388474.5,
+          "Predicted Price Variance": "1",
+          "Company Code": "1000"
+        },
+        {
+          "Vendor": "420000002",
+          "Vendor Name": "BEUMER INDIA PVT. LTD.",
+          "Plant Name": "JK Cement Works - Panna",
+          "Price Variance Probability": 0.9943,
+          "Risk Category": "Critical Risk",
+          "Price Variance (Amount)": 6353750.0,
+          "Predicted Price Variance": "1",
+          "Company Code": "1000"
+        },
+        {
+          "Vendor": "160000234",
+          "Vendor Name": "PROMAC ENGINEERING INDUSTRIES LTD",
+          "Plant Name": "JK Cement Works - Panna",
+          "Price Variance Probability": 0.9941,
+          "Risk Category": "Critical Risk",
+          "Price Variance (Amount)": 1257653.5,
+          "Predicted Price Variance": "1",
+          "Company Code": "1000"
+        },
+        {
+          "Vendor": "330000231",
+          "Vendor Name": "KALYAN JEWELLERS INDIA LIMITED",
+          "Plant Name": "HO Kanpur (Grey)",
+          "Price Variance Probability": 0.994,
+          "Risk Category": "Critical Risk",
+          "Price Variance (Amount)": 4004364.0,
+          "Predicted Price Variance": "1",
+          "Company Code": "1000"
+        },
+        {
+          "Vendor": "260000132",
+          "Vendor Name": "Loesche GmbH",
+          "Plant Name": "J.K. CEMENT WORKS, BUXAR",
+          "Price Variance Probability": 0.9939,
+          "Risk Category": "Critical Risk",
+          "Price Variance (Amount)": 11681325.0,
+          "Predicted Price Variance": "1",
+          "Company Code": "1000"
+        },
+        {
+          "Vendor": "160000002",
+          "Vendor Name": "SCHENCK PROCESS SOLUTIONS INDIA",
+          "Plant Name": "J.K. CEMENT WORKS, BUXAR",
+          "Price Variance Probability": 0.9938,
+          "Risk Category": "Critical Risk",
+          "Price Variance (Amount)": 5199999.99,
+          "Predicted Price Variance": "1",
+          "Company Code": "1000"
+        },
+        {
+          "Vendor": "210000137",
+          "Vendor Name": "VOUCHAGRAM INDIA PRIVATE LIMITED",
+          "Plant Name": "HO Kanpur (Grey)",
+          "Price Variance Probability": 0.9938,
+          "Risk Category": "Critical Risk",
+          "Price Variance (Amount)": 1211000.0,
+          "Predicted Price Variance": "1",
+          "Company Code": "1000"
+        },
+        {
+          "Vendor": "330000231",
+          "Vendor Name": "KALYAN JEWELLERS INDIA LIMITED",
+          "Plant Name": "HO Kanpur (Grey)",
+          "Price Variance Probability": 0.9937,
+          "Risk Category": "Critical Risk",
+          "Price Variance (Amount)": 3922692.5,
+          "Predicted Price Variance": "1",
+          "Company Code": "1000"
+        },
+        {
+          "Vendor": "260000032",
+          "Vendor Name": "AUMUND FORDERTECHNIK GMBH",
+          "Plant Name": "JK Cement Works - Panna",
+          "Price Variance Probability": 0.9936,
+          "Risk Category": "Critical Risk",
+          "Price Variance (Amount)": 0.0,
+          "Predicted Price Variance": "1",
+          "Company Code": "1000"
+        },
+        {
+          "Vendor": "210000006",
+          "Vendor Name": "MALABAR GOLD AND DIAMONDS LIMITED",
+          "Plant Name": "HO Kanpur (Grey)",
+          "Price Variance Probability": 0.9935,
+          "Risk Category": "Critical Risk",
+          "Price Variance (Amount)": 381256.2,
+          "Predicted Price Variance": "1",
+          "Company Code": "1000"
+        },
+        {
+          "Vendor": "160001394",
+          "Vendor Name": "KELTECH ENERGIES LTD.",
+          "Plant Name": "J.K. Cement Works Nimbahera",
+          "Price Variance Probability": 0.9934,
+          "Risk Category": "Critical Risk",
+          "Price Variance (Amount)": 73840.24,
+          "Predicted Price Variance": "1",
+          "Company Code": "1000"
+        },
+        {
+          "Vendor": "210000006",
+          "Vendor Name": "MALABAR GOLD AND DIAMONDS LIMITED",
+          "Plant Name": "HO Kanpur (Grey)",
+          "Price Variance Probability": 0.9934,
+          "Risk Category": "Critical Risk",
+          "Price Variance (Amount)": 752956.2,
+          "Predicted Price Variance": "1",
+          "Company Code": "1000"
+        },
+        {
+          "Vendor": "160000234",
+          "Vendor Name": "PROMAC ENGINEERING INDUSTRIES LTD",
+          "Plant Name": "JK Cement Works - Panna",
+          "Price Variance Probability": 0.9934,
+          "Risk Category": "Critical Risk",
+          "Price Variance (Amount)": 5896356.32,
+          "Predicted Price Variance": "1",
+          "Company Code": "1000"
+        },
+        {
+          "Vendor": "420005475",
+          "Vendor Name": "LNV TECHNOLOGY PRIVATE LIMITED",
+          "Plant Name": "JK Cement Works - Panna",
+          "Price Variance Probability": 0.9934,
+          "Risk Category": "Critical Risk",
+          "Price Variance (Amount)": 2130166.7,
+          "Predicted Price Variance": "1",
+          "Company Code": "1000"
+        },
+        {
+          "Vendor": "330000231",
+          "Vendor Name": "KALYAN JEWELLERS INDIA LIMITED",
+          "Plant Name": "HO Kanpur (Grey)",
+          "Price Variance Probability": 0.9932,
+          "Risk Category": "Critical Risk",
+          "Price Variance (Amount)": 3306448.46,
+          "Predicted Price Variance": "1",
+          "Company Code": "1000"
+        },
+        {
+          "Vendor": "160004404",
+          "Vendor Name": "FLSMIDTH CEMENT INDIA LLP",
+          "Plant Name": "J.K. CEMENT WORKS, BUXAR",
+          "Price Variance Probability": 0.9931,
+          "Risk Category": "Critical Risk",
+          "Price Variance (Amount)": 2065000.0,
+          "Predicted Price Variance": "1",
+          "Company Code": "1000"
+        },
+        {
+          "Vendor": "300000499",
+          "Vendor Name": "VISWAKIRTI PROJECTS PRIVATE",
+          "Plant Name": "JK Cement Works - Panna",
+          "Price Variance Probability": 0.993,
+          "Risk Category": "Critical Risk",
+          "Price Variance (Amount)": 3925000.0,
+          "Predicted Price Variance": "1",
+          "Company Code": "1000"
+        },
+        {
+          "Vendor": "300000499",
+          "Vendor Name": "VISWAKIRTI PROJECTS PRIVATE",
+          "Plant Name": "JK Cement Works - Panna",
+          "Price Variance Probability": 0.9928,
+          "Risk Category": "Critical Risk",
+          "Price Variance (Amount)": 1089100.0,
+          "Predicted Price Variance": "1",
+          "Company Code": "1000"
+        },
+        {
+          "Vendor": "420000002",
+          "Vendor Name": "BEUMER INDIA PVT. LTD.",
+          "Plant Name": "J.K. CEMENT WORKS, BUXAR",
+          "Price Variance Probability": 0.9928,
+          "Risk Category": "Critical Risk",
+          "Price Variance (Amount)": 3953750.0,
+          "Predicted Price Variance": "1",
+          "Company Code": "1000"
+        },
+        {
+          "Vendor": "160001394",
+          "Vendor Name": "KELTECH ENERGIES LTD.",
+          "Plant Name": "J.K. Cement Works Nimbahera",
+          "Price Variance Probability": 0.9925,
+          "Risk Category": "Critical Risk",
+          "Price Variance (Amount)": 37553.24,
+          "Predicted Price Variance": "1",
+          "Company Code": "1000"
+        },
+        {
+          "Vendor": "300000499",
+          "Vendor Name": "VISWAKIRTI PROJECTS PRIVATE",
+          "Plant Name": "JK Cement Works - Panna",
+          "Price Variance Probability": 0.9925,
+          "Risk Category": "Critical Risk",
+          "Price Variance (Amount)": 3375000.0,
+          "Predicted Price Variance": "1",
+          "Company Code": "1000"
+        },
+        {
+          "Vendor": "210000006",
+          "Vendor Name": "MALABAR GOLD AND DIAMONDS LIMITED",
+          "Plant Name": "HO Kanpur (Grey)",
+          "Price Variance Probability": 0.9924,
+          "Risk Category": "Critical Risk",
+          "Price Variance (Amount)": 375571.2,
+          "Predicted Price Variance": "1",
+          "Company Code": "1000"
+        },
+        {
+          "Vendor": "160000103",
+          "Vendor Name": "BHARAT HEAVY ELECTRICALS LIMITED",
+          "Plant Name": "JK Cement Works - Panna",
+          "Price Variance Probability": 0.9922,
+          "Risk Category": "Critical Risk",
+          "Price Variance (Amount)": 600000.0,
+          "Predicted Price Variance": "1",
+          "Company Code": "1000"
+        },
+        {
+          "Vendor": "330000472",
+          "Vendor Name": "CPAS TECHNOLOGIES PRIVATE LIMITED",
+          "Plant Name": "HO Kanpur (Grey)",
+          "Price Variance Probability": 0.9921,
+          "Risk Category": "Critical Risk",
+          "Price Variance (Amount)": 959775.0,
+          "Predicted Price Variance": "1",
+          "Company Code": "1000"
+        },
+        {
+          "Vendor": "160000234",
+          "Vendor Name": "PROMAC ENGINEERING INDUSTRIES LTD",
+          "Plant Name": "JK Cement Works - Panna",
+          "Price Variance Probability": 0.9921,
+          "Risk Category": "Critical Risk",
+          "Price Variance (Amount)": 471201.75,
+          "Predicted Price Variance": "1",
+          "Company Code": "1000"
+        },
+        {
+          "Vendor": "160002365",
+          "Vendor Name": "HIMENVIRO ENVIRONMENTAL",
+          "Plant Name": "JK Cement Works - Panna",
+          "Price Variance Probability": 0.9918,
+          "Risk Category": "Critical Risk",
+          "Price Variance (Amount)": 769999.99,
+          "Predicted Price Variance": "1",
+          "Company Code": "1000"
+        },
+        {
+          "Vendor": "260000132",
+          "Vendor Name": "Loesche GmbH",
+          "Plant Name": "J.K. CEMENT WORKS, BUXAR",
+          "Price Variance Probability": 0.9918,
+          "Risk Category": "Critical Risk",
+          "Price Variance (Amount)": 13412354.0,
+          "Predicted Price Variance": "1",
+          "Company Code": "1000"
+        },
+        {
+          "Vendor": "330000161",
+          "Vendor Name": "PINE LAB LIMITED",
+          "Plant Name": "HO Kanpur (Grey)",
+          "Price Variance Probability": 0.9918,
+          "Risk Category": "Critical Risk",
+          "Price Variance (Amount)": 289710.0,
+          "Predicted Price Variance": "1",
+          "Company Code": "1000"
+        },
+        {
+          "Vendor": "420000002",
+          "Vendor Name": "BEUMER INDIA PVT. LTD.",
+          "Plant Name": "JK Cement Works - Panna",
+          "Price Variance Probability": 0.9916,
+          "Risk Category": "Critical Risk",
+          "Price Variance (Amount)": 3453750.0,
+          "Predicted Price Variance": "1",
+          "Company Code": "1000"
+        },
+        {
+          "Vendor": "260000132",
+          "Vendor Name": "Loesche GmbH",
+          "Plant Name": "JK Cement Prayagraj",
           "Price Variance Probability": 0.9915,
           "Risk Category": "Critical Risk",
-          "Price Variance (Amount)": 30107.28,
-          "Predicted Price Variance": 1,
-          "Company Code": 1000,
-          "Company Name": "J.K. CEMENT LIMITED",
-          "Company City": "Kanpur"
+          "Price Variance (Amount)": 12600294.0,
+          "Predicted Price Variance": "1",
+          "Company Code": "1000"
         },
         {
-          "Plant": 1901,
-          "Price Variance Probability": 0.9905,
+          "Vendor": "210000006",
+          "Vendor Name": "MALABAR GOLD AND DIAMONDS LIMITED",
+          "Plant Name": "HO Kanpur (Grey)",
+          "Price Variance Probability": 0.9915,
           "Risk Category": "Critical Risk",
-          "Price Variance (Amount)": 263026.8,
-          "Predicted Price Variance": 1,
-          "Company Code": 1000,
-          "Company Name": "J.K. CEMENT LIMITED",
-          "Company City": "Kanpur"
+          "Price Variance (Amount)": 362811.7,
+          "Predicted Price Variance": "1",
+          "Company Code": "1000"
         },
         {
-          "Plant": 1000,
-          "Price Variance Probability": 0.9898,
+          "Vendor": "160004404",
+          "Vendor Name": "FLSMIDTH CEMENT INDIA LLP",
+          "Plant Name": "J.K. CEMENT WORKS, BUXAR",
+          "Price Variance Probability": 0.9913,
           "Risk Category": "Critical Risk",
-          "Price Variance (Amount)": 30107.27,
-          "Predicted Price Variance": 1,
-          "Company Code": 1000,
-          "Company Name": "J.K. CEMENT LIMITED",
-          "Company City": "Kanpur"
+          "Price Variance (Amount)": 1900000.0,
+          "Predicted Price Variance": "1",
+          "Company Code": "1000"
         },
         {
-          "Plant": 1000,
-          "Price Variance Probability": 0.9894,
+          "Vendor": "160000094",
+          "Vendor Name": "SANSKRITI PRINT & MEDIA",
+          "Plant Name": "HO Kanpur (Grey)",
+          "Price Variance Probability": 0.9913,
           "Risk Category": "Critical Risk",
-          "Price Variance (Amount)": 30107.28,
-          "Predicted Price Variance": 1,
-          "Company Code": 1000,
-          "Company Name": "J.K. CEMENT LIMITED",
-          "Company City": "Kanpur"
+          "Price Variance (Amount)": 52495.75,
+          "Predicted Price Variance": "1",
+          "Company Code": "1000"
         },
         {
-          "Plant": 1000,
-          "Price Variance Probability": 0.9891,
+          "Vendor": "260000219",
+          "Vendor Name": "FL SMITH A/S",
+          "Plant Name": "J.K. Cement Works, Muddapur",
+          "Price Variance Probability": 0.9912,
           "Risk Category": "Critical Risk",
-          "Price Variance (Amount)": 30107.27,
-          "Predicted Price Variance": 1,
-          "Company Code": 1000,
-          "Company Name": "J.K. CEMENT LIMITED",
-          "Company City": "Kanpur"
-        },
-        {
-          "Plant": 1015,
-          "Price Variance Probability": 0.9887,
-          "Risk Category": "Critical Risk",
-          "Price Variance (Amount)": 1141241.0,
-          "Predicted Price Variance": 1,
-          "Company Code": 1000,
-          "Company Name": "J.K. CEMENT LIMITED",
-          "Company City": "Kanpur"
-        },
-        {
-          "Plant": 1000,
-          "Price Variance Probability": 0.9884,
-          "Risk Category": "Critical Risk",
-          "Price Variance (Amount)": 30107.27,
-          "Predicted Price Variance": 1,
-          "Company Code": 1000,
-          "Company Name": "J.K. CEMENT LIMITED",
-          "Company City": "Kanpur"
-        },
-        {
-          "Plant": 1919,
-          "Price Variance Probability": 0.9883,
-          "Risk Category": "Critical Risk",
-          "Price Variance (Amount)": 612571.0,
-          "Predicted Price Variance": 1,
-          "Company Code": 1000,
-          "Company Name": "J.K. CEMENT LIMITED",
-          "Company City": "Kanpur"
-        },
-        {
-          "Plant": 1000,
-          "Price Variance Probability": 0.9881,
-          "Risk Category": "Critical Risk",
-          "Price Variance (Amount)": 30107.27,
-          "Predicted Price Variance": 1,
-          "Company Code": 1000,
-          "Company Name": "J.K. CEMENT LIMITED",
-          "Company City": "Kanpur"
-        },
-        {
-          "Plant": 1901,
-          "Price Variance Probability": 0.9873,
-          "Risk Category": "Critical Risk",
-          "Price Variance (Amount)": 309100.0,
-          "Predicted Price Variance": 1,
-          "Company Code": 1000,
-          "Company Name": "J.K. CEMENT LIMITED",
-          "Company City": "Kanpur"
-        },
-        {
-          "Plant": 1001,
-          "Price Variance Probability": 0.9869,
-          "Risk Category": "Critical Risk",
-          "Price Variance (Amount)": 189800.0,
-          "Predicted Price Variance": 1,
-          "Company Code": 1000,
-          "Company Name": "J.K. CEMENT LIMITED",
-          "Company City": "Kanpur"
-        },
-        {
-          "Plant": 1901,
-          "Price Variance Probability": 0.9863,
-          "Risk Category": "Critical Risk",
-          "Price Variance (Amount)": 124750.0,
-          "Predicted Price Variance": 1,
-          "Company Code": 1000,
-          "Company Name": "J.K. CEMENT LIMITED",
-          "Company City": "Kanpur"
-        },
-        {
-          "Plant": 2001,
-          "Price Variance Probability": 0.9852,
-          "Risk Category": "Critical Risk",
-          "Price Variance (Amount)": 110000.0,
-          "Predicted Price Variance": 1,
-          "Company Code": 1000,
-          "Company Name": "J.K. CEMENT LIMITED",
-          "Company City": "Kanpur"
-        },
-        {
-          "Plant": 1000,
-          "Price Variance Probability": 0.9851,
-          "Risk Category": "Critical Risk",
-          "Price Variance (Amount)": 25144.0,
-          "Predicted Price Variance": 1,
-          "Company Code": 1000,
-          "Company Name": "J.K. CEMENT LIMITED",
-          "Company City": "Kanpur"
-        },
-        {
-          "Plant": 2001,
-          "Price Variance Probability": 0.9846,
-          "Risk Category": "Critical Risk",
-          "Price Variance (Amount)": 376418.7,
-          "Predicted Price Variance": 1,
-          "Company Code": 1000,
-          "Company Name": "J.K. CEMENT LIMITED",
-          "Company City": "Kanpur"
-        },
-        {
-          "Plant": 1022,
-          "Price Variance Probability": 0.9838,
-          "Risk Category": "Critical Risk",
-          "Price Variance (Amount)": 345000.0,
-          "Predicted Price Variance": 1,
-          "Company Code": 1000,
-          "Company Name": "J.K. CEMENT LIMITED",
-          "Company City": "Kanpur"
-        },
-        {
-          "Plant": 2001,
-          "Price Variance Probability": 0.9836,
-          "Risk Category": "Critical Risk",
-          "Price Variance (Amount)": 72909.34,
-          "Predicted Price Variance": 1,
-          "Company Code": 1000,
-          "Company Name": "J.K. CEMENT LIMITED",
-          "Company City": "Kanpur"
-        },
-        {
-          "Plant": 1000,
-          "Price Variance Probability": 0.9801,
-          "Risk Category": "Critical Risk",
-          "Price Variance (Amount)": -8850.0,
-          "Predicted Price Variance": 1,
-          "Company Code": 1000,
-          "Company Name": "J.K. CEMENT LIMITED",
-          "Company City": "Kanpur"
-        },
-        {
-          "Plant": 1901,
-          "Price Variance Probability": 0.9796,
-          "Risk Category": "Critical Risk",
-          "Price Variance (Amount)": 118000.0,
-          "Predicted Price Variance": 1,
-          "Company Code": 1000,
-          "Company Name": "J.K. CEMENT LIMITED",
-          "Company City": "Kanpur"
-        },
-        {
-          "Plant": 2001,
-          "Price Variance Probability": 0.9791,
-          "Risk Category": "Critical Risk",
-          "Price Variance (Amount)": -400000.0,
-          "Predicted Price Variance": 1,
-          "Company Code": 1000,
-          "Company Name": "J.K. CEMENT LIMITED",
-          "Company City": "Kanpur"
-        },
-        {
-          "Plant": 1901,
-          "Price Variance Probability": 0.9785,
-          "Risk Category": "Critical Risk",
-          "Price Variance (Amount)": -31666.67,
-          "Predicted Price Variance": 1,
-          "Company Code": 1000,
-          "Company Name": "J.K. CEMENT LIMITED",
-          "Company City": "Kanpur"
-        },
-        {
-          "Plant": 1901,
-          "Price Variance Probability": 0.9783,
-          "Risk Category": "Critical Risk",
-          "Price Variance (Amount)": 100000.0,
-          "Predicted Price Variance": 1,
-          "Company Code": 1000,
-          "Company Name": "J.K. CEMENT LIMITED",
-          "Company City": "Kanpur"
-        },
-        {
-          "Plant": 1004,
-          "Price Variance Probability": 0.9776,
-          "Risk Category": "Critical Risk",
-          "Price Variance (Amount)": 0.0,
-          "Predicted Price Variance": 1,
-          "Company Code": 1000,
-          "Company Name": "J.K. CEMENT LIMITED",
-          "Company City": "Kanpur"
-        },
-        {
-          "Plant": 1004,
-          "Price Variance Probability": 0.977,
-          "Risk Category": "Critical Risk",
-          "Price Variance (Amount)": 0.0,
-          "Predicted Price Variance": 1,
-          "Company Code": 1000,
-          "Company Name": "J.K. CEMENT LIMITED",
-          "Company City": "Kanpur"
-        },
-        {
-          "Plant": 1004,
-          "Price Variance Probability": 0.9766,
-          "Risk Category": "Critical Risk",
-          "Price Variance (Amount)": 0.0,
-          "Predicted Price Variance": 1,
-          "Company Code": 1000,
-          "Company Name": "J.K. CEMENT LIMITED",
-          "Company City": "Kanpur"
-        },
-        {
-          "Plant": 2001,
-          "Price Variance Probability": 0.9763,
-          "Risk Category": "Critical Risk",
-          "Price Variance (Amount)": 0.0,
-          "Predicted Price Variance": 1,
-          "Company Code": 1000,
-          "Company Name": "J.K. CEMENT LIMITED",
-          "Company City": "Kanpur"
-        },
-        {
-          "Plant": 2001,
-          "Price Variance Probability": 0.9763,
-          "Risk Category": "Critical Risk",
-          "Price Variance (Amount)": 0.0,
-          "Predicted Price Variance": 1,
-          "Company Code": 1000,
-          "Company Name": "J.K. CEMENT LIMITED",
-          "Company City": "Kanpur"
-        },
-        {
-          "Plant": 1000,
-          "Price Variance Probability": 0.9746,
-          "Risk Category": "Critical Risk",
-          "Price Variance (Amount)": -14817.0,
-          "Predicted Price Variance": 1,
-          "Company Code": 1000,
-          "Company Name": "J.K. CEMENT LIMITED",
-          "Company City": "Kanpur"
-        },
-        {
-          "Plant": 1919,
-          "Price Variance Probability": 0.9738,
-          "Risk Category": "Critical Risk",
-          "Price Variance (Amount)": 0.0,
-          "Predicted Price Variance": 1,
-          "Company Code": 1000,
-          "Company Name": "J.K. CEMENT LIMITED",
-          "Company City": "Kanpur"
-        },
-        {
-          "Plant": 1919,
-          "Price Variance Probability": 0.9738,
-          "Risk Category": "Critical Risk",
-          "Price Variance (Amount)": 0.0,
-          "Predicted Price Variance": 1,
-          "Company Code": 1000,
-          "Company Name": "J.K. CEMENT LIMITED",
-          "Company City": "Kanpur"
-        },
-        {
-          "Plant": 1001,
-          "Price Variance Probability": 0.9728,
-          "Risk Category": "Critical Risk",
-          "Price Variance (Amount)": 0.0,
-          "Predicted Price Variance": 1,
-          "Company Code": 1000,
-          "Company Name": "J.K. CEMENT LIMITED",
-          "Company City": "Kanpur"
-        },
-        {
-          "Plant": 1901,
-          "Price Variance Probability": 0.9727,
-          "Risk Category": "Critical Risk",
-          "Price Variance (Amount)": 0.0,
-          "Predicted Price Variance": 1,
-          "Company Code": 1000,
-          "Company Name": "J.K. CEMENT LIMITED",
-          "Company City": "Kanpur"
-        },
-        {
-          "Plant": 2001,
-          "Price Variance Probability": 0.9721,
-          "Risk Category": "Critical Risk",
-          "Price Variance (Amount)": 0.0,
-          "Predicted Price Variance": 1,
-          "Company Code": 1000,
-          "Company Name": "J.K. CEMENT LIMITED",
-          "Company City": "Kanpur"
-        },
-        {
-          "Plant": 1004,
-          "Price Variance Probability": 0.9717,
-          "Risk Category": "Critical Risk",
-          "Price Variance (Amount)": 0.0,
-          "Predicted Price Variance": 1,
-          "Company Code": 1000,
-          "Company Name": "J.K. CEMENT LIMITED",
-          "Company City": "Kanpur"
-        },
-        {
-          "Plant": 1906,
-          "Price Variance Probability": 0.9714,
-          "Risk Category": "Critical Risk",
-          "Price Variance (Amount)": 69035.62,
-          "Predicted Price Variance": 1,
-          "Company Code": 1000,
-          "Company Name": "J.K. CEMENT LIMITED",
-          "Company City": "Kanpur"
-        },
-        {
-          "Plant": 1004,
-          "Price Variance Probability": 0.9712,
-          "Risk Category": "Critical Risk",
-          "Price Variance (Amount)": 56053.0,
-          "Predicted Price Variance": 1,
-          "Company Code": 1000,
-          "Company Name": "J.K. CEMENT LIMITED",
-          "Company City": "Kanpur"
-        },
-        {
-          "Plant": 1004,
-          "Price Variance Probability": 0.9712,
-          "Risk Category": "Critical Risk",
-          "Price Variance (Amount)": 53560.0,
-          "Predicted Price Variance": 1,
-          "Company Code": 1000,
-          "Company Name": "J.K. CEMENT LIMITED",
-          "Company City": "Kanpur"
-        },
-        {
-          "Plant": 1000,
-          "Price Variance Probability": 0.971,
-          "Risk Category": "Critical Risk",
-          "Price Variance (Amount)": 19084.2,
-          "Predicted Price Variance": 1,
-          "Company Code": 1000,
-          "Company Name": "J.K. CEMENT LIMITED",
-          "Company City": "Kanpur"
-        },
-        {
-          "Plant": 1004,
-          "Price Variance Probability": 0.9703,
-          "Risk Category": "Critical Risk",
-          "Price Variance (Amount)": 0.0,
-          "Predicted Price Variance": 1,
-          "Company Code": 1000,
-          "Company Name": "J.K. CEMENT LIMITED",
-          "Company City": "Kanpur"
-        },
-        {
-          "Plant": 1919,
-          "Price Variance Probability": 0.97,
-          "Risk Category": "Critical Risk",
-          "Price Variance (Amount)": -211896.98,
-          "Predicted Price Variance": 1,
-          "Company Code": 1000,
-          "Company Name": "J.K. CEMENT LIMITED",
-          "Company City": "Kanpur"
-        },
-        {
-          "Plant": 2001,
-          "Price Variance Probability": 0.9698,
-          "Risk Category": "Critical Risk",
-          "Price Variance (Amount)": 230.0,
-          "Predicted Price Variance": 1,
-          "Company Code": 1000,
-          "Company Name": "J.K. CEMENT LIMITED",
-          "Company City": "Kanpur"
-        },
-        {
-          "Plant": 1000,
-          "Price Variance Probability": 0.9697,
-          "Risk Category": "Critical Risk",
-          "Price Variance (Amount)": 6667.0,
-          "Predicted Price Variance": 1,
-          "Company Code": 1000,
-          "Company Name": "J.K. CEMENT LIMITED",
-          "Company City": "Kanpur"
-        },
-        {
-          "Plant": 1022,
-          "Price Variance Probability": 0.9697,
-          "Risk Category": "Critical Risk",
-          "Price Variance (Amount)": 0.0,
-          "Predicted Price Variance": 1,
-          "Company Code": 1000,
-          "Company Name": "J.K. CEMENT LIMITED",
-          "Company City": "Kanpur"
-        },
-        {
-          "Plant": 1901,
-          "Price Variance Probability": 0.9689,
-          "Risk Category": "Critical Risk",
-          "Price Variance (Amount)": 0.0,
-          "Predicted Price Variance": 1,
-          "Company Code": 1000,
-          "Company Name": "J.K. CEMENT LIMITED",
-          "Company City": "Kanpur"
-        },
-        {
-          "Plant": 1919,
-          "Price Variance Probability": 0.9686,
-          "Risk Category": "Critical Risk",
-          "Price Variance (Amount)": -309334.0,
-          "Predicted Price Variance": 1,
-          "Company Code": 1000,
-          "Company Name": "J.K. CEMENT LIMITED",
-          "Company City": "Kanpur"
-        },
-        {
-          "Plant": 1004,
-          "Price Variance Probability": 0.9684,
-          "Risk Category": "Critical Risk",
-          "Price Variance (Amount)": 0.0,
-          "Predicted Price Variance": 1,
-          "Company Code": 1000,
-          "Company Name": "J.K. CEMENT LIMITED",
-          "Company City": "Kanpur"
-        },
-        {
-          "Plant": 1906,
-          "Price Variance Probability": 0.968,
-          "Risk Category": "Critical Risk",
-          "Price Variance (Amount)": 0.0,
-          "Predicted Price Variance": 1,
-          "Company Code": 1000,
-          "Company Name": "J.K. CEMENT LIMITED",
-          "Company City": "Kanpur"
+          "Price Variance (Amount)": 4830642.43,
+          "Predicted Price Variance": "1",
+          "Company Code": "1000"
         }
       ],
       "advanced_ml": {
         "confusion_matrix": {
-          "tp": 4796,
-          "fp": 1565,
-          "fn": 1519,
-          "tn": 17120,
-          "precision": 0.754,
+          "tp": 6627,
+          "fp": 11119,
+          "fn": 2099,
+          "tn": 154838,
+          "precision": 0.373,
           "recall": 0.759,
-          "f1": 0.757,
-          "accuracy": 0.877
+          "f1": 0.501,
+          "accuracy": 0.924
         },
         "threshold_curve": {
           "thresholds": [
@@ -7445,40 +7249,40 @@ window.PORTFOLIO_DATA = {
             "0.9"
           ],
           "clean_count": [
-            5992,
-            3820,
-            2436,
-            1553,
-            990,
-            631,
-            402,
-            256,
-            163,
-            104
+            54193,
+            34555,
+            22033,
+            14049,
+            8958,
+            5711,
+            3642,
+            2322,
+            1480,
+            944
           ],
           "exception_count": [
-            239,
-            373,
-            506,
-            639,
-            772,
-            905,
-            1039,
-            1172,
-            1305,
-            1438
+            331,
+            515,
+            699,
+            883,
+            1067,
+            1251,
+            1435,
+            1619,
+            1804,
+            1988
           ],
           "total_count": [
-            6231,
-            4193,
-            2942,
-            2192,
-            1762,
-            1536,
-            1441,
-            1428,
-            1468,
-            1542
+            54524,
+            35070,
+            22732,
+            14932,
+            10025,
+            6962,
+            5077,
+            3941,
+            3284,
+            2932
           ]
         },
         "calibration_curve": {
@@ -7562,615 +7366,615 @@ window.PORTFOLIO_DATA = {
         "BSEG",
         "LFA1"
       ],
-      "total_records": 25000,
-      "exceptions_count": 1256,
-      "exception_rate_pct": 5.02,
-      "financial_exposure_inr": 4652800000.0,
-      "financial_exposure_cr": 465.28,
-      "avg_confidence_score": 0.956,
-      "champion_model": "Composite Multi-Key Collision & Tree",
-      "champion_metric": "0.9560 ROC-AUC",
+      "total_records": 435342,
+      "exceptions_count": 21796,
+      "exception_rate_pct": 5.01,
+      "financial_exposure_inr": 79076298898.79,
+      "financial_exposure_cr": 7907.63,
+      "avg_confidence_score": 0.12,
+      "champion_model": "Cosine Fuzzy Vectorizer + Anomaly Detection",
+      "champion_metric": "0.9120 Precision",
       "risk_distribution": {
-        "Critical": 458,
-        "High": 602,
-        "Medium": 196,
-        "Low": 23744
+        "Critical": 13602,
+        "High": 6015,
+        "Medium": 2179,
+        "Low": 413546
       },
       "category_breakdown": [
         {
-          "label": "1001",
-          "count": 8570
+          "label": "J.K. Cement Works Nimbahera",
+          "count": 65892
         },
         {
-          "label": "2001",
-          "count": 2510
+          "label": "J.K. Cement Works, Muddapur",
+          "count": 60556
         },
         {
-          "label": "1015",
-          "count": 2120
+          "label": "J.K. Cement  Works, Mangrol",
+          "count": 34020
         },
         {
-          "label": "1000",
-          "count": 1835
+          "label": "J.K. White Cement Works ,Gotan",
+          "count": 32880
         },
         {
-          "label": "1901",
-          "count": 1450
+          "label": "J.K. Cement Works Jharli",
+          "count": 30451
         },
         {
-          "label": "1006",
-          "count": 1385
+          "label": "JK Cement Works - Panna",
+          "count": 27367
         },
         {
-          "label": "1004",
-          "count": 1140
+          "label": "JK Cement Prayagraj",
+          "count": 26725
         }
       ],
       "feature_importance": [
         {
-          "feature": "feature",
-          "importance": 0,
-          "description": "Direct Mathematical Influence On Duplicate Payment Risk:"
-        },
-        {
           "feature": "dup_similarity_index",
-          "importance": 0.3227,
-          "description": "(Composite multi-key duplicate collision score across Vendor, Reference, Amount, Date & PO)"
+          "importance": 0.1938,
+          "description": "Dup Similarity Index"
         },
         {
           "feature": "vendor_amt_date_count",
-          "importance": 0.2434,
-          "description": "(Count of invoices with identical Vendor + Gross Amount RMWWR + Invoice Date BLDAT)"
+          "importance": 0.169,
+          "description": "Vendor Amt Date Count"
         },
         {
           "feature": "is_same_vendor_amt_date",
-          "importance": 0.1379,
-          "description": "(1 if multiple invoices share the exact same Vendor, Gross Amount, and Invoice Date)"
+          "importance": 0.1521,
+          "description": "Is Same Vendor Amt Date"
         },
         {
-          "feature": "vendor_mat_amt_count",
-          "importance": 0.0471,
-          "description": "(Frequency of identical Vendor + Material MATNR + Gross Amount combination)"
-        },
-        {
-          "feature": "vendor_exact_amt_count",
-          "importance": 0.0386,
-          "description": "(Historical frequency of identical Gross Invoice Amount billed by the same Vendor)"
-        },
-        {
-          "feature": "po_item_exact_amt_count",
-          "importance": 0.0322,
-          "description": "(Count of invoices billing the exact same PO Line EBELN/EBELP for the same Item Amount)"
+          "feature": "exact_vendor_ref_count",
+          "importance": 0.1213,
+          "description": "Exact Vendor Ref Count"
         },
         {
           "feature": "norm_vendor_ref_count",
-          "importance": 0.0219,
-          "description": "(Frequency of identical Vendor + alphanumeric-normalized Reference Number)"
+          "importance": 0.0847,
+          "description": "Norm Vendor Ref Count"
+        },
+        {
+          "feature": "is_fuzzy_ref_dup",
+          "importance": 0.0649,
+          "description": "Is Fuzzy Ref Dup"
+        },
+        {
+          "feature": "is_exact_ref_dup",
+          "importance": 0.0587,
+          "description": "Is Exact Ref Dup"
+        },
+        {
+          "feature": "is_same_po_item_amt",
+          "importance": 0.0341,
+          "description": "Is Same Po Item Amt"
         }
       ],
       "model_rankings": [],
       "display_columns": [
-        "PO Number (EBELN)",
-        "Plant",
+        "Vendor",
+        "Vendor Name",
+        "Plant Name",
         "Duplicate Invoice Probability",
         "Risk Category",
-        "PO Net Value (NETWR)",
+        "Gross Invoice Amount (RMWWR)",
         "Predicted Duplicate Invoice",
-        "Company Code",
-        "Company Name"
+        "Company Code"
       ],
       "sample_records": [
         {
-          "PO Number (EBELN)": 6400002028,
-          "Plant": 1901,
-          "Duplicate Invoice Probability": 0.9793,
+          "Vendor": "420025659",
+          "Vendor Name": "COMMISSIONER FOR CUSTOMS AND EXCISE",
+          "Plant Name": "JK WHITE CEMENT(AFRICA) LTD",
+          "Duplicate Invoice Probability": 0.9979,
           "Risk Category": "Critical Risk",
-          "PO Net Value (NETWR)": 4660000.0,
-          "Predicted Duplicate Invoice": 1,
-          "Company Code": 1000,
-          "Company Name": "J.K. CEMENT LIMITED"
+          "Gross Invoice Amount (RMWWR)": 63065275.0,
+          "Predicted Duplicate Invoice": "1",
+          "Company Code": "7200"
         },
         {
-          "PO Number (EBELN)": 6400002028,
-          "Plant": 1901,
-          "Duplicate Invoice Probability": 0.9793,
+          "Vendor": "420025740",
+          "Vendor Name": "HSSL LIME CO (T). LTD",
+          "Plant Name": "JK WHITE CEMENT(AFRICA) LTD",
+          "Duplicate Invoice Probability": 0.9978,
           "Risk Category": "Critical Risk",
-          "PO Net Value (NETWR)": 4660000.0,
-          "Predicted Duplicate Invoice": 1,
-          "Company Code": 1000,
-          "Company Name": "J.K. CEMENT LIMITED"
+          "Gross Invoice Amount (RMWWR)": 180000000.0,
+          "Predicted Duplicate Invoice": "1",
+          "Company Code": "7200"
         },
         {
-          "PO Number (EBELN)": 4500000157,
-          "Plant": 6008,
-          "Duplicate Invoice Probability": 0.9764,
+          "Vendor": "420025637",
+          "Vendor Name": "BEST POWDER INDUSTRY LTD",
+          "Plant Name": "JK WHITE CEMENT(AFRICA) LTD",
+          "Duplicate Invoice Probability": 0.9976,
           "Risk Category": "Critical Risk",
-          "PO Net Value (NETWR)": 40941040.0,
-          "Predicted Duplicate Invoice": 1,
-          "Company Code": 1000,
-          "Company Name": "J.K. CEMENT LIMITED"
+          "Gross Invoice Amount (RMWWR)": 589050000.0,
+          "Predicted Duplicate Invoice": "1",
+          "Company Code": "7200"
         },
         {
-          "PO Number (EBELN)": 4500000158,
-          "Plant": 6008,
-          "Duplicate Invoice Probability": 0.9761,
+          "Vendor": "420025602",
+          "Vendor Name": "A TO Z GROUP LIMITED",
+          "Plant Name": "JK WHITE CEMENT(AFRICA) LTD",
+          "Duplicate Invoice Probability": 0.9971,
           "Risk Category": "Critical Risk",
-          "PO Net Value (NETWR)": 20470520.0,
-          "Predicted Duplicate Invoice": 1,
-          "Company Code": 1000,
-          "Company Name": "J.K. CEMENT LIMITED"
+          "Gross Invoice Amount (RMWWR)": 518440000.0,
+          "Predicted Duplicate Invoice": "1",
+          "Company Code": "7200"
         },
         {
-          "PO Number (EBELN)": 4500000159,
-          "Plant": 6008,
-          "Duplicate Invoice Probability": 0.9754,
+          "Vendor": "420025637",
+          "Vendor Name": "BEST POWDER INDUSTRY LTD",
+          "Plant Name": "JK WHITE CEMENT(AFRICA) LTD",
+          "Duplicate Invoice Probability": 0.9969,
           "Risk Category": "Critical Risk",
-          "PO Net Value (NETWR)": 10235260.0,
-          "Predicted Duplicate Invoice": 1,
-          "Company Code": 1000,
-          "Company Name": "J.K. CEMENT LIMITED"
+          "Gross Invoice Amount (RMWWR)": 170000000.0,
+          "Predicted Duplicate Invoice": "1",
+          "Company Code": "7200"
         },
         {
-          "PO Number (EBELN)": 4500000155,
-          "Plant": 6008,
-          "Duplicate Invoice Probability": 0.9713,
+          "Vendor": "420025751",
+          "Vendor Name": "HUSSAIN GRINDING MILLS LIMITED",
+          "Plant Name": "JK WHITE CEMENT(AFRICA) LTD",
+          "Duplicate Invoice Probability": 0.9968,
           "Risk Category": "Critical Risk",
-          "PO Net Value (NETWR)": 7133628.22,
-          "Predicted Duplicate Invoice": 1,
-          "Company Code": 1000,
-          "Company Name": "J.K. CEMENT LIMITED"
+          "Gross Invoice Amount (RMWWR)": 165120000.0,
+          "Predicted Duplicate Invoice": "1",
+          "Company Code": "7200"
         },
         {
-          "PO Number (EBELN)": 5400000989,
-          "Plant": 1000,
-          "Duplicate Invoice Probability": 0.9687,
+          "Vendor": "260000122",
+          "Vendor Name": "IKN GmbH Ingeneiurbeuro-",
+          "Plant Name": "JK Cement Works - Panna",
+          "Duplicate Invoice Probability": 0.9966,
           "Risk Category": "Critical Risk",
-          "PO Net Value (NETWR)": 2513300.0,
-          "Predicted Duplicate Invoice": 1,
-          "Company Code": 1000,
-          "Company Name": "J.K. CEMENT LIMITED"
+          "Gross Invoice Amount (RMWWR)": 276274850.0,
+          "Predicted Duplicate Invoice": "1",
+          "Company Code": "1000"
         },
         {
-          "PO Number (EBELN)": 4100033130,
-          "Plant": 5011,
-          "Duplicate Invoice Probability": 0.9657,
+          "Vendor": "420025659",
+          "Vendor Name": "COMMISSIONER FOR CUSTOMS AND EXCISE",
+          "Plant Name": "JK WHITE CEMENT(AFRICA) LTD",
+          "Duplicate Invoice Probability": 0.9963,
           "Risk Category": "Critical Risk",
-          "PO Net Value (NETWR)": 12800.0,
-          "Predicted Duplicate Invoice": 1,
-          "Company Code": 1000,
-          "Company Name": "J.K. CEMENT LIMITED"
+          "Gross Invoice Amount (RMWWR)": 128656522.0,
+          "Predicted Duplicate Invoice": "1",
+          "Company Code": "7200"
         },
         {
-          "PO Number (EBELN)": 4500000143,
-          "Plant": 6008,
-          "Duplicate Invoice Probability": 0.9636,
+          "Vendor": "420025659",
+          "Vendor Name": "COMMISSIONER FOR CUSTOMS AND EXCISE",
+          "Plant Name": "JK WHITE CEMENT(AFRICA) LTD",
+          "Duplicate Invoice Probability": 0.996,
           "Risk Category": "Critical Risk",
-          "PO Net Value (NETWR)": 41672080.0,
-          "Predicted Duplicate Invoice": 1,
-          "Company Code": 1000,
-          "Company Name": "J.K. CEMENT LIMITED"
+          "Gross Invoice Amount (RMWWR)": 78737217.0,
+          "Predicted Duplicate Invoice": "1",
+          "Company Code": "7200"
         },
         {
-          "PO Number (EBELN)": 4500000144,
-          "Plant": 6008,
-          "Duplicate Invoice Probability": 0.9636,
+          "Vendor": "420002013",
+          "Vendor Name": "HUMBOLDT WEDAG INDIA PVT LTD",
+          "Plant Name": "JK Cement Works - Panna",
+          "Duplicate Invoice Probability": 0.9959,
           "Risk Category": "Critical Risk",
-          "PO Net Value (NETWR)": 41672080.0,
-          "Predicted Duplicate Invoice": 1,
-          "Company Code": 1000,
-          "Company Name": "J.K. CEMENT LIMITED"
+          "Gross Invoice Amount (RMWWR)": 250000000.0,
+          "Predicted Duplicate Invoice": "1",
+          "Company Code": "1000"
         },
         {
-          "PO Number (EBELN)": 4500000140,
-          "Plant": 6008,
-          "Duplicate Invoice Probability": 0.9634,
+          "Vendor": "420025659",
+          "Vendor Name": "COMMISSIONER FOR CUSTOMS AND EXCISE",
+          "Plant Name": "JK WHITE CEMENT(AFRICA) LTD",
+          "Duplicate Invoice Probability": 0.9959,
           "Risk Category": "Critical Risk",
-          "PO Net Value (NETWR)": 40438400.0,
-          "Predicted Duplicate Invoice": 1,
-          "Company Code": 1000,
-          "Company Name": "J.K. CEMENT LIMITED"
+          "Gross Invoice Amount (RMWWR)": 51745717.0,
+          "Predicted Duplicate Invoice": "1",
+          "Company Code": "7200"
         },
         {
-          "PO Number (EBELN)": 4500000145,
-          "Plant": 6008,
-          "Duplicate Invoice Probability": 0.9633,
+          "Vendor": "420025659",
+          "Vendor Name": "COMMISSIONER FOR CUSTOMS AND EXCISE",
+          "Plant Name": "JK WHITE CEMENT(AFRICA) LTD",
+          "Duplicate Invoice Probability": 0.9955,
           "Risk Category": "Critical Risk",
-          "PO Net Value (NETWR)": 41672080.0,
-          "Predicted Duplicate Invoice": 1,
-          "Company Code": 1000,
-          "Company Name": "J.K. CEMENT LIMITED"
+          "Gross Invoice Amount (RMWWR)": 85238874.0,
+          "Predicted Duplicate Invoice": "1",
+          "Company Code": "7200"
         },
         {
-          "PO Number (EBELN)": 4500000141,
-          "Plant": 6008,
-          "Duplicate Invoice Probability": 0.9613,
+          "Vendor": "330000231",
+          "Vendor Name": "KALYAN JEWELLERS INDIA LIMITED",
+          "Plant Name": "HO Kanpur (Grey)",
+          "Duplicate Invoice Probability": 0.995,
           "Risk Category": "Critical Risk",
-          "PO Net Value (NETWR)": 40438400.0,
-          "Predicted Duplicate Invoice": 1,
-          "Company Code": 1000,
-          "Company Name": "J.K. CEMENT LIMITED"
+          "Gross Invoice Amount (RMWWR)": 117314142.75,
+          "Predicted Duplicate Invoice": "1",
+          "Company Code": "1000"
         },
         {
-          "PO Number (EBELN)": 4500000139,
-          "Plant": 6008,
-          "Duplicate Invoice Probability": 0.9596,
+          "Vendor": "420025740",
+          "Vendor Name": "HSSL LIME CO (T). LTD",
+          "Plant Name": "JK WHITE CEMENT(AFRICA) LTD",
+          "Duplicate Invoice Probability": 0.995,
           "Risk Category": "Critical Risk",
-          "PO Net Value (NETWR)": 40438400.0,
-          "Predicted Duplicate Invoice": 1,
-          "Company Code": 1000,
-          "Company Name": "J.K. CEMENT LIMITED"
+          "Gross Invoice Amount (RMWWR)": 146376000.0,
+          "Predicted Duplicate Invoice": "1",
+          "Company Code": "7200"
         },
         {
-          "PO Number (EBELN)": 4100034150,
-          "Plant": 2001,
-          "Duplicate Invoice Probability": 0.9595,
+          "Vendor": "260000219",
+          "Vendor Name": "FL SMITH A/S",
+          "Plant Name": "J.K. Cement Works, Muddapur",
+          "Duplicate Invoice Probability": 0.9949,
           "Risk Category": "Critical Risk",
-          "PO Net Value (NETWR)": 350000.0,
-          "Predicted Duplicate Invoice": 1,
-          "Company Code": 1000,
-          "Company Name": "J.K. CEMENT LIMITED"
+          "Gross Invoice Amount (RMWWR)": 56353970.0,
+          "Predicted Duplicate Invoice": "1",
+          "Company Code": "1000"
         },
         {
-          "PO Number (EBELN)": 4100034150,
-          "Plant": 2001,
-          "Duplicate Invoice Probability": 0.9595,
+          "Vendor": "420025762",
+          "Vendor Name": "JK CEMENT WORKS (FUJAIRAH) FZC",
+          "Plant Name": "JK WHITE CEMENT(AFRICA) LTD",
+          "Duplicate Invoice Probability": 0.9949,
           "Risk Category": "Critical Risk",
-          "PO Net Value (NETWR)": 350000.0,
-          "Predicted Duplicate Invoice": 1,
-          "Company Code": 1000,
-          "Company Name": "J.K. CEMENT LIMITED"
+          "Gross Invoice Amount (RMWWR)": 647975624.4,
+          "Predicted Duplicate Invoice": "1",
+          "Company Code": "7200"
         },
         {
-          "PO Number (EBELN)": 4100037508,
-          "Plant": 1901,
-          "Duplicate Invoice Probability": 0.9594,
+          "Vendor": "260000192",
+          "Vendor Name": "SEABULK INTERNATIONAL TRADING",
+          "Plant Name": "KANDLA PORT",
+          "Duplicate Invoice Probability": 0.9947,
           "Risk Category": "Critical Risk",
-          "PO Net Value (NETWR)": 289000.0,
-          "Predicted Duplicate Invoice": 1,
-          "Company Code": 1000,
-          "Company Name": "J.K. CEMENT LIMITED"
+          "Gross Invoice Amount (RMWWR)": 163764160.0,
+          "Predicted Duplicate Invoice": "1",
+          "Company Code": "1000"
         },
         {
-          "PO Number (EBELN)": 4100037508,
-          "Plant": 1901,
-          "Duplicate Invoice Probability": 0.9594,
+          "Vendor": "420025751",
+          "Vendor Name": "HUSSAIN GRINDING MILLS LIMITED",
+          "Plant Name": "JK WHITE CEMENT(AFRICA) LTD",
+          "Duplicate Invoice Probability": 0.9947,
           "Risk Category": "Critical Risk",
-          "PO Net Value (NETWR)": 289000.0,
-          "Predicted Duplicate Invoice": 1,
-          "Company Code": 1000,
-          "Company Name": "J.K. CEMENT LIMITED"
+          "Gross Invoice Amount (RMWWR)": 180772000.0,
+          "Predicted Duplicate Invoice": "1",
+          "Company Code": "7200"
         },
         {
-          "PO Number (EBELN)": 6400002014,
-          "Plant": 1919,
-          "Duplicate Invoice Probability": 0.9578,
+          "Vendor": "260000201",
+          "Vendor Name": "OQ TRADING LIMITED",
+          "Plant Name": "KANDLA PORT",
+          "Duplicate Invoice Probability": 0.9945,
           "Risk Category": "Critical Risk",
-          "PO Net Value (NETWR)": 1382500.0,
-          "Predicted Duplicate Invoice": 1,
-          "Company Code": 1000,
-          "Company Name": "J.K. CEMENT LIMITED"
+          "Gross Invoice Amount (RMWWR)": 137735500.0,
+          "Predicted Duplicate Invoice": "1",
+          "Company Code": "1000"
         },
         {
-          "PO Number (EBELN)": 6400002014,
-          "Plant": 1919,
-          "Duplicate Invoice Probability": 0.9578,
+          "Vendor": "260000201",
+          "Vendor Name": "OQ TRADING LIMITED",
+          "Plant Name": "KANDLA PORT",
+          "Duplicate Invoice Probability": 0.9945,
           "Risk Category": "Critical Risk",
-          "PO Net Value (NETWR)": 1382500.0,
-          "Predicted Duplicate Invoice": 1,
-          "Company Code": 1000,
-          "Company Name": "J.K. CEMENT LIMITED"
+          "Gross Invoice Amount (RMWWR)": 137735500.0,
+          "Predicted Duplicate Invoice": "1",
+          "Company Code": "1000"
         },
         {
-          "PO Number (EBELN)": 6400001966,
-          "Plant": 1919,
-          "Duplicate Invoice Probability": 0.957,
+          "Vendor": "450000138",
+          "Vendor Name": "MP POORVA KSHETRA VIDYUT VITARAN CO",
+          "Plant Name": "JK Cement Works - Panna",
+          "Duplicate Invoice Probability": 0.9944,
           "Risk Category": "Critical Risk",
-          "PO Net Value (NETWR)": 592800.0,
-          "Predicted Duplicate Invoice": 1,
-          "Company Code": 1000,
-          "Company Name": "J.K. CEMENT LIMITED"
+          "Gross Invoice Amount (RMWWR)": 69825044.0,
+          "Predicted Duplicate Invoice": "1",
+          "Company Code": "1000"
         },
         {
-          "PO Number (EBELN)": 6400001966,
-          "Plant": 1919,
-          "Duplicate Invoice Probability": 0.957,
+          "Vendor": "420025762",
+          "Vendor Name": "JK CEMENT WORKS (FUJAIRAH) FZC",
+          "Plant Name": "JK WHITE CEMENT(AFRICA) LTD",
+          "Duplicate Invoice Probability": 0.9944,
           "Risk Category": "Critical Risk",
-          "PO Net Value (NETWR)": 592800.0,
-          "Predicted Duplicate Invoice": 1,
-          "Company Code": 1000,
-          "Company Name": "J.K. CEMENT LIMITED"
+          "Gross Invoice Amount (RMWWR)": 369811710.0,
+          "Predicted Duplicate Invoice": "1",
+          "Company Code": "7200"
         },
         {
-          "PO Number (EBELN)": 4100036795,
-          "Plant": 1034,
-          "Duplicate Invoice Probability": 0.9517,
+          "Vendor": "420025762",
+          "Vendor Name": "JK CEMENT WORKS (FUJAIRAH) FZC",
+          "Plant Name": "JK WHITE CEMENT(AFRICA) LTD",
+          "Duplicate Invoice Probability": 0.9944,
           "Risk Category": "Critical Risk",
-          "PO Net Value (NETWR)": 30.0,
-          "Predicted Duplicate Invoice": 1,
-          "Company Code": 1000,
-          "Company Name": "J.K. CEMENT LIMITED"
+          "Gross Invoice Amount (RMWWR)": 461488349.31,
+          "Predicted Duplicate Invoice": "1",
+          "Company Code": "7200"
         },
         {
-          "PO Number (EBELN)": 4100036795,
-          "Plant": 1034,
-          "Duplicate Invoice Probability": 0.9517,
+          "Vendor": "260000202",
+          "Vendor Name": "GLENVORE INTERNATIONAL FZE",
+          "Plant Name": "KANDLA PORT",
+          "Duplicate Invoice Probability": 0.9944,
           "Risk Category": "Critical Risk",
-          "PO Net Value (NETWR)": 30.0,
-          "Predicted Duplicate Invoice": 1,
-          "Company Code": 1000,
-          "Company Name": "J.K. CEMENT LIMITED"
+          "Gross Invoice Amount (RMWWR)": 326022268.37,
+          "Predicted Duplicate Invoice": "1",
+          "Company Code": "1000"
         },
         {
-          "PO Number (EBELN)": 4100036795,
-          "Plant": 1034,
-          "Duplicate Invoice Probability": 0.95,
+          "Vendor": "260000201",
+          "Vendor Name": "OQ TRADING LIMITED",
+          "Plant Name": "KANDLA PORT",
+          "Duplicate Invoice Probability": 0.9942,
           "Risk Category": "Critical Risk",
-          "PO Net Value (NETWR)": 30.0,
-          "Predicted Duplicate Invoice": 1,
-          "Company Code": 1000,
-          "Company Name": "J.K. CEMENT LIMITED"
+          "Gross Invoice Amount (RMWWR)": 316947550.0,
+          "Predicted Duplicate Invoice": "1",
+          "Company Code": "1000"
         },
         {
-          "PO Number (EBELN)": 4100036795,
-          "Plant": 1034,
-          "Duplicate Invoice Probability": 0.95,
+          "Vendor": "260000201",
+          "Vendor Name": "OQ TRADING LIMITED",
+          "Plant Name": "KANDLA PORT",
+          "Duplicate Invoice Probability": 0.9942,
           "Risk Category": "Critical Risk",
-          "PO Net Value (NETWR)": 30.0,
-          "Predicted Duplicate Invoice": 1,
-          "Company Code": 1000,
-          "Company Name": "J.K. CEMENT LIMITED"
+          "Gross Invoice Amount (RMWWR)": 316947550.0,
+          "Predicted Duplicate Invoice": "1",
+          "Company Code": "1000"
         },
         {
-          "PO Number (EBELN)": 4100038199,
-          "Plant": 3267,
-          "Duplicate Invoice Probability": 0.9477,
+          "Vendor": "260000201",
+          "Vendor Name": "OQ TRADING LIMITED",
+          "Plant Name": "KANDLA PORT",
+          "Duplicate Invoice Probability": 0.9939,
           "Risk Category": "Critical Risk",
-          "PO Net Value (NETWR)": 4812.0,
-          "Predicted Duplicate Invoice": 1,
-          "Company Code": 1000,
-          "Company Name": "J.K. CEMENT LIMITED"
+          "Gross Invoice Amount (RMWWR)": 108448875.0,
+          "Predicted Duplicate Invoice": "1",
+          "Company Code": "1000"
         },
         {
-          "PO Number (EBELN)": 4100038199,
-          "Plant": 3267,
-          "Duplicate Invoice Probability": 0.9477,
+          "Vendor": "420002013",
+          "Vendor Name": "HUMBOLDT WEDAG INDIA PVT LTD",
+          "Plant Name": "JK Cement Works - Panna",
+          "Duplicate Invoice Probability": 0.9938,
           "Risk Category": "Critical Risk",
-          "PO Net Value (NETWR)": 4812.0,
-          "Predicted Duplicate Invoice": 1,
-          "Company Code": 1000,
-          "Company Name": "J.K. CEMENT LIMITED"
+          "Gross Invoice Amount (RMWWR)": 120000000.0,
+          "Predicted Duplicate Invoice": "1",
+          "Company Code": "1000"
         },
         {
-          "PO Number (EBELN)": 4100035957,
-          "Plant": 1901,
-          "Duplicate Invoice Probability": 0.9463,
+          "Vendor": "260000199",
+          "Vendor Name": "ADITYA BIRLA GLOBAL TRADING",
+          "Plant Name": "KANDLA PORT",
+          "Duplicate Invoice Probability": 0.9938,
           "Risk Category": "Critical Risk",
-          "PO Net Value (NETWR)": 10800.0,
-          "Predicted Duplicate Invoice": 1,
-          "Company Code": 1000,
-          "Company Name": "J.K. CEMENT LIMITED"
+          "Gross Invoice Amount (RMWWR)": 252738230.82,
+          "Predicted Duplicate Invoice": "1",
+          "Company Code": "1000"
         },
         {
-          "PO Number (EBELN)": 4100035957,
-          "Plant": 1901,
-          "Duplicate Invoice Probability": 0.9463,
+          "Vendor": "220001267",
+          "Vendor Name": "VARUA TRANSPORT PRIVATE",
+          "Plant Name": "JK Cement Works - Hamirpur",
+          "Duplicate Invoice Probability": 0.9937,
           "Risk Category": "Critical Risk",
-          "PO Net Value (NETWR)": 10800.0,
-          "Predicted Duplicate Invoice": 1,
-          "Company Code": 1000,
-          "Company Name": "J.K. CEMENT LIMITED"
+          "Gross Invoice Amount (RMWWR)": 5587391.0,
+          "Predicted Duplicate Invoice": "1",
+          "Company Code": "1000"
         },
         {
-          "PO Number (EBELN)": 4100037724,
-          "Plant": 2001,
-          "Duplicate Invoice Probability": 0.9457,
+          "Vendor": "260000201",
+          "Vendor Name": "OQ TRADING LIMITED",
+          "Plant Name": "KANDLA PORT",
+          "Duplicate Invoice Probability": 0.9937,
           "Risk Category": "Critical Risk",
-          "PO Net Value (NETWR)": 1950000.0,
-          "Predicted Duplicate Invoice": 1,
-          "Company Code": 1000,
-          "Company Name": "J.K. CEMENT LIMITED"
+          "Gross Invoice Amount (RMWWR)": 314824000.0,
+          "Predicted Duplicate Invoice": "1",
+          "Company Code": "1000"
         },
         {
-          "PO Number (EBELN)": 4300001023,
-          "Plant": 1004,
-          "Duplicate Invoice Probability": 0.9449,
+          "Vendor": "260000201",
+          "Vendor Name": "OQ TRADING LIMITED",
+          "Plant Name": "KANDLA PORT",
+          "Duplicate Invoice Probability": 0.9937,
           "Risk Category": "Critical Risk",
-          "PO Net Value (NETWR)": 47500.0,
-          "Predicted Duplicate Invoice": 1,
-          "Company Code": 1000,
-          "Company Name": "J.K. CEMENT LIMITED"
+          "Gross Invoice Amount (RMWWR)": 314824000.0,
+          "Predicted Duplicate Invoice": "1",
+          "Company Code": "1000"
         },
         {
-          "PO Number (EBELN)": 4300001023,
-          "Plant": 1004,
-          "Duplicate Invoice Probability": 0.9449,
+          "Vendor": "260000051",
+          "Vendor Name": "KOMSA-SARL",
+          "Plant Name": "KANDLA PORT",
+          "Duplicate Invoice Probability": 0.9936,
           "Risk Category": "Critical Risk",
-          "PO Net Value (NETWR)": 47500.0,
-          "Predicted Duplicate Invoice": 1,
-          "Company Code": 1000,
-          "Company Name": "J.K. CEMENT LIMITED"
+          "Gross Invoice Amount (RMWWR)": 187808080.0,
+          "Predicted Duplicate Invoice": "1",
+          "Company Code": "1000"
         },
         {
-          "PO Number (EBELN)": 4100038467,
-          "Plant": 2001,
-          "Duplicate Invoice Probability": 0.9445,
+          "Vendor": "260000051",
+          "Vendor Name": "KOMSA-SARL",
+          "Plant Name": "KANDLA PORT",
+          "Duplicate Invoice Probability": 0.9936,
           "Risk Category": "Critical Risk",
-          "PO Net Value (NETWR)": 30528.0,
-          "Predicted Duplicate Invoice": 1,
-          "Company Code": 1000,
-          "Company Name": "J.K. CEMENT LIMITED"
+          "Gross Invoice Amount (RMWWR)": 187808080.0,
+          "Predicted Duplicate Invoice": "1",
+          "Company Code": "1000"
         },
         {
-          "PO Number (EBELN)": 4100038467,
-          "Plant": 2001,
-          "Duplicate Invoice Probability": 0.9445,
+          "Vendor": "420007027",
+          "Vendor Name": "Loesche India Pvt Limited",
+          "Plant Name": "Bikaner",
+          "Duplicate Invoice Probability": 0.9936,
           "Risk Category": "Critical Risk",
-          "PO Net Value (NETWR)": 30528.0,
-          "Predicted Duplicate Invoice": 1,
-          "Company Code": 1000,
-          "Company Name": "J.K. CEMENT LIMITED"
+          "Gross Invoice Amount (RMWWR)": 46610000.0,
+          "Predicted Duplicate Invoice": "1",
+          "Company Code": "1000"
         },
         {
-          "PO Number (EBELN)": 4100033130,
-          "Plant": 5011,
-          "Duplicate Invoice Probability": 0.9426,
+          "Vendor": "260000201",
+          "Vendor Name": "OQ TRADING LIMITED",
+          "Plant Name": "KANDLA PORT",
+          "Duplicate Invoice Probability": 0.9935,
           "Risk Category": "Critical Risk",
-          "PO Net Value (NETWR)": 12800.0,
-          "Predicted Duplicate Invoice": 1,
-          "Company Code": 1000,
-          "Company Name": "J.K. CEMENT LIMITED"
+          "Gross Invoice Amount (RMWWR)": 190870020.0,
+          "Predicted Duplicate Invoice": "1",
+          "Company Code": "1000"
         },
         {
-          "PO Number (EBELN)": 4100038195,
-          "Plant": 3267,
-          "Duplicate Invoice Probability": 0.9416,
+          "Vendor": "260000199",
+          "Vendor Name": "ADITYA BIRLA GLOBAL TRADING",
+          "Plant Name": "KANDLA PORT",
+          "Duplicate Invoice Probability": 0.9934,
           "Risk Category": "Critical Risk",
-          "PO Net Value (NETWR)": 98934.0,
-          "Predicted Duplicate Invoice": 1,
-          "Company Code": 1000,
-          "Company Name": "J.K. CEMENT LIMITED"
+          "Gross Invoice Amount (RMWWR)": 287856390.0,
+          "Predicted Duplicate Invoice": "1",
+          "Company Code": "1000"
         },
         {
-          "PO Number (EBELN)": 4100038195,
-          "Plant": 3267,
-          "Duplicate Invoice Probability": 0.9416,
+          "Vendor": "260000199",
+          "Vendor Name": "ADITYA BIRLA GLOBAL TRADING",
+          "Plant Name": "KANDLA PORT",
+          "Duplicate Invoice Probability": 0.9934,
           "Risk Category": "Critical Risk",
-          "PO Net Value (NETWR)": 98934.0,
-          "Predicted Duplicate Invoice": 1,
-          "Company Code": 1000,
-          "Company Name": "J.K. CEMENT LIMITED"
+          "Gross Invoice Amount (RMWWR)": 287856390.0,
+          "Predicted Duplicate Invoice": "1",
+          "Company Code": "1000"
         },
         {
-          "PO Number (EBELN)": 6400002044,
-          "Plant": 1919,
-          "Duplicate Invoice Probability": 0.9415,
+          "Vendor": "260000132",
+          "Vendor Name": "Loesche GmbH",
+          "Plant Name": "JK Cement Prayagraj",
+          "Duplicate Invoice Probability": 0.9933,
           "Risk Category": "Critical Risk",
-          "PO Net Value (NETWR)": 1183000.0,
-          "Predicted Duplicate Invoice": 1,
-          "Company Code": 1000,
-          "Company Name": "J.K. CEMENT LIMITED"
+          "Gross Invoice Amount (RMWWR)": 127352971.5,
+          "Predicted Duplicate Invoice": "1",
+          "Company Code": "1000"
         },
         {
-          "PO Number (EBELN)": 6400002044,
-          "Plant": 1919,
-          "Duplicate Invoice Probability": 0.9415,
+          "Vendor": "260000202",
+          "Vendor Name": "GLENVORE INTERNATIONAL FZE",
+          "Plant Name": "KANDLA PORT",
+          "Duplicate Invoice Probability": 0.9932,
           "Risk Category": "Critical Risk",
-          "PO Net Value (NETWR)": 1183000.0,
-          "Predicted Duplicate Invoice": 1,
-          "Company Code": 1000,
-          "Company Name": "J.K. CEMENT LIMITED"
+          "Gross Invoice Amount (RMWWR)": 57704570.0,
+          "Predicted Duplicate Invoice": "1",
+          "Company Code": "1000"
         },
         {
-          "PO Number (EBELN)": 4100038477,
-          "Plant": 1015,
-          "Duplicate Invoice Probability": 0.9396,
+          "Vendor": "260000201",
+          "Vendor Name": "OQ TRADING LIMITED",
+          "Plant Name": "KANDLA PORT",
+          "Duplicate Invoice Probability": 0.9931,
           "Risk Category": "Critical Risk",
-          "PO Net Value (NETWR)": 1200.0,
-          "Predicted Duplicate Invoice": 1,
-          "Company Code": 1000,
-          "Company Name": "J.K. CEMENT LIMITED"
+          "Gross Invoice Amount (RMWWR)": 107640000.0,
+          "Predicted Duplicate Invoice": "1",
+          "Company Code": "1000"
         },
         {
-          "PO Number (EBELN)": 6400002044,
-          "Plant": 1919,
-          "Duplicate Invoice Probability": 0.9381,
+          "Vendor": "260000201",
+          "Vendor Name": "OQ TRADING LIMITED",
+          "Plant Name": "KANDLA PORT",
+          "Duplicate Invoice Probability": 0.9931,
           "Risk Category": "Critical Risk",
-          "PO Net Value (NETWR)": 1183000.0,
-          "Predicted Duplicate Invoice": 1,
-          "Company Code": 1000,
-          "Company Name": "J.K. CEMENT LIMITED"
+          "Gross Invoice Amount (RMWWR)": 107640000.0,
+          "Predicted Duplicate Invoice": "1",
+          "Company Code": "1000"
         },
         {
-          "PO Number (EBELN)": 6400002044,
-          "Plant": 1919,
-          "Duplicate Invoice Probability": 0.9381,
+          "Vendor": "260000132",
+          "Vendor Name": "Loesche GmbH",
+          "Plant Name": "J.K. CEMENT WORKS, BUXAR",
+          "Duplicate Invoice Probability": 0.9931,
           "Risk Category": "Critical Risk",
-          "PO Net Value (NETWR)": 1183000.0,
-          "Predicted Duplicate Invoice": 1,
-          "Company Code": 1000,
-          "Company Name": "J.K. CEMENT LIMITED"
+          "Gross Invoice Amount (RMWWR)": 137659500.0,
+          "Predicted Duplicate Invoice": "1",
+          "Company Code": "1000"
         },
         {
-          "PO Number (EBELN)": 4100037062,
-          "Plant": 1901,
-          "Duplicate Invoice Probability": 0.9366,
+          "Vendor": "260000192",
+          "Vendor Name": "SEABULK INTERNATIONAL TRADING",
+          "Plant Name": "KANDLA PORT",
+          "Duplicate Invoice Probability": 0.993,
           "Risk Category": "Critical Risk",
-          "PO Net Value (NETWR)": 240.0,
-          "Predicted Duplicate Invoice": 1,
-          "Company Code": 1000,
-          "Company Name": "J.K. CEMENT LIMITED"
+          "Gross Invoice Amount (RMWWR)": 239794452.13,
+          "Predicted Duplicate Invoice": "1",
+          "Company Code": "1000"
         },
         {
-          "PO Number (EBELN)": 4100037062,
-          "Plant": 1901,
-          "Duplicate Invoice Probability": 0.9366,
+          "Vendor": "260000201",
+          "Vendor Name": "OQ TRADING LIMITED",
+          "Plant Name": "KANDLA PORT",
+          "Duplicate Invoice Probability": 0.993,
           "Risk Category": "Critical Risk",
-          "PO Net Value (NETWR)": 240.0,
-          "Predicted Duplicate Invoice": 1,
-          "Company Code": 1000,
-          "Company Name": "J.K. CEMENT LIMITED"
+          "Gross Invoice Amount (RMWWR)": 39353000.0,
+          "Predicted Duplicate Invoice": "1",
+          "Company Code": "1000"
         },
         {
-          "PO Number (EBELN)": 4100036079,
-          "Plant": 1901,
-          "Duplicate Invoice Probability": 0.9361,
+          "Vendor": "260000201",
+          "Vendor Name": "OQ TRADING LIMITED",
+          "Plant Name": "KANDLA PORT",
+          "Duplicate Invoice Probability": 0.993,
           "Risk Category": "Critical Risk",
-          "PO Net Value (NETWR)": 320.0,
-          "Predicted Duplicate Invoice": 1,
-          "Company Code": 1000,
-          "Company Name": "J.K. CEMENT LIMITED"
+          "Gross Invoice Amount (RMWWR)": 39353000.0,
+          "Predicted Duplicate Invoice": "1",
+          "Company Code": "1000"
         },
         {
-          "PO Number (EBELN)": 4100036079,
-          "Plant": 1901,
-          "Duplicate Invoice Probability": 0.9361,
+          "Vendor": "260000199",
+          "Vendor Name": "ADITYA BIRLA GLOBAL TRADING",
+          "Plant Name": "KANDLA PORT",
+          "Duplicate Invoice Probability": 0.9929,
           "Risk Category": "Critical Risk",
-          "PO Net Value (NETWR)": 320.0,
-          "Predicted Duplicate Invoice": 1,
-          "Company Code": 1000,
-          "Company Name": "J.K. CEMENT LIMITED"
+          "Gross Invoice Amount (RMWWR)": 202192000.0,
+          "Predicted Duplicate Invoice": "1",
+          "Company Code": "1000"
         },
         {
-          "PO Number (EBELN)": 5400002007,
-          "Plant": 1000,
-          "Duplicate Invoice Probability": 0.9356,
+          "Vendor": "420002013",
+          "Vendor Name": "HUMBOLDT WEDAG INDIA PVT LTD",
+          "Plant Name": "JK Cement Works - Panna",
+          "Duplicate Invoice Probability": 0.9929,
           "Risk Category": "Critical Risk",
-          "PO Net Value (NETWR)": 104000.0,
-          "Predicted Duplicate Invoice": 1,
-          "Company Code": 1000,
-          "Company Name": "J.K. CEMENT LIMITED"
+          "Gross Invoice Amount (RMWWR)": 82836000.0,
+          "Predicted Duplicate Invoice": "1",
+          "Company Code": "1000"
         },
         {
-          "PO Number (EBELN)": 6400002044,
-          "Plant": 1919,
-          "Duplicate Invoice Probability": 0.9356,
+          "Vendor": "420002031",
+          "Vendor Name": "HUMBOLDT WEDAG INDIA PVT. LTD.",
+          "Plant Name": "JK Cement Works - Panna",
+          "Duplicate Invoice Probability": 0.9928,
           "Risk Category": "Critical Risk",
-          "PO Net Value (NETWR)": 156000.0,
-          "Predicted Duplicate Invoice": 1,
-          "Company Code": 1000,
-          "Company Name": "J.K. CEMENT LIMITED"
+          "Gross Invoice Amount (RMWWR)": 71666002.0,
+          "Predicted Duplicate Invoice": "1",
+          "Company Code": "1000"
         },
         {
-          "PO Number (EBELN)": 6400002044,
-          "Plant": 1919,
-          "Duplicate Invoice Probability": 0.9356,
+          "Vendor": "260000192",
+          "Vendor Name": "SEABULK INTERNATIONAL TRADING",
+          "Plant Name": "KANDLA PORT",
+          "Duplicate Invoice Probability": 0.9928,
           "Risk Category": "Critical Risk",
-          "PO Net Value (NETWR)": 156000.0,
-          "Predicted Duplicate Invoice": 1,
-          "Company Code": 1000,
-          "Company Name": "J.K. CEMENT LIMITED"
+          "Gross Invoice Amount (RMWWR)": 250032480.0,
+          "Predicted Duplicate Invoice": "1",
+          "Company Code": "1000"
         }
       ],
       "advanced_ml": {
         "confusion_matrix": {
-          "tp": 4768,
-          "fp": 1572,
-          "fn": 1512,
-          "tn": 17148,
-          "precision": 0.752,
-          "recall": 0.759,
-          "f1": 0.756,
-          "accuracy": 0.877
+          "tp": 16861,
+          "fp": 23820,
+          "fn": 4935,
+          "tn": 389726,
+          "precision": 0.414,
+          "recall": 0.774,
+          "f1": 0.54,
+          "accuracy": 0.934
         },
         "threshold_curve": {
           "thresholds": [
@@ -8185,37 +7989,37 @@ window.PORTFOLIO_DATA = {
             0.9
           ],
           "precision": [
-            0.382,
-            0.441,
-            0.494,
-            0.543,
-            0.59,
-            0.635,
-            0.679,
-            0.722,
-            0.763
+            0.403,
+            0.465,
+            0.521,
+            0.573,
+            0.623,
+            0.671,
+            0.717,
+            0.762,
+            0.805
           ],
           "recall": [
-            0.962,
-            0.907,
-            0.842,
-            0.771,
-            0.694,
-            0.612,
-            0.526,
-            0.436,
-            0.342
+            0.963,
+            0.909,
+            0.846,
+            0.777,
+            0.701,
+            0.622,
+            0.538,
+            0.45,
+            0.359
           ],
           "f1": [
-            0.547,
-            0.593,
-            0.622,
-            0.637,
-            0.638,
-            0.623,
-            0.593,
-            0.543,
-            0.472
+            0.568,
+            0.615,
+            0.645,
+            0.66,
+            0.66,
+            0.645,
+            0.614,
+            0.566,
+            0.497
           ]
         },
         "probability_distribution": {
@@ -8232,40 +8036,40 @@ window.PORTFOLIO_DATA = {
             "0.9"
           ],
           "clean_count": [
-            6001,
-            3826,
-            2440,
-            1555,
-            992,
-            632,
-            403,
-            257,
-            163,
-            104
+            136404,
+            86975,
+            55457,
+            35361,
+            22547,
+            14376,
+            9167,
+            5845,
+            3727,
+            2376
           ],
           "exception_count": [
-            238,
-            370,
-            503,
-            635,
-            768,
-            900,
-            1033,
-            1165,
-            1297,
-            1430
+            843,
+            1311,
+            1779,
+            2248,
+            2716,
+            3184,
+            3653,
+            4121,
+            4589,
+            5058
           ],
           "total_count": [
-            6239,
-            4196,
-            2943,
-            2190,
-            1760,
-            1532,
-            1436,
-            1422,
-            1460,
-            1534
+            137247,
+            88286,
+            57236,
+            37609,
+            25263,
+            17560,
+            12820,
+            9966,
+            8316,
+            7434
           ]
         },
         "calibration_curve": {
@@ -8348,615 +8152,615 @@ window.PORTFOLIO_DATA = {
         "MARC",
         "MBEW"
       ],
-      "total_records": 25000,
-      "exceptions_count": 1265,
-      "exception_rate_pct": 5.06,
-      "financial_exposure_inr": 3595299999.9999995,
-      "financial_exposure_cr": 359.53,
-      "avg_confidence_score": 0.925,
-      "champion_model": "Surrogate Quality Scoring Tree",
-      "champion_metric": "0.9250 ROC-AUC",
+      "total_records": 707219,
+      "exceptions_count": 35396,
+      "exception_rate_pct": 5.0,
+      "financial_exposure_inr": 10903952166.81,
+      "financial_exposure_cr": 1090.4,
+      "avg_confidence_score": 0.121,
+      "champion_model": "Multi-Attribute Completeness Scoring",
+      "champion_metric": "0.8740 Health Index",
       "risk_distribution": {
-        "Critical": 197,
-        "High": 793,
-        "Medium": 275,
-        "Low": 23735
+        "Critical": 28017,
+        "High": 5390,
+        "Medium": 2013,
+        "Low": 671799
       },
       "category_breakdown": [
         {
           "label": "1001",
-          "count": 7865
+          "count": 189216
         },
         {
           "label": "1004",
-          "count": 3175
-        },
-        {
-          "label": "3004",
-          "count": 2550
-        },
-        {
-          "label": "1006",
-          "count": 2120
-        },
-        {
-          "label": "7001",
-          "count": 1645
-        },
-        {
-          "label": "1015",
-          "count": 1025
+          "count": 114209
         },
         {
           "label": "1901",
-          "count": 940
+          "count": 68468
+        },
+        {
+          "label": "2001",
+          "count": 58293
+        },
+        {
+          "label": "1015",
+          "count": 54591
+        },
+        {
+          "label": "1006",
+          "count": 51854
+        },
+        {
+          "label": "7001",
+          "count": 29451
         }
       ],
       "feature_importance": [
         {
-          "feature": "feature",
-          "importance": 0,
-          "description": "Direct Mathematical Influence On Material Master Data Quality Risk:"
-        },
-        {
           "feature": "mdq_defect_index",
-          "importance": 0.3317,
-          "description": "(Composite multi-view Material Master Data Quality Defect Score [0-100] across MARA, MARC, MBEW & MAKT)"
+          "importance": 0.2762,
+          "description": "Mdq Defect Index"
         },
         {
           "feature": "mdq_health_score",
-          "importance": 0.3249,
-          "description": "(Overall Material Master Data Quality Health Score [0-100], defined as 100 - mdq_defect_index)"
-        },
-        {
-          "feature": "is_missing_purchasing_group",
-          "importance": 0.079,
-          "description": "(1 if Externally Procured / Spare / Raw Material is missing Purchasing Group MARC-EKGRP)"
-        },
-        {
-          "feature": "is_mrp_governance_incomplete",
-          "importance": 0.0482,
-          "description": "(1 if MRP Type MARC-DISMM is blank, or active MRP Type lacks MRP Controller DISPO / Procurement Type BESKZ)"
-        },
-        {
-          "feature": "desc_char_length",
-          "importance": 0.0383,
-          "description": "(Character length of Material Description MAKT-MAKTX measuring descriptive specificity)"
-        },
-        {
-          "feature": "is_missing_weight_spec",
-          "importance": 0.0228,
-          "description": "(1 if Physical Goods Material is missing Gross Weight MARA-BRGEW, Net Weight MARA-NTGEW, or Weight Unit GEWEI)"
+          "importance": 0.2474,
+          "description": "Mdq Health Score"
         },
         {
           "feature": "missing_critical_fields_cnt",
-          "importance": 0.0216,
-          "description": "(Total count of unpopulated mandatory governance attributes across Basic, MRP, Purchasing & Accounting views)"
+          "importance": 0.0863,
+          "description": "Missing Critical Fields Cnt"
+        },
+        {
+          "feature": "is_zero_valuation_price",
+          "importance": 0.0847,
+          "description": "Is Zero Valuation Price"
+        },
+        {
+          "feature": "is_missing_purchasing_group",
+          "importance": 0.0638,
+          "description": "Is Missing Purchasing Group"
+        },
+        {
+          "feature": "completeness_ratio",
+          "importance": 0.0494,
+          "description": "Completeness Ratio"
+        },
+        {
+          "feature": "is_price_control_mismatch",
+          "importance": 0.0306,
+          "description": "Is Price Control Mismatch"
+        },
+        {
+          "feature": "is_missing_valuation_view",
+          "importance": 0.0234,
+          "description": "Is Missing Valuation View"
         }
       ],
       "model_rankings": [],
       "display_columns": [
+        "Material (MATNR)",
         "Material Description (MAKTX)",
         "Plant (WERKS)",
         "Material Quality Anomaly Probability",
         "Risk Category",
         "Total Stock Value (SALK3)",
         "Predicted Material Quality Defect",
-        "Company Code",
-        "Company Name"
+        "Schema Source"
       ],
       "sample_records": [
         {
-          "Material Description (MAKTX)": "PERFUME",
-          "Plant (WERKS)": 1001,
-          "Material Quality Anomaly Probability": 0.9888,
+          "Material (MATNR)": "T1097195AA52250",
+          "Material Description (MAKTX)": "MULTIGRANITE CRECST 151225 C 25 KG BAG",
+          "Plant (WERKS)": "D104",
+          "Material Quality Anomaly Probability": 0.9612,
           "Risk Category": "Critical Risk",
           "Total Stock Value (SALK3)": 0.0,
-          "Predicted Material Quality Defect": 1,
-          "Company Code": 1000,
-          "Company Name": "J.K. CEMENT LIMITED"
+          "Predicted Material Quality Defect": "1",
+          "Schema Source": "HANA_P3"
         },
         {
-          "Material Description (MAKTX)": "JKC WOODAMORE PU THINNER HGLOSSY 2L",
-          "Plant (WERKS)": 3322,
-          "Material Quality Anomaly Probability": 0.9856,
+          "Material (MATNR)": "T1097195AA52250",
+          "Material Description (MAKTX)": "MULTIGRANITE CRECST 151225 C 25 KG BAG",
+          "Plant (WERKS)": "D104",
+          "Material Quality Anomaly Probability": 0.9612,
           "Risk Category": "Critical Risk",
           "Total Stock Value (SALK3)": 0.0,
-          "Predicted Material Quality Defect": 1,
-          "Company Code": 1000,
-          "Company Name": "J.K. CEMENT LIMITED"
+          "Predicted Material Quality Defect": "1",
+          "Schema Source": "HANA_P3"
         },
         {
-          "Material Description (MAKTX)": "JKC WOOD AMORE PU THINNER HGLOSSY 1L",
-          "Plant (WERKS)": 3322,
-          "Material Quality Anomaly Probability": 0.9841,
+          "Material (MATNR)": "519553",
+          "Material Description (MAKTX)": "HOSE",
+          "Plant (WERKS)": "",
+          "Material Quality Anomaly Probability": 0.9582,
           "Risk Category": "Critical Risk",
           "Total Stock Value (SALK3)": 0.0,
-          "Predicted Material Quality Defect": 1,
-          "Company Code": 1000,
-          "Company Name": "J.K. CEMENT LIMITED"
+          "Predicted Material Quality Defect": "1",
+          "Schema Source": "HANA_P2"
         },
         {
-          "Material Description (MAKTX)": "JKC WOODAMORE PU MEDIUM THINNER 1L",
-          "Plant (WERKS)": 3322,
-          "Material Quality Anomaly Probability": 0.9813,
+          "Material (MATNR)": "519553",
+          "Material Description (MAKTX)": "HOSE",
+          "Plant (WERKS)": "",
+          "Material Quality Anomaly Probability": 0.9582,
           "Risk Category": "Critical Risk",
           "Total Stock Value (SALK3)": 0.0,
-          "Predicted Material Quality Defect": 1,
-          "Company Code": 1000,
-          "Company Name": "J.K. CEMENT LIMITED"
+          "Predicted Material Quality Defect": "1",
+          "Schema Source": "HANA_P3"
         },
         {
-          "Material Description (MAKTX)": "JKC WOODAMORE PU MEDIUM THINNER 4L",
-          "Plant (WERKS)": 3322,
-          "Material Quality Anomaly Probability": 0.981,
+          "Material (MATNR)": "519553",
+          "Material Description (MAKTX)": "HOSE",
+          "Plant (WERKS)": "",
+          "Material Quality Anomaly Probability": 0.9582,
           "Risk Category": "Critical Risk",
           "Total Stock Value (SALK3)": 0.0,
-          "Predicted Material Quality Defect": 1,
-          "Company Code": 1000,
-          "Company Name": "J.K. CEMENT LIMITED"
+          "Predicted Material Quality Defect": "1",
+          "Schema Source": "HANA_P3"
         },
         {
-          "Material Description (MAKTX)": "SERVER",
-          "Plant (WERKS)": 1000,
-          "Material Quality Anomaly Probability": 0.9801,
+          "Material (MATNR)": "519535",
+          "Material Description (MAKTX)": "HOSE",
+          "Plant (WERKS)": "",
+          "Material Quality Anomaly Probability": 0.9571,
           "Risk Category": "Critical Risk",
           "Total Stock Value (SALK3)": 0.0,
-          "Predicted Material Quality Defect": 1,
-          "Company Code": 1000,
-          "Company Name": "J.K. CEMENT LIMITED"
+          "Predicted Material Quality Defect": "1",
+          "Schema Source": "HANA_P2"
         },
         {
-          "Material Description (MAKTX)": "JKC WOODAMORE PU THINNER HGLOSSY 0.5L",
-          "Plant (WERKS)": 3322,
-          "Material Quality Anomaly Probability": 0.9777,
+          "Material (MATNR)": "519536",
+          "Material Description (MAKTX)": "HOSE",
+          "Plant (WERKS)": "",
+          "Material Quality Anomaly Probability": 0.9571,
           "Risk Category": "Critical Risk",
           "Total Stock Value (SALK3)": 0.0,
-          "Predicted Material Quality Defect": 1,
-          "Company Code": 1000,
-          "Company Name": "J.K. CEMENT LIMITED"
+          "Predicted Material Quality Defect": "1",
+          "Schema Source": "HANA_P2"
         },
         {
-          "Material Description (MAKTX)": "JK profix GYC11",
-          "Plant (WERKS)": 7001,
-          "Material Quality Anomaly Probability": 0.977,
-          "Risk Category": "Critical Risk",
-          "Total Stock Value (SALK3)": 120.96,
-          "Predicted Material Quality Defect": 1,
-          "Company Code": 1000,
-          "Company Name": "J.K. CEMENT LIMITED"
-        },
-        {
-          "Material Description (MAKTX)": "JKPROFIX -  BA PVA",
-          "Plant (WERKS)": 7001,
-          "Material Quality Anomaly Probability": 0.9759,
-          "Risk Category": "Critical Risk",
-          "Total Stock Value (SALK3)": 692.5,
-          "Predicted Material Quality Defect": 1,
-          "Company Code": 1000,
-          "Company Name": "J.K. CEMENT LIMITED"
-        },
-        {
-          "Material Description (MAKTX)": "JKPROFIX -  BA AR",
-          "Plant (WERKS)": 7001,
-          "Material Quality Anomaly Probability": 0.9733,
-          "Risk Category": "Critical Risk",
-          "Total Stock Value (SALK3)": 130.5,
-          "Predicted Material Quality Defect": 1,
-          "Company Code": 1000,
-          "Company Name": "J.K. CEMENT LIMITED"
-        },
-        {
-          "Material Description (MAKTX)": "JKPROFIX -  SLS 11",
-          "Plant (WERKS)": 7001,
-          "Material Quality Anomaly Probability": 0.973,
-          "Risk Category": "Critical Risk",
-          "Total Stock Value (SALK3)": 124.0,
-          "Predicted Material Quality Defect": 1,
-          "Company Code": 1000,
-          "Company Name": "J.K. CEMENT LIMITED"
-        },
-        {
-          "Material Description (MAKTX)": "JKPROFIX -  SRA 22",
-          "Plant (WERKS)": 7001,
-          "Material Quality Anomaly Probability": 0.9728,
-          "Risk Category": "Critical Risk",
-          "Total Stock Value (SALK3)": 1332.0,
-          "Predicted Material Quality Defect": 1,
-          "Company Code": 1000,
-          "Company Name": "J.K. CEMENT LIMITED"
-        },
-        {
-          "Material Description (MAKTX)": "JKPROFIX -  BA SBR",
-          "Plant (WERKS)": 7001,
-          "Material Quality Anomaly Probability": 0.9696,
-          "Risk Category": "Critical Risk",
-          "Total Stock Value (SALK3)": 1522.8,
-          "Predicted Material Quality Defect": 1,
-          "Company Code": 1000,
-          "Company Name": "J.K. CEMENT LIMITED"
-        },
-        {
-          "Material Description (MAKTX)": "INJ.POLYBION-2ML",
-          "Plant (WERKS)": 1001,
-          "Material Quality Anomaly Probability": 0.9677,
+          "Material (MATNR)": "519541",
+          "Material Description (MAKTX)": "HOSE",
+          "Plant (WERKS)": "",
+          "Material Quality Anomaly Probability": 0.9571,
           "Risk Category": "Critical Risk",
           "Total Stock Value (SALK3)": 0.0,
-          "Predicted Material Quality Defect": 1,
-          "Company Code": 1000,
-          "Company Name": "J.K. CEMENT LIMITED"
+          "Predicted Material Quality Defect": "1",
+          "Schema Source": "HANA_P2"
         },
         {
-          "Material Description (MAKTX)": "JKPROFIX -  CRM 11",
-          "Plant (WERKS)": 7001,
-          "Material Quality Anomaly Probability": 0.9661,
+          "Material (MATNR)": "519535",
+          "Material Description (MAKTX)": "HOSE",
+          "Plant (WERKS)": "",
+          "Material Quality Anomaly Probability": 0.9571,
           "Risk Category": "Critical Risk",
           "Total Stock Value (SALK3)": 0.0,
-          "Predicted Material Quality Defect": 1,
-          "Company Code": 1000,
-          "Company Name": "J.K. CEMENT LIMITED"
+          "Predicted Material Quality Defect": "1",
+          "Schema Source": "HANA_P3"
         },
         {
-          "Material Description (MAKTX)": "BATTERY BUY BACK",
-          "Plant (WERKS)": 1006,
-          "Material Quality Anomaly Probability": 0.9551,
+          "Material (MATNR)": "519535",
+          "Material Description (MAKTX)": "HOSE",
+          "Plant (WERKS)": "",
+          "Material Quality Anomaly Probability": 0.9571,
           "Risk Category": "Critical Risk",
           "Total Stock Value (SALK3)": 0.0,
-          "Predicted Material Quality Defect": 1,
-          "Company Code": 1000,
-          "Company Name": "J.K. CEMENT LIMITED"
+          "Predicted Material Quality Defect": "1",
+          "Schema Source": "HANA_P3"
         },
         {
-          "Material Description (MAKTX)": "AUDIOMETER",
-          "Plant (WERKS)": 1001,
-          "Material Quality Anomaly Probability": 0.9541,
+          "Material (MATNR)": "519536",
+          "Material Description (MAKTX)": "HOSE",
+          "Plant (WERKS)": "",
+          "Material Quality Anomaly Probability": 0.9571,
           "Risk Category": "Critical Risk",
           "Total Stock Value (SALK3)": 0.0,
-          "Predicted Material Quality Defect": 1,
-          "Company Code": 1000,
-          "Company Name": "J.K. CEMENT LIMITED"
+          "Predicted Material Quality Defect": "1",
+          "Schema Source": "HANA_P3"
         },
         {
-          "Material Description (MAKTX)": "HIGH SPEED DIESEL",
-          "Plant (WERKS)": 5001,
-          "Material Quality Anomaly Probability": 0.9516,
+          "Material (MATNR)": "519536",
+          "Material Description (MAKTX)": "HOSE",
+          "Plant (WERKS)": "",
+          "Material Quality Anomaly Probability": 0.9571,
           "Risk Category": "Critical Risk",
           "Total Stock Value (SALK3)": 0.0,
-          "Predicted Material Quality Defect": 1,
-          "Company Code": 1000,
-          "Company Name": "J.K. CEMENT LIMITED"
+          "Predicted Material Quality Defect": "1",
+          "Schema Source": "HANA_P3"
         },
         {
-          "Material Description (MAKTX)": "Power-WHR",
-          "Plant (WERKS)": 1001,
-          "Material Quality Anomaly Probability": 0.948,
-          "Risk Category": "Critical Risk",
-          "Total Stock Value (SALK3)": 4908579.42,
-          "Predicted Material Quality Defect": 1,
-          "Company Code": 1000,
-          "Company Name": "J.K. CEMENT LIMITED"
-        },
-        {
-          "Material Description (MAKTX)": "SPIROMETRY MOUTH PIECE- RMS HELIOS 401",
-          "Plant (WERKS)": 1001,
-          "Material Quality Anomaly Probability": 0.9457,
+          "Material (MATNR)": "519541",
+          "Material Description (MAKTX)": "HOSE",
+          "Plant (WERKS)": "",
+          "Material Quality Anomaly Probability": 0.9571,
           "Risk Category": "Critical Risk",
           "Total Stock Value (SALK3)": 0.0,
-          "Predicted Material Quality Defect": 1,
-          "Company Code": 1000,
-          "Company Name": "J.K. CEMENT LIMITED"
+          "Predicted Material Quality Defect": "1",
+          "Schema Source": "HANA_P3"
         },
         {
-          "Material Description (MAKTX)": "Switches",
-          "Plant (WERKS)": 1901,
-          "Material Quality Anomaly Probability": 0.9362,
+          "Material (MATNR)": "519541",
+          "Material Description (MAKTX)": "HOSE",
+          "Plant (WERKS)": "",
+          "Material Quality Anomaly Probability": 0.9571,
           "Risk Category": "Critical Risk",
           "Total Stock Value (SALK3)": 0.0,
-          "Predicted Material Quality Defect": 1,
-          "Company Code": 1000,
-          "Company Name": "J.K. CEMENT LIMITED"
+          "Predicted Material Quality Defect": "1",
+          "Schema Source": "HANA_P3"
         },
         {
-          "Material Description (MAKTX)": "SUPPORT",
-          "Plant (WERKS)": 1901,
-          "Material Quality Anomaly Probability": 0.9362,
+          "Material (MATNR)": "519582",
+          "Material Description (MAKTX)": "RING O",
+          "Plant (WERKS)": "",
+          "Material Quality Anomaly Probability": 0.9555,
           "Risk Category": "Critical Risk",
           "Total Stock Value (SALK3)": 0.0,
-          "Predicted Material Quality Defect": 1,
-          "Company Code": 1000,
-          "Company Name": "J.K. CEMENT LIMITED"
+          "Predicted Material Quality Defect": "1",
+          "Schema Source": "HANA_P2"
         },
         {
-          "Material Description (MAKTX)": "Bulk Cement,OPC 43 Strong Set GREY",
-          "Plant (WERKS)": 1004,
-          "Material Quality Anomaly Probability": 0.9331,
-          "Risk Category": "Critical Risk",
-          "Total Stock Value (SALK3)": -5158591.84,
-          "Predicted Material Quality Defect": 1,
-          "Company Code": 1000,
-          "Company Name": "J.K. CEMENT LIMITED"
-        },
-        {
-          "Material Description (MAKTX)": "JKC WOODAMORE ADV PU CLR SEALER RSN 20KG",
-          "Plant (WERKS)": 3322,
-          "Material Quality Anomaly Probability": 0.9314,
+          "Material (MATNR)": "519582",
+          "Material Description (MAKTX)": "RING O",
+          "Plant (WERKS)": "",
+          "Material Quality Anomaly Probability": 0.9555,
           "Risk Category": "Critical Risk",
           "Total Stock Value (SALK3)": 0.0,
-          "Predicted Material Quality Defect": 1,
-          "Company Code": 1000,
-          "Company Name": "J.K. CEMENT LIMITED"
+          "Predicted Material Quality Defect": "1",
+          "Schema Source": "HANA_P3"
         },
         {
-          "Material Description (MAKTX)": "TYRE (OLD & USED)",
-          "Plant (WERKS)": 1001,
-          "Material Quality Anomaly Probability": 0.9303,
+          "Material (MATNR)": "519582",
+          "Material Description (MAKTX)": "RING O",
+          "Plant (WERKS)": "",
+          "Material Quality Anomaly Probability": 0.9555,
           "Risk Category": "Critical Risk",
           "Total Stock Value (SALK3)": 0.0,
-          "Predicted Material Quality Defect": 1,
-          "Company Code": 1000,
-          "Company Name": "J.K. CEMENT LIMITED"
+          "Predicted Material Quality Defect": "1",
+          "Schema Source": "HANA_P3"
         },
         {
-          "Material Description (MAKTX)": "JKC WOODAMORE PU CLR MATT10 RESIN 20L",
-          "Plant (WERKS)": 3322,
-          "Material Quality Anomaly Probability": 0.9301,
+          "Material (MATNR)": "519398",
+          "Material Description (MAKTX)": "BUSHING",
+          "Plant (WERKS)": "",
+          "Material Quality Anomaly Probability": 0.9548,
           "Risk Category": "Critical Risk",
           "Total Stock Value (SALK3)": 0.0,
-          "Predicted Material Quality Defect": 1,
-          "Company Code": 1000,
-          "Company Name": "J.K. CEMENT LIMITED"
+          "Predicted Material Quality Defect": "1",
+          "Schema Source": "HANA_P2"
         },
         {
-          "Material Description (MAKTX)": "JKC WOODAMORE ADV PU(H)CLR SLR/MAT TC 10",
-          "Plant (WERKS)": 3322,
-          "Material Quality Anomaly Probability": 0.9268,
+          "Material (MATNR)": "519398",
+          "Material Description (MAKTX)": "BUSHING",
+          "Plant (WERKS)": "",
+          "Material Quality Anomaly Probability": 0.9548,
           "Risk Category": "Critical Risk",
           "Total Stock Value (SALK3)": 0.0,
-          "Predicted Material Quality Defect": 1,
-          "Company Code": 1000,
-          "Company Name": "J.K. CEMENT LIMITED"
+          "Predicted Material Quality Defect": "1",
+          "Schema Source": "HANA_P3"
         },
         {
-          "Material Description (MAKTX)": "PACKED CEMENT COMPOSITE 50 KG-MUDHOL",
-          "Plant (WERKS)": 1142,
-          "Material Quality Anomaly Probability": 0.9266,
+          "Material (MATNR)": "519398",
+          "Material Description (MAKTX)": "BUSHING",
+          "Plant (WERKS)": "",
+          "Material Quality Anomaly Probability": 0.9548,
           "Risk Category": "Critical Risk",
           "Total Stock Value (SALK3)": 0.0,
-          "Predicted Material Quality Defect": 1,
-          "Company Code": 1000,
-          "Company Name": "J.K. CEMENT LIMITED"
+          "Predicted Material Quality Defect": "1",
+          "Schema Source": "HANA_P3"
         },
         {
-          "Material Description (MAKTX)": "JKC WOODAMORE PU WHITEFILLER RESIN 20KG",
-          "Plant (WERKS)": 3322,
-          "Material Quality Anomaly Probability": 0.9249,
-          "Risk Category": "Critical Risk",
-          "Total Stock Value (SALK3)": 1190661.86,
-          "Predicted Material Quality Defect": 1,
-          "Company Code": 1000,
-          "Company Name": "J.K. CEMENT LIMITED"
-        },
-        {
-          "Material Description (MAKTX)": "JK UNVR STAINER YELLOW OXIDE 200 ML",
-          "Plant (WERKS)": 3156,
-          "Material Quality Anomaly Probability": 0.924,
-          "Risk Category": "Critical Risk",
-          "Total Stock Value (SALK3)": 7075.2,
-          "Predicted Material Quality Defect": 1,
-          "Company Code": 1000,
-          "Company Name": "J.K. CEMENT LIMITED"
-        },
-        {
-          "Material Description (MAKTX)": "JKC WOODAMORE PU (H) CLR SER /MATT TC 2L",
-          "Plant (WERKS)": 3322,
-          "Material Quality Anomaly Probability": 0.924,
-          "Risk Category": "Critical Risk",
-          "Total Stock Value (SALK3)": 59126.26,
-          "Predicted Material Quality Defect": 1,
-          "Company Code": 1000,
-          "Company Name": "J.K. CEMENT LIMITED"
-        },
-        {
-          "Material Description (MAKTX)": "Clinker",
-          "Plant (WERKS)": 1001,
-          "Material Quality Anomaly Probability": 0.9218,
-          "Risk Category": "Critical Risk",
-          "Total Stock Value (SALK3)": 580078996.66,
-          "Predicted Material Quality Defect": 1,
-          "Company Code": 1000,
-          "Company Name": "J.K. CEMENT LIMITED"
-        },
-        {
-          "Material Description (MAKTX)": "JKC WOODAMORE ADV PU CLR SEALER COMB 1.5",
-          "Plant (WERKS)": 3322,
-          "Material Quality Anomaly Probability": 0.9214,
-          "Risk Category": "Critical Risk",
-          "Total Stock Value (SALK3)": 35350.5,
-          "Predicted Material Quality Defect": 1,
-          "Company Code": 1000,
-          "Company Name": "J.K. CEMENT LIMITED"
-        },
-        {
-          "Material Description (MAKTX)": "Bulk Cement, PPC - Grey",
-          "Plant (WERKS)": 1001,
-          "Material Quality Anomaly Probability": 0.9212,
-          "Risk Category": "Critical Risk",
-          "Total Stock Value (SALK3)": -2777333.99,
-          "Predicted Material Quality Defect": 1,
-          "Company Code": 1000,
-          "Company Name": "J.K. CEMENT LIMITED"
-        },
-        {
-          "Material Description (MAKTX)": "JKC WOODAMORE PU (H)CLR /WHITE HGLOSS4L",
-          "Plant (WERKS)": 3322,
-          "Material Quality Anomaly Probability": 0.9201,
-          "Risk Category": "Critical Risk",
-          "Total Stock Value (SALK3)": 409415.68,
-          "Predicted Material Quality Defect": 1,
-          "Company Code": 1000,
-          "Company Name": "J.K. CEMENT LIMITED"
-        },
-        {
-          "Material Description (MAKTX)": "BRIKUFF LS",
-          "Plant (WERKS)": 1004,
-          "Material Quality Anomaly Probability": 0.9194,
+          "Material (MATNR)": "519082",
+          "Material Description (MAKTX)": "V.BELT",
+          "Plant (WERKS)": "",
+          "Material Quality Anomaly Probability": 0.9546,
           "Risk Category": "Critical Risk",
           "Total Stock Value (SALK3)": 0.0,
-          "Predicted Material Quality Defect": 1,
-          "Company Code": 1000,
-          "Company Name": "J.K. CEMENT LIMITED"
+          "Predicted Material Quality Defect": "1",
+          "Schema Source": "HANA_P2"
         },
         {
-          "Material Description (MAKTX)": "A TO Z  SYRUP",
-          "Plant (WERKS)": 1015,
-          "Material Quality Anomaly Probability": 0.9188,
+          "Material (MATNR)": "519082",
+          "Material Description (MAKTX)": "V.BELT",
+          "Plant (WERKS)": "",
+          "Material Quality Anomaly Probability": 0.9546,
           "Risk Category": "Critical Risk",
           "Total Stock Value (SALK3)": 0.0,
-          "Predicted Material Quality Defect": 1,
-          "Company Code": 1000,
-          "Company Name": "J.K. CEMENT LIMITED"
+          "Predicted Material Quality Defect": "1",
+          "Schema Source": "HANA_P3"
         },
         {
-          "Material Description (MAKTX)": "CUVETTE CUP FOR ULTRA-200 ANALYZER",
-          "Plant (WERKS)": 1001,
-          "Material Quality Anomaly Probability": 0.9186,
+          "Material (MATNR)": "519082",
+          "Material Description (MAKTX)": "V.BELT",
+          "Plant (WERKS)": "",
+          "Material Quality Anomaly Probability": 0.9546,
           "Risk Category": "Critical Risk",
           "Total Stock Value (SALK3)": 0.0,
-          "Predicted Material Quality Defect": 1,
-          "Company Code": 1000,
-          "Company Name": "J.K. CEMENT LIMITED"
+          "Predicted Material Quality Defect": "1",
+          "Schema Source": "HANA_P3"
         },
         {
-          "Material Description (MAKTX)": "Bulk Cement OPC,53 Strong Set Grey",
-          "Plant (WERKS)": 1004,
-          "Material Quality Anomaly Probability": 0.9177,
-          "Risk Category": "Critical Risk",
-          "Total Stock Value (SALK3)": -3851495.59,
-          "Predicted Material Quality Defect": 1,
-          "Company Code": 1000,
-          "Company Name": "J.K. CEMENT LIMITED"
-        },
-        {
-          "Material Description (MAKTX)": "HDL ERBA EM200",
-          "Plant (WERKS)": 1004,
-          "Material Quality Anomaly Probability": 0.9166,
+          "Material (MATNR)": "519452",
+          "Material Description (MAKTX)": "SEAL",
+          "Plant (WERKS)": "",
+          "Material Quality Anomaly Probability": 0.9544,
           "Risk Category": "Critical Risk",
           "Total Stock Value (SALK3)": 0.0,
-          "Predicted Material Quality Defect": 1,
-          "Company Code": 1000,
-          "Company Name": "J.K. CEMENT LIMITED"
+          "Predicted Material Quality Defect": "1",
+          "Schema Source": "HANA_P2"
         },
         {
-          "Material Description (MAKTX)": "Steam",
-          "Plant (WERKS)": 1001,
-          "Material Quality Anomaly Probability": 0.916,
+          "Material (MATNR)": "519452",
+          "Material Description (MAKTX)": "SEAL",
+          "Plant (WERKS)": "",
+          "Material Quality Anomaly Probability": 0.9544,
           "Risk Category": "Critical Risk",
           "Total Stock Value (SALK3)": 0.0,
-          "Predicted Material Quality Defect": 1,
-          "Company Code": 1000,
-          "Company Name": "J.K. CEMENT LIMITED"
+          "Predicted Material Quality Defect": "1",
+          "Schema Source": "HANA_P3"
         },
         {
-          "Material Description (MAKTX)": "JKC WOODAMORE PU THINNER HGLOSSY 10L",
-          "Plant (WERKS)": 3322,
-          "Material Quality Anomaly Probability": 0.9151,
+          "Material (MATNR)": "519452",
+          "Material Description (MAKTX)": "SEAL",
+          "Plant (WERKS)": "",
+          "Material Quality Anomaly Probability": 0.9544,
           "Risk Category": "Critical Risk",
           "Total Stock Value (SALK3)": 0.0,
-          "Predicted Material Quality Defect": 1,
-          "Company Code": 1000,
-          "Company Name": "J.K. CEMENT LIMITED"
+          "Predicted Material Quality Defect": "1",
+          "Schema Source": "HANA_P3"
         },
         {
-          "Material Description (MAKTX)": "UREA ERBA EM200",
-          "Plant (WERKS)": 1004,
-          "Material Quality Anomaly Probability": 0.9145,
+          "Material (MATNR)": "519299",
+          "Material Description (MAKTX)": "BEARING",
+          "Plant (WERKS)": "",
+          "Material Quality Anomaly Probability": 0.954,
           "Risk Category": "Critical Risk",
           "Total Stock Value (SALK3)": 0.0,
-          "Predicted Material Quality Defect": 1,
-          "Company Code": 1000,
-          "Company Name": "J.K. CEMENT LIMITED"
+          "Predicted Material Quality Defect": "1",
+          "Schema Source": "HANA_P2"
         },
         {
-          "Material Description (MAKTX)": "SGOT ERBA EM200",
-          "Plant (WERKS)": 1004,
-          "Material Quality Anomaly Probability": 0.9145,
+          "Material (MATNR)": "521071",
+          "Material Description (MAKTX)": "BEARING",
+          "Plant (WERKS)": "",
+          "Material Quality Anomaly Probability": 0.954,
           "Risk Category": "Critical Risk",
           "Total Stock Value (SALK3)": 0.0,
-          "Predicted Material Quality Defect": 1,
-          "Company Code": 1000,
-          "Company Name": "J.K. CEMENT LIMITED"
+          "Predicted Material Quality Defect": "1",
+          "Schema Source": "HANA_P2"
         },
         {
-          "Material Description (MAKTX)": "SGPT ERBA EM200",
-          "Plant (WERKS)": 1004,
-          "Material Quality Anomaly Probability": 0.9145,
+          "Material (MATNR)": "519299",
+          "Material Description (MAKTX)": "BEARING",
+          "Plant (WERKS)": "",
+          "Material Quality Anomaly Probability": 0.954,
           "Risk Category": "Critical Risk",
           "Total Stock Value (SALK3)": 0.0,
-          "Predicted Material Quality Defect": 1,
-          "Company Code": 1000,
-          "Company Name": "J.K. CEMENT LIMITED"
+          "Predicted Material Quality Defect": "1",
+          "Schema Source": "HANA_P3"
         },
         {
-          "Material Description (MAKTX)": "BRIKUFF-DX SYRUP",
-          "Plant (WERKS)": 1004,
-          "Material Quality Anomaly Probability": 0.9139,
+          "Material (MATNR)": "519299",
+          "Material Description (MAKTX)": "BEARING",
+          "Plant (WERKS)": "",
+          "Material Quality Anomaly Probability": 0.954,
           "Risk Category": "Critical Risk",
           "Total Stock Value (SALK3)": 0.0,
-          "Predicted Material Quality Defect": 1,
-          "Company Code": 1000,
-          "Company Name": "J.K. CEMENT LIMITED"
+          "Predicted Material Quality Defect": "1",
+          "Schema Source": "HANA_P3"
         },
         {
-          "Material Description (MAKTX)": "GI EARTHING FLAT, 50X6 MM",
-          "Plant (WERKS)": 1901,
-          "Material Quality Anomaly Probability": 0.9134,
+          "Material (MATNR)": "521071",
+          "Material Description (MAKTX)": "BEARING",
+          "Plant (WERKS)": "",
+          "Material Quality Anomaly Probability": 0.954,
           "Risk Category": "Critical Risk",
           "Total Stock Value (SALK3)": 0.0,
-          "Predicted Material Quality Defect": 1,
-          "Company Code": 1000,
-          "Company Name": "J.K. CEMENT LIMITED"
+          "Predicted Material Quality Defect": "1",
+          "Schema Source": "HANA_P3"
         },
         {
-          "Material Description (MAKTX)": "HBA1C ERBA EM200",
-          "Plant (WERKS)": 1004,
-          "Material Quality Anomaly Probability": 0.9128,
+          "Material (MATNR)": "521071",
+          "Material Description (MAKTX)": "BEARING",
+          "Plant (WERKS)": "",
+          "Material Quality Anomaly Probability": 0.954,
           "Risk Category": "Critical Risk",
           "Total Stock Value (SALK3)": 0.0,
-          "Predicted Material Quality Defect": 1,
-          "Company Code": 1000,
-          "Company Name": "J.K. CEMENT LIMITED"
+          "Predicted Material Quality Defect": "1",
+          "Schema Source": "HANA_P3"
         },
         {
-          "Material Description (MAKTX)": "JAROSITE",
-          "Plant (WERKS)": 1001,
-          "Material Quality Anomaly Probability": 0.9121,
-          "Risk Category": "Critical Risk",
-          "Total Stock Value (SALK3)": 51.51,
-          "Predicted Material Quality Defect": 1,
-          "Company Code": 1000,
-          "Company Name": "J.K. CEMENT LIMITED"
-        },
-        {
-          "Material Description (MAKTX)": "ERBA AUTO WASH KIT",
-          "Plant (WERKS)": 1004,
-          "Material Quality Anomaly Probability": 0.912,
+          "Material (MATNR)": "519476",
+          "Material Description (MAKTX)": "GASKET",
+          "Plant (WERKS)": "",
+          "Material Quality Anomaly Probability": 0.9536,
           "Risk Category": "Critical Risk",
           "Total Stock Value (SALK3)": 0.0,
-          "Predicted Material Quality Defect": 1,
-          "Company Code": 1000,
-          "Company Name": "J.K. CEMENT LIMITED"
+          "Predicted Material Quality Defect": "1",
+          "Schema Source": "HANA_P2"
+        },
+        {
+          "Material (MATNR)": "519516",
+          "Material Description (MAKTX)": "GASKET",
+          "Plant (WERKS)": "",
+          "Material Quality Anomaly Probability": 0.9536,
+          "Risk Category": "Critical Risk",
+          "Total Stock Value (SALK3)": 0.0,
+          "Predicted Material Quality Defect": "1",
+          "Schema Source": "HANA_P2"
+        },
+        {
+          "Material (MATNR)": "519525",
+          "Material Description (MAKTX)": "GASKET",
+          "Plant (WERKS)": "",
+          "Material Quality Anomaly Probability": 0.9536,
+          "Risk Category": "Critical Risk",
+          "Total Stock Value (SALK3)": 0.0,
+          "Predicted Material Quality Defect": "1",
+          "Schema Source": "HANA_P2"
+        },
+        {
+          "Material (MATNR)": "519476",
+          "Material Description (MAKTX)": "GASKET",
+          "Plant (WERKS)": "",
+          "Material Quality Anomaly Probability": 0.9536,
+          "Risk Category": "Critical Risk",
+          "Total Stock Value (SALK3)": 0.0,
+          "Predicted Material Quality Defect": "1",
+          "Schema Source": "HANA_P3"
+        },
+        {
+          "Material (MATNR)": "519476",
+          "Material Description (MAKTX)": "GASKET",
+          "Plant (WERKS)": "",
+          "Material Quality Anomaly Probability": 0.9536,
+          "Risk Category": "Critical Risk",
+          "Total Stock Value (SALK3)": 0.0,
+          "Predicted Material Quality Defect": "1",
+          "Schema Source": "HANA_P3"
+        },
+        {
+          "Material (MATNR)": "519516",
+          "Material Description (MAKTX)": "GASKET",
+          "Plant (WERKS)": "",
+          "Material Quality Anomaly Probability": 0.9536,
+          "Risk Category": "Critical Risk",
+          "Total Stock Value (SALK3)": 0.0,
+          "Predicted Material Quality Defect": "1",
+          "Schema Source": "HANA_P3"
+        },
+        {
+          "Material (MATNR)": "519516",
+          "Material Description (MAKTX)": "GASKET",
+          "Plant (WERKS)": "",
+          "Material Quality Anomaly Probability": 0.9536,
+          "Risk Category": "Critical Risk",
+          "Total Stock Value (SALK3)": 0.0,
+          "Predicted Material Quality Defect": "1",
+          "Schema Source": "HANA_P3"
+        },
+        {
+          "Material (MATNR)": "519525",
+          "Material Description (MAKTX)": "GASKET",
+          "Plant (WERKS)": "",
+          "Material Quality Anomaly Probability": 0.9536,
+          "Risk Category": "Critical Risk",
+          "Total Stock Value (SALK3)": 0.0,
+          "Predicted Material Quality Defect": "1",
+          "Schema Source": "HANA_P3"
+        },
+        {
+          "Material (MATNR)": "519525",
+          "Material Description (MAKTX)": "GASKET",
+          "Plant (WERKS)": "",
+          "Material Quality Anomaly Probability": 0.9536,
+          "Risk Category": "Critical Risk",
+          "Total Stock Value (SALK3)": 0.0,
+          "Predicted Material Quality Defect": "1",
+          "Schema Source": "HANA_P3"
+        },
+        {
+          "Material (MATNR)": "519418",
+          "Material Description (MAKTX)": "RING O",
+          "Plant (WERKS)": "",
+          "Material Quality Anomaly Probability": 0.9527,
+          "Risk Category": "Critical Risk",
+          "Total Stock Value (SALK3)": 0.0,
+          "Predicted Material Quality Defect": "1",
+          "Schema Source": "HANA_P2"
+        },
+        {
+          "Material (MATNR)": "519418",
+          "Material Description (MAKTX)": "RING O",
+          "Plant (WERKS)": "",
+          "Material Quality Anomaly Probability": 0.9527,
+          "Risk Category": "Critical Risk",
+          "Total Stock Value (SALK3)": 0.0,
+          "Predicted Material Quality Defect": "1",
+          "Schema Source": "HANA_P3"
+        },
+        {
+          "Material (MATNR)": "519418",
+          "Material Description (MAKTX)": "RING O",
+          "Plant (WERKS)": "",
+          "Material Quality Anomaly Probability": 0.9527,
+          "Risk Category": "Critical Risk",
+          "Total Stock Value (SALK3)": 0.0,
+          "Predicted Material Quality Defect": "1",
+          "Schema Source": "HANA_P3"
+        },
+        {
+          "Material (MATNR)": "606409",
+          "Material Description (MAKTX)": "ELECTRODE",
+          "Plant (WERKS)": "",
+          "Material Quality Anomaly Probability": 0.9517,
+          "Risk Category": "Critical Risk",
+          "Total Stock Value (SALK3)": 0.0,
+          "Predicted Material Quality Defect": "1",
+          "Schema Source": "HANA_P2"
+        },
+        {
+          "Material (MATNR)": "606875",
+          "Material Description (MAKTX)": "ELECTRODE",
+          "Plant (WERKS)": "",
+          "Material Quality Anomaly Probability": 0.9517,
+          "Risk Category": "Critical Risk",
+          "Total Stock Value (SALK3)": 0.0,
+          "Predicted Material Quality Defect": "1",
+          "Schema Source": "HANA_P2"
+        },
+        {
+          "Material (MATNR)": "606409",
+          "Material Description (MAKTX)": "ELECTRODE",
+          "Plant (WERKS)": "",
+          "Material Quality Anomaly Probability": 0.9517,
+          "Risk Category": "Critical Risk",
+          "Total Stock Value (SALK3)": 0.0,
+          "Predicted Material Quality Defect": "1",
+          "Schema Source": "HANA_P3"
+        },
+        {
+          "Material (MATNR)": "606409",
+          "Material Description (MAKTX)": "ELECTRODE",
+          "Plant (WERKS)": "",
+          "Material Quality Anomaly Probability": 0.9517,
+          "Risk Category": "Critical Risk",
+          "Total Stock Value (SALK3)": 0.0,
+          "Predicted Material Quality Defect": "1",
+          "Schema Source": "HANA_P3"
+        },
+        {
+          "Material (MATNR)": "606875",
+          "Material Description (MAKTX)": "ELECTRODE",
+          "Plant (WERKS)": "",
+          "Material Quality Anomaly Probability": 0.9517,
+          "Risk Category": "Critical Risk",
+          "Total Stock Value (SALK3)": 0.0,
+          "Predicted Material Quality Defect": "1",
+          "Schema Source": "HANA_P3"
+        },
+        {
+          "Material (MATNR)": "606875",
+          "Material Description (MAKTX)": "ELECTRODE",
+          "Plant (WERKS)": "",
+          "Material Quality Anomaly Probability": 0.9517,
+          "Risk Category": "Critical Risk",
+          "Total Stock Value (SALK3)": 0.0,
+          "Predicted Material Quality Defect": "1",
+          "Schema Source": "HANA_P3"
         }
       ],
       "advanced_ml": {
         "confusion_matrix": {
-          "tp": 4802,
-          "fp": 1569,
-          "fn": 1523,
-          "tn": 17106,
-          "precision": 0.754,
-          "recall": 0.759,
-          "f1": 0.756,
-          "accuracy": 0.876
+          "tp": 26979,
+          "fp": 43803,
+          "fn": 8417,
+          "tn": 628020,
+          "precision": 0.381,
+          "recall": 0.762,
+          "f1": 0.508,
+          "accuracy": 0.926
         },
         "threshold_curve": {
           "thresholds": [
@@ -8971,37 +8775,37 @@ window.PORTFOLIO_DATA = {
             0.9
           ],
           "precision": [
-            0.382,
-            0.441,
-            0.494,
-            0.543,
-            0.59,
-            0.635,
-            0.679,
-            0.722,
-            0.763
+            0.386,
+            0.446,
+            0.499,
+            0.549,
+            0.597,
+            0.643,
+            0.687,
+            0.73,
+            0.772
           ],
           "recall": [
             0.962,
             0.907,
-            0.842,
-            0.771,
-            0.694,
-            0.612,
-            0.526,
-            0.436,
-            0.342
+            0.843,
+            0.772,
+            0.695,
+            0.614,
+            0.528,
+            0.439,
+            0.346
           ],
           "f1": [
-            0.547,
-            0.593,
-            0.622,
-            0.637,
-            0.638,
-            0.623,
-            0.593,
-            0.543,
-            0.472
+            0.551,
+            0.598,
+            0.627,
+            0.642,
+            0.642,
+            0.628,
+            0.597,
+            0.548,
+            0.477
           ]
         },
         "probability_distribution": {
@@ -9018,40 +8822,40 @@ window.PORTFOLIO_DATA = {
             "0.9"
           ],
           "clean_count": [
-            5987,
-            3817,
-            2434,
-            1552,
-            989,
-            631,
-            402,
-            256,
-            163,
-            104
+            219807,
+            140155,
+            89366,
+            56982,
+            36333,
+            23167,
+            14772,
+            9419,
+            6005,
+            3829
           ],
           "exception_count": [
-            240,
-            373,
-            506,
-            640,
-            773,
-            907,
-            1040,
-            1173,
-            1307,
-            1440
+            1348,
+            2098,
+            2847,
+            3597,
+            4346,
+            5096,
+            5845,
+            6594,
+            7344,
+            8093
           ],
           "total_count": [
-            6227,
-            4190,
-            2940,
-            2192,
-            1762,
-            1538,
-            1442,
-            1429,
-            1470,
-            1544
+            221155,
+            142253,
+            92213,
+            60579,
+            40679,
+            28263,
+            20617,
+            16013,
+            13349,
+            11922
           ]
         },
         "calibration_curve": {
@@ -9134,591 +8938,615 @@ window.PORTFOLIO_DATA = {
         "VBAK",
         "BSAD"
       ],
-      "total_records": 25000,
-      "exceptions_count": 10696,
-      "exception_rate_pct": 42.78,
-      "financial_exposure_inr": 0.0,
+      "total_records": 101797,
+      "exceptions_count": 55543,
+      "exception_rate_pct": 54.56,
+      "financial_exposure_inr": 18691.35,
       "financial_exposure_cr": 0.0,
-      "avg_confidence_score": 0.887,
-      "champion_model": "RFM Quantile & K-Means Engine",
-      "champion_metric": "0.8870 ROC-AUC",
+      "avg_confidence_score": 0.795,
+      "champion_model": "K-Means RFM Cluster & Churn Risk",
+      "champion_metric": "0.8250 Silhouette",
       "risk_distribution": {
-        "Critical": 9675,
-        "High": 1274,
-        "Medium": 408,
-        "Low": 13643
+        "Critical": 55491,
+        "High": 19300,
+        "Medium": 17479,
+        "Low": 9527
       },
       "category_breakdown": [
         {
-          "label": "3",
-          "count": 25000
+          "label": "JAIPUR",
+          "count": 973
+        },
+        {
+          "label": "INDORE",
+          "count": 969
+        },
+        {
+          "label": "JODHPUR",
+          "count": 711
+        },
+        {
+          "label": "PUNE",
+          "count": 628
+        },
+        {
+          "label": "UDAIPUR",
+          "count": 572
+        },
+        {
+          "label": "DELHI",
+          "count": 558
+        },
+        {
+          "label": "BHOPAL",
+          "count": 519
         }
       ],
       "feature_importance": [
         {
-          "feature": "feature",
-          "importance": 0,
-          "description": "Direct Mathematical Influence On Customer RFM Segmentation & Value Risk:"
+          "feature": "rfm_composite_score",
+          "importance": 0.1681,
+          "description": "Rfm Composite Score"
         },
         {
           "feature": "rfm_churn_risk_index",
-          "importance": 0.1325,
-          "description": "(Customer RFM Churn & Dormancy Risk Index [0-100], defined as 100 - rfm_composite_score)"
-        },
-        {
-          "feature": "rfm_composite_score",
-          "importance": 0.13,
-          "description": "(Composite Customer RFM Behavioral Value Score [0-100] combining Recency 30%, Frequency 35%, and Monetary Value 35%)"
+          "importance": 0.1435,
+          "description": "Rfm Churn Risk Index"
         },
         {
           "feature": "log_monetary_value",
-          "importance": 0.0973,
-          "description": "(Log-stabilized total customer monetary value ln(1 + total_billed_net_value))"
-        },
-        {
-          "feature": "customer_tenure_days",
-          "importance": 0.0801,
-          "description": "(Total customer relationship tenure in days from earliest KNA1-ERDAT / first billing date to snapshot date)"
+          "importance": 0.1055,
+          "description": "Log Monetary Value"
         },
         {
           "feature": "sales_org_monetary_zscore",
-          "importance": 0.0779,
-          "description": "(Standard deviations of customer log monetary value relative to peers in the same Sales Organization VKORG)"
+          "importance": 0.0884,
+          "description": "Sales Org Monetary Zscore"
         },
         {
-          "feature": "recency_score_norm",
-          "importance": 0.0557,
-          "description": "(Normalized Customer Recency Score [0-100] decaying exponentially with days since last commercial activity)"
+          "feature": "sales_order_count",
+          "importance": 0.0644,
+          "description": "Sales Order Count"
         },
         {
           "feature": "frequency_score_norm",
-          "importance": 0.0549,
-          "description": "(Normalized Customer Purchase Frequency Score [0-100] scaled on log billing & order count relative to 99th percentile)"
+          "importance": 0.064,
+          "description": "Frequency Score Norm"
+        },
+        {
+          "feature": "total_order_net_value",
+          "importance": 0.0557,
+          "description": "Total Order Net Value"
+        },
+        {
+          "feature": "monetary_score_norm",
+          "importance": 0.0519,
+          "description": "Monetary Score Norm"
         }
       ],
       "model_rankings": [],
       "display_columns": [
+        "Customer (KUNNR)",
         "Customer Name (NAME1)",
-        "ML Cluster ID",
+        "Customer City (ORT01)",
         "Customer RFM Risk Probability",
         "Risk Category",
         "Total Monetary Net Value (NETWR)",
         "Predicted RFM Exception",
-        "Company Code (BUKRS)",
-        "Company Name (BUTXT)"
+        "Company Code (BUKRS)"
       ],
       "sample_records": [
         {
-          "Customer Name (NAME1)": "NEVAL KUMAR LIME CO.",
-          "ML Cluster ID": 3,
-          "Customer RFM Risk Probability": 0.9626,
+          "Customer (KUNNR)": "40127446",
+          "Customer Name (NAME1)": "SHREENIVASA METI",
+          "Customer City (ORT01)": "CHITTARAGI",
+          "Customer RFM Risk Probability": 0.9625,
           "Risk Category": "Critical Risk",
-          "Total Monetary Net Value (NETWR)": 0,
-          "Predicted RFM Exception": 1,
-          "Company Code (BUKRS)": 1000,
-          "Company Name (BUTXT)": "J.K. CEMENT LIMITED"
+          "Total Monetary Net Value (NETWR)": 0.0,
+          "Predicted RFM Exception": 1.0,
+          "Company Code (BUKRS)": "1000"
         },
         {
-          "Customer Name (NAME1)": "NESTLE INDIA LIMITED",
-          "ML Cluster ID": 3,
-          "Customer RFM Risk Probability": 0.9626,
+          "Customer (KUNNR)": "40127441",
+          "Customer Name (NAME1)": "BHAVIKATTI ENTERPRISES",
+          "Customer City (ORT01)": "HUNGUND",
+          "Customer RFM Risk Probability": 0.9625,
           "Risk Category": "Critical Risk",
-          "Total Monetary Net Value (NETWR)": 0,
-          "Predicted RFM Exception": 1,
-          "Company Code (BUKRS)": 1000,
-          "Company Name (BUTXT)": "J.K. CEMENT LIMITED"
+          "Total Monetary Net Value (NETWR)": 0.0,
+          "Predicted RFM Exception": 1.0,
+          "Company Code (BUKRS)": "1000"
         },
         {
-          "Customer Name (NAME1)": "NESTLE INDIA LIMITED",
-          "ML Cluster ID": 3,
-          "Customer RFM Risk Probability": 0.9626,
+          "Customer (KUNNR)": "40127113",
+          "Customer Name (NAME1)": "SUHANI BUILDING MATERIAL",
+          "Customer City (ORT01)": "BHUSAWAR",
+          "Customer RFM Risk Probability": 0.9625,
           "Risk Category": "Critical Risk",
-          "Total Monetary Net Value (NETWR)": 0,
-          "Predicted RFM Exception": 1,
-          "Company Code (BUKRS)": 1000,
-          "Company Name (BUTXT)": "J.K. CEMENT LIMITED"
+          "Total Monetary Net Value (NETWR)": 0.0,
+          "Predicted RFM Exception": 1.0,
+          "Company Code (BUKRS)": "1000"
         },
         {
-          "Customer Name (NAME1)": "LUNAR EXPORTS PRIVATE LIMITED",
-          "ML Cluster ID": 3,
-          "Customer RFM Risk Probability": 0.9626,
+          "Customer (KUNNR)": "40127080",
+          "Customer Name (NAME1)": "M/S PATEL ENTERPRISES",
+          "Customer City (ORT01)": "GHORAWAL",
+          "Customer RFM Risk Probability": 0.9625,
           "Risk Category": "Critical Risk",
-          "Total Monetary Net Value (NETWR)": 0,
-          "Predicted RFM Exception": 1,
-          "Company Code (BUKRS)": 1000,
-          "Company Name (BUTXT)": "J.K. CEMENT LIMITED"
+          "Total Monetary Net Value (NETWR)": 0.0,
+          "Predicted RFM Exception": 1.0,
+          "Company Code (BUKRS)": "1000"
         },
         {
-          "Customer Name (NAME1)": "THREE M PAPER MFG CO PVT LTD",
-          "ML Cluster ID": 3,
-          "Customer RFM Risk Probability": 0.9626,
+          "Customer (KUNNR)": "40127054",
+          "Customer Name (NAME1)": "ANUJ BAJPAI",
+          "Customer City (ORT01)": "BIJNOR",
+          "Customer RFM Risk Probability": 0.9625,
           "Risk Category": "Critical Risk",
-          "Total Monetary Net Value (NETWR)": 0,
-          "Predicted RFM Exception": 1,
-          "Company Code (BUKRS)": 1000,
-          "Company Name (BUTXT)": "J.K. CEMENT LIMITED"
+          "Total Monetary Net Value (NETWR)": 0.0,
+          "Predicted RFM Exception": 1.0,
+          "Company Code (BUKRS)": "1000"
         },
         {
-          "Customer Name (NAME1)": "PRASHANT PLYWOOD AND HARDWARE",
-          "ML Cluster ID": 3,
-          "Customer RFM Risk Probability": 0.9626,
+          "Customer (KUNNR)": "40127106",
+          "Customer Name (NAME1)": "KANHA ENTERPRISES",
+          "Customer City (ORT01)": "PAHARI",
+          "Customer RFM Risk Probability": 0.9625,
           "Risk Category": "Critical Risk",
-          "Total Monetary Net Value (NETWR)": 0,
-          "Predicted RFM Exception": 1,
-          "Company Code (BUKRS)": 1000,
-          "Company Name (BUTXT)": "J.K. CEMENT LIMITED"
+          "Total Monetary Net Value (NETWR)": 0.0,
+          "Predicted RFM Exception": 1.0,
+          "Company Code (BUKRS)": "1000"
         },
         {
-          "Customer Name (NAME1)": "AJIT PAINTS",
-          "ML Cluster ID": 3,
-          "Customer RFM Risk Probability": 0.9626,
+          "Customer (KUNNR)": "40127217",
+          "Customer Name (NAME1)": "MAMTA",
+          "Customer City (ORT01)": "JASPUR",
+          "Customer RFM Risk Probability": 0.9625,
           "Risk Category": "Critical Risk",
-          "Total Monetary Net Value (NETWR)": 0,
-          "Predicted RFM Exception": 1,
-          "Company Code (BUKRS)": 1000,
-          "Company Name (BUTXT)": "J.K. CEMENT LIMITED"
+          "Total Monetary Net Value (NETWR)": 0.0,
+          "Predicted RFM Exception": 1.0,
+          "Company Code (BUKRS)": "1000"
         },
         {
-          "Customer Name (NAME1)": "Zahoor & Co",
-          "ML Cluster ID": 3,
-          "Customer RFM Risk Probability": 0.9626,
+          "Customer (KUNNR)": "40126965",
+          "Customer Name (NAME1)": "SAYAJI CHEMICALS INDUSTRIES",
+          "Customer City (ORT01)": "AURANGABAD",
+          "Customer RFM Risk Probability": 0.9625,
           "Risk Category": "Critical Risk",
-          "Total Monetary Net Value (NETWR)": 0,
-          "Predicted RFM Exception": 1,
-          "Company Code (BUKRS)": 1000,
-          "Company Name (BUTXT)": "J.K. CEMENT LIMITED"
+          "Total Monetary Net Value (NETWR)": 0.0,
+          "Predicted RFM Exception": 1.0,
+          "Company Code (BUKRS)": "1000"
         },
         {
-          "Customer Name (NAME1)": "SURENDRA INFRASTRUCTURE PVT LTD",
-          "ML Cluster ID": 3,
-          "Customer RFM Risk Probability": 0.9626,
+          "Customer (KUNNR)": "40127040",
+          "Customer Name (NAME1)": "NARAYAN VITHAL NAVAGEKAR",
+          "Customer City (ORT01)": "NANDIHALLI",
+          "Customer RFM Risk Probability": 0.9625,
           "Risk Category": "Critical Risk",
-          "Total Monetary Net Value (NETWR)": 0,
-          "Predicted RFM Exception": 1,
-          "Company Code (BUKRS)": 1000,
-          "Company Name (BUTXT)": "J.K. CEMENT LIMITED"
+          "Total Monetary Net Value (NETWR)": 0.0,
+          "Predicted RFM Exception": 1.0,
+          "Company Code (BUKRS)": "1000"
         },
         {
-          "Customer Name (NAME1)": "FORESIGHT INFRATECH PVT. LTD.",
-          "ML Cluster ID": 3,
-          "Customer RFM Risk Probability": 0.9626,
+          "Customer (KUNNR)": "40127065",
+          "Customer Name (NAME1)": "SHREE SHYAM ENTERPRISES",
+          "Customer City (ORT01)": "MUDAFRA",
+          "Customer RFM Risk Probability": 0.9625,
           "Risk Category": "Critical Risk",
-          "Total Monetary Net Value (NETWR)": 0,
-          "Predicted RFM Exception": 1,
-          "Company Code (BUKRS)": 1000,
-          "Company Name (BUTXT)": "J.K. CEMENT LIMITED"
+          "Total Monetary Net Value (NETWR)": 0.0,
+          "Predicted RFM Exception": 1.0,
+          "Company Code (BUKRS)": "1000"
         },
         {
-          "Customer Name (NAME1)": "MANISH KUMAR JAIN CONTRACTOR",
-          "ML Cluster ID": 3,
-          "Customer RFM Risk Probability": 0.9626,
+          "Customer (KUNNR)": "40127155",
+          "Customer Name (NAME1)": "SINGH CEMENT AGENCY",
+          "Customer City (ORT01)": "PACHALARI DIH",
+          "Customer RFM Risk Probability": 0.9625,
           "Risk Category": "Critical Risk",
-          "Total Monetary Net Value (NETWR)": 0,
-          "Predicted RFM Exception": 1,
-          "Company Code (BUKRS)": 1000,
-          "Company Name (BUTXT)": "J.K. CEMENT LIMITED"
+          "Total Monetary Net Value (NETWR)": 0.0,
+          "Predicted RFM Exception": 1.0,
+          "Company Code (BUKRS)": "1000"
         },
         {
-          "Customer Name (NAME1)": "GOODWILL STRUCTURES PRIVATE LIMITED",
-          "ML Cluster ID": 3,
-          "Customer RFM Risk Probability": 0.9626,
+          "Customer (KUNNR)": "40127050",
+          "Customer Name (NAME1)": "CHOUDHARY TRADERS",
+          "Customer City (ORT01)": "UNN",
+          "Customer RFM Risk Probability": 0.9625,
           "Risk Category": "Critical Risk",
-          "Total Monetary Net Value (NETWR)": 0,
-          "Predicted RFM Exception": 1,
-          "Company Code (BUKRS)": 1000,
-          "Company Name (BUTXT)": "J.K. CEMENT LIMITED"
+          "Total Monetary Net Value (NETWR)": 0.0,
+          "Predicted RFM Exception": 1.0,
+          "Company Code (BUKRS)": "1000"
         },
         {
-          "Customer Name (NAME1)": "BUDDHADEV MAITY",
-          "ML Cluster ID": 3,
-          "Customer RFM Risk Probability": 0.9626,
+          "Customer (KUNNR)": "40127055",
+          "Customer Name (NAME1)": "AMIT KUMAR",
+          "Customer City (ORT01)": "SHAPUR",
+          "Customer RFM Risk Probability": 0.9625,
           "Risk Category": "Critical Risk",
-          "Total Monetary Net Value (NETWR)": 0,
-          "Predicted RFM Exception": 1,
-          "Company Code (BUKRS)": 1000,
-          "Company Name (BUTXT)": "J.K. CEMENT LIMITED"
+          "Total Monetary Net Value (NETWR)": 0.0,
+          "Predicted RFM Exception": 1.0,
+          "Company Code (BUKRS)": "1000"
         },
         {
-          "Customer Name (NAME1)": "D.R. BUILDESTATE PVT. LTD.",
-          "ML Cluster ID": 3,
-          "Customer RFM Risk Probability": 0.9626,
+          "Customer (KUNNR)": "40127117",
+          "Customer Name (NAME1)": "BABU BUILDING MATERIAL",
+          "Customer City (ORT01)": "GARH",
+          "Customer RFM Risk Probability": 0.9625,
           "Risk Category": "Critical Risk",
-          "Total Monetary Net Value (NETWR)": 0,
-          "Predicted RFM Exception": 1,
-          "Company Code (BUKRS)": 1000,
-          "Company Name (BUTXT)": "J.K. CEMENT LIMITED"
+          "Total Monetary Net Value (NETWR)": 0.0,
+          "Predicted RFM Exception": 1.0,
+          "Company Code (BUKRS)": "1000"
         },
         {
-          "Customer Name (NAME1)": "MANOJ BISWAS",
-          "ML Cluster ID": 3,
-          "Customer RFM Risk Probability": 0.9626,
+          "Customer (KUNNR)": "40127006",
+          "Customer Name (NAME1)": "RAJENDRA KUMAR AGRAWAL",
+          "Customer City (ORT01)": "ISHA NAGAR",
+          "Customer RFM Risk Probability": 0.9625,
           "Risk Category": "Critical Risk",
-          "Total Monetary Net Value (NETWR)": 0,
-          "Predicted RFM Exception": 1,
-          "Company Code (BUKRS)": 1000,
-          "Company Name (BUTXT)": "J.K. CEMENT LIMITED"
+          "Total Monetary Net Value (NETWR)": 0.0,
+          "Predicted RFM Exception": 1.0,
+          "Company Code (BUKRS)": "1000"
         },
         {
-          "Customer Name (NAME1)": "ANURAG AND SONS",
-          "ML Cluster ID": 3,
-          "Customer RFM Risk Probability": 0.9626,
+          "Customer (KUNNR)": "40127058",
+          "Customer Name (NAME1)": "TOMAR CONSTRUCTION",
+          "Customer City (ORT01)": "HAPUR",
+          "Customer RFM Risk Probability": 0.9625,
           "Risk Category": "Critical Risk",
-          "Total Monetary Net Value (NETWR)": 0,
-          "Predicted RFM Exception": 1,
-          "Company Code (BUKRS)": 1000,
-          "Company Name (BUTXT)": "J.K. CEMENT LIMITED"
+          "Total Monetary Net Value (NETWR)": 0.0,
+          "Predicted RFM Exception": 1.0,
+          "Company Code (BUKRS)": "1000"
         },
         {
-          "Customer Name (NAME1)": "BANWARI SINGHAL THEKEDAR",
-          "ML Cluster ID": 3,
-          "Customer RFM Risk Probability": 0.9626,
+          "Customer (KUNNR)": "40127078",
+          "Customer Name (NAME1)": "SOLANKI BUILDING MATERIAL",
+          "Customer City (ORT01)": "KASGANJ",
+          "Customer RFM Risk Probability": 0.9625,
           "Risk Category": "Critical Risk",
-          "Total Monetary Net Value (NETWR)": 0,
-          "Predicted RFM Exception": 1,
-          "Company Code (BUKRS)": 1000,
-          "Company Name (BUTXT)": "J.K. CEMENT LIMITED"
+          "Total Monetary Net Value (NETWR)": 0.0,
+          "Predicted RFM Exception": 1.0,
+          "Company Code (BUKRS)": "1000"
         },
         {
-          "Customer Name (NAME1)": "Tirupati Reality And Developers",
-          "ML Cluster ID": 3,
-          "Customer RFM Risk Probability": 0.9626,
+          "Customer (KUNNR)": "40127023",
+          "Customer Name (NAME1)": "PANKAJ TRADER",
+          "Customer City (ORT01)": "BHARUWA SUMERPUR",
+          "Customer RFM Risk Probability": 0.9625,
           "Risk Category": "Critical Risk",
-          "Total Monetary Net Value (NETWR)": 0,
-          "Predicted RFM Exception": 1,
-          "Company Code (BUKRS)": 1000,
-          "Company Name (BUTXT)": "J.K. CEMENT LIMITED"
+          "Total Monetary Net Value (NETWR)": 0.0,
+          "Predicted RFM Exception": 1.0,
+          "Company Code (BUKRS)": "1000"
         },
         {
-          "Customer Name (NAME1)": "SHIVRAJ VENTURE",
-          "ML Cluster ID": 3,
-          "Customer RFM Risk Probability": 0.9626,
+          "Customer (KUNNR)": "40127104",
+          "Customer Name (NAME1)": "MAHI STEEL AND HARDWARE",
+          "Customer City (ORT01)": "INDORE",
+          "Customer RFM Risk Probability": 0.9625,
           "Risk Category": "Critical Risk",
-          "Total Monetary Net Value (NETWR)": 0,
-          "Predicted RFM Exception": 1,
-          "Company Code (BUKRS)": 1000,
-          "Company Name (BUTXT)": "J.K. CEMENT LIMITED"
+          "Total Monetary Net Value (NETWR)": 0.0,
+          "Predicted RFM Exception": 1.0,
+          "Company Code (BUKRS)": "1000"
         },
         {
-          "Customer Name (NAME1)": "YOGESH ENTERPRISES",
-          "ML Cluster ID": 3,
-          "Customer RFM Risk Probability": 0.9626,
+          "Customer (KUNNR)": "40127064",
+          "Customer Name (NAME1)": "GAURI SHIV TRADERS",
+          "Customer City (ORT01)": "Gunnaur",
+          "Customer RFM Risk Probability": 0.9625,
           "Risk Category": "Critical Risk",
-          "Total Monetary Net Value (NETWR)": 0,
-          "Predicted RFM Exception": 1,
-          "Company Code (BUKRS)": 1000,
-          "Company Name (BUTXT)": "J.K. CEMENT LIMITED"
+          "Total Monetary Net Value (NETWR)": 0.0,
+          "Predicted RFM Exception": 1.0,
+          "Company Code (BUKRS)": "1000"
         },
         {
-          "Customer Name (NAME1)": "LION INDUSTRIES",
-          "ML Cluster ID": 3,
-          "Customer RFM Risk Probability": 0.9626,
+          "Customer (KUNNR)": "40127063",
+          "Customer Name (NAME1)": "RAJPUT TRADERS",
+          "Customer City (ORT01)": "TONKKALA",
+          "Customer RFM Risk Probability": 0.9625,
           "Risk Category": "Critical Risk",
-          "Total Monetary Net Value (NETWR)": 0,
-          "Predicted RFM Exception": 1,
-          "Company Code (BUKRS)": 1000,
-          "Company Name (BUTXT)": "J.K. CEMENT LIMITED"
+          "Total Monetary Net Value (NETWR)": 0.0,
+          "Predicted RFM Exception": 1.0,
+          "Company Code (BUKRS)": "1000"
         },
         {
-          "Customer Name (NAME1)": "NEW MALIK TRADERS",
-          "ML Cluster ID": 3,
-          "Customer RFM Risk Probability": 0.9626,
+          "Customer (KUNNR)": "40126966",
+          "Customer Name (NAME1)": "NAVEEN S KAGNOOR",
+          "Customer City (ORT01)": "GHATAPRABHA",
+          "Customer RFM Risk Probability": 0.9625,
           "Risk Category": "Critical Risk",
-          "Total Monetary Net Value (NETWR)": 0,
-          "Predicted RFM Exception": 1,
-          "Company Code (BUKRS)": 1000,
-          "Company Name (BUTXT)": "J.K. CEMENT LIMITED"
+          "Total Monetary Net Value (NETWR)": 0.0,
+          "Predicted RFM Exception": 1.0,
+          "Company Code (BUKRS)": "1000"
         },
         {
-          "Customer Name (NAME1)": "NISHA LIME COMPANY",
-          "ML Cluster ID": 3,
-          "Customer RFM Risk Probability": 0.9626,
+          "Customer (KUNNR)": "40127125",
+          "Customer Name (NAME1)": "GAUTAM HARDWARE",
+          "Customer City (ORT01)": "BADANAYA GAON",
+          "Customer RFM Risk Probability": 0.9625,
           "Risk Category": "Critical Risk",
-          "Total Monetary Net Value (NETWR)": 0,
-          "Predicted RFM Exception": 1,
-          "Company Code (BUKRS)": 1000,
-          "Company Name (BUTXT)": "J.K. CEMENT LIMITED"
+          "Total Monetary Net Value (NETWR)": 0.0,
+          "Predicted RFM Exception": 1.0,
+          "Company Code (BUKRS)": "1000"
         },
         {
-          "Customer Name (NAME1)": "JAIN IMPEX",
-          "ML Cluster ID": 3,
-          "Customer RFM Risk Probability": 0.9626,
+          "Customer (KUNNR)": "40127116",
+          "Customer Name (NAME1)": "YADAV BUILDING MATERIAL",
+          "Customer City (ORT01)": "KUMHER",
+          "Customer RFM Risk Probability": 0.9625,
           "Risk Category": "Critical Risk",
-          "Total Monetary Net Value (NETWR)": 0,
-          "Predicted RFM Exception": 1,
-          "Company Code (BUKRS)": 1000,
-          "Company Name (BUTXT)": "J.K. CEMENT LIMITED"
+          "Total Monetary Net Value (NETWR)": 0.0,
+          "Predicted RFM Exception": 1.0,
+          "Company Code (BUKRS)": "1000"
         },
         {
-          "Customer Name (NAME1)": "THE MISHRA HARDWARE",
-          "ML Cluster ID": 3,
-          "Customer RFM Risk Probability": 0.9626,
+          "Customer (KUNNR)": "40127081",
+          "Customer Name (NAME1)": "MANINDER CEMENT STORE",
+          "Customer City (ORT01)": "KHARAR",
+          "Customer RFM Risk Probability": 0.9625,
           "Risk Category": "Critical Risk",
-          "Total Monetary Net Value (NETWR)": 0,
-          "Predicted RFM Exception": 1,
-          "Company Code (BUKRS)": 1000,
-          "Company Name (BUTXT)": "J.K. CEMENT LIMITED"
+          "Total Monetary Net Value (NETWR)": 0.0,
+          "Predicted RFM Exception": 1.0,
+          "Company Code (BUKRS)": "1000"
         },
         {
-          "Customer Name (NAME1)": "NATIONAL LIME MANUFACTURES",
-          "ML Cluster ID": 3,
-          "Customer RFM Risk Probability": 0.9626,
+          "Customer (KUNNR)": "40127154",
+          "Customer Name (NAME1)": "SAURABH CEMENT AGENCY",
+          "Customer City (ORT01)": "BAYANA",
+          "Customer RFM Risk Probability": 0.9625,
           "Risk Category": "Critical Risk",
-          "Total Monetary Net Value (NETWR)": 0,
-          "Predicted RFM Exception": 1,
-          "Company Code (BUKRS)": 1000,
-          "Company Name (BUTXT)": "J.K. CEMENT LIMITED"
+          "Total Monetary Net Value (NETWR)": 0.0,
+          "Predicted RFM Exception": 1.0,
+          "Company Code (BUKRS)": "1000"
         },
         {
-          "Customer Name (NAME1)": "SUPRIYA COLOUR WORLD",
-          "ML Cluster ID": 3,
-          "Customer RFM Risk Probability": 0.9626,
+          "Customer (KUNNR)": "40127021",
+          "Customer Name (NAME1)": "SHIVA TRADERS",
+          "Customer City (ORT01)": "PIPARIYA",
+          "Customer RFM Risk Probability": 0.9625,
           "Risk Category": "Critical Risk",
-          "Total Monetary Net Value (NETWR)": 0,
-          "Predicted RFM Exception": 1,
-          "Company Code (BUKRS)": 1000,
-          "Company Name (BUTXT)": "J.K. CEMENT LIMITED"
+          "Total Monetary Net Value (NETWR)": 0.0,
+          "Predicted RFM Exception": 1.0,
+          "Company Code (BUKRS)": "1000"
         },
         {
-          "Customer Name (NAME1)": "BANSAL SONS",
-          "ML Cluster ID": 3,
-          "Customer RFM Risk Probability": 0.9626,
+          "Customer (KUNNR)": "40127576",
+          "Customer Name (NAME1)": "PRASHANT SINGH",
+          "Customer City (ORT01)": "KHALIARI",
+          "Customer RFM Risk Probability": 0.9625,
           "Risk Category": "Critical Risk",
-          "Total Monetary Net Value (NETWR)": 0,
-          "Predicted RFM Exception": 1,
-          "Company Code (BUKRS)": 1000,
-          "Company Name (BUTXT)": "J.K. CEMENT LIMITED"
+          "Total Monetary Net Value (NETWR)": 0.0,
+          "Predicted RFM Exception": 1.0,
+          "Company Code (BUKRS)": "1000"
         },
         {
-          "Customer Name (NAME1)": "AMIT CONTRACTOR",
-          "ML Cluster ID": 3,
-          "Customer RFM Risk Probability": 0.9626,
+          "Customer (KUNNR)": "40127740",
+          "Customer Name (NAME1)": "KD BUILDERS",
+          "Customer City (ORT01)": "BAHADURGARH",
+          "Customer RFM Risk Probability": 0.9625,
           "Risk Category": "Critical Risk",
-          "Total Monetary Net Value (NETWR)": 0,
-          "Predicted RFM Exception": 1,
-          "Company Code (BUKRS)": 1000,
-          "Company Name (BUTXT)": "J.K. CEMENT LIMITED"
+          "Total Monetary Net Value (NETWR)": 0.0,
+          "Predicted RFM Exception": 1.0,
+          "Company Code (BUKRS)": "1000"
         },
         {
-          "Customer Name (NAME1)": "SRI MUTHUMATHI BUILDERS",
-          "ML Cluster ID": 3,
-          "Customer RFM Risk Probability": 0.9626,
+          "Customer (KUNNR)": "40127502",
+          "Customer Name (NAME1)": "AGARWAL BUILDING MATERIAL & GENERAL",
+          "Customer City (ORT01)": "ULDAN",
+          "Customer RFM Risk Probability": 0.9625,
           "Risk Category": "Critical Risk",
-          "Total Monetary Net Value (NETWR)": 0,
-          "Predicted RFM Exception": 1,
-          "Company Code (BUKRS)": 1000,
-          "Company Name (BUTXT)": "J.K. CEMENT LIMITED"
+          "Total Monetary Net Value (NETWR)": 0.0,
+          "Predicted RFM Exception": 1.0,
+          "Company Code (BUKRS)": "1000"
         },
         {
-          "Customer Name (NAME1)": "S.RAHMATTULAH",
-          "ML Cluster ID": 3,
-          "Customer RFM Risk Probability": 0.9626,
+          "Customer (KUNNR)": "40127512",
+          "Customer Name (NAME1)": "SHRI CHANDRAGUTTEMMA TRADERS",
+          "Customer City (ORT01)": "RANEBENNUR",
+          "Customer RFM Risk Probability": 0.9625,
           "Risk Category": "Critical Risk",
-          "Total Monetary Net Value (NETWR)": 0,
-          "Predicted RFM Exception": 1,
-          "Company Code (BUKRS)": 1000,
-          "Company Name (BUTXT)": "J.K. CEMENT LIMITED"
+          "Total Monetary Net Value (NETWR)": 0.0,
+          "Predicted RFM Exception": 1.0,
+          "Company Code (BUKRS)": "1000"
         },
         {
-          "Customer Name (NAME1)": "RAJ BUILDER",
-          "ML Cluster ID": 3,
-          "Customer RFM Risk Probability": 0.9626,
+          "Customer (KUNNR)": "40127666",
+          "Customer Name (NAME1)": "BALIRAM  BUILDING MATERIAL",
+          "Customer City (ORT01)": "MEHDAWAL",
+          "Customer RFM Risk Probability": 0.9625,
           "Risk Category": "Critical Risk",
-          "Total Monetary Net Value (NETWR)": 0,
-          "Predicted RFM Exception": 1,
-          "Company Code (BUKRS)": 1000,
-          "Company Name (BUTXT)": "J.K. CEMENT LIMITED"
+          "Total Monetary Net Value (NETWR)": 0.0,
+          "Predicted RFM Exception": 1.0,
+          "Company Code (BUKRS)": "1000"
         },
         {
-          "Customer Name (NAME1)": "ABINAYA TRADERS",
-          "ML Cluster ID": 3,
-          "Customer RFM Risk Probability": 0.9626,
+          "Customer (KUNNR)": "40127558",
+          "Customer Name (NAME1)": "MAA SHARDA MAHIHAR WALI TRADING COM",
+          "Customer City (ORT01)": "MAMARI",
+          "Customer RFM Risk Probability": 0.9625,
           "Risk Category": "Critical Risk",
-          "Total Monetary Net Value (NETWR)": 0,
-          "Predicted RFM Exception": 1,
-          "Company Code (BUKRS)": 1000,
-          "Company Name (BUTXT)": "J.K. CEMENT LIMITED"
+          "Total Monetary Net Value (NETWR)": 0.0,
+          "Predicted RFM Exception": 1.0,
+          "Company Code (BUKRS)": "1000"
         },
         {
-          "Customer Name (NAME1)": "SWASTIK TILES",
-          "ML Cluster ID": 3,
-          "Customer RFM Risk Probability": 0.9626,
+          "Customer (KUNNR)": "40127518",
+          "Customer Name (NAME1)": "MORYA SALES AND CONSTRUCTION",
+          "Customer City (ORT01)": "MALKAPUR, KARAD",
+          "Customer RFM Risk Probability": 0.9625,
           "Risk Category": "Critical Risk",
-          "Total Monetary Net Value (NETWR)": 0,
-          "Predicted RFM Exception": 1,
-          "Company Code (BUKRS)": 1000,
-          "Company Name (BUTXT)": "J.K. CEMENT LIMITED"
+          "Total Monetary Net Value (NETWR)": 0.0,
+          "Predicted RFM Exception": 1.0,
+          "Company Code (BUKRS)": "1000"
         },
         {
-          "Customer Name (NAME1)": "DATTATREY ENTERPRISES",
-          "ML Cluster ID": 3,
-          "Customer RFM Risk Probability": 0.9626,
+          "Customer (KUNNR)": "40127561",
+          "Customer Name (NAME1)": "M/S SHARDA ENTERPRISES",
+          "Customer City (ORT01)": "NAINI",
+          "Customer RFM Risk Probability": 0.9625,
           "Risk Category": "Critical Risk",
-          "Total Monetary Net Value (NETWR)": 0,
-          "Predicted RFM Exception": 1,
-          "Company Code (BUKRS)": 1000,
-          "Company Name (BUTXT)": "J.K. CEMENT LIMITED"
+          "Total Monetary Net Value (NETWR)": 0.0,
+          "Predicted RFM Exception": 1.0,
+          "Company Code (BUKRS)": "1000"
         },
         {
-          "Customer Name (NAME1)": "ASHISH ENTERPRISES",
-          "ML Cluster ID": 3,
-          "Customer RFM Risk Probability": 0.9626,
+          "Customer (KUNNR)": "40127550",
+          "Customer Name (NAME1)": "SAKSHI CONSTRUCTION",
+          "Customer City (ORT01)": "RATH LOCAL",
+          "Customer RFM Risk Probability": 0.9625,
           "Risk Category": "Critical Risk",
-          "Total Monetary Net Value (NETWR)": 0,
-          "Predicted RFM Exception": 1,
-          "Company Code (BUKRS)": 1000,
-          "Company Name (BUTXT)": "J.K. CEMENT LIMITED"
+          "Total Monetary Net Value (NETWR)": 0.0,
+          "Predicted RFM Exception": 1.0,
+          "Company Code (BUKRS)": "1000"
         },
         {
-          "Customer Name (NAME1)": "B.S. BUILDERS",
-          "ML Cluster ID": 3,
-          "Customer RFM Risk Probability": 0.9626,
+          "Customer (KUNNR)": "40127778",
+          "Customer Name (NAME1)": "KORANGA TRADERS",
+          "Customer City (ORT01)": "LAL KUAN",
+          "Customer RFM Risk Probability": 0.9625,
           "Risk Category": "Critical Risk",
-          "Total Monetary Net Value (NETWR)": 0,
-          "Predicted RFM Exception": 1,
-          "Company Code (BUKRS)": 1000,
-          "Company Name (BUTXT)": "J.K. CEMENT LIMITED"
+          "Total Monetary Net Value (NETWR)": 0.0,
+          "Predicted RFM Exception": 1.0,
+          "Company Code (BUKRS)": "1000"
         },
         {
-          "Customer Name (NAME1)": "LAKHAN LAL GUPTA",
-          "ML Cluster ID": 3,
-          "Customer RFM Risk Probability": 0.9626,
+          "Customer (KUNNR)": "40127596",
+          "Customer Name (NAME1)": "ANKUSH BUILDING MATERIALS",
+          "Customer City (ORT01)": "LAPARI",
+          "Customer RFM Risk Probability": 0.9625,
           "Risk Category": "Critical Risk",
-          "Total Monetary Net Value (NETWR)": 0,
-          "Predicted RFM Exception": 1,
-          "Company Code (BUKRS)": 1000,
-          "Company Name (BUTXT)": "J.K. CEMENT LIMITED"
+          "Total Monetary Net Value (NETWR)": 0.0,
+          "Predicted RFM Exception": 1.0,
+          "Company Code (BUKRS)": "1000"
         },
         {
-          "Customer Name (NAME1)": "S S DEVELOPERS & CONTRACTORS",
-          "ML Cluster ID": 3,
-          "Customer RFM Risk Probability": 0.9626,
+          "Customer (KUNNR)": "40127584",
+          "Customer Name (NAME1)": "RISHAV BUILDING MATERIAL",
+          "Customer City (ORT01)": "MACHALISHAHAR",
+          "Customer RFM Risk Probability": 0.9625,
           "Risk Category": "Critical Risk",
-          "Total Monetary Net Value (NETWR)": 0,
-          "Predicted RFM Exception": 1,
-          "Company Code (BUKRS)": 1000,
-          "Company Name (BUTXT)": "J.K. CEMENT LIMITED"
+          "Total Monetary Net Value (NETWR)": 0.0,
+          "Predicted RFM Exception": 1.0,
+          "Company Code (BUKRS)": "1000"
         },
         {
-          "Customer Name (NAME1)": "HINDUSTAN PAINTS",
-          "ML Cluster ID": 3,
-          "Customer RFM Risk Probability": 0.9626,
+          "Customer (KUNNR)": "40127528",
+          "Customer Name (NAME1)": "MANJUNATH GIRISAGAR",
+          "Customer City (ORT01)": "SUNAGA",
+          "Customer RFM Risk Probability": 0.9625,
           "Risk Category": "Critical Risk",
-          "Total Monetary Net Value (NETWR)": 0,
-          "Predicted RFM Exception": 1,
-          "Company Code (BUKRS)": 1000,
-          "Company Name (BUTXT)": "J.K. CEMENT LIMITED"
+          "Total Monetary Net Value (NETWR)": 0.0,
+          "Predicted RFM Exception": 1.0,
+          "Company Code (BUKRS)": "1000"
         },
         {
-          "Customer Name (NAME1)": "SUNDERAM BUILDHOME PRIVATE LIMITED",
-          "ML Cluster ID": 3,
-          "Customer RFM Risk Probability": 0.9626,
+          "Customer (KUNNR)": "40127601",
+          "Customer Name (NAME1)": "NAGANA RAI CONSTRUCTION CO",
+          "Customer City (ORT01)": "POOGAL",
+          "Customer RFM Risk Probability": 0.9625,
           "Risk Category": "Critical Risk",
-          "Total Monetary Net Value (NETWR)": 0,
-          "Predicted RFM Exception": 1,
-          "Company Code (BUKRS)": 1000,
-          "Company Name (BUTXT)": "J.K. CEMENT LIMITED"
+          "Total Monetary Net Value (NETWR)": 0.0,
+          "Predicted RFM Exception": 1.0,
+          "Company Code (BUKRS)": "1000"
         },
         {
-          "Customer Name (NAME1)": "KARE ONN PAINT INDUSTRIES",
-          "ML Cluster ID": 3,
-          "Customer RFM Risk Probability": 0.9626,
+          "Customer (KUNNR)": "40127741",
+          "Customer Name (NAME1)": "VARUN ENTERPRISES",
+          "Customer City (ORT01)": "PINJORE",
+          "Customer RFM Risk Probability": 0.9625,
           "Risk Category": "Critical Risk",
-          "Total Monetary Net Value (NETWR)": 0,
-          "Predicted RFM Exception": 1,
-          "Company Code (BUKRS)": 1000,
-          "Company Name (BUTXT)": "J.K. CEMENT LIMITED"
+          "Total Monetary Net Value (NETWR)": 0.0,
+          "Predicted RFM Exception": 1.0,
+          "Company Code (BUKRS)": "1000"
         },
         {
-          "Customer Name (NAME1)": "JOY MAA KALI RCM PUC",
-          "ML Cluster ID": 3,
-          "Customer RFM Risk Probability": 0.9626,
+          "Customer (KUNNR)": "40127742",
+          "Customer Name (NAME1)": "OM TRADERS",
+          "Customer City (ORT01)": "PINGAON",
+          "Customer RFM Risk Probability": 0.9625,
           "Risk Category": "Critical Risk",
-          "Total Monetary Net Value (NETWR)": 0,
-          "Predicted RFM Exception": 1,
-          "Company Code (BUKRS)": 1000,
-          "Company Name (BUTXT)": "J.K. CEMENT LIMITED"
+          "Total Monetary Net Value (NETWR)": 0.0,
+          "Predicted RFM Exception": 1.0,
+          "Company Code (BUKRS)": "1000"
         },
         {
-          "Customer Name (NAME1)": "SUNRISE BUILDERS AND DEVELOPERS",
-          "ML Cluster ID": 3,
-          "Customer RFM Risk Probability": 0.9626,
+          "Customer (KUNNR)": "40127541",
+          "Customer Name (NAME1)": "OMKAR SHIVAJI PATIL",
+          "Customer City (ORT01)": "JAKHALE",
+          "Customer RFM Risk Probability": 0.9625,
           "Risk Category": "Critical Risk",
-          "Total Monetary Net Value (NETWR)": 0,
-          "Predicted RFM Exception": 1,
-          "Company Code (BUKRS)": 1000,
-          "Company Name (BUTXT)": "J.K. CEMENT LIMITED"
+          "Total Monetary Net Value (NETWR)": 0.0,
+          "Predicted RFM Exception": 1.0,
+          "Company Code (BUKRS)": "1000"
         },
         {
-          "Customer Name (NAME1)": "DEVASHREE CONSTRUCTIONS",
-          "ML Cluster ID": 3,
-          "Customer RFM Risk Probability": 0.9626,
+          "Customer (KUNNR)": "40126923",
+          "Customer Name (NAME1)": "RAMKRISHNA TRADERS",
+          "Customer City (ORT01)": "MAJHOLI",
+          "Customer RFM Risk Probability": 0.9625,
           "Risk Category": "Critical Risk",
-          "Total Monetary Net Value (NETWR)": 0,
-          "Predicted RFM Exception": 1,
-          "Company Code (BUKRS)": 1000,
-          "Company Name (BUTXT)": "J.K. CEMENT LIMITED"
+          "Total Monetary Net Value (NETWR)": 0.0,
+          "Predicted RFM Exception": 1.0,
+          "Company Code (BUKRS)": "1000"
         },
         {
-          "Customer Name (NAME1)": "SABINA ENTERPRISES",
-          "ML Cluster ID": 3,
-          "Customer RFM Risk Probability": 0.9626,
+          "Customer (KUNNR)": "40126736",
+          "Customer Name (NAME1)": "M/S SHAHJAD MANSOORI",
+          "Customer City (ORT01)": "RATH LOCAL",
+          "Customer RFM Risk Probability": 0.9625,
           "Risk Category": "Critical Risk",
-          "Total Monetary Net Value (NETWR)": 0,
-          "Predicted RFM Exception": 1,
-          "Company Code (BUKRS)": 1000,
-          "Company Name (BUTXT)": "J.K. CEMENT LIMITED"
+          "Total Monetary Net Value (NETWR)": 0.0,
+          "Predicted RFM Exception": 1.0,
+          "Company Code (BUKRS)": "1000"
         },
         {
-          "Customer Name (NAME1)": "SRI SAI ARCADE DEVELOPERS",
-          "ML Cluster ID": 3,
-          "Customer RFM Risk Probability": 0.9626,
+          "Customer (KUNNR)": "40126758",
+          "Customer Name (NAME1)": "KARTIK BASAVARAJ MADAMMANAVAR",
+          "Customer City (ORT01)": "BALEKUNDRI (BK)",
+          "Customer RFM Risk Probability": 0.9625,
           "Risk Category": "Critical Risk",
-          "Total Monetary Net Value (NETWR)": 0,
-          "Predicted RFM Exception": 1,
-          "Company Code (BUKRS)": 1000,
-          "Company Name (BUTXT)": "J.K. CEMENT LIMITED"
+          "Total Monetary Net Value (NETWR)": 0.0,
+          "Predicted RFM Exception": 1.0,
+          "Company Code (BUKRS)": "1000"
         },
         {
-          "Customer Name (NAME1)": "SANJAY ENTERPRISES NIWARI",
-          "ML Cluster ID": 3,
-          "Customer RFM Risk Probability": 0.9626,
+          "Customer (KUNNR)": "40126772",
+          "Customer Name (NAME1)": "RAVI H B",
+          "Customer City (ORT01)": "HONNUDIKE",
+          "Customer RFM Risk Probability": 0.9625,
           "Risk Category": "Critical Risk",
-          "Total Monetary Net Value (NETWR)": 0,
-          "Predicted RFM Exception": 1,
-          "Company Code (BUKRS)": 1000,
-          "Company Name (BUTXT)": "J.K. CEMENT LIMITED"
+          "Total Monetary Net Value (NETWR)": 0.0,
+          "Predicted RFM Exception": 1.0,
+          "Company Code (BUKRS)": "1000"
         },
         {
-          "Customer Name (NAME1)": "AGA TRADERS",
-          "ML Cluster ID": 3,
-          "Customer RFM Risk Probability": 0.9626,
+          "Customer (KUNNR)": "40126781",
+          "Customer Name (NAME1)": "OM TRADERS",
+          "Customer City (ORT01)": "DHUADOL",
+          "Customer RFM Risk Probability": 0.9625,
           "Risk Category": "Critical Risk",
-          "Total Monetary Net Value (NETWR)": 0,
-          "Predicted RFM Exception": 1,
-          "Company Code (BUKRS)": 1000,
-          "Company Name (BUTXT)": "J.K. CEMENT LIMITED"
+          "Total Monetary Net Value (NETWR)": 0.0,
+          "Predicted RFM Exception": 1.0,
+          "Company Code (BUKRS)": "1000"
         },
         {
-          "Customer Name (NAME1)": "SUPRIYA PAINTS",
-          "ML Cluster ID": 3,
-          "Customer RFM Risk Probability": 0.9626,
+          "Customer (KUNNR)": "40126964",
+          "Customer Name (NAME1)": "PRATIKSINHA PANDITRAO PATIL",
+          "Customer City (ORT01)": "BHOOM JATEGAON ROAD",
+          "Customer RFM Risk Probability": 0.9625,
           "Risk Category": "Critical Risk",
-          "Total Monetary Net Value (NETWR)": 0,
-          "Predicted RFM Exception": 1,
-          "Company Code (BUKRS)": 1000,
-          "Company Name (BUTXT)": "J.K. CEMENT LIMITED"
+          "Total Monetary Net Value (NETWR)": 0.0,
+          "Predicted RFM Exception": 1.0,
+          "Company Code (BUKRS)": "1000"
         }
       ],
       "advanced_ml": {
         "confusion_matrix": {
-          "tp": 18980,
-          "fp": 0,
-          "fn": 6020,
-          "tn": 0,
-          "precision": 1.0,
-          "recall": 0.759,
-          "f1": 0.863,
-          "accuracy": 0.759
+          "tp": 42185,
+          "fp": 3099,
+          "fn": 13358,
+          "tn": 43155,
+          "precision": 0.932,
+          "recall": 0.76,
+          "f1": 0.837,
+          "accuracy": 0.838
         },
         "threshold_curve": {
           "thresholds": [
@@ -9736,12 +9564,12 @@ window.PORTFOLIO_DATA = {
             0.382,
             0.441,
             0.494,
-            0.543,
-            0.59,
-            0.635,
-            0.679,
+            0.544,
+            0.591,
+            0.636,
+            0.68,
             0.722,
-            0.763
+            0.764
           ],
           "recall": [
             0.962,
@@ -9752,18 +9580,18 @@ window.PORTFOLIO_DATA = {
             0.612,
             0.526,
             0.436,
-            0.342
+            0.343
           ],
           "f1": [
             0.547,
-            0.593,
-            0.622,
-            0.637,
-            0.638,
+            0.594,
             0.623,
+            0.638,
+            0.638,
+            0.624,
             0.593,
-            0.543,
-            0.472
+            0.544,
+            0.473
           ]
         },
         "probability_distribution": {
@@ -9780,40 +9608,40 @@ window.PORTFOLIO_DATA = {
             "0.9"
           ],
           "clean_count": [
-            100,
-            100,
-            100,
-            100,
-            100,
-            100,
-            100,
-            100,
-            100,
-            100
+            15104,
+            9630,
+            6140,
+            3915,
+            2496,
+            1591,
+            1015,
+            647,
+            412,
+            263
           ],
           "exception_count": [
-            949,
-            1476,
-            2003,
-            2530,
-            3057,
-            3585,
-            4112,
-            4639,
-            5166,
-            5694
+            2109,
+            3281,
+            4452,
+            5624,
+            6796,
+            7968,
+            9140,
+            10311,
+            11483,
+            12655
           ],
           "total_count": [
-            1049,
-            1576,
-            2103,
-            2630,
-            3157,
-            3685,
-            4212,
-            4739,
-            5266,
-            5794
+            17213,
+            12911,
+            10592,
+            9539,
+            9292,
+            9559,
+            10155,
+            10958,
+            11895,
+            12918
           ]
         },
         "calibration_curve": {
@@ -9897,591 +9725,615 @@ window.PORTFOLIO_DATA = {
         "EKET",
         "BSIK"
       ],
-      "total_records": 25000,
-      "exceptions_count": 11671,
-      "exception_rate_pct": 46.68,
-      "financial_exposure_inr": 30099999.999999996,
-      "financial_exposure_cr": 3.01,
-      "avg_confidence_score": 0.871,
-      "champion_model": "Vendor Composite Risk Tree",
-      "champion_metric": "0.8710 ROC-AUC",
+      "total_records": 922684,
+      "exceptions_count": 118893,
+      "exception_rate_pct": 12.89,
+      "financial_exposure_inr": 0.0,
+      "financial_exposure_cr": 0.0,
+      "avg_confidence_score": 0.833,
+      "champion_model": "Hierarchical Density Clustering (HDBSCAN)",
+      "champion_metric": "0.8390 Reliability",
       "risk_distribution": {
-        "Critical": 11021,
-        "High": 8962,
-        "Medium": 238,
-        "Low": 4779
+        "Critical": 162659,
+        "High": 645448,
+        "Medium": 44851,
+        "Low": 69726
       },
       "category_breakdown": [
         {
-          "label": "3",
-          "count": 25000
+          "label": "Uttar Pradesh",
+          "count": 73638
+        },
+        {
+          "label": "Rajasthan",
+          "count": 49126
+        },
+        {
+          "label": "Madhya Pradesh",
+          "count": 39190
+        },
+        {
+          "label": "Maharashtra",
+          "count": 34575
+        },
+        {
+          "label": "Bihar",
+          "count": 29786
+        },
+        {
+          "label": "Tamil Nadu",
+          "count": 22985
+        },
+        {
+          "label": "Gujarat",
+          "count": 18581
         }
       ],
       "feature_importance": [
         {
-          "feature": "feature",
-          "importance": 0,
-          "description": "Direct Mathematical Influence On Vendor Risk Segmentation & Reliability:"
+          "feature": "is_vendor_blocked_or_flagged",
+          "importance": 0.6018,
+          "description": "Is Vendor Blocked Or Flagged"
         },
         {
-          "feature": "vendor_reliability_score",
-          "importance": 0.191,
-          "description": "(Composite Vendor Reliability Score [0-100] combining Delivery Reliability 38%, Invoice Compliance 34%, and Quality/Governance 28%)"
+          "feature": "log_total_spend",
+          "importance": 0.0999,
+          "description": "Log Total Spend"
         },
         {
-          "feature": "quality_governance_score",
-          "importance": 0.166,
-          "description": "(Normalized Quality & Master Data Governance Score [0-100] incorporating QALS lot acceptance, statutory tax/dup-check compliance, and block flags)"
+          "feature": "purch_org_spend_zscore",
+          "importance": 0.0994,
+          "description": "Purch Org Spend Zscore"
         },
         {
-          "feature": "vendor_risk_index",
-          "importance": 0.1255,
-          "description": "(Composite Vendor Risk Index [0-100], defined as 100 - vendor_reliability_score measuring overall supply and compliance risk)"
+          "feature": "recency_po_days",
+          "importance": 0.0389,
+          "description": "Recency Po Days"
         },
         {
-          "feature": "delivery_reliability_score",
-          "importance": 0.1197,
-          "description": "(Normalized Delivery & PO Fulfillment Reliability Score [0-100] based on PO completion, activity cadence, deletion rate, and return rate)"
+          "feature": "invoice_block_rate",
+          "importance": 0.0354,
+          "description": "Invoice Block Rate"
+        },
+        {
+          "feature": "vendor_tenure_days",
+          "importance": 0.0271,
+          "description": "Vendor Tenure Days"
+        },
+        {
+          "feature": "recency_invoice_days",
+          "importance": 0.0236,
+          "description": "Recency Invoice Days"
         },
         {
           "feature": "recency_effective_days",
-          "importance": 0.1058,
-          "description": "(Minimum elapsed days since last procurement touchpoint across EKKO purchase orders, RBKP invoices, and BSIK AP postings)"
-        },
-        {
-          "feature": "active_procurement_span_days",
-          "importance": 0.0893,
-          "description": "(Active procurement lifespan in days between earliest PO/Invoice and most recent PO/Invoice)"
-        },
-        {
-          "feature": "invoice_compliance_score",
-          "importance": 0.0604,
-          "description": "(Normalized Invoice & Payment Compliance Score [0-100] penalizing MRM payment blocks, invoice reversals, and unplanned delivery costs)"
+          "importance": 0.0161,
+          "description": "Recency Effective Days"
         }
       ],
       "model_rankings": [],
       "display_columns": [
+        "Vendor (LIFNR)",
         "Vendor Name (NAME1)",
-        "ML Cluster ID",
+        "Vendor City (ORT01)",
         "Vendor Risk Probability",
         "Risk Category",
         "Total PO Net Spend (NETWR)",
         "Predicted Risk Exception",
-        "Company Code (BUKRS)",
-        "Company Name (BUTXT)"
+        "Data Source (Schema)"
       ],
       "sample_records": [
         {
-          "Vendor Name (NAME1)": "Sadakat  Khan",
-          "ML Cluster ID": 3,
-          "Vendor Risk Probability": 0.962,
+          "Vendor (LIFNR)": "150000017",
+          "Vendor Name (NAME1)": "Western Bainoona Group for General",
+          "Vendor City (ORT01)": "P.O.Box No 44252, Abu Dhabi ,UAE",
+          "Vendor Risk Probability": 0.9603,
           "Risk Category": "Critical Risk",
-          "Total PO Net Spend (NETWR)": 0,
-          "Predicted Risk Exception": 1,
-          "Company Code (BUKRS)": 1000,
-          "Company Name (BUTXT)": "J.K. CEMENT LIMITED"
+          "Total PO Net Spend (NETWR)": 0.0,
+          "Predicted Risk Exception": 1.0,
+          "Data Source (Schema)": "HANA_P2, HANA_P3"
         },
         {
-          "Vendor Name (NAME1)": "MOHSIN  KHAN",
-          "ML Cluster ID": 3,
-          "Vendor Risk Probability": 0.962,
-          "Risk Category": "Critical Risk",
-          "Total PO Net Spend (NETWR)": 0,
-          "Predicted Risk Exception": 1,
-          "Company Code (BUKRS)": 1000,
-          "Company Name (BUTXT)": "J.K. CEMENT LIMITED"
+          "Vendor (LIFNR)": "3016922",
+          "Vendor Name (NAME1)": "SUNDER NATH",
+          "Vendor City (ORT01)": "PUNDRI",
+          "Vendor Risk Probability": 0.9603,
+          "Risk Category": "High Risk",
+          "Total PO Net Spend (NETWR)": 0.0,
+          "Predicted Risk Exception": 1.0,
+          "Data Source (Schema)": "HANA_P2, HANA_P3"
         },
         {
-          "Vendor Name (NAME1)": "KAMALKISHOR  KUSHAVAHA",
-          "ML Cluster ID": 3,
-          "Vendor Risk Probability": 0.962,
-          "Risk Category": "Critical Risk",
-          "Total PO Net Spend (NETWR)": 0,
-          "Predicted Risk Exception": 1,
-          "Company Code (BUKRS)": 1000,
-          "Company Name (BUTXT)": "J.K. CEMENT LIMITED"
+          "Vendor (LIFNR)": "3335125",
+          "Vendor Name (NAME1)": "Om prakash  Chaudhary",
+          "Vendor City (ORT01)": "East Delhi",
+          "Vendor Risk Probability": 0.9603,
+          "Risk Category": "High Risk",
+          "Total PO Net Spend (NETWR)": 0.0,
+          "Predicted Risk Exception": 1.0,
+          "Data Source (Schema)": "HANA_P2, HANA_P3"
         },
         {
-          "Vendor Name (NAME1)": "Vinod   Saini",
-          "ML Cluster ID": 3,
-          "Vendor Risk Probability": 0.962,
-          "Risk Category": "Critical Risk",
-          "Total PO Net Spend (NETWR)": 0,
-          "Predicted Risk Exception": 1,
-          "Company Code (BUKRS)": 1000,
-          "Company Name (BUTXT)": "J.K. CEMENT LIMITED"
+          "Vendor (LIFNR)": "3521090",
+          "Vendor Name (NAME1)": "Satya",
+          "Vendor City (ORT01)": "ALWAR",
+          "Vendor Risk Probability": 0.9603,
+          "Risk Category": "High Risk",
+          "Total PO Net Spend (NETWR)": 0.0,
+          "Predicted Risk Exception": 1.0,
+          "Data Source (Schema)": "HANA_P2, HANA_P3"
         },
         {
-          "Vendor Name (NAME1)": "Nikhil Kumar  Chauhan",
-          "ML Cluster ID": 3,
-          "Vendor Risk Probability": 0.962,
-          "Risk Category": "Critical Risk",
-          "Total PO Net Spend (NETWR)": 0,
-          "Predicted Risk Exception": 1,
-          "Company Code (BUKRS)": 1000,
-          "Company Name (BUTXT)": "J.K. CEMENT LIMITED"
+          "Vendor (LIFNR)": "3527914",
+          "Vendor Name (NAME1)": "Akbar Hussain",
+          "Vendor City (ORT01)": "SONIPAT",
+          "Vendor Risk Probability": 0.9603,
+          "Risk Category": "High Risk",
+          "Total PO Net Spend (NETWR)": 0.0,
+          "Predicted Risk Exception": 1.0,
+          "Data Source (Schema)": "HANA_P2, HANA_P3"
         },
         {
-          "Vendor Name (NAME1)": "Yagyas   Sharma",
-          "ML Cluster ID": 3,
-          "Vendor Risk Probability": 0.962,
-          "Risk Category": "Critical Risk",
-          "Total PO Net Spend (NETWR)": 0,
-          "Predicted Risk Exception": 1,
-          "Company Code (BUKRS)": 1000,
-          "Company Name (BUTXT)": "J.K. CEMENT LIMITED"
+          "Vendor (LIFNR)": "3563690",
+          "Vendor Name (NAME1)": "Prashant",
+          "Vendor City (ORT01)": "SURGUJA",
+          "Vendor Risk Probability": 0.9603,
+          "Risk Category": "High Risk",
+          "Total PO Net Spend (NETWR)": 0.0,
+          "Predicted Risk Exception": 1.0,
+          "Data Source (Schema)": "HANA_P2, HANA_P3"
         },
         {
-          "Vendor Name (NAME1)": "Rakesh  Rakesh",
-          "ML Cluster ID": 3,
-          "Vendor Risk Probability": 0.962,
-          "Risk Category": "Critical Risk",
-          "Total PO Net Spend (NETWR)": 0,
-          "Predicted Risk Exception": 1,
-          "Company Code (BUKRS)": 1000,
-          "Company Name (BUTXT)": "J.K. CEMENT LIMITED"
+          "Vendor (LIFNR)": "420024285",
+          "Vendor Name (NAME1)": "NAYI GUNJAESH",
+          "Vendor City (ORT01)": "JAIPUR",
+          "Vendor Risk Probability": 0.9603,
+          "Risk Category": "High Risk",
+          "Total PO Net Spend (NETWR)": 0.0,
+          "Predicted Risk Exception": 1.0,
+          "Data Source (Schema)": "HANA_P2, HANA_P3"
         },
         {
-          "Vendor Name (NAME1)": "AKASH  SO SHIV SHANK",
-          "ML Cluster ID": 3,
-          "Vendor Risk Probability": 0.962,
-          "Risk Category": "Critical Risk",
-          "Total PO Net Spend (NETWR)": 0,
-          "Predicted Risk Exception": 1,
-          "Company Code (BUKRS)": 1000,
-          "Company Name (BUTXT)": "J.K. CEMENT LIMITED"
+          "Vendor (LIFNR)": "420024286",
+          "Vendor Name (NAME1)": "S B RESHELLERS PVT LTD",
+          "Vendor City (ORT01)": "KOLHAPUR",
+          "Vendor Risk Probability": 0.9603,
+          "Risk Category": "High Risk",
+          "Total PO Net Spend (NETWR)": 0.0,
+          "Predicted Risk Exception": 1.0,
+          "Data Source (Schema)": "HANA_P2, HANA_P3"
         },
         {
-          "Vendor Name (NAME1)": "SAMIRSHAYASINSHAFAKI",
-          "ML Cluster ID": 3,
-          "Vendor Risk Probability": 0.962,
-          "Risk Category": "Critical Risk",
-          "Total PO Net Spend (NETWR)": 0,
-          "Predicted Risk Exception": 1,
-          "Company Code (BUKRS)": 1000,
-          "Company Name (BUTXT)": "J.K. CEMENT LIMITED"
+          "Vendor (LIFNR)": "420024287",
+          "Vendor Name (NAME1)": "ASMI INN & SUITES LLP",
+          "Vendor City (ORT01)": "KOLHAPUR",
+          "Vendor Risk Probability": 0.9603,
+          "Risk Category": "High Risk",
+          "Total PO Net Spend (NETWR)": 0.0,
+          "Predicted Risk Exception": 1.0,
+          "Data Source (Schema)": "HANA_P2, HANA_P3"
         },
         {
-          "Vendor Name (NAME1)": "Umesh Kumar Kumar",
-          "ML Cluster ID": 3,
-          "Vendor Risk Probability": 0.962,
-          "Risk Category": "Critical Risk",
-          "Total PO Net Spend (NETWR)": 0,
-          "Predicted Risk Exception": 1,
-          "Company Code (BUKRS)": 1000,
-          "Company Name (BUTXT)": "J.K. CEMENT LIMITED"
+          "Vendor (LIFNR)": "430000064",
+          "Vendor Name (NAME1)": "DONO FREIGHT INTERNATIONAL LLC",
+          "Vendor City (ORT01)": "Dubai",
+          "Vendor Risk Probability": 0.9603,
+          "Risk Category": "High Risk",
+          "Total PO Net Spend (NETWR)": 0.0,
+          "Predicted Risk Exception": 1.0,
+          "Data Source (Schema)": "HANA_P2, HANA_P3"
         },
         {
-          "Vendor Name (NAME1)": "Mr  DNYANESHWAR VISH",
-          "ML Cluster ID": 3,
-          "Vendor Risk Probability": 0.962,
-          "Risk Category": "Critical Risk",
-          "Total PO Net Spend (NETWR)": 0,
-          "Predicted Risk Exception": 1,
-          "Company Code (BUKRS)": 1000,
-          "Company Name (BUTXT)": "J.K. CEMENT LIMITED"
+          "Vendor (LIFNR)": "500000298",
+          "Vendor Name (NAME1)": "SHREE LAXMI LOGISTIC",
+          "Vendor City (ORT01)": "JABALPUR",
+          "Vendor Risk Probability": 0.9603,
+          "Risk Category": "High Risk",
+          "Total PO Net Spend (NETWR)": 0.0,
+          "Predicted Risk Exception": 1.0,
+          "Data Source (Schema)": "HANA_P2, HANA_P3"
         },
         {
-          "Vendor Name (NAME1)": "Puneet",
-          "ML Cluster ID": 3,
-          "Vendor Risk Probability": 0.962,
-          "Risk Category": "Critical Risk",
-          "Total PO Net Spend (NETWR)": 0,
-          "Predicted Risk Exception": 1,
-          "Company Code (BUKRS)": 1000,
-          "Company Name (BUTXT)": "J.K. CEMENT LIMITED"
+          "Vendor (LIFNR)": "F1000191",
+          "Vendor Name (NAME1)": "Vijay Jeet Lal",
+          "Vendor City (ORT01)": "RAS AL KHAIMAH",
+          "Vendor Risk Probability": 0.9603,
+          "Risk Category": "High Risk",
+          "Total PO Net Spend (NETWR)": 0.0,
+          "Predicted Risk Exception": 1.0,
+          "Data Source (Schema)": "HANA_P2, HANA_P3"
         },
         {
-          "Vendor Name (NAME1)": "Surendra Kumar",
-          "ML Cluster ID": 3,
-          "Vendor Risk Probability": 0.962,
-          "Risk Category": "Critical Risk",
-          "Total PO Net Spend (NETWR)": 0,
-          "Predicted Risk Exception": 1,
-          "Company Code (BUKRS)": 1000,
-          "Company Name (BUTXT)": "J.K. CEMENT LIMITED"
+          "Vendor (LIFNR)": "F1000211",
+          "Vendor Name (NAME1)": "Jay Prakash Kannaujiya",
+          "Vendor City (ORT01)": "RAS AL KHAMAH",
+          "Vendor Risk Probability": 0.9603,
+          "Risk Category": "High Risk",
+          "Total PO Net Spend (NETWR)": 0.0,
+          "Predicted Risk Exception": 1.0,
+          "Data Source (Schema)": "HANA_P2, HANA_P3"
         },
         {
-          "Vendor Name (NAME1)": "Mr  ROBIN  S/O SURAJ",
-          "ML Cluster ID": 3,
-          "Vendor Risk Probability": 0.962,
-          "Risk Category": "Critical Risk",
-          "Total PO Net Spend (NETWR)": 0,
-          "Predicted Risk Exception": 1,
-          "Company Code (BUKRS)": 1000,
-          "Company Name (BUTXT)": "J.K. CEMENT LIMITED"
+          "Vendor (LIFNR)": "F1000214",
+          "Vendor Name (NAME1)": "Israa Ibrahim",
+          "Vendor City (ORT01)": "RAS AL KHAMAH",
+          "Vendor Risk Probability": 0.9603,
+          "Risk Category": "High Risk",
+          "Total PO Net Spend (NETWR)": 0.0,
+          "Predicted Risk Exception": 1.0,
+          "Data Source (Schema)": "HANA_P2, HANA_P3"
         },
         {
-          "Vendor Name (NAME1)": "Upendra   Kumar",
-          "ML Cluster ID": 3,
-          "Vendor Risk Probability": 0.962,
-          "Risk Category": "Critical Risk",
-          "Total PO Net Spend (NETWR)": 0,
-          "Predicted Risk Exception": 1,
-          "Company Code (BUKRS)": 1000,
-          "Company Name (BUTXT)": "J.K. CEMENT LIMITED"
+          "Vendor (LIFNR)": "F1000284",
+          "Vendor Name (NAME1)": "ZAHID ALI",
+          "Vendor City (ORT01)": "FUJAIRAH",
+          "Vendor Risk Probability": 0.9603,
+          "Risk Category": "High Risk",
+          "Total PO Net Spend (NETWR)": 0.0,
+          "Predicted Risk Exception": 1.0,
+          "Data Source (Schema)": "HANA_P2, HANA_P3"
         },
         {
-          "Vendor Name (NAME1)": "VINOD BAIRWA",
-          "ML Cluster ID": 3,
-          "Vendor Risk Probability": 0.962,
-          "Risk Category": "Critical Risk",
-          "Total PO Net Spend (NETWR)": 0,
-          "Predicted Risk Exception": 1,
-          "Company Code (BUKRS)": 1000,
-          "Company Name (BUTXT)": "J.K. CEMENT LIMITED"
+          "Vendor (LIFNR)": "F1000268",
+          "Vendor Name (NAME1)": "ABID MAHMOOD",
+          "Vendor City (ORT01)": "FUJAIRAH",
+          "Vendor Risk Probability": 0.9603,
+          "Risk Category": "High Risk",
+          "Total PO Net Spend (NETWR)": 0.0,
+          "Predicted Risk Exception": 1.0,
+          "Data Source (Schema)": "HANA_P2, HANA_P3"
         },
         {
-          "Vendor Name (NAME1)": "ALSHAMEEM S",
-          "ML Cluster ID": 3,
-          "Vendor Risk Probability": 0.962,
-          "Risk Category": "Critical Risk",
-          "Total PO Net Spend (NETWR)": 0,
-          "Predicted Risk Exception": 1,
-          "Company Code (BUKRS)": 1000,
-          "Company Name (BUTXT)": "J.K. CEMENT LIMITED"
+          "Vendor (LIFNR)": "F1000291",
+          "Vendor Name (NAME1)": "MUHAMMAD SALEEM",
+          "Vendor City (ORT01)": "FUJAIRAH",
+          "Vendor Risk Probability": 0.9603,
+          "Risk Category": "High Risk",
+          "Total PO Net Spend (NETWR)": 0.0,
+          "Predicted Risk Exception": 1.0,
+          "Data Source (Schema)": "HANA_P2, HANA_P3"
         },
         {
-          "Vendor Name (NAME1)": "Mohan   Chand",
-          "ML Cluster ID": 3,
-          "Vendor Risk Probability": 0.962,
-          "Risk Category": "Critical Risk",
-          "Total PO Net Spend (NETWR)": 0,
-          "Predicted Risk Exception": 1,
-          "Company Code (BUKRS)": 1000,
-          "Company Name (BUTXT)": "J.K. CEMENT LIMITED"
+          "Vendor (LIFNR)": "430000061",
+          "Vendor Name (NAME1)": "Abdelaziz Al Blooshi Advocates",
+          "Vendor City (ORT01)": "Po Box : 62094",
+          "Vendor Risk Probability": 0.9603,
+          "Risk Category": "High Risk",
+          "Total PO Net Spend (NETWR)": 0.0,
+          "Predicted Risk Exception": 1.0,
+          "Data Source (Schema)": "HANA_P2, HANA_P3"
         },
         {
-          "Vendor Name (NAME1)": "Daya Ram Meghwal",
-          "ML Cluster ID": 3,
-          "Vendor Risk Probability": 0.962,
-          "Risk Category": "Critical Risk",
-          "Total PO Net Spend (NETWR)": 0,
-          "Predicted Risk Exception": 1,
-          "Company Code (BUKRS)": 1000,
-          "Company Name (BUTXT)": "J.K. CEMENT LIMITED"
+          "Vendor (LIFNR)": "3017249",
+          "Vendor Name (NAME1)": "ACHINT JAIN",
+          "Vendor City (ORT01)": "UTTAR PRADESH",
+          "Vendor Risk Probability": 0.9603,
+          "Risk Category": "High Risk",
+          "Total PO Net Spend (NETWR)": 0.0,
+          "Predicted Risk Exception": 1.0,
+          "Data Source (Schema)": "HANA_P2, HANA_P3"
         },
         {
-          "Vendor Name (NAME1)": "GUDDU S/O KESHAV PAR",
-          "ML Cluster ID": 3,
-          "Vendor Risk Probability": 0.962,
-          "Risk Category": "Critical Risk",
-          "Total PO Net Spend (NETWR)": 0,
-          "Predicted Risk Exception": 1,
-          "Company Code (BUKRS)": 1000,
-          "Company Name (BUTXT)": "J.K. CEMENT LIMITED"
+          "Vendor (LIFNR)": "360001130",
+          "Vendor Name (NAME1)": "DHANIRAM YADAV",
+          "Vendor City (ORT01)": "ALWAR",
+          "Vendor Risk Probability": 0.9603,
+          "Risk Category": "High Risk",
+          "Total PO Net Spend (NETWR)": 0.0,
+          "Predicted Risk Exception": 1.0,
+          "Data Source (Schema)": "HANA_P2, HANA_P3"
         },
         {
-          "Vendor Name (NAME1)": "MANOJ ARYA",
-          "ML Cluster ID": 3,
-          "Vendor Risk Probability": 0.962,
-          "Risk Category": "Critical Risk",
-          "Total PO Net Spend (NETWR)": 0,
-          "Predicted Risk Exception": 1,
-          "Company Code (BUKRS)": 1000,
-          "Company Name (BUTXT)": "J.K. CEMENT LIMITED"
+          "Vendor (LIFNR)": "420024278",
+          "Vendor Name (NAME1)": "GLADSOME GLOBAL",
+          "Vendor City (ORT01)": "JAIPUR",
+          "Vendor Risk Probability": 0.9603,
+          "Risk Category": "High Risk",
+          "Total PO Net Spend (NETWR)": 0.0,
+          "Predicted Risk Exception": 1.0,
+          "Data Source (Schema)": "HANA_P2, HANA_P3"
         },
         {
-          "Vendor Name (NAME1)": "Mohammad  Irasad",
-          "ML Cluster ID": 3,
-          "Vendor Risk Probability": 0.962,
-          "Risk Category": "Critical Risk",
-          "Total PO Net Spend (NETWR)": 0,
-          "Predicted Risk Exception": 1,
-          "Company Code (BUKRS)": 1000,
-          "Company Name (BUTXT)": "J.K. CEMENT LIMITED"
+          "Vendor (LIFNR)": "420024279",
+          "Vendor Name (NAME1)": "ACCIL CORPORATION PRIVATE LIMITED",
+          "Vendor City (ORT01)": "JAIPUR",
+          "Vendor Risk Probability": 0.9603,
+          "Risk Category": "High Risk",
+          "Total PO Net Spend (NETWR)": 0.0,
+          "Predicted Risk Exception": 1.0,
+          "Data Source (Schema)": "HANA_P2, HANA_P3"
         },
         {
-          "Vendor Name (NAME1)": "Md Tabrez Mian",
-          "ML Cluster ID": 3,
-          "Vendor Risk Probability": 0.962,
-          "Risk Category": "Critical Risk",
-          "Total PO Net Spend (NETWR)": 0,
-          "Predicted Risk Exception": 1,
-          "Company Code (BUKRS)": 1000,
-          "Company Name (BUTXT)": "J.K. CEMENT LIMITED"
+          "Vendor (LIFNR)": "420024280",
+          "Vendor Name (NAME1)": "JBH CREATIONS JBH CREATIONS",
+          "Vendor City (ORT01)": "JAIPUR",
+          "Vendor Risk Probability": 0.9603,
+          "Risk Category": "High Risk",
+          "Total PO Net Spend (NETWR)": 0.0,
+          "Predicted Risk Exception": 1.0,
+          "Data Source (Schema)": "HANA_P2, HANA_P3"
         },
         {
-          "Vendor Name (NAME1)": "LAKSHMIKANTH T L",
-          "ML Cluster ID": 3,
-          "Vendor Risk Probability": 0.962,
-          "Risk Category": "Critical Risk",
-          "Total PO Net Spend (NETWR)": 0,
-          "Predicted Risk Exception": 1,
-          "Company Code (BUKRS)": 1000,
-          "Company Name (BUTXT)": "J.K. CEMENT LIMITED"
+          "Vendor (LIFNR)": "420024281",
+          "Vendor Name (NAME1)": "GOYAL MOTEL & RESORT RESORT",
+          "Vendor City (ORT01)": "CHURU",
+          "Vendor Risk Probability": 0.9603,
+          "Risk Category": "High Risk",
+          "Total PO Net Spend (NETWR)": 0.0,
+          "Predicted Risk Exception": 1.0,
+          "Data Source (Schema)": "HANA_P2, HANA_P3"
         },
         {
-          "Vendor Name (NAME1)": "DINESH",
-          "ML Cluster ID": 3,
-          "Vendor Risk Probability": 0.962,
-          "Risk Category": "Critical Risk",
-          "Total PO Net Spend (NETWR)": 0,
-          "Predicted Risk Exception": 1,
-          "Company Code (BUKRS)": 1000,
-          "Company Name (BUTXT)": "J.K. CEMENT LIMITED"
+          "Vendor (LIFNR)": "420024284",
+          "Vendor Name (NAME1)": "AMIGO DEL FRIO LLP",
+          "Vendor City (ORT01)": "NEW BARRACKPUR",
+          "Vendor Risk Probability": 0.9603,
+          "Risk Category": "High Risk",
+          "Total PO Net Spend (NETWR)": 0.0,
+          "Predicted Risk Exception": 1.0,
+          "Data Source (Schema)": "HANA_P2, HANA_P3"
         },
         {
-          "Vendor Name (NAME1)": "Manish   kumar",
-          "ML Cluster ID": 3,
-          "Vendor Risk Probability": 0.962,
-          "Risk Category": "Critical Risk",
-          "Total PO Net Spend (NETWR)": 0,
-          "Predicted Risk Exception": 1,
-          "Company Code (BUKRS)": 1000,
-          "Company Name (BUTXT)": "J.K. CEMENT LIMITED"
+          "Vendor (LIFNR)": "170000104",
+          "Vendor Name (NAME1)": "SAMHITA TECHNOLOGIES PRIVATE",
+          "Vendor City (ORT01)": "GURGAON",
+          "Vendor Risk Probability": 0.9603,
+          "Risk Category": "High Risk",
+          "Total PO Net Spend (NETWR)": 0.0,
+          "Predicted Risk Exception": 1.0,
+          "Data Source (Schema)": "HANA_P2, HANA_P3"
         },
         {
-          "Vendor Name (NAME1)": "Vipan  Kumar",
-          "ML Cluster ID": 3,
-          "Vendor Risk Probability": 0.962,
-          "Risk Category": "Critical Risk",
-          "Total PO Net Spend (NETWR)": 0,
-          "Predicted Risk Exception": 1,
-          "Company Code (BUKRS)": 1000,
-          "Company Name (BUTXT)": "J.K. CEMENT LIMITED"
+          "Vendor (LIFNR)": "230000459",
+          "Vendor Name (NAME1)": "TO BE USE LATER .",
+          "Vendor City (ORT01)": "NIMBAHERA",
+          "Vendor Risk Probability": 0.9603,
+          "Risk Category": "High Risk",
+          "Total PO Net Spend (NETWR)": 0.0,
+          "Predicted Risk Exception": 1.0,
+          "Data Source (Schema)": "HANA_P2, HANA_P3"
         },
         {
-          "Vendor Name (NAME1)": "KAMLESH KUMAR",
-          "ML Cluster ID": 3,
-          "Vendor Risk Probability": 0.962,
-          "Risk Category": "Critical Risk",
-          "Total PO Net Spend (NETWR)": 0,
-          "Predicted Risk Exception": 1,
-          "Company Code (BUKRS)": 1000,
-          "Company Name (BUTXT)": "J.K. CEMENT LIMITED"
+          "Vendor (LIFNR)": "360001135",
+          "Vendor Name (NAME1)": "MADHUSUDAN PRASAD",
+          "Vendor City (ORT01)": "SIWAN",
+          "Vendor Risk Probability": 0.9603,
+          "Risk Category": "High Risk",
+          "Total PO Net Spend (NETWR)": 0.0,
+          "Predicted Risk Exception": 1.0,
+          "Data Source (Schema)": "HANA_P2, HANA_P3"
         },
         {
-          "Vendor Name (NAME1)": "AKSHAY Kumar",
-          "ML Cluster ID": 3,
-          "Vendor Risk Probability": 0.962,
-          "Risk Category": "Critical Risk",
-          "Total PO Net Spend (NETWR)": 0,
-          "Predicted Risk Exception": 1,
-          "Company Code (BUKRS)": 1000,
-          "Company Name (BUTXT)": "J.K. CEMENT LIMITED"
+          "Vendor (LIFNR)": "420024289",
+          "Vendor Name (NAME1)": "SUNIL KUMAR .",
+          "Vendor City (ORT01)": "HAMIRPUR",
+          "Vendor Risk Probability": 0.9603,
+          "Risk Category": "High Risk",
+          "Total PO Net Spend (NETWR)": 0.0,
+          "Predicted Risk Exception": 1.0,
+          "Data Source (Schema)": "HANA_P2, HANA_P3"
         },
         {
-          "Vendor Name (NAME1)": "SHIVAKUMAR M",
-          "ML Cluster ID": 3,
-          "Vendor Risk Probability": 0.962,
-          "Risk Category": "Critical Risk",
-          "Total PO Net Spend (NETWR)": 0,
-          "Predicted Risk Exception": 1,
-          "Company Code (BUKRS)": 1000,
-          "Company Name (BUTXT)": "J.K. CEMENT LIMITED"
+          "Vendor (LIFNR)": "TL-CANBK30",
+          "Vendor Name (NAME1)": "CANERA BANK-TL",
+          "Vendor City (ORT01)": "LONDON",
+          "Vendor Risk Probability": 0.9603,
+          "Risk Category": "High Risk",
+          "Total PO Net Spend (NETWR)": 0.0,
+          "Predicted Risk Exception": 1.0,
+          "Data Source (Schema)": "HANA_P2, HANA_P3"
         },
         {
-          "Vendor Name (NAME1)": "KRISHNA CHANDRA BHAK",
-          "ML Cluster ID": 3,
-          "Vendor Risk Probability": 0.962,
-          "Risk Category": "Critical Risk",
-          "Total PO Net Spend (NETWR)": 0,
-          "Predicted Risk Exception": 1,
-          "Company Code (BUKRS)": 1000,
-          "Company Name (BUTXT)": "J.K. CEMENT LIMITED"
+          "Vendor (LIFNR)": "230000261",
+          "Vendor Name (NAME1)": "AMIT CARGO CARRIER",
+          "Vendor City (ORT01)": "VAPI",
+          "Vendor Risk Probability": 0.9603,
+          "Risk Category": "High Risk",
+          "Total PO Net Spend (NETWR)": 0.0,
+          "Predicted Risk Exception": 1.0,
+          "Data Source (Schema)": "HANA_P2, HANA_P3"
         },
         {
-          "Vendor Name (NAME1)": "Saddam Husain",
-          "ML Cluster ID": 3,
-          "Vendor Risk Probability": 0.962,
-          "Risk Category": "Critical Risk",
-          "Total PO Net Spend (NETWR)": 0,
-          "Predicted Risk Exception": 1,
-          "Company Code (BUKRS)": 1000,
-          "Company Name (BUTXT)": "J.K. CEMENT LIMITED"
+          "Vendor (LIFNR)": "160004343",
+          "Vendor Name (NAME1)": "SHIYA ENGINEERING",
+          "Vendor City (ORT01)": "VADODARA",
+          "Vendor Risk Probability": 0.9603,
+          "Risk Category": "High Risk",
+          "Total PO Net Spend (NETWR)": 0.0,
+          "Predicted Risk Exception": 1.0,
+          "Data Source (Schema)": "HANA_P2, HANA_P3"
         },
         {
-          "Vendor Name (NAME1)": "PATHLAVATH THUKYA NA",
-          "ML Cluster ID": 3,
-          "Vendor Risk Probability": 0.962,
-          "Risk Category": "Critical Risk",
-          "Total PO Net Spend (NETWR)": 0,
-          "Predicted Risk Exception": 1,
-          "Company Code (BUKRS)": 1000,
-          "Company Name (BUTXT)": "J.K. CEMENT LIMITED"
+          "Vendor (LIFNR)": "250000537",
+          "Vendor Name (NAME1)": "ABIRAMI ENGINEERING",
+          "Vendor City (ORT01)": "CHENNAI",
+          "Vendor Risk Probability": 0.9603,
+          "Risk Category": "High Risk",
+          "Total PO Net Spend (NETWR)": 0.0,
+          "Predicted Risk Exception": 1.0,
+          "Data Source (Schema)": "HANA_P2, HANA_P3"
         },
         {
-          "Vendor Name (NAME1)": "Mr  AVISHKAR SINGH S",
-          "ML Cluster ID": 3,
-          "Vendor Risk Probability": 0.962,
-          "Risk Category": "Critical Risk",
-          "Total PO Net Spend (NETWR)": 0,
-          "Predicted Risk Exception": 1,
-          "Company Code (BUKRS)": 1000,
-          "Company Name (BUTXT)": "J.K. CEMENT LIMITED"
+          "Vendor (LIFNR)": "420024272",
+          "Vendor Name (NAME1)": "PRICE WATERHOUSE & CO.",
+          "Vendor City (ORT01)": "CHENNAI",
+          "Vendor Risk Probability": 0.9603,
+          "Risk Category": "High Risk",
+          "Total PO Net Spend (NETWR)": 0.0,
+          "Predicted Risk Exception": 1.0,
+          "Data Source (Schema)": "HANA_P2, HANA_P3"
         },
         {
-          "Vendor Name (NAME1)": "Mohammad Gul Faraj   Alam",
-          "ML Cluster ID": 3,
-          "Vendor Risk Probability": 0.962,
-          "Risk Category": "Critical Risk",
-          "Total PO Net Spend (NETWR)": 0,
-          "Predicted Risk Exception": 1,
-          "Company Code (BUKRS)": 1000,
-          "Company Name (BUTXT)": "J.K. CEMENT LIMITED"
+          "Vendor (LIFNR)": "550000000",
+          "Vendor Name (NAME1)": "DILIP",
+          "Vendor City (ORT01)": "NAGAUR",
+          "Vendor Risk Probability": 0.9603,
+          "Risk Category": "High Risk",
+          "Total PO Net Spend (NETWR)": 0.0,
+          "Predicted Risk Exception": 1.0,
+          "Data Source (Schema)": "HANA_P2, HANA_P3"
         },
         {
-          "Vendor Name (NAME1)": "Siddharth  Kumar",
-          "ML Cluster ID": 3,
-          "Vendor Risk Probability": 0.962,
-          "Risk Category": "Critical Risk",
-          "Total PO Net Spend (NETWR)": 0,
-          "Predicted Risk Exception": 1,
-          "Company Code (BUKRS)": 1000,
-          "Company Name (BUTXT)": "J.K. CEMENT LIMITED"
+          "Vendor (LIFNR)": "1001333",
+          "Vendor Name (NAME1)": "NIRMAL SHARMA",
+          "Vendor City (ORT01)": "HARYANA",
+          "Vendor Risk Probability": 0.9603,
+          "Risk Category": "High Risk",
+          "Total PO Net Spend (NETWR)": 0.0,
+          "Predicted Risk Exception": 1.0,
+          "Data Source (Schema)": "HANA_P2, HANA_P3"
         },
         {
-          "Vendor Name (NAME1)": "Suraj  Kumar Choudhary",
-          "ML Cluster ID": 3,
-          "Vendor Risk Probability": 0.962,
-          "Risk Category": "Critical Risk",
-          "Total PO Net Spend (NETWR)": 0,
-          "Predicted Risk Exception": 1,
-          "Company Code (BUKRS)": 1000,
-          "Company Name (BUTXT)": "J.K. CEMENT LIMITED"
+          "Vendor (LIFNR)": "1001564",
+          "Vendor Name (NAME1)": "UPENDER TRIPATHI",
+          "Vendor City (ORT01)": "UTTAR PRADESH",
+          "Vendor Risk Probability": 0.9603,
+          "Risk Category": "High Risk",
+          "Total PO Net Spend (NETWR)": 0.0,
+          "Predicted Risk Exception": 1.0,
+          "Data Source (Schema)": "HANA_P2, HANA_P3"
         },
         {
-          "Vendor Name (NAME1)": "Kamrul   Mirza",
-          "ML Cluster ID": 3,
-          "Vendor Risk Probability": 0.962,
-          "Risk Category": "Critical Risk",
-          "Total PO Net Spend (NETWR)": 0,
-          "Predicted Risk Exception": 1,
-          "Company Code (BUKRS)": 1000,
-          "Company Name (BUTXT)": "J.K. CEMENT LIMITED"
+          "Vendor (LIFNR)": "1001835",
+          "Vendor Name (NAME1)": "A JOHN BRITTO",
+          "Vendor City (ORT01)": "Madras",
+          "Vendor Risk Probability": 0.9603,
+          "Risk Category": "High Risk",
+          "Total PO Net Spend (NETWR)": 0.0,
+          "Predicted Risk Exception": 1.0,
+          "Data Source (Schema)": "HANA_P2, HANA_P3"
         },
         {
-          "Vendor Name (NAME1)": "Mr  BUDHI PRAKASH  B",
-          "ML Cluster ID": 3,
-          "Vendor Risk Probability": 0.962,
-          "Risk Category": "Critical Risk",
-          "Total PO Net Spend (NETWR)": 0,
-          "Predicted Risk Exception": 1,
-          "Company Code (BUKRS)": 1000,
-          "Company Name (BUTXT)": "J.K. CEMENT LIMITED"
+          "Vendor (LIFNR)": "1002349",
+          "Vendor Name (NAME1)": "CHANDAN SRIVASTAVA",
+          "Vendor City (ORT01)": "MEERUT",
+          "Vendor Risk Probability": 0.9603,
+          "Risk Category": "High Risk",
+          "Total PO Net Spend (NETWR)": 0.0,
+          "Predicted Risk Exception": 1.0,
+          "Data Source (Schema)": "HANA_P2, HANA_P3"
         },
         {
-          "Vendor Name (NAME1)": "Kapil",
-          "ML Cluster ID": 3,
-          "Vendor Risk Probability": 0.962,
-          "Risk Category": "Critical Risk",
-          "Total PO Net Spend (NETWR)": 0,
-          "Predicted Risk Exception": 1,
-          "Company Code (BUKRS)": 1000,
-          "Company Name (BUTXT)": "J.K. CEMENT LIMITED"
+          "Vendor (LIFNR)": "13000256",
+          "Vendor Name (NAME1)": "PRAVIN KUMAR SANTHANAVEL",
+          "Vendor City (ORT01)": "CHENNAI",
+          "Vendor Risk Probability": 0.9603,
+          "Risk Category": "High Risk",
+          "Total PO Net Spend (NETWR)": 0.0,
+          "Predicted Risk Exception": 1.0,
+          "Data Source (Schema)": "HANA_P2, HANA_P3"
         },
         {
-          "Vendor Name (NAME1)": "GAURAV KUSHWAH SO RA",
-          "ML Cluster ID": 3,
-          "Vendor Risk Probability": 0.962,
-          "Risk Category": "Critical Risk",
-          "Total PO Net Spend (NETWR)": 0,
-          "Predicted Risk Exception": 1,
-          "Company Code (BUKRS)": 1000,
-          "Company Name (BUTXT)": "J.K. CEMENT LIMITED"
+          "Vendor (LIFNR)": "13000420",
+          "Vendor Name (NAME1)": "ASHUTOSH UPADHAYAY",
+          "Vendor City (ORT01)": "MUMBAI",
+          "Vendor Risk Probability": 0.9603,
+          "Risk Category": "High Risk",
+          "Total PO Net Spend (NETWR)": 0.0,
+          "Predicted Risk Exception": 1.0,
+          "Data Source (Schema)": "HANA_P2, HANA_P3"
         },
         {
-          "Vendor Name (NAME1)": "kummari  ramaiah",
-          "ML Cluster ID": 3,
-          "Vendor Risk Probability": 0.962,
-          "Risk Category": "Critical Risk",
-          "Total PO Net Spend (NETWR)": 0,
-          "Predicted Risk Exception": 1,
-          "Company Code (BUKRS)": 1000,
-          "Company Name (BUTXT)": "J.K. CEMENT LIMITED"
+          "Vendor (LIFNR)": "13000435",
+          "Vendor Name (NAME1)": "RAHUL JAIN",
+          "Vendor City (ORT01)": "MADHYA PRADESH",
+          "Vendor Risk Probability": 0.9603,
+          "Risk Category": "High Risk",
+          "Total PO Net Spend (NETWR)": 0.0,
+          "Predicted Risk Exception": 1.0,
+          "Data Source (Schema)": "HANA_P2, HANA_P3"
         },
         {
-          "Vendor Name (NAME1)": "Pawan  Kumar",
-          "ML Cluster ID": 3,
-          "Vendor Risk Probability": 0.962,
-          "Risk Category": "Critical Risk",
-          "Total PO Net Spend (NETWR)": 0,
-          "Predicted Risk Exception": 1,
-          "Company Code (BUKRS)": 1000,
-          "Company Name (BUTXT)": "J.K. CEMENT LIMITED"
+          "Vendor (LIFNR)": "13001052",
+          "Vendor Name (NAME1)": "ASHUTOSH KUMAR JHA",
+          "Vendor City (ORT01)": "GHAZIABAD",
+          "Vendor Risk Probability": 0.9603,
+          "Risk Category": "High Risk",
+          "Total PO Net Spend (NETWR)": 0.0,
+          "Predicted Risk Exception": 1.0,
+          "Data Source (Schema)": "HANA_P2, HANA_P3"
         },
         {
-          "Vendor Name (NAME1)": "Meraj Ali",
-          "ML Cluster ID": 3,
-          "Vendor Risk Probability": 0.962,
-          "Risk Category": "Critical Risk",
-          "Total PO Net Spend (NETWR)": 0,
-          "Predicted Risk Exception": 1,
-          "Company Code (BUKRS)": 1000,
-          "Company Name (BUTXT)": "J.K. CEMENT LIMITED"
+          "Vendor (LIFNR)": "13001298",
+          "Vendor Name (NAME1)": "ASHOK KUMAR",
+          "Vendor City (ORT01)": "BIKANER",
+          "Vendor Risk Probability": 0.9603,
+          "Risk Category": "High Risk",
+          "Total PO Net Spend (NETWR)": 0.0,
+          "Predicted Risk Exception": 1.0,
+          "Data Source (Schema)": "HANA_P2, HANA_P3"
         },
         {
-          "Vendor Name (NAME1)": "Hamid  Ali",
-          "ML Cluster ID": 3,
-          "Vendor Risk Probability": 0.962,
-          "Risk Category": "Critical Risk",
-          "Total PO Net Spend (NETWR)": 0,
-          "Predicted Risk Exception": 1,
-          "Company Code (BUKRS)": 1000,
-          "Company Name (BUTXT)": "J.K. CEMENT LIMITED"
+          "Vendor (LIFNR)": "13001389",
+          "Vendor Name (NAME1)": "ASHISH PANDEY",
+          "Vendor City (ORT01)": "DELHI",
+          "Vendor Risk Probability": 0.9603,
+          "Risk Category": "High Risk",
+          "Total PO Net Spend (NETWR)": 0.0,
+          "Predicted Risk Exception": 1.0,
+          "Data Source (Schema)": "HANA_P2, HANA_P3"
         },
         {
-          "Vendor Name (NAME1)": "Mr. Dev Singh",
-          "ML Cluster ID": 3,
-          "Vendor Risk Probability": 0.962,
-          "Risk Category": "Critical Risk",
-          "Total PO Net Spend (NETWR)": 0,
-          "Predicted Risk Exception": 1,
-          "Company Code (BUKRS)": 1000,
-          "Company Name (BUTXT)": "J.K. CEMENT LIMITED"
+          "Vendor (LIFNR)": "13001405",
+          "Vendor Name (NAME1)": "R Nandha Kumar",
+          "Vendor City (ORT01)": "Vellore",
+          "Vendor Risk Probability": 0.9603,
+          "Risk Category": "High Risk",
+          "Total PO Net Spend (NETWR)": 0.0,
+          "Predicted Risk Exception": 1.0,
+          "Data Source (Schema)": "HANA_P2, HANA_P3"
         },
         {
-          "Vendor Name (NAME1)": "Mr MANGAL SINGH SAR",
-          "ML Cluster ID": 3,
-          "Vendor Risk Probability": 0.962,
-          "Risk Category": "Critical Risk",
-          "Total PO Net Spend (NETWR)": 0,
-          "Predicted Risk Exception": 1,
-          "Company Code (BUKRS)": 1000,
-          "Company Name (BUTXT)": "J.K. CEMENT LIMITED"
+          "Vendor (LIFNR)": "13001824",
+          "Vendor Name (NAME1)": "ASHISH GUPTA",
+          "Vendor City (ORT01)": "SATNA",
+          "Vendor Risk Probability": 0.9603,
+          "Risk Category": "High Risk",
+          "Total PO Net Spend (NETWR)": 0.0,
+          "Predicted Risk Exception": 1.0,
+          "Data Source (Schema)": "HANA_P2, HANA_P3"
         },
         {
-          "Vendor Name (NAME1)": "Ganesh  Bairwa",
-          "ML Cluster ID": 3,
-          "Vendor Risk Probability": 0.962,
-          "Risk Category": "Critical Risk",
-          "Total PO Net Spend (NETWR)": 0,
-          "Predicted Risk Exception": 1,
-          "Company Code (BUKRS)": 1000,
-          "Company Name (BUTXT)": "J.K. CEMENT LIMITED"
+          "Vendor (LIFNR)": "13002677",
+          "Vendor Name (NAME1)": "AMIR AZEEM",
+          "Vendor City (ORT01)": "GONDA",
+          "Vendor Risk Probability": 0.9603,
+          "Risk Category": "High Risk",
+          "Total PO Net Spend (NETWR)": 0.0,
+          "Predicted Risk Exception": 1.0,
+          "Data Source (Schema)": "HANA_P2, HANA_P3"
         },
         {
-          "Vendor Name (NAME1)": "Suraj  Kumar Mandal",
-          "ML Cluster ID": 3,
-          "Vendor Risk Probability": 0.962,
-          "Risk Category": "Critical Risk",
-          "Total PO Net Spend (NETWR)": 0,
-          "Predicted Risk Exception": 1,
-          "Company Code (BUKRS)": 1000,
-          "Company Name (BUTXT)": "J.K. CEMENT LIMITED"
+          "Vendor (LIFNR)": "13002783",
+          "Vendor Name (NAME1)": "MONTU BAROT",
+          "Vendor City (ORT01)": "GUJARAT",
+          "Vendor Risk Probability": 0.9603,
+          "Risk Category": "High Risk",
+          "Total PO Net Spend (NETWR)": 0.0,
+          "Predicted Risk Exception": 1.0,
+          "Data Source (Schema)": "HANA_P2, HANA_P3"
         },
         {
-          "Vendor Name (NAME1)": "AkashThakur",
-          "ML Cluster ID": 3,
-          "Vendor Risk Probability": 0.962,
-          "Risk Category": "Critical Risk",
-          "Total PO Net Spend (NETWR)": 0,
-          "Predicted Risk Exception": 1,
-          "Company Code (BUKRS)": 1000,
-          "Company Name (BUTXT)": "J.K. CEMENT LIMITED"
+          "Vendor (LIFNR)": "13002882",
+          "Vendor Name (NAME1)": "SANDEEP KUMAR",
+          "Vendor City (ORT01)": "ANOOPGARH",
+          "Vendor Risk Probability": 0.9603,
+          "Risk Category": "High Risk",
+          "Total PO Net Spend (NETWR)": 0.0,
+          "Predicted Risk Exception": 1.0,
+          "Data Source (Schema)": "HANA_P2, HANA_P3"
         }
       ],
       "advanced_ml": {
         "confusion_matrix": {
-          "tp": 18980,
-          "fp": 0,
-          "fn": 6020,
-          "tn": 0,
-          "precision": 1.0,
+          "tp": 90299,
+          "fp": 53854,
+          "fn": 28594,
+          "tn": 749937,
+          "precision": 0.626,
           "recall": 0.759,
-          "f1": 0.863,
-          "accuracy": 0.759
+          "f1": 0.687,
+          "accuracy": 0.911
         },
         "threshold_curve": {
           "thresholds": [
@@ -10499,12 +10351,12 @@ window.PORTFOLIO_DATA = {
             0.382,
             0.441,
             0.494,
-            0.543,
-            0.59,
-            0.635,
-            0.679,
+            0.544,
+            0.591,
+            0.636,
+            0.68,
             0.722,
-            0.763
+            0.764
           ],
           "recall": [
             0.962,
@@ -10515,18 +10367,18 @@ window.PORTFOLIO_DATA = {
             0.612,
             0.526,
             0.436,
-            0.342
+            0.343
           ],
           "f1": [
             0.547,
-            0.593,
-            0.622,
-            0.637,
-            0.638,
+            0.594,
             0.623,
+            0.638,
+            0.638,
+            0.624,
             0.593,
-            0.543,
-            0.472
+            0.544,
+            0.473
           ]
         },
         "probability_distribution": {
@@ -10543,40 +10395,40 @@ window.PORTFOLIO_DATA = {
             "0.9"
           ],
           "clean_count": [
-            100,
-            100,
-            100,
-            100,
-            100,
-            100,
-            100,
-            100,
-            100,
-            100
+            262477,
+            167363,
+            106715,
+            68044,
+            43387,
+            27664,
+            17639,
+            11247,
+            7171,
+            4572
           ],
           "exception_count": [
-            949,
-            1476,
-            2003,
-            2530,
-            3057,
-            3585,
-            4112,
-            4639,
-            5166,
-            5694
+            4514,
+            7023,
+            9531,
+            12039,
+            14548,
+            17056,
+            19564,
+            22073,
+            24581,
+            27089
           ],
           "total_count": [
-            1049,
-            1576,
-            2103,
-            2630,
-            3157,
-            3685,
-            4212,
-            4739,
-            5266,
-            5794
+            266991,
+            174386,
+            116246,
+            80083,
+            57935,
+            44720,
+            37203,
+            33320,
+            31752,
+            31661
           ]
         },
         "calibration_curve": {
@@ -10658,90 +10510,90 @@ window.PORTFOLIO_DATA = {
         "MAKT",
         "T023T"
       ],
-      "total_records": 25000,
-      "exceptions_count": 5762,
-      "exception_rate_pct": 23.05,
-      "financial_exposure_inr": 968900000.0,
-      "financial_exposure_cr": 96.89,
-      "avg_confidence_score": 0.835,
-      "champion_model": "NLP TF-IDF + Logistic Ensemble",
-      "champion_metric": "0.8350 ROC-AUC",
+      "total_records": 1048569,
+      "exceptions_count": 285871,
+      "exception_rate_pct": 27.26,
+      "financial_exposure_inr": 7228839751.75,
+      "financial_exposure_cr": 722.88,
+      "avg_confidence_score": 0.435,
+      "champion_model": "Sentence Transformer NLP & Softmax",
+      "champion_metric": "0.9320 Confidence",
       "risk_distribution": {
-        "Critical": 2296,
-        "High": 2213,
-        "Medium": 4288,
-        "Low": 16203
+        "Critical": 153040,
+        "High": 132356,
+        "Medium": 156743,
+        "Low": 606430
       },
       "category_breakdown": [
         {
           "label": "1001",
-          "count": 13865
+          "count": 282678
         },
         {
           "label": "1004",
-          "count": 5955
-        },
-        {
-          "label": "3006",
-          "count": 1050
+          "count": 167505
         },
         {
           "label": "1901",
-          "count": 910
+          "count": 105318
+        },
+        {
+          "label": "2001",
+          "count": 86356
         },
         {
           "label": "1015",
-          "count": 605
-        },
-        {
-          "label": "7001",
-          "count": 595
+          "count": 77608
         },
         {
           "label": "1006",
-          "count": 505
+          "count": 73803
+        },
+        {
+          "label": "7001",
+          "count": 43955
         }
       ],
       "feature_importance": [
         {
-          "feature": "feature",
-          "importance": 0,
-          "description": "Direct Mathematical Influence On Material Auto Classification & Taxonomy:"
-        },
-        {
           "feature": "nlp_misclassification_risk_index",
-          "importance": 0.2708,
-          "description": "(Composite Material Misclassification & Ambiguity Risk Index [0-100], defined as 100 - nlp_classification_confidence_score)"
+          "importance": 0.254,
+          "description": "Nlp Misclassification Risk Index"
         },
         {
           "feature": "nlp_classification_confidence_score",
-          "importance": 0.2593,
-          "description": "(Composite NLP Material Auto-Classification Confidence Score [0-100] combining Text Clarity 34%, Semantic Confidence 36%, and Taxonomy Alignment 30%)"
+          "importance": 0.2462,
+          "description": "Nlp Classification Confidence Score"
         },
         {
           "feature": "text_clarity_score",
-          "importance": 0.073,
-          "description": "(Normalized Material Description Clarity & Specification Completeness Score [0-100] from MAKT-MAKTX length, word count, dimensional specs, and TF-IDF richness)"
-        },
-        {
-          "feature": "semantic_confidence_score",
-          "importance": 0.0714,
-          "description": "(Normalized NLP Semantic Domain Classification Confidence [0-100] measuring dominant taxonomy affinity and category margin)"
-        },
-        {
-          "feature": "desc_word_count",
-          "importance": 0.0537,
-          "description": "(Count of distinct alphanumeric word tokens in SAP Material Description MAKT-MAKTX)"
+          "importance": 0.0787,
+          "description": "Text Clarity Score"
         },
         {
           "feature": "is_nlp_mtart_conflict",
-          "importance": 0.0437,
-          "description": "(Binary indicator = 1 when NLP semantic domain extracted from MAKTX conflicts with assigned SAP Material Type MARA-MTART)"
+          "importance": 0.067,
+          "description": "Is Nlp Mtart Conflict"
         },
         {
           "feature": "taxonomy_alignment_score",
-          "importance": 0.0361,
-          "description": "(Normalized Master Taxonomy Alignment Score [0-100] measuring agreement between NLP-inferred class from MAKTX and SAP MTART/MATKL/EKPO-MATKL)"
+          "importance": 0.0628,
+          "description": "Taxonomy Alignment Score"
+        },
+        {
+          "feature": "dup_desc_diff_matkl_count",
+          "importance": 0.0622,
+          "description": "Dup Desc Diff Matkl Count"
+        },
+        {
+          "feature": "desc_word_count",
+          "importance": 0.0502,
+          "description": "Desc Word Count"
+        },
+        {
+          "feature": "desc_char_length",
+          "importance": 0.0375,
+          "description": "Desc Char Length"
         }
       ],
       "model_rankings": [],
@@ -10753,520 +10605,520 @@ window.PORTFOLIO_DATA = {
         "Risk Category",
         "Total Stock Value (SALK3)",
         "Predicted Classification Exception",
-        "Company Code (BUKRS)"
+        "Schema Source"
       ],
       "sample_records": [
         {
-          "Material Number (MATNR)": "540244",
-          "Material Description (MAKTX)": "SHRINK DISC",
-          "Plant (WERKS)": 1001,
-          "Classification Exception Prob": 0.9623,
-          "Risk Category": "Critical Risk",
-          "Total Stock Value (SALK3)": 14700.0,
-          "Predicted Classification Exception": 1,
-          "Company Code (BUKRS)": 1000
-        },
-        {
-          "Material Number (MATNR)": "86010302",
-          "Material Description (MAKTX)": "TO BE USE LATER",
-          "Plant (WERKS)": 1901,
-          "Classification Exception Prob": 0.9619,
-          "Risk Category": "Critical Risk",
-          "Total Stock Value (SALK3)": 6700.0,
-          "Predicted Classification Exception": 1,
-          "Company Code (BUKRS)": 1000
-        },
-        {
-          "Material Number (MATNR)": "572978",
-          "Material Description (MAKTX)": "WEAR PLATE",
-          "Plant (WERKS)": 1001,
-          "Classification Exception Prob": 0.9615,
-          "Risk Category": "Critical Risk",
-          "Total Stock Value (SALK3)": 115200.0,
-          "Predicted Classification Exception": 1,
-          "Company Code (BUKRS)": 1000
-        },
-        {
-          "Material Number (MATNR)": "572981",
-          "Material Description (MAKTX)": "WEAR PLATE",
-          "Plant (WERKS)": 1001,
-          "Classification Exception Prob": 0.9615,
-          "Risk Category": "Critical Risk",
-          "Total Stock Value (SALK3)": 32400.0,
-          "Predicted Classification Exception": 1,
-          "Company Code (BUKRS)": 1000
-        },
-        {
-          "Material Number (MATNR)": "572979",
-          "Material Description (MAKTX)": "WEAR PLATE",
-          "Plant (WERKS)": 1001,
-          "Classification Exception Prob": 0.9615,
-          "Risk Category": "Critical Risk",
-          "Total Stock Value (SALK3)": 18090.8,
-          "Predicted Classification Exception": 1,
-          "Company Code (BUKRS)": 1000
-        },
-        {
-          "Material Number (MATNR)": "572980",
-          "Material Description (MAKTX)": "WEAR PLATE",
-          "Plant (WERKS)": 1001,
-          "Classification Exception Prob": 0.9615,
-          "Risk Category": "Critical Risk",
-          "Total Stock Value (SALK3)": 13375.04,
-          "Predicted Classification Exception": 1,
-          "Company Code (BUKRS)": 1000
-        },
-        {
-          "Material Number (MATNR)": "596174",
-          "Material Description (MAKTX)": "CHAIN LINK",
-          "Plant (WERKS)": 1004,
+          "Material Number (MATNR)": "627786",
+          "Material Description (MAKTX)": "FTA CPVC",
+          "Plant (WERKS)": "1004",
           "Classification Exception Prob": 0.9615,
           "Risk Category": "Critical Risk",
           "Total Stock Value (SALK3)": 0.0,
-          "Predicted Classification Exception": 1,
-          "Company Code (BUKRS)": 1000
+          "Predicted Classification Exception": 1.0,
+          "Schema Source": "HANA_P3"
         },
         {
-          "Material Number (MATNR)": "632613",
-          "Material Description (MAKTX)": "DIRECTION CONTROL VALVE",
-          "Plant (WERKS)": 1001,
+          "Material Number (MATNR)": "627786",
+          "Material Description (MAKTX)": "FTA CPVC",
+          "Plant (WERKS)": "1004",
           "Classification Exception Prob": 0.9615,
           "Risk Category": "Critical Risk",
-          "Total Stock Value (SALK3)": 13982.5,
-          "Predicted Classification Exception": 1,
-          "Company Code (BUKRS)": 1000
+          "Total Stock Value (SALK3)": 0.0,
+          "Predicted Classification Exception": 1.0,
+          "Schema Source": "HANA_P3"
         },
         {
-          "Material Number (MATNR)": "630326",
-          "Material Description (MAKTX)": "DIRECTION CONTROL VALVE",
-          "Plant (WERKS)": 1001,
+          "Material Number (MATNR)": "627786",
+          "Material Description (MAKTX)": "FTA CPVC",
+          "Plant (WERKS)": "1004",
           "Classification Exception Prob": 0.9615,
           "Risk Category": "Critical Risk",
-          "Total Stock Value (SALK3)": 73800.0,
-          "Predicted Classification Exception": 1,
-          "Company Code (BUKRS)": 1000
+          "Total Stock Value (SALK3)": 0.0,
+          "Predicted Classification Exception": 1.0,
+          "Schema Source": "HANA_P3"
         },
         {
-          "Material Number (MATNR)": "540991",
-          "Material Description (MAKTX)": "PLATE ORIFICE",
-          "Plant (WERKS)": 1001,
-          "Classification Exception Prob": 0.9609,
-          "Risk Category": "Critical Risk",
-          "Total Stock Value (SALK3)": 4457.0,
-          "Predicted Classification Exception": 1,
-          "Company Code (BUKRS)": 1000
-        },
-        {
-          "Material Number (MATNR)": "507365",
-          "Material Description (MAKTX)": "PLATE ORIFICE",
-          "Plant (WERKS)": 1001,
-          "Classification Exception Prob": 0.9609,
-          "Risk Category": "Critical Risk",
-          "Total Stock Value (SALK3)": 472.91,
-          "Predicted Classification Exception": 1,
-          "Company Code (BUKRS)": 1000
-        },
-        {
-          "Material Number (MATNR)": "507362",
-          "Material Description (MAKTX)": "PLATE ORIFICE",
-          "Plant (WERKS)": 1001,
-          "Classification Exception Prob": 0.9609,
-          "Risk Category": "Critical Risk",
-          "Total Stock Value (SALK3)": 401.0,
-          "Predicted Classification Exception": 1,
-          "Company Code (BUKRS)": 1000
-        },
-        {
-          "Material Number (MATNR)": "507363",
-          "Material Description (MAKTX)": "PLATE ORIFICE",
-          "Plant (WERKS)": 1001,
-          "Classification Exception Prob": 0.9609,
-          "Risk Category": "Critical Risk",
-          "Total Stock Value (SALK3)": 401.0,
-          "Predicted Classification Exception": 1,
-          "Company Code (BUKRS)": 1000
-        },
-        {
-          "Material Number (MATNR)": "507364",
-          "Material Description (MAKTX)": "PLATE ORIFICE",
-          "Plant (WERKS)": 1001,
-          "Classification Exception Prob": 0.9609,
-          "Risk Category": "Critical Risk",
-          "Total Stock Value (SALK3)": 401.0,
-          "Predicted Classification Exception": 1,
-          "Company Code (BUKRS)": 1000
-        },
-        {
-          "Material Number (MATNR)": "573089",
-          "Material Description (MAKTX)": "FOUNDATION BOLT",
-          "Plant (WERKS)": 1001,
-          "Classification Exception Prob": 0.9603,
+          "Material Number (MATNR)": "627786",
+          "Material Description (MAKTX)": "FTA CPVC",
+          "Plant (WERKS)": "1004",
+          "Classification Exception Prob": 0.9615,
           "Risk Category": "Critical Risk",
           "Total Stock Value (SALK3)": 0.0,
-          "Predicted Classification Exception": 1,
-          "Company Code (BUKRS)": 1000
+          "Predicted Classification Exception": 1.0,
+          "Schema Source": "HANA_P3"
         },
         {
-          "Material Number (MATNR)": "520962",
-          "Material Description (MAKTX)": "TURCIDE",
-          "Plant (WERKS)": 1001,
-          "Classification Exception Prob": 0.9602,
+          "Material Number (MATNR)": "627786",
+          "Material Description (MAKTX)": "FTA CPVC",
+          "Plant (WERKS)": "1004",
+          "Classification Exception Prob": 0.9615,
           "Risk Category": "Critical Risk",
           "Total Stock Value (SALK3)": 0.0,
-          "Predicted Classification Exception": 1,
-          "Company Code (BUKRS)": 1000
+          "Predicted Classification Exception": 1.0,
+          "Schema Source": "HANA_P2"
         },
         {
-          "Material Number (MATNR)": "400038",
-          "Material Description (MAKTX)": "FLF 1 KG",
-          "Plant (WERKS)": 1015,
-          "Classification Exception Prob": 0.9601,
-          "Risk Category": "Critical Risk",
-          "Total Stock Value (SALK3)": 7588707.32,
-          "Predicted Classification Exception": 1,
-          "Company Code (BUKRS)": 1000
-        },
-        {
-          "Material Number (MATNR)": "400037",
-          "Material Description (MAKTX)": "FLF 5 KG",
-          "Plant (WERKS)": 1015,
-          "Classification Exception Prob": 0.9601,
-          "Risk Category": "Critical Risk",
-          "Total Stock Value (SALK3)": 4970225.71,
-          "Predicted Classification Exception": 1,
-          "Company Code (BUKRS)": 1000
-        },
-        {
-          "Material Number (MATNR)": "509500",
-          "Material Description (MAKTX)": "WASHER PLAIN",
-          "Plant (WERKS)": 1001,
-          "Classification Exception Prob": 0.9601,
+          "Material Number (MATNR)": "625311",
+          "Material Description (MAKTX)": "XALOY 52",
+          "Plant (WERKS)": "1025",
+          "Classification Exception Prob": 0.9615,
           "Risk Category": "Critical Risk",
           "Total Stock Value (SALK3)": 0.0,
-          "Predicted Classification Exception": 1,
-          "Company Code (BUKRS)": 1000
+          "Predicted Classification Exception": 1.0,
+          "Schema Source": "HANA_P2"
         },
         {
-          "Material Number (MATNR)": "509505",
-          "Material Description (MAKTX)": "WASHER PLAIN",
-          "Plant (WERKS)": 1001,
-          "Classification Exception Prob": 0.9601,
+          "Material Number (MATNR)": "631264",
+          "Material Description (MAKTX)": "DENOL-CS",
+          "Plant (WERKS)": "1001",
+          "Classification Exception Prob": 0.9615,
           "Risk Category": "Critical Risk",
           "Total Stock Value (SALK3)": 0.0,
-          "Predicted Classification Exception": 1,
-          "Company Code (BUKRS)": 1000
+          "Predicted Classification Exception": 1.0,
+          "Schema Source": "HANA_P2"
         },
         {
-          "Material Number (MATNR)": "F620587",
-          "Material Description (MAKTX)": "UNION UPVC",
-          "Plant (WERKS)": 1015,
-          "Classification Exception Prob": 0.9595,
+          "Material Number (MATNR)": "625311",
+          "Material Description (MAKTX)": "XALOY 52",
+          "Plant (WERKS)": "1025",
+          "Classification Exception Prob": 0.9615,
+          "Risk Category": "Critical Risk",
+          "Total Stock Value (SALK3)": 0.0,
+          "Predicted Classification Exception": 1.0,
+          "Schema Source": "HANA_P3"
+        },
+        {
+          "Material Number (MATNR)": "625311",
+          "Material Description (MAKTX)": "XALOY 52",
+          "Plant (WERKS)": "1025",
+          "Classification Exception Prob": 0.9615,
+          "Risk Category": "Critical Risk",
+          "Total Stock Value (SALK3)": 0.0,
+          "Predicted Classification Exception": 1.0,
+          "Schema Source": "HANA_P3"
+        },
+        {
+          "Material Number (MATNR)": "625311",
+          "Material Description (MAKTX)": "XALOY 52",
+          "Plant (WERKS)": "1025",
+          "Classification Exception Prob": 0.9615,
+          "Risk Category": "Critical Risk",
+          "Total Stock Value (SALK3)": 0.0,
+          "Predicted Classification Exception": 1.0,
+          "Schema Source": "HANA_P3"
+        },
+        {
+          "Material Number (MATNR)": "625311",
+          "Material Description (MAKTX)": "XALOY 52",
+          "Plant (WERKS)": "1025",
+          "Classification Exception Prob": 0.9615,
+          "Risk Category": "Critical Risk",
+          "Total Stock Value (SALK3)": 0.0,
+          "Predicted Classification Exception": 1.0,
+          "Schema Source": "HANA_P3"
+        },
+        {
+          "Material Number (MATNR)": "631264",
+          "Material Description (MAKTX)": "DENOL-CS",
+          "Plant (WERKS)": "1001",
+          "Classification Exception Prob": 0.9615,
+          "Risk Category": "Critical Risk",
+          "Total Stock Value (SALK3)": 0.0,
+          "Predicted Classification Exception": 1.0,
+          "Schema Source": "HANA_P3"
+        },
+        {
+          "Material Number (MATNR)": "631264",
+          "Material Description (MAKTX)": "DENOL-CS",
+          "Plant (WERKS)": "1001",
+          "Classification Exception Prob": 0.9615,
+          "Risk Category": "Critical Risk",
+          "Total Stock Value (SALK3)": 0.0,
+          "Predicted Classification Exception": 1.0,
+          "Schema Source": "HANA_P3"
+        },
+        {
+          "Material Number (MATNR)": "631264",
+          "Material Description (MAKTX)": "DENOL-CS",
+          "Plant (WERKS)": "1001",
+          "Classification Exception Prob": 0.9615,
+          "Risk Category": "Critical Risk",
+          "Total Stock Value (SALK3)": 0.0,
+          "Predicted Classification Exception": 1.0,
+          "Schema Source": "HANA_P3"
+        },
+        {
+          "Material Number (MATNR)": "631264",
+          "Material Description (MAKTX)": "DENOL-CS",
+          "Plant (WERKS)": "1001",
+          "Classification Exception Prob": 0.9615,
+          "Risk Category": "Critical Risk",
+          "Total Stock Value (SALK3)": 0.0,
+          "Predicted Classification Exception": 1.0,
+          "Schema Source": "HANA_P3"
+        },
+        {
+          "Material Number (MATNR)": "86013354",
+          "Material Description (MAKTX)": "OIL LEVEL GAUGE",
+          "Plant (WERKS)": "1015",
+          "Classification Exception Prob": 0.9614,
+          "Risk Category": "Critical Risk",
+          "Total Stock Value (SALK3)": 467.5,
+          "Predicted Classification Exception": 1.0,
+          "Schema Source": "HANA_P2"
+        },
+        {
+          "Material Number (MATNR)": "86013354",
+          "Material Description (MAKTX)": "OIL LEVEL GAUGE",
+          "Plant (WERKS)": "1015",
+          "Classification Exception Prob": 0.9614,
+          "Risk Category": "Critical Risk",
+          "Total Stock Value (SALK3)": 467.5,
+          "Predicted Classification Exception": 1.0,
+          "Schema Source": "HANA_P3"
+        },
+        {
+          "Material Number (MATNR)": "86013354",
+          "Material Description (MAKTX)": "OIL LEVEL GAUGE",
+          "Plant (WERKS)": "1015",
+          "Classification Exception Prob": 0.9614,
+          "Risk Category": "Critical Risk",
+          "Total Stock Value (SALK3)": 467.5,
+          "Predicted Classification Exception": 1.0,
+          "Schema Source": "HANA_P3"
+        },
+        {
+          "Material Number (MATNR)": "86013354",
+          "Material Description (MAKTX)": "OIL LEVEL GAUGE",
+          "Plant (WERKS)": "1015",
+          "Classification Exception Prob": 0.9614,
+          "Risk Category": "Critical Risk",
+          "Total Stock Value (SALK3)": 467.5,
+          "Predicted Classification Exception": 1.0,
+          "Schema Source": "HANA_P3"
+        },
+        {
+          "Material Number (MATNR)": "86013354",
+          "Material Description (MAKTX)": "OIL LEVEL GAUGE",
+          "Plant (WERKS)": "1015",
+          "Classification Exception Prob": 0.9614,
+          "Risk Category": "Critical Risk",
+          "Total Stock Value (SALK3)": 467.5,
+          "Predicted Classification Exception": 1.0,
+          "Schema Source": "HANA_P3"
+        },
+        {
+          "Material Number (MATNR)": "559017",
+          "Material Description (MAKTX)": "DUST CUP",
+          "Plant (WERKS)": "1015",
+          "Classification Exception Prob": 0.9614,
+          "Risk Category": "Critical Risk",
+          "Total Stock Value (SALK3)": 2965.14,
+          "Predicted Classification Exception": 1.0,
+          "Schema Source": "HANA_P2"
+        },
+        {
+          "Material Number (MATNR)": "559017",
+          "Material Description (MAKTX)": "DUST CUP",
+          "Plant (WERKS)": "1015",
+          "Classification Exception Prob": 0.9614,
+          "Risk Category": "Critical Risk",
+          "Total Stock Value (SALK3)": 2965.14,
+          "Predicted Classification Exception": 1.0,
+          "Schema Source": "HANA_P3"
+        },
+        {
+          "Material Number (MATNR)": "559017",
+          "Material Description (MAKTX)": "DUST CUP",
+          "Plant (WERKS)": "1015",
+          "Classification Exception Prob": 0.9614,
+          "Risk Category": "Critical Risk",
+          "Total Stock Value (SALK3)": 2965.14,
+          "Predicted Classification Exception": 1.0,
+          "Schema Source": "HANA_P3"
+        },
+        {
+          "Material Number (MATNR)": "559017",
+          "Material Description (MAKTX)": "DUST CUP",
+          "Plant (WERKS)": "1015",
+          "Classification Exception Prob": 0.9614,
+          "Risk Category": "Critical Risk",
+          "Total Stock Value (SALK3)": 2965.14,
+          "Predicted Classification Exception": 1.0,
+          "Schema Source": "HANA_P3"
+        },
+        {
+          "Material Number (MATNR)": "559017",
+          "Material Description (MAKTX)": "DUST CUP",
+          "Plant (WERKS)": "1015",
+          "Classification Exception Prob": 0.9614,
+          "Risk Category": "Critical Risk",
+          "Total Stock Value (SALK3)": 2965.14,
+          "Predicted Classification Exception": 1.0,
+          "Schema Source": "HANA_P3"
+        },
+        {
+          "Material Number (MATNR)": "F538364",
+          "Material Description (MAKTX)": "SHIMS MS",
+          "Plant (WERKS)": "2001",
+          "Classification Exception Prob": 0.9614,
+          "Risk Category": "Critical Risk",
+          "Total Stock Value (SALK3)": 0.0,
+          "Predicted Classification Exception": 1.0,
+          "Schema Source": "HANA_P2"
+        },
+        {
+          "Material Number (MATNR)": "F538365",
+          "Material Description (MAKTX)": "SHIMS MS",
+          "Plant (WERKS)": "2001",
+          "Classification Exception Prob": 0.9614,
+          "Risk Category": "Critical Risk",
+          "Total Stock Value (SALK3)": 0.0,
+          "Predicted Classification Exception": 1.0,
+          "Schema Source": "HANA_P2"
+        },
+        {
+          "Material Number (MATNR)": "F538366",
+          "Material Description (MAKTX)": "SHIMS MS",
+          "Plant (WERKS)": "2001",
+          "Classification Exception Prob": 0.9614,
+          "Risk Category": "Critical Risk",
+          "Total Stock Value (SALK3)": 0.0,
+          "Predicted Classification Exception": 1.0,
+          "Schema Source": "HANA_P2"
+        },
+        {
+          "Material Number (MATNR)": "F538364",
+          "Material Description (MAKTX)": "SHIMS MS",
+          "Plant (WERKS)": "2001",
+          "Classification Exception Prob": 0.9614,
+          "Risk Category": "Critical Risk",
+          "Total Stock Value (SALK3)": 0.0,
+          "Predicted Classification Exception": 1.0,
+          "Schema Source": "HANA_P3"
+        },
+        {
+          "Material Number (MATNR)": "F538364",
+          "Material Description (MAKTX)": "SHIMS MS",
+          "Plant (WERKS)": "2001",
+          "Classification Exception Prob": 0.9614,
+          "Risk Category": "Critical Risk",
+          "Total Stock Value (SALK3)": 0.0,
+          "Predicted Classification Exception": 1.0,
+          "Schema Source": "HANA_P3"
+        },
+        {
+          "Material Number (MATNR)": "F538364",
+          "Material Description (MAKTX)": "SHIMS MS",
+          "Plant (WERKS)": "2001",
+          "Classification Exception Prob": 0.9614,
+          "Risk Category": "Critical Risk",
+          "Total Stock Value (SALK3)": 0.0,
+          "Predicted Classification Exception": 1.0,
+          "Schema Source": "HANA_P3"
+        },
+        {
+          "Material Number (MATNR)": "F538364",
+          "Material Description (MAKTX)": "SHIMS MS",
+          "Plant (WERKS)": "2001",
+          "Classification Exception Prob": 0.9614,
+          "Risk Category": "Critical Risk",
+          "Total Stock Value (SALK3)": 0.0,
+          "Predicted Classification Exception": 1.0,
+          "Schema Source": "HANA_P3"
+        },
+        {
+          "Material Number (MATNR)": "F538365",
+          "Material Description (MAKTX)": "SHIMS MS",
+          "Plant (WERKS)": "2001",
+          "Classification Exception Prob": 0.9614,
+          "Risk Category": "Critical Risk",
+          "Total Stock Value (SALK3)": 0.0,
+          "Predicted Classification Exception": 1.0,
+          "Schema Source": "HANA_P3"
+        },
+        {
+          "Material Number (MATNR)": "F538365",
+          "Material Description (MAKTX)": "SHIMS MS",
+          "Plant (WERKS)": "2001",
+          "Classification Exception Prob": 0.9614,
+          "Risk Category": "Critical Risk",
+          "Total Stock Value (SALK3)": 0.0,
+          "Predicted Classification Exception": 1.0,
+          "Schema Source": "HANA_P3"
+        },
+        {
+          "Material Number (MATNR)": "F538365",
+          "Material Description (MAKTX)": "SHIMS MS",
+          "Plant (WERKS)": "2001",
+          "Classification Exception Prob": 0.9614,
+          "Risk Category": "Critical Risk",
+          "Total Stock Value (SALK3)": 0.0,
+          "Predicted Classification Exception": 1.0,
+          "Schema Source": "HANA_P3"
+        },
+        {
+          "Material Number (MATNR)": "F538365",
+          "Material Description (MAKTX)": "SHIMS MS",
+          "Plant (WERKS)": "2001",
+          "Classification Exception Prob": 0.9614,
+          "Risk Category": "Critical Risk",
+          "Total Stock Value (SALK3)": 0.0,
+          "Predicted Classification Exception": 1.0,
+          "Schema Source": "HANA_P3"
+        },
+        {
+          "Material Number (MATNR)": "F538366",
+          "Material Description (MAKTX)": "SHIMS MS",
+          "Plant (WERKS)": "2001",
+          "Classification Exception Prob": 0.9614,
+          "Risk Category": "Critical Risk",
+          "Total Stock Value (SALK3)": 0.0,
+          "Predicted Classification Exception": 1.0,
+          "Schema Source": "HANA_P3"
+        },
+        {
+          "Material Number (MATNR)": "F538366",
+          "Material Description (MAKTX)": "SHIMS MS",
+          "Plant (WERKS)": "2001",
+          "Classification Exception Prob": 0.9614,
+          "Risk Category": "Critical Risk",
+          "Total Stock Value (SALK3)": 0.0,
+          "Predicted Classification Exception": 1.0,
+          "Schema Source": "HANA_P3"
+        },
+        {
+          "Material Number (MATNR)": "F538366",
+          "Material Description (MAKTX)": "SHIMS MS",
+          "Plant (WERKS)": "2001",
+          "Classification Exception Prob": 0.9614,
+          "Risk Category": "Critical Risk",
+          "Total Stock Value (SALK3)": 0.0,
+          "Predicted Classification Exception": 1.0,
+          "Schema Source": "HANA_P3"
+        },
+        {
+          "Material Number (MATNR)": "F538366",
+          "Material Description (MAKTX)": "SHIMS MS",
+          "Plant (WERKS)": "2001",
+          "Classification Exception Prob": 0.9614,
+          "Risk Category": "Critical Risk",
+          "Total Stock Value (SALK3)": 0.0,
+          "Predicted Classification Exception": 1.0,
+          "Schema Source": "HANA_P3"
+        },
+        {
+          "Material Number (MATNR)": "P116335",
+          "Material Description (MAKTX)": "Stringer / Short Support",
+          "Plant (WERKS)": "",
+          "Classification Exception Prob": 0.9611,
           "Risk Category": "High Risk",
           "Total Stock Value (SALK3)": 0.0,
-          "Predicted Classification Exception": 1,
-          "Company Code (BUKRS)": 1000
+          "Predicted Classification Exception": 1.0,
+          "Schema Source": "HANA_P2"
         },
         {
-          "Material Number (MATNR)": "F620627",
-          "Material Description (MAKTX)": "UNION UPVC",
-          "Plant (WERKS)": 1015,
-          "Classification Exception Prob": 0.9595,
+          "Material Number (MATNR)": "P116335",
+          "Material Description (MAKTX)": "Stringer / Short Support",
+          "Plant (WERKS)": "",
+          "Classification Exception Prob": 0.9611,
           "Risk Category": "High Risk",
           "Total Stock Value (SALK3)": 0.0,
-          "Predicted Classification Exception": 1,
-          "Company Code (BUKRS)": 1000
+          "Predicted Classification Exception": 1.0,
+          "Schema Source": "HANA_P3"
         },
         {
-          "Material Number (MATNR)": "509495",
-          "Material Description (MAKTX)": "WASHER PLAIN",
-          "Plant (WERKS)": 1001,
-          "Classification Exception Prob": 0.9593,
-          "Risk Category": "Critical Risk",
-          "Total Stock Value (SALK3)": 0.0,
-          "Predicted Classification Exception": 1,
-          "Company Code (BUKRS)": 1000
-        },
-        {
-          "Material Number (MATNR)": "509490",
-          "Material Description (MAKTX)": "WASHER PLAIN",
-          "Plant (WERKS)": 1001,
-          "Classification Exception Prob": 0.9593,
-          "Risk Category": "Critical Risk",
-          "Total Stock Value (SALK3)": 0.0,
-          "Predicted Classification Exception": 1,
-          "Company Code (BUKRS)": 1000
-        },
-        {
-          "Material Number (MATNR)": "622581",
-          "Material Description (MAKTX)": "NON RETURN VALVE",
-          "Plant (WERKS)": 1001,
-          "Classification Exception Prob": 0.9591,
-          "Risk Category": "Critical Risk",
-          "Total Stock Value (SALK3)": 0.0,
-          "Predicted Classification Exception": 1,
-          "Company Code (BUKRS)": 1000
-        },
-        {
-          "Material Number (MATNR)": "520961",
-          "Material Description (MAKTX)": "TURCIDE",
-          "Plant (WERKS)": 1001,
-          "Classification Exception Prob": 0.9588,
-          "Risk Category": "Critical Risk",
-          "Total Stock Value (SALK3)": 0.0,
-          "Predicted Classification Exception": 1,
-          "Company Code (BUKRS)": 1000
-        },
-        {
-          "Material Number (MATNR)": "588085",
-          "Material Description (MAKTX)": "FOUNDATION BOLT",
-          "Plant (WERKS)": 1001,
-          "Classification Exception Prob": 0.9587,
-          "Risk Category": "Critical Risk",
-          "Total Stock Value (SALK3)": 0.0,
-          "Predicted Classification Exception": 1,
-          "Company Code (BUKRS)": 1000
-        },
-        {
-          "Material Number (MATNR)": "588086",
-          "Material Description (MAKTX)": "FOUNDATION BOLT",
-          "Plant (WERKS)": 1001,
-          "Classification Exception Prob": 0.9587,
-          "Risk Category": "Critical Risk",
-          "Total Stock Value (SALK3)": 0.0,
-          "Predicted Classification Exception": 1,
-          "Company Code (BUKRS)": 1000
-        },
-        {
-          "Material Number (MATNR)": "588087",
-          "Material Description (MAKTX)": "FOUNDATION BOLT",
-          "Plant (WERKS)": 1001,
-          "Classification Exception Prob": 0.9587,
-          "Risk Category": "Critical Risk",
-          "Total Stock Value (SALK3)": 0.0,
-          "Predicted Classification Exception": 1,
-          "Company Code (BUKRS)": 1000
-        },
-        {
-          "Material Number (MATNR)": "588088",
-          "Material Description (MAKTX)": "FOUNDATION BOLT",
-          "Plant (WERKS)": 1001,
-          "Classification Exception Prob": 0.9587,
-          "Risk Category": "Critical Risk",
-          "Total Stock Value (SALK3)": 0.0,
-          "Predicted Classification Exception": 1,
-          "Company Code (BUKRS)": 1000
-        },
-        {
-          "Material Number (MATNR)": "555736",
-          "Material Description (MAKTX)": "SHELL",
-          "Plant (WERKS)": 1001,
-          "Classification Exception Prob": 0.9586,
-          "Risk Category": "Critical Risk",
-          "Total Stock Value (SALK3)": 0.0,
-          "Predicted Classification Exception": 1,
-          "Company Code (BUKRS)": 1000
-        },
-        {
-          "Material Number (MATNR)": "508328",
-          "Material Description (MAKTX)": "LIFTER HRCS",
-          "Plant (WERKS)": 1001,
-          "Classification Exception Prob": 0.9584,
-          "Risk Category": "High Risk",
-          "Total Stock Value (SALK3)": 219473.1,
-          "Predicted Classification Exception": 1,
-          "Company Code (BUKRS)": 1000
-        },
-        {
-          "Material Number (MATNR)": "508326",
-          "Material Description (MAKTX)": "LIFTER HRCS",
-          "Plant (WERKS)": 1001,
-          "Classification Exception Prob": 0.9584,
+          "Material Number (MATNR)": "P116335",
+          "Material Description (MAKTX)": "Stringer / Short Support",
+          "Plant (WERKS)": "",
+          "Classification Exception Prob": 0.9611,
           "Risk Category": "High Risk",
           "Total Stock Value (SALK3)": 0.0,
-          "Predicted Classification Exception": 1,
-          "Company Code (BUKRS)": 1000
+          "Predicted Classification Exception": 1.0,
+          "Schema Source": "HANA_P3"
         },
         {
-          "Material Number (MATNR)": "508327",
-          "Material Description (MAKTX)": "LIFTER HRCS",
-          "Plant (WERKS)": 1001,
-          "Classification Exception Prob": 0.9584,
-          "Risk Category": "High Risk",
-          "Total Stock Value (SALK3)": 0.0,
-          "Predicted Classification Exception": 1,
-          "Company Code (BUKRS)": 1000
-        },
-        {
-          "Material Number (MATNR)": "508329",
-          "Material Description (MAKTX)": "LIFTER HRCS",
-          "Plant (WERKS)": 1001,
-          "Classification Exception Prob": 0.9584,
-          "Risk Category": "High Risk",
-          "Total Stock Value (SALK3)": 0.0,
-          "Predicted Classification Exception": 1,
-          "Company Code (BUKRS)": 1000
-        },
-        {
-          "Material Number (MATNR)": "602508",
-          "Material Description (MAKTX)": "PLUG M.S./G.I.",
-          "Plant (WERKS)": 1001,
-          "Classification Exception Prob": 0.9579,
-          "Risk Category": "High Risk",
-          "Total Stock Value (SALK3)": 780.0,
-          "Predicted Classification Exception": 1,
-          "Company Code (BUKRS)": 1000
-        },
-        {
-          "Material Number (MATNR)": "602511",
-          "Material Description (MAKTX)": "PLUG M.S./G.I.",
-          "Plant (WERKS)": 1001,
-          "Classification Exception Prob": 0.9579,
-          "Risk Category": "High Risk",
-          "Total Stock Value (SALK3)": 110.0,
-          "Predicted Classification Exception": 1,
-          "Company Code (BUKRS)": 1000
-        },
-        {
-          "Material Number (MATNR)": "602510",
-          "Material Description (MAKTX)": "PLUG M.S./G.I.",
-          "Plant (WERKS)": 1001,
-          "Classification Exception Prob": 0.9579,
-          "Risk Category": "High Risk",
-          "Total Stock Value (SALK3)": 100.0,
-          "Predicted Classification Exception": 1,
-          "Company Code (BUKRS)": 1000
-        },
-        {
-          "Material Number (MATNR)": "602507",
-          "Material Description (MAKTX)": "PLUG M.S./G.I.",
-          "Plant (WERKS)": 1001,
-          "Classification Exception Prob": 0.9579,
-          "Risk Category": "High Risk",
-          "Total Stock Value (SALK3)": 128.0,
-          "Predicted Classification Exception": 1,
-          "Company Code (BUKRS)": 1000
-        },
-        {
-          "Material Number (MATNR)": "602506",
-          "Material Description (MAKTX)": "PLUG M.S./G.I.",
-          "Plant (WERKS)": 1001,
-          "Classification Exception Prob": 0.9579,
-          "Risk Category": "High Risk",
-          "Total Stock Value (SALK3)": 112.0,
-          "Predicted Classification Exception": 1,
-          "Company Code (BUKRS)": 1000
-        },
-        {
-          "Material Number (MATNR)": "602509",
-          "Material Description (MAKTX)": "PLUG M.S./G.I.",
-          "Plant (WERKS)": 1001,
-          "Classification Exception Prob": 0.9579,
-          "Risk Category": "High Risk",
-          "Total Stock Value (SALK3)": 80.0,
-          "Predicted Classification Exception": 1,
-          "Company Code (BUKRS)": 1000
-        },
-        {
-          "Material Number (MATNR)": "539945",
-          "Material Description (MAKTX)": "NIPPLE BLEED",
-          "Plant (WERKS)": 1001,
-          "Classification Exception Prob": 0.9576,
+          "Material Number (MATNR)": "520423",
+          "Material Description (MAKTX)": "IMPELLER (BRONZE )",
+          "Plant (WERKS)": "",
+          "Classification Exception Prob": 0.961,
           "Risk Category": "Critical Risk",
           "Total Stock Value (SALK3)": 0.0,
-          "Predicted Classification Exception": 1,
-          "Company Code (BUKRS)": 1000
+          "Predicted Classification Exception": 1.0,
+          "Schema Source": "HANA_P2"
         },
         {
-          "Material Number (MATNR)": "539946",
-          "Material Description (MAKTX)": "NIPPLE BLEED",
-          "Plant (WERKS)": 1001,
-          "Classification Exception Prob": 0.9576,
+          "Material Number (MATNR)": "520423",
+          "Material Description (MAKTX)": "IMPELLER (BRONZE )",
+          "Plant (WERKS)": "",
+          "Classification Exception Prob": 0.961,
           "Risk Category": "Critical Risk",
           "Total Stock Value (SALK3)": 0.0,
-          "Predicted Classification Exception": 1,
-          "Company Code (BUKRS)": 1000
+          "Predicted Classification Exception": 1.0,
+          "Schema Source": "HANA_P3"
         },
         {
-          "Material Number (MATNR)": "573170",
-          "Material Description (MAKTX)": "LOCK WASHER",
-          "Plant (WERKS)": 1001,
-          "Classification Exception Prob": 0.957,
-          "Risk Category": "Critical Risk",
-          "Total Stock Value (SALK3)": 2092.5,
-          "Predicted Classification Exception": 1,
-          "Company Code (BUKRS)": 1000
-        },
-        {
-          "Material Number (MATNR)": "572999",
-          "Material Description (MAKTX)": "LOCK WASHER",
-          "Plant (WERKS)": 1001,
-          "Classification Exception Prob": 0.957,
+          "Material Number (MATNR)": "520423",
+          "Material Description (MAKTX)": "IMPELLER (BRONZE )",
+          "Plant (WERKS)": "",
+          "Classification Exception Prob": 0.961,
           "Risk Category": "Critical Risk",
           "Total Stock Value (SALK3)": 0.0,
-          "Predicted Classification Exception": 1,
-          "Company Code (BUKRS)": 1000
+          "Predicted Classification Exception": 1.0,
+          "Schema Source": "HANA_P3"
         },
         {
-          "Material Number (MATNR)": "573007",
-          "Material Description (MAKTX)": "LOCK WASHER",
-          "Plant (WERKS)": 1001,
-          "Classification Exception Prob": 0.957,
+          "Material Number (MATNR)": "615273",
+          "Material Description (MAKTX)": "CALCIUM CHLORIDE",
+          "Plant (WERKS)": "1022",
+          "Classification Exception Prob": 0.9608,
           "Risk Category": "Critical Risk",
           "Total Stock Value (SALK3)": 0.0,
-          "Predicted Classification Exception": 1,
-          "Company Code (BUKRS)": 1000
+          "Predicted Classification Exception": 1.0,
+          "Schema Source": "HANA_P3"
         },
         {
-          "Material Number (MATNR)": "573016",
-          "Material Description (MAKTX)": "LOCK WASHER",
-          "Plant (WERKS)": 1001,
-          "Classification Exception Prob": 0.957,
+          "Material Number (MATNR)": "615273",
+          "Material Description (MAKTX)": "CALCIUM CHLORIDE",
+          "Plant (WERKS)": "1022",
+          "Classification Exception Prob": 0.9608,
           "Risk Category": "Critical Risk",
           "Total Stock Value (SALK3)": 0.0,
-          "Predicted Classification Exception": 1,
-          "Company Code (BUKRS)": 1000
+          "Predicted Classification Exception": 1.0,
+          "Schema Source": "HANA_P3"
         },
         {
-          "Material Number (MATNR)": "573047",
-          "Material Description (MAKTX)": "LOCK WASHER",
-          "Plant (WERKS)": 1001,
-          "Classification Exception Prob": 0.957,
+          "Material Number (MATNR)": "615273",
+          "Material Description (MAKTX)": "CALCIUM CHLORIDE",
+          "Plant (WERKS)": "1022",
+          "Classification Exception Prob": 0.9608,
           "Risk Category": "Critical Risk",
           "Total Stock Value (SALK3)": 0.0,
-          "Predicted Classification Exception": 1,
-          "Company Code (BUKRS)": 1000
+          "Predicted Classification Exception": 1.0,
+          "Schema Source": "HANA_P3"
         },
         {
-          "Material Number (MATNR)": "573067",
-          "Material Description (MAKTX)": "LOCK WASHER",
-          "Plant (WERKS)": 1001,
-          "Classification Exception Prob": 0.957,
+          "Material Number (MATNR)": "615273",
+          "Material Description (MAKTX)": "CALCIUM CHLORIDE",
+          "Plant (WERKS)": "1022",
+          "Classification Exception Prob": 0.9608,
           "Risk Category": "Critical Risk",
           "Total Stock Value (SALK3)": 0.0,
-          "Predicted Classification Exception": 1,
-          "Company Code (BUKRS)": 1000
-        },
-        {
-          "Material Number (MATNR)": "573093",
-          "Material Description (MAKTX)": "LOCK WASHER",
-          "Plant (WERKS)": 1001,
-          "Classification Exception Prob": 0.957,
-          "Risk Category": "Critical Risk",
-          "Total Stock Value (SALK3)": 0.0,
-          "Predicted Classification Exception": 1,
-          "Company Code (BUKRS)": 1000
+          "Predicted Classification Exception": 1.0,
+          "Schema Source": "HANA_P3"
         }
       ],
       "advanced_ml": {
         "confusion_matrix": {
-          "tp": 18980,
-          "fp": 0,
-          "fn": 6020,
-          "tn": 0,
-          "precision": 1.0,
+          "tp": 217119,
+          "fp": 51101,
+          "fn": 68752,
+          "tn": 711597,
+          "precision": 0.809,
           "recall": 0.759,
-          "f1": 0.863,
-          "accuracy": 0.759
+          "f1": 0.784,
+          "accuracy": 0.886
         },
         "threshold_curve": {
           "thresholds": [
@@ -11284,12 +11136,12 @@ window.PORTFOLIO_DATA = {
             0.382,
             0.441,
             0.494,
-            0.543,
-            0.59,
-            0.635,
-            0.679,
+            0.544,
+            0.591,
+            0.636,
+            0.68,
             0.722,
-            0.763
+            0.764
           ],
           "recall": [
             0.962,
@@ -11300,18 +11152,18 @@ window.PORTFOLIO_DATA = {
             0.612,
             0.526,
             0.436,
-            0.342
+            0.343
           ],
           "f1": [
             0.547,
-            0.593,
-            0.622,
-            0.637,
-            0.638,
+            0.594,
             0.623,
+            0.638,
+            0.638,
+            0.624,
             0.593,
-            0.543,
-            0.472
+            0.544,
+            0.473
           ]
         },
         "probability_distribution": {
@@ -11328,40 +11180,40 @@ window.PORTFOLIO_DATA = {
             "0.9"
           ],
           "clean_count": [
-            100,
-            100,
-            100,
-            100,
-            100,
-            100,
-            100,
-            100,
-            100,
-            100
+            249058,
+            158806,
+            101259,
+            64566,
+            41169,
+            26250,
+            16738,
+            10672,
+            6805,
+            4339
           ],
           "exception_count": [
-            949,
-            1476,
-            2003,
-            2530,
-            3057,
-            3585,
-            4112,
-            4639,
-            5166,
-            5694
+            10855,
+            16887,
+            22918,
+            28949,
+            34980,
+            41011,
+            47042,
+            53073,
+            59104,
+            65135
           ],
           "total_count": [
-            1049,
-            1576,
-            2103,
-            2630,
-            3157,
-            3685,
-            4212,
-            4739,
-            5266,
-            5794
+            259913,
+            175693,
+            124177,
+            93515,
+            76149,
+            67261,
+            63780,
+            63745,
+            65909,
+            69474
           ]
         },
         "calibration_curve": {
@@ -11444,591 +11296,607 @@ window.PORTFOLIO_DATA = {
         "SKA1",
         "SKAT"
       ],
-      "total_records": 25000,
-      "exceptions_count": 9541,
-      "exception_rate_pct": 38.16,
-      "financial_exposure_inr": 1559900000.0,
-      "financial_exposure_cr": 155.99,
-      "avg_confidence_score": 0.864,
-      "champion_model": "Text & CoA Alignment Classifier",
-      "champion_metric": "0.8640 ROC-AUC",
+      "total_records": 806572,
+      "exceptions_count": 236828,
+      "exception_rate_pct": 29.36,
+      "financial_exposure_inr": 107281661016.7,
+      "financial_exposure_cr": 10728.17,
+      "avg_confidence_score": 0.382,
+      "champion_model": "TF-IDF + FastText G/L Classifier",
+      "champion_metric": "0.9410 Accuracy",
       "risk_distribution": {
-        "Critical": 9589,
-        "High": 569,
-        "Medium": 309,
-        "Low": 14533
+        "Critical": 170802,
+        "High": 43028,
+        "Medium": 44554,
+        "Low": 548188
       },
       "category_breakdown": [
         {
-          "label": "1000",
-          "count": 25000
+          "label": "J.K. CEMENT LIMITED",
+          "count": 778484
+        },
+        {
+          "label": "J.K.CEMENT Works Fuj FZC",
+          "count": 19467
+        },
+        {
+          "label": "JK MAXX PAINTS LIMITED",
+          "count": 8484
+        },
+        {
+          "label": "JK WHITE CEMENT (AFRICA)",
+          "count": 103
+        },
+        {
+          "label": "J.K. Cement Fujairah FZC",
+          "count": 34
         }
       ],
       "feature_importance": [
         {
-          "feature": "feature",
-          "importance": 0,
-          "description": "Direct Mathematical Influence On GL Account Auto Coding & CoA Governance:"
-        },
-        {
           "feature": "nlp_miscoding_risk_index",
-          "importance": 0.1405,
-          "description": "(Composite G/L Account Miscoding & Ambiguity Risk Index [0-100], defined as 100 - nlp_coding_confidence_score)"
+          "importance": 0.2443,
+          "description": "Nlp Miscoding Risk Index"
         },
         {
           "feature": "nlp_coding_confidence_score",
-          "importance": 0.1162,
-          "description": "(Composite NLP G/L Account Auto-Coding Confidence Score [0-100] combining Text Clarity 34%, Semantic GL Confidence 36%, and CoA Alignment 30%)"
+          "importance": 0.2248,
+          "description": "Nlp Coding Confidence Score"
         },
         {
-          "feature": "svd_semantic_comp_1",
-          "importance": 0.1105,
-          "description": "(1st Latent Semantic Analysis TruncatedSVD component of the TF-IDF transaction text matrix)"
-        },
-        {
-          "feature": "svd_semantic_comp_2",
-          "importance": 0.1036,
-          "description": "(2nd Latent Semantic Analysis TruncatedSVD component separating freight/handling narrations from plant/overhead postings)"
-        },
-        {
-          "feature": "tfidf_semantic_energy",
-          "importance": 0.0913,
-          "description": "(L1 norm of sublinear TF-IDF n-gram activations measuring semantic information density of BSEG-SGTXT)"
-        },
-        {
-          "feature": "coa_alignment_score",
-          "importance": 0.0694,
-          "description": "(Normalized Chart of Accounts Alignment Score [0-100] measuring agreement between NLP-inferred G/L from BSEG-SGTXT and posted HKONT/KTOKS/KOSTL)"
+          "feature": "semantic_gl_confidence_score",
+          "importance": 0.1138,
+          "description": "Semantic Gl Confidence Score"
         },
         {
           "feature": "text_clarity_score",
-          "importance": 0.0553,
-          "description": "(Normalized Transaction Text Clarity & Narration Completeness Score [0-100] from BSEG-SGTXT length, word count, accounting refs, and TF-IDF richness)"
+          "importance": 0.0725,
+          "description": "Text Clarity Score"
+        },
+        {
+          "feature": "is_cryptic_or_code_only_sgtxt",
+          "importance": 0.0593,
+          "description": "Is Cryptic Or Code Only Sgtxt"
+        },
+        {
+          "feature": "sgtxt_digit_ratio",
+          "importance": 0.0471,
+          "description": "Sgtxt Digit Ratio"
+        },
+        {
+          "feature": "text_gl_desc_similarity_score",
+          "importance": 0.0332,
+          "description": "Text Gl Desc Similarity Score"
+        },
+        {
+          "feature": "sgtxt_word_count",
+          "importance": 0.03,
+          "description": "Sgtxt Word Count"
         }
       ],
       "model_rankings": [],
       "display_columns": [
-        "Company Code (BUKRS)",
+        "Document Number (BELNR)",
+        "Posting Key Name (TBSL)",
+        "Company Name (BUTXT)",
         "Coding Exception Prob",
         "Risk Category",
-        "Cost Center (KOSTL)",
+        "Amount in Local Curr (DMBTR)",
         "Predicted Coding Exception",
-        "Company Name (BUTXT)",
-        "Document Number (BELNR)",
-        "Fiscal Year (GJAHR)"
+        "Schema Source"
       ],
       "sample_records": [
         {
-          "Company Code (BUKRS)": 1000,
-          "Coding Exception Prob": 0.9592,
-          "Risk Category": "Critical Risk",
-          "Cost Center (KOSTL)": null,
-          "Predicted Coding Exception": 1,
+          "Document Number (BELNR)": "1900021512",
+          "Posting Key Name (TBSL)": "Invoice",
           "Company Name (BUTXT)": "J.K. CEMENT LIMITED",
-          "Document Number (BELNR)": 8201424372,
-          "Fiscal Year (GJAHR)": 2025
+          "Coding Exception Prob": 0.9619,
+          "Risk Category": "Critical Risk",
+          "Amount in Local Curr (DMBTR)": 8372799.0,
+          "Predicted Coding Exception": 1.0,
+          "Schema Source": "HANA_P2"
         },
         {
-          "Company Code (BUKRS)": 1000,
-          "Coding Exception Prob": 0.9592,
-          "Risk Category": "Critical Risk",
-          "Cost Center (KOSTL)": null,
-          "Predicted Coding Exception": 1,
+          "Document Number (BELNR)": "1900021512",
+          "Posting Key Name (TBSL)": "Invoice",
           "Company Name (BUTXT)": "J.K. CEMENT LIMITED",
-          "Document Number (BELNR)": 8201424377,
-          "Fiscal Year (GJAHR)": 2025
+          "Coding Exception Prob": 0.9619,
+          "Risk Category": "Critical Risk",
+          "Amount in Local Curr (DMBTR)": 8372799.0,
+          "Predicted Coding Exception": 1.0,
+          "Schema Source": "HANA_P2"
         },
         {
-          "Company Code (BUKRS)": 1000,
-          "Coding Exception Prob": 0.9592,
-          "Risk Category": "Critical Risk",
-          "Cost Center (KOSTL)": null,
-          "Predicted Coding Exception": 1,
+          "Document Number (BELNR)": "1900021512",
+          "Posting Key Name (TBSL)": "Invoice",
           "Company Name (BUTXT)": "J.K. CEMENT LIMITED",
-          "Document Number (BELNR)": 8201424372,
-          "Fiscal Year (GJAHR)": 2025
+          "Coding Exception Prob": 0.9619,
+          "Risk Category": "Critical Risk",
+          "Amount in Local Curr (DMBTR)": 8372799.0,
+          "Predicted Coding Exception": 1.0,
+          "Schema Source": "HANA_P2"
         },
         {
-          "Company Code (BUKRS)": 1000,
-          "Coding Exception Prob": 0.9592,
-          "Risk Category": "Critical Risk",
-          "Cost Center (KOSTL)": 190122999.0,
-          "Predicted Coding Exception": 1,
+          "Document Number (BELNR)": "1900021455",
+          "Posting Key Name (TBSL)": "Invoice",
           "Company Name (BUTXT)": "J.K. CEMENT LIMITED",
-          "Document Number (BELNR)": 8201424377,
-          "Fiscal Year (GJAHR)": 2025
+          "Coding Exception Prob": 0.9619,
+          "Risk Category": "Critical Risk",
+          "Amount in Local Curr (DMBTR)": 7878000.0,
+          "Predicted Coding Exception": 1.0,
+          "Schema Source": "HANA_P2"
         },
         {
-          "Company Code (BUKRS)": 1000,
-          "Coding Exception Prob": 0.9592,
-          "Risk Category": "Critical Risk",
-          "Cost Center (KOSTL)": null,
-          "Predicted Coding Exception": 1,
+          "Document Number (BELNR)": "1900021455",
+          "Posting Key Name (TBSL)": "Invoice",
           "Company Name (BUTXT)": "J.K. CEMENT LIMITED",
-          "Document Number (BELNR)": 8201426441,
-          "Fiscal Year (GJAHR)": 2025
+          "Coding Exception Prob": 0.9619,
+          "Risk Category": "Critical Risk",
+          "Amount in Local Curr (DMBTR)": 7878000.0,
+          "Predicted Coding Exception": 1.0,
+          "Schema Source": "HANA_P2"
         },
         {
-          "Company Code (BUKRS)": 1000,
-          "Coding Exception Prob": 0.9592,
-          "Risk Category": "Critical Risk",
-          "Cost Center (KOSTL)": 190122999.0,
-          "Predicted Coding Exception": 1,
+          "Document Number (BELNR)": "1900021455",
+          "Posting Key Name (TBSL)": "Invoice",
           "Company Name (BUTXT)": "J.K. CEMENT LIMITED",
-          "Document Number (BELNR)": 8201424377,
-          "Fiscal Year (GJAHR)": 2025
+          "Coding Exception Prob": 0.9619,
+          "Risk Category": "Critical Risk",
+          "Amount in Local Curr (DMBTR)": 7878000.0,
+          "Predicted Coding Exception": 1.0,
+          "Schema Source": "HANA_P2"
         },
         {
-          "Company Code (BUKRS)": 1000,
-          "Coding Exception Prob": 0.9592,
-          "Risk Category": "Critical Risk",
-          "Cost Center (KOSTL)": null,
-          "Predicted Coding Exception": 1,
+          "Document Number (BELNR)": "2001615570",
+          "Posting Key Name (TBSL)": "Outgoing payment",
           "Company Name (BUTXT)": "J.K. CEMENT LIMITED",
-          "Document Number (BELNR)": 8201426441,
-          "Fiscal Year (GJAHR)": 2025
+          "Coding Exception Prob": 0.9618,
+          "Risk Category": "Critical Risk",
+          "Amount in Local Curr (DMBTR)": 22501948.5,
+          "Predicted Coding Exception": 1.0,
+          "Schema Source": "HANA_P2"
         },
         {
-          "Company Code (BUKRS)": 1000,
-          "Coding Exception Prob": 0.9592,
-          "Risk Category": "Critical Risk",
-          "Cost Center (KOSTL)": null,
-          "Predicted Coding Exception": 1,
+          "Document Number (BELNR)": "2002021263",
+          "Posting Key Name (TBSL)": "Outgoing payment",
           "Company Name (BUTXT)": "J.K. CEMENT LIMITED",
-          "Document Number (BELNR)": 8201426441,
-          "Fiscal Year (GJAHR)": 2025
+          "Coding Exception Prob": 0.9618,
+          "Risk Category": "Critical Risk",
+          "Amount in Local Curr (DMBTR)": 20771022.0,
+          "Predicted Coding Exception": 1.0,
+          "Schema Source": "HANA_P2"
         },
         {
-          "Company Code (BUKRS)": 1000,
-          "Coding Exception Prob": 0.9592,
-          "Risk Category": "Critical Risk",
-          "Cost Center (KOSTL)": null,
-          "Predicted Coding Exception": 1,
+          "Document Number (BELNR)": "2000715107",
+          "Posting Key Name (TBSL)": "Outgoing payment",
           "Company Name (BUTXT)": "J.K. CEMENT LIMITED",
-          "Document Number (BELNR)": 8201426336,
-          "Fiscal Year (GJAHR)": 2025
+          "Coding Exception Prob": 0.9618,
+          "Risk Category": "Critical Risk",
+          "Amount in Local Curr (DMBTR)": 18797570.0,
+          "Predicted Coding Exception": 1.0,
+          "Schema Source": "HANA_P2"
         },
         {
-          "Company Code (BUKRS)": 1000,
-          "Coding Exception Prob": 0.9592,
-          "Risk Category": "Critical Risk",
-          "Cost Center (KOSTL)": null,
-          "Predicted Coding Exception": 1,
+          "Document Number (BELNR)": "2001615570",
+          "Posting Key Name (TBSL)": "Outgoing payment",
           "Company Name (BUTXT)": "J.K. CEMENT LIMITED",
-          "Document Number (BELNR)": 8201424372,
-          "Fiscal Year (GJAHR)": 2025
+          "Coding Exception Prob": 0.9618,
+          "Risk Category": "Critical Risk",
+          "Amount in Local Curr (DMBTR)": 10001516.0,
+          "Predicted Coding Exception": 1.0,
+          "Schema Source": "HANA_P2"
         },
         {
-          "Company Code (BUKRS)": 1000,
-          "Coding Exception Prob": 0.9592,
-          "Risk Category": "Critical Risk",
-          "Cost Center (KOSTL)": null,
-          "Predicted Coding Exception": 1,
+          "Document Number (BELNR)": "2001826801",
+          "Posting Key Name (TBSL)": "Outgoing payment",
           "Company Name (BUTXT)": "J.K. CEMENT LIMITED",
-          "Document Number (BELNR)": 8201426336,
-          "Fiscal Year (GJAHR)": 2025
+          "Coding Exception Prob": 0.9618,
+          "Risk Category": "Critical Risk",
+          "Amount in Local Curr (DMBTR)": 7500649.5,
+          "Predicted Coding Exception": 1.0,
+          "Schema Source": "HANA_P2"
         },
         {
-          "Company Code (BUKRS)": 1000,
-          "Coding Exception Prob": 0.9592,
-          "Risk Category": "Critical Risk",
-          "Cost Center (KOSTL)": null,
-          "Predicted Coding Exception": 1,
+          "Document Number (BELNR)": "2001998951",
+          "Posting Key Name (TBSL)": "Outgoing payment",
           "Company Name (BUTXT)": "J.K. CEMENT LIMITED",
-          "Document Number (BELNR)": 8201426336,
-          "Fiscal Year (GJAHR)": 2025
+          "Coding Exception Prob": 0.9618,
+          "Risk Category": "Critical Risk",
+          "Amount in Local Curr (DMBTR)": 6923674.0,
+          "Predicted Coding Exception": 1.0,
+          "Schema Source": "HANA_P2"
         },
         {
-          "Company Code (BUKRS)": 1000,
-          "Coding Exception Prob": 0.9592,
-          "Risk Category": "Critical Risk",
-          "Cost Center (KOSTL)": null,
-          "Predicted Coding Exception": 1,
+          "Document Number (BELNR)": "2000715106",
+          "Posting Key Name (TBSL)": "Outgoing payment",
           "Company Name (BUTXT)": "J.K. CEMENT LIMITED",
-          "Document Number (BELNR)": 8201426336,
-          "Fiscal Year (GJAHR)": 2025
+          "Coding Exception Prob": 0.9618,
+          "Risk Category": "Critical Risk",
+          "Amount in Local Curr (DMBTR)": 5718150.0,
+          "Predicted Coding Exception": 1.0,
+          "Schema Source": "HANA_P2"
         },
         {
-          "Company Code (BUKRS)": 1000,
-          "Coding Exception Prob": 0.9592,
-          "Risk Category": "Critical Risk",
-          "Cost Center (KOSTL)": null,
-          "Predicted Coding Exception": 1,
+          "Document Number (BELNR)": "2001649439",
+          "Posting Key Name (TBSL)": "Outgoing payment",
           "Company Name (BUTXT)": "J.K. CEMENT LIMITED",
-          "Document Number (BELNR)": 8201424372,
-          "Fiscal Year (GJAHR)": 2025
+          "Coding Exception Prob": 0.9618,
+          "Risk Category": "Critical Risk",
+          "Amount in Local Curr (DMBTR)": 5000433.0,
+          "Predicted Coding Exception": 1.0,
+          "Schema Source": "HANA_P2"
         },
         {
-          "Company Code (BUKRS)": 1000,
-          "Coding Exception Prob": 0.9592,
-          "Risk Category": "Critical Risk",
-          "Cost Center (KOSTL)": null,
-          "Predicted Coding Exception": 1,
+          "Document Number (BELNR)": "2001998951",
+          "Posting Key Name (TBSL)": "Outgoing payment",
           "Company Name (BUTXT)": "J.K. CEMENT LIMITED",
-          "Document Number (BELNR)": 8201426336,
-          "Fiscal Year (GJAHR)": 2025
+          "Coding Exception Prob": 0.9618,
+          "Risk Category": "Critical Risk",
+          "Amount in Local Curr (DMBTR)": 2859075.0,
+          "Predicted Coding Exception": 1.0,
+          "Schema Source": "HANA_P2"
         },
         {
-          "Company Code (BUKRS)": 1000,
-          "Coding Exception Prob": 0.9592,
-          "Risk Category": "Critical Risk",
-          "Cost Center (KOSTL)": null,
-          "Predicted Coding Exception": 1,
+          "Document Number (BELNR)": "2001414596",
+          "Posting Key Name (TBSL)": "Outgoing payment",
           "Company Name (BUTXT)": "J.K. CEMENT LIMITED",
-          "Document Number (BELNR)": 8201426441,
-          "Fiscal Year (GJAHR)": 2025
+          "Coding Exception Prob": 0.9618,
+          "Risk Category": "Critical Risk",
+          "Amount in Local Curr (DMBTR)": 2566500.0,
+          "Predicted Coding Exception": 1.0,
+          "Schema Source": "HANA_P2"
         },
         {
-          "Company Code (BUKRS)": 1000,
-          "Coding Exception Prob": 0.9592,
-          "Risk Category": "Critical Risk",
-          "Cost Center (KOSTL)": 191042000.0,
-          "Predicted Coding Exception": 1,
+          "Document Number (BELNR)": "2001447692",
+          "Posting Key Name (TBSL)": "Outgoing payment",
           "Company Name (BUTXT)": "J.K. CEMENT LIMITED",
-          "Document Number (BELNR)": 8201426441,
-          "Fiscal Year (GJAHR)": 2025
+          "Coding Exception Prob": 0.9618,
+          "Risk Category": "Critical Risk",
+          "Amount in Local Curr (DMBTR)": 2566500.0,
+          "Predicted Coding Exception": 1.0,
+          "Schema Source": "HANA_P2"
         },
         {
-          "Company Code (BUKRS)": 1000,
-          "Coding Exception Prob": 0.9592,
-          "Risk Category": "Critical Risk",
-          "Cost Center (KOSTL)": null,
-          "Predicted Coding Exception": 1,
+          "Document Number (BELNR)": "2001826801",
+          "Posting Key Name (TBSL)": "Outgoing payment",
           "Company Name (BUTXT)": "J.K. CEMENT LIMITED",
-          "Document Number (BELNR)": 8201426336,
-          "Fiscal Year (GJAHR)": 2025
+          "Coding Exception Prob": 0.9618,
+          "Risk Category": "Critical Risk",
+          "Amount in Local Curr (DMBTR)": 2500216.5,
+          "Predicted Coding Exception": 1.0,
+          "Schema Source": "HANA_P2"
         },
         {
-          "Company Code (BUKRS)": 1000,
-          "Coding Exception Prob": 0.9592,
-          "Risk Category": "Critical Risk",
-          "Cost Center (KOSTL)": null,
-          "Predicted Coding Exception": 1,
+          "Document Number (BELNR)": "2002077424",
+          "Posting Key Name (TBSL)": "Outgoing payment",
           "Company Name (BUTXT)": "J.K. CEMENT LIMITED",
-          "Document Number (BELNR)": 8201426441,
-          "Fiscal Year (GJAHR)": 2025
+          "Coding Exception Prob": 0.9618,
+          "Risk Category": "Critical Risk",
+          "Amount in Local Curr (DMBTR)": 1730918.5,
+          "Predicted Coding Exception": 1.0,
+          "Schema Source": "HANA_P2"
         },
         {
-          "Company Code (BUKRS)": 1000,
-          "Coding Exception Prob": 0.9592,
-          "Risk Category": "Critical Risk",
-          "Cost Center (KOSTL)": null,
-          "Predicted Coding Exception": 1,
+          "Document Number (BELNR)": "2000715107",
+          "Posting Key Name (TBSL)": "Outgoing payment",
           "Company Name (BUTXT)": "J.K. CEMENT LIMITED",
-          "Document Number (BELNR)": 8201426336,
-          "Fiscal Year (GJAHR)": 2025
+          "Coding Exception Prob": 0.9618,
+          "Risk Category": "Critical Risk",
+          "Amount in Local Curr (DMBTR)": 1439452.0,
+          "Predicted Coding Exception": 1.0,
+          "Schema Source": "HANA_P2"
         },
         {
-          "Company Code (BUKRS)": 1000,
-          "Coding Exception Prob": 0.9592,
-          "Risk Category": "Critical Risk",
-          "Cost Center (KOSTL)": null,
-          "Predicted Coding Exception": 1,
+          "Document Number (BELNR)": "2001099546",
+          "Posting Key Name (TBSL)": "Outgoing payment",
           "Company Name (BUTXT)": "J.K. CEMENT LIMITED",
-          "Document Number (BELNR)": 8201426336,
-          "Fiscal Year (GJAHR)": 2025
+          "Coding Exception Prob": 0.9617,
+          "Risk Category": "Critical Risk",
+          "Amount in Local Curr (DMBTR)": 1993393.5,
+          "Predicted Coding Exception": 1.0,
+          "Schema Source": "HANA_P2"
         },
         {
-          "Company Code (BUKRS)": 1000,
-          "Coding Exception Prob": 0.9592,
-          "Risk Category": "Critical Risk",
-          "Cost Center (KOSTL)": null,
-          "Predicted Coding Exception": 1,
+          "Document Number (BELNR)": "2000565124",
+          "Posting Key Name (TBSL)": "Outgoing payment",
           "Company Name (BUTXT)": "J.K. CEMENT LIMITED",
-          "Document Number (BELNR)": 8201426336,
-          "Fiscal Year (GJAHR)": 2025
+          "Coding Exception Prob": 0.9617,
+          "Risk Category": "Critical Risk",
+          "Amount in Local Curr (DMBTR)": 1609255.26,
+          "Predicted Coding Exception": 1.0,
+          "Schema Source": "HANA_P2"
         },
         {
-          "Company Code (BUKRS)": 1000,
-          "Coding Exception Prob": 0.9592,
-          "Risk Category": "Critical Risk",
-          "Cost Center (KOSTL)": null,
-          "Predicted Coding Exception": 1,
+          "Document Number (BELNR)": "2002107603",
+          "Posting Key Name (TBSL)": "Outgoing payment",
           "Company Name (BUTXT)": "J.K. CEMENT LIMITED",
-          "Document Number (BELNR)": 8201426441,
-          "Fiscal Year (GJAHR)": 2025
+          "Coding Exception Prob": 0.9617,
+          "Risk Category": "Critical Risk",
+          "Amount in Local Curr (DMBTR)": 1093408.76,
+          "Predicted Coding Exception": 1.0,
+          "Schema Source": "HANA_P2"
         },
         {
-          "Company Code (BUKRS)": 1000,
-          "Coding Exception Prob": 0.9592,
-          "Risk Category": "Critical Risk",
-          "Cost Center (KOSTL)": null,
-          "Predicted Coding Exception": 1,
+          "Document Number (BELNR)": "2001278131",
+          "Posting Key Name (TBSL)": "Outgoing payment",
           "Company Name (BUTXT)": "J.K. CEMENT LIMITED",
-          "Document Number (BELNR)": 8201426336,
-          "Fiscal Year (GJAHR)": 2025
+          "Coding Exception Prob": 0.9617,
+          "Risk Category": "Critical Risk",
+          "Amount in Local Curr (DMBTR)": 852715.5,
+          "Predicted Coding Exception": 1.0,
+          "Schema Source": "HANA_P2"
         },
         {
-          "Company Code (BUKRS)": 1000,
-          "Coding Exception Prob": 0.9592,
-          "Risk Category": "Critical Risk",
-          "Cost Center (KOSTL)": null,
-          "Predicted Coding Exception": 1,
+          "Document Number (BELNR)": "2001794662",
+          "Posting Key Name (TBSL)": "Outgoing payment",
           "Company Name (BUTXT)": "J.K. CEMENT LIMITED",
-          "Document Number (BELNR)": 8201426336,
-          "Fiscal Year (GJAHR)": 2025
+          "Coding Exception Prob": 0.9617,
+          "Risk Category": "Critical Risk",
+          "Amount in Local Curr (DMBTR)": 656773.12,
+          "Predicted Coding Exception": 1.0,
+          "Schema Source": "HANA_P2"
         },
         {
-          "Company Code (BUKRS)": 1000,
-          "Coding Exception Prob": 0.9592,
-          "Risk Category": "Critical Risk",
-          "Cost Center (KOSTL)": 101042111.0,
-          "Predicted Coding Exception": 1,
+          "Document Number (BELNR)": "2001447696",
+          "Posting Key Name (TBSL)": "Outgoing payment",
           "Company Name (BUTXT)": "J.K. CEMENT LIMITED",
-          "Document Number (BELNR)": 8201426336,
-          "Fiscal Year (GJAHR)": 2025
+          "Coding Exception Prob": 0.9617,
+          "Risk Category": "Critical Risk",
+          "Amount in Local Curr (DMBTR)": 595900.0,
+          "Predicted Coding Exception": 1.0,
+          "Schema Source": "HANA_P2"
         },
         {
-          "Company Code (BUKRS)": 1000,
-          "Coding Exception Prob": 0.9592,
-          "Risk Category": "Critical Risk",
-          "Cost Center (KOSTL)": null,
-          "Predicted Coding Exception": 1,
+          "Document Number (BELNR)": "2001238694",
+          "Posting Key Name (TBSL)": "Outgoing payment",
           "Company Name (BUTXT)": "J.K. CEMENT LIMITED",
-          "Document Number (BELNR)": 8201426336,
-          "Fiscal Year (GJAHR)": 2025
+          "Coding Exception Prob": 0.9617,
+          "Risk Category": "Critical Risk",
+          "Amount in Local Curr (DMBTR)": 375896.56,
+          "Predicted Coding Exception": 1.0,
+          "Schema Source": "HANA_P2"
         },
         {
-          "Company Code (BUKRS)": 1000,
-          "Coding Exception Prob": 0.9592,
-          "Risk Category": "Critical Risk",
-          "Cost Center (KOSTL)": null,
-          "Predicted Coding Exception": 1,
+          "Document Number (BELNR)": "2000733403",
+          "Posting Key Name (TBSL)": "Outgoing payment",
           "Company Name (BUTXT)": "J.K. CEMENT LIMITED",
-          "Document Number (BELNR)": 8201426336,
-          "Fiscal Year (GJAHR)": 2025
+          "Coding Exception Prob": 0.9617,
+          "Risk Category": "Critical Risk",
+          "Amount in Local Curr (DMBTR)": 284434.46,
+          "Predicted Coding Exception": 1.0,
+          "Schema Source": "HANA_P2"
         },
         {
-          "Company Code (BUKRS)": 1000,
-          "Coding Exception Prob": 0.9592,
-          "Risk Category": "Critical Risk",
-          "Cost Center (KOSTL)": null,
-          "Predicted Coding Exception": 1,
+          "Document Number (BELNR)": "2001335798",
+          "Posting Key Name (TBSL)": "Outgoing payment",
           "Company Name (BUTXT)": "J.K. CEMENT LIMITED",
-          "Document Number (BELNR)": 8201426336,
-          "Fiscal Year (GJAHR)": 2025
+          "Coding Exception Prob": 0.9617,
+          "Risk Category": "Critical Risk",
+          "Amount in Local Curr (DMBTR)": 160797.38,
+          "Predicted Coding Exception": 1.0,
+          "Schema Source": "HANA_P2"
         },
         {
-          "Company Code (BUKRS)": 1000,
-          "Coding Exception Prob": 0.9592,
-          "Risk Category": "Critical Risk",
-          "Cost Center (KOSTL)": null,
-          "Predicted Coding Exception": 1,
+          "Document Number (BELNR)": "2001683397",
+          "Posting Key Name (TBSL)": "Outgoing payment",
           "Company Name (BUTXT)": "J.K. CEMENT LIMITED",
-          "Document Number (BELNR)": 8201426336,
-          "Fiscal Year (GJAHR)": 2025
+          "Coding Exception Prob": 0.9617,
+          "Risk Category": "Critical Risk",
+          "Amount in Local Curr (DMBTR)": 50917.46,
+          "Predicted Coding Exception": 1.0,
+          "Schema Source": "HANA_P2"
         },
         {
-          "Company Code (BUKRS)": 1000,
-          "Coding Exception Prob": 0.9592,
-          "Risk Category": "Critical Risk",
-          "Cost Center (KOSTL)": null,
-          "Predicted Coding Exception": 1,
+          "Document Number (BELNR)": "2001619457",
+          "Posting Key Name (TBSL)": "Outgoing payment",
           "Company Name (BUTXT)": "J.K. CEMENT LIMITED",
-          "Document Number (BELNR)": 8201426441,
-          "Fiscal Year (GJAHR)": 2025
+          "Coding Exception Prob": 0.9617,
+          "Risk Category": "Critical Risk",
+          "Amount in Local Curr (DMBTR)": 19824.0,
+          "Predicted Coding Exception": 1.0,
+          "Schema Source": "HANA_P2"
         },
         {
-          "Company Code (BUKRS)": 1000,
-          "Coding Exception Prob": 0.9592,
-          "Risk Category": "Critical Risk",
-          "Cost Center (KOSTL)": null,
-          "Predicted Coding Exception": 1,
+          "Document Number (BELNR)": "2000587219",
+          "Posting Key Name (TBSL)": "Outgoing payment",
           "Company Name (BUTXT)": "J.K. CEMENT LIMITED",
-          "Document Number (BELNR)": 8201426336,
-          "Fiscal Year (GJAHR)": 2025
+          "Coding Exception Prob": 0.9617,
+          "Risk Category": "Critical Risk",
+          "Amount in Local Curr (DMBTR)": 15750.0,
+          "Predicted Coding Exception": 1.0,
+          "Schema Source": "HANA_P2"
         },
         {
-          "Company Code (BUKRS)": 1000,
-          "Coding Exception Prob": 0.9592,
-          "Risk Category": "Critical Risk",
-          "Cost Center (KOSTL)": 190111000.0,
-          "Predicted Coding Exception": 1,
+          "Document Number (BELNR)": "2001505036",
+          "Posting Key Name (TBSL)": "Outgoing payment",
           "Company Name (BUTXT)": "J.K. CEMENT LIMITED",
-          "Document Number (BELNR)": 8201424377,
-          "Fiscal Year (GJAHR)": 2025
+          "Coding Exception Prob": 0.9617,
+          "Risk Category": "Critical Risk",
+          "Amount in Local Curr (DMBTR)": 13778.0,
+          "Predicted Coding Exception": 1.0,
+          "Schema Source": "HANA_P2"
         },
         {
-          "Company Code (BUKRS)": 1000,
-          "Coding Exception Prob": 0.9592,
-          "Risk Category": "Critical Risk",
-          "Cost Center (KOSTL)": null,
-          "Predicted Coding Exception": 1,
+          "Document Number (BELNR)": "2002022108",
+          "Posting Key Name (TBSL)": "Outgoing payment",
           "Company Name (BUTXT)": "J.K. CEMENT LIMITED",
-          "Document Number (BELNR)": 8201426441,
-          "Fiscal Year (GJAHR)": 2025
+          "Coding Exception Prob": 0.9617,
+          "Risk Category": "Critical Risk",
+          "Amount in Local Curr (DMBTR)": 6018.0,
+          "Predicted Coding Exception": 1.0,
+          "Schema Source": "HANA_P2"
         },
         {
-          "Company Code (BUKRS)": 1000,
-          "Coding Exception Prob": 0.9592,
-          "Risk Category": "Critical Risk",
-          "Cost Center (KOSTL)": null,
-          "Predicted Coding Exception": 1,
+          "Document Number (BELNR)": "2001414644",
+          "Posting Key Name (TBSL)": "Outgoing payment",
           "Company Name (BUTXT)": "J.K. CEMENT LIMITED",
-          "Document Number (BELNR)": 8201426336,
-          "Fiscal Year (GJAHR)": 2025
+          "Coding Exception Prob": 0.9617,
+          "Risk Category": "Critical Risk",
+          "Amount in Local Curr (DMBTR)": 5900.0,
+          "Predicted Coding Exception": 1.0,
+          "Schema Source": "HANA_P2"
         },
         {
-          "Company Code (BUKRS)": 1000,
-          "Coding Exception Prob": 0.9592,
-          "Risk Category": "Critical Risk",
-          "Cost Center (KOSTL)": 191042002.0,
-          "Predicted Coding Exception": 1,
+          "Document Number (BELNR)": "2000450911",
+          "Posting Key Name (TBSL)": "Outgoing payment",
           "Company Name (BUTXT)": "J.K. CEMENT LIMITED",
-          "Document Number (BELNR)": 8201426441,
-          "Fiscal Year (GJAHR)": 2025
+          "Coding Exception Prob": 0.9617,
+          "Risk Category": "Critical Risk",
+          "Amount in Local Curr (DMBTR)": 211903.81,
+          "Predicted Coding Exception": 1.0,
+          "Schema Source": "HANA_P2"
         },
         {
-          "Company Code (BUKRS)": 1000,
-          "Coding Exception Prob": 0.9592,
-          "Risk Category": "Critical Risk",
-          "Cost Center (KOSTL)": null,
-          "Predicted Coding Exception": 1,
+          "Document Number (BELNR)": "2000820714",
+          "Posting Key Name (TBSL)": "Outgoing payment",
           "Company Name (BUTXT)": "J.K. CEMENT LIMITED",
-          "Document Number (BELNR)": 8201426336,
-          "Fiscal Year (GJAHR)": 2025
+          "Coding Exception Prob": 0.9617,
+          "Risk Category": "Critical Risk",
+          "Amount in Local Curr (DMBTR)": 136759.05,
+          "Predicted Coding Exception": 1.0,
+          "Schema Source": "HANA_P2"
         },
         {
-          "Company Code (BUKRS)": 1000,
-          "Coding Exception Prob": 0.9592,
-          "Risk Category": "Critical Risk",
-          "Cost Center (KOSTL)": null,
-          "Predicted Coding Exception": 1,
+          "Document Number (BELNR)": "2000587195",
+          "Posting Key Name (TBSL)": "Outgoing payment",
           "Company Name (BUTXT)": "J.K. CEMENT LIMITED",
-          "Document Number (BELNR)": 8201426336,
-          "Fiscal Year (GJAHR)": 2025
+          "Coding Exception Prob": 0.9617,
+          "Risk Category": "Critical Risk",
+          "Amount in Local Curr (DMBTR)": 131041.95,
+          "Predicted Coding Exception": 1.0,
+          "Schema Source": "HANA_P2"
         },
         {
-          "Company Code (BUKRS)": 1000,
-          "Coding Exception Prob": 0.9592,
-          "Risk Category": "Critical Risk",
-          "Cost Center (KOSTL)": null,
-          "Predicted Coding Exception": 1,
+          "Document Number (BELNR)": "2001086156",
+          "Posting Key Name (TBSL)": "Outgoing payment",
           "Company Name (BUTXT)": "J.K. CEMENT LIMITED",
-          "Document Number (BELNR)": 8201426336,
-          "Fiscal Year (GJAHR)": 2025
+          "Coding Exception Prob": 0.9617,
+          "Risk Category": "Critical Risk",
+          "Amount in Local Curr (DMBTR)": 87100.0,
+          "Predicted Coding Exception": 1.0,
+          "Schema Source": "HANA_P2"
         },
         {
-          "Company Code (BUKRS)": 1000,
-          "Coding Exception Prob": 0.9592,
-          "Risk Category": "Critical Risk",
-          "Cost Center (KOSTL)": 191042001.0,
-          "Predicted Coding Exception": 1,
+          "Document Number (BELNR)": "2001973461",
+          "Posting Key Name (TBSL)": "Outgoing payment",
           "Company Name (BUTXT)": "J.K. CEMENT LIMITED",
-          "Document Number (BELNR)": 8201426441,
-          "Fiscal Year (GJAHR)": 2025
+          "Coding Exception Prob": 0.9617,
+          "Risk Category": "Critical Risk",
+          "Amount in Local Curr (DMBTR)": 75459.0,
+          "Predicted Coding Exception": 1.0,
+          "Schema Source": "HANA_P2"
         },
         {
-          "Company Code (BUKRS)": 1000,
-          "Coding Exception Prob": 0.9592,
-          "Risk Category": "Critical Risk",
-          "Cost Center (KOSTL)": 191042029.0,
-          "Predicted Coding Exception": 1,
+          "Document Number (BELNR)": "2001615572",
+          "Posting Key Name (TBSL)": "Outgoing payment",
           "Company Name (BUTXT)": "J.K. CEMENT LIMITED",
-          "Document Number (BELNR)": 8201426336,
-          "Fiscal Year (GJAHR)": 2025
+          "Coding Exception Prob": 0.9617,
+          "Risk Category": "Critical Risk",
+          "Amount in Local Curr (DMBTR)": 42480.0,
+          "Predicted Coding Exception": 1.0,
+          "Schema Source": "HANA_P2"
         },
         {
-          "Company Code (BUKRS)": 1000,
-          "Coding Exception Prob": 0.9592,
-          "Risk Category": "Critical Risk",
-          "Cost Center (KOSTL)": null,
-          "Predicted Coding Exception": 1,
+          "Document Number (BELNR)": "2001505037",
+          "Posting Key Name (TBSL)": "Outgoing payment",
           "Company Name (BUTXT)": "J.K. CEMENT LIMITED",
-          "Document Number (BELNR)": 8201424372,
-          "Fiscal Year (GJAHR)": 2025
+          "Coding Exception Prob": 0.9617,
+          "Risk Category": "Critical Risk",
+          "Amount in Local Curr (DMBTR)": 36250.0,
+          "Predicted Coding Exception": 1.0,
+          "Schema Source": "HANA_P2"
         },
         {
-          "Company Code (BUKRS)": 1000,
-          "Coding Exception Prob": 0.9592,
-          "Risk Category": "Critical Risk",
-          "Cost Center (KOSTL)": null,
-          "Predicted Coding Exception": 1,
+          "Document Number (BELNR)": "2001394813",
+          "Posting Key Name (TBSL)": "Outgoing payment",
           "Company Name (BUTXT)": "J.K. CEMENT LIMITED",
-          "Document Number (BELNR)": 8201426336,
-          "Fiscal Year (GJAHR)": 2025
+          "Coding Exception Prob": 0.9617,
+          "Risk Category": "Critical Risk",
+          "Amount in Local Curr (DMBTR)": 30503.0,
+          "Predicted Coding Exception": 1.0,
+          "Schema Source": "HANA_P2"
         },
         {
-          "Company Code (BUKRS)": 1000,
-          "Coding Exception Prob": 0.9592,
-          "Risk Category": "Critical Risk",
-          "Cost Center (KOSTL)": 190111000.0,
-          "Predicted Coding Exception": 1,
+          "Document Number (BELNR)": "2000627014",
+          "Posting Key Name (TBSL)": "Outgoing payment",
           "Company Name (BUTXT)": "J.K. CEMENT LIMITED",
-          "Document Number (BELNR)": 8201424377,
-          "Fiscal Year (GJAHR)": 2025
+          "Coding Exception Prob": 0.9617,
+          "Risk Category": "Critical Risk",
+          "Amount in Local Curr (DMBTR)": 24780.0,
+          "Predicted Coding Exception": 1.0,
+          "Schema Source": "HANA_P2"
         },
         {
-          "Company Code (BUKRS)": 1000,
-          "Coding Exception Prob": 0.9592,
-          "Risk Category": "Critical Risk",
-          "Cost Center (KOSTL)": 101042038.0,
-          "Predicted Coding Exception": 1,
+          "Document Number (BELNR)": "2001425504",
+          "Posting Key Name (TBSL)": "Outgoing payment",
           "Company Name (BUTXT)": "J.K. CEMENT LIMITED",
-          "Document Number (BELNR)": 8201426336,
-          "Fiscal Year (GJAHR)": 2025
+          "Coding Exception Prob": 0.9617,
+          "Risk Category": "Critical Risk",
+          "Amount in Local Curr (DMBTR)": 16815.0,
+          "Predicted Coding Exception": 1.0,
+          "Schema Source": "HANA_P2"
         },
         {
-          "Company Code (BUKRS)": 1000,
-          "Coding Exception Prob": 0.9592,
-          "Risk Category": "Critical Risk",
-          "Cost Center (KOSTL)": null,
-          "Predicted Coding Exception": 1,
+          "Document Number (BELNR)": "2001828175",
+          "Posting Key Name (TBSL)": "Outgoing payment",
           "Company Name (BUTXT)": "J.K. CEMENT LIMITED",
-          "Document Number (BELNR)": 8201424372,
-          "Fiscal Year (GJAHR)": 2025
+          "Coding Exception Prob": 0.9617,
+          "Risk Category": "Critical Risk",
+          "Amount in Local Curr (DMBTR)": 16200.0,
+          "Predicted Coding Exception": 1.0,
+          "Schema Source": "HANA_P2"
         },
         {
-          "Company Code (BUKRS)": 1000,
-          "Coding Exception Prob": 0.9592,
-          "Risk Category": "Critical Risk",
-          "Cost Center (KOSTL)": null,
-          "Predicted Coding Exception": 1,
+          "Document Number (BELNR)": "2000791178",
+          "Posting Key Name (TBSL)": "Outgoing payment",
           "Company Name (BUTXT)": "J.K. CEMENT LIMITED",
-          "Document Number (BELNR)": 8201424372,
-          "Fiscal Year (GJAHR)": 2025
+          "Coding Exception Prob": 0.9617,
+          "Risk Category": "Critical Risk",
+          "Amount in Local Curr (DMBTR)": 16200.0,
+          "Predicted Coding Exception": 1.0,
+          "Schema Source": "HANA_P2"
         },
         {
-          "Company Code (BUKRS)": 1000,
-          "Coding Exception Prob": 0.9592,
-          "Risk Category": "Critical Risk",
-          "Cost Center (KOSTL)": null,
-          "Predicted Coding Exception": 1,
+          "Document Number (BELNR)": "2001447701",
+          "Posting Key Name (TBSL)": "Outgoing payment",
           "Company Name (BUTXT)": "J.K. CEMENT LIMITED",
-          "Document Number (BELNR)": 8201424372,
-          "Fiscal Year (GJAHR)": 2025
+          "Coding Exception Prob": 0.9617,
+          "Risk Category": "Critical Risk",
+          "Amount in Local Curr (DMBTR)": 15120.0,
+          "Predicted Coding Exception": 1.0,
+          "Schema Source": "HANA_P2"
         },
         {
-          "Company Code (BUKRS)": 1000,
-          "Coding Exception Prob": 0.9592,
-          "Risk Category": "Critical Risk",
-          "Cost Center (KOSTL)": 190121102.0,
-          "Predicted Coding Exception": 1,
+          "Document Number (BELNR)": "2001504981",
+          "Posting Key Name (TBSL)": "Outgoing payment",
           "Company Name (BUTXT)": "J.K. CEMENT LIMITED",
-          "Document Number (BELNR)": 8201424377,
-          "Fiscal Year (GJAHR)": 2025
+          "Coding Exception Prob": 0.9617,
+          "Risk Category": "Critical Risk",
+          "Amount in Local Curr (DMBTR)": 2537.0,
+          "Predicted Coding Exception": 1.0,
+          "Schema Source": "HANA_P2"
         },
         {
-          "Company Code (BUKRS)": 1000,
-          "Coding Exception Prob": 0.9592,
-          "Risk Category": "Critical Risk",
-          "Cost Center (KOSTL)": null,
-          "Predicted Coding Exception": 1,
+          "Document Number (BELNR)": "2001934485",
+          "Posting Key Name (TBSL)": "Outgoing payment",
           "Company Name (BUTXT)": "J.K. CEMENT LIMITED",
-          "Document Number (BELNR)": 8201426336,
-          "Fiscal Year (GJAHR)": 2025
+          "Coding Exception Prob": 0.9617,
+          "Risk Category": "Critical Risk",
+          "Amount in Local Curr (DMBTR)": 79172.1,
+          "Predicted Coding Exception": 1.0,
+          "Schema Source": "HANA_P2"
         }
       ],
       "advanced_ml": {
         "confusion_matrix": {
-          "tp": 18980,
-          "fp": 0,
-          "fn": 6020,
-          "tn": 0,
-          "precision": 1.0,
-          "recall": 0.759,
-          "f1": 0.863,
-          "accuracy": 0.759
+          "tp": 185271,
+          "fp": 29513,
+          "fn": 51557,
+          "tn": 540231,
+          "precision": 0.863,
+          "recall": 0.782,
+          "f1": 0.82,
+          "accuracy": 0.899
         },
         "threshold_curve": {
           "thresholds": [
@@ -12043,37 +11911,37 @@ window.PORTFOLIO_DATA = {
             0.9
           ],
           "precision": [
-            0.382,
-            0.441,
-            0.494,
-            0.543,
-            0.59,
-            0.635,
-            0.679,
-            0.722,
-            0.763
+            0.416,
+            0.48,
+            0.538,
+            0.592,
+            0.643,
+            0.692,
+            0.74,
+            0.786,
+            0.831
           ],
           "recall": [
-            0.962,
-            0.907,
-            0.842,
-            0.771,
-            0.694,
-            0.612,
-            0.526,
-            0.436,
-            0.342
+            0.964,
+            0.911,
+            0.849,
+            0.78,
+            0.706,
+            0.628,
+            0.545,
+            0.459,
+            0.369
           ],
           "f1": [
-            0.547,
-            0.593,
-            0.622,
-            0.637,
-            0.638,
-            0.623,
-            0.593,
-            0.543,
-            0.472
+            0.581,
+            0.629,
+            0.658,
+            0.673,
+            0.673,
+            0.658,
+            0.627,
+            0.579,
+            0.511
           ]
         },
         "probability_distribution": {
@@ -12090,40 +11958,40 @@ window.PORTFOLIO_DATA = {
             "0.9"
           ],
           "clean_count": [
-            100,
-            100,
-            100,
-            100,
-            100,
-            100,
-            100,
-            100,
-            100,
-            100
+            189080,
+            120563,
+            76874,
+            49017,
+            31254,
+            19928,
+            12707,
+            8102,
+            5166,
+            3294
           ],
           "exception_count": [
-            949,
-            1476,
-            2003,
-            2530,
-            3057,
-            3585,
-            4112,
-            4639,
-            5166,
-            5694
+            9263,
+            14409,
+            19556,
+            24702,
+            29849,
+            34995,
+            40142,
+            45288,
+            50434,
+            55581
           ],
           "total_count": [
-            1049,
-            1576,
-            2103,
-            2630,
-            3157,
-            3685,
-            4212,
-            4739,
-            5266,
-            5794
+            198343,
+            134972,
+            96430,
+            73719,
+            61103,
+            54923,
+            52849,
+            53390,
+            55600,
+            58875
           ]
         },
         "calibration_curve": {
@@ -12206,615 +12074,615 @@ window.PORTFOLIO_DATA = {
         "QMAKT",
         "ILOA"
       ],
-      "total_records": 25000,
-      "exceptions_count": 6269,
-      "exception_rate_pct": 25.08,
-      "financial_exposure_inr": 284000000.0,
-      "financial_exposure_cr": 28.4,
-      "avg_confidence_score": 0.812,
-      "champion_model": "NLP Diagnostics & Severity Classifier",
-      "champion_metric": "0.8120 ROC-AUC",
+      "total_records": 235575,
+      "exceptions_count": 55145,
+      "exception_rate_pct": 23.41,
+      "financial_exposure_inr": 369168935.79,
+      "financial_exposure_cr": 36.92,
+      "avg_confidence_score": 0.487,
+      "champion_model": "BERTopic + LDA Causal Graph",
+      "champion_metric": "0.8710 Specificity",
       "risk_distribution": {
-        "Critical": 3719,
-        "High": 3559,
-        "Medium": 4788,
-        "Low": 12934
+        "Critical": 52319,
+        "High": 40213,
+        "Medium": 20419,
+        "Low": 122624
       },
       "category_breakdown": [
         {
-          "label": "1015",
-          "count": 5750
+          "label": "J.K. Cement Works, Mangrol",
+          "count": 46282
         },
         {
-          "label": "1004",
-          "count": 4370
+          "label": "J.K. Cement Works, Muddapur",
+          "count": 37358
         },
         {
-          "label": "1901",
-          "count": 2795
+          "label": "J.K. Cement Works Nimbahera",
+          "count": 34114
         },
         {
-          "label": "1908",
-          "count": 2045
+          "label": "J.K. White Cement Works ,Gotan",
+          "count": 30801
         },
         {
-          "label": "1902",
-          "count": 2010
+          "label": "JK Cement Works - Panna",
+          "count": 25153
         },
         {
-          "label": "1001",
-          "count": 1725
+          "label": "J.K. Cement Works Fujairah FZC",
+          "count": 10683
         },
         {
-          "label": "2001",
-          "count": 1535
+          "label": "JK Cement Works - Hamirpur",
+          "count": 10226
         }
       ],
       "feature_importance": [
         {
-          "feature": "feature",
-          "importance": 0,
-          "description": "Direct Mathematical Influence On Breakdown Root Cause Extraction & PM Governance:"
-        },
-        {
           "feature": "breakdown_severity_risk_index",
-          "importance": 0.2901,
-          "description": "(Composite Breakdown & Unverified Root-Cause Severity Risk Index [0-100], defined as 100 - nlp_rca_confidence_score)"
+          "importance": 0.2848,
+          "description": "Breakdown Severity Risk Index"
         },
         {
           "feature": "nlp_rca_confidence_score",
-          "importance": 0.2668,
-          "description": "(Composite NLP Breakdown Root Cause Extraction Confidence Score [0-100] combining Diagnostic Clarity 34%, Root-Cause Specificity 36%, and PM Execution Alignment 30%)"
+          "importance": 0.278,
+          "description": "Nlp Rca Confidence Score"
         },
         {
           "feature": "rca_semantic_specificity_score",
-          "importance": 0.0907,
-          "description": "(Normalized NLP Root-Cause Semantic Specificity Score [0-100] measuring dominant failure-mode affinity and category margin)"
-        },
-        {
-          "feature": "conf_text_char_length",
-          "importance": 0.0841,
-          "description": "(Total character length of SAP Maintenance Order Confirmation Text AFRU-LTXA1 capturing technician root-cause remarks)"
+          "importance": 0.1219,
+          "description": "Rca Semantic Specificity Score"
         },
         {
           "feature": "text_diagnostic_clarity_score",
-          "importance": 0.0698,
-          "description": "(Normalized Maintenance Text Diagnostic Clarity Score [0-100] from AUFK-KTEXT and AFRU-LTXA1 length, word density, and equipment tag specificity)"
+          "importance": 0.0519,
+          "description": "Text Diagnostic Clarity Score"
+        },
+        {
+          "feature": "conf_text_char_length",
+          "importance": 0.0509,
+          "description": "Conf Text Char Length"
+        },
+        {
+          "feature": "svd_semantic_comp_1",
+          "importance": 0.0382,
+          "description": "Svd Semantic Comp 1"
         },
         {
           "feature": "pm_execution_alignment_score",
-          "importance": 0.0564,
-          "description": "(Normalized SAP Plant Maintenance Execution & Work-Center Alignment Score [0-100] measuring TECO completion, confirmation logging, and VAPLZ discipline match)"
+          "importance": 0.0288,
+          "description": "Pm Execution Alignment Score"
         },
         {
           "feature": "tfidf_active_ngrams",
-          "importance": 0.0252,
-          "description": "(Number of non-zero TF-IDF unigram and bigram features activated by the combined maintenance text corpus)"
+          "importance": 0.0269,
+          "description": "Tfidf Active Ngrams"
         }
       ],
       "model_rankings": [],
       "display_columns": [
         "Maintenance Order (AUFNR)",
-        "Plant (WERKS)",
+        "Order Type Description",
+        "Plant Name (T001W)",
         "Breakdown Exception Prob",
         "Risk Category",
-        "Cost Center (KOSTV)",
+        "Spare Parts Cost INR (AUFM-DMBTR)",
         "Predicted Breakdown Exception",
-        "Company Code (BUKRS)",
-        "Company Name (BUTXT)"
+        "Company Code (BUKRS)"
       ],
       "sample_records": [
         {
-          "Maintenance Order (AUFNR)": 600003230,
-          "Plant (WERKS)": 2001,
+          "Maintenance Order (AUFNR)": "600169562",
+          "Order Type Description": "PM03 - Corrective / General Maintenance Order",
+          "Plant Name (T001W)": "J.K. Cement Works Fujairah FZC",
           "Breakdown Exception Prob": 0.9627,
           "Risk Category": "Critical Risk",
-          "Cost Center (KOSTV)": 200135011.0,
-          "Predicted Breakdown Exception": 1,
-          "Company Code (BUKRS)": 1000,
-          "Company Name (BUTXT)": "J.K. CEMENT LIMITED"
+          "Spare Parts Cost INR (AUFM-DMBTR)": 0.0,
+          "Predicted Breakdown Exception": 1.0,
+          "Company Code (BUKRS)": "7001"
         },
         {
-          "Maintenance Order (AUFNR)": 600010110,
-          "Plant (WERKS)": 1908,
+          "Maintenance Order (AUFNR)": "600108766",
+          "Order Type Description": "PM03 - Corrective / General Maintenance Order",
+          "Plant Name (T001W)": "J.K. Cement Works, Muddapur",
+          "Breakdown Exception Prob": 0.9627,
+          "Risk Category": "Critical Risk",
+          "Spare Parts Cost INR (AUFM-DMBTR)": 21387.41,
+          "Predicted Breakdown Exception": 1.0,
+          "Company Code (BUKRS)": "1000"
+        },
+        {
+          "Maintenance Order (AUFNR)": "600209062",
+          "Order Type Description": "PM03 - Corrective / General Maintenance Order",
+          "Plant Name (T001W)": "J.K. White Cement Works ,Gotan",
+          "Breakdown Exception Prob": 0.9627,
+          "Risk Category": "Critical Risk",
+          "Spare Parts Cost INR (AUFM-DMBTR)": 0.0,
+          "Predicted Breakdown Exception": 1.0,
+          "Company Code (BUKRS)": "1000"
+        },
+        {
+          "Maintenance Order (AUFNR)": "600128585",
+          "Order Type Description": "PM07 - Shutdown / Overhaul Maintenance Order",
+          "Plant Name (T001W)": "J.K. Cement Works, Mangrol",
+          "Breakdown Exception Prob": 0.9627,
+          "Risk Category": "Critical Risk",
+          "Spare Parts Cost INR (AUFM-DMBTR)": 0.0,
+          "Predicted Breakdown Exception": 1.0,
+          "Company Code (BUKRS)": "1000"
+        },
+        {
+          "Maintenance Order (AUFNR)": "600215470",
+          "Order Type Description": "PM03 - Corrective / General Maintenance Order",
+          "Plant Name (T001W)": "J.K. Cement Works, Mangrol",
+          "Breakdown Exception Prob": 0.9627,
+          "Risk Category": "Critical Risk",
+          "Spare Parts Cost INR (AUFM-DMBTR)": 0.0,
+          "Predicted Breakdown Exception": 1.0,
+          "Company Code (BUKRS)": "1000"
+        },
+        {
+          "Maintenance Order (AUFNR)": "600022166",
+          "Order Type Description": "PM10 - Condition / Inspection Maintenance Order",
+          "Plant Name (T001W)": "J.K. Cement Works, Mangrol",
+          "Breakdown Exception Prob": 0.9627,
+          "Risk Category": "Critical Risk",
+          "Spare Parts Cost INR (AUFM-DMBTR)": 0.0,
+          "Predicted Breakdown Exception": 1.0,
+          "Company Code (BUKRS)": "1000"
+        },
+        {
+          "Maintenance Order (AUFNR)": "600236191",
+          "Order Type Description": "PM03 - Corrective / General Maintenance Order",
+          "Plant Name (T001W)": "J.K. Cement Works Jharli",
+          "Breakdown Exception Prob": 0.9627,
+          "Risk Category": "Critical Risk",
+          "Spare Parts Cost INR (AUFM-DMBTR)": 0.0,
+          "Predicted Breakdown Exception": 1.0,
+          "Company Code (BUKRS)": "1000"
+        },
+        {
+          "Maintenance Order (AUFNR)": "600206826",
+          "Order Type Description": "PM03 - Corrective / General Maintenance Order",
+          "Plant Name (T001W)": "J.K. Cement Works, Muddapur",
           "Breakdown Exception Prob": 0.9626,
           "Risk Category": "Critical Risk",
-          "Cost Center (KOSTV)": 190811114.0,
-          "Predicted Breakdown Exception": 1,
-          "Company Code (BUKRS)": 1000,
-          "Company Name (BUTXT)": "J.K. CEMENT LIMITED"
+          "Spare Parts Cost INR (AUFM-DMBTR)": 0.0,
+          "Predicted Breakdown Exception": 1.0,
+          "Company Code (BUKRS)": "1000"
         },
         {
-          "Maintenance Order (AUFNR)": 600003790,
-          "Plant (WERKS)": 1001,
+          "Maintenance Order (AUFNR)": "600166732",
+          "Order Type Description": "PM03 - Corrective / General Maintenance Order",
+          "Plant Name (T001W)": "J.K. Cement Works, Mangrol",
           "Breakdown Exception Prob": 0.9626,
           "Risk Category": "Critical Risk",
-          "Cost Center (KOSTV)": 100121105.0,
-          "Predicted Breakdown Exception": 1,
-          "Company Code (BUKRS)": 1000,
-          "Company Name (BUTXT)": "J.K. CEMENT LIMITED"
+          "Spare Parts Cost INR (AUFM-DMBTR)": 0.0,
+          "Predicted Breakdown Exception": 1.0,
+          "Company Code (BUKRS)": "1000"
         },
         {
-          "Maintenance Order (AUFNR)": 600128314,
-          "Plant (WERKS)": 2001,
+          "Maintenance Order (AUFNR)": "600056183",
+          "Order Type Description": "PM03 - Corrective / General Maintenance Order",
+          "Plant Name (T001W)": "J.K. Cement Works, Mangrol",
           "Breakdown Exception Prob": 0.9626,
           "Risk Category": "Critical Risk",
-          "Cost Center (KOSTV)": 200126000.0,
-          "Predicted Breakdown Exception": 1,
-          "Company Code (BUKRS)": 1000,
-          "Company Name (BUTXT)": "J.K. CEMENT LIMITED"
+          "Spare Parts Cost INR (AUFM-DMBTR)": 12844.31,
+          "Predicted Breakdown Exception": 1.0,
+          "Company Code (BUKRS)": "1000"
         },
         {
-          "Maintenance Order (AUFNR)": 600049299,
-          "Plant (WERKS)": 1907,
+          "Maintenance Order (AUFNR)": "600157506",
+          "Order Type Description": "PM03 - Corrective / General Maintenance Order",
+          "Plant Name (T001W)": "JK Cement Works - Panna",
           "Breakdown Exception Prob": 0.9626,
           "Risk Category": "Critical Risk",
-          "Cost Center (KOSTV)": 190716002.0,
-          "Predicted Breakdown Exception": 1,
-          "Company Code (BUKRS)": 1000,
-          "Company Name (BUTXT)": "J.K. CEMENT LIMITED"
+          "Spare Parts Cost INR (AUFM-DMBTR)": 0.0,
+          "Predicted Breakdown Exception": 1.0,
+          "Company Code (BUKRS)": "1000"
         },
         {
-          "Maintenance Order (AUFNR)": 600019644,
-          "Plant (WERKS)": 7001,
+          "Maintenance Order (AUFNR)": "600138100",
+          "Order Type Description": "PM03 - Corrective / General Maintenance Order",
+          "Plant Name (T001W)": "J.K. White Cement Works ,Gotan",
           "Breakdown Exception Prob": 0.9626,
           "Risk Category": "Critical Risk",
-          "Cost Center (KOSTV)": 700121103.0,
-          "Predicted Breakdown Exception": 1,
-          "Company Code (BUKRS)": 7001,
-          "Company Name (BUTXT)": "J.K.CEMENT Works Fuj FZC"
+          "Spare Parts Cost INR (AUFM-DMBTR)": 0.0,
+          "Predicted Breakdown Exception": 1.0,
+          "Company Code (BUKRS)": "1000"
         },
         {
-          "Maintenance Order (AUFNR)": 600019649,
-          "Plant (WERKS)": 7001,
+          "Maintenance Order (AUFNR)": "600035918",
+          "Order Type Description": "PM02 - Preventive Maintenance Order",
+          "Plant Name (T001W)": "J.K. White Cement Works ,Gotan",
           "Breakdown Exception Prob": 0.9626,
           "Risk Category": "Critical Risk",
-          "Cost Center (KOSTV)": 700121103.0,
-          "Predicted Breakdown Exception": 1,
-          "Company Code (BUKRS)": 7001,
-          "Company Name (BUTXT)": "J.K.CEMENT Works Fuj FZC"
+          "Spare Parts Cost INR (AUFM-DMBTR)": 0.0,
+          "Predicted Breakdown Exception": 1.0,
+          "Company Code (BUKRS)": "1000"
         },
         {
-          "Maintenance Order (AUFNR)": 600019648,
-          "Plant (WERKS)": 7001,
+          "Maintenance Order (AUFNR)": "600119496",
+          "Order Type Description": "PM03 - Corrective / General Maintenance Order",
+          "Plant Name (T001W)": "JK Cement Works - Hamirpur",
           "Breakdown Exception Prob": 0.9626,
           "Risk Category": "Critical Risk",
-          "Cost Center (KOSTV)": 700121103.0,
-          "Predicted Breakdown Exception": 1,
-          "Company Code (BUKRS)": 7001,
-          "Company Name (BUTXT)": "J.K.CEMENT Works Fuj FZC"
+          "Spare Parts Cost INR (AUFM-DMBTR)": 0.0,
+          "Predicted Breakdown Exception": 1.0,
+          "Company Code (BUKRS)": "1000"
         },
         {
-          "Maintenance Order (AUFNR)": 600055335,
-          "Plant (WERKS)": 1901,
+          "Maintenance Order (AUFNR)": "600030639",
+          "Order Type Description": "PM02 - Preventive Maintenance Order",
+          "Plant Name (T001W)": "J.K. Cement Works Fujairah FZC",
           "Breakdown Exception Prob": 0.9626,
           "Risk Category": "Critical Risk",
-          "Cost Center (KOSTV)": 190114112.0,
-          "Predicted Breakdown Exception": 1,
-          "Company Code (BUKRS)": 1000,
-          "Company Name (BUTXT)": "J.K. CEMENT LIMITED"
+          "Spare Parts Cost INR (AUFM-DMBTR)": 0.0,
+          "Predicted Breakdown Exception": 1.0,
+          "Company Code (BUKRS)": "7001"
         },
         {
-          "Maintenance Order (AUFNR)": 600000069,
-          "Plant (WERKS)": 1015,
+          "Maintenance Order (AUFNR)": "600102571",
+          "Order Type Description": "PM02 - Preventive Maintenance Order",
+          "Plant Name (T001W)": "J.K. Cement Works, Mangrol",
           "Breakdown Exception Prob": 0.9626,
           "Risk Category": "Critical Risk",
-          "Cost Center (KOSTV)": 101514240.0,
-          "Predicted Breakdown Exception": 1,
-          "Company Code (BUKRS)": 1000,
-          "Company Name (BUTXT)": "J.K. CEMENT LIMITED"
+          "Spare Parts Cost INR (AUFM-DMBTR)": 0.0,
+          "Predicted Breakdown Exception": 1.0,
+          "Company Code (BUKRS)": "1000"
         },
         {
-          "Maintenance Order (AUFNR)": 600226374,
-          "Plant (WERKS)": 1033,
+          "Maintenance Order (AUFNR)": "600111030",
+          "Order Type Description": "PM02 - Preventive Maintenance Order",
+          "Plant Name (T001W)": "J.K. Cement Works, Mangrol",
           "Breakdown Exception Prob": 0.9626,
           "Risk Category": "Critical Risk",
-          "Cost Center (KOSTV)": 103315101.0,
-          "Predicted Breakdown Exception": 1,
-          "Company Code (BUKRS)": 1000,
-          "Company Name (BUTXT)": "J.K. CEMENT LIMITED"
+          "Spare Parts Cost INR (AUFM-DMBTR)": 0.0,
+          "Predicted Breakdown Exception": 1.0,
+          "Company Code (BUKRS)": "1000"
         },
         {
-          "Maintenance Order (AUFNR)": 600005460,
-          "Plant (WERKS)": 1902,
+          "Maintenance Order (AUFNR)": "600102568",
+          "Order Type Description": "PM02 - Preventive Maintenance Order",
+          "Plant Name (T001W)": "J.K. Cement Works, Mangrol",
           "Breakdown Exception Prob": 0.9626,
           "Risk Category": "Critical Risk",
-          "Cost Center (KOSTV)": 190215601.0,
-          "Predicted Breakdown Exception": 1,
-          "Company Code (BUKRS)": 1000,
-          "Company Name (BUTXT)": "J.K. CEMENT LIMITED"
+          "Spare Parts Cost INR (AUFM-DMBTR)": 0.0,
+          "Predicted Breakdown Exception": 1.0,
+          "Company Code (BUKRS)": "1000"
         },
         {
-          "Maintenance Order (AUFNR)": 600007666,
-          "Plant (WERKS)": 1015,
-          "Breakdown Exception Prob": 0.9625,
+          "Maintenance Order (AUFNR)": "600102569",
+          "Order Type Description": "PM02 - Preventive Maintenance Order",
+          "Plant Name (T001W)": "J.K. Cement Works, Mangrol",
+          "Breakdown Exception Prob": 0.9626,
           "Risk Category": "Critical Risk",
-          "Cost Center (KOSTV)": null,
-          "Predicted Breakdown Exception": 1,
-          "Company Code (BUKRS)": 1000,
-          "Company Name (BUTXT)": "J.K. CEMENT LIMITED"
+          "Spare Parts Cost INR (AUFM-DMBTR)": 0.0,
+          "Predicted Breakdown Exception": 1.0,
+          "Company Code (BUKRS)": "1000"
         },
         {
-          "Maintenance Order (AUFNR)": 600011055,
-          "Plant (WERKS)": 1901,
-          "Breakdown Exception Prob": 0.9625,
+          "Maintenance Order (AUFNR)": "600148941",
+          "Order Type Description": "PM07 - Shutdown / Overhaul Maintenance Order",
+          "Plant Name (T001W)": "JK Cement Works - Panna",
+          "Breakdown Exception Prob": 0.9626,
           "Risk Category": "Critical Risk",
-          "Cost Center (KOSTV)": 190127102.0,
-          "Predicted Breakdown Exception": 1,
-          "Company Code (BUKRS)": 1000,
-          "Company Name (BUTXT)": "J.K. CEMENT LIMITED"
+          "Spare Parts Cost INR (AUFM-DMBTR)": 0.0,
+          "Predicted Breakdown Exception": 1.0,
+          "Company Code (BUKRS)": "1000"
         },
         {
-          "Maintenance Order (AUFNR)": 600008556,
-          "Plant (WERKS)": 1901,
-          "Breakdown Exception Prob": 0.9625,
+          "Maintenance Order (AUFNR)": "600082226",
+          "Order Type Description": "PM01 - Breakdown Maintenance Order",
+          "Plant Name (T001W)": "J.K. Cement Works, Muddapur",
+          "Breakdown Exception Prob": 0.9626,
           "Risk Category": "Critical Risk",
-          "Cost Center (KOSTV)": 190121113.0,
-          "Predicted Breakdown Exception": 1,
-          "Company Code (BUKRS)": 1000,
-          "Company Name (BUTXT)": "J.K. CEMENT LIMITED"
+          "Spare Parts Cost INR (AUFM-DMBTR)": 3219584.02,
+          "Predicted Breakdown Exception": 1.0,
+          "Company Code (BUKRS)": "1000"
         },
         {
-          "Maintenance Order (AUFNR)": 600016840,
-          "Plant (WERKS)": 1901,
-          "Breakdown Exception Prob": 0.9625,
+          "Maintenance Order (AUFNR)": "600216361",
+          "Order Type Description": "PM03 - Corrective / General Maintenance Order",
+          "Plant Name (T001W)": "JK Cement Works - Panna",
+          "Breakdown Exception Prob": 0.9626,
           "Risk Category": "Critical Risk",
-          "Cost Center (KOSTV)": 190121113.0,
-          "Predicted Breakdown Exception": 1,
-          "Company Code (BUKRS)": 1000,
-          "Company Name (BUTXT)": "J.K. CEMENT LIMITED"
+          "Spare Parts Cost INR (AUFM-DMBTR)": 0.0,
+          "Predicted Breakdown Exception": 1.0,
+          "Company Code (BUKRS)": "1000"
         },
         {
-          "Maintenance Order (AUFNR)": 600207447,
-          "Plant (WERKS)": 1907,
-          "Breakdown Exception Prob": 0.9625,
+          "Maintenance Order (AUFNR)": "600030538",
+          "Order Type Description": "PM03 - Corrective / General Maintenance Order",
+          "Plant Name (T001W)": "J.K. White, Katni",
+          "Breakdown Exception Prob": 0.9626,
           "Risk Category": "Critical Risk",
-          "Cost Center (KOSTV)": 190715001.0,
-          "Predicted Breakdown Exception": 1,
-          "Company Code (BUKRS)": 1000,
-          "Company Name (BUTXT)": "J.K. CEMENT LIMITED"
+          "Spare Parts Cost INR (AUFM-DMBTR)": 2753.62,
+          "Predicted Breakdown Exception": 1.0,
+          "Company Code (BUKRS)": "1000"
         },
         {
-          "Maintenance Order (AUFNR)": 600000129,
-          "Plant (WERKS)": 1001,
-          "Breakdown Exception Prob": 0.9625,
+          "Maintenance Order (AUFNR)": "600236848",
+          "Order Type Description": "PM03 - Corrective / General Maintenance Order",
+          "Plant Name (T001W)": "J.K. Cement Works, Muddapur",
+          "Breakdown Exception Prob": 0.9626,
           "Risk Category": "Critical Risk",
-          "Cost Center (KOSTV)": 100121105.0,
-          "Predicted Breakdown Exception": 1,
-          "Company Code (BUKRS)": 1000,
-          "Company Name (BUTXT)": "J.K. CEMENT LIMITED"
+          "Spare Parts Cost INR (AUFM-DMBTR)": 0.0,
+          "Predicted Breakdown Exception": 1.0,
+          "Company Code (BUKRS)": "1000"
         },
         {
-          "Maintenance Order (AUFNR)": 600027672,
-          "Plant (WERKS)": 1902,
-          "Breakdown Exception Prob": 0.9625,
+          "Maintenance Order (AUFNR)": "600006534",
+          "Order Type Description": "PM02 - Preventive Maintenance Order",
+          "Plant Name (T001W)": "J.K. White Cement Works ,Gotan",
+          "Breakdown Exception Prob": 0.9626,
           "Risk Category": "Critical Risk",
-          "Cost Center (KOSTV)": 190215601.0,
-          "Predicted Breakdown Exception": 1,
-          "Company Code (BUKRS)": 1000,
-          "Company Name (BUTXT)": "J.K. CEMENT LIMITED"
+          "Spare Parts Cost INR (AUFM-DMBTR)": 0.0,
+          "Predicted Breakdown Exception": 1.0,
+          "Company Code (BUKRS)": "1000"
         },
         {
-          "Maintenance Order (AUFNR)": 600024214,
-          "Plant (WERKS)": 1025,
-          "Breakdown Exception Prob": 0.9625,
+          "Maintenance Order (AUFNR)": "600198351",
+          "Order Type Description": "PM02 - Preventive Maintenance Order",
+          "Plant Name (T001W)": "J.K. White Cement Works ,Gotan",
+          "Breakdown Exception Prob": 0.9626,
           "Risk Category": "Critical Risk",
-          "Cost Center (KOSTV)": 102512110.0,
-          "Predicted Breakdown Exception": 1,
-          "Company Code (BUKRS)": 1000,
-          "Company Name (BUTXT)": "J.K. CEMENT LIMITED"
+          "Spare Parts Cost INR (AUFM-DMBTR)": 0.0,
+          "Predicted Breakdown Exception": 1.0,
+          "Company Code (BUKRS)": "1000"
         },
         {
-          "Maintenance Order (AUFNR)": 600004315,
-          "Plant (WERKS)": 1001,
-          "Breakdown Exception Prob": 0.9625,
+          "Maintenance Order (AUFNR)": "600006519",
+          "Order Type Description": "PM02 - Preventive Maintenance Order",
+          "Plant Name (T001W)": "J.K. White Cement Works ,Gotan",
+          "Breakdown Exception Prob": 0.9626,
           "Risk Category": "Critical Risk",
-          "Cost Center (KOSTV)": 100121105.0,
-          "Predicted Breakdown Exception": 1,
-          "Company Code (BUKRS)": 1000,
-          "Company Name (BUTXT)": "J.K. CEMENT LIMITED"
+          "Spare Parts Cost INR (AUFM-DMBTR)": 0.0,
+          "Predicted Breakdown Exception": 1.0,
+          "Company Code (BUKRS)": "1000"
         },
         {
-          "Maintenance Order (AUFNR)": 600017827,
-          "Plant (WERKS)": 1001,
-          "Breakdown Exception Prob": 0.9625,
+          "Maintenance Order (AUFNR)": "600051275",
+          "Order Type Description": "PM02 - Preventive Maintenance Order",
+          "Plant Name (T001W)": "J.K. White Cement Works ,Gotan",
+          "Breakdown Exception Prob": 0.9626,
           "Risk Category": "Critical Risk",
-          "Cost Center (KOSTV)": 100121105.0,
-          "Predicted Breakdown Exception": 1,
-          "Company Code (BUKRS)": 1000,
-          "Company Name (BUTXT)": "J.K. CEMENT LIMITED"
+          "Spare Parts Cost INR (AUFM-DMBTR)": 0.0,
+          "Predicted Breakdown Exception": 1.0,
+          "Company Code (BUKRS)": "1000"
         },
         {
-          "Maintenance Order (AUFNR)": 600005646,
-          "Plant (WERKS)": 1901,
-          "Breakdown Exception Prob": 0.9625,
+          "Maintenance Order (AUFNR)": "600200043",
+          "Order Type Description": "PM03 - Corrective / General Maintenance Order",
+          "Plant Name (T001W)": "J.K. Cement Works, Mangrol",
+          "Breakdown Exception Prob": 0.9626,
           "Risk Category": "Critical Risk",
-          "Cost Center (KOSTV)": 190121117.0,
-          "Predicted Breakdown Exception": 1,
-          "Company Code (BUKRS)": 1000,
-          "Company Name (BUTXT)": "J.K. CEMENT LIMITED"
+          "Spare Parts Cost INR (AUFM-DMBTR)": 0.0,
+          "Predicted Breakdown Exception": 1.0,
+          "Company Code (BUKRS)": "1000"
         },
         {
-          "Maintenance Order (AUFNR)": 600028761,
-          "Plant (WERKS)": 1901,
-          "Breakdown Exception Prob": 0.9625,
+          "Maintenance Order (AUFNR)": "600085228",
+          "Order Type Description": "PM02 - Preventive Maintenance Order",
+          "Plant Name (T001W)": "J.K. White Cement Works ,Gotan",
+          "Breakdown Exception Prob": 0.9626,
           "Risk Category": "Critical Risk",
-          "Cost Center (KOSTV)": 190121107.0,
-          "Predicted Breakdown Exception": 1,
-          "Company Code (BUKRS)": 1000,
-          "Company Name (BUTXT)": "J.K. CEMENT LIMITED"
+          "Spare Parts Cost INR (AUFM-DMBTR)": 0.0,
+          "Predicted Breakdown Exception": 1.0,
+          "Company Code (BUKRS)": "1000"
         },
         {
-          "Maintenance Order (AUFNR)": 600006078,
-          "Plant (WERKS)": 1015,
-          "Breakdown Exception Prob": 0.9625,
+          "Maintenance Order (AUFNR)": "600186187",
+          "Order Type Description": "PM02 - Preventive Maintenance Order",
+          "Plant Name (T001W)": "J.K. White Cement Works ,Gotan",
+          "Breakdown Exception Prob": 0.9626,
           "Risk Category": "Critical Risk",
-          "Cost Center (KOSTV)": 101513210.0,
-          "Predicted Breakdown Exception": 1,
-          "Company Code (BUKRS)": 1000,
-          "Company Name (BUTXT)": "J.K. CEMENT LIMITED"
+          "Spare Parts Cost INR (AUFM-DMBTR)": 0.0,
+          "Predicted Breakdown Exception": 1.0,
+          "Company Code (BUKRS)": "1000"
         },
         {
-          "Maintenance Order (AUFNR)": 600006079,
-          "Plant (WERKS)": 1015,
-          "Breakdown Exception Prob": 0.9625,
+          "Maintenance Order (AUFNR)": "600020038",
+          "Order Type Description": "PM03 - Corrective / General Maintenance Order",
+          "Plant Name (T001W)": "JK Cement Works - Panna",
+          "Breakdown Exception Prob": 0.9626,
           "Risk Category": "Critical Risk",
-          "Cost Center (KOSTV)": 101513210.0,
-          "Predicted Breakdown Exception": 1,
-          "Company Code (BUKRS)": 1000,
-          "Company Name (BUTXT)": "J.K. CEMENT LIMITED"
+          "Spare Parts Cost INR (AUFM-DMBTR)": 0.0,
+          "Predicted Breakdown Exception": 1.0,
+          "Company Code (BUKRS)": "1000"
         },
         {
-          "Maintenance Order (AUFNR)": 600006095,
-          "Plant (WERKS)": 1015,
-          "Breakdown Exception Prob": 0.9625,
+          "Maintenance Order (AUFNR)": "600099960",
+          "Order Type Description": "PM10 - Condition / Inspection Maintenance Order",
+          "Plant Name (T001W)": "J.K. Cement Works, Mangrol",
+          "Breakdown Exception Prob": 0.9626,
           "Risk Category": "Critical Risk",
-          "Cost Center (KOSTV)": 101514310.0,
-          "Predicted Breakdown Exception": 1,
-          "Company Code (BUKRS)": 1000,
-          "Company Name (BUTXT)": "J.K. CEMENT LIMITED"
+          "Spare Parts Cost INR (AUFM-DMBTR)": 0.0,
+          "Predicted Breakdown Exception": 1.0,
+          "Company Code (BUKRS)": "1000"
         },
         {
-          "Maintenance Order (AUFNR)": 600006096,
-          "Plant (WERKS)": 1015,
-          "Breakdown Exception Prob": 0.9625,
+          "Maintenance Order (AUFNR)": "600179627",
+          "Order Type Description": "PM03 - Corrective / General Maintenance Order",
+          "Plant Name (T001W)": "J.K. Cement Works, Muddapur",
+          "Breakdown Exception Prob": 0.9626,
           "Risk Category": "Critical Risk",
-          "Cost Center (KOSTV)": 101514310.0,
-          "Predicted Breakdown Exception": 1,
-          "Company Code (BUKRS)": 1000,
-          "Company Name (BUTXT)": "J.K. CEMENT LIMITED"
+          "Spare Parts Cost INR (AUFM-DMBTR)": 0.0,
+          "Predicted Breakdown Exception": 1.0,
+          "Company Code (BUKRS)": "1000"
         },
         {
-          "Maintenance Order (AUFNR)": 600006102,
-          "Plant (WERKS)": 1015,
-          "Breakdown Exception Prob": 0.9625,
+          "Maintenance Order (AUFNR)": "600133616",
+          "Order Type Description": "PM03 - Corrective / General Maintenance Order",
+          "Plant Name (T001W)": "J.K. White, Katni",
+          "Breakdown Exception Prob": 0.9626,
           "Risk Category": "Critical Risk",
-          "Cost Center (KOSTV)": 101514310.0,
-          "Predicted Breakdown Exception": 1,
-          "Company Code (BUKRS)": 1000,
-          "Company Name (BUTXT)": "J.K. CEMENT LIMITED"
+          "Spare Parts Cost INR (AUFM-DMBTR)": 0.0,
+          "Predicted Breakdown Exception": 1.0,
+          "Company Code (BUKRS)": "1000"
         },
         {
-          "Maintenance Order (AUFNR)": 600006143,
-          "Plant (WERKS)": 1015,
-          "Breakdown Exception Prob": 0.9625,
+          "Maintenance Order (AUFNR)": "600194976",
+          "Order Type Description": "PM03 - Corrective / General Maintenance Order",
+          "Plant Name (T001W)": "JK Cement Works - Hamirpur",
+          "Breakdown Exception Prob": 0.9626,
           "Risk Category": "Critical Risk",
-          "Cost Center (KOSTV)": 101515210.0,
-          "Predicted Breakdown Exception": 1,
-          "Company Code (BUKRS)": 1000,
-          "Company Name (BUTXT)": "J.K. CEMENT LIMITED"
+          "Spare Parts Cost INR (AUFM-DMBTR)": 0.0,
+          "Predicted Breakdown Exception": 1.0,
+          "Company Code (BUKRS)": "1000"
         },
         {
-          "Maintenance Order (AUFNR)": 600006145,
-          "Plant (WERKS)": 1015,
-          "Breakdown Exception Prob": 0.9625,
+          "Maintenance Order (AUFNR)": "600078223",
+          "Order Type Description": "PM02 - Preventive Maintenance Order",
+          "Plant Name (T001W)": "J.K. White Cement Works ,Gotan",
+          "Breakdown Exception Prob": 0.9626,
           "Risk Category": "Critical Risk",
-          "Cost Center (KOSTV)": 101515210.0,
-          "Predicted Breakdown Exception": 1,
-          "Company Code (BUKRS)": 1000,
-          "Company Name (BUTXT)": "J.K. CEMENT LIMITED"
+          "Spare Parts Cost INR (AUFM-DMBTR)": 0.0,
+          "Predicted Breakdown Exception": 1.0,
+          "Company Code (BUKRS)": "1000"
         },
         {
-          "Maintenance Order (AUFNR)": 600006168,
-          "Plant (WERKS)": 1015,
-          "Breakdown Exception Prob": 0.9625,
+          "Maintenance Order (AUFNR)": "600210087",
+          "Order Type Description": "PM02 - Preventive Maintenance Order",
+          "Plant Name (T001W)": "J.K. White Cement Works ,Gotan",
+          "Breakdown Exception Prob": 0.9626,
           "Risk Category": "Critical Risk",
-          "Cost Center (KOSTV)": 101516210.0,
-          "Predicted Breakdown Exception": 1,
-          "Company Code (BUKRS)": 1000,
-          "Company Name (BUTXT)": "J.K. CEMENT LIMITED"
+          "Spare Parts Cost INR (AUFM-DMBTR)": 0.0,
+          "Predicted Breakdown Exception": 1.0,
+          "Company Code (BUKRS)": "1000"
         },
         {
-          "Maintenance Order (AUFNR)": 600006183,
-          "Plant (WERKS)": 1015,
-          "Breakdown Exception Prob": 0.9625,
+          "Maintenance Order (AUFNR)": "600035169",
+          "Order Type Description": "PM02 - Preventive Maintenance Order",
+          "Plant Name (T001W)": "J.K. White Cement Works ,Gotan",
+          "Breakdown Exception Prob": 0.9626,
           "Risk Category": "Critical Risk",
-          "Cost Center (KOSTV)": 101517311.0,
-          "Predicted Breakdown Exception": 1,
-          "Company Code (BUKRS)": 1000,
-          "Company Name (BUTXT)": "J.K. CEMENT LIMITED"
+          "Spare Parts Cost INR (AUFM-DMBTR)": 0.0,
+          "Predicted Breakdown Exception": 1.0,
+          "Company Code (BUKRS)": "1000"
         },
         {
-          "Maintenance Order (AUFNR)": 600006185,
-          "Plant (WERKS)": 1015,
-          "Breakdown Exception Prob": 0.9625,
+          "Maintenance Order (AUFNR)": "600044527",
+          "Order Type Description": "PM02 - Preventive Maintenance Order",
+          "Plant Name (T001W)": "J.K. White Cement Works ,Gotan",
+          "Breakdown Exception Prob": 0.9626,
           "Risk Category": "Critical Risk",
-          "Cost Center (KOSTV)": 101517311.0,
-          "Predicted Breakdown Exception": 1,
-          "Company Code (BUKRS)": 1000,
-          "Company Name (BUTXT)": "J.K. CEMENT LIMITED"
+          "Spare Parts Cost INR (AUFM-DMBTR)": 0.0,
+          "Predicted Breakdown Exception": 1.0,
+          "Company Code (BUKRS)": "1000"
         },
         {
-          "Maintenance Order (AUFNR)": 600006206,
-          "Plant (WERKS)": 1015,
-          "Breakdown Exception Prob": 0.9625,
+          "Maintenance Order (AUFNR)": "600104358",
+          "Order Type Description": "PM02 - Preventive Maintenance Order",
+          "Plant Name (T001W)": "J.K. White Cement Works ,Gotan",
+          "Breakdown Exception Prob": 0.9626,
           "Risk Category": "Critical Risk",
-          "Cost Center (KOSTV)": 101517211.0,
-          "Predicted Breakdown Exception": 1,
-          "Company Code (BUKRS)": 1000,
-          "Company Name (BUTXT)": "J.K. CEMENT LIMITED"
+          "Spare Parts Cost INR (AUFM-DMBTR)": 0.0,
+          "Predicted Breakdown Exception": 1.0,
+          "Company Code (BUKRS)": "1000"
         },
         {
-          "Maintenance Order (AUFNR)": 600006223,
-          "Plant (WERKS)": 1015,
-          "Breakdown Exception Prob": 0.9625,
+          "Maintenance Order (AUFNR)": "600188893",
+          "Order Type Description": "PM03 - Corrective / General Maintenance Order",
+          "Plant Name (T001W)": "J.K. Cement Works, Mangrol",
+          "Breakdown Exception Prob": 0.9626,
           "Risk Category": "Critical Risk",
-          "Cost Center (KOSTV)": 101513210.0,
-          "Predicted Breakdown Exception": 1,
-          "Company Code (BUKRS)": 1000,
-          "Company Name (BUTXT)": "J.K. CEMENT LIMITED"
+          "Spare Parts Cost INR (AUFM-DMBTR)": 0.0,
+          "Predicted Breakdown Exception": 1.0,
+          "Company Code (BUKRS)": "1000"
         },
         {
-          "Maintenance Order (AUFNR)": 600006231,
-          "Plant (WERKS)": 1015,
-          "Breakdown Exception Prob": 0.9625,
+          "Maintenance Order (AUFNR)": "600162416",
+          "Order Type Description": "PM02 - Preventive Maintenance Order",
+          "Plant Name (T001W)": "J.K. White Cement Works ,Gotan",
+          "Breakdown Exception Prob": 0.9626,
           "Risk Category": "Critical Risk",
-          "Cost Center (KOSTV)": 101517507.0,
-          "Predicted Breakdown Exception": 1,
-          "Company Code (BUKRS)": 1000,
-          "Company Name (BUTXT)": "J.K. CEMENT LIMITED"
+          "Spare Parts Cost INR (AUFM-DMBTR)": 0.0,
+          "Predicted Breakdown Exception": 1.0,
+          "Company Code (BUKRS)": "1000"
         },
         {
-          "Maintenance Order (AUFNR)": 600006234,
-          "Plant (WERKS)": 1015,
-          "Breakdown Exception Prob": 0.9625,
+          "Maintenance Order (AUFNR)": "600205951",
+          "Order Type Description": "PM02 - Preventive Maintenance Order",
+          "Plant Name (T001W)": "J.K. White Cement Works ,Gotan",
+          "Breakdown Exception Prob": 0.9626,
           "Risk Category": "Critical Risk",
-          "Cost Center (KOSTV)": 101517507.0,
-          "Predicted Breakdown Exception": 1,
-          "Company Code (BUKRS)": 1000,
-          "Company Name (BUTXT)": "J.K. CEMENT LIMITED"
+          "Spare Parts Cost INR (AUFM-DMBTR)": 0.0,
+          "Predicted Breakdown Exception": 1.0,
+          "Company Code (BUKRS)": "1000"
         },
         {
-          "Maintenance Order (AUFNR)": 600006257,
-          "Plant (WERKS)": 1015,
-          "Breakdown Exception Prob": 0.9625,
+          "Maintenance Order (AUFNR)": "600095220",
+          "Order Type Description": "PM02 - Preventive Maintenance Order",
+          "Plant Name (T001W)": "J.K. White Cement Works ,Gotan",
+          "Breakdown Exception Prob": 0.9626,
           "Risk Category": "Critical Risk",
-          "Cost Center (KOSTV)": 101514210.0,
-          "Predicted Breakdown Exception": 1,
-          "Company Code (BUKRS)": 1000,
-          "Company Name (BUTXT)": "J.K. CEMENT LIMITED"
+          "Spare Parts Cost INR (AUFM-DMBTR)": 0.0,
+          "Predicted Breakdown Exception": 1.0,
+          "Company Code (BUKRS)": "1000"
         },
         {
-          "Maintenance Order (AUFNR)": 600006279,
-          "Plant (WERKS)": 1015,
-          "Breakdown Exception Prob": 0.9625,
+          "Maintenance Order (AUFNR)": "600226007",
+          "Order Type Description": "PM03 - Corrective / General Maintenance Order",
+          "Plant Name (T001W)": "J.K. Cement Works, Mangrol",
+          "Breakdown Exception Prob": 0.9626,
           "Risk Category": "Critical Risk",
-          "Cost Center (KOSTV)": 101517507.0,
-          "Predicted Breakdown Exception": 1,
-          "Company Code (BUKRS)": 1000,
-          "Company Name (BUTXT)": "J.K. CEMENT LIMITED"
+          "Spare Parts Cost INR (AUFM-DMBTR)": 0.0,
+          "Predicted Breakdown Exception": 1.0,
+          "Company Code (BUKRS)": "1000"
         },
         {
-          "Maintenance Order (AUFNR)": 600006306,
-          "Plant (WERKS)": 1015,
-          "Breakdown Exception Prob": 0.9625,
+          "Maintenance Order (AUFNR)": "600150376",
+          "Order Type Description": "PM02 - Preventive Maintenance Order",
+          "Plant Name (T001W)": "J.K. White Cement Works ,Gotan",
+          "Breakdown Exception Prob": 0.9626,
           "Risk Category": "Critical Risk",
-          "Cost Center (KOSTV)": 101514310.0,
-          "Predicted Breakdown Exception": 1,
-          "Company Code (BUKRS)": 1000,
-          "Company Name (BUTXT)": "J.K. CEMENT LIMITED"
+          "Spare Parts Cost INR (AUFM-DMBTR)": 0.0,
+          "Predicted Breakdown Exception": 1.0,
+          "Company Code (BUKRS)": "1000"
         },
         {
-          "Maintenance Order (AUFNR)": 600006537,
-          "Plant (WERKS)": 1015,
-          "Breakdown Exception Prob": 0.9625,
+          "Maintenance Order (AUFNR)": "600144455",
+          "Order Type Description": "PM02 - Preventive Maintenance Order",
+          "Plant Name (T001W)": "J.K. White Cement Works ,Gotan",
+          "Breakdown Exception Prob": 0.9626,
           "Risk Category": "Critical Risk",
-          "Cost Center (KOSTV)": 101514320.0,
-          "Predicted Breakdown Exception": 1,
-          "Company Code (BUKRS)": 1000,
-          "Company Name (BUTXT)": "J.K. CEMENT LIMITED"
+          "Spare Parts Cost INR (AUFM-DMBTR)": 0.0,
+          "Predicted Breakdown Exception": 1.0,
+          "Company Code (BUKRS)": "1000"
         },
         {
-          "Maintenance Order (AUFNR)": 600006547,
-          "Plant (WERKS)": 1015,
-          "Breakdown Exception Prob": 0.9625,
+          "Maintenance Order (AUFNR)": "600173862",
+          "Order Type Description": "PM03 - Corrective / General Maintenance Order",
+          "Plant Name (T001W)": "J.K. Cement Works, Muddapur",
+          "Breakdown Exception Prob": 0.9626,
           "Risk Category": "Critical Risk",
-          "Cost Center (KOSTV)": 101514320.0,
-          "Predicted Breakdown Exception": 1,
-          "Company Code (BUKRS)": 1000,
-          "Company Name (BUTXT)": "J.K. CEMENT LIMITED"
+          "Spare Parts Cost INR (AUFM-DMBTR)": 0.0,
+          "Predicted Breakdown Exception": 1.0,
+          "Company Code (BUKRS)": "1000"
         },
         {
-          "Maintenance Order (AUFNR)": 600012705,
-          "Plant (WERKS)": 1004,
-          "Breakdown Exception Prob": 0.9625,
+          "Maintenance Order (AUFNR)": "600027921",
+          "Order Type Description": "PM03 - Corrective / General Maintenance Order",
+          "Plant Name (T001W)": "JK Cement Works - Hamirpur",
+          "Breakdown Exception Prob": 0.9626,
           "Risk Category": "Critical Risk",
-          "Cost Center (KOSTV)": 100421101.0,
-          "Predicted Breakdown Exception": 1,
-          "Company Code (BUKRS)": 1000,
-          "Company Name (BUTXT)": "J.K. CEMENT LIMITED"
-        },
-        {
-          "Maintenance Order (AUFNR)": 600015511,
-          "Plant (WERKS)": 1001,
-          "Breakdown Exception Prob": 0.9625,
-          "Risk Category": "Critical Risk",
-          "Cost Center (KOSTV)": 100121105.0,
-          "Predicted Breakdown Exception": 1,
-          "Company Code (BUKRS)": 1000,
-          "Company Name (BUTXT)": "J.K. CEMENT LIMITED"
-        },
-        {
-          "Maintenance Order (AUFNR)": 600027780,
-          "Plant (WERKS)": 1033,
-          "Breakdown Exception Prob": 0.9625,
-          "Risk Category": "Critical Risk",
-          "Cost Center (KOSTV)": 103341000.0,
-          "Predicted Breakdown Exception": 1,
-          "Company Code (BUKRS)": 1000,
-          "Company Name (BUTXT)": "J.K. CEMENT LIMITED"
-        },
-        {
-          "Maintenance Order (AUFNR)": 600006069,
-          "Plant (WERKS)": 1015,
-          "Breakdown Exception Prob": 0.9625,
-          "Risk Category": "Critical Risk",
-          "Cost Center (KOSTV)": 101513210.0,
-          "Predicted Breakdown Exception": 1,
-          "Company Code (BUKRS)": 1000,
-          "Company Name (BUTXT)": "J.K. CEMENT LIMITED"
-        },
-        {
-          "Maintenance Order (AUFNR)": 600006097,
-          "Plant (WERKS)": 1015,
-          "Breakdown Exception Prob": 0.9625,
-          "Risk Category": "Critical Risk",
-          "Cost Center (KOSTV)": 101514310.0,
-          "Predicted Breakdown Exception": 1,
-          "Company Code (BUKRS)": 1000,
-          "Company Name (BUTXT)": "J.K. CEMENT LIMITED"
-        },
-        {
-          "Maintenance Order (AUFNR)": 600006101,
-          "Plant (WERKS)": 1015,
-          "Breakdown Exception Prob": 0.9625,
-          "Risk Category": "Critical Risk",
-          "Cost Center (KOSTV)": 101514310.0,
-          "Predicted Breakdown Exception": 1,
-          "Company Code (BUKRS)": 1000,
-          "Company Name (BUTXT)": "J.K. CEMENT LIMITED"
-        },
-        {
-          "Maintenance Order (AUFNR)": 600006152,
-          "Plant (WERKS)": 1015,
-          "Breakdown Exception Prob": 0.9625,
-          "Risk Category": "Critical Risk",
-          "Cost Center (KOSTV)": 101516210.0,
-          "Predicted Breakdown Exception": 1,
-          "Company Code (BUKRS)": 1000,
-          "Company Name (BUTXT)": "J.K. CEMENT LIMITED"
+          "Spare Parts Cost INR (AUFM-DMBTR)": 0.0,
+          "Predicted Breakdown Exception": 1.0,
+          "Company Code (BUKRS)": "1000"
         }
       ],
       "advanced_ml": {
         "confusion_matrix": {
-          "tp": 18980,
-          "fp": 0,
-          "fn": 6020,
-          "tn": 0,
-          "precision": 1.0,
-          "recall": 0.759,
-          "f1": 0.863,
-          "accuracy": 0.759
+          "tp": 41883,
+          "fp": 12089,
+          "fn": 13262,
+          "tn": 168341,
+          "precision": 0.776,
+          "recall": 0.76,
+          "f1": 0.768,
+          "accuracy": 0.892
         },
         "threshold_curve": {
           "thresholds": [
@@ -12832,12 +12700,12 @@ window.PORTFOLIO_DATA = {
             0.382,
             0.441,
             0.494,
-            0.543,
-            0.59,
-            0.635,
-            0.679,
+            0.544,
+            0.591,
+            0.636,
+            0.68,
             0.722,
-            0.763
+            0.764
           ],
           "recall": [
             0.962,
@@ -12848,18 +12716,18 @@ window.PORTFOLIO_DATA = {
             0.612,
             0.526,
             0.436,
-            0.342
+            0.343
           ],
           "f1": [
             0.547,
-            0.593,
-            0.622,
-            0.637,
-            0.638,
+            0.594,
             0.623,
+            0.638,
+            0.638,
+            0.624,
             0.593,
-            0.543,
-            0.472
+            0.544,
+            0.473
           ]
         },
         "probability_distribution": {
@@ -12876,827 +12744,40 @@ window.PORTFOLIO_DATA = {
             "0.9"
           ],
           "clean_count": [
-            100,
-            100,
-            100,
-            100,
-            100,
-            100,
-            100,
-            100,
-            100,
-            100
+            58919,
+            37568,
+            23954,
+            15274,
+            9739,
+            6210,
+            3959,
+            2524,
+            1609,
+            1026
           ],
           "exception_count": [
-            949,
-            1476,
-            2003,
-            2530,
-            3057,
-            3585,
-            4112,
-            4639,
-            5166,
-            5694
+            2094,
+            3257,
+            4420,
+            5584,
+            6747,
+            7911,
+            9074,
+            10238,
+            11401,
+            12564
           ],
           "total_count": [
-            1049,
-            1576,
-            2103,
-            2630,
-            3157,
-            3685,
-            4212,
-            4739,
-            5266,
-            5794
-          ]
-        },
-        "calibration_curve": {
-          "deciles": [
-            "D1",
-            "D2",
-            "D3",
-            "D4",
-            "D5",
-            "D6",
-            "D7",
-            "D8",
-            "D9",
-            "D10"
-          ],
-          "predicted": [
-            0.92,
-            0.835,
-            0.75,
-            0.665,
-            0.58,
-            0.495,
-            0.41,
-            0.325,
-            0.24,
-            0.155
-          ],
-          "actual": [
-            0.782,
-            0.794,
-            0.719,
-            0.577,
-            0.44,
-            0.364,
-            0.335,
-            0.302,
-            0.232,
-            0.139
-          ]
-        },
-        "cumulative_gains": {
-          "deciles": [
-            "D1",
-            "D2",
-            "D3",
-            "D4",
-            "D5",
-            "D6",
-            "D7",
-            "D8",
-            "D9",
-            "D10"
-          ],
-          "captured_share": [
-            0.28,
-            0.5,
-            0.67,
-            0.78,
-            0.86,
-            0.91,
-            0.95,
-            0.975,
-            0.99,
-            1.0
-          ]
-        }
-      }
-    },
-    "ML_27": {
-      "id": "ML_27",
-      "num": "27",
-      "name": "RAG over SAP Data",
-      "short_name": "RAG over SAP Data",
-      "domain": "GenAI & Knowledge Retrieval",
-      "category": "Master Data & AI/NLP",
-      "icon": "Bot",
-      "sap_tables": [
-        "STXH",
-        "STXL",
-        "CDPOS",
-        "CDHDR",
-        "HANA_DOCS"
-      ],
-      "total_records": 25000,
-      "exceptions_count": 5975,
-      "exception_rate_pct": 23.9,
-      "financial_exposure_inr": 336800000.0,
-      "financial_exposure_cr": 33.68,
-      "avg_confidence_score": 0.829,
-      "champion_model": "Grounding & Hallucination Guardrail Engine",
-      "champion_metric": "0.8290 ROC-AUC",
-      "risk_distribution": {
-        "Critical": 569,
-        "High": 6266,
-        "Medium": 1810,
-        "Low": 16355
-      },
-      "category_breakdown": [
-        {
-          "label": "1001",
-          "count": 4535
-        },
-        {
-          "label": "1015",
-          "count": 4385
-        },
-        {
-          "label": "2001",
-          "count": 3550
-        },
-        {
-          "label": "CORP",
-          "count": 3345
-        },
-        {
-          "label": "1004",
-          "count": 2290
-        },
-        {
-          "label": "1901",
-          "count": 1940
-        },
-        {
-          "label": "1003",
-          "count": 720
-        }
-      ],
-      "feature_importance": [
-        {
-          "feature": "feature",
-          "importance": 0,
-          "description": "Direct Mathematical Influence On SAP RAG Semantic Retrieval & Hallucination Governance:"
-        },
-        {
-          "feature": "rag_grounding_confidence_score",
-          "importance": 0.2137,
-          "description": "(Composite SAP RAG Grounding Confidence Score [0-100] combining Chunk Semantic Richness 34%, Schema Grounding Completeness 36%, and Query Retrieval Specificity 30%)"
-        },
-        {
-          "feature": "rag_hallucination_risk_index",
-          "importance": 0.1985,
-          "description": "(Composite RAG Hallucination & Low-Grounding Exception Risk Index [0-100], defined as 100 - rag_grounding_confidence_score)"
-        },
-        {
-          "feature": "secondary_context_char_length",
-          "importance": 0.0892,
-          "description": "(Character length of joined relational master context: SKAT-TXT50 G/L text, LFA1/KNA1 partner name, AFRU-LTXA1 confirmation, or DD04T-SCRTEXT_L)"
-        },
-        {
-          "feature": "chunk_semantic_richness_score",
-          "importance": 0.0855,
-          "description": "(Normalized SAP Knowledge Chunk Lexical & Semantic Richness Score [0-100] measuring text length, unique vocabulary, secondary context, and TF-IDF energy)"
-        },
-        {
-          "feature": "query_retrieval_specificity_score",
-          "importance": 0.0825,
-          "description": "(Normalized Natural Language Query Retrieval Specificity Score [0-100] measuring dominant SAP domain intent affinity, margin, and vector cosine similarity)"
-        },
-        {
-          "feature": "relational_join_enrichment_Depth",
-          "importance": 0.0339,
-          "description": "(Weighted relational join enrichment depth [0-5] measuring successful resolution of SKAT, LFA1, KNA1, AFRU, and cost object joins)"
-        },
-        {
-          "feature": "chunk_total_token_count",
-          "importance": 0.0335,
-          "description": "(Total count of alphanumeric word tokens across the combined SAP RAG knowledge chunk)"
-        }
-      ],
-      "model_rankings": [],
-      "display_columns": [
-        "Plant (WERKS)",
-        "RAG Exception Prob",
-        "Risk Category",
-        "Predicted RAG Exception",
-        "Company Code (BUKRS)",
-        "Company Name (BUTXT)",
-        "Plant Name (T001W)",
-        "SAP Module"
-      ],
-      "sample_records": [
-        {
-          "Plant (WERKS)": "1001",
-          "RAG Exception Prob": 0.9626,
-          "Risk Category": "High Risk",
-          "Predicted RAG Exception": 1,
-          "Company Code (BUKRS)": 1000,
-          "Company Name (BUTXT)": "J.K. CEMENT LIMITED",
-          "Plant Name (T001W)": "J.K. Cement Works Nimbahera",
-          "SAP Module": "PM-MAINT"
-        },
-        {
-          "Plant (WERKS)": "1001",
-          "RAG Exception Prob": 0.9626,
-          "Risk Category": "High Risk",
-          "Predicted RAG Exception": 1,
-          "Company Code (BUKRS)": 1000,
-          "Company Name (BUTXT)": "J.K. CEMENT LIMITED",
-          "Plant Name (T001W)": "J.K. Cement Works Nimbahera",
-          "SAP Module": "PM-MAINT"
-        },
-        {
-          "Plant (WERKS)": "1015",
-          "RAG Exception Prob": 0.9626,
-          "Risk Category": "High Risk",
-          "Predicted RAG Exception": 1,
-          "Company Code (BUKRS)": 1000,
-          "Company Name (BUTXT)": "J.K. CEMENT LIMITED",
-          "Plant Name (T001W)": "J.K. White Cement Works ,Gotan",
-          "SAP Module": "PM-MAINT"
-        },
-        {
-          "Plant (WERKS)": "1015",
-          "RAG Exception Prob": 0.9626,
-          "Risk Category": "High Risk",
-          "Predicted RAG Exception": 1,
-          "Company Code (BUKRS)": 1000,
-          "Company Name (BUTXT)": "J.K. CEMENT LIMITED",
-          "Plant Name (T001W)": "J.K. White Cement Works ,Gotan",
-          "SAP Module": "PM-MAINT"
-        },
-        {
-          "Plant (WERKS)": "1015",
-          "RAG Exception Prob": 0.9626,
-          "Risk Category": "High Risk",
-          "Predicted RAG Exception": 1,
-          "Company Code (BUKRS)": 1000,
-          "Company Name (BUTXT)": "J.K. CEMENT LIMITED",
-          "Plant Name (T001W)": "J.K. White Cement Works ,Gotan",
-          "SAP Module": "PM-MAINT"
-        },
-        {
-          "Plant (WERKS)": "1015",
-          "RAG Exception Prob": 0.9626,
-          "Risk Category": "High Risk",
-          "Predicted RAG Exception": 1,
-          "Company Code (BUKRS)": 1000,
-          "Company Name (BUTXT)": "J.K. CEMENT LIMITED",
-          "Plant Name (T001W)": "J.K. White Cement Works ,Gotan",
-          "SAP Module": "PM-MAINT"
-        },
-        {
-          "Plant (WERKS)": "1001",
-          "RAG Exception Prob": 0.9625,
-          "Risk Category": "High Risk",
-          "Predicted RAG Exception": 1,
-          "Company Code (BUKRS)": 1000,
-          "Company Name (BUTXT)": "J.K. CEMENT LIMITED",
-          "Plant Name (T001W)": "J.K. Cement Works Nimbahera",
-          "SAP Module": "PM-MAINT"
-        },
-        {
-          "Plant (WERKS)": "1001",
-          "RAG Exception Prob": 0.9625,
-          "Risk Category": "High Risk",
-          "Predicted RAG Exception": 1,
-          "Company Code (BUKRS)": 1000,
-          "Company Name (BUTXT)": "J.K. CEMENT LIMITED",
-          "Plant Name (T001W)": "J.K. Cement Works Nimbahera",
-          "SAP Module": "PM-MAINT"
-        },
-        {
-          "Plant (WERKS)": "1004",
-          "RAG Exception Prob": 0.9625,
-          "Risk Category": "High Risk",
-          "Predicted RAG Exception": 1,
-          "Company Code (BUKRS)": 1000,
-          "Company Name (BUTXT)": "J.K. CEMENT LIMITED",
-          "Plant Name (T001W)": "J.K. Cement Works, Mangrol",
-          "SAP Module": "PM-MAINT"
-        },
-        {
-          "Plant (WERKS)": "1901",
-          "RAG Exception Prob": 0.9625,
-          "Risk Category": "High Risk",
-          "Predicted RAG Exception": 1,
-          "Company Code (BUKRS)": 1000,
-          "Company Name (BUTXT)": "J.K. CEMENT LIMITED",
-          "Plant Name (T001W)": "JK Cement Works - Panna",
-          "SAP Module": "PM-MAINT"
-        },
-        {
-          "Plant (WERKS)": "1004",
-          "RAG Exception Prob": 0.9625,
-          "Risk Category": "High Risk",
-          "Predicted RAG Exception": 1,
-          "Company Code (BUKRS)": 1000,
-          "Company Name (BUTXT)": "J.K. CEMENT LIMITED",
-          "Plant Name (T001W)": "J.K. Cement Works, Mangrol",
-          "SAP Module": "PM-MAINT"
-        },
-        {
-          "Plant (WERKS)": "1901",
-          "RAG Exception Prob": 0.9625,
-          "Risk Category": "High Risk",
-          "Predicted RAG Exception": 1,
-          "Company Code (BUKRS)": 1000,
-          "Company Name (BUTXT)": "J.K. CEMENT LIMITED",
-          "Plant Name (T001W)": "JK Cement Works - Panna",
-          "SAP Module": "PM-MAINT"
-        },
-        {
-          "Plant (WERKS)": "1004",
-          "RAG Exception Prob": 0.9625,
-          "Risk Category": "High Risk",
-          "Predicted RAG Exception": 1,
-          "Company Code (BUKRS)": 1000,
-          "Company Name (BUTXT)": "J.K. CEMENT LIMITED",
-          "Plant Name (T001W)": "J.K. Cement Works, Mangrol",
-          "SAP Module": "PM-MAINT"
-        },
-        {
-          "Plant (WERKS)": "1004",
-          "RAG Exception Prob": 0.9625,
-          "Risk Category": "High Risk",
-          "Predicted RAG Exception": 1,
-          "Company Code (BUKRS)": 1000,
-          "Company Name (BUTXT)": "J.K. CEMENT LIMITED",
-          "Plant Name (T001W)": "J.K. Cement Works, Mangrol",
-          "SAP Module": "PM-MAINT"
-        },
-        {
-          "Plant (WERKS)": "1901",
-          "RAG Exception Prob": 0.9625,
-          "Risk Category": "High Risk",
-          "Predicted RAG Exception": 1,
-          "Company Code (BUKRS)": 1000,
-          "Company Name (BUTXT)": "J.K. CEMENT LIMITED",
-          "Plant Name (T001W)": "JK Cement Works - Panna",
-          "SAP Module": "PM-MAINT"
-        },
-        {
-          "Plant (WERKS)": "1004",
-          "RAG Exception Prob": 0.9625,
-          "Risk Category": "High Risk",
-          "Predicted RAG Exception": 1,
-          "Company Code (BUKRS)": 1000,
-          "Company Name (BUTXT)": "J.K. CEMENT LIMITED",
-          "Plant Name (T001W)": "J.K. Cement Works, Mangrol",
-          "SAP Module": "PM-MAINT"
-        },
-        {
-          "Plant (WERKS)": "1901",
-          "RAG Exception Prob": 0.9625,
-          "Risk Category": "High Risk",
-          "Predicted RAG Exception": 1,
-          "Company Code (BUKRS)": 1000,
-          "Company Name (BUTXT)": "J.K. CEMENT LIMITED",
-          "Plant Name (T001W)": "JK Cement Works - Panna",
-          "SAP Module": "PM-MAINT"
-        },
-        {
-          "Plant (WERKS)": "CORP",
-          "RAG Exception Prob": 0.9625,
-          "Risk Category": "High Risk",
-          "Predicted RAG Exception": 1,
-          "Company Code (BUKRS)": 1000,
-          "Company Name (BUTXT)": "J.K. CEMENT LIMITED",
-          "Plant Name (T001W)": "Corporate / Multi-Plant",
-          "SAP Module": "BASIS-DDIC"
-        },
-        {
-          "Plant (WERKS)": "CORP",
-          "RAG Exception Prob": 0.9625,
-          "Risk Category": "High Risk",
-          "Predicted RAG Exception": 1,
-          "Company Code (BUKRS)": 1000,
-          "Company Name (BUTXT)": "J.K. CEMENT LIMITED",
-          "Plant Name (T001W)": "Corporate / Multi-Plant",
-          "SAP Module": "BASIS-DDIC"
-        },
-        {
-          "Plant (WERKS)": "CORP",
-          "RAG Exception Prob": 0.9625,
-          "Risk Category": "High Risk",
-          "Predicted RAG Exception": 1,
-          "Company Code (BUKRS)": 1000,
-          "Company Name (BUTXT)": "J.K. CEMENT LIMITED",
-          "Plant Name (T001W)": "Corporate / Multi-Plant",
-          "SAP Module": "BASIS-DDIC"
-        },
-        {
-          "Plant (WERKS)": "CORP",
-          "RAG Exception Prob": 0.9625,
-          "Risk Category": "High Risk",
-          "Predicted RAG Exception": 1,
-          "Company Code (BUKRS)": 1000,
-          "Company Name (BUTXT)": "J.K. CEMENT LIMITED",
-          "Plant Name (T001W)": "Corporate / Multi-Plant",
-          "SAP Module": "BASIS-DDIC"
-        },
-        {
-          "Plant (WERKS)": "CORP",
-          "RAG Exception Prob": 0.9625,
-          "Risk Category": "High Risk",
-          "Predicted RAG Exception": 1,
-          "Company Code (BUKRS)": 1000,
-          "Company Name (BUTXT)": "J.K. CEMENT LIMITED",
-          "Plant Name (T001W)": "Corporate / Multi-Plant",
-          "SAP Module": "BASIS-DDIC"
-        },
-        {
-          "Plant (WERKS)": "CORP",
-          "RAG Exception Prob": 0.9625,
-          "Risk Category": "High Risk",
-          "Predicted RAG Exception": 1,
-          "Company Code (BUKRS)": 1000,
-          "Company Name (BUTXT)": "J.K. CEMENT LIMITED",
-          "Plant Name (T001W)": "Corporate / Multi-Plant",
-          "SAP Module": "BASIS-DDIC"
-        },
-        {
-          "Plant (WERKS)": "1004",
-          "RAG Exception Prob": 0.9625,
-          "Risk Category": "High Risk",
-          "Predicted RAG Exception": 1,
-          "Company Code (BUKRS)": 1000,
-          "Company Name (BUTXT)": "J.K. CEMENT LIMITED",
-          "Plant Name (T001W)": "J.K. Cement Works, Mangrol",
-          "SAP Module": "PM-MAINT"
-        },
-        {
-          "Plant (WERKS)": "1004",
-          "RAG Exception Prob": 0.9625,
-          "Risk Category": "High Risk",
-          "Predicted RAG Exception": 1,
-          "Company Code (BUKRS)": 1000,
-          "Company Name (BUTXT)": "J.K. CEMENT LIMITED",
-          "Plant Name (T001W)": "J.K. Cement Works, Mangrol",
-          "SAP Module": "PM-MAINT"
-        },
-        {
-          "Plant (WERKS)": "1901",
-          "RAG Exception Prob": 0.9625,
-          "Risk Category": "High Risk",
-          "Predicted RAG Exception": 1,
-          "Company Code (BUKRS)": 1000,
-          "Company Name (BUTXT)": "J.K. CEMENT LIMITED",
-          "Plant Name (T001W)": "JK Cement Works - Panna",
-          "SAP Module": "PM-MAINT"
-        },
-        {
-          "Plant (WERKS)": "1901",
-          "RAG Exception Prob": 0.9624,
-          "Risk Category": "High Risk",
-          "Predicted RAG Exception": 1,
-          "Company Code (BUKRS)": 1000,
-          "Company Name (BUTXT)": "J.K. CEMENT LIMITED",
-          "Plant Name (T001W)": "JK Cement Works - Panna",
-          "SAP Module": "PM-MAINT"
-        },
-        {
-          "Plant (WERKS)": "1004",
-          "RAG Exception Prob": 0.9624,
-          "Risk Category": "Critical Risk",
-          "Predicted RAG Exception": 1,
-          "Company Code (BUKRS)": 1000,
-          "Company Name (BUTXT)": "J.K. CEMENT LIMITED",
-          "Plant Name (T001W)": "J.K. Cement Works, Mangrol",
-          "SAP Module": "MM-P2P"
-        },
-        {
-          "Plant (WERKS)": "2001",
-          "RAG Exception Prob": 0.9624,
-          "Risk Category": "High Risk",
-          "Predicted RAG Exception": 1,
-          "Company Code (BUKRS)": 1000,
-          "Company Name (BUTXT)": "J.K. CEMENT LIMITED",
-          "Plant Name (T001W)": "J.K. Cement Works, Muddapur",
-          "SAP Module": "PM-MAINT"
-        },
-        {
-          "Plant (WERKS)": "2001",
-          "RAG Exception Prob": 0.9624,
-          "Risk Category": "High Risk",
-          "Predicted RAG Exception": 1,
-          "Company Code (BUKRS)": 1000,
-          "Company Name (BUTXT)": "J.K. CEMENT LIMITED",
-          "Plant Name (T001W)": "J.K. Cement Works, Muddapur",
-          "SAP Module": "PM-MAINT"
-        },
-        {
-          "Plant (WERKS)": "1901",
-          "RAG Exception Prob": 0.9624,
-          "Risk Category": "High Risk",
-          "Predicted RAG Exception": 1,
-          "Company Code (BUKRS)": 1000,
-          "Company Name (BUTXT)": "J.K. CEMENT LIMITED",
-          "Plant Name (T001W)": "JK Cement Works - Panna",
-          "SAP Module": "PM-MAINT"
-        },
-        {
-          "Plant (WERKS)": "CORP",
-          "RAG Exception Prob": 0.9624,
-          "Risk Category": "High Risk",
-          "Predicted RAG Exception": 1,
-          "Company Code (BUKRS)": 1000,
-          "Company Name (BUTXT)": "J.K. CEMENT LIMITED",
-          "Plant Name (T001W)": "Corporate / Multi-Plant",
-          "SAP Module": "BASIS-DDIC"
-        },
-        {
-          "Plant (WERKS)": "CORP",
-          "RAG Exception Prob": 0.9624,
-          "Risk Category": "High Risk",
-          "Predicted RAG Exception": 1,
-          "Company Code (BUKRS)": 1000,
-          "Company Name (BUTXT)": "J.K. CEMENT LIMITED",
-          "Plant Name (T001W)": "Corporate / Multi-Plant",
-          "SAP Module": "BASIS-DDIC"
-        },
-        {
-          "Plant (WERKS)": "CORP",
-          "RAG Exception Prob": 0.9624,
-          "Risk Category": "High Risk",
-          "Predicted RAG Exception": 1,
-          "Company Code (BUKRS)": 1000,
-          "Company Name (BUTXT)": "J.K. CEMENT LIMITED",
-          "Plant Name (T001W)": "Corporate / Multi-Plant",
-          "SAP Module": "BASIS-DDIC"
-        },
-        {
-          "Plant (WERKS)": "1901",
-          "RAG Exception Prob": 0.9623,
-          "Risk Category": "High Risk",
-          "Predicted RAG Exception": 1,
-          "Company Code (BUKRS)": 1000,
-          "Company Name (BUTXT)": "J.K. CEMENT LIMITED",
-          "Plant Name (T001W)": "JK Cement Works - Panna",
-          "SAP Module": "PM-MAINT"
-        },
-        {
-          "Plant (WERKS)": "1033",
-          "RAG Exception Prob": 0.9623,
-          "Risk Category": "High Risk",
-          "Predicted RAG Exception": 1,
-          "Company Code (BUKRS)": 1000,
-          "Company Name (BUTXT)": "J.K. CEMENT LIMITED",
-          "Plant Name (T001W)": "J.K. Cement Works Aligarh",
-          "SAP Module": "PM-MAINT"
-        },
-        {
-          "Plant (WERKS)": "CORP",
-          "RAG Exception Prob": 0.9623,
-          "Risk Category": "High Risk",
-          "Predicted RAG Exception": 1,
-          "Company Code (BUKRS)": 1000,
-          "Company Name (BUTXT)": "J.K. CEMENT LIMITED",
-          "Plant Name (T001W)": "Corporate / Multi-Plant",
-          "SAP Module": "BASIS-DDIC"
-        },
-        {
-          "Plant (WERKS)": "1015",
-          "RAG Exception Prob": 0.9623,
-          "Risk Category": "High Risk",
-          "Predicted RAG Exception": 1,
-          "Company Code (BUKRS)": 1000,
-          "Company Name (BUTXT)": "J.K. CEMENT LIMITED",
-          "Plant Name (T001W)": "J.K. White Cement Works ,Gotan",
-          "SAP Module": "PM-MAINT"
-        },
-        {
-          "Plant (WERKS)": "1015",
-          "RAG Exception Prob": 0.9623,
-          "Risk Category": "High Risk",
-          "Predicted RAG Exception": 1,
-          "Company Code (BUKRS)": 1000,
-          "Company Name (BUTXT)": "J.K. CEMENT LIMITED",
-          "Plant Name (T001W)": "J.K. White Cement Works ,Gotan",
-          "SAP Module": "PM-MAINT"
-        },
-        {
-          "Plant (WERKS)": "1015",
-          "RAG Exception Prob": 0.9623,
-          "Risk Category": "High Risk",
-          "Predicted RAG Exception": 1,
-          "Company Code (BUKRS)": 1000,
-          "Company Name (BUTXT)": "J.K. CEMENT LIMITED",
-          "Plant Name (T001W)": "J.K. White Cement Works ,Gotan",
-          "SAP Module": "PM-MAINT"
-        },
-        {
-          "Plant (WERKS)": "1015",
-          "RAG Exception Prob": 0.9623,
-          "Risk Category": "High Risk",
-          "Predicted RAG Exception": 1,
-          "Company Code (BUKRS)": 1000,
-          "Company Name (BUTXT)": "J.K. CEMENT LIMITED",
-          "Plant Name (T001W)": "J.K. White Cement Works ,Gotan",
-          "SAP Module": "PM-MAINT"
-        },
-        {
-          "Plant (WERKS)": "1015",
-          "RAG Exception Prob": 0.9623,
-          "Risk Category": "High Risk",
-          "Predicted RAG Exception": 1,
-          "Company Code (BUKRS)": 1000,
-          "Company Name (BUTXT)": "J.K. CEMENT LIMITED",
-          "Plant Name (T001W)": "J.K. White Cement Works ,Gotan",
-          "SAP Module": "PM-MAINT"
-        },
-        {
-          "Plant (WERKS)": "1015",
-          "RAG Exception Prob": 0.9623,
-          "Risk Category": "High Risk",
-          "Predicted RAG Exception": 1,
-          "Company Code (BUKRS)": 1000,
-          "Company Name (BUTXT)": "J.K. CEMENT LIMITED",
-          "Plant Name (T001W)": "J.K. White Cement Works ,Gotan",
-          "SAP Module": "PM-MAINT"
-        },
-        {
-          "Plant (WERKS)": "1015",
-          "RAG Exception Prob": 0.9623,
-          "Risk Category": "High Risk",
-          "Predicted RAG Exception": 1,
-          "Company Code (BUKRS)": 1000,
-          "Company Name (BUTXT)": "J.K. CEMENT LIMITED",
-          "Plant Name (T001W)": "J.K. White Cement Works ,Gotan",
-          "SAP Module": "PM-MAINT"
-        },
-        {
-          "Plant (WERKS)": "1015",
-          "RAG Exception Prob": 0.9623,
-          "Risk Category": "High Risk",
-          "Predicted RAG Exception": 1,
-          "Company Code (BUKRS)": 1000,
-          "Company Name (BUTXT)": "J.K. CEMENT LIMITED",
-          "Plant Name (T001W)": "J.K. White Cement Works ,Gotan",
-          "SAP Module": "PM-MAINT"
-        },
-        {
-          "Plant (WERKS)": "1015",
-          "RAG Exception Prob": 0.9623,
-          "Risk Category": "High Risk",
-          "Predicted RAG Exception": 1,
-          "Company Code (BUKRS)": 1000,
-          "Company Name (BUTXT)": "J.K. CEMENT LIMITED",
-          "Plant Name (T001W)": "J.K. White Cement Works ,Gotan",
-          "SAP Module": "PM-MAINT"
-        },
-        {
-          "Plant (WERKS)": "1015",
-          "RAG Exception Prob": 0.9623,
-          "Risk Category": "High Risk",
-          "Predicted RAG Exception": 1,
-          "Company Code (BUKRS)": 1000,
-          "Company Name (BUTXT)": "J.K. CEMENT LIMITED",
-          "Plant Name (T001W)": "J.K. White Cement Works ,Gotan",
-          "SAP Module": "PM-MAINT"
-        },
-        {
-          "Plant (WERKS)": "1015",
-          "RAG Exception Prob": 0.9623,
-          "Risk Category": "High Risk",
-          "Predicted RAG Exception": 1,
-          "Company Code (BUKRS)": 1000,
-          "Company Name (BUTXT)": "J.K. CEMENT LIMITED",
-          "Plant Name (T001W)": "J.K. White Cement Works ,Gotan",
-          "SAP Module": "PM-MAINT"
-        },
-        {
-          "Plant (WERKS)": "1015",
-          "RAG Exception Prob": 0.9623,
-          "Risk Category": "High Risk",
-          "Predicted RAG Exception": 1,
-          "Company Code (BUKRS)": 1000,
-          "Company Name (BUTXT)": "J.K. CEMENT LIMITED",
-          "Plant Name (T001W)": "J.K. White Cement Works ,Gotan",
-          "SAP Module": "PM-MAINT"
-        },
-        {
-          "Plant (WERKS)": "1015",
-          "RAG Exception Prob": 0.9623,
-          "Risk Category": "High Risk",
-          "Predicted RAG Exception": 1,
-          "Company Code (BUKRS)": 1000,
-          "Company Name (BUTXT)": "J.K. CEMENT LIMITED",
-          "Plant Name (T001W)": "J.K. White Cement Works ,Gotan",
-          "SAP Module": "PM-MAINT"
-        }
-      ],
-      "advanced_ml": {
-        "confusion_matrix": {
-          "tp": 18980,
-          "fp": 0,
-          "fn": 6020,
-          "tn": 0,
-          "precision": 1.0,
-          "recall": 0.759,
-          "f1": 0.863,
-          "accuracy": 0.759
-        },
-        "threshold_curve": {
-          "thresholds": [
-            0.1,
-            0.2,
-            0.3,
-            0.4,
-            0.5,
-            0.6,
-            0.7,
-            0.8,
-            0.9
-          ],
-          "precision": [
-            0.382,
-            0.441,
-            0.494,
-            0.543,
-            0.59,
-            0.635,
-            0.679,
-            0.722,
-            0.763
-          ],
-          "recall": [
-            0.962,
-            0.907,
-            0.842,
-            0.771,
-            0.694,
-            0.612,
-            0.526,
-            0.436,
-            0.342
-          ],
-          "f1": [
-            0.547,
-            0.593,
-            0.622,
-            0.637,
-            0.638,
-            0.623,
-            0.593,
-            0.543,
-            0.472
-          ]
-        },
-        "probability_distribution": {
-          "bins": [
-            "0.0",
-            "0.1",
-            "0.2",
-            "0.3",
-            "0.4",
-            "0.5",
-            "0.6",
-            "0.7",
-            "0.8",
-            "0.9"
-          ],
-          "clean_count": [
-            100,
-            100,
-            100,
-            100,
-            100,
-            100,
-            100,
-            100,
-            100,
-            100
-          ],
-          "exception_count": [
-            949,
-            1476,
-            2003,
-            2530,
-            3057,
-            3585,
-            4112,
-            4639,
-            5166,
-            5694
-          ],
-          "total_count": [
-            1049,
-            1576,
-            2103,
-            2630,
-            3157,
-            3685,
-            4212,
-            4739,
-            5266,
-            5794
+            61013,
+            40825,
+            28374,
+            20858,
+            16486,
+            14121,
+            13033,
+            12762,
+            13010,
+            13590
           ]
         },
         "calibration_curve": {
@@ -13766,37 +12847,405 @@ window.PORTFOLIO_DATA = {
       }
     }
   },
-  "total_financial_exposure_cr": 17863.2,
   "decision_intelligence": {
-    "act_triage": {
+    "kpi_cards": {
+      "equipment_failure_delay": {
+        "id": "cardEquipFailureDelay",
+        "title": "Equipment Failure Delay Rate",
+        "value": "24.2%",
+        "models": "ML-04, 07, 26",
+        "subtitle": "Delays in production orders due to equipment breakdown",
+        "badge": "Operational Alert",
+        "badge_color": "amber",
+        "metric_detail": "64,344 Maintenance & 55,145 RCA flags",
+        "benchmark": "Industry Mean: 28.5%",
+        "impact": "Triggers autonomous kiln vibration monitoring & spares staging"
+      },
+      "credit_sales_conversion": {
+        "id": "cardCreditSalesConversion",
+        "title": "Credit-Approved Sales Conversion",
+        "value": "74.0%",
+        "models": "ML-05, 15, 22",
+        "subtitle": "Order release decisions based on credit risk & order value",
+        "badge": "Commercial Flow",
+        "badge_color": "emerald",
+        "metric_detail": "₹2,410 Cr Approved | ₹803.9 Cr Escrow Collateralized",
+        "benchmark": "Target Conversion: >70.0%",
+        "impact": "Protects cash flow while auto-clearing low-risk dealer dispatch"
+      },
+      "leakage_index": {
+        "id": "cardLeakageIndex",
+        "title": "Enterprise Spend Leakage Index",
+        "value": "₹8,059.17 Cr",
+        "models": "ML-13, 19, 20",
+        "subtitle": "Spend leakage from price variance & duplicate invoices",
+        "badge": "High Financial Risk",
+        "badge_color": "rose",
+        "metric_detail": "₹7,907.6 Cr Duplicates + ₹93.9 Cr Price Var",
+        "benchmark": "Audit Target: <₹1,000 Cr",
+        "impact": "Halts payment runs on colliding invoices & off-contract rates"
+      },
+      "vendor_performance_index": {
+        "id": "cardVendorPerfIndex",
+        "title": "Vendor Performance Index (VPI)",
+        "value": "87.4 / 100",
+        "models": "ML-08, 14, 19, 23",
+        "subtitle": "Vendor selection on price variance, quality & delivery time",
+        "badge": "Top Quartile",
+        "badge_color": "blue",
+        "metric_detail": "95.0% Quality Pass | 64.4% SLA Adherence | 87.1% Low Risk",
+        "benchmark": "Target Index: >85.0",
+        "impact": "Guides strategic procurement volume allocation & supplier re-tenders"
+      },
+      "gl_coding_accuracy": {
+        "id": "cardGlCodingAccuracy",
+        "title": "GL Coding Accuracy Rate",
+        "value": "94.1%",
+        "models": "ML-25",
+        "subtitle": "GL mapped to correct GL group for accurate financial reporting",
+        "badge": "Audit Compliant",
+        "badge_color": "emerald",
+        "metric_detail": "1,029,908 Postings Classified | 94.1% Straight-Through",
+        "benchmark": "Statutory Target: >92.0%",
+        "impact": "Eliminates month-end manual reconciliation and reporting drift"
+      },
+      "high_pr_po_delay": {
+        "id": "cardHighPrPoDelay",
+        "title": "High PR-to-PO Conversion Delay",
+        "value": "35.6%",
+        "models": "ML-14",
+        "subtitle": "PR to PO conversion cycle time exceeding SLA (>14 days)",
+        "badge": "SLA Bottleneck",
+        "badge_color": "amber",
+        "metric_detail": "188,117 Delayed PRs | ₹44,265 Cr Exposure",
+        "benchmark": "SLA Benchmark: <25.0%",
+        "impact": "Auto-escalates aging buyer requisitions to fast-track vendor POs"
+      }
+    },
+    "capacity_reallocation": {
+      "materials": [
+        "OPC 53 Gr (Bulk)",
+        "Portland Pozzolana (PPC)",
+        "Super Clinker (Kiln 2)",
+        "White Cement (25kg Bags)",
+        "Tile Master Adhesive"
+      ],
+      "source_centers": [
+        "CC-102 (Mangrol Mill)",
+        "CC-204 (Gotan Kiln)",
+        "CC-301 (Nimbahera Clinker)",
+        "CC-108 (Gotan White)",
+        "CC-405 (Mudhol Special)"
+      ],
+      "target_centers": [
+        "CC-108 (Nimbahera Line 3)",
+        "CC-212 (Mudhol Grinding)",
+        "CC-305 (Mangrol Kiln 2)",
+        "CC-114 (Kharia Sodha)",
+        "CC-410 (Jhajjar Unit)"
+      ],
+      "source_utilization_pct": [
+        94,
+        91,
+        88,
+        86,
+        79
+      ],
+      "target_spare_pct": [
+        46,
+        52,
+        48,
+        59,
+        38
+      ],
+      "reallocated_tonnage": [
+        18500,
+        24200,
+        31000,
+        14200,
+        9800
+      ],
+      "days_delay_saved": [
+        6.2,
+        8.4,
+        7.1,
+        4.8,
+        3.5
+      ]
+    },
+    "multi_plant_yield": {
+      "plants": [
+        "Mangrol",
+        "Nimbahera",
+        "Mudhol",
+        "Gotan (Alert)",
+        "Jharli"
+      ],
+      "product_grades": [
+        "OPC 53 Grade",
+        "PPC Premium",
+        "White Cement Standard"
+      ],
+      "pass_rates": [
+        96.8,
+        94.2,
+        91.5,
+        86.4,
+        95.1
+      ],
+      "failure_rates": [
+        3.2,
+        5.8,
+        8.5,
+        13.6,
+        4.9
+      ],
+      "tested_batches": [
+        12400,
+        11850,
+        8920,
+        7450,
+        6200
+      ],
+      "prescriptive_actions": [
+        "Maintain Standard Dispatch Protocol",
+        "Minor Fineness Calibration on Mill 2",
+        "Gypsum Ratio Optimization",
+        "Quarantine Batch; Clinker Feed Chemistry Re-audit",
+        "Maintain Standard Dispatch Protocol"
+      ]
+    },
+    "cross_plant_inventory": {
+      "spare_parts": [
+        "Kiln Refractory Bricks (70% Alumina)",
+        "Grinding Media Balls (60mm Forged)",
+        "Spherical Roller Bearings 23226",
+        "EP-800 Heat-Resistant Conveyor Belt",
+        "High-Tension VFD Inverter Module"
+      ],
+      "source_plants": [
+        "Mangrol",
+        "Gotan",
+        "Nimbahera",
+        "Mudhol",
+        "Gotan"
+      ],
+      "target_plants": [
+        "Nimbahera",
+        "Mudhol",
+        "Panna",
+        "Jharli",
+        "Mangrol"
+      ],
+      "surplus_dormant_cr": [
+        14.2,
+        9.8,
+        6.4,
+        5.1,
+        4.3
+      ],
+      "active_demand_90d_cr": [
+        12.8,
+        10.2,
+        5.9,
+        4.8,
+        4.1
+      ],
+      "transferred_cr": [
+        12.8,
+        9.8,
+        5.9,
+        4.8,
+        4.1
+      ],
+      "total_capital_unlocked_cr": 37.4
+    },
+    "spend_leakage_centers": {
+      "cost_centers": [
+        "CC-301 Clinker Calcination",
+        "CC-102 Finish Grinding & Mill",
+        "CC-405 Inbound Logistics / Freight",
+        "CC-204 Captive Power Plant",
+        "CC-510 Packing & Dispatch",
+        "CC-602 Heavy Equipment Maint."
+      ],
+      "duplicate_invoices_cr": [
+        2840.5,
+        2180.2,
+        1260.4,
+        980.3,
+        420.8,
+        225.4
+      ],
+      "price_variance_cr": [
+        34.2,
+        26.5,
+        15.8,
+        9.4,
+        5.2,
+        2.8
+      ],
+      "budget_variance_cr": [
+        21.5,
+        14.8,
+        8.9,
+        6.2,
+        3.8,
+        2.4
+      ]
+    },
+    "vendor_matrix": {
+      "quadrants": [
+        {
+          "label": "Tier-1 Strategic Preferred (Fast SLA, High Quality)",
+          "color": "#2d5a26",
+          "data": [
+            {
+              "x": 98.2,
+              "y": 6.4,
+              "r": 16,
+              "vendor": "Ultratech Refractories Ltd",
+              "spend_cr": 48.5,
+              "variance_pct": 0.8,
+              "decision": "Preferred Volume Allocation; Auto-Renew Master Contract"
+            },
+            {
+              "x": 96.5,
+              "y": 8.1,
+              "r": 13,
+              "vendor": "SKF India Industrial Bearings",
+              "spend_cr": 32.1,
+              "variance_pct": 1.2,
+              "decision": "Auto-Approve Blanket POs; Preferred Vendor"
+            }
+          ]
+        },
+        {
+          "label": "Quality Compliant, High Lead-Time Delay (ML-14 SLA Alert)",
+          "color": "#d97706",
+          "data": [
+            {
+              "x": 94.1,
+              "y": 24.5,
+              "r": 15,
+              "vendor": "Bharat Heavy Electricals (Spares)",
+              "spend_cr": 41.2,
+              "variance_pct": 3.4,
+              "decision": "Enforce Expedited PO SLA Penalties; Advance Sourcing"
+            },
+            {
+              "x": 92.8,
+              "y": 28.2,
+              "r": 11,
+              "vendor": "L&T Heavy Engineering Division",
+              "spend_cr": 26.8,
+              "variance_pct": 2.9,
+              "decision": "Joint Demand Planning; Buffer Reorder Trigger"
+            }
+          ]
+        },
+        {
+          "label": "High Risk / High Variance & Delay (Retender / PO Freeze)",
+          "color": "#be123c",
+          "data": [
+            {
+              "x": 78.4,
+              "y": 32.6,
+              "r": 14,
+              "vendor": "Apex Logistics & Transporters",
+              "spend_cr": 38.6,
+              "variance_pct": 14.8,
+              "decision": "Immediate PO Freeze; Audit Freight Invoices & Retender"
+            },
+            {
+              "x": 81.2,
+              "y": 29.8,
+              "r": 12,
+              "vendor": "Eastern Mining & Minerals Corp",
+              "spend_cr": 29.4,
+              "variance_pct": 11.2,
+              "decision": "Retender Sourcing Contract; Halt Unaudited Approvals"
+            }
+          ]
+        },
+        {
+          "label": "Conditional Low-Spend Sourcing",
+          "color": "#074ea3",
+          "data": [
+            {
+              "x": 88.5,
+              "y": 14.2,
+              "r": 8,
+              "vendor": "Kirloskar Brothers Pumps",
+              "spend_cr": 12.4,
+              "variance_pct": 2.1,
+              "decision": "Standard Sourcing Cadence; Retain Quality Surveillance"
+            }
+          ]
+        }
+      ]
+    },
+    "commercial_decisions": {
+      "tiers": [
+        "Tier 1: Mega-Dealer Orders (> ₹50L)",
+        "Tier 2: Institutional Infra (₹20L - ₹50L)",
+        "Tier 3: Regional Stockists (₹5L - ₹20L)",
+        "Tier 4: Retail Outlets (< ₹5L)"
+      ],
+      "immediate_freeze": [
+        509,
+        310,
+        85,
+        20
+      ],
+      "advance_payment_escrow": [
+        1670,
+        940,
+        420,
+        150
+      ],
+      "bank_guarantee_lc": [
+        890,
+        1420,
+        810,
+        300
+      ],
+      "auto_clearance_dispatch": [
+        1240,
+        3850,
+        6210,
+        8740
+      ]
+    },
+    "action_triage": {
       "labels": [
-        "Immediate Overhaul / Kiln Overhaul (ML-07 & ML-04)",
+        "Immediate Kiln Overhaul (ML-07 & ML-04)",
         "Dormant Stock Scrap & Salvage (ML-06)",
         "Routine / Compliant Operational Status",
-        "Credit Watch & Advance Payment (ML-05)",
-        "Expedite Batch & Shift Capacity (ML-07)",
-        "Condition Monitoring Vibration / Thermal (ML-04)",
-        "High-Value Dead Stock PO Halt (ML-06)",
-        "Default Freeze & Legal Notice (ML-05)"
+        "Condition Monitoring Vibration (ML-04)",
+        "Expedite Batch & Capacity Realloc (ML-07)",
+        "Spend Audit & PO Freeze (ML-13 & ML-14)",
+        "Credit Watch Advance Payment (ML-05)",
+        "Duplicate Invoice Collision Halt (ML-20)"
       ],
       "counts": [
-        33080,
-        22744,
-        37214,
-        1670,
-        1973,
-        3477,
-        1799,
-        509
+        8226,
+        139102,
+        4985183,
+        18368,
+        282065,
+        756,
+        27288,
+        21796
       ],
       "colors": [
         "#be123c",
         "#074ea3",
         "#7dbf40",
-        "#d97706",
-        "#f59e0b",
         "#6366f1",
+        "#f59e0b",
         "#9f1239",
+        "#d97706",
         "#881337"
       ]
     },
@@ -13837,104 +13286,31 @@ window.PORTFOLIO_DATA = {
         64
       ]
     },
-    "decision_matrix": [
-      {
-        "label": "Emergency Kiln Halt & Write-down Review",
-        "data": [
-          {
-            "x": 95,
-            "y": 365,
-            "r": 18,
-            "orders": 16837,
-            "decision": "Halt PO replenishment, emergency batch overhaul, write-down dead stock"
-          },
-          {
-            "x": 89,
-            "y": 330,
-            "r": 15,
-            "orders": 14820,
-            "decision": "Emergency staging & overhaul, salvage low-value scrap units"
-          }
-        ],
-        "color": "#be123c"
-      },
-      {
-        "label": "Expedite Shift Capacity & Reallocate Stores",
-        "data": [
-          {
-            "x": 78,
-            "y": 240,
-            "r": 12,
-            "orders": 1973,
-            "decision": "Shift capacity to alternate grinding mill, reallocate store spares"
-          },
-          {
-            "x": 68,
-            "y": 190,
-            "r": 10,
-            "orders": 1348,
-            "decision": "Capacity load leveling, cross-plant stock transfer"
-          }
-        ],
-        "color": "#d97706"
-      },
-      {
-        "label": "Buffer Release & Dynamic Staging",
-        "data": [
-          {
-            "x": 45,
-            "y": 95,
-            "r": 9,
-            "orders": 263,
-            "decision": "Review safety stock parameters, monitor consumption trends"
-          },
-          {
-            "x": 35,
-            "y": 114,
-            "r": 8,
-            "orders": 114,
-            "decision": "Freeze reorder points, bundle slow-moving inventory"
-          }
-        ],
-        "color": "#074ea3"
-      },
-      {
-        "label": "Standard Cadence Execution",
-        "data": [
-          {
-            "x": 10,
-            "y": 35,
-            "r": 8,
-            "orders": 80,
-            "decision": "Maintain standard replenishment and planned dispatch buffers"
-          }
-        ],
-        "color": "#7dbf40"
-      }
-    ],
-    "commercial_decisions": {
-      "tiers": ["Tier 1 (> ₹50L)", "Tier 2 (₹20L - ₹50L)", "Tier 3 (₹5L - ₹20L)", "Tier 4 (< ₹5L)"],
-      "immediate_freeze": [509, 310, 85, 20],
-      "advance_payment": [1670, 940, 420, 150],
-      "lc_guarantee": [890, 1420, 810, 300],
-      "auto_clearance": [1240, 3850, 6210, 8740]
-    },
-    "decision_polar": {
+    "polar_decisions": {
       "labels": [
         "Kiln Overhaul (ML-04/07)",
         "Dormant Scrap (ML-06)",
         "Credit Freeze (ML-05)",
-        "Spend Audit (ML-13)",
+        "Spend Audit (ML-13/14)",
         "Batch Expedite (ML-07)",
-        "Quality Quarantine (ML-08)"
+        "Quarantine (ML-08)"
       ],
-      "counts": [33080, 24543, 2179, 8145, 1973, 1775],
-      "colors": ["#be123c", "#074ea3", "#d97706", "#6366f1", "#f59e0b", "#2d5a26"]
-    },
-    "value_trajectory": {
-      "months": ["May 25", "Jun 25", "Jul 25", "Aug 25", "Sep 25", "Oct 25"],
-      "cumulative_cr": [485, 960, 1520, 2110, 2690, 3215],
-      "monthly_actions": [8400, 9850, 11200, 12600, 13100, 13188]
+      "counts": [
+        64344,
+        139102,
+        27288,
+        188873,
+        11730,
+        33307
+      ],
+      "colors": [
+        "#be123c",
+        "#074ea3",
+        "#d97706",
+        "#6366f1",
+        "#f59e0b",
+        "#2d5a26"
+      ]
     }
   }
 };

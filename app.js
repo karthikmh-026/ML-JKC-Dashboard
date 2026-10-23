@@ -22,9 +22,9 @@ let currentModelTab = 'tabDiagnostics';
 
 // Data reference
 const data = window.PORTFOLIO_DATA || {
-  total_records: 445000,
-  total_exceptions: 259787,
-  total_financial_exposure_cr: 1210206.11,
+  total_records: 6571244,
+  total_exceptions: 1586061,
+  total_financial_exposure_cr: 189972.20,
   models: {}
 };
 
@@ -206,12 +206,13 @@ function navigateToExecutive() {
 
   // Re-render and resize charts when returning to executive view
   setTimeout(() => {
-    try { renderChartExecDecisionMatrix(); } catch (e) {}
-    try { renderChartExecActionTriage(); } catch (e) {}
+    try { renderDecisionKpiCards(); } catch (e) {}
+    try { renderChartExecCapacityRealloc(); } catch (e) {}
+    try { renderChartExecMultiPlantYield(); } catch (e) {}
+    try { renderChartExecInventoryRebalance(); } catch (e) {}
+    try { renderChartExecSpendLeakage(); } catch (e) {}
+    try { renderChartExecVendorMatrix(); } catch (e) {}
     try { renderChartExecCommercialDecisions(); } catch (e) {}
-    try { renderChartExecDecisionPolar(); } catch (e) {}
-    try { renderChartExecPlantDecisions(); } catch (e) {}
-    try { renderChartExecValueTrajectory(); } catch (e) {}
   }, 100);
 }
 
@@ -327,12 +328,32 @@ function renderExecutiveDashboard() {
   const totalCrit = mList.reduce((acc, m) => acc + (m.risk_distribution?.Critical || Math.round(m.exceptions_count * 0.25)), 0);
   const totalHigh = mList.reduce((acc, m) => acc + (m.risk_distribution?.High || Math.round(m.exceptions_count * 0.35)), 0);
 
-  if (document.getElementById('execKpiRecords')) document.getElementById('execKpiRecords').innerText = data.total_records.toLocaleString();
-  if (document.getElementById('execKpiExceptions')) document.getElementById('execKpiExceptions').innerText = data.total_exceptions.toLocaleString();
-  if (document.getElementById('execKpiExposure')) document.getElementById('execKpiExposure').innerText = `₹${Math.round(data.total_financial_exposure_cr).toLocaleString()} Cr`;
-  if (document.getElementById('execKpiProtected')) document.getElementById('execKpiProtected').innerText = `₹3,215 Cr`;
-  if (document.getElementById('execKpiCritical')) document.getElementById('execKpiCritical').innerText = totalCrit.toLocaleString();
-  if (document.getElementById('execKpiHighRisk')) document.getElementById('execKpiHighRisk').innerText = totalHigh.toLocaleString();
+  const formatIn = (n) => typeof n === 'number' ? n.toLocaleString('en-IN') : n;
+
+  // Header capsule
+  if (document.getElementById('headerModelsCount')) document.getElementById('headerModelsCount').innerText = `${data.total_models || 16} / ${data.total_models || 16}`;
+  if (document.getElementById('headerRecordsCount')) document.getElementById('headerRecordsCount').innerText = formatIn(data.total_records);
+  if (document.getElementById('headerExceptionsCount')) document.getElementById('headerExceptionsCount').innerText = formatIn(data.total_exceptions);
+  if (document.getElementById('headerExceptionsRate')) {
+    const rPct = ((data.total_exceptions / Math.max(1, data.total_records)) * 100).toFixed(1);
+    document.getElementById('headerExceptionsRate').innerText = `Exceptions (${rPct}%)`;
+  }
+  if (document.getElementById('footerRecordsCount')) document.getElementById('footerRecordsCount').innerText = `${formatIn(data.total_records)} Records Indexed`;
+
+  // 8 Executive KPI Cards
+  if (document.getElementById('execKpiRecords')) document.getElementById('execKpiRecords').innerText = formatIn(data.total_records);
+  if (document.getElementById('execKpiExceptions')) document.getElementById('execKpiExceptions').innerText = formatIn(data.total_exceptions);
+  if (document.getElementById('execKpiRateText')) {
+    const rPct = ((data.total_exceptions / Math.max(1, data.total_records)) * 100).toFixed(1);
+    document.getElementById('execKpiRateText').innerText = `${rPct}% Exception Ratio`;
+  }
+  if (document.getElementById('execKpiExposure')) document.getElementById('execKpiExposure').innerText = `₹${formatIn(Math.round(data.total_financial_exposure_cr))} Cr`;
+  if (document.getElementById('execKpiProtected')) {
+    const protectedVal = Math.round(data.total_financial_exposure_cr * 0.183);
+    document.getElementById('execKpiProtected').innerText = `₹${formatIn(protectedVal)} Cr`;
+  }
+  if (document.getElementById('execKpiCritical')) document.getElementById('execKpiCritical').innerText = formatIn(totalCrit);
+  if (document.getElementById('execKpiHighRisk')) document.getElementById('execKpiHighRisk').innerText = formatIn(totalHigh);
   if (document.getElementById('execKpiResolution')) document.getElementById('execKpiResolution').innerText = `94.2%`;
   if (document.getElementById('execKpiPlants')) document.getElementById('execKpiPlants').innerText = `38 Units`;
 
@@ -352,24 +373,27 @@ function renderExecutiveDashboard() {
   safeExec('PlantDistribution', renderChartExecPlantDistribution);
   safeExec('SapTables', renderChartExecSapTables);
 
-  // Prescriptive Decision Intelligence Charts (6 Distinct Engines)
-  safeExec('DecisionMatrix', renderChartExecDecisionMatrix);
-  safeExec('ActionTriage', renderChartExecActionTriage);
+  // Strategic Decision Intelligence KPI Cards
+  safeExec('DecisionKpiCards', renderDecisionKpiCards);
+
+  // Prescriptive Decision Intelligence Charts (6 Dedicated Engines)
+  safeExec('CapacityRealloc', renderChartExecCapacityRealloc);
+  safeExec('MultiPlantYield', renderChartExecMultiPlantYield);
+  safeExec('InventoryRebalance', renderChartExecInventoryRebalance);
+  safeExec('SpendLeakage', renderChartExecSpendLeakage);
+  safeExec('VendorMatrix', renderChartExecVendorMatrix);
   safeExec('CommercialDecisions', renderChartExecCommercialDecisions);
-  safeExec('DecisionPolar', renderChartExecDecisionPolar);
-  safeExec('PlantDecisions', renderChartExecPlantDecisions);
-  safeExec('ValueTrajectory', renderChartExecValueTrajectory);
 
   safeExec('PortfolioGrid', renderPortfolioCardsGrid);
 
   // Guaranteed secondary layout refresh once Tailwind styles settle
   setTimeout(() => {
-    safeExec('DecisionMatrix-Refresh', renderChartExecDecisionMatrix);
-    safeExec('ActionTriage-Refresh', renderChartExecActionTriage);
+    safeExec('CapacityRealloc-Refresh', renderChartExecCapacityRealloc);
+    safeExec('MultiPlantYield-Refresh', renderChartExecMultiPlantYield);
+    safeExec('InventoryRebalance-Refresh', renderChartExecInventoryRebalance);
+    safeExec('SpendLeakage-Refresh', renderChartExecSpendLeakage);
+    safeExec('VendorMatrix-Refresh', renderChartExecVendorMatrix);
     safeExec('CommercialDecisions-Refresh', renderChartExecCommercialDecisions);
-    safeExec('DecisionPolar-Refresh', renderChartExecDecisionPolar);
-    safeExec('PlantDecisions-Refresh', renderChartExecPlantDecisions);
-    safeExec('ValueTrajectory-Refresh', renderChartExecValueTrajectory);
   }, 250);
 }
 
@@ -482,7 +506,7 @@ function renderChartExecCategoryShare() {
           bodyColor: JKC_THEME.blue,
           padding: 10,
           callbacks: {
-            label: (c) => ` ${c.label}: ${c.parsed} Pipelines (${Math.round((c.parsed / 17)*100)}%)`
+            label: (c) => ` ${c.label}: ${c.parsed} Pipelines (${Math.round((c.parsed / (data.total_models || 16))*100)}%)`
           }
         }
       },
@@ -892,270 +916,198 @@ function safeHexToRgba(hex, alpha) {
   return hex;
 }
 
-// Decision Chart 1: Coupled Supply Chain Decision Matrix (ML-07 Delay Risk vs ML-06 Stagnant Inventory)
-function renderChartExecDecisionMatrix() {
-  const canvas = document.getElementById('chartExecDecisionMatrix');
-  if (!canvas) return;
-  destroyChart('chartExecDecisionMatrix');
-  const ctx = canvas.getContext('2d');
+// ============================================================================
+// STRATEGIC DECISION INTELLIGENCE: 6 KPI CARDS & 6 PRESCRIPTIVE CHARTS
+// Ultra-Polished, Eye-Catching, Executive Architectural Visualization
+// ============================================================================
 
-  const decData = (data && data.decision_intelligence && data.decision_intelligence.decision_matrix)
-    ? data.decision_intelligence.decision_matrix
-    : [
-        {
-          label: 'Emergency Kiln Halt & Write-down Review',
-          data: [
-            { x: 95, y: 365, r: 18, orders: 16837, decision: 'Halt PO replenishment, emergency batch overhaul, write-down dead stock' },
-            { x: 89, y: 330, r: 15, orders: 14820, decision: 'Emergency staging & overhaul, salvage low-value scrap units' }
-          ],
-          color: '#be123c'
-        },
-        {
-          label: 'Expedite Shift Capacity & Reallocate Stores',
-          data: [
-            { x: 78, y: 240, r: 12, orders: 1973, decision: 'Shift capacity to alternate grinding mill, reallocate store spares' },
-            { x: 68, y: 190, r: 10, orders: 1348, decision: 'Capacity load leveling, cross-plant stock transfer' }
-          ],
-          color: '#d97706'
-        },
-        {
-          label: 'Buffer Release & Dynamic Staging',
-          data: [
-            { x: 45, y: 95, r: 9, orders: 263, decision: 'Review safety stock parameters, monitor consumption trends' },
-            { x: 35, y: 114, r: 8, orders: 114, decision: 'Freeze reorder points, bundle slow-moving inventory' }
-          ],
-          color: '#074ea3'
-        },
-        {
-          label: 'Standard Cadence Execution',
-          data: [
-            { x: 10, y: 35, r: 8, orders: 80, decision: 'Maintain standard replenishment and planned dispatch buffers' }
-          ],
-          color: '#7dbf40'
-        }
-      ];
-
-  const datasets = decData.map(group => ({
-    label: group.label,
-    data: group.data.map(p => ({ x: p.x, y: p.y, r: p.r, decision: p.decision, orders: p.orders })),
-    backgroundColor: safeHexToRgba(group.color, 0.75),
-    borderColor: group.color,
-    borderWidth: 2,
-    hoverRadius: 4
-  }));
-
-  chartInstances['chartExecDecisionMatrix'] = new Chart(ctx, {
-    type: 'bubble',
-    data: {
-      datasets: datasets
-    },
-    options: {
-      responsive: true,
-      maintainAspectRatio: false,
-      layout: {
-        padding: { left: 20, right: 15, top: 10, bottom: 10 }
-      },
-      scales: {
-        x: {
-          title: {
-            display: true,
-            text: 'ML-07: Production Schedule Delay Probability (%)',
-            color: '#0f172a',
-            font: { size: 11, weight: '700' }
-          },
-          grid: { color: 'rgba(0, 0, 0, 0.06)' },
-          min: 0,
-          max: 105,
-          ticks: {
-            color: '#334155',
-            font: { family: 'JetBrains Mono', size: 10, weight: '600' },
-            callback: (v) => `${v}%`
-          }
-        },
-        y: {
-          title: {
-            display: true,
-            text: 'ML-06: Inventory Idle Stagnation (Days Since Last Movement)',
-            color: '#0f172a',
-            font: { size: 11, weight: '700' }
-          },
-          grid: { color: 'rgba(0, 0, 0, 0.06)' },
-          min: 0,
-          max: 400,
-          ticks: {
-            color: '#334155',
-            font: { family: 'JetBrains Mono', size: 10, weight: '600' },
-            callback: (v) => `${v}d`
-          }
-        }
-      },
-      plugins: {
-        legend: {
-          display: false // already rendered clearly in HTML card header
-        },
-        tooltip: {
-          backgroundColor: 'rgba(255, 255, 255, 0.98)',
-          borderColor: '#074ea3',
-          borderWidth: 1.5,
-          titleColor: '#0f172a',
-          bodyColor: '#1e293b',
-          padding: 12,
-          callbacks: {
-            title: (items) => items[0]?.dataset?.label || 'Directive Rule',
-            label: (item) => {
-              const raw = item.raw || {};
-              return [
-                ` Delay Probability: ${raw.x}% | Stagnation: ${raw.y} days`,
-                ` Verified Record Count: ${(raw.orders || 0).toLocaleString()} orders/lots`,
-                ` Automated SAP Directive: ${raw.decision || ''}`
-              ];
-            }
-          }
-        }
-      }
-    }
-  });
-}
-
-// Decision Chart 2: Prescriptive Action Triage (Doughnut Chart)
-function renderChartExecActionTriage() {
-  const canvas = document.getElementById('chartExecActionTriage');
-  if (!canvas) return;
-  destroyChart('chartExecActionTriage');
-  const ctx = canvas.getContext('2d');
-
-  const triageSource = (data && data.decision_intelligence && data.decision_intelligence.act_triage)
-    ? data.decision_intelligence.act_triage
-    : {
-        labels: [
-          'Immediate Kiln Overhaul (ML-07 & ML-04)',
-          'Dormant Stock Scrap & Salvage (ML-06)',
-          'Routine / Compliant Operational Status',
-          'Condition Monitoring Vibration (ML-04)',
-          'Expedite Batch & Capacity Realloc (ML-07)',
-          'High-Value Dead Stock PO Halt (ML-06)',
-          'Credit Watch Advance Payment (ML-05)',
-          'Default Freeze & Legal Notice (ML-05)'
-        ],
-        counts: [33080, 22744, 37214, 3477, 1973, 1799, 1670, 509],
-        colors: ['#be123c', '#074ea3', '#7dbf40', '#6366f1', '#f59e0b', '#9f1239', '#d97706', '#881337']
-      };
-
-  const totalFlagged = triageSource.counts.reduce((a, b) => a + b, 0);
-
-  chartInstances['chartExecActionTriage'] = new Chart(ctx, {
-    type: 'doughnut',
-    data: {
-      labels: triageSource.labels,
-      datasets: [{
-        data: triageSource.counts,
-        backgroundColor: triageSource.colors,
-        borderColor: '#ffffff',
-        borderWidth: 2,
-        hoverOffset: 6
-      }]
-    },
-    options: {
-      responsive: true,
-      maintainAspectRatio: false,
-      cutout: '66%',
-      plugins: {
-        legend: { display: false },
-        tooltip: {
-          backgroundColor: 'rgba(255, 255, 255, 0.98)',
-          borderColor: '#074ea3',
-          borderWidth: 1.5,
-          titleColor: '#0f172a',
-          bodyColor: '#1e293b',
-          padding: 10,
-          callbacks: {
-            label: (ctx) => ` ${ctx.label}: ${ctx.parsed.toLocaleString()} directives (${((ctx.parsed / totalFlagged) * 100).toFixed(1)}%)`
-          }
-        }
-      }
-    }
-  });
-
-  const legendContainer = document.getElementById('chartExecActionTriageLegend');
-  if (legendContainer) {
-    legendContainer.innerHTML = triageSource.labels.slice(0, 6).map((label, i) => {
-      const shortName = label.split('(')[0].trim();
-      const countVal = triageSource.counts[i] >= 1000 ? `${(triageSource.counts[i]/1000).toFixed(1)}k` : triageSource.counts[i];
-      return `
-        <div class="flex items-center justify-between gap-1 text-[11px] bg-white/40 px-2 py-1 rounded-md border border-slate-200/50">
-          <div class="flex items-center gap-1.5 truncate">
-            <span class="w-2.5 h-2.5 rounded-full flex-shrink-0" style="background:${triageSource.colors[i]}"></span>
-            <span class="text-slate-800 truncate font-semibold" title="${label}">${shortName}</span>
-          </div>
-          <span class="text-slate-600 font-mono text-[10px] font-bold flex-shrink-0">${countVal}</span>
-        </div>
-      `;
-    }).join('');
+function renderDecisionKpiCards() {
+  const kpis = (data && data.decision_intelligence && data.decision_intelligence.kpi_cards) || {};
+  
+  if (kpis.equipment_failure_delay) {
+    const el = document.getElementById('kpiValEquipDelay');
+    if (el) el.innerText = kpis.equipment_failure_delay.value || '24.2%';
+  }
+  if (kpis.credit_sales_conversion) {
+    const el = document.getElementById('kpiValCreditConversion');
+    if (el) el.innerText = kpis.credit_sales_conversion.value || '73.9%';
+  }
+  if (kpis.leakage_index) {
+    const el = document.getElementById('kpiValLeakageIndex');
+    if (el) el.innerText = '₹8,001 Cr';
+  }
+  if (kpis.vendor_performance_index) {
+    const el = document.getElementById('kpiValVendorPerf');
+    if (el) el.innerHTML = `${kpis.vendor_performance_index.value || '87.4'} <span class="text-xs text-slate-500 font-normal">/ 100</span>`;
+  }
+  if (kpis.gl_coding_accuracy) {
+    const el = document.getElementById('kpiValGlAccuracy');
+    if (el) el.innerText = kpis.gl_coding_accuracy.value || '94.1%';
+  }
+  if (kpis.high_pr_po_delay) {
+    const el = document.getElementById('kpiValPrPoDelay');
+    if (el) el.innerText = kpis.high_pr_po_delay.value || '35.6%';
   }
 }
 
-// Decision Chart 3: Plant Decision Allocation (Grouped Bar Chart across ML-06 & ML-04)
-function renderChartExecPlantDecisions() {
-  const canvas = document.getElementById('chartExecPlantDecisions');
+// ----------------------------------------------------------------------------
+// Decision Chart 1: Cross-Center Capacity Reallocation Engine (Highlighted)
+// Combo Chart: Overload % Bar + Spare % Bar + Reallocated Tonnage Spline Line
+// ----------------------------------------------------------------------------
+function renderChartExecCapacityRealloc() {
+  const canvas = document.getElementById('chartExecCapacityRealloc');
   if (!canvas) return;
-  destroyChart('chartExecPlantDecisions');
+  destroyChart('chartExecCapacityRealloc');
   const ctx = canvas.getContext('2d');
 
-  const plantSource = (data && data.decision_intelligence && data.decision_intelligence.plant_decisions)
-    ? data.decision_intelligence.plant_decisions
+  const capData = (data && data.decision_intelligence && data.decision_intelligence.capacity_reallocation)
+    ? data.decision_intelligence.capacity_reallocation
     : {
-        plants: ['Mangrol', 'Nimbahera', 'Panna', 'Muddapur', 'Gotan'],
-        critical_overhaul_ml4: [639, 157, 110, 159, 83],
-        condition_inspect_ml4: [1211, 540, 251, 427, 163],
-        dormant_scrap_ml6: [3899, 3231, 2450, 2104, 1607],
-        high_value_salvage_ml6: [272, 226, 249, 150, 64]
+        materials: ['OPC 53 Gr (Bulk)', 'Portland Pozzolana (PPC)', 'Super Clinker (Kiln 2)', 'White Cement (25kg Bags)', 'Tile Master Adhesive'],
+        source_centers: ['CC-102 (Mangrol Mill)', 'CC-204 (Gotan Kiln)', 'CC-301 (Nimbahera Clinker)', 'CC-108 (Gotan White)', 'CC-405 (Mudhol Special)'],
+        target_centers: ['CC-108 (Nimbahera Line 3)', 'CC-212 (Mudhol Grinding)', 'CC-305 (Mangrol Kiln 2)', 'CC-114 (Kharia Sodha)', 'CC-410 (Jhajjar Unit)'],
+        source_utilization_pct: [94, 91, 88, 86, 79],
+        target_spare_pct: [46, 52, 48, 59, 38],
+        reallocated_tonnage: [18500, 24200, 31000, 14200, 9800],
+        days_delay_saved: [6.2, 8.4, 7.1, 4.8, 3.5]
       };
 
-  chartInstances['chartExecPlantDecisions'] = new Chart(ctx, {
+  // Custom Plugin: Draw Dotted 85% Bottleneck Limit Line across chart
+  const bottleneckLinePlugin = {
+    id: 'bottleneckLimitLine',
+    beforeDraw(chart) {
+      const { ctx, chartArea: { left, right }, scales: { y } } = chart;
+      if (!y) return;
+      const yVal = y.getPixelForValue(85);
+      ctx.save();
+      ctx.strokeStyle = '#ef4444';
+      ctx.lineWidth = 1.5;
+      ctx.setLineDash([5, 4]);
+      ctx.beginPath();
+      ctx.moveTo(left, yVal);
+      ctx.lineTo(right, yVal);
+      ctx.stroke();
+      
+      // Label
+      ctx.fillStyle = '#dc2626';
+      ctx.font = '600 10px JetBrains Mono';
+      ctx.textAlign = 'right';
+      ctx.fillText('CRITICAL OVERLOAD LIMIT (85%)', right - 10, yVal - 5);
+      ctx.restore();
+    }
+  };
+
+  chartInstances['chartExecCapacityRealloc'] = new Chart(ctx, {
     type: 'bar',
     data: {
-      labels: plantSource.plants,
+      labels: capData.materials,
       datasets: [
         {
-          label: 'Critical Equipment Overhaul (ML-04)',
-          data: plantSource.critical_overhaul_ml4,
-          backgroundColor: '#be123c',
-          borderRadius: 4
+          type: 'bar',
+          label: 'Source Cost Center Load (%)',
+          data: capData.source_utilization_pct,
+          backgroundColor: function(context) {
+            const { ctx, chartArea } = context.chart;
+            if (!chartArea) return '#ef4444';
+            const grad = ctx.createLinearGradient(0, chartArea.top, 0, chartArea.bottom);
+            grad.addColorStop(0, '#f87171');
+            grad.addColorStop(1, '#b91c1c');
+            return grad;
+          },
+          borderColor: '#b91c1c',
+          borderWidth: 1.5,
+          borderRadius: 6,
+          barPercentage: 0.65,
+          categoryPercentage: 0.8,
+          yAxisID: 'y',
+          order: 2
         },
         {
-          label: 'Condition Telemetry Monitoring (ML-04)',
-          data: plantSource.condition_inspect_ml4,
-          backgroundColor: '#d97706',
-          borderRadius: 4
+          type: 'bar',
+          label: 'Reliever Cost Center Spare (%)',
+          data: capData.target_spare_pct,
+          backgroundColor: function(context) {
+            const { ctx, chartArea } = context.chart;
+            if (!chartArea) return '#10b981';
+            const grad = ctx.createLinearGradient(0, chartArea.top, 0, chartArea.bottom);
+            grad.addColorStop(0, '#34d399');
+            grad.addColorStop(1, '#059669');
+            return grad;
+          },
+          borderColor: '#047857',
+          borderWidth: 1.5,
+          borderRadius: 6,
+          barPercentage: 0.65,
+          categoryPercentage: 0.8,
+          yAxisID: 'y',
+          order: 3
         },
         {
-          label: 'Dormant Inventory Scrap / Salvage (ML-06)',
-          data: plantSource.dormant_scrap_ml6,
-          backgroundColor: '#074ea3',
-          borderRadius: 4
-        },
-        {
-          label: 'High-Value Dead Stock PO Freeze (ML-06)',
-          data: plantSource.high_value_salvage_ml6,
-          backgroundColor: '#7dbf40',
-          borderRadius: 4
+          type: 'line',
+          label: 'Reallocated Volume (MT)',
+          data: capData.reallocated_tonnage,
+          borderColor: '#2563eb',
+          borderWidth: 3,
+          backgroundColor: function(context) {
+            const { ctx, chartArea } = context.chart;
+            if (!chartArea) return 'rgba(37, 99, 235, 0.12)';
+            const grad = ctx.createLinearGradient(0, chartArea.top, 0, chartArea.bottom);
+            grad.addColorStop(0, 'rgba(37, 99, 235, 0.25)');
+            grad.addColorStop(1, 'rgba(37, 99, 235, 0.01)');
+            return grad;
+          },
+          fill: true,
+          tension: 0.35,
+          pointBackgroundColor: '#2563eb',
+          pointBorderColor: '#ffffff',
+          pointBorderWidth: 2,
+          pointRadius: 5,
+          pointHoverRadius: 8,
+          yAxisID: 'y2',
+          order: 1
         }
       ]
     },
     options: {
       responsive: true,
       maintainAspectRatio: false,
+      layout: { padding: { top: 12, right: 10, left: 5, bottom: 5 } },
       scales: {
         x: {
           grid: { display: false },
-          ticks: { color: '#0f172a', font: { size: 11, weight: '700' } }
+          ticks: { color: '#0f172a', font: { size: 10.5, weight: '700' } }
         },
         y: {
+          min: 0,
+          max: 105,
+          title: {
+            display: true,
+            text: 'Cost Center Capacity Load & Spare (%)',
+            color: '#334155',
+            font: { size: 10.5, weight: '700' }
+          },
           grid: { color: 'rgba(0, 0, 0, 0.06)' },
           ticks: {
             color: '#334155',
             font: { family: 'JetBrains Mono', size: 10, weight: '600' },
-            callback: (v) => `${v.toLocaleString()}`
+            callback: (v) => `${v}%`
+          }
+        },
+        y2: {
+          min: 0,
+          max: 38000,
+          position: 'right',
+          title: {
+            display: true,
+            text: 'Reallocated Metric Tons (MT)',
+            color: '#1d4ed8',
+            font: { size: 10.5, weight: '700' }
+          },
+          grid: { drawOnChartArea: false },
+          ticks: {
+            color: '#1d4ed8',
+            font: { family: 'JetBrains Mono', size: 10, weight: '600' },
+            callback: (v) => `${(v/1000).toFixed(0)}k MT`
           }
         }
       },
@@ -1165,19 +1117,178 @@ function renderChartExecPlantDecisions() {
           position: 'top',
           labels: {
             boxWidth: 10,
+            usePointStyle: true,
             color: '#1e293b',
-            font: { size: 10.5, weight: '600' }
+            font: { size: 10.5, weight: '700' }
           }
         },
         tooltip: {
           backgroundColor: 'rgba(255, 255, 255, 0.98)',
-          borderColor: '#074ea3',
+          borderColor: '#d97706',
+          borderWidth: 2,
+          titleColor: '#0f172a',
+          bodyColor: '#1e293b',
+          titleFont: { size: 12, weight: 'bold' },
+          padding: 12,
+          callbacks: {
+            title: (items) => capData.materials[items[0].dataIndex] || '',
+            afterBody: (items) => {
+              const idx = items[0].dataIndex;
+              const src = capData.source_centers[idx];
+              const tgt = capData.target_centers[idx];
+              const tons = capData.reallocated_tonnage[idx].toLocaleString();
+              const days = capData.days_delay_saved[idx];
+              return [
+                ` 🔥 Bottleneck Source: ${src} (${capData.source_utilization_pct[idx]}% Load)`,
+                ` ⚡ Reliever Target: ${tgt} (${capData.target_spare_pct[idx]}% Spare)`,
+                ` 📦 Reallocated Tonnage: ${tons} MT Shifted`,
+                ` ⏱️ Cycle Time Saved: -${days} Days Delay Neutralized`,
+                ` 📋 Autonomous Directive: SAP PP-SFC Planned Order Split Active`
+              ];
+            }
+          }
+        }
+      }
+    },
+    plugins: [bottleneckLinePlugin]
+  });
+}
+
+// ----------------------------------------------------------------------------
+// Decision Chart 2: Multi-Plant Quality Yield Discrepancy (Item 7)
+// Grouped Bar + 95.0% Benchmark Target Line
+// ----------------------------------------------------------------------------
+function renderChartExecMultiPlantYield() {
+  const canvas = document.getElementById('chartExecMultiPlantYield');
+  if (!canvas) return;
+  destroyChart('chartExecMultiPlantYield');
+  const ctx = canvas.getContext('2d');
+
+  const yieldData = (data && data.decision_intelligence && data.decision_intelligence.multi_plant_yield)
+    ? data.decision_intelligence.multi_plant_yield
+    : {
+        plants: ['Mangrol', 'Nimbahera', 'Mudhol', 'Gotan (Alert)', 'Jharli'],
+        pass_rates: [96.8, 94.2, 91.5, 86.4, 95.1],
+        failure_rates: [3.2, 5.8, 8.5, 13.6, 4.9],
+        tested_batches: [12400, 11850, 8920, 7450, 6200],
+        prescriptive_actions: [
+          'Maintain Standard Dispatch',
+          'Fineness Calibration on Mill 2',
+          'Gypsum Ratio Optimization',
+          'Quarantine Batch; Clinker Feed Chemistry Re-audit',
+          'Maintain Standard Dispatch'
+        ]
+      };
+
+  chartInstances['chartExecMultiPlantYield'] = new Chart(ctx, {
+    type: 'bar',
+    data: {
+      labels: yieldData.plants,
+      datasets: [
+        {
+          type: 'bar',
+          label: 'Inspection Pass Rate (%)',
+          data: yieldData.pass_rates,
+          backgroundColor: function(context) {
+            const { ctx, chartArea } = context.chart;
+            if (!chartArea) return '#10b981';
+            const grad = ctx.createLinearGradient(0, chartArea.top, 0, chartArea.bottom);
+            grad.addColorStop(0, '#34d399');
+            grad.addColorStop(1, '#059669');
+            return grad;
+          },
+          borderColor: '#047857',
           borderWidth: 1.5,
+          borderRadius: 6,
+          barPercentage: 0.65,
+          categoryPercentage: 0.8
+        },
+        {
+          type: 'bar',
+          label: 'Failure / Re-test Rate (%)',
+          data: yieldData.failure_rates,
+          backgroundColor: function(context) {
+            const idx = context.dataIndex;
+            const { ctx, chartArea } = context.chart;
+            if (!chartArea) return '#f43f5e';
+            const grad = ctx.createLinearGradient(0, chartArea.top, 0, chartArea.bottom);
+            // Highlight Gotan with pulsating crimson
+            if (idx === 3) {
+              grad.addColorStop(0, '#f43f5e');
+              grad.addColorStop(1, '#9f1239');
+            } else {
+              grad.addColorStop(0, '#fda4af');
+              grad.addColorStop(1, '#e11d48');
+            }
+            return grad;
+          },
+          borderColor: '#be123c',
+          borderWidth: 1.5,
+          borderRadius: 6,
+          barPercentage: 0.65,
+          categoryPercentage: 0.8
+        },
+        {
+          type: 'line',
+          label: 'QA Benchmark Target (95.0%)',
+          data: [95.0, 95.0, 95.0, 95.0, 95.0],
+          borderColor: '#f59e0b',
+          borderWidth: 2,
+          borderDash: [6, 4],
+          pointRadius: 0,
+          fill: false
+        }
+      ]
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      scales: {
+        x: {
+          grid: { display: false },
+          ticks: { color: '#0f172a', font: { size: 10, weight: '700' } }
+        },
+        y: {
+          min: 0,
+          max: 105,
+          grid: { color: 'rgba(0, 0, 0, 0.06)' },
+          ticks: {
+            color: '#334155',
+            font: { family: 'JetBrains Mono', size: 9.5, weight: '600' },
+            callback: (v) => `${v}%`
+          }
+        }
+      },
+      plugins: {
+        legend: {
+          display: true,
+          position: 'top',
+          labels: {
+            boxWidth: 8,
+            usePointStyle: true,
+            color: '#1e293b',
+            font: { size: 9.5, weight: '700' }
+          }
+        },
+        tooltip: {
+          backgroundColor: 'rgba(255, 255, 255, 0.98)',
+          borderColor: '#f43f5e',
+          borderWidth: 2,
           titleColor: '#0f172a',
           bodyColor: '#1e293b',
           padding: 10,
           callbacks: {
-            label: (ctx) => ` ${ctx.dataset.label}: ${ctx.parsed.y.toLocaleString()} actions`
+            title: (items) => `${items[0].label} Manufacturing Unit`,
+            afterBody: (items) => {
+              const idx = items[0].dataIndex;
+              const batches = (yieldData.tested_batches && yieldData.tested_batches[idx]) ? yieldData.tested_batches[idx].toLocaleString() : '8,500';
+              const action = yieldData.prescriptive_actions[idx];
+              return [
+                ` 🔬 Audited Batches: ${batches} lots`,
+                ` 🎯 Parity vs Mangrol: ${idx === 3 ? '-10.4% Disparity Flag' : 'Compliant'}`,
+                ` 📋 SAP Directive: ${action}`
+              ];
+            }
           }
         }
       }
@@ -1185,7 +1296,483 @@ function renderChartExecPlantDecisions() {
   });
 }
 
-// Decision Chart 4: Commercial Hold & Release Matrix (Stacked Horizontal Bar: ML-05 & ML-15)
+// ----------------------------------------------------------------------------
+// Decision Chart 3: Cross-Plant Inventory Utilization & Transfer Rebalancing (Item 8)
+// 3-Series Horizontal Gradient Bar (Surplus vs 90-Day Demand vs Preserved Capital)
+// ----------------------------------------------------------------------------
+function renderChartExecInventoryRebalance() {
+  const canvas = document.getElementById('chartExecInventoryRebalance');
+  if (!canvas) return;
+  destroyChart('chartExecInventoryRebalance');
+  const ctx = canvas.getContext('2d');
+
+  const invData = (data && data.decision_intelligence && data.decision_intelligence.cross_plant_inventory)
+    ? data.decision_intelligence.cross_plant_inventory
+    : {
+        spare_parts: [
+          'Kiln Refractory Bricks (Alumina 70%)',
+          'Grinding Media Balls (60mm)',
+          'Roller Bearings 23226',
+          'EP-800 Conveyor Belts',
+          'VFD Inverter Modules'
+        ],
+        source_plants: ['Mangrol', 'Gotan', 'Nimbahera', 'Mudhol', 'Gotan'],
+        target_plants: ['Nimbahera', 'Mudhol', 'Panna', 'Jharli', 'Mangrol'],
+        surplus_dormant_cr: [14.2, 9.8, 6.4, 5.1, 4.3],
+        active_demand_90d_cr: [12.8, 10.2, 5.9, 4.8, 4.1],
+        transferred_cr: [12.8, 9.8, 5.9, 4.8, 4.1]
+      };
+
+  chartInstances['chartExecInventoryRebalance'] = new Chart(ctx, {
+    type: 'bar',
+    data: {
+      labels: invData.spare_parts,
+      datasets: [
+        {
+          label: 'Dormant Surplus in Source (₹ Cr)',
+          data: invData.surplus_dormant_cr,
+          backgroundColor: function(context) {
+            const { ctx, chartArea } = context.chart;
+            if (!chartArea) return '#f59e0b';
+            const grad = ctx.createLinearGradient(chartArea.left, 0, chartArea.right, 0);
+            grad.addColorStop(0, '#fcd34d');
+            grad.addColorStop(1, '#d97706');
+            return grad;
+          },
+          borderColor: '#b45309',
+          borderWidth: 1,
+          borderRadius: 6
+        },
+        {
+          label: 'Active 90-Day Demand at Target (₹ Cr)',
+          data: invData.active_demand_90d_cr,
+          backgroundColor: function(context) {
+            const { ctx, chartArea } = context.chart;
+            if (!chartArea) return '#0284c7';
+            const grad = ctx.createLinearGradient(chartArea.left, 0, chartArea.right, 0);
+            grad.addColorStop(0, '#7dd3fc');
+            grad.addColorStop(1, '#0284c7');
+            return grad;
+          },
+          borderColor: '#0369a1',
+          borderWidth: 1,
+          borderRadius: 6
+        },
+        {
+          label: 'Preserved Capital via SAP STO (₹ Cr)',
+          data: invData.transferred_cr,
+          backgroundColor: function(context) {
+            const { ctx, chartArea } = context.chart;
+            if (!chartArea) return '#10b981';
+            const grad = ctx.createLinearGradient(chartArea.left, 0, chartArea.right, 0);
+            grad.addColorStop(0, '#6ee7b7');
+            grad.addColorStop(1, '#059669');
+            return grad;
+          },
+          borderColor: '#047857',
+          borderWidth: 1,
+          borderRadius: 6
+        }
+      ]
+    },
+    options: {
+      indexAxis: 'y',
+      responsive: true,
+      maintainAspectRatio: false,
+      scales: {
+        x: {
+          grid: { color: 'rgba(0, 0, 0, 0.06)' },
+          ticks: {
+            color: '#334155',
+            font: { family: 'JetBrains Mono', size: 10, weight: '600' },
+            callback: (v) => `₹${v} Cr`
+          }
+        },
+        y: {
+          grid: { display: false },
+          ticks: { color: '#0f172a', font: { size: 10.5, weight: '700' } }
+        }
+      },
+      plugins: {
+        legend: {
+          display: true,
+          position: 'top',
+          labels: {
+            boxWidth: 10,
+            usePointStyle: true,
+            color: '#1e293b',
+            font: { size: 10, weight: '700' }
+          }
+        },
+        tooltip: {
+          backgroundColor: 'rgba(255, 255, 255, 0.98)',
+          borderColor: '#0284c7',
+          borderWidth: 2,
+          titleColor: '#0f172a',
+          bodyColor: '#1e293b',
+          padding: 12,
+          callbacks: {
+            title: (items) => invData.spare_parts[items[0].dataIndex] || '',
+            afterBody: (items) => {
+              const idx = items[0].dataIndex;
+              const src = invData.source_plants[idx];
+              const tgt = invData.target_plants[idx];
+              const val = invData.transferred_cr[idx];
+              return [
+                ` 🔄 Rebalancing Route: Transfer from ${src} &rarr; ${tgt}`,
+                ` 💰 Capital Preserved: ₹${val} Cr (Zero PO Sourcing Spend)`,
+                ` 📋 Autonomous Directive: SAP MM Stock Transport Order (STO) Auto-Dispatched`
+              ];
+            }
+          }
+        }
+      }
+    }
+  });
+}
+
+// ----------------------------------------------------------------------------
+// Decision Chart 4: Cost Center Spend Leakage Breakdown (Item 3)
+// Stacked Gradient Bar + Cumulative Leakage Share % Curve
+// ----------------------------------------------------------------------------
+function renderChartExecSpendLeakage() {
+  const canvas = document.getElementById('chartExecSpendLeakage');
+  if (!canvas) return;
+  destroyChart('chartExecSpendLeakage');
+  const ctx = canvas.getContext('2d');
+
+  const leakData = (data && data.decision_intelligence && data.decision_intelligence.spend_leakage_centers)
+    ? data.decision_intelligence.spend_leakage_centers
+    : {
+        cost_centers: [
+          'CC-301 Clinker Calcination',
+          'CC-102 Finish Grinding',
+          'CC-405 Inbound Freight',
+          'CC-204 Captive Power',
+          'CC-510 Packing & Dispatch',
+          'CC-602 Heavy Equipment'
+        ],
+        duplicate_invoices_cr: [2840.5, 2180.2, 1260.4, 980.3, 420.8, 225.4],
+        price_variance_cr: [34.2, 26.5, 15.8, 9.4, 5.2, 2.8]
+      };
+
+  // Cumulative percentage line
+  const totalDuplicates = leakData.duplicate_invoices_cr.reduce((a, b) => a + b, 0);
+  let running = 0;
+  const cumPct = leakData.duplicate_invoices_cr.map(val => {
+    running += val;
+    return Math.round((running / totalDuplicates) * 100);
+  });
+
+  chartInstances['chartExecSpendLeakage'] = new Chart(ctx, {
+    type: 'bar',
+    data: {
+      labels: leakData.cost_centers.map(c => c.split(' ')[0]),
+      datasets: [
+        {
+          type: 'bar',
+          label: 'Duplicate Invoices Collision (₹ Cr)',
+          data: leakData.duplicate_invoices_cr,
+          backgroundColor: function(context) {
+            const { ctx, chartArea } = context.chart;
+            if (!chartArea) return '#be123c';
+            const grad = ctx.createLinearGradient(0, chartArea.top, 0, chartArea.bottom);
+            grad.addColorStop(0, '#fb7185');
+            grad.addColorStop(1, '#9f1239');
+            return grad;
+          },
+          borderColor: '#9f1239',
+          borderWidth: 1,
+          borderRadius: 4,
+          stack: 'leakage',
+          yAxisID: 'y',
+          order: 2
+        },
+        {
+          type: 'bar',
+          label: 'Price Variance Off-Contract (₹ Cr)',
+          data: leakData.price_variance_cr,
+          backgroundColor: function(context) {
+            const { ctx, chartArea } = context.chart;
+            if (!chartArea) return '#d97706';
+            const grad = ctx.createLinearGradient(0, chartArea.top, 0, chartArea.bottom);
+            grad.addColorStop(0, '#fde047');
+            grad.addColorStop(1, '#b45309');
+            return grad;
+          },
+          borderColor: '#b45309',
+          borderWidth: 1,
+          borderRadius: 4,
+          stack: 'leakage',
+          yAxisID: 'y',
+          order: 3
+        },
+        {
+          type: 'line',
+          label: 'Cumulative Leakage %',
+          data: cumPct,
+          borderColor: '#8b5cf6',
+          borderWidth: 2.5,
+          pointBackgroundColor: '#8b5cf6',
+          pointBorderColor: '#ffffff',
+          pointRadius: 3.5,
+          tension: 0.35,
+          yAxisID: 'y2',
+          order: 1
+        }
+      ]
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      scales: {
+        x: {
+          grid: { display: false },
+          ticks: { color: '#0f172a', font: { size: 9.5, weight: '700' } }
+        },
+        y: {
+          stacked: true,
+          grid: { color: 'rgba(0, 0, 0, 0.06)' },
+          ticks: {
+            color: '#334155',
+            font: { family: 'JetBrains Mono', size: 9, weight: '600' },
+            callback: (v) => `₹${v} Cr`
+          }
+        },
+        y2: {
+          position: 'right',
+          min: 0,
+          max: 105,
+          grid: { drawOnChartArea: false },
+          ticks: {
+            color: '#7c3aed',
+            font: { family: 'JetBrains Mono', size: 9, weight: '600' },
+            callback: (v) => `${v}%`
+          }
+        }
+      },
+      plugins: {
+        legend: {
+          display: true,
+          position: 'top',
+          labels: {
+            boxWidth: 8,
+            usePointStyle: true,
+            color: '#1e293b',
+            font: { size: 9, weight: '700' }
+          }
+        },
+        tooltip: {
+          backgroundColor: 'rgba(255, 255, 255, 0.98)',
+          borderColor: '#be123c',
+          borderWidth: 2,
+          titleColor: '#0f172a',
+          bodyColor: '#1e293b',
+          padding: 10,
+          callbacks: {
+            title: (items) => leakData.cost_centers[items[0].dataIndex] || items[0].label,
+            label: (ctx) => {
+              if (ctx.dataset.type === 'line') return ` Cumulative Share: ${ctx.parsed.y}% of Total Leakage`;
+              return ` ${ctx.dataset.label.split('(')[0].trim()}: ₹${ctx.parsed.y.toLocaleString()} Cr`;
+            }
+          }
+        }
+      }
+    }
+  });
+}
+
+// ----------------------------------------------------------------------------
+// Decision Chart 5: Vendor Performance & Selection Quadrant Matrix (Items 4 & 9)
+// 4-Quadrant Matrix with Custom Zone Backgrounds & Crosshairs
+// ----------------------------------------------------------------------------
+function renderChartExecVendorMatrix() {
+  const canvas = document.getElementById('chartExecVendorMatrix');
+  if (!canvas) return;
+  destroyChart('chartExecVendorMatrix');
+  const ctx = canvas.getContext('2d');
+
+  const vendorData = (data && data.decision_intelligence && data.decision_intelligence.vendor_matrix)
+    ? data.decision_intelligence.vendor_matrix
+    : {
+        quadrants: [
+          {
+            label: 'Tier-1 Strategic Preferred (Fast SLA, High Quality)',
+            color: '#2d5a26',
+            data: [
+              { x: 98.2, y: 6.4, r: 16, vendor: 'Ultratech Refractories Ltd', spend_cr: 48.5, variance_pct: 0.8, decision: 'Preferred Volume Allocation; Auto-Renew Master Contract' },
+              { x: 96.5, y: 8.1, r: 13, vendor: 'SKF India Industrial Bearings', spend_cr: 32.1, variance_pct: 1.2, decision: 'Auto-Approve Blanket POs; Preferred Vendor' }
+            ]
+          },
+          {
+            label: 'Quality Compliant, High Lead-Time Delay (ML-14 SLA Alert)',
+            color: '#d97706',
+            data: [
+              { x: 94.1, y: 24.5, r: 15, vendor: 'Bharat Heavy Electricals (Spares)', spend_cr: 41.2, variance_pct: 3.4, decision: 'Enforce Expedited PO SLA Penalties; Advance Sourcing' },
+              { x: 92.8, y: 28.2, r: 11, vendor: 'L&T Heavy Engineering Division', spend_cr: 26.8, variance_pct: 2.9, decision: 'Joint Demand Planning; Buffer Reorder Trigger' }
+            ]
+          },
+          {
+            label: 'High Risk / High Variance & Delay (Retender / PO Freeze)',
+            color: '#be123c',
+            data: [
+              { x: 78.4, y: 32.6, r: 14, vendor: 'Apex Logistics & Transporters', spend_cr: 38.6, variance_pct: 14.8, decision: 'Immediate PO Freeze; Audit Freight Invoices & Retender' },
+              { x: 81.2, y: 29.8, r: 12, vendor: 'Eastern Mining & Minerals Corp', spend_cr: 29.4, variance_pct: 11.2, decision: 'Retender Sourcing Contract; Halt Unaudited Approvals' }
+            ]
+          },
+          {
+            label: 'Conditional Low-Spend Sourcing',
+            color: '#074ea3',
+            data: [
+              { x: 88.5, y: 14.2, r: 8, vendor: 'Kirloskar Brothers Pumps', spend_cr: 12.4, variance_pct: 2.1, decision: 'Standard Sourcing Cadence; Retain Quality Surveillance' }
+            ]
+          }
+        ]
+      };
+
+  // Custom Plugin: Draw 4 Quadrant Background Tints and Crosshair Lines
+  const quadrantZonesPlugin = {
+    id: 'quadrantZones',
+    beforeDraw(chart) {
+      const { ctx, chartArea: { left, right, top, bottom }, scales: { x, y } } = chart;
+      if (!x || !y) return;
+      const xThreshold = x.getPixelForValue(92); // Minimum Quality SLA
+      const yThreshold = y.getPixelForValue(14); // 14-Day Cycle SLA
+
+      ctx.save();
+      // Subtle Quadrant Background Tints
+      // Bottom-Right: Preferred (High Quality, Low SLA) -> Soft Green
+      ctx.fillStyle = 'rgba(16, 185, 129, 0.04)';
+      ctx.fillRect(xThreshold, yThreshold, right - xThreshold, bottom - yThreshold);
+
+      // Top-Right: SLA Delay Alert -> Soft Amber
+      ctx.fillStyle = 'rgba(245, 158, 11, 0.04)';
+      ctx.fillRect(xThreshold, top, right - xThreshold, yThreshold - top);
+
+      // Top-Left: High Risk Retender -> Soft Red
+      ctx.fillStyle = 'rgba(239, 68, 68, 0.04)';
+      ctx.fillRect(left, top, xThreshold - left, yThreshold - top);
+
+      // Crosshairs
+      ctx.strokeStyle = '#94a3b8';
+      ctx.lineWidth = 1.5;
+      ctx.setLineDash([4, 4]);
+
+      // Vertical line at 92%
+      ctx.beginPath();
+      ctx.moveTo(xThreshold, top);
+      ctx.lineTo(xThreshold, bottom);
+      ctx.stroke();
+
+      // Horizontal line at 14 days
+      ctx.beginPath();
+      ctx.moveTo(left, yThreshold);
+      ctx.lineTo(right, yThreshold);
+      ctx.stroke();
+
+      // Quadrant Watermark Labels
+      ctx.font = '800 10px Plus Jakarta Sans';
+      ctx.fillStyle = 'rgba(45, 90, 38, 0.65)';
+      ctx.textAlign = 'right';
+      ctx.fillText('★ STRATEGIC PREFERRED (Q1)', right - 12, bottom - 12);
+
+      ctx.fillStyle = 'rgba(180, 83, 9, 0.65)';
+      ctx.fillText('⚠️ SLA DELAY ALERT (Q2)', right - 12, top + 18);
+
+      ctx.fillStyle = 'rgba(185, 28, 28, 0.65)';
+      ctx.textAlign = 'left';
+      ctx.fillText('🛑 RETENDER / HIGH RISK (Q3)', left + 12, top + 18);
+
+      ctx.restore();
+    }
+  };
+
+  const datasets = vendorData.quadrants.map(q => ({
+    label: q.label,
+    data: q.data,
+    backgroundColor: safeHexToRgba(q.color, 0.82),
+    borderColor: '#ffffff',
+    borderWidth: 2,
+    hoverRadius: 5
+  }));
+
+  chartInstances['chartExecVendorMatrix'] = new Chart(ctx, {
+    type: 'bubble',
+    data: { datasets: datasets },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      layout: { padding: { left: 10, right: 15, top: 10, bottom: 10 } },
+      scales: {
+        x: {
+          min: 72,
+          max: 102,
+          title: {
+            display: true,
+            text: 'Quality Inspection Pass Rate (%) [ML-08 Quality Health] &rarr; Target: 92%+',
+            color: '#0f172a',
+            font: { size: 10.5, weight: '700' }
+          },
+          grid: { color: 'rgba(0, 0, 0, 0.05)' },
+          ticks: {
+            color: '#334155',
+            font: { family: 'JetBrains Mono', size: 10, weight: '600' },
+            callback: (v) => `${v}%`
+          }
+        },
+        y: {
+          min: 0,
+          max: 38,
+          title: {
+            display: true,
+            text: 'PR-to-PO Conversion Lead Time (Days) [ML-14 SLA] &rarr; SLA: <14 Days',
+            color: '#0f172a',
+            font: { size: 10.5, weight: '700' }
+          },
+          grid: { color: 'rgba(0, 0, 0, 0.05)' },
+          ticks: {
+            color: '#334155',
+            font: { family: 'JetBrains Mono', size: 10, weight: '600' },
+            callback: (v) => `${v}d`
+          }
+        }
+      },
+      plugins: {
+        legend: {
+          display: false // already rendered in header pills
+        },
+        tooltip: {
+          backgroundColor: 'rgba(255, 255, 255, 0.98)',
+          borderColor: '#074ea3',
+          borderWidth: 2,
+          titleColor: '#0f172a',
+          bodyColor: '#1e293b',
+          padding: 12,
+          callbacks: {
+            title: (items) => {
+              const raw = items[0]?.raw || {};
+              return raw.vendor || items[0]?.dataset?.label;
+            },
+            label: (item) => {
+              const raw = item.raw || {};
+              return [
+                ` 🎯 Quality Pass Rate: ${raw.x}% | PR-PO Cycle Time: ${raw.y} days`,
+                ` 💰 PO Spend Exposure: ₹${raw.spend_cr || 0} Cr (Off-Contract Var: ${raw.variance_pct || 0}%)`,
+                ` 📋 Autonomous SAP Sourcing Directive: ${raw.decision || ''}`
+              ];
+            }
+          }
+        }
+      }
+    },
+    plugins: [quadrantZonesPlugin]
+  });
+}
+
+// ----------------------------------------------------------------------------
+// Decision Chart 6: Credit-Approved Sales Decision Policy Matrix (Item 2)
+// 100% Policy Flow / Horizontal Stacked Actions (Auto vs LC vs Escrow vs Freeze)
+// ----------------------------------------------------------------------------
 function renderChartExecCommercialDecisions() {
   const canvas = document.getElementById('chartExecCommercialDecisions');
   if (!canvas) return;
@@ -1195,11 +1782,16 @@ function renderChartExecCommercialDecisions() {
   const commData = (data && data.decision_intelligence && data.decision_intelligence.commercial_decisions)
     ? data.decision_intelligence.commercial_decisions
     : {
-        tiers: ['Tier 1 (> ₹50L)', 'Tier 2 (₹20L - ₹50L)', 'Tier 3 (₹5L - ₹20L)', 'Tier 4 (< ₹5L)'],
+        tiers: [
+          'Tier 1: Mega-Dealer (> ₹50L)',
+          'Tier 2: Institutional (₹20L - ₹50L)',
+          'Tier 3: Regional (₹5L - ₹20L)',
+          'Tier 4: Retail (< ₹5L)'
+        ],
         immediate_freeze: [509, 310, 85, 20],
-        advance_payment: [1670, 940, 420, 150],
-        lc_guarantee: [890, 1420, 810, 300],
-        auto_clearance: [1240, 3850, 6210, 8740]
+        advance_payment_escrow: [1670, 940, 420, 150],
+        bank_guarantee_lc: [890, 1420, 810, 300],
+        auto_clearance_dispatch: [1240, 3850, 6210, 8740]
       };
 
   chartInstances['chartExecCommercialDecisions'] = new Chart(ctx, {
@@ -1208,27 +1800,55 @@ function renderChartExecCommercialDecisions() {
       labels: commData.tiers,
       datasets: [
         {
-          label: 'Immediate Credit Freeze (ML-05 High Risk)',
-          data: commData.immediate_freeze,
-          backgroundColor: '#be123c',
-          borderRadius: 4
-        },
-        {
-          label: '100% Advance Payment Escrow Required',
-          data: commData.advance_payment,
-          backgroundColor: '#d97706',
+          label: 'Auto-Clearance & Dispatch',
+          data: commData.auto_clearance_dispatch || commData.auto_clearance,
+          backgroundColor: function(context) {
+            const { ctx, chartArea } = context.chart;
+            if (!chartArea) return '#10b981';
+            const grad = ctx.createLinearGradient(chartArea.left, 0, chartArea.right, 0);
+            grad.addColorStop(0, '#34d399');
+            grad.addColorStop(1, '#059669');
+            return grad;
+          },
           borderRadius: 4
         },
         {
           label: 'Bank LC / Guarantee Mandatory',
-          data: commData.lc_guarantee,
-          backgroundColor: '#074ea3',
+          data: commData.bank_guarantee_lc || commData.lc_guarantee,
+          backgroundColor: function(context) {
+            const { ctx, chartArea } = context.chart;
+            if (!chartArea) return '#3b82f6';
+            const grad = ctx.createLinearGradient(chartArea.left, 0, chartArea.right, 0);
+            grad.addColorStop(0, '#60a5fa');
+            grad.addColorStop(1, '#1d4ed8');
+            return grad;
+          },
           borderRadius: 4
         },
         {
-          label: 'Auto-Clearance & SAP PO Dispatch',
-          data: commData.auto_clearance,
-          backgroundColor: '#2d5a26',
+          label: '100% Advance Escrow Required',
+          data: commData.advance_payment_escrow || commData.advance_payment,
+          backgroundColor: function(context) {
+            const { ctx, chartArea } = context.chart;
+            if (!chartArea) return '#f59e0b';
+            const grad = ctx.createLinearGradient(chartArea.left, 0, chartArea.right, 0);
+            grad.addColorStop(0, '#fbbf24');
+            grad.addColorStop(1, '#d97706');
+            return grad;
+          },
+          borderRadius: 4
+        },
+        {
+          label: 'Immediate Credit Freeze (ML-05)',
+          data: commData.immediate_freeze,
+          backgroundColor: function(context) {
+            const { ctx, chartArea } = context.chart;
+            if (!chartArea) return '#ef4444';
+            const grad = ctx.createLinearGradient(chartArea.left, 0, chartArea.right, 0);
+            grad.addColorStop(0, '#f87171');
+            grad.addColorStop(1, '#991b1b');
+            return grad;
+          },
           borderRadius: 4
         }
       ]
@@ -1243,14 +1863,14 @@ function renderChartExecCommercialDecisions() {
           grid: { color: 'rgba(0, 0, 0, 0.06)' },
           ticks: {
             color: '#334155',
-            font: { family: 'JetBrains Mono', size: 10, weight: '600' },
+            font: { family: 'JetBrains Mono', size: 9.5, weight: '600' },
             callback: (v) => `${v.toLocaleString()}`
           }
         },
         y: {
           stacked: true,
           grid: { display: false },
-          ticks: { color: '#0f172a', font: { size: 10.5, weight: '700' } }
+          ticks: { color: '#0f172a', font: { size: 9.5, weight: '700' } }
         }
       },
       plugins: {
@@ -1258,183 +1878,21 @@ function renderChartExecCommercialDecisions() {
           display: true,
           position: 'top',
           labels: {
-            boxWidth: 10,
+            boxWidth: 8,
+            usePointStyle: true,
             color: '#1e293b',
-            font: { size: 10, weight: '600' }
+            font: { size: 9, weight: '700' }
           }
         },
         tooltip: {
           backgroundColor: 'rgba(255, 255, 255, 0.98)',
           borderColor: '#be123c',
-          borderWidth: 1.5,
+          borderWidth: 2,
           titleColor: '#0f172a',
           bodyColor: '#1e293b',
           padding: 10,
           callbacks: {
-            label: (ctx) => ` ${ctx.dataset.label}: ${ctx.parsed.x.toLocaleString()} orders`
-          }
-        }
-      }
-    }
-  });
-}
-
-// Decision Chart 5: Prescriptive Operational Urgency Allocation (Polar Area Chart)
-function renderChartExecDecisionPolar() {
-  const canvas = document.getElementById('chartExecDecisionPolar');
-  if (!canvas) return;
-  destroyChart('chartExecDecisionPolar');
-  const ctx = canvas.getContext('2d');
-
-  const polarData = (data && data.decision_intelligence && data.decision_intelligence.decision_polar)
-    ? data.decision_intelligence.decision_polar
-    : {
-        labels: [
-          'Kiln Overhaul (ML-04/07)',
-          'Dormant Scrap (ML-06)',
-          'Credit Freeze (ML-05)',
-          'Spend Audit (ML-13)',
-          'Batch Expedite (ML-07)',
-          'Quarantine (ML-08)'
-        ],
-        counts: [33080, 24543, 2179, 8145, 1973, 1775],
-        colors: ['#be123c', '#074ea3', '#d97706', '#6366f1', '#f59e0b', '#2d5a26']
-      };
-
-  chartInstances['chartExecDecisionPolar'] = new Chart(ctx, {
-    type: 'polarArea',
-    data: {
-      labels: [
-        'Kiln Overhaul (ML-4/7)',
-        'Dormant Scrap (ML-6)',
-        'Credit Freeze (ML-5)',
-        'Spend Audit (ML-13)',
-        'Batch Expedite (ML-7)',
-        'Quarantine (ML-8)'
-      ],
-      datasets: [{
-        label: 'Action Directives',
-        data: polarData.counts,
-        backgroundColor: polarData.colors.map(c => safeHexToRgba(c, 0.8)),
-        borderColor: '#ffffff',
-        borderWidth: 2
-      }]
-    },
-    options: {
-      responsive: true,
-      maintainAspectRatio: false,
-      scales: {
-        r: {
-          grid: { color: 'rgba(0, 0, 0, 0.06)' },
-          ticks: { display: false }
-        }
-      },
-      plugins: {
-        legend: {
-          display: true,
-          position: 'right',
-          labels: {
-            boxWidth: 8,
-            padding: 8,
-            color: '#1e293b',
-            font: { family: 'JetBrains Mono', size: 9, weight: '700' }
-          }
-        },
-        tooltip: {
-          backgroundColor: 'rgba(255, 255, 255, 0.98)',
-          borderColor: '#074ea3',
-          borderWidth: 1.5,
-          titleColor: '#0f172a',
-          bodyColor: '#1e293b',
-          callbacks: {
-            label: (c) => ` ${c.label}: ${c.parsed.r.toLocaleString()} automated directives`
-          }
-        }
-      }
-    }
-  });
-}
-
-// Decision Chart 6: Financial Value Protected Trajectory (Area Line Chart)
-function renderChartExecValueTrajectory() {
-  const canvas = document.getElementById('chartExecValueTrajectory');
-  if (!canvas) return;
-  destroyChart('chartExecValueTrajectory');
-  const ctx = canvas.getContext('2d');
-
-  const trajData = (data && data.decision_intelligence && data.decision_intelligence.value_trajectory)
-    ? data.decision_intelligence.value_trajectory
-    : {
-        months: ['May 25', 'Jun 25', 'Jul 25', 'Aug 25', 'Sep 25', 'Oct 25'],
-        cumulative_cr: [485, 960, 1520, 2110, 2690, 3215],
-        monthly_actions: [8400, 9850, 11200, 12600, 13100, 13188]
-      };
-
-  chartInstances['chartExecValueTrajectory'] = new Chart(ctx, {
-    type: 'line',
-    data: {
-      labels: trajData.months,
-      datasets: [
-        {
-          label: 'Cumulative Value Protected (₹ Cr)',
-          data: trajData.cumulative_cr,
-          borderColor: '#2d5a26',
-          borderWidth: 2.5,
-          backgroundColor: function(context) {
-            const chart = context.chart;
-            const { ctx, chartArea } = chart;
-            if (!chartArea) return 'rgba(45, 90, 38, 0.15)';
-            const gradient = ctx.createLinearGradient(0, chartArea.top, 0, chartArea.bottom);
-            gradient.addColorStop(0, 'rgba(45, 90, 38, 0.35)');
-            gradient.addColorStop(1, 'rgba(45, 90, 38, 0.02)');
-            return gradient;
-          },
-          fill: true,
-          tension: 0.35,
-          pointBackgroundColor: '#2d5a26',
-          pointBorderColor: '#ffffff',
-          pointBorderWidth: 2,
-          pointRadius: 4.5,
-          pointHoverRadius: 7
-        }
-      ]
-    },
-    options: {
-      responsive: true,
-      maintainAspectRatio: false,
-      scales: {
-        x: {
-          grid: { display: false },
-          ticks: { color: '#0f172a', font: { size: 10, weight: '700' } }
-        },
-        y: {
-          grid: { color: 'rgba(0, 0, 0, 0.06)' },
-          ticks: {
-            color: '#334155',
-            font: { family: 'JetBrains Mono', size: 10, weight: '600' },
-            callback: (v) => `₹${v} Cr`
-          }
-        }
-      },
-      plugins: {
-        legend: { display: false },
-        tooltip: {
-          backgroundColor: 'rgba(255, 255, 255, 0.98)',
-          borderColor: '#2d5a26',
-          borderWidth: 1.5,
-          titleColor: '#0f172a',
-          bodyColor: '#1e293b',
-          padding: 10,
-          callbacks: {
-            label: (ctx) => {
-              const idx = ctx.dataIndex;
-              const actions = trajData.monthly_actions ? trajData.monthly_actions[idx] : null;
-              const res = [` Cumulative Value Saved: ₹${ctx.parsed.y.toLocaleString()} Cr`];
-              if (actions) {
-                res.push(` Monthly Prescriptions Executed: ${actions.toLocaleString()}`);
-              }
-              return res;
-            }
+            label: (ctx) => ` ${ctx.dataset.label}: ${ctx.parsed.x.toLocaleString()} dealer orders audited`
           }
         }
       }
@@ -1510,87 +1968,82 @@ const MODEL_EXCEPTION_STORIES = {
   ML_04: {
     badge: "AI & Plant Maintenance Governance",
     headline: "Automated Early Detection of Heavy Plant Equipment Degradation & Critical Unplanned Downtime",
-    sentence: "Across JK Cement plants including Mangrol, Nimbahera, and Panna, this pipeline continuously audits equipment telemetry across SAP AFIH, AFKO, and EQUI—detecting 9,959 maintenance anomalies (39.84% exception rate) and ₹98.19 Cr in high-risk spare failure exposure to prevent unscheduled kiln stops before breakdown."
+    getSentence: (m) => `Across JK Cement plants including Mangrol, Nimbahera, and Panna, this pipeline continuously audits equipment telemetry across SAP ${(m.sap_tables || ['AFIH', 'AFKO', 'EQUI']).join(', ')}—detecting ${m.exceptions_count.toLocaleString()} maintenance anomalies (${m.exception_rate_pct}% exception rate) and ₹${m.financial_exposure_cr.toLocaleString()} Cr in high-risk spare failure exposure across ${m.total_records.toLocaleString()} total maintenance orders to prevent unscheduled kiln stops before breakdown.`
   },
   ML_05: {
     badge: "AI & Credit Risk Governance",
     headline: "Continuous Credit Exposure Surveillance & Proactive Commercial Default Prevention",
-    sentence: "Monitoring dealer ledger postings across SAP BSID and BSAD, this multi-model ensemble isolates 2,179 customer credit default risks (8.72% exception rate) and ₹406.52 Cr in imminent default exposure, enforcing dynamic credit limits and safeguarding cash flow across regional sales depots."
+    getSentence: (m) => `Monitoring dealer ledger postings across SAP ${(m.sap_tables || ['BSID', 'BSAD']).join(', ')}, this multi-model ensemble isolates ${m.exceptions_count.toLocaleString()} customer credit default risks (${m.exception_rate_pct}% exception rate) and ₹${m.financial_exposure_cr.toLocaleString()} Cr in imminent default exposure across ${m.total_records.toLocaleString()} scored dealer accounts, enforcing dynamic credit limits and safeguarding cash flow across regional sales depots.`
   },
   ML_06: {
     badge: "AI & Inventory Velocity Governance",
     headline: "Granular Warehouse Idle Stock Containment & Clinker Inventory Velocity Optimization",
-    sentence: "Auditing material consumption patterns across SAP MARA, MARD, and MSEG, this model identifies 16,852 slow-moving stock exceptions (67.41% exception rate) representing ₹285.59 Cr in stagnant stock exposure, preventing working capital lockup across manufacturing storehouses."
+    getSentence: (m) => `Auditing material consumption patterns across SAP ${(m.sap_tables || ['MARA', 'MARD', 'MSEG']).join(', ')}, this model identifies ${m.exceptions_count.toLocaleString()} slow-moving stock exceptions (${m.exception_rate_pct}% exception rate) representing ₹${m.financial_exposure_cr.toLocaleString()} Cr in stagnant stock exposure across ${m.total_records.toLocaleString()} catalog materials, preventing working capital lockup across manufacturing storehouses.`
   },
   ML_07: {
     badge: "AI & Production Planning Governance",
     headline: "Real-Time Kiln & Grinding Mill Production Schedule Slippage Containment",
-    sentence: "Analyzing batch routing orders across SAP AFKO and AFPO, the pipeline flags 31,294 schedule delay exceptions (89.41% exception rate) across 35,000 production orders, providing dispatchers and mill supervisors with automated bottleneck alerts before order confirmation slippages compound."
+    getSentence: (m) => `Analyzing batch routing orders across SAP ${(m.sap_tables || ['AFKO', 'AFPO']).join(', ')}, the pipeline flags ${m.exceptions_count.toLocaleString()} schedule delay exceptions (${m.exception_rate_pct}% exception rate) across ${m.total_records.toLocaleString()} production orders, providing dispatchers and mill supervisors with automated bottleneck alerts before order confirmation slippages compound.`
   },
   ML_08: {
     badge: "AI & Quality Assurance Governance",
     headline: "Pre-Dispatch Cement Quality Compliance & Compressive Strength Variance Mitigation",
-    sentence: "Evaluating laboratory testing streams across SAP QALS and QAVE, this ensemble flags 1,775 quality inspection failure exceptions (5.07% exception rate) across 35,000 lots representing ₹10,031.42 Cr in at-risk batch exposure, preventing non-compliant cement dispatches and ensuring strict BIS grade adherence."
+    getSentence: (m) => `Evaluating laboratory testing streams across SAP ${(m.sap_tables || ['QALS', 'QAVE']).join(', ')}, this ensemble flags ${m.exceptions_count.toLocaleString()} quality inspection failure exceptions (${m.exception_rate_pct}% exception rate) across ${m.total_records.toLocaleString()} inspection lots representing ₹${m.financial_exposure_cr.toLocaleString()} Cr in at-risk batch exposure, preventing non-compliant cement dispatches and ensuring strict BIS grade adherence.`
   },
   ML_13: {
     badge: "AI & Financial Controlling Governance",
     headline: "Automated Controlling Expense Anomaly Detection & Operational Budget Overrun Surveillance",
-    sentence: "Tracking granular line-item debits across SAP BSEG, BKPF, and CSKS, the forecasting engine surveils 25,000 cost center records, isolating 8,145 expenditure overrun exceptions (32.58% exception rate) and ₹213.83 Cr in at-risk departmental spending spikes."
+    getSentence: (m) => `Tracking granular line-item debits across SAP ${(m.sap_tables || ['BSEG', 'BKPF', 'CSKS']).join(', ')}, the forecasting engine surveils ${m.total_records.toLocaleString()} cost center records, isolating ${m.exceptions_count.toLocaleString()} expenditure overrun exceptions (${m.exception_rate_pct}% exception rate) and ₹${m.financial_exposure_cr.toLocaleString()} Cr in at-risk departmental spending spikes.`
   },
   ML_14: {
     badge: "AI & Procurement Velocity Governance",
     headline: "Procurement Bottleneck Isolation & Automated Requisition Cycle Time Compression",
-    sentence: "Monitoring requisition-to-order workflows across SAP EBAN and EKKO, this model identifies 1,273 procurement cycle time exceptions (5.09% exception rate) and ₹3,733.36 Cr in delayed purchase commitments, pinpointing approval delays and enforcing vendor lead-time discipline."
+    getSentence: (m) => `Monitoring requisition-to-order workflows across SAP ${(m.sap_tables || ['EBAN', 'EKKO']).join(', ')}, this model identifies ${m.exceptions_count.toLocaleString()} procurement cycle time exceptions (${m.exception_rate_pct}% exception rate) and ₹${m.financial_exposure_cr.toLocaleString()} Cr in delayed purchase commitments across ${m.total_records.toLocaleString()} purchase requisitions, pinpointing approval delays and enforcing vendor lead-time discipline.`
   },
   ML_15: {
     badge: "AI & Commercial Revenue Governance",
     headline: "Rogue Sales Order Anomaly Detection & Commercial Pricing Leakage Prevention",
-    sentence: "Auditing sales orders across SAP VBAK and VBAP, this pipeline isolates 1,205 pricing and quantity outliers (4.82% exception rate) totaling ₹214.71 Cr in order exposure, preventing unauthorized discount slippages and protecting gross commercial margins."
+    getSentence: (m) => `Auditing sales orders across SAP ${(m.sap_tables || ['VBAK', 'VBAP']).join(', ')}, this pipeline isolates ${m.exceptions_count.toLocaleString()} pricing and quantity outliers (${m.exception_rate_pct}% exception rate) totaling ₹${m.financial_exposure_cr.toLocaleString()} Cr in order exposure across ${m.total_records.toLocaleString()} sales orders, preventing unauthorized discount slippages and protecting gross commercial margins.`
   },
   ML_19: {
     badge: "AI & Price Variance Governance",
     headline: "Real-Time Purchase Price Variance Containment & Maverick Procurement Prevention",
-    sentence: "Scrutinizing purchase order pricing against contracts across SAP EKPO and EKKO, this outlier model detects 1,263 price variance exceptions (5.05% exception rate) and ₹1,736.80 Cr in purchase spend leakage, eliminating off-contract procurement costs."
+    getSentence: (m) => `Scrutinizing purchase order pricing against contracts across SAP ${(m.sap_tables || ['EKPO', 'EKKO']).join(', ')}, this outlier model detects ${m.exceptions_count.toLocaleString()} price variance exceptions (${m.exception_rate_pct}% exception rate) and ₹${m.financial_exposure_cr.toLocaleString()} Cr in purchase spend leakage across ${m.total_records.toLocaleString()} procurement items, eliminating off-contract procurement costs.`
   },
   ML_20: {
     badge: "AI & Accounts Payable Governance",
     headline: "Fuzzy Vendor Invoice Collision Surveillance & Erroneous Double-Payment Containment",
-    sentence: "Scanning accounts payable ledgers across SAP RBKP, RSEG, and BSEG, this fuzzy vectorizer detects 1,256 duplicate invoice exceptions (5.02% exception rate) representing ₹465.28 Cr in double-payment risk, halting identical billing collisions before financial disbursement."
+    getSentence: (m) => `Scanning accounts payable ledgers across SAP ${(m.sap_tables || ['RBKP', 'RSEG', 'BSEG']).join(', ')}, this fuzzy vectorizer detects ${m.exceptions_count.toLocaleString()} duplicate invoice exceptions (${m.exception_rate_pct}% exception rate) representing ₹${m.financial_exposure_cr.toLocaleString()} Cr in double-payment risk across ${m.total_records.toLocaleString()} vendor invoices, halting identical billing collisions before financial disbursement.`
   },
   ML_21: {
     badge: "AI & Master Data Integrity Governance",
     headline: "Enterprise Material Catalog Completeness & Master Data Integrity Scoring",
-    sentence: "Evaluating material records across SAP MARA and MAKT, this completeness engine identifies 1,265 catalog quality exceptions (5.06% exception rate) representing ₹359.53 Cr in at-risk inventory valuation, eliminating duplicate spares and harmonizing procurement taxonomies."
+    getSentence: (m) => `Evaluating material records across SAP ${(m.sap_tables || ['MARA', 'MAKT']).join(', ')}, this completeness engine identifies ${m.exceptions_count.toLocaleString()} catalog quality exceptions (${m.exception_rate_pct}% exception rate) representing ₹${m.financial_exposure_cr.toLocaleString()} Cr in at-risk inventory valuation across ${m.total_records.toLocaleString()} material master records, eliminating duplicate spares and harmonizing procurement taxonomies.`
   },
   ML_22: {
     badge: "AI & Customer Intelligence Governance",
     headline: "Dealer Network Churn Risk Isolation & Commercial Channel Lifetime Value Protection",
-    sentence: "Clustering cement dealer purchasing velocity across SAP VBRK and KNA1, this RFM engine segments 25,000 distributor accounts, identifying 10,696 high-churn risk customer exceptions (42.78% exception rate) and empowering commercial leadership with retention intelligence."
+    getSentence: (m) => `Clustering cement dealer purchasing velocity across SAP ${(m.sap_tables || ['VBRK', 'KNA1']).join(', ')}, this RFM engine segments ${m.total_records.toLocaleString()} distributor accounts, identifying ${m.exceptions_count.toLocaleString()} high-churn risk customer exceptions (${m.exception_rate_pct}% exception rate) and empowering commercial leadership with proactive retention intelligence.`
   },
   ML_23: {
     badge: "AI & Supply Chain Resilience Governance",
     headline: "Supply Chain Concentration Risk Profiling & Critical Vendor Reliability Surveillance",
-    sentence: "Profiling supplier lead times and delivery fidelity across SAP LFA1 and EKKO, this clustering engine segments 25,000 vendor accounts, isolating 11,671 elevated-risk vendor exceptions (46.68% exception rate) and ₹3.01 Cr in single-source exposure to safeguard inbound logistics."
+    getSentence: (m) => `Profiling supplier lead times and delivery fidelity across SAP ${(m.sap_tables || ['LFA1', 'EKKO']).join(', ')}, this clustering engine segments ${m.total_records.toLocaleString()} vendor accounts, isolating ${m.exceptions_count.toLocaleString()} elevated-risk vendor exceptions (${m.exception_rate_pct}% exception rate) to safeguard inbound logistics across JK Cement manufacturing operations.`
   },
   ML_24: {
     badge: "AI & Taxonomy Classification Governance",
     headline: "Deep Learning Material Catalog Harmonization & Automated Commodity Taxonomy Coding",
-    sentence: "Leveraging NLP transformers across SAP MARA material descriptions, this pipeline classifies 25,000 inventory items, identifying 5,762 taxonomy misclassification exceptions (23.05% exception rate) and ₹96.89 Cr in at-risk store stock, streamlining warehouse lookups."
+    getSentence: (m) => `Leveraging NLP transformers across SAP ${(m.sap_tables || ['MARA', 'MAKT']).join(', ')} material descriptions, this pipeline classifies ${m.total_records.toLocaleString()} inventory items, identifying ${m.exceptions_count.toLocaleString()} taxonomy misclassification exceptions (${m.exception_rate_pct}% exception rate) and ₹${m.financial_exposure_cr.toLocaleString()} Cr in at-risk store stock, streamlining warehouse lookups.`
   },
   ML_25: {
     badge: "AI & General Ledger Governance",
     headline: "Automated General Ledger Posting Validation & Misallocated Accounting Variance Mitigation",
-    sentence: "Evaluating journal ledger entries across SAP BKPF and BSEG, this NLP classifier surveils 25,000 accounting transactions, detecting 9,541 miscoded G/L exceptions (38.16% exception rate) and ₹155.99 Cr in misallocated transaction flow to accelerate month-end audit clearance."
+    getSentence: (m) => `Evaluating journal ledger entries across SAP ${(m.sap_tables || ['BKPF', 'BSEG']).join(', ')}, this NLP classifier surveils ${m.total_records.toLocaleString()} accounting transactions, detecting ${m.exceptions_count.toLocaleString()} miscoded G/L exceptions (${m.exception_rate_pct}% exception rate) and ₹${m.financial_exposure_cr.toLocaleString()} Cr in misallocated transaction flow to accelerate month-end audit clearance.`
   },
   ML_26: {
     badge: "AI & Causal Forensics Governance",
     headline: "Unstructured Maintenance Log Semantic Mining & Causal Kiln Downtime Extraction",
-    sentence: "Applying causal NLP analytics across SAP AUFK and QMEL technician logs, this model processes 25,000 equipment breakdown records, extracting 6,269 recurrent breakdown failure exceptions (25.08% exception rate) and ₹28.40 Cr in spare parts repair exposure."
-  },
-  ML_27: {
-    badge: "GenAI & Enterprise Knowledge Governance",
-    headline: "Enterprise Knowledge Retrieval Governance & Grounded SAP Operational Intelligence",
-    sentence: "Governing generative search queries across SAP HANA enterprise repositories, this retrieval pipeline validates 25,000 operational queries, detecting 5,975 ungrounded or hallucination risk exceptions (23.90% exception rate) across ₹33.68 Cr in evaluated context value."
+    getSentence: (m) => `Applying causal NLP analytics across SAP ${(m.sap_tables || ['AUFK', 'QMEL']).join(', ')} technician logs, this model processes ${m.total_records.toLocaleString()} equipment breakdown records, extracting ${m.exceptions_count.toLocaleString()} recurrent breakdown failure exceptions (${m.exception_rate_pct}% exception rate) and ₹${m.financial_exposure_cr.toLocaleString()} Cr in spare parts repair exposure.`
   }
 };
 
@@ -1649,7 +2102,7 @@ function renderModelDetailView(m) {
     mKpiChampionName.innerHTML = `<span class="w-1.5 h-1.5 rounded-full bg-blue-600"></span> ${m.champion_model || 'Isolation Forest'}`;
   }
 
-  // Model Specific Exception Story / Strategic Context (Tailored for All 17 Models)
+  // Model Specific Exception Story / Strategic Context (Tailored for All 16 Models)
   const story = MODEL_EXCEPTION_STORIES[m.id] || {
     badge: "AI & Exception Intelligence",
     headline: `${m.name} Continuous Surveillance & Exception Containment`,
@@ -1666,7 +2119,15 @@ function renderModelDetailView(m) {
   if (storyHeadline) storyHeadline.innerText = story.headline;
 
   const storySentence = document.getElementById('mStorySentence');
-  if (storySentence) storySentence.innerText = story.sentence;
+  if (storySentence) {
+    if (typeof story.getSentence === 'function') {
+      storySentence.innerText = story.getSentence(m);
+    } else if (story.sentence) {
+      storySentence.innerText = story.sentence;
+    } else {
+      storySentence.innerText = `Surveilling ${m.total_records ? m.total_records.toLocaleString() : 'all'} operational transactions across SAP ${(m.sap_tables || []).join(', ')}, this pipeline flags ${m.exceptions_count ? m.exceptions_count.toLocaleString() : 'active'} exceptions (${m.exception_rate_pct || 0}% exception rate)${m.financial_exposure_cr > 0 ? ` and ₹${m.financial_exposure_cr.toLocaleString()} Cr in financial exposure` : ''} to enforce automated exception containment across JK Cement.`;
+    }
+  }
 
   // Tab 1: Render All Diagnostic Charts (Photos 4 & 5)
   renderModelConfusionMatrix(m);
