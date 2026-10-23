@@ -6,6 +6,3 @@ __pycache__/
 # Local temporary/scratch scripts
 patch_*.py
 update_*.py
-
-# Large raw source datasets (processed into dashboard_data.json & dashboard_data.js)
-*.xlsx
